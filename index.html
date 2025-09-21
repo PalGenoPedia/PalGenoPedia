@@ -1,0 +1,1299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaza Crisis Documentation</title>
+    <meta name="description" content="Comprehensive documentation of war crimes, hunger crisis, and humanitarian violations in Gaza">
+
+    <!-- TimelineJS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/timelinejs3/3.8.25/css/timeline.css">
+    <!-- Main Styles - Load first -->
+    <link rel="stylesheet" href="shared-styles.css">
+
+    <style>
+        /* ONLY Page-specific timeline styles - no banner overrides */
+        .timeline {
+            width: 100%;
+            height: 600px;
+        }
+
+        /* Enhanced timeline responsiveness */
+        @media (max-width: 768px) {
+            .timeline {
+                height: 500px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .timeline {
+                height: 400px;
+            }
+        }
+
+        /* FIXED: Consistent banner heights and text handling */
+        .crisis-banner {
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+            border-radius: 0 0 20px 20px;
+            position: relative;
+            overflow: hidden;
+            min-height: 160px; /* Set consistent minimum height */
+            max-height: 180px; /* Prevent excessive height */
+        }
+
+        .banner-content {
+            display: grid;
+            grid-template-columns: 1fr auto auto;
+            gap: 2rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+            height: 100%;
+        }
+
+        .banner-text {
+            flex: 1;
+            max-width: 400px; /* Limit text width */
+        }
+
+        .banner-text h3 {
+            margin: 0 0 0.5rem 0;
+            font-weight: 700;
+            line-height: 1.2;
+            font-size: 1.5rem;
+        }
+
+        .banner-text p {
+            margin: 0;
+            opacity: 0.9;
+            line-height: 1.4;
+            font-size: 0.95rem; /* Slightly smaller text */
+            display: -webkit-box;
+            -webkit-line-clamp: 3; /* Limit to 3 lines */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .banner-stats {
+            display: flex;
+            gap: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .quick-stat {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 1rem;
+            border-radius: var(--border-radius-lg);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            min-width: 110px;
+            max-width: 120px; /* Prevent stats from getting too wide */
+        }
+
+        .stat-value {
+            display: block;
+            font-size: 1.6rem; /* Consistent stat size */
+            font-weight: 900;
+            margin-bottom: 0.25rem;
+            line-height: 1;
+        }
+
+        .stat-label {
+            display: block;
+            font-size: 0.75rem;
+            opacity: 0.9;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: 600;
+            line-height: 1.1;
+        }
+
+        .banner-action {
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .stats-btn {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            text-decoration: none;
+            padding: 0.9rem 1.8rem;
+            border-radius: 25px;
+            font-weight: 700;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            transition: var(--transition-base);
+            white-space: nowrap;
+            font-size: 0.9rem;
+        }
+
+        .stats-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Data loading indicators - minimal styling */
+        .data-loading-indicator {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            margin-left: 0.5rem;
+            animation: pulse 2s infinite;
+        }
+
+        .data-source-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.15);
+            color: rgba(255, 255, 255, 0.8);
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            margin-top: 0.5rem;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+
+        /* Hide loading indicators in banners */
+        .crisis-banner .data-loading-indicator,
+        .crisis-banner .data-source-badge {
+            display: none;
+        }
+
+        /* Data loading status */
+        .data-loading {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 400px;
+            text-align: center;
+            color: var(--text-secondary);
+        }
+
+        .loading-spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid var(--border-color);
+            border-top: 4px solid var(--accent-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 20px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .data-progress {
+            margin-top: 20px;
+            padding: 15px;
+            background: var(--light-color);
+            border-radius: 6px;
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        /* Mobile responsiveness for banners */
+        @media (max-width: 768px) {
+            .crisis-banner {
+                min-height: auto;
+                max-height: none;
+                padding: 1.5rem 0;
+            }
+
+            .banner-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 1.5rem;
+            }
+
+            .banner-text {
+                max-width: none;
+            }
+
+            .banner-text p {
+                -webkit-line-clamp: 2; /* Reduce to 2 lines on mobile */
+            }
+
+            .banner-stats {
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+
+            .quick-stat {
+                min-width: 90px;
+                padding: 0.75rem;
+            }
+
+            .stat-value {
+                font-size: 1.4rem;
+            }
+
+            .stat-label {
+                font-size: 0.7rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .banner-stats {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 0.5rem;
+            }
+
+            .quick-stat {
+                min-width: 80px;
+                padding: 0.5rem;
+            }
+
+            .stat-value {
+                font-size: 1.2rem;
+            }
+
+            .stats-btn {
+                padding: 0.75rem 1.5rem;
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- API Status Indicator -->
+    <div id="apiStatus" class="api-status loading">Loading...</div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">
+                <a href="index.html">Gaza Crisis Documentation</a>
+            </h1>
+            <nav class="nav">
+                <a href="war-crimes-stats.html" class="nav-btn">⚖️ War Crimes</a>
+                <a href="hunger-crisis-stats.html" class="nav-btn">🍽️ Hunger Crisis</a>
+                <a href="major-incidents-timeline.html" class="nav-btn">📋 Major Incidents</a>
+<a href="https://palgenopedia-extractor.onrender.com" class="nav-btn tool-btn">🔍 Extract Incidents</a>
+            </nav>
+            <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Data Loading Status -->
+        <div id="dataStatus" class="container" style="display: none;">
+            <div class="data-status" id="dataStatusContent">
+                📊 Loading crisis data from Tech for Palestine API v3...
+            </div>
+        </div>
+
+        <!-- War Crimes Banner -->
+        <div class="crisis-banner war-crimes-banner" id="warCrimesBanner">
+            <div class="container">
+                <div class="banner-content">
+                    <div class="banner-text">
+                        <h3>⚖️ War Crimes & International Law Violations</h3>
+                        <p>Comprehensive documentation of systematic violations including attacks on civilians, medical facilities, and protected sites.</p>
+                    </div>
+                    <div class="banner-stats">
+                        <div class="quick-stat">
+                            <span class="stat-value" id="childrenKilledStat">Loading...</span>
+                            <span class="stat-label">Children Killed</span>
+                        </div>
+                        <div class="quick-stat">
+                            <span class="stat-value" id="journalistsKilledStat">Loading...</span>
+                            <span class="stat-label">Journalists Killed</span>
+                        </div>
+                        <div class="quick-stat">
+                            <span class="stat-value" id="medicalStaffKilledStat">Loading...</span>
+                            <span class="stat-label">Medical Staff Killed</span>
+                        </div>
+                    </div>
+                    <div class="banner-action">
+                        <a href="war-crimes-stats.html" class="stats-btn">
+                            View Full Statistics →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hunger Crisis Banner - FIXED -->
+        <div class="crisis-banner hunger-crisis-banner" id="hungerCrisisBanner">
+            <div class="container">
+                <div class="banner-content">
+                    <div class="banner-text">
+                        <h3>🍽️ Hunger Crisis & Starvation as Weapon of War</h3>
+                        <p>Documentation of systematic starvation tactics, aid blockades, and humanitarian catastrophe affecting 2.3 million people.</p>
+                    </div>
+                    <div class="banner-stats">
+                        <div class="quick-stat">
+                            <span class="stat-value" id="totalStarvationDeathsStat">Loading...</span>
+                            <span class="stat-label">Total Deaths from Starvation</span>
+                        </div>
+                        <div class="quick-stat">
+                            <span class="stat-value" id="peopleInFamineStat">Loading...</span>
+                            <span class="stat-label">People in Famine Conditions</span>
+                        </div>
+                        <div class="quick-stat">
+                            <span class="stat-value" id="totalAffectedPopulationStat">Loading...</span>
+                            <span class="stat-label">Total Affected by Starvation</span>
+                        </div>
+                    </div>
+                    <div class="banner-action">
+                        <a href="hunger-crisis-stats.html" class="stats-btn">
+                            View Hunger Statistics →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Major Incidents Banner -->
+        <div class="crisis-banner major-incidents-banner" id="majorIncidentsBanner">
+            <div class="container">
+                <div class="banner-content">
+                    <div class="banner-text">
+                        <h3>📋 Major Incidents Timeline</h3>
+                        <p>Interactive documentation of significant crisis events with detailed incident records, evidence, and source verification. <strong>Now powered by CSV data.</strong></p>
+                    </div>
+                    <div class="banner-stats">
+                        <div class="quick-stat">
+                            <span class="stat-value" id="totalIncidentsCount">Loading...</span>
+                            <span class="stat-label">Total Incidents</span>
+                        </div>
+                        <div class="quick-stat">
+                            <span class="stat-value" id="verifiedIncidentsCount">Loading...</span>
+                            <span class="stat-label">Verified Cases</span>
+                        </div>
+                        <div class="quick-stat">
+                            <span class="stat-value" id="casualtiesCount">Loading...</span>
+                            <span class="stat-label">Total Casualties</span>
+                        </div>
+                    </div>
+                    <div class="banner-action">
+                        <a href="major-incidents-timeline.html" class="stats-btn">
+                            View Detailed Timeline →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <div class="controls" id="controls">
+            <div class="container">
+                <div class="search-filter">
+                    <input type="text" id="searchInput" placeholder="Search timeline events..." class="search-input">
+                    <select id="typeFilter" class="filter-select">
+                        <option value="">All Types</option>
+                        <option value="hunger">Hunger Crisis</option>
+                        <option value="water">Water Shortage</option>
+                        <option value="aid">Aid Blockage</option>
+                        <option value="casualties">Casualties</option>
+                        <option value="infrastructure">Infrastructure</option>
+                    </select>
+                    <select id="dateFilter" class="filter-select">
+                        <option value="">All Dates</option>
+                        <option value="today">Today</option>
+                        <option value="week">This Week</option>
+                        <option value="month">This Month</option>
+                        <option value="quarter">Last 3 Months</option>
+                    </select>
+                    <button id="clearFilters" class="clear-btn">Clear Filters</button>
+                </div>
+                <div class="stats">
+                    <span id="incidentCount">Loading timeline...</span>
+                    <span id="lastUpdated">Last updated: Loading...</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Timeline View -->
+        <section class="view-section active" id="timelineView">
+            <div class="container">
+                <div class="timeline-container">
+                    <div id="timeline-embed" class="timeline">
+                        <div class="data-loading">
+                            <div class="loading-spinner"></div>
+                            <h3>Loading Gaza Crisis Data...</h3>
+                            <p>Fetching latest data from Tech for Palestine API v3...</p>
+                            <div class="data-progress">
+                                <p id="dataProgress">Initializing...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Universal Footer Component -->
+    <div id="footer-placeholder"></div>
+    <script>
+        fetch('common-styles.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('footer-placeholder').innerHTML = html;
+            })
+            .catch(error => {
+                console.error('Error loading footer:', error);
+                // Fallback footer content
+                document.getElementById('footer-placeholder').innerHTML = `
+                    <footer class="universal-footer">
+                        <div class="footer-container">
+                            <div class="footer-bottom">
+                                <div class="footer-copyright">
+                                    © 2024 Gaza Crisis Documentation Platform. All rights reserved.
+                                </div>
+                                <div class="footer-meta">
+                                    <span class="footer-update-time">Last Updated: August 7, 2025</span>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                `;
+            });
+    </script>
+
+    <!-- Essential Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timelinejs3/3.8.25/js/timeline.min.js"></script>
+
+    <!-- Main Application Script -->
+    <script>
+        console.log('🔧 Initializing main index page with Tech for Palestine API v3 and Hunger CSV Data...');
+
+        // Initialize global variables
+        window.incidents = [];
+        window.filteredIncidents = [];
+        window.dataLoaded = false;
+        window.apiData = null;
+        let lastUpdated = null;
+        let isUsingFallback = false;
+
+        // Hunger Crisis CSV Data
+        let childrenStarvationStats = [];
+        let totalPopulationStats = [];
+        let hungerReferences = [];
+
+        // Type colors configuration
+        window.GazaDocsPlatform = {
+            typeColors: {
+                hunger: '#e53e3e',
+                water: '#3182ce',
+                aid: '#d69e2e',
+                casualties: '#805ad5',
+                infrastructure: '#38a169'
+            },
+            incidents: [],
+            filteredIncidents: []
+        };
+
+        // Data mapping configuration for API v3 structure
+        const dataMapping = {
+            casualties: [
+                {
+                    icon: "👶",
+                    label: "Children Killed",
+                    apiKeys: ["gaza.killed.children"],
+                    fallbackValue: 19000,
+                    severity: "critical"
+                },
+                {
+                    icon: "📰",
+                    label: "Journalists Killed",
+                    apiKeys: ["gaza.killed.press"],
+                    fallbackValue: 140,
+                    severity: "urgent"
+                },
+                {
+                    icon: "🏥",
+                    label: "Medical Personnel Killed",
+                    apiKeys: ["gaza.killed.medical"],
+                    fallbackValue: 1590,
+                    severity: "warning"
+                },
+                {
+                    icon: "💀",
+                    label: "Total Deaths",
+                    apiKeys: ["gaza.killed.total"],
+                    fallbackValue: 61020,
+                    severity: "critical"
+                }
+            ],
+            displacement: [
+                {
+                    icon: "🏠",
+                    label: "Internally Displaced",
+                    apiKeys: [],
+                    fallbackValue: 1900000,
+                    severity: "urgent"
+                },
+                {
+                    icon: "🤕",
+                    label: "Total Injured",
+                    apiKeys: ["gaza.injured.total"],
+                    fallbackValue: 150671,
+                    severity: "warning"
+                }
+            ]
+        };
+
+        // CSV Data Loading Functions for Hunger Statistics
+        async function loadHungerCSVData() {
+            try {
+                console.log('📊 Loading hunger crisis data from CSV files...');
+                updateHungerDataIndicator('Loading CSV files...');
+
+                // Load children starvation statistics
+                const childrenResponse = await fetch('children-starvation/children-starvation-statistics.csv');
+                const childrenCSV = await childrenResponse.text();
+
+                // Load total population statistics
+                const totalPopResponse = await fetch('total-population/total-population-statistics.csv');
+                const totalPopCSV = await totalPopResponse.text();
+
+                // Load references
+                const referencesResponse = await fetch('children-starvation/references.csv');
+                const referencesCSV = await referencesResponse.text();
+
+                // Parse CSV data
+                childrenStarvationStats = await parseCSV(childrenCSV);
+                totalPopulationStats = await parseCSV(totalPopCSV);
+                hungerReferences = await parseCSV(referencesCSV);
+
+                console.log(`✅ Loaded ${childrenStarvationStats.length} children stats, ${totalPopulationStats.length} total population stats, ${hungerReferences.length} references`);
+
+                updateHungerDataIndicator('Processing data...');
+                await new Promise(resolve => setTimeout(resolve, 500)); // Brief delay for UI
+
+                updateHungerBannerStats();
+                updateHungerDataIndicator('✅ Live Data');
+
+                return true;
+            } catch (error) {
+                console.error('❌ Error loading hunger CSV data:', error);
+                updateHungerDataIndicator('⚠️ Error Loading');
+                loadFallbackHungerData();
+                return false;
+            }
+        }
+
+        // Parse CSV data using Papa Parse
+        function parseCSV(csvText) {
+            return new Promise((resolve, reject) => {
+                Papa.parse(csvText, {
+                    header: true,
+                    skipEmptyLines: true,
+                    transformHeader: header => header.trim(),
+                    transform: value => value.trim(),
+                    complete: function(results) {
+                        resolve(results.data);
+                    },
+                    error: function(error) {
+                        reject(error);
+                    }
+                });
+            });
+        }
+
+        // Get statistic by ID from either dataset
+        function getHungerStatistic(statId, dataset = 'combined') {
+            if (dataset === 'children' || dataset === 'combined') {
+                const childStat = childrenStarvationStats.find(stat => stat.id == statId);
+                if (childStat) return childStat;
+            }
+
+            if (dataset === 'total' || dataset === 'combined') {
+                const totalStat = totalPopulationStats.find(stat => stat.id == statId);
+                if (totalStat) return totalStat;
+            }
+
+            return null;
+        }
+
+        // Get reference by ID
+        function getHungerReference(refId) {
+            return hungerReferences.find(ref => ref.reference_id === refId) || {};
+        }
+
+        // Update hunger banner statistics with CSV data
+        function updateHungerBannerStats() {
+            try {
+                console.log('📊 Updating hunger banner with CSV data...');
+
+                // Total Deaths from Starvation (combining children + total population data)
+                const childrenDeaths = getHungerStatistic(1, 'children'); // children deaths from starvation
+                const totalDeaths = getHungerStatistic(1, 'total'); // total confirmed starvation deaths
+
+                let totalStarvationDeaths = 0;
+                if (childrenDeaths && childrenDeaths.value) {
+                    totalStarvationDeaths += parseInt(childrenDeaths.value);
+                }
+                if (totalDeaths && totalDeaths.value) {
+                    totalStarvationDeaths += parseInt(totalDeaths.value);
+                }
+
+                // People in Famine Conditions
+                const peopleInFamine = getHungerStatistic(3, 'total'); // people_in_famine from total population
+
+                // Total Affected Population
+                const totalAffected = getHungerStatistic(2, 'total'); // total_population_at_risk
+
+                // Update the display elements
+                const totalStarvationEl = document.getElementById('totalStarvationDeathsStat');
+                const peopleInFamineEl = document.getElementById('peopleInFamineStat');
+                const totalAffectedEl = document.getElementById('totalAffectedPopulationStat');
+
+                if (totalStarvationEl) {
+                    totalStarvationEl.textContent = totalStarvationDeaths > 0 ? totalStarvationDeaths.toLocaleString() : '169+';
+                }
+
+                if (peopleInFamineEl) {
+                    if (peopleInFamine && peopleInFamine.value) {
+                        const value = parseInt(peopleInFamine.value);
+                        peopleInFamineEl.textContent = value >= 1000 ? (value / 1000).toFixed(0) + 'K' : value.toLocaleString();
+                    } else {
+                        peopleInFamineEl.textContent = '500K';
+                    }
+                }
+
+                if (totalAffectedEl) {
+                    if (totalAffected && totalAffected.value) {
+                        const value = parseInt(totalAffected.value);
+                        totalAffectedEl.textContent = value >= 1000000 ? (value / 1000000).toFixed(1) + 'M' : value.toLocaleString();
+                    } else {
+                        totalAffectedEl.textContent = '2.1M';
+                    }
+                }
+
+                console.log('✅ Hunger banner stats updated successfully');
+                console.log(`Deaths: ${totalStarvationDeaths}, Famine: ${peopleInFamine?.value || 'fallback'}, Affected: ${totalAffected?.value || 'fallback'}`);
+
+            } catch (error) {
+                console.error('❌ Error updating hunger banner stats:', error);
+                loadFallbackHungerData();
+            }
+        }
+
+        // Load fallback hunger data when CSV fails
+        function loadFallbackHungerData() {
+            console.log('📊 Loading fallback hunger data...');
+
+            const totalStarvationEl = document.getElementById('totalStarvationDeathsStat');
+            const peopleInFamineEl = document.getElementById('peopleInFamineStat');
+            const totalAffectedEl = document.getElementById('totalAffectedPopulationStat');
+
+            if (totalStarvationEl) totalStarvationEl.textContent = '169+';
+            if (peopleInFamineEl) peopleInFamineEl.textContent = '500K';
+            if (totalAffectedEl) totalAffectedEl.textContent = '2.1M';
+
+            updateHungerDataIndicator('⚠️ Cached Data');
+        }
+
+        // Update hunger data loading indicator
+        function updateHungerDataIndicator(message) {
+            const indicator = document.getElementById('hungerDataIndicator');
+            if (indicator) {
+                indicator.textContent = message;
+
+                if (message.includes('✅')) {
+                    indicator.style.background = 'rgba(34, 197, 94, 0.3)';
+                    indicator.style.color = '#fff';
+                } else if (message.includes('⚠️')) {
+                    indicator.style.background = 'rgba(245, 158, 11, 0.3)';
+                    indicator.style.color = '#fff';
+                } else {
+                    indicator.style.background = 'rgba(255, 255, 255, 0.2)';
+                    indicator.style.color = '#fff';
+                }
+            }
+        }
+
+        // Enhanced API fetch with multiple CORS bypass methods
+        async function fetchApiData() {
+            const apiUrl = 'https://data.techforpalestine.org/api/v3/summary.json';
+
+            const proxyServices = [
+                {
+                    name: 'AllOrigins',
+                    url: `https://api.allorigins.win/get?url=${encodeURIComponent(apiUrl)}`,
+                    parseResponse: (data) => JSON.parse(data.contents)
+                },
+                {
+                    name: 'CORS Anywhere',
+                    url: `https://cors-anywhere.herokuapp.com/${apiUrl}`,
+                    parseResponse: (data) => data
+                },
+                {
+                    name: 'ThingProxy',
+                    url: `https://thingproxy.freeboard.io/fetch/${apiUrl}`,
+                    parseResponse: (data) => data
+                }
+            ];
+
+            try {
+                console.log('Attempting to fetch data from Tech for Palestine API v3...');
+                updateApiStatus('loading', 'Loading API v3...');
+
+                // Try direct fetch first
+                try {
+                    const response = await fetch(apiUrl, {
+                        method: 'GET',
+                        headers: { 'Accept': 'application/json' },
+                        mode: 'cors'
+                    });
+
+                    if (response.ok) {
+                        const data = await response.json();
+                        window.apiData = data;
+                        lastUpdated = data.gaza?.last_update || new Date().toISOString();
+                        console.log('API v3 data fetched directly:', data);
+                        updateApiStatus('live', 'Live Data');
+                        isUsingFallback = false;
+                        return data;
+                    }
+                } catch (directError) {
+                    console.log('Direct fetch failed (expected due to CORS):', directError.message);
+                }
+
+                // Try proxy services
+                for (const proxy of proxyServices) {
+                    try {
+                        console.log(`Trying ${proxy.name} proxy...`);
+                        updateApiStatus('loading', `Trying ${proxy.name}...`);
+
+                        const proxyResponse = await fetch(proxy.url, {
+                            method: 'GET',
+                            headers: { 'Accept': 'application/json' }
+                        });
+
+                        if (proxyResponse.ok) {
+                            const proxyData = await proxyResponse.json();
+                            const data = proxy.parseResponse(proxyData);
+
+                            if (data && data.gaza && data.gaza.killed) {
+                                window.apiData = data;
+                                lastUpdated = data.gaza?.last_update || new Date().toISOString();
+                                console.log(`API v3 data fetched via ${proxy.name}:`, data);
+                                updateApiStatus('live', `Live Data (${proxy.name})`);
+                                isUsingFallback = false;
+                                return data;
+                            }
+                        }
+                    } catch (proxyError) {
+                        console.log(`${proxy.name} proxy failed:`, proxyError.message);
+                        continue;
+                    }
+                }
+
+                throw new Error('All proxy methods failed');
+
+            } catch (error) {
+                console.error('All API fetch attempts failed:', error);
+                throw error;
+            }
+        }
+
+        // Update API status indicator
+        function updateApiStatus(status, text) {
+            const apiStatus = document.getElementById('apiStatus');
+            if (apiStatus) {
+                apiStatus.className = `api-status ${status}`;
+                apiStatus.textContent = text;
+            }
+        }
+
+        // Get nested object value by string path
+        function getNestedValue(obj, path) {
+            if (!obj || !path) return null;
+            try {
+                return path.split('.').reduce((current, key) => {
+                    return current && typeof current === 'object' ? current[key] : null;
+                }, obj);
+            } catch (error) {
+                console.warn(`Failed to get nested value for path: ${path}`, error);
+                return null;
+            }
+        }
+
+        // Enhanced value retrieval with multiple API key attempts
+        function getValueFromData(data, config) {
+            if (!data) return config.fallbackValue;
+
+            for (const apiKey of config.apiKeys) {
+                const value = getNestedValue(data, apiKey);
+                if (value !== null && value !== undefined) {
+                    return value;
+                }
+            }
+
+            return config.fallbackValue;
+        }
+
+        // Enhanced number formatting
+        function formatNumber(value) {
+            if (value === null || value === undefined) return 'N/A';
+
+            const num = parseInt(value);
+            if (isNaN(num)) return 'N/A';
+
+            if (num >= 1000000) {
+                return (num / 1000000).toFixed(1) + 'M';
+            } else if (num >= 1000) {
+                return (num / 1000).toFixed(1) + 'K';
+            } else {
+                return num.toLocaleString();
+            }
+        }
+
+        // Update loading progress
+        function updateDataProgress(message) {
+            const progressEl = document.getElementById('dataProgress');
+            const statusEl = document.getElementById('dataStatusContent');
+
+            if (progressEl) progressEl.textContent = message;
+            if (statusEl) {
+                statusEl.innerHTML = `📊 ${message}`;
+                const statusContainer = document.getElementById('dataStatus');
+                if (statusContainer) statusContainer.style.display = 'block';
+            }
+
+            console.log('Data Progress:', message);
+        }
+
+        // Show data loading success
+        function showDataSuccess() {
+            const statusEl = document.getElementById('dataStatusContent');
+            const statusContainer = document.getElementById('dataStatus');
+
+            if (statusEl) {
+                statusEl.innerHTML = `✅ Successfully loaded data from Tech for Palestine API v3 and Hunger CSV sources`;
+                statusEl.className = 'data-status data-success';
+            }
+
+            setTimeout(() => {
+                if (statusContainer) statusContainer.style.display = 'none';
+            }, 3000);
+        }
+
+        // Show data loading error
+        function showDataError(error) {
+            const statusEl = document.getElementById('dataStatusContent');
+            if (statusEl) {
+                statusEl.innerHTML = `❌ Error loading API data: ${error}`;
+                statusEl.className = 'data-status data-error';
+            }
+            console.error('Data Loading Error:', error);
+        }
+
+        // Enhanced data loading function
+        async function loadMainPageData() {
+            try {
+                console.log('📊 Loading main page data from Tech for Palestine API v3 and CSV sources...');
+                updateDataProgress('Initializing API v3 and CSV data loading...');
+
+                // Load both API data and CSV data in parallel
+                const [apiData, csvSuccess] = await Promise.all([
+                    fetchApiData().catch(error => {
+                        console.log('API fetch failed, continuing with CSV data only');
+                        return null;
+                    }),
+                    loadHungerCSVData()
+                ]);
+
+                updateDataProgress('Processing combined data...');
+
+                if (apiData && apiData.gaza) {
+                    updateWarCrimesBannerStats(apiData);
+                    console.log('✅ API data loaded successfully');
+                } else {
+                    console.log('⚠️ Using fallback data for API-dependent stats');
+                    loadFallbackData();
+                }
+
+                // CSV data is handled separately in updateHungerBannerStats()
+                updateMajorIncidentsBanner();
+                showDataSuccess();
+
+                console.log('✅ Main page data loaded successfully from combined sources');
+                window.dataLoaded = true;
+                return true;
+
+            } catch (error) {
+                console.error('Error loading main page data:', error);
+                showDataError(error.message);
+                loadFallbackData();
+                loadFallbackHungerData();
+                return false;
+            }
+        }
+
+        // Update war crimes banner stats
+        function updateWarCrimesBannerStats(data) {
+            try {
+                console.log('📊 Updating war crimes banner stats with API data...');
+
+                // Update War Crimes Banner
+                const childrenKilled = getValueFromData(data, dataMapping.casualties[0]);
+                const journalistsKilled = getValueFromData(data, dataMapping.casualties[1]);
+                const medicalStaffKilled = getValueFromData(data, dataMapping.casualties[2]);
+
+                const childrenKilledEl = document.getElementById('childrenKilledStat');
+                const journalistsKilledEl = document.getElementById('journalistsKilledStat');
+                const medicalStaffKilledEl = document.getElementById('medicalStaffKilledStat');
+
+                if (childrenKilledEl) childrenKilledEl.textContent = formatNumber(childrenKilled);
+                if (journalistsKilledEl) journalistsKilledEl.textContent = formatNumber(journalistsKilled);
+                if (medicalStaffKilledEl) medicalStaffKilledEl.textContent = formatNumber(medicalStaffKilled);
+
+                console.log('✅ War crimes banner stats updated successfully');
+
+            } catch (error) {
+                console.error('Error updating war crimes banner stats:', error);
+                updateBannerStatsError();
+            }
+        }
+
+        // Load fallback data when API fails
+        function loadFallbackData() {
+            console.log('Loading fallback API data...');
+            updateApiStatus('fallback', 'Cached Data');
+            isUsingFallback = true;
+
+            const childrenKilledEl = document.getElementById('childrenKilledStat');
+            const journalistsKilledEl = document.getElementById('journalistsKilledStat');
+            const medicalStaffKilledEl = document.getElementById('medicalStaffKilledStat');
+
+            if (childrenKilledEl) childrenKilledEl.textContent = '19K';
+            if (journalistsKilledEl) journalistsKilledEl.textContent = '140';
+            if (medicalStaffKilledEl) medicalStaffKilledEl.textContent = '1.6K';
+
+            console.log('Fallback API data loaded successfully');
+        }
+
+        // Update major incidents banner with CSV data
+        function updateMajorIncidentsBanner() {
+            const totalIncidentsEl = document.getElementById('totalIncidentsCount');
+            const verifiedIncidentsEl = document.getElementById('verifiedIncidentsCount');
+            const casualtiesCountEl = document.getElementById('casualtiesCount');
+
+            if (window.incidents && window.incidents.length > 0) {
+                const verified = window.incidents.filter(i => i.verified === 'verified').length;
+                const totalCasualties = window.incidents.reduce((sum, incident) => {
+                    if (incident.casualties) {
+                        return sum + (incident.casualties.deaths || 0) + (incident.casualties.injured || 0);
+                    }
+                    return sum;
+                }, 0);
+
+                if (totalIncidentsEl) totalIncidentsEl.textContent = window.incidents.length.toLocaleString();
+                if (verifiedIncidentsEl) verifiedIncidentsEl.textContent = verified.toLocaleString();
+                if (casualtiesCountEl) casualtiesCountEl.textContent = totalCasualties.toLocaleString();
+            } else {
+                // Fallback estimates
+                if (totalIncidentsEl) totalIncidentsEl.textContent = '500+';
+                if (verifiedIncidentsEl) verifiedIncidentsEl.textContent = '350+';
+                if (casualtiesCountEl) casualtiesCountEl.textContent = '10K+';
+            }
+        }
+
+        // Update banner stats with error state
+        function updateBannerStatsError() {
+            const statElements = [
+                'childrenKilledStat', 'journalistsKilledStat', 'medicalStaffKilledStat'
+            ];
+
+            statElements.forEach(elementId => {
+                const element = document.getElementById(elementId);
+                if (element) element.textContent = 'Error';
+            });
+        }
+
+        // Update timeline controls
+        function updateTimelineControls() {
+            const incidentCount = document.getElementById('incidentCount');
+            const lastUpdatedEl = document.getElementById('lastUpdated');
+
+            if (incidentCount) {
+                const count = window.incidents ? window.incidents.length : 0;
+                incidentCount.textContent = `${count} incidents in timeline`;
+            }
+            if (lastUpdatedEl) {
+                const updateTime = lastUpdated || new Date().toISOString();
+                const date = new Date(updateTime).toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric'
+                });
+                lastUpdatedEl.textContent = `Last updated: ${date}`;
+            }
+        }
+
+        // Combined CSV loading for timeline
+        async function loadTimelineDataFromCSV() {
+            try {
+                console.log('📊 Loading timeline data from CSV files as fallback...');
+
+                // Load main incidents CSV
+                const incidentsData = await loadCSVFile('incidents.csv');
+                console.log(`✅ Loaded ${incidentsData.length} incidents from CSV`);
+
+                // Load casualties details CSV
+                const casualtiesData = await loadCSVFile('casualties-details.csv');
+                console.log(`✅ Loaded ${casualtiesData.length} casualty records from CSV`);
+
+                // Process and combine the data
+                const processedIncidents = processIncidentsData(incidentsData, casualtiesData);
+
+                // Update global variables
+                window.incidents = processedIncidents;
+                window.filteredIncidents = [...processedIncidents];
+                window.GazaDocsPlatform.incidents = processedIncidents;
+                window.GazaDocsPlatform.filteredIncidents = window.filteredIncidents;
+
+                // Update major incidents banner with CSV data
+                updateMajorIncidentsBanner();
+                updateTimelineControls();
+
+                return processedIncidents;
+
+            } catch (error) {
+                console.error('❌ Error loading CSV timeline data:', error);
+                return [];
+            }
+        }
+
+        // Enhanced CSV file loading with Papa Parse
+        async function loadCSVFile(filename) {
+            return new Promise((resolve, reject) => {
+                const timestamp = Date.now();
+                const random = Math.random().toString(36).substring(7);
+                const url = `${filename}?v=${timestamp}&r=${random}`;
+
+                Papa.parse(url, {
+                    download: true,
+                    header: true,
+                    skipEmptyLines: true,
+                    dynamicTyping: true,
+                    delimitersToGuess: [',', '\t', '|', ';'],
+                    transformHeader: function(header) {
+                        return header.trim().toLowerCase().replace(/\s+/g, '_');
+                    },
+                    complete: function(results) {
+                        if (results.errors && results.errors.length > 0) {
+                            console.warn(`CSV parsing warnings for ${filename}:`, results.errors);
+                        }
+                        resolve(results.data.filter(row => row && Object.keys(row).length > 0));
+                    },
+                    error: function(error) {
+                        console.error(`❌ Error loading ${filename}:`, error);
+                        reject(new Error(`Failed to load ${filename}: ${error.message || error}`));
+                    }
+                });
+            });
+        }
+
+        // Enhanced data processing function
+        function processIncidentsData(incidentsData, casualtiesDetailsData) {
+            return incidentsData.map(row => {
+                try {
+                    if (!row.id) return null;
+
+                    const coordinates = [];
+                    if (row.location_coordinates_lng && row.location_coordinates_lat) {
+                        coordinates.push(parseFloat(row.location_coordinates_lng));
+                        coordinates.push(parseFloat(row.location_coordinates_lat));
+                    }
+
+                    const casualties = {};
+                    if (row.casualties_affected) casualties.affected = parseInt(row.casualties_affected) || 0;
+                    if (row.casualties_critical) casualties.critical = parseInt(row.casualties_critical) || 0;
+                    if (row.casualties_deaths) casualties.deaths = parseInt(row.casualties_deaths) || 0;
+                    if (row.casualties_injured) casualties.injured = parseInt(row.casualties_injured) || 0;
+                    if (row.casualties_hospitalized) casualties.hospitalized = parseInt(row.casualties_hospitalized) || 0;
+
+                    const incident = {
+                        id: row.id,
+                        title: row.title || 'Untitled Incident',
+                        date: row.date,
+                        time: row.time || null,
+                        location: {
+                            name: row.location_name || 'Unknown location',
+                            coordinates: coordinates
+                        },
+                        type: row.type || 'other',
+                        description: row.description || 'No description available',
+                        casualties: Object.keys(casualties).length > 0 ? casualties : null,
+                        verified: row.verified || 'pending',
+                        tags: row.tags ? row.tags.split('|').map(tag => tag.trim()) : []
+                    };
+
+                    return incident;
+                } catch (error) {
+                    console.error('Error processing incident row:', row, error);
+                    return null;
+                }
+            }).filter(incident => incident !== null);
+        }
+
+        // Initialize page when DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initializeIndexPage);
+        } else {
+            initializeIndexPage();
+        }
+
+        async function initializeIndexPage() {
+            console.log('🚀 Index page initializing with Tech for Palestine API v3 and Hunger CSV Data...');
+
+            // Initialize theme first
+            initializeTheme();
+
+            // Setup event listeners
+            setupMainPageListeners();
+
+            try {
+                // Load combined API and CSV data for banners
+                await loadMainPageData();
+
+                // Load CSV data for timeline
+                await loadTimelineDataFromCSV();
+
+                // Initialize timeline with delay
+                setTimeout(() => {
+                    console.log('📅 Initializing timeline...');
+
+                    if (window.timelineManager && typeof window.timelineManager.init === 'function') {
+                        window.timelineManager.init(window.incidents);
+                    } else if (typeof window.initializeTimeline === 'function') {
+                        window.initializeTimeline();
+                    } else {
+                        console.log('Timeline functions not yet available, retrying...');
+                        setTimeout(() => {
+                            if (window.timelineManager) {
+                                window.timelineManager.init(window.incidents);
+                            } else if (typeof window.initializeTimeline === 'function') {
+                                window.initializeTimeline();
+                            }
+                        }, 1000);
+                    }
+                }, 500);
+
+            } catch (error) {
+                console.error('Failed to initialize page:', error);
+                showDataError(error.message);
+            }
+        }
+
+        function initializeTheme() {
+            const savedTheme = localStorage.getItem('gaza-docs-theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            updateThemeIcon(savedTheme);
+
+            const themeToggle = document.querySelector('.theme-toggle');
+            if (themeToggle) {
+                themeToggle.addEventListener('click', toggleTheme);
+            }
+        }
+
+        function toggleTheme() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('gaza-docs-theme', newTheme);
+            updateThemeIcon(newTheme);
+
+            if (window.timelineManager) {
+                setTimeout(() => {
+                    window.timelineManager.refresh();
+                }, 100);
+            }
+        }
+
+        function updateThemeIcon(theme) {
+            const themeToggle = document.querySelector('.theme-toggle');
+            if (themeToggle) {
+                themeToggle.textContent = theme === 'dark' ? '☀️' : '🌙';
+            }
+        }
+
+        function setupMainPageListeners() {
+            const searchInput = document.getElementById('searchInput');
+            const typeFilter = document.getElementById('typeFilter');
+            const dateFilter = document.getElementById('dateFilter');
+            const clearFilters = document.getElementById('clearFilters');
+
+            if (searchInput) {
+                searchInput.addEventListener('input', debounce(applyTimelineFilters, 300));
+            }
+            if (typeFilter) {
+                typeFilter.addEventListener('change', applyTimelineFilters);
+            }
+            if (dateFilter) {
+                dateFilter.addEventListener('change', applyTimelineFilters);
+            }
+            if (clearFilters) {
+                clearFilters.addEventListener('click', clearTimelineFilters);
+            }
+        }
+
+        function applyTimelineFilters() {
+            if (window.timelineManager && typeof window.timelineManager.applyFilters === 'function') {
+                const searchTerm = document.getElementById('searchInput')?.value || '';
+                const typeFilter = document.getElementById('typeFilter')?.value || '';
+                const dateFilter = document.getElementById('dateFilter')?.value || '';
+
+                window.timelineManager.applyFilters({
+                    search: searchTerm,
+                    type: typeFilter,
+                    date: dateFilter
+                });
+            }
+        }
+
+        function clearTimelineFilters() {
+            const searchInput = document.getElementById('searchInput');
+            const typeFilter = document.getElementById('typeFilter');
+            const dateFilter = document.getElementById('dateFilter');
+
+            if (searchInput) searchInput.value = '';
+            if (typeFilter) typeFilter.value = '';
+            if (dateFilter) dateFilter.value = '';
+
+            applyTimelineFilters();
+        }
+
+        // Utility function
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+    </script>
+
+    <!-- Custom Scripts -->
+    <script src="timeline.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

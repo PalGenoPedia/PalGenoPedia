@@ -1,0 +1,133 @@
+Gaza Crisis Documentation/
+│
+├── 🏠 MAIN PAGES
+│   ├── index.html                          # Main dashboard with timeline & crisis banners
+│   ├── war-crimes-stats.html               # ⚖️ War crimes overview (4 views: overview/violations/legal/resources)
+│   ├── hunger-crisis-stats.html            # 🍽️ Hunger crisis overview (4 views: overview/violations/legal/resources)
+│   └── major-incidents-timeline.html       # 📋 Interactive timeline/map/list views
+│
+├── 🎨 STYLING & TEMPLATES
+│   ├── shared-styles.css                   # 🧩 Base styles for index & major incidents
+│   ├── unified-crisis-styles.css           # 🎨 Shared styles for war crimes & hunger pages
+│   └── common-styles.html                   # 🔄 Footer/header template (loaded via fetch)
+│
+├── 📊 STATISTICS PAGES
+│   └── Pages/
+│       ├── global-styles.css               # 🎨 Global CSS for all stat pages
+│       │
+│       ├── War_Crimes_Stats/               # ⚖️ War Crimes Detail Pages + Data
+│       │   ├── stat-children-killed.html      # 👶 Children casualties (IMPLEMENTED)
+│       │   ├── stat-children-killed/          # 📊 Children casualties data folder
+│       │   │   ├── stat-children-killed-main.csv       # Core statistics
+│       │   │   ├── stat-children-killed-images.csv     # Image gallery metadata
+│       │   │   ├── stat-children-killed-timeline.csv   # Timeline events
+│       │   │   ├── stat-children-killed-resources.csv  # External links/sources
+│       │   │   └── images/                             # Associated images
+│       │   │       ├── child-victim-memorial.jpg
+│       │   │       ├── statistical-chart.png
+│       │   │       └── vigil-ceremony.jpg
+│       │   │
+│       │   ├── stat-journalists-killed.html   # 📰 Media workers targeted
+│       │   ├── stat-journalists-killed/       # 📊 Journalists data folder (planned)
+│       │   ├── stat-medical-personnel.html    # 🏥 Healthcare workers killed
+│       │   ├── stat-medical-personnel/        # 📊 Medical workers data folder (planned)
+│       │   ├── stat-medical-detained.html     # 🚨 Medical staff detained
+│       │   ├── stat-hospitals-attacked.html   # 🏥 Medical facilities targeted
+│       │   ├── stat-schools-destroyed.html    # 🎓 Educational infrastructure
+│       │   ├── stat-religious-sites.html      # 🕌 Cultural/religious sites
+│       │   ├── stat-water-systems.html        # 💧 Water infrastructure
+│       │   ├── stat-civilian-casualties.html  # 💀 Total civilian deaths
+│       │   ├── stat-forced-displacement.html  # 🏠 Mass displacement
+│       │   ├── stat-un-facilities.html        # 🏛️ UN facilities attacked
+│       │   └── stat-siege-violations.html     # 🚫 Siege & collective punishment
+│       │
+│       └── Hunger_Crisis/                  # 🍽️ Hunger Crisis Detail Pages + Data
+│           ├── hunger-malnutrition-rates.html    # 📊 Population food insecurity
+│           ├── hunger-malnutrition-rates/        # 📊 Malnutrition data folder (planned)
+│           ├── hunger-children-starving.html     # 👶 Child malnutrition
+│           ├── hunger-children-starving/         # 📊 Child starvation data folder (planned)
+│           ├── hunger-orphaned-children.html     # 👤 Orphaned children
+│           ├── hunger-food-shortages.html        # 🥖nternational donations blocked
+│           ├── hunger-unemployment.html          # 💼 Economic warfare
+│           ├── hunger-displaced-families.html    # 🏠 Displaced population impact
+│           ├── hunger-pregnant-women.html        # 🤱 Maternal malnutrition
+│           ├── hunger-trade-restrictions.html    # 🚛 Commercial food imports
+│           ├── hunger-bakeries-destroyed.html    # 🏭 Food production facilities
+│           ├── hunger-markets-targeted.html      # 🏪 Food distribution centers
+│           └── hunger-agriculture-destroyed.html # 🌾 Agricultural infrastructure
+│           └── ... (each page gets matching data folder with 4 CSVs + images)
+│
+├── 📊 MAIN DATA FILE
+│   └── incidents.json                      # 🗺️ Main data source for timeline/map
+│
+└── 🔧 JAVASCRIPT
+    ├── main.js                             # 🗺️ Map functionality + dashboard logic
+    ├── timeline.js                         # 📅 Timeline rendering for major incidents
+    ├── war-crimes-stats.js                 # ⚖️ War crimes page interactions (if exists)
+    └── hunger-crisis-stats.js              # 🍽️ Hunger crisis page interactions (if exists) Calorie deficits
+│           ├── hunger-aid-blocked.html           # 🚫 Aid requests denied
+│           ├── hunger-donations-blocked.html     # 📦 I
+│
+└── ⚙️ BACKEND
+    └── incident-extractor/                 # Flask backend app
+        ├── app.py                          # Flask application entrypoint
+        ├── requirements.txt                # Python dependencies
+        ├── static/
+        │   └── css/
+        │       └── styles.css              # CSS for backend UI
+        ├── templates/
+        │   └── index.html                  # HTML for backend app
+        └── extractor/
+            ├── __init__.py
+            ├── text_parser.py              # Text extraction logic
+            └── url_parser.py               # URL extraction logic
+
+
+
+1. War Crimes Statistics (war-crimes-stats.html)
+Comprehensive documentation of international humanitarian law violations
+Four Main Views:
+
+Overview: Emergency statistics dashboard showing 15,000+ children killed, 140+ journalists targeted, 500+ medical workers killed, 120+ hospitals attacked
+Violations: Categorized war crimes including:
+
+Crimes against civilian population (indiscriminate attacks, collective punishment, forced displacement)
+Attacks on protected sites (medical facilities, schools, religious sites, UN facilities)
+Crimes against specific groups (children, journalists, medical personnel, women)
+
+
+Legal Framework: International legal response timeline and applicable laws (Geneva Conventions, Rome Statute, ICC investigations)
+Resources: Legal documentation, official reports, evidence collection tools, and academic analysis
+
+2. Hunger Crisis Statistics (hunger-crisis-stats.html)
+Documentation of systematic starvation as a weapon of war
+Four Main Views:
+
+Overview: Critical hunger statistics with 95% population food insecure, 335,000 malnourished children, 25,000+ orphaned children
+Violations: Multi-layered starvation tactics including:
+
+Direct starvation & malnutrition (severe acute malnutrition, orphaned children, maternal malnutrition)
+Economic warfare & displacement (mass unemployment, forced displacement, banking collapse)
+Complete siege & aid prevention (97% donations blocked, commercial trade destroyed)
+Food system destruction (bakeries, markets, agricultural infrastructure targeted)
+
+
+Legal Framework: Timeline of legal responses to starvation tactics and applicable international law
+Resources: UN agencies, legal documentation, medical studies, and human rights organizations
+
+3. Major Incidents Timeline (major-incidents-timeline.html)
+Interactive documentation of significant crisis events
+Three Main Views:
+
+Timeline: Interactive chronological timeline powered by CSV data showing progression of major incidents
+Map: Geographical visualization of incidents with clustering and type-based markers (hunger, water, aid, casualties, infrastructure)
+List: Filterable and sortable incident documentation with detailed modal views for each incident
+
+Features:
+
+Advanced search and filtering by type, date, location
+Real-time statistics and verification status
+Detailed incident modals with evidence, casualties, and sources
+CSV-powered data loading with progress tracking
+
+Each scope provides comprehensive documentation with legal frameworks, evidence collection, and calls to action for accountability and humanitarian response.

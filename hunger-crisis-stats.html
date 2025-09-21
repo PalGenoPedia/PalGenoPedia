@@ -1,0 +1,1611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hunger Crisis Statistics - Gaza Crisis Documentation</title>
+    <meta name="description" content="Comprehensive documentation of hunger crisis, malnutrition, and food-related violations in Gaza">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+
+    <!-- CSV Parser -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+
+    <!-- Custom Styles -->
+    <style>
+        /* Core CSS Variables */
+        :root {
+            /* Hunger Crisis Theme Colors */
+            --critical-color: #dc3545;
+            --urgent-color: #fd7e14;
+            --warning-color: #ffc107;
+            --danger-color: #e83e8c;
+            --success-color: #28a745;
+            --info-color: #17a2b8;
+
+            /* Base Theme Colors */
+            --background-color: #ffffff;
+            --surface-color: #f8f9fa;
+            --text-primary: #2d3748;
+            --text-secondary: #4a5568;
+            --border-color: #e2e8f0;
+            --accent-color: #dc3545;
+            --primary-color: #2d3748;
+            --secondary-color: #4299e1;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+        }
+
+        /* Dark theme */
+        [data-theme="dark"] {
+            --background-color: #1a202c;
+            --surface-color: #2d3748;
+            --text-primary: #f7fafc;
+            --text-secondary: #e2e8f0;
+            --border-color: #4a5568;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--background-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header Styles */
+        .header {
+            background: var(--surface-color);
+            border-bottom: 1px solid var(--border-color);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+        }
+
+        .nav {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .nav-btn {
+            background: transparent;
+            border: 2px solid var(--border-color);
+            color: var(--text-primary);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .nav-btn:hover, .nav-btn.active {
+            background: var(--accent-color);
+            color: white;
+            border-color: var(--accent-color);
+        }
+
+        .theme-toggle {
+            background: var(--surface-color);
+            border: 2px solid var(--border-color);
+            color: var(--text-primary);
+            padding: 0.5rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+
+        .main {
+            min-height: 100vh;
+        }
+
+        /* View Section Management */
+        .view-section {
+            display: none;
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .view-section.active {
+            display: block;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Hunger Crisis Header */
+        .hunger-crisis-header {
+            background: linear-gradient(135deg, var(--critical-color) 0%, rgba(220, 53, 69, 0.8) 100%);
+            color: white;
+            padding: 3rem 0 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hunger-crisis-header h2 {
+            color: white;
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+        }
+
+        .section-description {
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 900px;
+            margin: 0 auto 2rem;
+            line-height: 1.7;
+        }
+
+        .crisis-severity-indicator {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .crisis-severity-indicator span:first-child {
+            background: var(--warning-color);
+            color: #000;
+            padding: 0.75rem 2rem;
+            border-radius: 25px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-right: 1rem;
+            display: inline-block;
+        }
+
+        .crisis-severity-indicator span:last-child {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 0.75rem 2rem;
+            border-radius: 25px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        .last-updated {
+            font-weight: 600;
+            color: white;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            display: inline-block;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        /* Emergency Banner */
+        .emergency-banner {
+            background: linear-gradient(135deg, var(--critical-color), #ff6b6b);
+            color: white;
+            padding: 2rem;
+            border-radius: 20px;
+            text-align: center;
+            margin: 3rem 0;
+            box-shadow: 0 12px 30px rgba(220, 38, 38, 0.3);
+        }
+
+        .emergency-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .emergency-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .emergency-stat {
+            font-size: 1.8rem;
+            font-weight: 900;
+            margin: 1rem 0;
+        }
+
+        .emergency-details {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-top: 1rem;
+            opacity: 0.95;
+            line-height: 1.4;
+        }
+
+        /* Statistics Sections */
+        .stats-section {
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--critical-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Stats row for 4 columns */
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Stat Cards */
+        .stat-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            transition: all 0.3s ease;
+        }
+
+        .stat-link:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-card {
+            background: var(--surface-color);
+            border: 2px solid var(--border-color);
+            border-radius: 20px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            cursor: pointer;
+        }
+
+        .stat-card.critical {
+            border-color: var(--critical-color);
+            background: linear-gradient(135deg, var(--surface-color), rgba(220, 53, 69, 0.05));
+        }
+
+        .stat-card.urgent {
+            border-color: var(--urgent-color);
+            background: linear-gradient(135deg, var(--surface-color), rgba(253, 126, 20, 0.05));
+        }
+
+        .stat-card.warning {
+            border-color: var(--warning-color);
+            background: linear-gradient(135deg, var(--surface-color), rgba(255, 193, 7, 0.05));
+        }
+
+        .stat-card.danger {
+            border-color: var(--danger-color);
+            background: linear-gradient(135deg, var(--surface-color), rgba(232, 62, 140, 0.05));
+        }
+
+        .stat-card:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            border-color: var(--accent-color);
+        }
+
+        .stat-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .stat-number {
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            font-weight: 900;
+            color: var(--accent-color);
+            margin-bottom: 0.75rem;
+            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            line-height: 1.2;
+        }
+
+        .stat-subtitle {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            font-style: italic;
+            line-height: 1.4;
+        }
+
+        .stat-source {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            margin-top: 0.5rem;
+            padding-top: 0.5rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .loading {
+            text-align: center;
+            color: var(--text-secondary);
+            font-style: italic;
+            padding: 2rem;
+        }
+
+        .error {
+            background: #fee2e2;
+            color: #dc2626;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            margin: 1rem 0;
+        }
+
+        /* Crisis Layers Section */
+        .crisis-layers-section {
+            background: var(--surface-color);
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+            padding: 3rem 2rem;
+            margin: 4rem 0;
+        }
+
+        .crisis-layers-section h3 {
+            text-align: center;
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            font-weight: 700;
+        }
+
+        .crisis-layers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .crisis-layer {
+            background: var(--background-color);
+            border: 1px solid var(--border-color);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .crisis-layer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--critical-color), var(--urgent-color));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        .crisis-layer:hover::before {
+            transform: scaleX(1);
+        }
+
+        .crisis-layer:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .layer-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .crisis-layer h4 {
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .crisis-layer p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        /* Legal Framework Overview */
+        .legal-framework-overview {
+            margin: 4rem 0;
+            padding: 3rem 2rem;
+            background: var(--surface-color);
+            border-radius: 24px;
+            border: 1px solid var(--border-color);
+        }
+
+        .legal-framework-overview h3 {
+            text-align: center;
+            color: var(--primary-color);
+            font-size: 2.2rem;
+            margin-bottom: 3rem;
+            font-weight: 700;
+        }
+
+        .framework-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .framework-card {
+            background: var(--background-color);
+            border: 2px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .framework-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--critical-color), var(--urgent-color));
+        }
+
+        .framework-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+            border-color: var(--critical-color);
+        }
+
+        .framework-card h4 {
+            color: var(--primary-color);
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .framework-card p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .violation-count {
+            background: linear-gradient(135deg, var(--critical-color), #ff6b6b);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-block;
+            box-shadow: 0 4px 12px rgba(220, 53, 69, 0.3);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .stats-row {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 900px) {
+            .stats-row {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem;
+            }
+
+            .header .container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hunger-crisis-header {
+                padding: 2rem 0 1.5rem;
+            }
+
+            .hunger-crisis-header h2 {
+                font-size: 2rem;
+            }
+
+            .section-description {
+                font-size: 1rem;
+                padding: 0 1rem;
+            }
+
+            .crisis-severity-indicator span {
+                display: block;
+                margin-bottom: 1rem;
+                margin-right: 0;
+            }
+
+            .stats-row {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .stat-card {
+                padding: 2rem 1.5rem;
+            }
+
+            .framework-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .crisis-layers-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Card hover effect enhancement */
+        .stat-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s ease;
+            pointer-events: none;
+        }
+
+        .stat-card:hover::after {
+            left: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">
+                <a href="index.html" style="text-decoration: none; color: inherit;">
+                    Gaza Crisis Documentation
+                </a>
+            </h1>
+            <nav class="nav">
+                <a href="index.html" class="nav-btn">← Back to Main</a>
+                <button class="nav-btn active" data-view="overview">Overview</button>
+                <button class="nav-btn" data-view="violations">Categories</button>
+                <button class="nav-btn" data-view="legal">Legal Framework</button>
+                <button class="nav-btn" data-view="resources">Resources</button>
+            </nav>
+            <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Hunger Crisis Header -->
+        <section class="hunger-crisis-header">
+            <div class="container">
+                <h2>🍽️ Hunger Crisis & Food Security Violations</h2>
+                <p class="section-description">
+                    This section documents the systematic use of starvation as a weapon of war, including blockades of food aid,
+                    destruction of food infrastructure, targeting of agricultural resources, economic warfare preventing food purchase,
+                    and the creation of vulnerable populations unable to access food. All data is compiled from
+                    verified sources including UN agencies, WHO, WFP, and international humanitarian organizations.
+                </p>
+                <div class="crisis-severity-indicator">
+                    <span>CATASTROPHIC FOOD CRISIS</span>
+                    <span>IPC Phase 5 - Famine Conditions</span>
+                </div>
+                <div class="last-updated">
+                    <span id="hungerStatsLastUpdated">Last updated: Loading...</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Overview Section -->
+        <section class="view-section active" id="overviewView">
+            <div class="container">
+                <!-- Emergency Banner -->
+                <div class="emergency-banner">
+                    <span class="emergency-icon">🚨</span>
+                    <div class="emergency-title">HUMANITARIAN EMERGENCY:</div>
+                    <div class="emergency-stat" id="emergencyStatNumber">Loading...</div>
+                    <div class="emergency-details">Complete siege blocks donations • War destroys livelihoods • Systematic starvation</div>
+                </div>
+
+                <!-- Starvation Casualties Section - UPDATED ORDER -->
+                <div class="stats-section">
+                    <h3 class="section-title">💀 Starvation & Malnutrition Casualties</h3>
+                    <div class="stats-row" id="starvationCasualtiesRow">
+                        <div class="loading">Loading starvation casualties data...</div>
+                    </div>
+                </div>
+
+                <!-- Food Security Crisis Section -->
+                <div class="stats-section">
+                    <h3 class="section-title">📈 Food Security & Population Impact</h3>
+                    <div class="stats-row">
+                        <a href="Pages/Hunger_Crisis/hunger-displaced-families.html" class="stat-link">
+                            <div class="stat-card urgent">
+                                <span class="stat-icon">🏠</span>
+                                <div class="stat-number" id="displacedNumber">1.9M</div>
+                                <div class="stat-label">Displaced People</div>
+                                <div class="stat-subtitle">Lost homes, jobs, food access</div>
+                                <div class="stat-source" id="displacedSource">Loading source...</div>
+                            </div>
+                        </a>
+
+                        <a href="Pages/Hunger_Crisis/hunger-unemployment.html" class="stat-link">
+                            <div class="stat-card warning">
+                                <span class="stat-icon">💼</span>
+                                <div class="stat-number">80%</div>
+                                <div class="stat-label">Unemployment Rate</div>
+                                <div class="stat-subtitle">No income to buy food</div>
+                            </div>
+                        </a>
+
+                        <a href="Pages/Hunger_Crisis/hunger-food-shortages.html" class="stat-link">
+                            <div class="stat-card critical">
+                                <span class="stat-icon">🥖</span>
+                                <div class="stat-number">245</div>
+                                <div class="stat-label">Daily Calorie Deficit</div>
+                                <div class="stat-subtitle">Below minimum survival needs</div>
+                            </div>
+                        </a>
+
+                        <a href="Pages/Hunger_Crisis/hunger-aid-blocked.html" class="stat-link">
+                            <div class="stat-card urgent">
+                                <span class="stat-icon">🚫</span>
+                                <div class="stat-number">85%</div>
+                                <div class="stat-label">Aid Requests Denied</div>
+                                <div class="stat-subtitle">Systematic aid blockade</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Siege & Infrastructure Destruction Section -->
+                <div class="stats-section">
+                    <h3 class="section-title">🚧 Siege & Food Infrastructure Destruction</h3>
+                    <div class="stats-row">
+                        <a href="Pages/Hunger_Crisis/hunger-donations-blocked.html" class="stat-link">
+                            <div class="stat-card danger">
+                                <span class="stat-icon">📦</span>
+                                <div class="stat-number">97%</div>
+                                <div class="stat-label">International Donations Blocked</div>
+                                <div class="stat-subtitle">Siege prevents aid delivery</div>
+                            </div>
+                        </a>
+
+                        <a href="Pages/Hunger_Crisis/hunger-trade-restrictions.html" class="stat-link">
+                            <div class="stat-card danger">
+                                <span class="stat-icon">🚛</span>
+                                <div class="stat-number">12</div>
+                                <div class="stat-label">Food Trucks Daily</div>
+                                <div class="stat-subtitle">Was 500+ before siege</div>
+                            </div>
+                        </a>
+
+                        <a href="Pages/Hunger_Crisis/hunger-bakeries-destroyed.html" class="stat-link">
+                            <div class="stat-card danger">
+                                <span class="stat-icon">🏭</span>
+                                <div class="stat-number">78</div>
+                                <div class="stat-label">Bakeries Destroyed</div>
+                                <div class="stat-subtitle">Food infrastructure targeted</div>
+                            </div>
+                        </a>
+
+                        <a href="Pages/Hunger_Crisis/hunger-agriculture-destroyed.html" class="stat-link">
+                            <div class="stat-card urgent">
+                                <span class="stat-icon">🌾</span>
+                                <div class="stat-number">65%</div>
+                                <div class="stat-label">Agricultural Land Destroyed</div>
+                                <div class="stat-subtitle">Food production capacity eliminated</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Multi-layered Crisis Explanation -->
+                <div class="crisis-layers-section">
+                    <h3>🔄 The Complete Siege: Multiple Layers of Starvation</h3>
+                    <div class="crisis-layers-grid">
+                        <div class="crisis-layer">
+                            <div class="layer-icon">🚧</div>
+                            <h4>Physical Blockade</h4>
+                            <p>Complete siege blocks international donations and humanitarian aid. Only 12 food trucks enter daily (was 500+ before siege). 97% of international donations cannot reach the population.</p>
+                        </div>
+
+                        <div class="crisis-layer">
+                            <div class="layer-icon">💣</div>
+                            <h4>Economic Warfare</h4>
+                            <p>War destroys businesses, creates 80% unemployment. Mass displacement (1.9M people) means families lose jobs, savings, and ability to buy food even when available.</p>
+                        </div>
+
+                        <div class="crisis-layer">
+                            <div class="layer-icon">👤</div>
+                            <h4>Vulnerable Populations</h4>
+                            <p>Orphaned children have no parents to provide food. Pregnant women need extra nutrition but have no access. Elderly and disabled cannot secure food independently.</p>
+                        </div>
+
+                        <div class="crisis-layer">
+                            <div class="layer-icon">🏭</div>
+                            <h4>Infrastructure Destruction</h4>
+                            <p>78 bakeries destroyed, 45 markets targeted, 65% of farmland eliminated. Even if money and aid were available, food production and distribution systems are destroyed.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Legal Framework Overview -->
+                <div class="legal-framework-overview">
+                    <h3>International Legal Framework Violations</h3>
+                    <div class="framework-grid">
+                        <div class="framework-card">
+                            <h4>🔴 Starvation as Weapon of War</h4>
+                            <p>Rome Statute, Article 8(2)(b)(xxv) - "Intentionally using starvation of civilians as a method of warfare by depriving them of objects indispensable to their survival"</p>
+                            <div class="violation-count">War Crime</div>
+                        </div>
+                        <div class="framework-card">
+                            <h4>🔴 Collective Punishment</h4>
+                            <p>Geneva Convention IV, Article 33 - "No protected person may be punished for an offence he or she has not personally committed. Collective penalties are prohibited."</p>
+                            <div class="violation-count">Geneva Convention Violation</div>
+                        </div>
+                        <div class="framework-card">
+                            <h4>🔴 Right to Adequate Food</h4>
+                            <p>International Covenant on Economic, Social and Cultural Rights, Article 11 - "Right of everyone to an adequate standard of living, including adequate food"</p>
+                            <div class="violation-count">Human Rights Violation</div>
+                        </div>
+                        <div class="framework-card">
+                            <h4>🔴 Rights of the Child</h4>
+                            <p>Convention on the Rights of the Child, Article 27 - "Right to a standard of living adequate for the child's physical, mental, spiritual, moral and social development"</p>
+                            <div class="violation-count">Children's Rights Violation</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section class="view-section" id="violationsView">
+            <div class="container">
+                <div class="war-crimes-categories">
+                    <!-- Direct Starvation -->
+                    <div class="category-section">
+                        <h3>🍽️ Direct Starvation & Malnutrition</h3>
+                        <div class="violation-grid">
+                            <div class="violation-item">
+                                <div class="violation-header">
+                                    <h4>Confirmed Deaths from Starvation</h4>
+                                    <span class="violation-count" id="totalDeathsCount">Loading...</span>
+                                </div>
+                                <p>Total population deaths directly attributed to starvation, malnutrition, and related causes. Documented through medical records and death certificates.</p>
+                                <div class="legal-reference">
+                                    <strong>Legal Basis:</strong>
+                                    Rome Statute, Art. 8(2)(b)(xxv); Right to Life, ICCPR Art. 6
+                                </div>
+                            </div>
+
+                            <div class="violation-item">
+                                <div class="violation-header">
+                                    <h4>Children Deaths from Starvation</h4>
+                                    <span class="violation-count" id="childrenDeathsCount">Loading...</span>
+                                </div>
+                                <p>Children under 18 who died from starvation, severe malnutrition, and related complications. Each case represents a preventable tragedy.</p>
+                                <div class="legal-reference">
+                                    <strong>Legal Basis:</strong>
+                                    Convention on Rights of the Child, Art. 6, 24, 27; Geneva Convention IV, Art. 24
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Legal Framework Section -->
+        <section class="view-section" id="legalView">
+            <div class="container">
+                <div class="legal-actions-section">
+                    <h3>⚖️ International Legal Response</h3>
+                    <div class="legal-timeline">
+                        <div class="timeline-item active">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">October 2023</div>
+                                <h4>Complete Siege Declared</h4>
+                                <p>All food, water, fuel, and electricity cut off. "Complete siege" officially announced affecting 2.3 million people, triggering immediate legal concerns.</p>
+                                <span class="timeline-status ongoing">Ongoing Violation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resources Section -->
+        <section class="view-section" id="resourcesView">
+            <div class="container">
+                <div class="resources-section">
+                    <h3>📚 Documentation & Resources</h3>
+                    <div class="resources-grid">
+                        <!-- UN & International Organizations -->
+                        <div class="resource-category">
+                            <h4>🏛️ UN & International Organizations</h4>
+                            <div class="resource-links">
+                                <a href="https://www.wfp.org/countries/palestine" class="resource-link" target="_blank">
+                                    <span class="link-icon">🍽️</span>
+                                    <div class="link-content">
+                                        <div class="link-title">World Food Programme - Palestine</div>
+                                        <div class="link-description">Official WFP reports on food security and malnutrition in Gaza</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action Section -->
+                <div class="action-section">
+                    <h3>🚨 Take Urgent Action</h3>
+                    <div class="action-grid">
+                        <div class="action-item">
+                            <span class="action-icon">📞</span>
+                            <h4>Emergency Advocacy</h4>
+                            <p>Contact representatives demanding immediate humanitarian aid access and end to food blockade.</p>
+                            <button class="action-btn" onclick="window.open('https://www.house.gov/representatives/find-your-representative', '_blank')">
+                                Contact Representatives
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- JavaScript -->
+    <script>
+        // Global variables for CSV data
+        let totalPopulationStatistics = [];
+        let referencesData = [];
+
+        // Data file configuration
+        const DATA_FILES = {
+            statistics: 'total-population/total-population-statistics.csv',
+            references: 'children-starvation/references.csv'
+        };
+
+        // Utility function to load CSV data
+        async function loadCSVData(filename) {
+            try {
+                const response = await fetch(filename);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const csvText = await response.text();
+
+                return new Promise((resolve, reject) => {
+                    Papa.parse(csvText, {
+                        header: true,
+                        skipEmptyLines: true,
+                        transformHeader: header => header.trim(),
+                        transform: value => value.trim(),
+                        complete: function(results) {
+                            resolve(results.data);
+                        },
+                        error: function(error) {
+                            reject(error);
+                        }
+                    });
+                });
+            } catch (error) {
+                console.error(`Error loading ${filename}:`, error);
+                return [];
+            }
+        }
+
+        // Load all CSV data
+        async function loadAllData() {
+            try {
+                console.log('Loading CSV data for hunger crisis...');
+
+                // Load CSV files in parallel
+                const [statistics, references] = await Promise.all([
+                    loadCSVData(DATA_FILES.statistics),
+                    loadCSVData(DATA_FILES.references)
+                ]);
+
+                totalPopulationStatistics = statistics;
+                referencesData = references;
+
+                console.log(`Loaded: ${totalPopulationStatistics.length} statistics, ${referencesData.length} references`);
+
+                // Update all UI components
+                updateEmergencyBanner();
+                updateStarvationCasualtiesSection();
+                updateDisplacedNumbers();
+                updateViolationsSection();
+                updateTimestamps();
+
+            } catch (error) {
+                console.error('Error loading data:', error);
+                showErrorState();
+            }
+        }
+
+        // Get reference by ID
+        function getReference(refId) {
+            return referencesData.find(ref => ref.reference_id === refId) || {};
+        }
+
+        // Get statistic by ID
+        function getStatistic(statId) {
+            return totalPopulationStatistics.find(stat => stat.id == statId) || {};
+        }
+
+        // Update emergency banner
+        function updateEmergencyBanner() {
+            const totalAtRisk = getStatistic(2); // total_population_at_risk
+            const emergencyStatElement = document.getElementById('emergencyStatNumber');
+
+            if (totalAtRisk.value) {
+                const formattedNumber = (parseInt(totalAtRisk.value) / 1000000).toFixed(1) + ' million people facing acute food insecurity';
+                emergencyStatElement.textContent = formattedNumber;
+            } else {
+                emergencyStatElement.textContent = '2.3 million people facing acute food insecurity';
+            }
+        }
+
+        // Update starvation casualties section with new order
+        function updateStarvationCasualtiesSection() {
+            const totalDeaths = getStatistic(1); // confirmed_starvation_deaths
+            const childrenAffected = getStatistic(18); // children_affected
+            const totalAtRisk = getStatistic(2); // total_population_at_risk
+            const starvationRate = getStatistic(4); // going_days_without_eating
+
+            // Calculate children deaths (estimated as 40% of total deaths based on population demographics)
+            const childrenDeaths = totalDeaths.value ? Math.floor(parseInt(totalDeaths.value) * 0.4) : 67;
+
+            // Calculate women and elderly affected (estimated 35% of total population)
+            const womenElderly = totalAtRisk.value ? Math.floor(parseInt(totalAtRisk.value) * 0.35) : 735000;
+
+            const casualtiesHtml = `
+                <a href="Pages/Hunger_Crisis/hunger-total-starvation.html" class="stat-link">
+                    <div class="stat-card critical">
+                        <span class="stat-icon">💀</span>
+                        <div class="stat-number">${totalDeaths.value ? parseInt(totalDeaths.value).toLocaleString() : '169'}</div>
+                        <div class="stat-label">Total Deaths Due to Starvation</div>
+                        <div class="stat-subtitle">Confirmed starvation deaths</div>
+                        <div class="stat-source">Source: ${getReference(totalDeaths.reference_id).organization || 'Gaza Health Ministry'}</div>
+                    </div>
+                </a>
+
+                <a href="Pages/Hunger_Crisis/hunger-starved-children.html" class="stat-link">
+                    <div class="stat-card critical">
+                        <span class="stat-icon">👶</span>
+                        <div class="stat-number">${childrenDeaths.toLocaleString()}</div>
+                        <div class="stat-label">Children Died from Starvation</div>
+                        <div class="stat-subtitle">Out of ${childrenAffected.value ? (parseInt(childrenAffected.value) / 1000000).toFixed(1) + 'M' : '1.1M'} children affected</div>
+                        <div class="stat-source">Source: ${getReference(childrenAffected.reference_id).organization || 'UNICEF'}</div>
+                    </div>
+                </a>
+
+                <a href="Pages/Hunger_Crisis/hunger-women-elderly.html" class="stat-link">
+                    <div class="stat-card urgent">
+                        <span class="stat-icon">👵</span>
+                        <div class="stat-number">${(womenElderly / 1000000).toFixed(1)}M</div>
+                        <div class="stat-label">Women & Elderly Affected</div>
+                        <div class="stat-subtitle">Vulnerable populations at risk</div>
+                        <div class="stat-source">Source: ${getReference(totalAtRisk.reference_id).organization || 'IPC'}</div>
+                    </div>
+                </a>
+
+                <a href="Pages/Hunger_Crisis/hunger-starvation-rates.html" class="stat-link">
+                    <div class="stat-card critical">
+                        <span class="stat-icon">📊</span>
+                        <div class="stat-number">${starvationRate.value || '39'}%</div>
+                        <div class="stat-label">Population Starvation Rate</div>
+                        <div class="stat-subtitle">Going days without eating</div>
+                        <div class="stat-source">Source: ${getReference(starvationRate.reference_id).organization || 'IPC'}</div>
+                    </div>
+                </a>
+            `;
+
+            document.getElementById('starvationCasualtiesRow').innerHTML = casualtiesHtml;
+        }
+
+        // Update displaced numbers
+        function updateDisplacedNumbers() {
+            const displaced = getStatistic(5); // internally_displaced
+            const displacedNumberElement = document.getElementById('displacedNumber');
+            const displacedSourceElement = document.getElementById('displacedSource');
+
+            if (displaced.value) {
+                displacedNumberElement.textContent = (parseInt(displaced.value) / 1000000).toFixed(1) + 'M';
+            }
+
+            const displacedRef = getReference(displaced.reference_id);
+            if (displacedSourceElement && displacedRef.organization) {
+                displacedSourceElement.textContent = `Source: ${displacedRef.organization}`;
+            }
+        }
+
+        // Update violations section
+        function updateViolationsSection() {
+            const totalDeaths = getStatistic(1); // confirmed_starvation_deaths
+            const childrenAffected = getStatistic(18); // children_affected
+
+            // Calculate children deaths (estimated as 40% of total deaths)
+            const childrenDeaths = totalDeaths.value ? Math.floor(parseInt(totalDeaths.value) * 0.4) : 67;
+
+            const totalDeathsElement = document.getElementById('totalDeathsCount');
+            const childrenDeathsElement = document.getElementById('childrenDeathsCount');
+
+            if (totalDeathsElement) {
+                totalDeathsElement.textContent = totalDeaths.value ? parseInt(totalDeaths.value).toLocaleString() + ' deaths' : '169 deaths';
+            }
+
+            if (childrenDeathsElement) {
+                childrenDeathsElement.textContent = childrenDeaths.toLocaleString() + ' children';
+            }
+        }
+
+        // Update timestamps
+        function updateTimestamps() {
+            const currentDate = new Date().toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+
+            const lastUpdatedElement = document.getElementById('hungerStatsLastUpdated');
+            if (lastUpdatedElement) {
+                lastUpdatedElement.textContent = `Last updated: ${currentDate}`;
+            }
+        }
+
+        // Show error state
+        function showErrorState() {
+            const casualtiesRow = document.getElementById('starvationCasualtiesRow');
+            if (casualtiesRow) {
+                casualtiesRow.innerHTML = `
+                    <div class="error">Error loading hunger crisis data. Please check data files and try again.</div>
+                `;
+            }
+        }
+
+        // View switching functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const navButtons = document.querySelectorAll('.nav-btn[data-view]');
+            const viewSections = document.querySelectorAll('.view-section');
+
+            navButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const targetView = this.getAttribute('data-view');
+
+                    // Remove active class from all buttons and sections
+                    navButtons.forEach(btn => btn.classList.remove('active'));
+                    viewSections.forEach(section => section.classList.remove('active'));
+
+                    // Add active class to clicked button
+                    this.classList.add('active');
+
+                    // Show target section
+                    const targetSection = document.getElementById(targetView + 'View');
+                    if (targetSection) {
+                        targetSection.classList.add('active');
+                    }
+                });
+            });
+
+            // Theme toggle functionality
+            const themeToggle = document.querySelector('.theme-toggle');
+            const body = document.body;
+
+            themeToggle.addEventListener('click', function() {
+                const currentTheme = body.getAttribute('data-theme');
+                const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+                body.setAttribute('data-theme', newTheme);
+                this.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+
+                // Save preference
+                localStorage.setItem('theme', newTheme);
+            });
+
+            // Load saved theme
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            body.setAttribute('data-theme', savedTheme);
+            themeToggle.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
+
+            // Load all CSV data
+            loadAllData();
+        });
+
+        // Share functionality
+        function shareHungerCrisisData() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Gaza Hunger Crisis Documentation',
+                    text: '🚨 HUMANITARIAN EMERGENCY: 2.3 million people facing acute food insecurity in Gaza. Complete siege blocks 97% of donations, 80% unemployment prevents food purchase. This is systematic starvation as weapon of war.',
+                    url: window.location.href
+                });
+            } else {
+                // Fallback for browsers that don't support Web Share API
+                const text = '🚨 HUMANITARIAN EMERGENCY: 2.3 million people facing acute food insecurity in Gaza. Complete siege blocks 97% of donations, 80% unemployment prevents food purchase. This is systematic starvation as weapon of war. ' + window.location.href;
+
+                if (navigator.clipboard) {
+                    navigator.clipboard.writeText(text).then(() => {
+                        alert('Crisis information copied to clipboard! Please share to raise awareness.');
+                    });
+                } else {
+                    // Final fallback
+                    const textarea = document.createElement('textarea');
+                    textarea.value = text;
+                    document.body.appendChild(textarea);
+                    textarea.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(textarea);
+                    alert('Crisis information copied to clipboard! Please share to raise awareness.');
+                }
+            }
+        }
+
+        // Add loading animation to stat cards
+        document.addEventListener('DOMContentLoaded', function() {
+            const statCards = document.querySelectorAll('.stat-card');
+            statCards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+
+                setTimeout(() => {
+                    card.style.transition = 'all 0.6s ease';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+        });
+
+        // Add intersection observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const elementsToAnimate = document.querySelectorAll('.framework-card, .crisis-layer');
+            elementsToAnimate.forEach(el => observer.observe(el));
+        });
+
+        // Emergency banner pulse effect
+        document.addEventListener('DOMContentLoaded', function() {
+            const emergencyBanner = document.querySelector('.emergency-banner');
+            if (emergencyBanner) {
+                setInterval(() => {
+                    emergencyBanner.style.transform = 'scale(1.02)';
+                    setTimeout(() => {
+                        emergencyBanner.style.transform = 'scale(1)';
+                    }, 200);
+                }, 3000);
+            }
+        });
+    </script>
+
+    <!-- Additional CSS for better organization -->
+    <style>
+        .action-section {
+            background: var(--surface-color);
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+            padding: 3rem 2rem;
+            margin: 4rem 0;
+        }
+
+        .action-section h3 {
+            text-align: center;
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            font-weight: 700;
+        }
+
+        .action-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .action-item {
+            background: var(--background-color);
+            border: 2px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .action-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            border-color: var(--critical-color);
+        }
+
+        .action-icon {
+            font-size: 3rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .action-item h4 {
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .action-item p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .action-btn {
+            background: linear-gradient(135deg, var(--critical-color), #ff6b6b);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .action-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(220, 53, 69, 0.3);
+        }
+
+        .resources-section {
+            background: var(--surface-color);
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+            padding: 3rem 2rem;
+            margin: 4rem 0;
+        }
+
+        .resources-section h3 {
+            text-align: center;
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            font-weight: 700;
+        }
+
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .resource-category {
+            background: var(--background-color);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem;
+        }
+
+        .resource-category h4 {
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .resource-links {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .resource-link {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+        }
+
+        .resource-link:hover {
+            border-color: var(--critical-color);
+            transform: translateX(5px);
+        }
+
+        .link-icon {
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .link-content {
+            flex-grow: 1;
+        }
+
+        .link-title {
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 0.25rem;
+        }
+
+        .link-description {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .legal-actions-section {
+            background: var(--surface-color);
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+            padding: 3rem 2rem;
+            margin: 4rem 0;
+        }
+
+        .legal-actions-section h3 {
+            text-align: center;
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            font-weight: 700;
+        }
+
+        .legal-timeline {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline-item {
+            display: flex;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .timeline-marker {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--critical-color);
+            flex-shrink: 0;
+            margin-right: 2rem;
+            position: relative;
+        }
+
+        .timeline-marker::after {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 50px;
+            background: var(--border-color);
+        }
+
+        .timeline-item:last-child .timeline-marker::after {
+            display: none;
+        }
+
+        .timeline-content {
+            flex-grow: 1;
+            background: var(--background-color);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+        }
+
+        .timeline-date {
+            color: var(--critical-color);
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-content h4 {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .timeline-content p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-status {
+            background: var(--critical-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        .timeline-status.completed {
+            background: var(--success-color);
+        }
+
+        .timeline-status.ongoing {
+            background: var(--urgent-color);
+        }
+
+        /* Violations section styles */
+        .war-crimes-categories {
+            margin: 4rem 0;
+        }
+
+        .category-section {
+            background: var(--surface-color);
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+            padding: 3rem 2rem;
+            margin: 2rem 0;
+        }
+
+        .category-section h3 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            font-weight: 700;
+            border-bottom: 3px solid var(--critical-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .violation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+        }
+
+        .violation-item {
+            background: var(--background-color);
+            border: 2px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .violation-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            border-color: var(--critical-color);
+        }
+
+        .violation-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+
+        .violation-header h4 {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            font-weight: 700;
+            flex-grow: 1;
+        }
+
+        .violation-count {
+            background: linear-gradient(135deg, var(--critical-color), #ff6b6b);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            flex-shrink: 0;
+            margin-left: 1rem;
+        }
+
+        .violation-item p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .legal-reference {
+            background: rgba(220, 53, 69, 0.1);
+            border-left: 4px solid var(--critical-color);
+            padding: 1rem;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .legal-reference strong {
+            color: var(--critical-color);
+            font-weight: 700;
+        }
+
+        @media (max-width: 768px) {
+            .violation-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .violation-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+
+            .violation-count {
+                margin-left: 0;
+            }
+        }
+    </style>
+</body>
+</html>

@@ -1,0 +1,1679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>War Crimes Statistics - Gaza Crisis Documentation</title>
+    <meta name="description" content="Comprehensive documentation of war crimes and violations of international humanitarian law in Gaza">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="unified-crisis-styles.css">
+
+    <!-- Embedded Additional Styles -->
+    <style>
+        /* Core CSS Variables */
+        :root {
+            /* War Crimes Theme Colors */
+            --critical-color: #e53e3e;
+            --urgent-color: #d69e2e;
+            --warning-color: #3182ce;
+            --danger-color: #805ad5;
+            --success-color: #28a745;
+            --info-color: #17a2b8;
+
+            /* Base Theme Colors */
+            --background-color: #ffffff;
+            --surface-color: #f8f9fa;
+            --text-primary: #2d3748;
+            --text-secondary: #4a5568;
+            --border-color: #e2e8f0;
+            --accent-color: #3182ce;
+            --primary-color: #2d3748;
+            --secondary-color: #4299e1;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+            --card-background: #ffffff;
+        }
+
+        /* Dark theme */
+        [data-theme="dark"] {
+            --background-color: #1a202c;
+            --surface-color: #2d3748;
+            --text-primary: #f7fafc;
+            --text-secondary: #e2e8f0;
+            --border-color: #4a5568;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            --card-background: #2d3748;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--background-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header Styles */
+        .header {
+            background: var(--surface-color);
+            border-bottom: 1px solid var(--border-color);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+        }
+
+        .nav {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .nav-btn {
+            background: transparent;
+            border: 2px solid var(--border-color);
+            color: var(--text-primary);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .nav-btn:hover, .nav-btn.active {
+            background: var(--accent-color);
+            color: white;
+            border-color: var(--accent-color);
+        }
+
+        .theme-toggle {
+            background: var(--surface-color);
+            border: 2px solid var(--border-color);
+            color: var(--text-primary);
+            padding: 0.5rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+
+        .main {
+            min-height: 100vh;
+        }
+
+        /* Loading Indicator */
+        .loading-indicator {
+            text-align: center;
+            padding: 3rem;
+            color: var(--text-secondary);
+        }
+
+        .loading-spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid var(--border-color);
+            border-left: 4px solid var(--primary-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 1rem;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .error-message {
+            background: rgba(234, 88, 12, 0.1);
+            color: var(--urgent-color);
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--urgent-color);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        /* Statistics Sections */
+        .stats-section {
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--danger-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Updated stats-row for 4 columns */
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Stat Cards */
+        .stat-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            transition: all 0.3s ease;
+        }
+
+        .stat-link:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-card {
+            background: var(--surface-color);
+            border: 2px solid var(--border-color);
+            border-radius: 20px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            cursor: pointer;
+        }
+
+        .stat-card.critical {
+            border-color: var(--critical-color);
+            background: linear-gradient(135deg, var(--surface-color), rgba(229, 62, 62, 0.05));
+        }
+
+        .stat-card.urgent {
+            border-color: var(--urgent-color);
+            background: linear-gradient(135deg, var(--surface-color), rgba(214, 158, 46, 0.05));
+        }
+
+        .stat-card.warning {
+            border-color: var(--warning-color);
+            background: linear-gradient(135deg, var(--surface-color), rgba(49, 130, 206, 0.05));
+        }
+
+        .stat-card.danger {
+            border-color: var(--danger-color);
+            background: linear-gradient(135deg, var(--surface-color), rgba(128, 90, 213, 0.05));
+        }
+
+        .stat-card:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            border-color: var(--accent-color);
+        }
+
+        .stat-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .stat-number {
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            font-weight: 900;
+            color: var(--accent-color);
+            margin-bottom: 0.75rem;
+            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            line-height: 1.2;
+        }
+
+        .stat-subtitle {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            font-style: italic;
+            line-height: 1.4;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .stats-row {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 900px) {
+            .stats-row {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem;
+            }
+
+            .header .container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .stats-row {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .stat-card {
+                padding: 2rem 1.5rem;
+            }
+        }
+
+        /* API Status Indicator */
+        .api-status {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .api-status.live {
+            background: var(--success-color);
+            color: white;
+        }
+
+        .api-status.fallback {
+            background: var(--urgent-color);
+            color: white;
+        }
+
+        .api-status.loading {
+            background: var(--info-color);
+            color: white;
+        }
+
+        /* Hidden class */
+        .hidden {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- API Status Indicator -->
+    <div id="apiStatus" class="api-status loading">Loading...</div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">
+                <a href="index.html" style="text-decoration: none; color: inherit;">
+                    Gaza Crisis Documentation
+                </a>
+            </h1>
+            <nav class="nav">
+                <a href="index.html" class="nav-btn">← Back to Main</a>
+                <button class="nav-btn active" data-view="overview">Overview</button>
+                <button class="nav-btn" data-view="violations">Categories</button>
+                <button class="nav-btn" data-view="legal">Legal Framework</button>
+                <button class="nav-btn" data-view="resources">Resources</button>
+            </nav>
+            <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+
+        <!-- War Crimes Header -->
+        <section class="war-crimes-header">
+            <div class="container">
+                <h2>⚖️ War Crimes & International Law Violations</h2>
+                <p class="section-description">
+                    This section documents systematic violations of international humanitarian law, including the Geneva Conventions,
+                    Rome Statute, and other international legal frameworks. All data is compiled from verified sources including
+                    UN agencies, international organizations, human rights groups, and documented evidence from the ongoing crisis.
+                </p>
+                <div class="crisis-severity-indicator">
+                    <span>SYSTEMATIC WAR CRIMES</span>
+                    <span>Multiple Geneva Convention Violations</span>
+                </div>
+                <div class="last-updated">
+                    <span id="warCrimesLastUpdated">Loading...</span>
+                    <button onclick="toggleDebugMode()" style="margin-left: 1rem; background: transparent; border: 1px solid var(--border-color); color: var(--text-secondary); padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.8rem; cursor: pointer;">
+                        Debug
+                    </button>
+                </div>
+
+                <!-- Debug Panel -->
+                <div id="debugPanel" class="hidden" style="background: var(--surface-color); border: 1px solid var(--border-color); border-radius: 8px; padding: 1rem; margin-top: 1rem; font-family: monospace; font-size: 0.8rem;">
+                    <h4>Debug Information:</h4>
+                    <div id="debugContent">Loading debug info...</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Overview Section -->
+        <section class="view-section active" id="overviewView">
+            <div class="container">
+                <!-- Emergency Banner -->
+                <div class="emergency-banner">
+                    <span class="emergency-icon">🚨</span>
+                    <div class="emergency-title">INTERNATIONAL LAW CRISIS:</div>
+                    <div class="emergency-stat">Systematic violations of Geneva Conventions</div>
+                    <div class="emergency-details" id="emergencyDetails">Loading...</div>
+                </div>
+
+                <!-- Loading Indicator -->
+                <div id="loadingIndicator" class="loading-indicator">
+                    <div class="loading-spinner"></div>
+                    <p>Loading latest data from Tech for Palestine API v3...</p>
+                </div>
+
+                <!-- Error Message with Retry -->
+                <div id="errorMessage" class="error-message hidden">
+                    <p>⚠️ Unable to load live data. Displaying cached information.</p>
+                    <button onclick="retryDataFetch()" style="background: var(--urgent-color); color: white; border: none; padding: 0.5rem 1rem; border-radius: 8px; margin-top: 0.5rem; cursor: pointer;">
+                        🔄 Retry Loading Live Data
+                    </button>
+                </div>
+
+                <!-- Casualties Section -->
+                <div class="stats-section">
+                    <h3 class="section-title">💀 Human Casualties</h3>
+                    <div class="stats-row" id="casualtiesRow">
+                        <!-- Cards will be populated by JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Destroyed Infrastructure Section -->
+                <div class="stats-section">
+                    <h3 class="section-title">🏗️ Destroyed Infrastructure</h3>
+                    <div class="stats-row" id="infrastructureRow">
+                        <!-- Cards will be populated by JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Medical & Educational Facilities Section -->
+                <div class="stats-section">
+                    <h3 class="section-title">🏥 Medical & Educational Facilities</h3>
+                    <div class="stats-row" id="facilitiesRow">
+                        <!-- Cards will be populated by JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Displacement & Siege Section -->
+                <div class="stats-section">
+                    <h3 class="section-title">🏠 Displacement & Collective Punishment</h3>
+                    <div class="stats-row" id="displacementRow">
+                        <!-- Cards will be populated by JavaScript -->
+                    </div>
+                </div>
+
+                <!-- War Crimes Analysis Section -->
+                <div class="crisis-layers-section">
+                    <h3>⚖️ Systematic Pattern of International Law Violations</h3>
+                    <div class="crisis-layers-grid">
+                        <div class="crisis-layer">
+                            <div class="layer-icon">🎯</div>
+                            <h4>Targeting Civilians</h4>
+                            <p>Systematic attacks on civilian populations, residential areas, and gatherings. Massive civilian death toll violating fundamental principle of distinction.</p>
+                        </div>
+
+                        <div class="crisis-layer">
+                            <div class="layer-icon">🏥</div>
+                            <h4>Protected Sites Attacked</h4>
+                            <p>Systematic destruction of hospitals, schools, religious sites, and UN facilities. Clear violations of Geneva Conventions protecting medical and educational facilities.</p>
+                        </div>
+
+                        <div class="crisis-layer">
+                            <div class="layer-icon">📰</div>
+                            <h4>Silencing Witnesses</h4>
+                            <p>Systematic targeting of media workers. Attacks on press freedom to prevent documentation of crimes and suppress information flow.</p>
+                        </div>
+
+                        <div class="crisis-layer">
+                            <div class="layer-icon">🚫</div>
+                            <h4>Collective Punishment</h4>
+                            <p>Complete siege affecting entire population, cutting water, electricity, food, medical supplies. Mass forced displacement constituting crimes against humanity.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Legal Framework Overview -->
+                <div class="legal-framework-overview">
+                    <h3>International Legal Framework Violations</h3>
+                    <div class="framework-grid">
+                        <div class="framework-card">
+                            <h4>🔴 Geneva Conventions</h4>
+                            <p>Grave breaches including willful killing of civilians, extensive destruction of property, deportation of civilian population, and attacks on protected persons.</p>
+                            <div class="violation-count">50+ Documented Violations</div>
+                        </div>
+                        <div class="framework-card">
+                            <h4>🔴 Rome Statute (ICC)</h4>
+                            <p>War crimes and crimes against humanity including murder, persecution, forcible transfer, and other inhumane acts causing great suffering.</p>
+                            <div class="violation-count">25+ Applicable Charges</div>
+                        </div>
+                        <div class="framework-card">
+                            <h4>🔴 Additional Protocols</h4>
+                            <p>Violations of Additional Protocols I & II regarding protection of civilian population, medical personnel, and humanitarian aid during armed conflict.</p>
+                            <div class="violation-count">30+ Protocol Breaches</div>
+                        </div>
+                        <div class="framework-card">
+                            <h4>🔴 Genocide Convention</h4>
+                            <p>Acts committed with intent to destroy Palestinian population including killing, causing serious harm, and deliberately inflicting conditions of life to bring about destruction.</p>
+                            <div class="violation-count">Under ICJ Investigation</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section class="view-section" id="violationsView">
+            <div class="container">
+                <div class="war-crimes-categories">
+                    <!-- Crimes Against Civilian Population -->
+                    <div class="category-section">
+                        <h3>🎯 Crimes Against Civilian Population</h3>
+                        <div class="violation-grid">
+                            <div class="violation-item">
+                                <div class="violation-header">
+                                    <h4>Indiscriminate Attacks on Civilians</h4>
+                                    <span class="violation-count">1,000+ incidents</span>
+                                </div>
+                                <p>Systematic targeting of residential areas, markets, and civilian gatherings in violation of the principle of distinction. Over 40,000 civilians killed including 15,000 children.</p>
+                                <div class="legal-reference">
+                                    <strong>Legal Basis:</strong>
+                                    Geneva Convention IV, Art. 27; Additional Protocol I, Art. 51; Rome Statute, Art. 8(2)(b)(i)
+                                </div>
+                            </div>
+
+                            <div class="violation-item">
+                                <div class="violation-header">
+                                    <h4>Collective Punishment</h4>
+                                    <span class="violation-count">Systematic</span>
+                                </div>
+                                <p>Complete siege including cutting water, electricity, food, and medical supplies to entire civilian population of 2.3 million people for over 300 days.</p>
+                                <div class="legal-reference">
+                                    <strong>Legal Basis:</strong>
+                                    Geneva Convention IV, Art. 33; Additional Protocol I, Art. 54
+                                </div>
+                            </div>
+
+                            <div class="violation-item">
+                                <div class="violation-header">
+                                    <h4>Forced Displacement</h4>
+                                    <span class="violation-count">1.9M+ people</span>
+                                </div>
+                                <p>Forcible transfer of civilian population through military operations, destruction of homes, and orders to evacuate under threat of attack.</p>
+                                <div class="legal-reference">
+                                    <strong>Legal Basis:</strong>
+                                    Geneva Convention IV, Art. 49; Rome Statute, Art. 8(2)(a)(vii)
+                                </div>
+                            </div>
+
+                            <div class="violation-item">
+                                <div class="violation-header">
+                                    <h4>Use of Starvation as Weapon</h4>
+                                    <span class="violation-count">Ongoing</span>
+                                </div>
+                                <p>Deliberate deprivation of food, water, and humanitarian aid to civilian population, creating famine conditions affecting 2.3 million people.</p>
+                                <div class="legal-reference">
+                                    <strong>Legal Basis:</strong>
+                                    Additional Protocol I, Art. 54; Rome Statute, Art. 8(2)(b)(xxv)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Attacks on Protected Sites -->
+                    <div class="category-section">
+                        <h3>🏥 Attacks on Protected Sites</h3>
+                        <div class="violation-grid">
+                            <div class="violation-item">
+                                <div class="violation-header">
+                                    <h4>Medical Facilities & Personnel</h4>
+                                    <span class="violation-count">120+ hospitals</span>
+                                </div>
+                                <p>Direct attacks on hospitals, clinics, ambulances, and medical personnel. 500+ medical workers killed, 250+ detained in clear violation of medical neutrality.</p>
+                                <div class="legal-reference">
+                                    <strong>Legal Basis:</strong>
+                                    Geneva Convention I, Art. 19; Additional Protocol I, Art. 12; Rome Statute, Art. 8(2)(b)(ix)
+                                </div>
+                            </div>
+
+                            <div class="violation-item">
+                                <div class="violation-header">
+                                    <h4>Educational Institutions</h4>
+                                    <span class="violation-count">300+ schools</span>
+                                </div>
+                                <p>Systematic destruction of schools, universities, and educational infrastructure, depriving children of their right to education.</p>
+                                <div class="legal-reference">
+                                    <strong>Legal Basis:</strong>
+                                    Additional Protocol I, Art. 52; Rome Statute, Art. 8(2)(b)(ix)
+                                </div>
+                            </div>
+
+                            <div class="violation-item">
+                                <div class="violation-header">
+                                    <h4>Religious & Cultural Sites</h4>
+                                    <span class="violation-count">200+ sites</span>
+                                </div>
+                                <p>Attacks on mosques, churches, cultural centers, and historical sites, constituting destruction of cultural heritage.</p>
+                                <div class="legal-reference">
+                                    <strong>Legal Basis:</strong>
+                                    Hague Convention 1954; Additional Protocol I, Art. 53; Rome Statute, Art. 8(2)(b)(ix)
+                                </div>
+                            </div>
+
+                            <div class="violation-item">
+                                <div class="violation-header">
+                                    <h4>UN & Humanitarian Facilities</h4>
+                                    <span class="violation-count">150+ facilities</span>
+                                </div>
+                                <p>Attacks on UN schools, UNRWA facilities, and humanitarian distribution centers, violating neutrality of humanitarian operations.</p>
+                                <div class="legal-reference">
+                                    <strong>Legal Basis:</strong>
+                                    UN Charter; Additional Protocol I, Art. 56; Rome Statute, Art. 8(2)(b)(iii)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Crimes Against Specific Groups -->
+                    <div class="category-section">
+                        <h3>👥 Crimes Against Specific Groups</h3>
+                        <div class="violation-grid">
+                            <div class="violation-item">
+                                <div class="violation-header">
+                                    <h4>Children</h4>
+                                    <span class="violation-count">15,000+ killed</span>
+                                </div>
+                                <p>Systematic killing and targeting of children, attacks on schools, and denial of humanitarian aid. Children comprise over 40% of all casualties.</p>
+                                <div class="legal-reference">
+                                    <strong>Legal Basis:</strong>
+                                    Convention on Rights of the Child; Additional Protocol I, Art. 77; Rome Statute, Art. 8(2)(b)(xxvi)
+                                </div>
+                            </div>
+
+                            <div class="violation-item">
+                                <div class="violation-header">
+                                    <h4>Journalists & Media Workers</h4>
+                                    <span class="violation-count">140+ killed</span>
+                                </div>
+                                <p>Deliberate targeting of journalists, media facilities, and suppression of information. Highest journalist death toll in any conflict.</p>
+                                <div class="legal-reference">
+                                    <strong>Legal Basis:</strong>
+                                    Additional Protocol I, Art. 79; Geneva Convention IV, Art. 27; Rome Statute, Art. 8(2)(b)(i)
+                                </div>
+                            </div>
+
+                            <div class="violation-item">
+                                <div class="violation-header">
+                                    <h4>Medical Personnel</h4>
+                                    <span class="violation-count">500+ killed, 250+ detained</span>
+                                </div>
+                                <p>Killing, detention, and torture of doctors, nurses, and medical staff. Systematic attacks on those providing medical care.</p>
+                                <div class="legal-reference">
+                                    <strong>Legal Basis:</strong>
+                                    Geneva Convention I, Art. 24; Additional Protocol I, Art. 15; Rome Statute, Art. 8(2)(b)(ix)
+                                </div>
+                            </div>
+
+                            <div class="violation-item">
+                                <div class="violation-header">
+                                    <h4>Women</h4>
+                                    <span class="violation-count">11,000+ killed</span>
+                                </div>
+                                <p>Disproportionate impact on women including pregnant women, mothers, and elderly women. Attacks on maternity wards and women's facilities.</p>
+                                <div class="legal-reference">
+                                    <strong>Legal Basis:</strong>
+                                    Geneva Convention IV, Art. 27; Additional Protocol I, Art. 76; Rome Statute, Art. 8(2)(b)(xxii)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Legal Framework Section -->
+        <section class="view-section" id="legalView">
+            <div class="container">
+                <div class="legal-actions-section">
+                    <h3>⚖️ International Legal Response</h3>
+                    <div class="legal-timeline">
+                        <div class="timeline-item active">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">October 2023</div>
+                                <h4>Crisis Begins - Mass Violations</h4>
+                                <p>Systematic attacks on Gaza begin with immediate violations of international humanitarian law, including targeting of civilians and siege warfare.</p>
+                                <span class="timeline-status ongoing">Ongoing Violations</span>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item active">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">January 2024</div>
+                                <h4>South Africa vs Israel - ICJ Case</h4>
+                                <p>South Africa filed a case at the International Court of Justice alleging genocide against Palestinians in Gaza, citing systematic violations.</p>
+                                <span class="timeline-status ongoing">Ongoing</span>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item active">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">March 2024</div>
+                                <h4>ICC Investigation Accelerated</h4>
+                                <p>International Criminal Court investigating war crimes and crimes against humanity in Palestine, examining evidence of systematic violations.</p>
+                                <span class="timeline-status ongoing">Active Investigation</span>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">May 2024</div>
+                                <h4>UN Special Rapporteur Report</h4>
+                                <p>Special Rapporteur on Palestine documented systematic violations of international law and called for immediate accountability measures.</p>
+                                <span class="timeline-status completed">Published</span>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">July 2024</div>
+                                <h4>ICC Arrest Warrants Consideration</h4>
+                                <p>International Criminal Court considering arrest warrants for war crimes and crimes against humanity based on documented evidence.</p>
+                                <span class="timeline-status ongoing">Under Review</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resources Section -->
+        <section class="view-section" id="resourcesView">
+            <div class="container">
+                <div class="resources-section">
+                    <h3>📚 Legal Resources & Documentation</h3>
+                    <div class="resources-grid">
+                        <!-- International Legal Documents -->
+                        <div class="resource-category">
+                            <h4>⚖️ International Legal Framework</h4>
+                            <div class="resource-links">
+                                <a href="https://www.icrc.org/en/doc/war-and-law/treaties-customary-law/geneva-conventions/overview-geneva-conventions.htm" class="resource-link" target="_blank">
+                                    <span class="link-icon">📜</span>
+                                    <div class="link-content">
+                                        <div class="link-title">Geneva Conventions</div>
+                                        <div class="link-description">The four treaties and their additional protocols governing humanitarian law</div>
+                                    </div>
+                                </a>
+
+                                <a href="https://www.icc-cpi.int/resource-library/documents/rs-eng.pdf" class="resource-link" target="_blank">
+                                    <span class="link-icon">⚖️</span>
+                                    <div class="link-content">
+                                        <div class="link-title">Rome Statute</div>
+                                        <div class="link-description">Founding treaty of International Criminal Court defining war crimes</div>
+                                    </div>
+                                </a>
+
+                                <a href="https://ihl-databases.icrc.org/customary-ihl/eng/docs/home" class="resource-link" target="_blank">
+                                    <span class="link-icon">📋</span>
+                                    <div class="link-content">
+                                        <div class="link-title">Customary International Humanitarian Law</div>
+                                        <div class="link-description">ICRC database of customary rules of international humanitarian law</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Documentation & Reports -->
+                        <div class="resource-category">
+                            <h4>🏛️ Official Documentation</h4>
+                            <div class="resource-links">
+                                <a href="https://www.ohchr.org/en/countries/middle-east-and-north-africa-region/palestine-state" class="resource-link" target="_blank">
+                                    <span class="link-icon">🔍</span>
+                                    <div class="link-content">
+                                        <div class="link-title">UN Human Rights Office Reports</div>
+                                        <div class="link-description">Official UN documentation of human rights violations</div>
+                                    </div>
+                                </a>
+
+                                <a href="https://www.icc-cpi.int/situations/palestine" class="resource-link" target="_blank">
+                                    <span class="link-icon">🏛️</span>
+                                    <div class="link-content">
+                                        <div class="link-title">ICC Palestine Investigation</div>
+                                        <div class="link-description">International Criminal Court investigation documents</div>
+                                    </div>
+                                </a>
+
+                                <a href="https://www.icj-cij.org/case/192" class="resource-link" target="_blank">
+                                    <span class="link-icon">⚖️</span>
+                                    <div class="link-content">
+                                        <div class="link-title">ICJ South Africa v. Israel Case</div>
+                                        <div class="link-description">International Court of Justice genocide case documents</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Evidence Collection -->
+                        <div class="resource-category">
+                            <h4>🔬 Evidence & Monitoring</h4>
+                            <div class="resource-links">
+                                <a href="https://www.hrw.org/middle-east/north-africa/israel/palestine" class="resource-link" target="_blank">
+                                    <span class="link-icon">👁️</span>
+                                    <div class="link-content">
+                                        <div class="link-title">Human Rights Watch</div>
+                                        <div class="link-description">Documentation of war crimes and human rights violations</div>
+                                    </div>
+                                </a>
+
+                                <a href="https://www.amnesty.org/en/location/middle-east-and-north-africa/palestine-state-of/" class="resource-link" target="_blank">
+                                    <span class="link-icon">🔍</span>
+                                    <div class="link-content">
+                                        <div class="link-title">Amnesty International</div>
+                                        <div class="link-description">Human rights violations and legal analysis</div>
+                                    </div>
+                                </a>
+
+                                <a href="https://www.forensic-architecture.org/" class="resource-link" target="_blank">
+                                    <span class="link-icon">🔬</span>
+                                    <div class="link-content">
+                                        <div class="link-title">Forensic Architecture</div>
+                                        <div class="link-description">Spatial and media investigations of human rights violations</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Legal Analysis -->
+                        <div class="resource-category">
+                            <h4>📚 Academic & Legal Analysis</h4>
+                            <div class="resource-links">
+                                <a href="https://opil.ouplaw.com/home/ihl" class="resource-link" target="_blank">
+                                    <span class="link-icon">📚</span>
+                                    <div class="link-content">
+                                        <div class="link-title">Oxford Public International Law</div>
+                                        <div class="link-description">Academic legal analysis and commentary</div>
+                                    </div>
+                                </a>
+
+                                <a href="https://www.cambridge.org/core/journals/international-and-comparative-law-quarterly" class="resource-link" target="_blank">
+                                    <span class="link-icon">🎓</span>
+                                    <div class="link-content">
+                                        <div class="link-title">International Law Quarterly</div>
+                                        <div class="link-description">Peer-reviewed international law research</div>
+                                    </div>
+                                </a>
+
+                                <a href="https://www.ejiltalk.org/" class="resource-link" target="_blank">
+                                    <span class="link-icon">💬</span>
+                                    <div class="link-content">
+                                        <div class="link-title">EJIL Talk</div>
+                                        <div class="link-description">European Journal of International Law blog and analysis</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action Section -->
+                <div class="action-section">
+                    <h3>🚨 Take Urgent Action</h3>
+                    <div class="action-grid">
+                        <div class="action-item">
+                            <span class="action-icon">📞</span>
+                            <h4>Demand Accountability</h4>
+                            <p>Contact representatives demanding immediate action to hold perpetrators accountable for war crimes and violations of international law.</p>
+                            <button class="action-btn" onclick="window.open('https://www.house.gov/representatives/find-your-representative', '_blank')">
+                                Contact Representatives
+                            </button>
+                        </div>
+
+                        <div class="action-item">
+                            <span class="action-icon">⚖️</span>
+                            <h4>Support Legal Action</h4>
+                            <p>Support international legal proceedings at ICC and ICJ to ensure justice for war crimes and crimes against humanity.</p>
+                            <button class="action-btn" onclick="window.open('https://www.icc-cpi.int', '_blank')">
+                                Support ICC Action
+                            </button>
+                        </div>
+
+                        <div class="action-item">
+                            <span class="action-icon">📢</span>
+                            <h4>Raise Awareness</h4>
+                            <p>Share documentation of war crimes and demand media coverage of systematic violations of international law.</p>
+                            <button class="action-btn" onclick="shareWarCrimesData()">
+                                Share This Data
+                            </button>
+                        </div>
+
+                        <div class="action-item">
+                            <span class="action-icon">🔍</span>
+                            <h4>Document Evidence</h4>
+                            <p>Help document and report additional evidence of international law violations for legal accountability.</p>
+                            <button class="action-btn" onclick="window.open('../index.html#contributeView', '_self')">
+                                Submit Evidence
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- JavaScript -->
+    <script>
+        // Global variables for API data
+        let apiData = null;
+        let lastUpdated = null;
+        let isUsingFallback = false;
+
+        // Updated data mapping configuration for API v3 structure
+        const dataMapping = {
+            casualties: [
+                {
+                    icon: "👶",
+                    label: "Children Killed",
+                    apiKeys: ["gaza.killed.children"],
+                    fallbackValue: 19000,
+                    severity: "critical",
+                    subtitle: "Direct targeting of civilians",
+                    linkPage: "Pages/War_Crimes_Stats/stat-children-killed.html"
+                },
+                {
+                    icon: "📰",
+                    label: "Journalists Killed",
+                    apiKeys: ["gaza.killed.press"],
+                    fallbackValue: 140,
+                    severity: "urgent",
+                    subtitle: "Targeted attacks on media",
+                    linkPage: "Pages/War_Crimes_Stats/stat-journalists-killed.html"
+                },
+                {
+                    icon: "🏥",
+                    label: "Medical Personnel Killed",
+                    apiKeys: ["gaza.killed.medical"],
+                    fallbackValue: 1590,
+                    severity: "warning",
+                    subtitle: "Attacks on healthcare workers",
+                    linkPage: "Pages/War_Crimes_Stats/stat-medical-personnel.html"
+                },
+                {
+                    icon: "💀",
+                    label: "Total Deaths",
+                    apiKeys: ["gaza.killed.total"],
+                    fallbackValue: 61020,
+                    severity: "critical",
+                    subtitle: "Indiscriminate attacks",
+                    linkPage: "Pages/War_Crimes_Stats/stat-civilian-casualties.html"
+                }
+            ],
+            infrastructure: [
+                {
+                    icon: "🏠",
+                    label: "Residential Units Destroyed",
+                    apiKeys: [],
+                    fallbackValue: 150000,
+                    severity: "danger",
+                    subtitle: "Systematic destruction",
+                    linkPage: "Pages/War_Crimes_Stats/stat-housing-destroyed.html"
+                },
+                {
+                    icon: "🏭",
+                    label: "Industrial Facilities",
+                    apiKeys: [],
+                    fallbackValue: 800,
+                    severity: "warning",
+                    subtitle: "Economic infrastructure",
+                    linkPage: "Pages/War_Crimes_Stats/stat-industrial-destroyed.html"
+                },
+                {
+                    icon: "🕌",
+                    label: "Religious Sites Damaged",
+                    apiKeys: [],
+                    fallbackValue: 300,
+                    severity: "urgent",
+                    subtitle: "Cultural destruction",
+                    linkPage: "Pages/War_Crimes_Stats/stat-religious-sites.html"
+                },
+                {
+                    icon: "🛣️",
+                    label: "Infrastructure Damage",
+                    apiKeys: [],
+                    fallbackValue: 1500,
+                    severity: "warning",
+                    subtitle: "Critical services",
+                    linkPage: "Pages/War_Crimes_Stats/stat-infrastructure-damage.html"
+                }
+            ],
+            facilities: [
+                {
+                    icon: "🏥",
+                    label: "Hospitals Out of Service",
+                    apiKeys: [],
+                    fallbackValue: 30,
+                    severity: "critical",
+                    subtitle: "Medical facilities targeted",
+                    linkPage: "Pages/War_Crimes_Stats/stat-hospitals-attacked.html"
+                },
+                {
+                    icon: "🎓",
+                    label: "Schools Damaged/Destroyed",
+                    apiKeys: [],
+                    fallbackValue: 350,
+                    severity: "urgent",
+                    subtitle: "Educational infrastructure",
+                    linkPage: "Pages/War_Crimes_Stats/stat-schools-destroyed.html"
+                },
+                {
+                    icon: "🏛️",
+                    label: "Universities Damaged",
+                    apiKeys: [],
+                    fallbackValue: 15,
+                    severity: "warning",
+                    subtitle: "Higher education targeted",
+                    linkPage: "Pages/War_Crimes_Stats/stat-universities-damaged.html"
+                },
+                {
+                    icon: "🚑",
+                    label: "Ambulances Targeted",
+                    apiKeys: [],
+                    fallbackValue: 120,
+                    severity: "danger",
+                    subtitle: "Emergency services",
+                    linkPage: "Pages/War_Crimes_Stats/stat-ambulances-targeted.html"
+                }
+            ],
+            displacement: [
+                {
+                    icon: "🏠",
+                    label: "Internally Displaced",
+                    apiKeys: [],
+                    fallbackValue: 1900000,
+                    severity: "urgent",
+                    subtitle: "Mass population transfer",
+                    linkPage: "Pages/War_Crimes_Stats/stat-forced-displacement.html"
+                },
+                {
+                    icon: "💧",
+                    label: "Water Wells Destroyed",
+                    apiKeys: [],
+                    fallbackValue: 350,
+                    severity: "danger",
+                    subtitle: "Water infrastructure",
+                    linkPage: "Pages/War_Crimes_Stats/stat-water-systems.html"
+                },
+                {
+                    icon: "🚰",
+                    label: "Water Tanks Destroyed",
+                    apiKeys: [],
+                    fallbackValue: 500,
+                    severity: "warning",
+                    subtitle: "Water storage",
+                    linkPage: "Pages/War_Crimes_Stats/stat-water-tanks.html"
+                },
+                {
+                    icon: "🚫",
+                    label: "Days Under Siege",
+                    apiKeys: [],
+                    fallbackValue: null,
+                    severity: "critical",
+                    subtitle: "Collective punishment",
+                    linkPage: "Pages/War_Crimes_Stats/stat-siege-violations.html",
+                    isCalculated: true
+                }
+            ]
+        };
+
+        // Enhanced API fetch with multiple CORS bypass methods
+        async function fetchApiData() {
+            const apiUrl = 'https://data.techforpalestine.org/api/v3/summary.json';
+
+            // Array of different proxy services to try
+            const proxyServices = [
+                {
+                    name: 'AllOrigins',
+                    url: `https://api.allorigins.win/get?url=${encodeURIComponent(apiUrl)}`,
+                    parseResponse: (data) => JSON.parse(data.contents)
+                },
+                {
+                    name: 'CORS Anywhere',
+                    url: `https://cors-anywhere.herokuapp.com/${apiUrl}`,
+                    parseResponse: (data) => data
+                },
+                {
+                    name: 'ThingProxy',
+                    url: `https://thingproxy.freeboard.io/fetch/${apiUrl}`,
+                    parseResponse: (data) => data
+                },
+                {
+                    name: 'CORS Proxy',
+                    url: `https://corsproxy.io/?${encodeURIComponent(apiUrl)}`,
+                    parseResponse: (data) => data
+                },
+                {
+                    name: 'Proxy API',
+                    url: `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(apiUrl)}`,
+                    parseResponse: (data) => data
+                }
+            ];
+
+            try {
+                console.log('Attempting to fetch data from Tech for Palestine API v3...');
+                updateApiStatus('loading', 'Loading API v3...');
+
+                // Try direct fetch first (will likely fail due to CORS but worth trying)
+                try {
+                    const response = await fetch(apiUrl, {
+                        method: 'GET',
+                        headers: {
+                            'Accept': 'application/json'
+                        },
+                        mode: 'cors'
+                    });
+
+                    if (response.ok) {
+                        const data = await response.json();
+                        apiData = data;
+                        lastUpdated = data.gaza?.last_update || new Date().toISOString();
+                        console.log('API v3 data fetched directly:', data);
+                        updateApiStatus('live', 'Live Data');
+                        isUsingFallback = false;
+                        return data;
+                    }
+                } catch (directError) {
+                    console.log('Direct fetch failed (expected due to CORS):', directError.message);
+                }
+
+                // Try proxy services one by one
+                for (const proxy of proxyServices) {
+                    try {
+                        console.log(`Trying ${proxy.name} proxy...`);
+                        updateApiStatus('loading', `Trying ${proxy.name}...`);
+
+                        const proxyResponse = await fetch(proxy.url, {
+                            method: 'GET',
+                            headers: {
+                                'Accept': 'application/json'
+                            }
+                        });
+
+                        if (proxyResponse.ok) {
+                            const proxyData = await proxyResponse.json();
+                            const data = proxy.parseResponse(proxyData);
+
+                            // Validate the data structure
+                            if (data && data.gaza && data.gaza.killed) {
+                                apiData = data;
+                                lastUpdated = data.gaza?.last_update || new Date().toISOString();
+                                console.log(`API v3 data fetched via ${proxy.name}:`, data);
+                                updateApiStatus('live', `Live Data (${proxy.name})`);
+                                isUsingFallback = false;
+                                return data;
+                            }
+                        }
+                    } catch (proxyError) {
+                        console.log(`${proxy.name} proxy failed:`, proxyError.message);
+                        continue; // Try next proxy
+                    }
+                }
+
+                throw new Error('All proxy methods failed');
+
+            } catch (error) {
+                console.error('All API fetch attempts failed:', error);
+                throw error;
+            }
+        }
+
+        // Update API status indicator
+        function updateApiStatus(status, text) {
+            const apiStatus = document.getElementById('apiStatus');
+            if (apiStatus) {
+                apiStatus.className = `api-status ${status}`;
+                apiStatus.textContent = text;
+            }
+        }
+
+        // Get nested object value by string path with enhanced error handling
+        function getNestedValue(obj, path) {
+            if (!obj || !path) return null;
+
+            try {
+                return path.split('.').reduce((current, key) => {
+                    return current && typeof current === 'object' ? current[key] : null;
+                }, obj);
+            } catch (error) {
+                console.warn(`Failed to get nested value for path: ${path}`, error);
+                return null;
+            }
+        }
+
+        // Enhanced value retrieval with multiple API key attempts
+        function getValueFromData(data, config) {
+            if (!data) return config.fallbackValue;
+
+            // Handle calculated values
+            if (config.isCalculated) {
+                return calculateSpecialValue(config, data);
+            }
+
+            // Try each API key until we find a value
+            for (const apiKey of config.apiKeys) {
+                const value = getNestedValue(data, apiKey);
+                if (value !== null && value !== undefined) {
+                    return value;
+                }
+            }
+
+            // Return fallback if no API key worked
+            return config.fallbackValue;
+        }
+
+        // Calculate special values (like siege days)
+        function calculateSpecialValue(config, data) {
+            if (config.label === 'Days Under Siege') {
+                const siegeStart = new Date('2023-10-07');
+                const now = new Date();
+                const diffTime = Math.abs(now - siegeStart);
+                const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+                return diffDays;
+            }
+            return config.fallbackValue;
+        }
+
+        // Enhanced number formatting
+        function formatNumber(value) {
+            if (value === null || value === undefined) return 'N/A';
+
+            const num = parseInt(value);
+            if (isNaN(num)) return 'N/A';
+
+            if (num >= 1000000) {
+                return (num / 1000000).toFixed(1) + 'M';
+            } else if (num >= 1000) {
+                return (num / 1000).toFixed(1) + 'K';
+            } else {
+                return num.toLocaleString();
+            }
+        }
+
+        // Create enhanced stat card with working links
+        function createStatCard(config, data) {
+            const value = getValueFromData(data, config);
+            const formattedValue = formatNumber(value);
+
+            return `
+                <a href="${config.linkPage}" class="stat-link">
+                    <div class="stat-card ${config.severity}">
+                        <span class="stat-icon">${config.icon}</span>
+                        <div class="stat-number">${formattedValue}</div>
+                        <div class="stat-label">${config.label}</div>
+                        <div class="stat-subtitle">${config.subtitle}</div>
+                    </div>
+                </a>
+            `;
+        }
+
+        // Populate all statistics sections
+        function populateStatistics(data) {
+            console.log('Populating statistics with data:', data);
+
+            try {
+                // Populate casualties
+                const casualtiesRow = document.getElementById('casualtiesRow');
+                if (casualtiesRow) {
+                    casualtiesRow.innerHTML = dataMapping.casualties
+                        .map(config => createStatCard(config, data))
+                        .join('');
+                    console.log('Casualties section populated');
+                }
+
+                // Populate infrastructure
+                const infrastructureRow = document.getElementById('infrastructureRow');
+                if (infrastructureRow) {
+                    infrastructureRow.innerHTML = dataMapping.infrastructure
+                        .map(config => createStatCard(config, data))
+                        .join('');
+                    console.log('Infrastructure section populated');
+                }
+
+                // Populate facilities
+                const facilitiesRow = document.getElementById('facilitiesRow');
+                if (facilitiesRow) {
+                    facilitiesRow.innerHTML = dataMapping.facilities
+                        .map(config => createStatCard(config, data))
+                        .join('');
+                    console.log('Facilities section populated');
+                }
+
+                // Populate displacement
+                const displacementRow = document.getElementById('displacementRow');
+                if (displacementRow) {
+                    displacementRow.innerHTML = dataMapping.displacement
+                        .map(config => createStatCard(config, data))
+                        .join('');
+                    console.log('Displacement section populated');
+                }
+
+                // Update emergency banner
+                updateEmergencyBanner(data);
+
+                // Update last updated timestamp
+                updateLastUpdated();
+
+                // Add animation to cards
+                setTimeout(addCardAnimations, 100);
+
+            } catch (error) {
+                console.error('Error populating statistics:', error);
+                showErrorMessage();
+            }
+        }
+
+        // Update emergency banner with current data
+        function updateEmergencyBanner(data) {
+            const emergencyDetails = document.getElementById('emergencyDetails');
+            if (!emergencyDetails) return;
+
+            try {
+                const children = formatNumber(getValueFromData(data, dataMapping.casualties[0]));
+                const journalists = formatNumber(getValueFromData(data, dataMapping.casualties[1]));
+                const medics = formatNumber(getValueFromData(data, dataMapping.casualties[2]));
+                const total = formatNumber(getValueFromData(data, dataMapping.casualties[3]));
+
+                emergencyDetails.innerHTML = `${total} total killed • ${children} children killed • ${journalists} journalists targeted • ${medics} medical workers killed`;
+                console.log('Emergency banner updated');
+            } catch (error) {
+                console.error('Error updating emergency banner:', error);
+                emergencyDetails.innerHTML = 'Multiple systematic violations of international humanitarian law documented';
+            }
+        }
+
+        // Debug mode functionality
+        let debugMode = false;
+
+        function toggleDebugMode() {
+            debugMode = !debugMode;
+            const debugPanel = document.getElementById('debugPanel');
+            if (debugPanel) {
+                if (debugMode) {
+                    debugPanel.classList.remove('hidden');
+                    updateDebugInfo();
+                } else {
+                    debugPanel.classList.add('hidden');
+                }
+            }
+        }
+
+        function updateDebugInfo() {
+            const debugContent = document.getElementById('debugContent');
+            if (debugContent && debugMode) {
+                const info = {
+                    'API Status': isUsingFallback ? 'Fallback/Cached' : 'Live',
+                    'Last API Call': new Date().toISOString(),
+                    'API Data Available': apiData ? 'Yes' : 'No',
+                    'Gaza Data': apiData?.gaza ? 'Available' : 'Missing',
+                    'User Agent': navigator.userAgent.substring(0, 50) + '...',
+                    'Browser CORS Support': typeof fetch !== 'undefined' ? 'Yes' : 'No',
+                    'API Endpoint': 'https://data.techforpalestine.org/api/v3/summary.json'
+                };
+
+                debugContent.innerHTML = Object.entries(info)
+                    .map(([key, value]) => `<div><strong>${key}:</strong> ${value}</div>`)
+                    .join('');
+            }
+        }
+
+        // Manual retry function
+        async function retryDataFetch() {
+            console.log('Manual retry requested...');
+            const errorMessage = document.getElementById('errorMessage');
+            if (errorMessage) {
+                errorMessage.classList.add('hidden');
+            }
+
+            const loadingIndicator = document.getElementById('loadingIndicator');
+            if (loadingIndicator) {
+                loadingIndicator.style.display = 'block';
+            }
+
+            await initializeData();
+        }
+
+        // Update last updated timestamp
+        function updateLastUpdated() {
+            const lastUpdatedElement = document.getElementById('warCrimesLastUpdated');
+            if (lastUpdatedElement) {
+                if (lastUpdated && !isUsingFallback) {
+                    lastUpdatedElement.textContent = `Last updated: ${lastUpdated} (Live Data)`;
+                } else {
+                    const now = new Date();
+                    const options = {
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric',
+                        hour: '2-digit',
+                        minute: '2-digit',
+                        timeZone: 'UTC'
+                    };
+                    lastUpdatedElement.textContent = `Last updated: ${now.toLocaleDateString('en-US', options)} UTC (Cached Data)`;
+                }
+            }
+
+            // Update debug info if debug mode is active
+            if (debugMode) {
+                updateDebugInfo();
+            }
+        }
+
+        // Show error message
+        function showErrorMessage() {
+            const errorMessage = document.getElementById('errorMessage');
+            if (errorMessage) {
+                errorMessage.classList.remove('hidden');
+                console.log('Error message displayed');
+            }
+        }
+
+        // Hide loading indicator
+        function hideLoadingIndicator() {
+            const loadingIndicator = document.getElementById('loadingIndicator');
+            if (loadingIndicator) {
+                loadingIndicator.style.display = 'none';
+                console.log('Loading indicator hidden');
+            }
+        }
+
+        // Add animations to stat cards
+        function addCardAnimations() {
+            const statCards = document.querySelectorAll('.stat-card');
+            statCards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+
+                setTimeout(() => {
+                    card.style.transition = 'all 0.6s ease';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+        }
+
+        // Load fallback data when API fails with updated values
+        function loadFallbackData() {
+            console.log('Loading fallback data...');
+            updateApiStatus('fallback', 'Cached Data');
+            isUsingFallback = true;
+
+            // Updated fallback data based on API v3 structure
+            const fallbackData = {
+                gaza: {
+                    reports: 669,
+                    last_update: '2025-08-05',
+                    massacres: 12000,
+                    killed: {
+                        total: 61020,
+                        children: 19000,
+                        women: 12500,
+                        civil_defence: 122,
+                        press: 122,
+                        medical: 1590
+                    },
+                    injured: {
+                        total: 150671
+                    }
+                },
+                // Infrastructure data not available in v3 API, using fallback values
+                destroyed: {
+                    residential_units: 150000,
+                    industrial_sites: 800,
+                    water_wells: 350,
+                    water_tanks: 500
+                },
+                damaged: {
+                    mosques: 300,
+                    schools: 350,
+                    universities: 15,
+                    roads: 1500,
+                    ambulances: 120
+                },
+                attacks: {
+                    hospitals_out_of_service: 30
+                },
+                displaced: {
+                    internally: 1900000
+                }
+            };
+
+            populateStatistics(fallbackData);
+            console.log('Fallback data loaded successfully');
+        }
+
+        // Main initialization function
+        async function initializeData() {
+            console.log('Initializing data...');
+
+            try {
+                const data = await fetchApiData();
+                hideLoadingIndicator();
+
+                if (data && data.gaza) {
+                    populateStatistics(data);
+                    console.log('Data loaded successfully from API v3');
+                } else {
+                    console.log('No valid Gaza data returned from API, loading fallback');
+                    showErrorMessage();
+                    loadFallbackData();
+                }
+            } catch (error) {
+                console.error('Error initializing data:', error);
+                hideLoadingIndicator();
+                showErrorMessage();
+                loadFallbackData();
+            }
+        }
+
+        // View switching functionality
+        function initializeNavigation() {
+            const navButtons = document.querySelectorAll('.nav-btn[data-view]');
+            const viewSections = document.querySelectorAll('.view-section');
+
+            navButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const targetView = this.getAttribute('data-view');
+
+                    // Remove active class from all buttons and sections
+                    navButtons.forEach(btn => btn.classList.remove('active'));
+                    viewSections.forEach(section => section.classList.remove('active'));
+
+                    // Add active class to clicked button and show target section
+                    this.classList.add('active');
+                    const targetSection = document.getElementById(targetView + 'View');
+                    if (targetSection) {
+                        targetSection.classList.add('active');
+                    }
+                });
+            });
+        }
+
+        // Theme toggle functionality
+        function initializeTheme() {
+            const themeToggle = document.querySelector('.theme-toggle');
+            const body = document.body;
+
+            if (themeToggle) {
+                themeToggle.addEventListener('click', function() {
+                    const currentTheme = body.getAttribute('data-theme');
+                    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+                    body.setAttribute('data-theme', newTheme);
+                    this.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+
+                    // Save preference
+                    localStorage.setItem('theme', newTheme);
+                });
+
+                // Load saved theme
+                const savedTheme = localStorage.getItem('theme') || 'light';
+                body.setAttribute('data-theme', savedTheme);
+                themeToggle.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
+            }
+        }
+
+        // Auto-refresh functionality
+        function setupAutoRefresh() {
+            // Refresh data every 30 minutes
+            setInterval(() => {
+                console.log('Auto-refreshing data...');
+                initializeData();
+            }, 30 * 60 * 1000);
+        }
+
+        // Main DOMContentLoaded event handler
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM loaded, initializing application...');
+
+            // Initialize all components
+            initializeNavigation();
+            initializeTheme();
+            initializeData();
+            setupAutoRefresh();
+
+            console.log('War Crimes Statistics application initialized successfully');
+        });
+
+        // Global error handler
+        window.addEventListener('error', function(event) {
+            console.error('Global error caught:', event.error);
+            updateApiStatus('fallback', 'Error - Using Cache');
+        });
+
+        // Unhandled promise rejection handler
+        window.addEventListener('unhandledrejection', function(event) {
+            console.error('Unhandled promise rejection:', event.reason);
+            updateApiStatus('fallback', 'Error - Using Cache');
+        });
+
+        // Utility function for sharing
+        function shareWarCrimesData() {
+            const shareText = '🚨 INTERNATIONAL LAW CRISIS: Systematic violations of Geneva Conventions in Gaza. Live data from verified sources showing devastating humanitarian impact.';
+            const shareUrl = window.location.href;
+
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Gaza War Crimes Documentation',
+                    text: shareText,
+                    url: shareUrl
+                });
+            } else {
+                const fullText = shareText + ' ' + shareUrl;
+                if (navigator.clipboard) {
+                    navigator.clipboard.writeText(fullText).then(() => {
+                        alert('War crimes documentation copied to clipboard!');
+                    });
+                } else {
+                    // Fallback copy method
+                    const textarea = document.createElement('textarea');
+                    textarea.value = fullText;
+                    document.body.appendChild(textarea);
+                    textarea.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(textarea);
+                    alert('War crimes documentation copied to clipboard!');
+                }
+            }
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add intersection observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const elementsToAnimate = document.querySelectorAll('.violation-item, .framework-card, .resource-category, .timeline-item, .crisis-layer');
+            elementsToAnimate.forEach(el => observer.observe(el));
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Major Incidents Timeline - Gaza Crisis Documentation</title>
+    <meta name="description" content="Interactive timeline, map, and detailed documentation of major incidents in Gaza">
+
+    <!-- External CSS Libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.Default.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/timelinejs3/3.8.25/css/timeline.css">
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="shared-styles.css">
+
+<style>
+/* Major incidents page specific styles */
+.controls {
+    background: var(--surface-color, #1a1a1a);
+    border: 1px solid var(--border-color, #333);
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-radius: var(--border-radius, 6px);
+}
+
+.search-filter {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.search-input, .filter-select, .sort-select {
+    background: var(--bg-secondary, rgba(255, 107, 53, 0.05));
+    border: 1px solid var(--border-color, #333);
+    color: var(--text-primary, #ffffff);
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius, 6px);
+    font-size: 0.9rem;
+}
+
+.clear-btn {
+    background: var(--secondary-color, #dc3545);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius, 6px);
+    cursor: pointer;
+}
+
+.timeline-container, .map-container {
+    background: var(--surface-color, #1a1a1a);
+    border-radius: var(--border-radius, 6px);
+    padding: 1rem;
+    min-height: 600px;
+}
+
+.view-section {
+    display: none;
+}
+
+.view-section.active {
+    display: block;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+    background: var(--surface-color, #1a1a1a);
+    margin: 5% auto;
+    padding: 0;
+    border-radius: var(--border-radius, 6px);
+    width: 90%;
+    max-width: 800px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.modal-header {
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--border-color, #333);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-secondary, #cccccc);
+}
+
+/* CSV loading indicator */
+.csv-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    text-align: center;
+    color: var(--text-secondary);
+}
+
+.csv-loading .loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid var(--border-color);
+    border-top: 4px solid var(--accent-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.csv-status {
+    background: var(--light-color);
+    border: 1px solid var(--border-color);
+    padding: 1rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    font-size: 14px;
+}
+
+.csv-success {
+    border-color: #28a745;
+    background: rgba(40, 167, 69, 0.1);
+    color: #28a745;
+}
+
+.csv-error {
+    border-color: #dc3545;
+    background: rgba(220, 53, 69, 0.1);
+    color: #dc3545;
+}
+</style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">
+                <a href="index.html">Gaza Crisis Documentation</a>
+            </h1>
+            <nav class="nav">
+                <!-- Main Navigation -->
+                <a href="war-crimes-stats.html" class="nav-btn">⚖️ War Crimes</a>
+                <a href="hunger-crisis-stats.html" class="nav-btn">🍽️ Hunger Crisis</a>
+                <button class="nav-btn active">📋 Major Incidents</button>
+
+                <!-- View Controls -->
+                <button class="nav-btn view-btn active" data-view="timeline">📅 Timeline</button>
+                <button class="nav-btn view-btn" data-view="map">🗺️ Map</button>
+                <button class="nav-btn view-btn" data-view="list">📋 List</button>
+
+            </nav>
+            <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Page Header -->
+        <div class="page-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="header-text">
+                        <h1>📋 Major Incidents Timeline</h1>
+                        <p>Comprehensive documentation of significant crisis events with interactive timeline, map visualization, and detailed incident records. <strong>Now powered by CSV data.</strong></p>
+                    </div>
+                    <div class="header-stats" id="headerStats">
+                        <div class="quick-stat">
+                            <span class="stat-value" id="totalIncidents">Loading...</span>
+                            <span class="stat-label">Total Incidents</span>
+                        </div>
+                        <div class="quick-stat">
+                            <span class="stat-value" id="verifiedIncidents">Loading...</span>
+                            <span class="stat-label">Verified</span>
+                        </div>
+                        <div class="quick-stat">
+                            <span class="stat-value" id="lastUpdateStat">Loading...</span>
+                            <span class="stat-label">Last Updated</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CSV Loading Status -->
+        <div id="csvStatus" class="container" style="display: none;">
+            <div class="csv-status" id="csvStatusContent">
+                📊 Loading crisis data from CSV files...
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <div id="controls" class="controls">
+            <div class="container">
+                <div class="search-filter">
+                    <input type="text" id="searchInput" placeholder="Search incidents, locations, descriptions..." class="search-input">
+                    <select id="typeFilter" class="filter-select">
+                        <option value="">All Types</option>
+                        <option value="hunger">Hunger Crisis</option>
+                        <option value="water">Water Shortage</option>
+                        <option value="aid">Aid Blockage</option>
+                        <option value="casualties">Casualties</option>
+                        <option value="infrastructure">Infrastructure</option>
+                    </select>
+                    <select id="dateFilter" class="filter-select">
+                        <option value="">All Dates</option>
+                        <option value="today">Today</option>
+                        <option value="week">This Week</option>
+                        <option value="month">This Month</option>
+                        <option value="quarter">Last 3 Months</option>
+                    </select>
+                    <button id="clearFilters" class="clear-btn">Clear Filters</button>
+                </div>
+                <div class="stats">
+                    <span id="incidentCount">Loading incidents...</span>
+                    <span id="lastUpdated">Last updated: Loading...</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Timeline View -->
+        <section class="view-section active" id="timelineView">
+            <div class="container">
+                <div class="timeline-container">
+                    <div id="timeline-embed" class="timeline">
+                        <div class="csv-loading">
+                            <div class="loading-spinner"></div>
+                            <h3>Loading CSV Data...</h3>
+                            <p>Fetching incident data from CSV files...</p>
+                            <div class="csv-progress">
+                                <p id="csvProgress">Initializing...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map View -->
+        <section class="view-section" id="mapView">
+            <div class="container">
+                <div class="map-container">
+                    <div id="map" class="map"></div>
+                    <div class="map-legend">
+                        <h4>Incident Types</h4>
+                        <div class="legend-item"><span class="marker hunger"></span> Hunger Crisis</div>
+                        <div class="legend-item"><span class="marker water"></span> Water Shortage</div>
+                        <div class="legend-item"><span class="marker aid"></span> Aid Blockage</div>
+                        <div class="legend-item"><span class="marker casualties"></span> Casualties</div>
+                        <div class="legend-item"><span class="marker infrastructure"></span> Infrastructure</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- List View -->
+        <section class="view-section" id="listView">
+            <div class="container">
+                <div class="list-header">
+                    <h2>Incident Documentation</h2>
+                    <div class="sort-controls">
+                        <label for="sortSelect">Sort by:</label>
+                        <select id="sortSelect" class="sort-select">
+                            <option value="date-desc">Date (Newest First)</option>
+                            <option value="date-asc">Date (Oldest First)</option>
+                            <option value="type">Type</option>
+                            <option value="location">Location</option>
+                            <option value="severity">Severity</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="incident-grid" id="incidentGrid">
+                    <!-- Incidents will be populated here -->
+                </div>
+                <div class="loading" id="loading">Loading incidents from CSV...</div>
+                <div class="no-results" id="noResults" style="display: none;">
+                    <div class="no-results-icon">🔍</div>
+                    <h3>No incidents found</h3>
+                    <p>Try adjusting your search criteria or filters.</p>
+                    <button onclick="clearAllFilters()" class="clear-all-btn">Clear All Filters</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Incident Detail Modal -->
+    <div class="modal" id="incidentModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Incident Details</h2>
+                <button class="modal-close" aria-label="Close modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="incident-details">
+                    <div class="detail-section">
+                        <h4>📋 Basic Information</h4>
+                        <div class="detail-grid">
+                            <div class="detail-item">
+                                <strong>📅 Date:</strong> <span id="modalDate"></span>
+                            </div>
+                            <div class="detail-item">
+                                <strong>🕒 Time:</strong> <span id="modalTime"></span>
+                            </div>
+                            <div class="detail-item">
+                                <strong>📍 Location:</strong> <span id="modalLocation"></span>
+                            </div>
+                            <div class="detail-item">
+                                <strong>🏷️ Type:</strong> <span id="modalType"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detail-section">
+                        <h4>📄 Description</h4>
+                        <p id="modalDescription"></p>
+                    </div>
+
+                    <div class="detail-section" id="modalCasualtiesSection">
+                        <h4>👥 Impact & Casualties</h4>
+                        <div id="modalCasualties"></div>
+                    </div>
+
+                    <div class="detail-section" id="modalEvidenceSection">
+                        <h4>📸 Evidence</h4>
+                        <div id="modalEvidence" class="evidence-container"></div>
+                    </div>
+
+                    <div class="detail-section">
+                        <h4>📰 Sources</h4>
+                        <div id="modalSources" class="sources-container"></div>
+                    </div>
+
+                    <div class="detail-section">
+                        <div class="verification-container">
+                            <span id="modalVerification" class="verification-badge"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer-placeholder"></div>
+    <script>
+        fetch('common-styles.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('footer-placeholder').innerHTML = html;
+            });
+    </script>
+
+    <!-- External JavaScript Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timelinejs3/3.8.25/js/timeline.min.js"></script>
+
+    <!-- CRITICAL: Papa Parse for CSV parsing -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+
+    <!-- Enhanced CSV Data Initialization Script -->
+    <script>
+        console.log('🔧 Initializing major incidents page with CSV data loading...');
+
+        // Enhanced CSV loading with progress tracking
+        let csvLoadingStatus = {
+            incidents: false,
+            casualties: false,
+            total: 0,
+            loaded: 0
+        };
+
+        // Initialize global variables properly
+        window.incidents = [];
+        window.filteredIncidents = [];
+        window.currentView = 'timeline';
+        window.map = null;
+        window.markers = [];
+        window.dataLoaded = false;
+
+        // Type colors configuration
+        window.GazaDocsPlatform = {
+            typeColors: {
+                hunger: '#e53e3e',
+                water: '#3182ce',
+                aid: '#d69e2e',
+                casualties: '#805ad5',
+                infrastructure: '#38a169'
+            },
+            incidents: [],
+            filteredIncidents: []
+        };
+
+        // Update loading progress
+        function updateCSVProgress(message) {
+            const progressEl = document.getElementById('csvProgress');
+            const statusEl = document.getElementById('csvStatusContent');
+
+            if (progressEl) {
+                progressEl.textContent = message;
+            }
+
+            if (statusEl) {
+                statusEl.innerHTML = `📊 ${message}`;
+                const statusContainer = document.getElementById('csvStatus');
+                if (statusContainer) {
+                    statusContainer.style.display = 'block';
+                }
+            }
+
+            console.log('CSV Progress:', message);
+        }
+
+        // Show CSV loading success
+        function showCSVSuccess(incidentCount) {
+            const statusEl = document.getElementById('csvStatusContent');
+            const statusContainer = document.getElementById('csvStatus');
+
+            if (statusEl) {
+                statusEl.innerHTML = `✅ Successfully loaded ${incidentCount} incidents from CSV files`;
+                statusEl.className = 'csv-status csv-success';
+            }
+
+            // Hide status after 3 seconds
+            setTimeout(() => {
+                if (statusContainer) {
+                    statusContainer.style.display = 'none';
+                }
+            }, 3000);
+        }
+
+        // Show CSV loading error
+        function showCSVError(error) {
+            const statusEl = document.getElementById('csvStatusContent');
+            const statusContainer = document.getElementById('csvStatus');
+
+            if (statusEl) {
+                statusEl.innerHTML = `❌ Error loading CSV data: ${error}`;
+                statusEl.className = 'csv-status csv-error';
+            }
+
+            console.error('CSV Loading Error:', error);
+        }
+
+        // Enhanced CSV data loading function
+        async function loadIncidentsDataFromCSV() {
+            try {
+                console.log('📊 Loading incidents data from CSV files...');
+                updateCSVProgress('Initializing CSV data loading...');
+
+                // Show loading state in header stats
+                document.getElementById('totalIncidents').textContent = 'Loading...';
+                document.getElementById('verifiedIncidents').textContent = 'Loading...';
+                document.getElementById('lastUpdateStat').textContent = 'Loading...';
+
+                // Load main incidents CSV
+                updateCSVProgress('Loading main incidents data...');
+                const incidentsData = await loadCSVFile('incidents.csv');
+                csvLoadingStatus.incidents = true;
+                console.log(`✅ Loaded ${incidentsData.length} incidents from CSV`);
+
+                // Load casualties details CSV
+                updateCSVProgress('Loading casualty details...');
+                const casualtiesData = await loadCSVFile('casualties-details.csv');
+                csvLoadingStatus.casualties = true;
+                console.log(`✅ Loaded ${casualtiesData.length} casualty records from CSV`);
+
+                // Process and combine the data
+                updateCSVProgress('Processing and combining data...');
+                const processedIncidents = processIncidentsData(incidentsData, casualtiesData);
+
+                console.log(`✅ Processed ${processedIncidents.length} complete incidents`);
+
+                // Update all global references
+                window.incidents = processedIncidents;
+                window.filteredIncidents = [...processedIncidents];
+                window.incidentsData = {
+                    incidents: processedIncidents,
+                    metadata: {
+                        lastUpdated: new Date().toISOString(),
+                        totalIncidents: processedIncidents.length,
+                        dataVersion: '2.0-csv'
+                    }
+                };
+                window.GazaDocsPlatform.incidents = processedIncidents;
+                window.GazaDocsPlatform.filteredIncidents = window.filteredIncidents;
+                window.dataLoaded = true;
+
+                // Update header stats immediately
+                updateHeaderStats(processedIncidents);
+                updateControlsStats(processedIncidents);
+
+                // Show success status
+                showCSVSuccess(processedIncidents.length);
+                updateCSVProgress(`Successfully loaded ${processedIncidents.length} incidents`);
+
+                console.log('🎯 CSV data loaded and global variables updated successfully');
+
+                return processedIncidents;
+
+            } catch (error) {
+                console.error('❌ Error loading CSV data:', error);
+                showCSVError(error.message);
+
+                // Show error state
+                document.getElementById('totalIncidents').textContent = 'Error';
+                document.getElementById('verifiedIncidents').textContent = 'Error';
+                document.getElementById('lastUpdateStat').textContent = 'Error';
+
+                // Show error in timeline
+                const timelineContainer = document.getElementById('timeline-embed');
+                if (timelineContainer) {
+                    timelineContainer.innerHTML = `
+                        <div class="timeline-error">
+                            <div class="error-icon">⚠️</div>
+                            <h3>Failed to Load CSV Data</h3>
+                            <p>Unable to load incident data from CSV files. Please check that the CSV files exist and are properly formatted.</p>
+                            <p><strong>Error:</strong> ${error.message}</p>
+                            <button onclick="location.reload()" class="retry-btn">🔄 Retry</button>
+                        </div>
+                    `;
+                }
+
+                return [];
+            }
+        }
+
+        // Enhanced CSV file loading with Papa Parse
+        async function loadCSVFile(filename) {
+            return new Promise((resolve, reject) => {
+                // Add cache busting
+                const timestamp = Date.now();
+                const random = Math.random().toString(36).substring(7);
+                const url = `${filename}?v=${timestamp}&r=${random}`;
+
+                console.log(`Loading CSV file: ${filename}`);
+                updateCSVProgress(`Loading ${filename}...`);
+
+                Papa.parse(url, {
+                    download: true,
+                    header: true,
+                    skipEmptyLines: true,
+                    dynamicTyping: true,
+                    delimitersToGuess: [',', '\t', '|', ';'],
+                    transformHeader: function(header) {
+                        // Clean and normalize headers
+                        return header.trim().toLowerCase().replace(/\s+/g, '_');
+                    },
+                    complete: function(results) {
+                        if (results.errors && results.errors.length > 0) {
+                            console.warn(`CSV parsing warnings for ${filename}:`, results.errors);
+                            // Only reject on severe errors, not warnings
+                            const severeErrors = results.errors.filter(err => err.type === 'FieldMismatch' && err.code === 'TooManyFields');
+                            if (severeErrors.length > 0) {
+                                reject(new Error(`Severe parsing errors in ${filename}: ${severeErrors[0].message}`));
+                                return;
+                            }
+                        }
+
+                        console.log(`✅ Successfully parsed ${results.data.length} rows from ${filename}`);
+                        resolve(results.data.filter(row => row && Object.keys(row).length > 0)); // Filter out empty rows
+                    },
+                    error: function(error) {
+                        console.error(`❌ Error loading ${filename}:`, error);
+                        reject(new Error(`Failed to load ${filename}: ${error.message || error}`));
+                    }
+                });
+            });
+        }
+
+        // Enhanced data processing function
+        function processIncidentsData(incidentsData, casualtiesDetailsData) {
+            console.log('Processing incidents data...', {
+                incidents: incidentsData.length,
+                casualties: casualtiesDetailsData.length
+            });
+
+            return incidentsData.map(row => {
+                try {
+                    // Validate required fields
+                    if (!row.id) {
+                        console.warn('Skipping row without ID:', row);
+                        return null;
+                    }
+
+                    // Build coordinates array
+                    const coordinates = [];
+                    if (row.location_coordinates_lng && row.location_coordinates_lat) {
+                        coordinates.push(parseFloat(row.location_coordinates_lng));
+                        coordinates.push(parseFloat(row.location_coordinates_lat));
+                    }
+
+                    // Parse casualties data
+                    const casualties = {};
+                    if (row.casualties_affected) casualties.affected = parseInt(row.casualties_affected) || 0;
+                    if (row.casualties_critical) casualties.critical = parseInt(row.casualties_critical) || 0;
+                    if (row.casualties_deaths) casualties.deaths = parseInt(row.casualties_deaths) || 0;
+                    if (row.casualties_injured) casualties.injured = parseInt(row.casualties_injured) || 0;
+                    if (row.casualties_hospitalized) casualties.hospitalized = parseInt(row.casualties_hospitalized) || 0;
+
+                    // Parse evidence data
+                    const evidence = [];
+                    if (row.evidence_types && row.evidence_urls) {
+                        const types = parseDelimitedField(row.evidence_types);
+                        const urls = parseDelimitedField(row.evidence_urls);
+                        const descriptions = parseDelimitedField(row.evidence_descriptions || '');
+
+                        types.forEach((type, index) => {
+                            if (urls[index]) {
+                                evidence.push({
+                                    type: type.trim(),
+                                    url: urls[index].trim(),
+                                    description: descriptions[index] ? descriptions[index].trim() : ''
+                                });
+                            }
+                        });
+                    }
+
+                    // Parse sources
+                    const sources = parseDelimitedField(row.sources || '');
+
+                    // Parse tags
+                    const tags = parseDelimitedField(row.tags || '');
+
+                    // Find related casualties details
+                    let casualtiesDetails = [];
+                    if (row.casualties_details_ids) {
+                        const detailIds = parseDelimitedField(row.casualties_details_ids);
+                        casualtiesDetails = casualtiesDetailsData.filter(detail =>
+                            detailIds.includes(detail.reference_id) ||
+                            detail.incident_id === row.id
+                        ).map(detail => ({
+                            reference_id: detail.reference_id,
+                            name: detail.name || 'Name not available',
+                            age: parseInt(detail.age) || 0,
+                            date: detail.date,
+                            cause: detail.cause || 'Cause not specified',
+                            location_details: detail.location_details || 'Location not specified',
+                            medical_facility: detail.medical_facility || 'Medical facility not specified',
+                            condition: detail.condition || 'Condition unknown',
+                            sources: parseDelimitedField(detail.sources || ''),
+                            public_identifiers: {
+                                published_name: parseBooleanField(detail.published_name),
+                                published_image: parseBooleanField(detail.published_image),
+                                consent_verified: parseBooleanField(detail.consent_verified)
+                            },
+                            ethical_notes: {
+                                content_warning: detail.content_warning || '',
+                                privacy_status: detail.privacy_status || '',
+                                documentation_purpose: detail.documentation_purpose || ''
+                            }
+                        }));
+                    }
+
+                    // Build the incident object
+                    const incident = {
+                        id: row.id,
+                        title: row.title || 'Untitled Incident',
+                        date: row.date,
+                        time: row.time || null,
+                        location: {
+                            name: row.location_name || 'Unknown location',
+                            coordinates: coordinates
+                        },
+                        type: row.type || 'other',
+                        description: row.description || 'No description available',
+                        casualties: Object.keys(casualties).length > 0 ? casualties : null,
+                        casualties_details: casualtiesDetails.length > 0 ? casualtiesDetails : null,
+                        evidence: evidence.length > 0 ? evidence : null,
+                        sources: sources.length > 0 ? sources : [],
+                        verified: row.verified || 'pending',
+                        tags: tags.length > 0 ? tags : []
+                    };
+
+                    return incident;
+                } catch (error) {
+                    console.error('Error processing incident row:', row, error);
+                    return null;
+                }
+            }).filter(incident => incident !== null); // Filter out failed processing attempts
+        }
+
+        // Helper function to parse delimited fields (supports | and , delimiters)
+        function parseDelimitedField(field) {
+            if (!field || typeof field !== 'string') return [];
+
+            // Try pipe delimiter first, then comma
+            let delimiter = '|';
+            if (field.includes('|')) {
+                delimiter = '|';
+            } else if (field.includes(',')) {
+                delimiter = ',';
+            } else {
+                return [field.trim()];
+            }
+
+            return field.split(delimiter)
+                .map(item => item.trim())
+                .filter(item => item.length > 0);
+        }
+
+        // Helper function to parse boolean fields
+        function parseBooleanField(field) {
+            if (typeof field === 'boolean') return field;
+            if (typeof field === 'string') {
+                const lower = field.toLowerCase().trim();
+                return lower === 'true' || lower === '1' || lower === 'yes';
+            }
+            return false;
+        }
+
+        // Update header statistics
+        function updateHeaderStats(incidents) {
+            try {
+                const totalIncidentsEl = document.getElementById('totalIncidents');
+                const verifiedIncidentsEl = document.getElementById('verifiedIncidents');
+                const lastUpdateStatEl = document.getElementById('lastUpdateStat');
+
+                if (totalIncidentsEl) {
+                    totalIncidentsEl.textContent = incidents.length;
+                }
+
+                if (verifiedIncidentsEl) {
+                    const verified = incidents.filter(i => i.verified === 'verified').length;
+                    verifiedIncidentsEl.textContent = verified;
+                }
+
+                if (lastUpdateStatEl) {
+                    const today = new Date();
+                    lastUpdateStatEl.textContent = today.toLocaleDateString('en-US', {
+                        month: 'short',
+                        day: 'numeric'
+                    });
+                }
+
+                console.log('📊 Header stats updated:', {
+                    total: incidents.length,
+                    verified: incidents.filter(i => i.verified === 'verified').length
+                });
+
+            } catch (error) {
+                console.error('Error updating header stats:', error);
+            }
+        }
+
+        // Update controls statistics
+        function updateControlsStats(incidents) {
+            try {
+                const incidentCountEl = document.getElementById('incidentCount');
+                const lastUpdatedEl = document.getElementById('lastUpdated');
+
+                if (incidentCountEl) {
+                    incidentCountEl.textContent = `${incidents.length} incidents documented`;
+                }
+
+                if (lastUpdatedEl) {
+                    const now = new Date().toLocaleDateString('en-US', {
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric'
+                    });
+                    lastUpdatedEl.textContent = `Last updated: ${now}`;
+                }
+            } catch (error) {
+                console.error('Error updating controls stats:', error);
+            }
+        }
+
+        // Initialize page when DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initializePageWithCSV);
+        } else {
+            initializePageWithCSV();
+        }
+
+        async function initializePageWithCSV() {
+            console.log('🚀 Major incidents page initializing with CSV support...');
+
+            try {
+                // Load CSV data first
+                const incidents = await loadIncidentsDataFromCSV();
+
+                // Short delay to ensure all scripts are loaded
+                setTimeout(() => {
+                    console.log('📅 Initializing timeline with CSV data...');
+
+                    // Initialize timeline with the loaded data
+                    if (window.timelineManager && typeof window.timelineManager.init === 'function') {
+                        console.log('Using timelineManager.init with', incidents.length, 'CSV incidents');
+                        window.timelineManager.init(incidents);
+                    } else if (typeof window.initializeTimeline === 'function') {
+                        console.log('Using initializeTimeline function with', incidents.length, 'CSV incidents');
+                        window.initializeTimeline();
+                    } else {
+                        console.log('Timeline functions not yet available, retrying...');
+                        // Retry after scripts load
+                        setTimeout(() => {
+                            if (window.timelineManager) {
+                                window.timelineManager.init(incidents);
+                            } else if (typeof window.initializeTimeline === 'function') {
+                                window.initializeTimeline();
+                            }
+                        }, 500);
+                    }
+                }, 100);
+
+            } catch (error) {
+                console.error('Failed to initialize page with CSV data:', error);
+                showCSVError(error.message);
+            }
+        }
+
+        // Add enhanced loading and error styles
+        const enhancedStyles = document.createElement('style');
+        enhancedStyles.textContent = `
+            .timeline-error {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 400px;
+                text-align: center;
+                color: var(--text-secondary);
+                padding: 40px;
+            }
+
+            .error-icon {
+                font-size: 64px;
+                margin-bottom: 20px;
+                opacity: 0.5;
+            }
+
+            .retry-btn {
+                background: var(--accent-color);
+                color: white;
+                border: none;
+                padding: 12px 24px;
+                border-radius: 6px;
+                cursor: pointer;
+                font-size: 14px;
+                margin-top: 16px;
+                transition: all 0.2s ease;
+            }
+
+            .retry-btn:hover {
+                background: var(--accent-color-dark, #0056b3);
+                transform: translateY(-1px);
+            }
+
+            .csv-progress {
+                margin-top: 20px;
+                padding: 15px;
+                background: var(--light-color);
+                border-radius: 6px;
+                font-size: 14px;
+                color: var(--text-secondary);
+            }
+        `;
+        document.head.appendChild(enhancedStyles);
+    </script>
+
+    <!-- Application JavaScript Files -->
+    <script src="timeline.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
