@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaza Crisis Data Extraction Interface</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🍽️ Gaza Crisis Data Extraction Interface</h1>
+            <div class="user-info">
+                <span class="user-badge">👤 aliattia02</span>
+                <span class="date-badge">📅 2025-08-17 18:32:55 UTC</span>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <!-- URL Input Section -->
+            <div class="card">
+                <h2>📝 Website URLs for Data Extraction</h2>
+                <div class="url-input-section">
+                    <textarea id="urlInput" placeholder="Enter website URLs, one per line. Examples:
+
+https://www.unicef.org/press-releases/gaza-faces-severe-risk-famine
+https://reliefweb.int/report/occupied-palestinian-territory/gaza-strip-humanitarian-impact
+https://www.who.int/news/item/11-01-2024-health-impacts-gaza-children
+https://www.aljazeera.com/news/2024/8/2/palestinian-boy-17-dies-of-israel-induced-starvation-in-gaza
+
+Supported sources: UN agencies, news organizations, government reports, NGO documentation"></textarea>
+                    
+                    <div class="input-controls">
+                        <button id="extractBtn" class="btn-primary">🚀 Start Extraction</button>
+                        <button id="clearBtn" class="btn-secondary">🗑️ Clear URLs</button>
+                        <label class="file-upload">
+                            📁 Load from File
+                            <input type="file" id="fileInput" accept=".txt" style="display: none;">
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Quick URL Templates -->
+                <div class="quick-templates">
+                    <h3>🔗 Quick Templates</h3>
+                    <div class="template-buttons">
+                        <button class="template-btn" data-template="un">🇺🇳 UN Agencies</button>
+                        <button class="template-btn" data-template="news">📰 News Sources</button>
+                        <button class="template-btn" data-template="health">🏥 Health Organizations</button>
+                        <button class="template-btn" data-template="rights">⚖️ Human Rights</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Status Section -->
+            <div class="card status-card" id="statusCard" style="display: none;">
+                <h2>📊 Extraction Status</h2>
+                <div class="status-content">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <div class="status-text" id="statusText">Ready to start extraction...</div>
+                    <div class="current-url" id="currentUrl"></div>
+                </div>
+            </div>
+
+            <!-- Results Section -->
+            <div class="card results-card" id="resultsCard" style="display: none;">
+                <h2>📈 Extraction Results</h2>
+                <div class="results-summary" id="resultsSummary"></div>
+                <div class="results-details" id="resultsDetails"></div>
+            </div>
+
+            <!-- Data Summary Section -->
+            <div class="card">
+                <h2>📂 Current Data Files Status</h2>
+                <div class="data-files-status" id="dataFilesStatus">
+                    <div class="loading">Loading data files status...</div>
+                </div>
+                <div class="download-section">
+                    <h3>💾 Download Data Files</h3>
+                    <div class="download-buttons">
+                        <button class="download-btn" data-file="total-population-statistics.csv">📊 Statistics</button>
+                        <button class="download-btn" data-file="total-population-cases.csv">👥 Cases</button>
+                        <button class="download-btn" data-file="references.csv">📚 References</button>
+                        <button class="download-btn" data-file="un-quotes.csv">💬 Quotes</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Reports Section -->
+            <div class="card">
+                <h2>📋 Recent Extraction Reports</h2>
+                <div class="reports-list" id="reportsList">
+                    <div class="loading">Loading recent reports...</div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p>Gaza Crisis Documentation System • Data extracted to data_files/ directory • User: aliattia02 • Last updated: <span id="lastUpdated">2025-08-17 18:32:55</span></p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaza Crisis Data Extractor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1><i class="fas fa-database"></i> Gaza Crisis Data Extractor</h1>
+                <p>Extract and process crisis data from news articles into structured CSV format</p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- URL Input Section -->
+            <section class="url-input-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-link"></i> URL Input</h2>
+                    <p>Enter news article URLs to extract crisis data from</p>
+                </div>
+
+                <div class="url-input-container">
+                    <div class="single-url-input">
+                        <label for="singleUrl">Single URL:</label>
+                        <div class="input-group">
+                            <input type="url" id="singleUrl" placeholder="https://www.aljazeera.com/news/..."
+                                   class="url-input">
+                            <button type="button" id="addUrlBtn" class="btn btn-secondary">
+                                <i class="fas fa-plus"></i> Add
+                            </button>
+                            <button type="button" id="validateUrlBtn" class="btn btn-outline">
+                                <i class="fas fa-check"></i> Validate
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="bulk-url-input">
+                        <label for="bulkUrls">Bulk URLs (one per line):</label>
+                        <textarea id="bulkUrls" placeholder="Enter multiple URLs, one per line..."
+                                  class="url-textarea"></textarea>
+                        <button type="button" id="addBulkUrlsBtn" class="btn btn-secondary">
+                            <i class="fas fa-plus-circle"></i> Add All URLs
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Example URL -->
+                <div class="example-section">
+                    <h4><i class="fas fa-lightbulb"></i> Example URL:</h4>
+                    <div class="example-url">
+                        <code>https://www.aljazeera.com/news/2025/8/10/al-jazeera-journalist-anas-al-sharif-killed-in-israeli-attack-in-gaza-city</code>
+                        <button type="button" id="useExampleBtn" class="btn btn-link">
+                            <i class="fas fa-copy"></i> Use Example
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- URL List Section -->
+            <section class="url-list-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-list"></i> URLs to Process</h2>
+                    <div class="url-controls">
+                        <span id="urlCount" class="url-count">0 URLs</span>
+                        <button type="button" id="clearAllBtn" class="btn btn-outline">
+                            <i class="fas fa-trash"></i> Clear All
+                        </button>
+                    </div>
+                </div>
+
+                <div id="urlList" class="url-list">
+                    <div class="empty-state">
+                        <i class="fas fa-link"></i>
+                        <p>No URLs added yet. Add some URLs above to get started.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Extraction Section -->
+            <section class="extraction-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-cog"></i> Data Extraction</h2>
+                    <p>Process the URLs and extract crisis data</p>
+                </div>
+
+                <div class="extraction-controls">
+                    <button type="button" id="startExtractionBtn" class="btn btn-primary" disabled>
+                        <i class="fas fa-play"></i> Start Extraction
+                    </button>
+
+                    <div class="extraction-options">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="updateMainCsv" checked>
+                            <span class="checkmark"></span>
+                            Update main incidents.csv file
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="createBackup" checked>
+                            <span class="checkmark"></span>
+                            Create backup copy
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Progress Section -->
+                <div id="progressSection" class="progress-section" style="display: none;">
+                    <div class="progress-header">
+                        <h3>Extraction Progress</h3>
+                        <span id="progressText">Starting...</span>
+                    </div>
+
+                    <div class="progress-bar-container">
+                        <div id="progressBar" class="progress-bar">
+                            <div id="progressFill" class="progress-fill"></div>
+                        </div>
+                        <span id="progressPercent" class="progress-percent">0%</span>
+                    </div>
+
+                    <div id="currentUrl" class="current-url">
+                        Initializing...
+                    </div>
+                </div>
+
+                <!-- Results Section -->
+                <div id="resultsSection" class="results-section" style="display: none;">
+                    <div class="results-header">
+                        <h3><i class="fas fa-check-circle"></i> Extraction Results</h3>
+                    </div>
+
+                    <div id="resultsContent" class="results-content">
+                        <!-- Results will be populated here -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- File Management Section -->
+            <section class="file-management-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-folder"></i> File Management</h2>
+                    <p>View and download extracted CSV files</p>
+                </div>
+
+                <div class="file-controls">
+                    <button type="button" id="refreshFilesBtn" class="btn btn-outline">
+                        <i class="fas fa-sync"></i> Refresh
+                    </button>
+                    <button type="button" id="viewStatsBtn" class="btn btn-outline">
+                        <i class="fas fa-chart-bar"></i> Statistics
+                    </button>
+                </div>
+
+                <div id="filesList" class="files-list">
+                    <div class="loading-state">
+                        <i class="fas fa-spinner fa-spin"></i>
+                        <p>Loading files...</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2024 Gaza Crisis Data Extractor. Built for humanitarian documentation.</p>
+                <div class="footer-links">
+                    <a href="#" onclick="showHelp()"><i class="fas fa-question-circle"></i> Help</a>
+                    <a href="#" onclick="showAbout()"><i class="fas fa-info-circle"></i> About</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Modals -->
+    <!-- URL Validation Modal -->
+    <div id="validationModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-check"></i> URL Validation</h3>
+                <button type="button" class="modal-close" onclick="closeModal('validationModal')">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div id="validationContent" class="modal-body">
+                <!-- Validation results will be shown here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Statistics Modal -->
+    <div id="statsModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-chart-bar"></i> Extraction Statistics</h3>
+                <button type="button" class="modal-close" onclick="closeModal('statsModal')">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div id="statsContent" class="modal-body">
+                <!-- Statistics will be shown here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Help Modal -->
+    <div id="helpModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-question-circle"></i> Help & Instructions</h3>
+                <button type="button" class="modal-close" onclick="closeModal('helpModal')">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="help-content">
+                    <h4>How to Use the Gaza Crisis Data Extractor</h4>
+
+                    <div class="help-section">
+                        <h5><i class="fas fa-link"></i> Adding URLs</h5>
+                        <ul>
+                            <li>Enter a single URL in the "Single URL" field and click "Add"</li>
+                            <li>Or paste multiple URLs in the "Bulk URLs" textarea, one per line</li>
+                            <li>Use the "Validate" button to check if a URL is accessible</li>
+                            <li>Click the example URL to see the expected format</li>
+                        </ul>
+                    </div>
+
+                    <div class="help-section">
+                        <h5><i class="fas fa-cog"></i> Data Extraction</h5>
+                        <ul>
+                            <li>Review your URL list before starting extraction</li>
+                            <li>Choose whether to update the main CSV file</li>
+                            <li>Enable backup creation for safety</li>
+                            <li>Click "Start Extraction" to begin processing</li>
+                        </ul>
+                    </div>
+
+                    <div class="help-section">
+                        <h5><i class="fas fa-download"></i> File Management</h5>
+                        <ul>
+                            <li>View all extracted CSV files in the File Management section</li>
+                            <li>Download files directly from the browser</li>
+                            <li>Preview file contents before downloading</li>
+                            <li>Check extraction statistics</li>
+                        </ul>
+                    </div>
+
+                    <div class="help-section">
+                        <h5><i class="fas fa-exclamation-triangle"></i> Supported Sources</h5>
+                        <ul>
+                            <li>Al Jazeera (primary support)</li>
+                            <li>BBC News</li>
+                            <li>Other news sites (basic extraction)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
