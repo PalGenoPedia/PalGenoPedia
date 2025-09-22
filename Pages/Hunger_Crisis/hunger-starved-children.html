@@ -1,0 +1,1258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Children Starvation Crisis - Gaza Crisis Documentation</title>
+    <meta name="description" content="Comprehensive documentation of child starvation and malnutrition crisis in Gaza: deaths, at-risk children, and systematic targeting of vulnerable population.">
+    <link rel="stylesheet" href="../global-styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">
+                <a href="../../index.html">Gaza Crisis Documentation</a>
+            </h1>
+            <nav class="nav">
+                <a href="../../hunger-crisis-stats.html" class="nav-btn">← Back to Hunger Crisis</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <!-- Children Starvation Focus Banner -->
+        <section class="statistic-overview">
+            <div class="container">
+                <div id="main-content">
+                    <div class="loading">Loading verified crisis data...</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Critical Children Starvation Statistics -->
+        <section class="demographics-analysis">
+            <div class="container">
+                <div class="section-header">
+                    <h3>Children Starvation Crisis Overview</h3>
+                    <div class="section-updated" id="overview-updated"></div>
+                </div>
+
+                <!-- Famine Alert Banner -->
+                <div class="famine-alert-banner" id="famine-alert">
+                    <div class="loading">Loading famine declaration...</div>
+                </div>
+
+                <!-- Children Starvation Category Cards -->
+                <div class="age-breakdown-cards" id="statistics-cards">
+                    <div class="loading">Loading verified statistics...</div>
+                </div>
+
+                <!-- Critical Statistics Grid -->
+                <div class="critical-stats-grid" id="critical-statistics">
+                    <div class="loading">Loading critical indicators...</div>
+                </div>
+
+                <!-- Detailed Breakdown Section -->
+                <div class="detailed-breakdown" id="detailed-breakdown">
+                    <div class="loading">Loading detailed analysis...</div>
+                </div>
+
+                <!-- UN Agency Quotes -->
+                <div class="agency-quotes" id="agency-quotes">
+                    <div class="loading">Loading official statements...</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Individual Children Cases & Stories -->
+        <section class="individual-cases">
+            <div class="container">
+                <div class="section-header">
+                    <h3>Verified Individual Child Cases</h3>
+                    <p>Documented cases of children affected by the starvation crisis, verified through primary sources including UN agencies, hospitals, and international media.</p>
+                </div>
+
+                <div id="loadingCases" class="loading">Loading verified individual cases...</div>
+                <div id="errorCases" class="error" style="display: none;">
+                    Failed to load verified cases data.
+                </div>
+
+                <div class="verified-cases-grid" id="verifiedCasesGrid" style="display: none;"></div>
+            </div>
+        </section>
+
+        <!-- Combined Sources & Resources Section -->
+        <section class="sources-resources-combined">
+            <div class="container">
+                <div class="section-header">
+                    <h3>Official Sources & Global Resources</h3>
+                    <div class="section-updated">All data verified from primary sources • Organizations worldwide • Updated: <span id="combined-updated"></span></div>
+                </div>
+
+                <!-- Navigation Tabs -->
+                <div class="sources-nav">
+                    <button class="sources-nav-btn active" data-section="references">📚 Data Sources</button>
+                    <button class="sources-nav-btn" data-section="resources">🌐 Global Organizations</button>
+                </div>
+
+                <!-- References Content -->
+                <div id="references-content" class="sources-content active">
+                    <div class="sources-grid" id="references-container">
+                        <div class="loading">Loading official sources...</div>
+                    </div>
+                </div>
+
+                <!-- Resources Content -->
+                <div id="resources-content" class="sources-content">
+                    <div class="sources-grid" id="resources-container">
+                        <div class="loading">Loading global organizations...</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Data Source Files Information -->
+        <section class="data-sources-info">
+            <div class="container">
+                <div class="section-header">
+                    <h3>Data Management System</h3>
+                    <p>This documentation uses a structured CSV-based system for easy updates and verification</p>
+                </div>
+
+                <div class="data-files-grid">
+                    <div class="data-file-item">
+                        <h4>📊 crisis-statistics.csv</h4>
+                        <p>All statistical data with reference IDs for verification</p>
+                        <div class="file-stats" id="stats-file-info">Loading...</div>
+                    </div>
+                    <div class="data-file-item">
+                        <h4>📚 references.csv</h4>
+                        <p>Complete source documentation with official URLs</p>
+                        <div class="file-stats" id="refs-file-info">Loading...</div>
+                    </div>
+                    <div class="data-file-item">
+                        <h4>👶 individual-cases-verified.csv</h4>
+                        <p>Verified individual child cases with source attribution</p>
+                        <div class="file-stats" id="cases-file-info">Loading...</div>
+                    </div>
+                    <div class="data-file-item">
+                        <h4>🌐 resources.csv</h4>
+                        <p>Global organizations and resources by region</p>
+                        <div class="file-stats" id="resources-file-info">Loading...</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Evidence Documentation -->
+        <section class="image-gallery">
+            <div class="container">
+                <div class="section-header">
+                    <h3>Evidence & Documentation</h3>
+                    <div class="section-updated" id="evidence-updated"></div>
+                </div>
+                <div id="children-evidence" class="gallery-grid">
+                    <div class="loading">Loading evidence documentation...</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline -->
+        <section class="stat-timeline">
+            <div class="container">
+                <div class="section-header">
+                    <h3>Crisis Timeline</h3>
+                    <div class="section-updated" id="timeline-updated"></div>
+                </div>
+                <div id="children-timeline" class="timeline">
+                    <div class="loading">Loading timeline events...</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Gaza Crisis Documentation - Children Starvation Crisis Focus. All statistics verified from primary UN, WHO, UNICEF, and official sources. Last updated: August 4, 2025</p>
+        </div>
+    </footer>
+
+    <style>
+        /* Enhanced styles for CSV-based data system */
+
+        .famine-alert-banner {
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #dc2626, #b91c1c);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+            box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
+        }
+
+        .alert-icon {
+            font-size: 3rem;
+            margin-right: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .alert-content h4 {
+            margin: 0 0 0.5rem 0;
+            font-size: 1.4rem;
+            font-weight: bold;
+        }
+
+        .alert-content p {
+            margin: 0 0 0.5rem 0;
+            line-height: 1.5;
+        }
+
+        .alert-source a {
+            color: #fecaca;
+            text-decoration: underline;
+        }
+
+        .card-reference, .stat-reference {
+            margin-top: 0.5rem;
+            font-size: 0.75rem;
+            opacity: 0.9;
+        }
+
+        .ref-link {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .ref-link:hover {
+            text-decoration: underline;
+        }
+
+        .detailed-breakdown {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+        }
+
+        .detailed-breakdown h4 {
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+
+        .indicator-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .indicator-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-left: 4px solid #e74c3c;
+        }
+
+        .indicator-stat {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #e74c3c;
+            margin-bottom: 0.5rem;
+        }
+
+        .indicator-label {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 0.3rem;
+        }
+
+        .indicator-detail {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 0.8rem;
+        }
+
+        .indicator-source {
+            font-size: 0.8rem;
+            color: #888;
+            border-top: 1px solid #eee;
+            padding-top: 0.5rem;
+        }
+
+        .agency-quotes {
+            margin: 2rem 0;
+        }
+
+        .agency-quotes h4 {
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+
+        .quote-item {
+            background: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .quote-text {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            font-style: italic;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .quote-author {
+            font-weight: bold;
+            color: #3498db;
+            margin-bottom: 0.5rem;
+        }
+
+        .quote-source {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        /* Combined Sources & Resources Section */
+        .sources-resources-combined {
+            background: #f8f9fa;
+            padding: 3rem 0;
+        }
+
+        .sources-nav {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid #dee2e6;
+            padding-bottom: 1rem;
+        }
+
+        .sources-nav-btn {
+            background: #f8f9fa;
+            border: 2px solid #dee2e6;
+            color: #495057;
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .sources-nav-btn:hover {
+            background: #e9ecef;
+            border-color: #adb5bd;
+            transform: translateY(-2px);
+        }
+
+        .sources-nav-btn.active {
+            background: #3498db;
+            border-color: #3498db;
+            color: white;
+            box-shadow: 0 4px 8px rgba(52, 152, 219, 0.3);
+        }
+
+        .sources-content {
+            display: none;
+        }
+
+        .sources-content.active {
+            display: block;
+        }
+
+        .sources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1rem;
+        }
+
+        /* Compact Reference Items */
+        .reference-item-compact {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            border-left: 4px solid #3498db;
+            transition: transform 0.2s ease;
+        }
+
+        .reference-item-compact:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .ref-header-compact {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .ref-number-compact {
+            font-size: 1rem;
+            font-weight: bold;
+            color: #3498db;
+            flex-shrink: 0;
+            background: #e3f2fd;
+            padding: 0.3rem 0.6rem;
+            border-radius: 50%;
+            min-width: 2rem;
+            text-align: center;
+        }
+
+        .ref-title-compact {
+            font-size: 1rem;
+            font-weight: bold;
+            color: #2c3e50;
+            line-height: 1.3;
+        }
+
+        .ref-details-compact {
+            font-size: 0.85rem;
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+
+        .ref-url-compact {
+            font-size: 0.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .ref-url-compact a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-block;
+            max-width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .ref-url-compact a:hover {
+            text-decoration: underline;
+        }
+
+        .ref-meta-compact {
+            font-size: 0.75rem;
+            color: #888;
+            font-style: italic;
+        }
+
+        /* Compact Resource Items */
+        .resource-category-compact {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            border-left: 4px solid;
+            transition: transform 0.2s ease;
+        }
+
+        .resource-category-compact:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .resource-category-compact.un { border-left-color: #3498db; }
+        .resource-category-compact.us-uk { border-left-color: #e74c3c; }
+        .resource-category-compact.arabic { border-left-color: #27ae60; }
+        .resource-category-compact.german { border-left-color: #f39c12; }
+        .resource-category-compact.israeli { border-left-color: #9b59b6; }
+
+        .resource-category-compact h4 {
+            color: #2c3e50;
+            margin-bottom: 0.75rem;
+            font-size: 1rem;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .resource-list-compact {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .resource-list-compact li {
+            margin-bottom: 0.6rem;
+            font-size: 0.85rem;
+        }
+
+        .resource-list-compact a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            display: block;
+            padding: 0.4rem 0;
+            border-radius: 4px;
+        }
+
+        .resource-list-compact a:hover {
+            color: #2980b9;
+            text-decoration: underline;
+            background: #f8f9fa;
+            padding-left: 0.5rem;
+        }
+
+        .resource-meta-compact {
+            font-size: 0.75rem;
+            color: #666;
+            margin-top: 0.3rem;
+            line-height: 1.3;
+            font-style: italic;
+        }
+
+        .resource-flag {
+            font-size: 1rem;
+            margin-right: 0.4rem;
+        }
+
+        .children-only-badge {
+            background: linear-gradient(45deg, #dc2626, #b91c1c);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            display: inline-block;
+            margin-left: 1rem;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(220, 38, 38, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0); }
+        }
+
+        /* Data Sources Information Styles */
+        .data-sources-info {
+            background: #f1f5f9;
+            padding: 3rem 0;
+        }
+
+        .data-files-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .data-file-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-left: 4px solid #10b981;
+        }
+
+        .data-file-item h4 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .data-file-item p {
+            color: #666;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .file-stats {
+            font-size: 0.8rem;
+            color: #888;
+            padding-top: 0.5rem;
+            border-top: 1px solid #eee;
+        }
+
+        /* Verified Cases Styles */
+        .verified-cases-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .verified-case-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border-left: 5px solid #dc2626;
+        }
+
+        .case-header {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            padding: 1.5rem;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        .case-name {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .case-details {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .verification-badge {
+            background: #10b981;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .case-content {
+            padding: 1.5rem;
+        }
+
+        .case-status {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            padding: 0.8rem;
+            border-radius: 6px;
+        }
+
+        .status-critical {
+            background: #fee2e2;
+            color: #dc2626;
+            border: 1px solid #fecaca;
+        }
+
+        .status-deceased {
+            background: #1f2937;
+            color: white;
+            border: 1px solid #374151;
+        }
+
+        .case-circumstances {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #374151;
+            margin-bottom: 1rem;
+        }
+
+        .case-source {
+            font-size: 0.8rem;
+            color: #666;
+            padding-top: 1rem;
+            border-top: 1px solid #eee;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .famine-alert-banner {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .alert-icon {
+                margin-right: 0;
+                margin-bottom: 1rem;
+            }
+
+            .indicator-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .data-files-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .verified-cases-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .sources-nav {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .sources-nav-btn {
+                width: 100%;
+                max-width: 300px;
+                text-align: center;
+            }
+
+            .sources-grid {
+                grid-template-columns: 1fr;
+                gap: 0.75rem;
+            }
+
+            .ref-header-compact {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .ref-number-compact {
+                align-self: flex-start;
+            }
+        }
+    </style>
+
+    <script>
+        // Global variables for CSV data
+        let crisisStatistics = [];
+        let referencesData = [];
+        let individualCases = [];
+        let unQuotes = [];
+        let resourcesData = [];
+
+        // Data file configuration
+        const DATA_FILES = {
+            statistics: 'children-starvation/crisis-statistics.csv',
+            references: 'children-starvation/references.csv',
+            cases: 'children-starvation/individual-cases-verified.csv',
+            quotes: 'children-starvation/un-quotes.csv',
+            resources: 'children-starvation/resources.csv'
+        };
+
+        // Utility function to load CSV data
+        async function loadCSVData(filename) {
+            try {
+                const response = await fetch(filename);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const csvText = await response.text();
+
+                return new Promise((resolve, reject) => {
+                    Papa.parse(csvText, {
+                        header: true,
+                        skipEmptyLines: true,
+                        transformHeader: header => header.trim(),
+                        transform: value => value.trim(),
+                        complete: function(results) {
+                            resolve(results.data);
+                        },
+                        error: function(error) {
+                            reject(error);
+                        }
+                    });
+                });
+            } catch (error) {
+                console.error(`Error loading ${filename}:`, error);
+                return [];
+            }
+        }
+
+        // Load all CSV data
+        async function loadAllData() {
+            try {
+                console.log('Loading all CSV data...');
+
+                // Load all CSV files in parallel
+                const [statistics, references, cases, quotes, resources] = await Promise.all([
+                    loadCSVData(DATA_FILES.statistics),
+                    loadCSVData(DATA_FILES.references),
+                    loadCSVData(DATA_FILES.cases),
+                    loadCSVData(DATA_FILES.quotes),
+                    loadCSVData(DATA_FILES.resources)
+                ]);
+
+                crisisStatistics = statistics;
+                referencesData = references;
+                individualCases = cases;
+                unQuotes = quotes;
+                resourcesData = resources;
+
+                console.log(`Loaded: ${crisisStatistics.length} statistics, ${referencesData.length} references, ${individualCases.length} cases, ${unQuotes.length} quotes, ${resourcesData.length} resources`);
+
+                // Update all UI components
+                updateMainContent();
+                updateFamineAlert();
+                updateStatisticsCards();
+                updateCriticalStatistics();
+                updateDetailedBreakdown();
+                updateAgencyQuotes();
+                updateCombinedSourcesResources();
+                updateIndividualCases();
+                updateDataSourcesInfo();
+                updateTimestamps();
+
+            } catch (error) {
+                console.error('Error loading data:', error);
+                showErrorState();
+            }
+        }
+
+        // Get reference by ID
+        function getReference(refId) {
+            return referencesData.find(ref => ref.reference_id === refId) || {};
+        }
+
+        // Get statistic by ID
+        function getStatistic(statId) {
+            return crisisStatistics.find(stat => stat.id == statId) || {};
+        }
+
+        // Update main content banner
+        function updateMainContent() {
+            const childrenAtRisk = getStatistic(2); // children_under_5_at_risk
+            const reference = getReference(childrenAtRisk.reference_id);
+
+            const mainContentHtml = `
+                <h2>Children Starvation Crisis <span class="children-only-badge">CONFIRMED FAMINE</span></h2>
+                <div class="stat-main">
+                    <span class="stat-icon">🚨 UN FAMINE ALERT</span>
+                    <span class="stat-number">${childrenAtRisk.value ? parseInt(childrenAtRisk.value).toLocaleString() : '320,000'}</span>
+                    <span class="stat-label">Children Under 5 At Immediate Risk of Death</span>
+                </div>
+                <p class="stat-description">
+                    UN agencies confirm famine thresholds exceeded in Gaza. 39% of population going days without eating.
+                    Malnutrition rates in Gaza City have quadrupled since February. This is systematic starvation.
+                </p>
+                <div class="last-updated">Updated: August 4, 2025 • Data as of ${childrenAtRisk.date || 'July 29, 2025'}</div>
+                <div class="data-source">
+                    <strong>Source:</strong>
+                    <a href="${reference.official_url || '#'}" class="source-link" target="_blank">${reference.organization || 'UNICEF'}</a>
+                </div>
+            `;
+            document.getElementById('main-content').innerHTML = mainContentHtml;
+        }
+
+        // Update famine alert banner
+        function updateFamineAlert() {
+            const famineThresholds = getStatistic(16); // famine_thresholds_exceeded
+            const reference = getReference(famineThresholds.reference_id);
+
+            const alertHtml = `
+                <div class="alert-icon">⚠️</div>
+                <div class="alert-content">
+                    <h4>OFFICIAL FAMINE DECLARATION</h4>
+                    <p>UN-backed food security experts confirm: <strong>"${famineThresholds.description || 'Worst-case scenario of famine is now unfolding in Gaza'}"</strong></p>
+                    <div class="alert-source">Source: <a href="${reference.official_url || '#'}" target="_blank">${reference.title}</a></div>
+                </div>
+            `;
+            document.getElementById('famine-alert').innerHTML = alertHtml;
+        }
+
+        // Update statistics cards
+        function updateStatisticsCards() {
+            const childDeaths = getStatistic(1); // confirmed_starvation_deaths
+            const childrenAtRisk = getStatistic(2); // children_under_5_at_risk
+            const malnutritionRate = getStatistic(3); // gaza_city_increase
+
+            const cardsHtml = `
+                <div class="age-card critical">
+                    <span class="age-number">${childDeaths.value || '93'}</span>
+                    <div class="age-label">Children Confirmed Dead</div>
+                    <div class="age-range">From starvation & malnutrition</div>
+                    <div class="card-reference">
+                        <a href="${getReference(childDeaths.reference_id).official_url || '#'}" class="ref-link" target="_blank">${getReference(childDeaths.reference_id).organization || 'Gaza Health Ministry'}</a>
+                    </div>
+                </div>
+                <div class="age-card urgent">
+                    <span class="age-number">${childrenAtRisk.value ? parseInt(childrenAtRisk.value).toLocaleString() : '320,000'}</span>
+                    <div class="age-label">Children Under 5</div>
+                    <div class="age-range">At risk of acute malnutrition</div>
+                    <div class="card-reference">
+                        <a href="${getReference(childrenAtRisk.reference_id).official_url || '#'}" class="ref-link" target="_blank">${getReference(childrenAtRisk.reference_id).organization || 'UNICEF'}</a>
+                    </div>
+                </div>
+                <div class="age-card warning">
+                    <span class="age-number">${malnutritionRate.value || '16.5'}%</span>
+                    <div class="age-label">Gaza City Malnutrition</div>
+                    <div class="age-range">Quadrupled since February</div>
+                    <div class="card-reference">
+                        <a href="${getReference(malnutritionRate.reference_id).official_url || '#'}" class="ref-link" target="_blank">${getReference(malnutritionRate.reference_id).organization || 'IPC'}</a>
+                    </div>
+                </div>
+            `;
+            document.getElementById('statistics-cards').innerHTML = cardsHtml;
+        }
+
+        // Update critical statistics
+        function updateCriticalStatistics() {
+            const goingWithoutFood = getStatistic(4); // going_days_without_eating
+            const treatmentJune = getStatistic(5); // gam_admissions_june
+            const servicesFunc = getStatistic(6); // nutrition_services_functional
+            const totalDeaths = getStatistic(7); // all_starvation_deaths
+
+            const statsHtml = `
+                <div class="critical-stat">
+                    <span class="critical-number">${goingWithoutFood.value || '39'}%</span>
+                    <span class="critical-label">Going Days Without Eating</span>
+                    <div class="stat-reference">
+                        <a href="${getReference(goingWithoutFood.reference_id).official_url || '#'}" class="ref-link" target="_blank">${getReference(goingWithoutFood.reference_id).organization || 'IPC'}</a>
+                    </div>
+                </div>
+                <div class="critical-stat">
+                    <span class="critical-number">${treatmentJune.value ? parseInt(treatmentJune.value).toLocaleString() : '6,500'}</span>
+                    <span class="critical-label">Children Treated for Malnutrition in June</span>
+                    <div class="stat-reference">
+                        <a href="${getReference(treatmentJune.reference_id).official_url || '#'}" class="ref-link" target="_blank">${getReference(treatmentJune.reference_id).organization || 'Nutrition Cluster'}</a>
+                    </div>
+                </div>
+                <div class="critical-stat">
+                    <span class="critical-number">${servicesFunc.value || '15'}%</span>
+                    <span class="critical-label">Nutrition Services Still Functional</span>
+                    <div class="stat-reference">
+                        <a href="${getReference(servicesFunc.reference_id).official_url || '#'}" class="ref-link" target="_blank">${getReference(servicesFunc.reference_id).organization || 'UNICEF'}</a>
+                    </div>
+                </div>
+                <div class="critical-stat">
+                    <span class="critical-number">${totalDeaths.value || '169'}</span>
+                    <span class="critical-label">Total Starvation Deaths Since Oct 2023</span>
+                    <div class="stat-reference">
+                        <a href="${getReference(totalDeaths.reference_id).official_url || '#'}" class="ref-link" target="_blank">${getReference(totalDeaths.reference_id).organization || 'Gaza Health Ministry'}</a>
+                    </div>
+                </div>
+            `;
+            document.getElementById('critical-statistics').innerHTML = statsHtml;
+        }
+
+        // Update detailed breakdown
+        function updateDetailedBreakdown() {
+            const criticalStats = crisisStatistics.filter(stat => stat.critical_level === 'critical');
+
+            let indicatorsHtml = '';
+            criticalStats.slice(0, 6).forEach(stat => {
+                const ref = getReference(stat.reference_id);
+                indicatorsHtml += `
+                    <div class="indicator-item">
+                        <div class="indicator-stat">${stat.value.toLocaleString ? parseInt(stat.value).toLocaleString() : stat.value}${stat.unit === 'percentage' ? '%' : ''}</div>
+                        <div class="indicator-label">${stat.statistic.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}</div>
+                        <div class="indicator-detail">${stat.description}</div>
+                        <div class="indicator-source">
+                            Source: <a href="${ref.official_url || '#'}" class="ref-link" target="_blank">${ref.organization}</a>
+                        </div>
+                    </div>
+                `;
+            });
+
+            const breakdownHtml = `
+                <h4>Crisis Indicators with Official Sources</h4>
+                <div class="indicator-grid">
+                    ${indicatorsHtml}
+                </div>
+            `;
+            document.getElementById('detailed-breakdown').innerHTML = breakdownHtml;
+        }
+
+        // Update agency quotes
+        function updateAgencyQuotes() {
+            let quotesHtml = '<h4>Official UN Agency Statements</h4>';
+
+            unQuotes.forEach(quote => {
+                const ref = getReference(quote.reference_id);
+                quotesHtml += `
+                    <div class="quote-item">
+                        <div class="quote-text">"${quote.quote_text}"</div>
+                        <div class="quote-author">${quote.official_name}, ${quote.title}</div>
+                        <div class="quote-source">
+                            Source: <a href="${ref.official_url || '#'}" class="ref-link" target="_blank">${ref.organization}, ${quote.date}</a>
+                        </div>
+                    </div>
+                `;
+            });
+
+            document.getElementById('agency-quotes').innerHTML = quotesHtml;
+        }
+
+        // Update combined sources and resources section
+        function updateCombinedSourcesResources() {
+            // Update references
+            updateReferencesCompact();
+            // Update resources
+            updateResourcesCompact();
+            // Setup navigation
+            setupSourcesNavigation();
+        }
+
+        // Update references in compact format
+        function updateReferencesCompact() {
+            let referencesHtml = '';
+
+            referencesData.forEach((ref, index) => {
+                const shortUrl = ref.official_url.length > 40 ? ref.official_url.substring(0, 40) + '...' : ref.official_url;
+
+                referencesHtml += `
+                    <div class="reference-item-compact" id="${ref.reference_id}">
+                        <div class="ref-header-compact">
+                            <div class="ref-number-compact">${index + 1}</div>
+                            <div>
+                                <div class="ref-title-compact">${ref.title}</div>
+                                <div class="ref-details-compact">${ref.organization}, ${ref.date}</div>
+                            </div>
+                        </div>
+                        <div class="ref-url-compact">
+                            <a href="${ref.official_url}" target="_blank" rel="noopener noreferrer" title="${ref.official_url}">${shortUrl}</a>
+                        </div>
+                        <div class="ref-meta-compact">${ref.document_type} • ${ref.credibility}</div>
+                    </div>
+                `;
+            });
+
+            document.getElementById('references-container').innerHTML = referencesHtml;
+        }
+
+        // Update resources in compact format
+        function updateResourcesCompact() {
+            // Group resources by category
+            const groupedResources = {
+                un_organizations: resourcesData.filter(r => r.category === 'un_organizations'),
+                us_uk_resources: resourcesData.filter(r => r.category === 'us_uk_resources'),
+                arabic_resources: resourcesData.filter(r => r.category === 'arabic_resources'),
+                german_resources: resourcesData.filter(r => r.category === 'german_resources'),
+                israeli_resources: resourcesData.filter(r => r.category === 'israeli_resources')
+            };
+
+            // Category configurations
+            const categoryConfig = {
+                un_organizations: {
+                    title: '🇺🇳 UN Organizations',
+                    class: 'un'
+                },
+                us_uk_resources: {
+                    title: '🇺🇸🇬🇧 US & UK Resources',
+                    class: 'us-uk'
+                },
+                arabic_resources: {
+                    title: '🇵🇸 Arabic Resources',
+                    class: 'arabic'
+                },
+                german_resources: {
+                    title: '🇩🇪 German Resources',
+                    class: 'german'
+                },
+                israeli_resources: {
+                    title: '🇮🇱 Israeli Resources',
+                    class: 'israeli'
+                }
+            };
+
+            let resourcesHtml = '';
+
+            // Build HTML for each category
+            Object.entries(groupedResources).forEach(([categoryKey, resources]) => {
+                if (resources.length > 0) {
+                    const config = categoryConfig[categoryKey];
+
+                    resourcesHtml += `
+                        <div class="resource-category-compact ${config.class}">
+                            <h4>${config.title}</h4>
+                            <ul class="resource-list-compact">
+                    `;
+
+                    resources.forEach(resource => {
+                        const flag = resource.language === 'Arabic' ? '🇵🇸' :
+                                    resource.language === 'German' ? '🇩🇪' :
+                                    resource.language === 'Hebrew/English' ? '🇮🇱' : '🌐';
+
+                        resourcesHtml += `
+                            <li>
+                                <a href="${resource.url}" target="_blank" rel="noopener noreferrer">
+                                    <span class="resource-flag">${flag}</span>${resource.title}
+                                </a>
+                                <div class="resource-meta-compact">${resource.description}</div>
+                            </li>
+                        `;
+                    });
+
+                    resourcesHtml += `
+                            </ul>
+                        </div>
+                    `;
+                }
+            });
+
+            document.getElementById('resources-container').innerHTML = resourcesHtml;
+        }
+
+        // Setup sources navigation
+        function setupSourcesNavigation() {
+            const navButtons = document.querySelectorAll('.sources-nav-btn');
+            const contentSections = document.querySelectorAll('.sources-content');
+
+            navButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const targetSection = this.dataset.section;
+
+                    // Update active button
+                    navButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+
+                    // Update active content
+                    contentSections.forEach(section => {
+                        section.classList.remove('active');
+                        if (section.id === targetSection + '-content') {
+                            section.classList.add('active');
+                        }
+                    });
+                });
+            });
+        }
+
+        // Update individual cases
+        function updateIndividualCases() {
+            let casesHtml = '';
+
+            individualCases.forEach(caseItem => {
+                const ref = getReference(caseItem.reference_id);
+                const statusClass = caseItem.status === 'Deceased' ? 'status-deceased' : 'status-critical';
+
+                casesHtml += `
+                    <div class="verified-case-card">
+                        <div class="case-header">
+                            <div class="case-name">${caseItem.name} ${caseItem.arabicName ? `(${caseItem.arabicName})` : ''}</div>
+                            <div class="case-details">Age: ${caseItem.age} • ${caseItem.sex} • ${caseItem.location}</div>
+                            <span class="verification-badge">${caseItem.verification_level}</span>
+                        </div>
+                        <div class="case-content">
+                            <div class="case-status ${statusClass}">
+                                Status: ${caseItem.status} - ${caseItem.medical_status}
+                            </div>
+                            <div class="case-circumstances">${caseItem.circumstances}</div>
+                            <div class="case-source">
+                                Source: <a href="${ref.official_url || '#'}" target="_blank">${ref.organization}</a> •
+                                Documented: ${caseItem.date_documented}
+                                ${caseItem.photo_available === 'True' ? ' • Photo evidence available' : ''}
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+
+            document.getElementById('verifiedCasesGrid').innerHTML = casesHtml;
+            document.getElementById('loadingCases').style.display = 'none';
+            document.getElementById('verifiedCasesGrid').style.display = 'grid';
+        }
+
+        // Update data sources info
+        function updateDataSourcesInfo() {
+            document.getElementById('stats-file-info').textContent = `${crisisStatistics.length} statistics loaded from verified sources`;
+            document.getElementById('refs-file-info').textContent = `${referencesData.length} official sources with URLs`;
+            document.getElementById('cases-file-info').textContent = `${individualCases.length} verified individual cases`;
+            document.getElementById('resources-file-info').textContent = `${resourcesData.length} global organizations and resources`;
+        }
+
+        // Update timestamps
+        function updateTimestamps() {
+            const currentDate = new Date().toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+
+            document.getElementById('combined-updated').textContent = currentDate;
+        }
+
+        // Show error state
+        function showErrorState() {
+            document.getElementById('main-content').innerHTML = `
+                <div class="error">Error loading crisis data. Please check data files and try again.</div>
+            `;
+        }
+
+        // Load additional content sections
+        function loadChildrenEvidence() {
+            const evidenceHtml = `
+                <div class="evidence-item">
+                    <div class="evidence-image"><span>📊</span></div>
+                    <div class="evidence-content">
+                        <h4>UN Documentation of Famine</h4>
+                        <p>Official IPC Alert confirming famine thresholds exceeded in Gaza with comprehensive malnutrition data.</p>
+                        <div class="evidence-source">Source: IPC, UNICEF, WHO, WFP</div>
+                    </div>
+                </div>
+                <div class="evidence-item">
+                    <div class="evidence-image"><span>📋</span></div>
+                    <div class="evidence-content">
+                        <h4>Medical Records & Hospital Reports</h4>
+                        <p>Verified medical documentation from Gaza hospitals showing starvation cases and treatment admissions.</p>
+                        <div class="evidence-source">Source: Al-Shifa Hospital, Gaza Health Ministry</div>
+                    </div>
+                </div>
+                <div class="evidence-item">
+                    <div class="evidence-image"><span>📰</span></div>
+                    <div class="evidence-content">
+                        <h4>International Media Investigation</h4>
+                        <p>Investigative reporting using Israeli government data showing calculated starvation policy.</p>
+                        <div class="evidence-source">Source: The Guardian, Al Jazeera, NPR</div>
+                    </div>
+                </div>
+            `;
+            document.getElementById('children-evidence').innerHTML = evidenceHtml;
+            document.getElementById('evidence-updated').textContent = `Last Updated: ${new Date().toLocaleDateString()}`;
+        }
+
+        function loadChildrenTimeline() {
+            const timelineHtml = `
+                <div class="timeline-item">
+                    <div class="timeline-date">July 29, 2025</div>
+                    <div class="timeline-content">
+                        <h4>UN Declares Famine Thresholds Exceeded</h4>
+                        <p>IPC Alert confirms two out of three famine thresholds breached in Gaza, with worst-case scenario now unfolding.</p>
+                        <div class="timeline-meta">Source: IPC Official Alert</div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">August 2, 2025</div>
+                    <div class="timeline-content">
+                        <h4>17-Year-Old Dies of Starvation</h4>
+                        <p>Atef Abu Khater, former sports champion, dies at Al-Shifa Hospital after weight dropped from 70kg to 25kg.</p>
+                        <div class="timeline-meta">Source: Al Jazeera, Hospital Records</div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">June-July 2025</div>
+                    <div class="timeline-content">
+                        <h4>Record Malnutrition Treatment Admissions</h4>
+                        <p>6,500 children admitted in June, 5,000 in first half of July - highest numbers since conflict began.</p>
+                        <div class="timeline-meta">Source: UN Nutrition Cluster</div>
+                    </div>
+                </div>
+            `;
+            document.getElementById('children-timeline').innerHTML = timelineHtml;
+            document.getElementById('timeline-updated').textContent = `Last Updated: ${new Date().toLocaleDateString()}`;
+        }
+
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Gaza Crisis Documentation - Children Starvation Crisis Focus');
+            console.log('Data sourced from CSV files with verified primary sources');
+            console.log(`Current user: aliattia02 • Current time: 2025-08-04 22:40:25 UTC`);
+
+            // Load all CSV data and update UI
+            loadAllData();
+
+            // Load supplementary sections
+            loadChildrenEvidence();
+            loadChildrenTimeline();
+        });
+    </script>
+</body>
+</html>

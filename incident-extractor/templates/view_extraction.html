@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Extraction - Gaza Incident Extractor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="header-nav">
+        <a href="{{ url_for('history') }}">← Back to History</a>
+        <a href="{{ url_for('index') }}">Extractor</a>
+        <a href="{{ url_for('export_extraction', filename=data.filename) }}" class="export-link" target="_blank">
+            <span class="icon">💾</span> Export JSON
+        </a>
+    </div>
+
+    <h1>📋 Extraction Details</h1>
+    
+    <div class="container">
+        <div class="extraction-meta">
+            <div class="meta-section">
+                <h3>Metadata</h3>
+                <div class="meta-grid">
+                    <div class="meta-item">
+                        <span class="meta-label">Timestamp</span>
+                        <span class="meta-value">{{ data.timestamp }}</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Source Type</span>
+                        <span class="meta-value">{{ data.source_type }}</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Incidents Found</span>
+                        <span class="meta-value">{{ data.incidents|length }}</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="meta-section">
+                <h3>Source</h3>
+                <div class="source-details">
+                    {% if data.source_type == 'url' %}
+                        <a href="{{ data.source }}" target="_blank" class="source-link">
+                            {{ data.source }}
+                            <span class="external-icon">↗️</span>
+                        </a>
+                    {% elif data.source_type == 'multiple_urls' %}
+                        <div class="url-list">
+                            {% for url in data.source|fromjson %}
+                                <a href="{{ url }}" target="_blank" class="source-link">
+                                    {{ url }}
+                                    <span class="external-icon">↗️</span>
+                                </a>
+                            {% endfor %}
+                        </div>
+                    {% elif data.source_type == 'text' %}
+                        <div class="text-preview">
+                            {{ data.source[:200] }}{% if data.source|length > 200 %}...{% endif %}
+                        </div>
+                    {% else %}
+                        <div class="unknown-source">
+                            Unknown source type
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        <div class="incidents-list">
+            <h3>Extracted Incidents</h3>
+            
+            {% if data.incidents %}
+                <div class="incident-filters">
+                    <div class="filter-group">
+                        <label for="type-filter">Type:</label>
+                        <select id="type-filter" class="filter-select">
+                            <option value="all">All Types</option>
+                            {% set types = [] %}
+                            {% for incident in data.incidents %}
+                                {% if incident.type and incident.type not in types %}
+                                    {% set _ = types.append(incident.type) %}
+                                {% endif %}
+                            {% endfor %}
+                            {% for type in types|sort %}
+                                <option value="{{ type }}">{{ type|capitalize }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="location-filter">Location:</label>
+                        <select id="location-filter" class="filter-select">
+                            <option value="all">All Locations</option>
+                            {% set locations = [] %}
+                            {% for incident in data.incidents %}
+                                {% if incident.location and incident.location not in locations %}
+                                    {% set _ = locations.append(incident.location) %}
+                                {% endif %}
+                            {% endfor %}
+                            {% for location in locations|sort %}
+                                <option value="{{ location }}">{{ location }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    
+                    <button id="clear-filters" class="secondary-btn">Clear Filters</button>
+                </div>
+                
+                <div class="incidents-grid" id="incidents-container">
+                    {% for incident in data.incidents %}
+                        <div class="incident-card" data-type="{{ incident.type }}" data-location="{{ incident.location }}">
+                            <div class="incident-header">
+                                <h4>Incident #{{ loop.index }}</h4>
+                                <div class="incident-type {{ incident.type }}">{{ incident.type|capitalize }}</div>
+                            </div>
+                            
+                            <p class="incident-description">{{ incident.description }}</p>
+                            
+                            <div class="incident-details">
+                                <div class="detail">
+                                    <span class="detail-label">Location:</span>
+                                    <span class="detail-value">{{ incident.location or 'Unknown' }}</span>
+                                </div>
+                                <div class="detail">
+                                    <span class="detail-label">Date:</span>
+                                    <span class="detail-value">{{ incident.date or 'Unknown' }}</span>
+                                </div>
+                                {% if incident.casualties %}
+                                    <div class="detail casualties">
+                                        <span class="detail-label">Casualties:</span>
+                                        <span class="detail-value">
+                                            {% if incident.casualties.deaths %}
+                                                <span class="deaths">{{ incident.casualties.deaths }} killed</span>
+                                            {% endif %}
+                                            {% if incident.casualties.injured %}
+                                                <span class="injured">{{ incident.casualties.injured }} injured</span>
+                                            {% endif %}
+                                        </span>
+                                    </div>
+                                {% endif %}
+                                
+                                {% if incident.article_url %}
+                                    <div class="detail">
+                                        <span class="detail-label">Source:</span>
+                                        <span class="detail-value">
+                                            <a href="{{ incident.article_url }}" target="_blank">
+                                                {{ incident.source }}
+                                            </a>
+                                        </span>
+                                    </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                
+                <script>
+                    // Filtering functionality
+                    document.addEventListener('DOMContentLoaded', function() {
+                        const typeFilter = document.getElementById('type-filter');
+                        const locationFilter = document.getElementById('location-filter');
+                        const clearFilters = document.getElementById('clear-filters');
+                        const incidentsContainer = document.getElementById('incidents-container');
+                        
+                        function applyFilters() {
+                            const selectedType = typeFilter.value;
+                            const selectedLocation = locationFilter.value;
+                            
+                            document.querySelectorAll('.incident-card').forEach(card => {
+                                const cardType = card.dataset.type;
+                                const cardLocation = card.dataset.location;
+                                
+                                const typeMatch = selectedType === 'all' || cardType === selectedType;
+                                const locationMatch = selectedLocation === 'all' || cardLocation === selectedLocation;
+                                
+                                if (typeMatch && locationMatch) {
+                                    card.style.display = 'block';
+                                } else {
+                                    card.style.display = 'none';
+                                }
+                            });
+                        }
+                        
+                        typeFilter.addEventListener('change', applyFilters);
+                        locationFilter.addEventListener('change', applyFilters);
+                        
+                        clearFilters.addEventListener('click', function() {
+                            typeFilter.value = 'all';
+                            locationFilter.value = 'all';
+                            applyFilters();
+                        });
+                    });
+                </script>
+                
+            {% else %}
+                <div class="empty-state">
+                    <p>No incidents were found in this extraction.</p>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+id,category,title,organization,url,description,language,region,resource_type
+1,un_organizations,UNICEF Gaza Emergency Response,UNICEF,https://www.unicef.org/emergencies/gaza-crisis,Child nutrition monitoring and emergency treatment,English,UN,Emergency Response
+2,un_organizations,WFP Palestine Emergency,WFP,https://www.wfp.org/emergencies/palestine-emergency,Food assistance and famine prevention efforts,English,UN,Emergency Response
+3,un_organizations,IPC Global Partnership,IPC,https://www.ipcinfo.org/,Official famine classification and alerts,English,UN,Technical System
+4,un_organizations,WHO Gaza Health Response,WHO,https://www.who.int/emergencies/situations/occupied-palestinian-territory-crisis,Health emergency response and nutrition monitoring,English,UN,Health Response
+5,un_organizations,UNRWA Emergency Appeals,UNRWA,https://www.unrwa.org/,Palestinian refugee assistance and protection,English,UN,Humanitarian Aid
+6,us_uk_resources,Save the Children UK,Save the Children,https://www.savethechildren.org.uk/,Child protection and malnutrition prevention,English,UK,NGO
+7,us_uk_resources,Oxfam America Gaza Response,Oxfam,https://www.oxfamamerica.org/,Humanitarian response and advocacy,English,US,NGO
+8,us_uk_resources,USAID Humanitarian Response,USAID,https://www.usaid.gov/,US government humanitarian assistance,English,US,Government
+9,us_uk_resources,UK Foreign Office Gaza Updates,UK FCDO,https://www.gov.uk/government/organisations/foreign-commonwealth-development-office,Official UK government position and aid,English,UK,Government
+10,arabic_resources,الهلال الأحمر الفلسطيني,Palestinian Red Crescent,https://www.palestinercs.org/,المساعدات الطبية والإنسانية الطارئة,Arabic,Palestine,Medical Aid
+11,arabic_resources,وزارة الصحة الفلسطينية,Palestinian Ministry of Health,https://www.moh.gov.ps/,الإحصائيات الرسمية للوفيات والإصابات,Arabic,Palestine,Government
+12,arabic_resources,الجزيرة - تغطية غزة,Al Jazeera,https://www.aljazeera.net/,تغطية إعلامية شاملة لأزمة غزة,Arabic,Qatar,Media
+13,arabic_resources,منظمة التحرير الفلسطينية,PLO,https://www.plo.ps/,الموقف الرسمي الفلسطيني والمناشدات الدولية,Arabic,Palestine,Political
+14,german_resources,Ärzte ohne Grenzen Deutschland,MSF Germany,https://www.aerzte-ohne-grenzen.de/,Medizinische Nothilfe und Mangelernährungsbehandlung,German,Germany,Medical NGO
+15,german_resources,Deutsche Welthungerhilfe,Welthungerhilfe,https://www.welthungerhilfe.de/,Hungerhilfe und Ernährungssicherheit,German,Germany,NGO
+16,german_resources,Auswärtiges Amt Gaza,German Foreign Office,https://www.auswaertiges-amt.de/,Deutsche Außenpolitik und humanitäre Hilfe,German,Germany,Government
+17,german_resources,Deutsches Rotes Kreuz,German Red Cross,https://www.drk.de/,Humanitäre Hilfe und Notfallversorgung,German,Germany,NGO
+18,israeli_resources,B'Tselem Human Rights,B'Tselem,https://www.btselem.org/,Israeli human rights documentation,Hebrew/English,Israel,Human Rights
+19,israeli_resources,Peace Now Israel,Peace Now,https://peacenow.org.il/,Israeli peace advocacy and monitoring,Hebrew/English,Israel,Advocacy
+20,israeli_resources,Physicians for Human Rights Israel,PHR-Israel,https://www.phr.org.il/,Medical ethics and Gaza health crisis,Hebrew/English,Israel,Medical NGO
+21,israeli_resources,Breaking the Silence,Breaking the Silence,https://www.breakingthesilence.org.il/,Israeli military testimonies and accountability,Hebrew/English,Israel,Veterans Group

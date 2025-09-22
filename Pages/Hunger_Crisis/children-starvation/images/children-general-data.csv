@@ -1,0 +1,7 @@
+id,dataType,category,value,unit,date,ageGroup,source,location,description,verified
+1,malnutrition_rate,severe_acute,15000.0,children,2024-03-01,0-5 years,UNICEF,Gaza Strip,Children under 5 with severe acute malnutrition,True
+2,malnutrition_rate,moderate_acute,35000.0,children,2024-03-01,0-17 years,WHO,Gaza Strip,Children with moderate acute malnutrition,True
+3,mortality_rate,starvation_related,2.5,deaths_per_day,2024-03-01,0-17 years,Gaza Health Ministry,Gaza Strip,Average daily child deaths from starvation-related causes,True
+4,food_insecurity,critical,400000.0,children,2024-03-01,0-17 years,WFP,Gaza Strip,Children facing critical food insecurity,True
+5,stunting_rate,chronic_malnutrition,68.0,percentage,2024-02-01,0-5 years,Save the Children,Gaza Strip,Percentage of children showing stunted growth,True
+6,wasting_rate,acute_malnutrition,23.0,percentage,2024-02-01,6-59 months,UNICEF,Gaza Strip,Percentage of children with acute wasting,True

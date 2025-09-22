@@ -1,0 +1,5 @@
+id,name,arabicName,age,sex,location,status,weight_change,last_meal,medical_status,date_documented,circumstances,reference_id,verification_level,photo_available
+1,Yazan,يزن,2,Male,Shati refugee camp Gaza City,Critical,Unknown,2 months ago,Severe acute malnutrition,2025-07-29,Living with mother Naima who says they have not had flour or food assistance for two months,ref_unicef,UNICEF Documented,True
+2,Atef Abu Khater,عاطف أبو خاطر,17,Male,Gaza City,Deceased,70kg to 25kg,Unknown,Fatal malnutrition,2025-08-02,Former sports champion died of starvation at Al-Shifa Hospital,ref_al_jazeera,Hospital Verified,True
+3,Misk al-Madhoun,مسك المدهون,5,Female,Deir el-Balah,Critical,Visible wasting,Unknown,Severe malnutrition,2025-08-03,Parents report seeing her dying slowly every day with no way to feed her,ref_al_jazeera,Media Documented,False
+4,Unnamed infant cases,أطفال رضع,0-1,Mixed,Gaza Strip,Critical,40% weight loss reported,Days ago,Severe dehydration,2025-08-03,Mothers giving babies water instead of milk - no other options available,ref_al_jazeera,Media Documented,False

@@ -1,0 +1,1450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Total Civilian Casualties - Gaza Crisis Documentation</title>
+    <meta name="description" content="Comprehensive documentation of civilian casualties during the Gaza crisis: demographics, images, timeline, and legal resources.">
+    <link rel="stylesheet" href="../global-styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">
+                <a href="../../index.html">Gaza Crisis Documentation</a>
+            </h1>
+            <nav class="nav">
+                <a href="../../war-crimes-stats.html" class="nav-btn">← Back to War Crimes</a>
+                <a href="stat-children-killed.html" class="nav-btn">Children Focus</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <!-- Statistic Overview -->
+        <section class="statistic-overview">
+            <div class="container">
+                <div id="main-content">
+                    <div class="loading"><span class="loading-spinner"></span>Loading latest data from TechForPalestine...</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Demographics Analysis -->
+        <section class="demographics-analysis">
+            <div class="container">
+                <div class="section-header">
+                    <h3>Casualty Demographics Analysis</h3>
+                    <div class="section-updated" id="demographics-updated"></div>
+                </div>
+
+                <!-- Data Quality Alert -->
+                <div class="data-quality-alert" id="data-quality-alert" style="display: none;">
+                    <h4>Data Quality Notice</h4>
+                    <p>Some records have missing or unknown age information. Statistics are calculated based on available data only.</p>
+                </div>
+
+                <!-- Enhanced Casualty Type Breakdown -->
+                <div class="casualty-type-breakdown">
+                    <div class="type-card">
+                        <span class="type-number" id="children-casualties">0</span>
+                        <span class="type-label">Children Killed</span>
+                        <span class="type-percentage" id="children-percentage">0%</span>
+                    </div>
+                    <div class="type-card">
+                        <span class="type-number" id="women-casualties">0</span>
+                        <span class="type-label">Women Killed</span>
+                        <span class="type-percentage" id="women-percentage">0%</span>
+                    </div>
+                    <div class="type-card">
+                        <span class="type-number" id="men-casualties">0</span>
+                        <span class="type-label">Men Killed</span>
+                        <span class="type-percentage" id="men-percentage">0%</span>
+                    </div>
+                    <div class="type-card">
+                        <span class="type-number" id="elderly-casualties">0</span>
+                        <span class="type-label">Elderly Killed (60+)</span>
+                        <span class="type-percentage" id="elderly-percentage">0%</span>
+                    </div>
+                </div>
+
+                <!-- Consolidated Key Statistics -->
+                <div class="records-summary">
+                    <div class="summary-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" id="total-casualties">0</span>
+                            <span class="stat-label">Total Killed</span>
+                        </div>
+                        <div class="stat-item injured">
+                            <span class="stat-number" id="total-injured">0</span>
+                            <span class="stat-label">Total Injured</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" id="avg-age">0</span>
+                            <span class="stat-label">Average Age</span>
+                        </div>
+                        <div class="stat-item recorded-names">
+                            <span class="stat-number" id="recorded-names-count">0</span>
+                            <span class="stat-label">Names Recorded</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" id="last-update">Loading...</span>
+                            <span class="stat-label">Last Updated</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="demographics-grid">
+                    <!-- Enhanced Cumulative Trend Chart -->
+                    <div class="chart-container trend-chart-container">
+                        <h4>Cumulative Casualties Since October 7, 2023</h4>
+                        <canvas id="casualtyTrendChart"></canvas>
+                    </div>
+
+                    <!-- Age Distribution Chart -->
+                    <div class="chart-container">
+                        <h4>Age Distribution (Killed)</h4>
+                        <canvas id="ageDistributionChart"></canvas>
+                    </div>
+
+                    <!-- Gender Breakdown -->
+                    <div class="chart-container">
+                        <h4>Gender Distribution (Killed)</h4>
+                        <canvas id="genderChart"></canvas>
+                    </div>
+
+                    <!-- Casualty Type Chart -->
+                    <div class="chart-container">
+                        <h4>Killed vs Injured (Total)</h4>
+                        <canvas id="casualtyTypeChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Individual Records -->
+        <section class="individual-records">
+            <div class="container">
+                <div class="section-header">
+                    <h3>Individual Records Database</h3>
+                    <div class="section-updated" id="records-updated"></div>
+                    <p>Data source:
+                        <span id="data-source-toggle">
+                            <label>
+                                <input type="radio" name="datasource" value="live" checked> Live Data (TechForPalestine)
+                            </label>
+                            <label>
+                                <input type="radio" name="datasource" value="local"> Local CSV Files
+                            </label>
+                        </span>
+                        <span class="data-source-badge" id="current-source">Live</span>
+                    </p>
+                </div>
+
+                <!-- Search and Filter Controls -->
+                <div class="records-controls">
+                    <div class="search-bar">
+                        <input type="text" id="name-search" placeholder="Search by name (Arabic or English)..." />
+                    </div>
+                    <div class="filter-controls">
+                        <select id="age-filter">
+                            <option value="">All Ages</option>
+                            <option value="child">Children (0-17)</option>
+                            <option value="adult">Adults (18-59)</option>
+                            <option value="elderly">Elderly (60+)</option>
+                            <option value="unknown">Unknown Age</option>
+                        </select>
+                        <select id="sex-filter">
+                            <option value="">All Genders</option>
+                            <option value="m">Male</option>
+                            <option value="f">Female</option>
+                        </select>
+                        <select id="location-filter">
+                            <option value="">All Locations</option>
+                        </select>
+                        <input type="date" id="date-filter" placeholder="Filter by date" />
+                    </div>
+                </div>
+
+                <!-- Records Table -->
+                <div class="records-table-container">
+                    <table class="records-table" id="records-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Arabic Name</th>
+                                <th>English Name</th>
+                                <th>Age</th>
+                                <th>Gender</th>
+                                <th>Date of Birth</th>
+                                <th>Status</th>
+                                <th>Location</th>
+                            </tr>
+                        </thead>
+                        <tbody id="records-tbody">
+                            <tr><td colspan="8" class="loading"><span class="loading-spinner"></span>Loading individual records...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Pagination -->
+                <div class="pagination" id="pagination"></div>
+            </div>
+        </section>
+
+        <!-- Image Gallery -->
+        <section class="image-gallery">
+            <div class="container">
+                <div class="section-header">
+                    <h3>Evidence & Documentation</h3>
+                    <div class="section-updated" id="images-updated"></div>
+                </div>
+                <div id="image-gallery" class="gallery-grid">
+                    <div class="loading">Loading images...</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline -->
+        <section class="stat-timeline">
+            <div class="container">
+                <div class="section-header">
+                    <h3>Major Incidents Timeline</h3>
+                    <div class="section-updated" id="timeline-updated"></div>
+                </div>
+                <div id="timeline" class="timeline">
+                    <div class="loading">Loading timeline...</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resources -->
+        <section class="stat-resources">
+            <div class="container">
+                <div class="section-header">
+                    <h3>Legal Documentation & Resources</h3>
+                    <div class="section-updated" id="resources-updated"></div>
+                </div>
+                <div id="resources" class="resources-grid">
+                    <div class="loading">Loading resources...</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Gaza Crisis Documentation. Primary Data Source: <a href="https://data.techforpalestine.org/" target="_blank">TechForPalestine</a>. Additional sources: UN OCHA, WHO, Palestinian Ministry of Health, Human Rights Organizations.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Global variables
+        let allRecords = [];
+        let filteredRecords = [];
+        let casualtyData = [];
+        let currentPage = 1;
+        const recordsPerPage = 15;
+        let charts = {};
+        let currentDataSource = 'live';
+
+        // Updated API Configuration
+        const API_BASE = 'https://data.techforpalestine.org/api/v2';
+        const API_ENDPOINTS = {
+            summary: `${API_BASE}/summary.json`,
+            casualtiesDaily: `${API_BASE}/casualties_daily.min.json`,
+            killedInGaza: `${API_BASE}/killed-in-gaza.min.json`,
+            killedInGazaFull: `${API_BASE}/killed-in-gaza.json`
+        };
+
+        // Enhanced age validation function
+        function parseAge(ageValue) {
+            if (ageValue === null || ageValue === undefined) return null;
+
+            // Handle string values
+            if (typeof ageValue === 'string') {
+                const trimmed = ageValue.trim().toLowerCase();
+                if (trimmed === '' || trimmed === 'n/a' || trimmed === 'null' || trimmed === 'undefined') {
+                    return null;
+                }
+            }
+
+            const parsed = parseInt(ageValue);
+            return isNaN(parsed) ? null : parsed;
+        }
+
+        // Check if age is valid
+        function isValidAge(age) {
+            return age !== null && age >= 0 && age <= 120;
+        }
+
+        // Get age category for valid ages
+        function getAgeCategory(age) {
+            if (age === null) return 'unknown';
+            if (age >= 0 && age <= 17) return 'child';
+            if (age >= 18 && age <= 59) return 'adult';
+            if (age >= 60) return 'elderly';
+            return 'unknown';
+        }
+
+        // Utility function to format date
+        function formatDate(dateString) {
+            if (!dateString) return 'N/A';
+            const date = new Date(dateString);
+            return date.toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric'
+            });
+        }
+
+        // Utility function to show error messages
+        function showError(containerId, message) {
+            const container = document.getElementById(containerId);
+            container.innerHTML = `<div class="error">Error loading ${message}. Please check your connection or try switching to local data.</div>`;
+        }
+
+        // Show success message
+        function showSuccess(containerId, message) {
+            const container = document.getElementById(containerId);
+            container.innerHTML = `<div class="success">${message}</div>`;
+        }
+
+        // Format age display with special handling for infants and unknown ages
+        function formatAgeDisplay(age) {
+            const parsedAge = parseAge(age);
+
+            if (parsedAge === null) {
+                return 'Unknown';
+            }
+
+            if (parsedAge === 0) {
+                return '< 1 year';
+            }
+
+            return parsedAge.toString();
+        }
+
+        // Updated function to parse dates from the killed-in-gaza dataset
+        function parseKilledInGazaDate(dateString) {
+            if (!dateString || dateString === '' || dateString === 'N/A' || dateString === null) {
+                return null;
+            }
+
+            const cleanDate = dateString.toString().trim();
+            let parsedDate = new Date(cleanDate);
+
+            if (!isNaN(parsedDate.getTime())) {
+                return parsedDate;
+            }
+
+            // Handle DD/MM/YYYY format
+            if (cleanDate.includes('/')) {
+                const parts = cleanDate.split('/');
+                if (parts.length === 3) {
+                    const day = parseInt(parts[0], 10);
+                    const month = parseInt(parts[1], 10) - 1;
+                    const year = parseInt(parts[2], 10);
+
+                    if (!isNaN(day) && !isNaN(month) && !isNaN(year)) {
+                        parsedDate = new Date(year, month, day);
+                        if (!isNaN(parsedDate.getTime())) {
+                            return parsedDate;
+                        }
+                    }
+                }
+            }
+
+            return null;
+        }
+
+        // Enhanced age calculation function that uses death date if available
+        function calculateAgeAtDeath(birthDateString, deathDateString = null) {
+            if (!birthDateString || birthDateString === '' || birthDateString === 'N/A') {
+                return null;
+            }
+
+            const birthDate = parseKilledInGazaDate(birthDateString);
+            if (!birthDate) {
+                return null;
+            }
+
+            let referenceDate = new Date();
+
+            if (deathDateString && deathDateString !== '' && deathDateString !== 'N/A') {
+                const deathDate = parseKilledInGazaDate(deathDateString);
+                if (deathDate && !isNaN(deathDate.getTime())) {
+                    referenceDate = deathDate;
+                }
+            }
+
+            // Use conflict start date as minimum reference
+            const conflictStart = new Date('2023-10-07');
+            if (!deathDateString && referenceDate < conflictStart) {
+                referenceDate = conflictStart;
+            }
+
+            let age = referenceDate.getFullYear() - birthDate.getFullYear();
+            const monthDiff = referenceDate.getMonth() - birthDate.getMonth();
+
+            if (monthDiff < 0 || (monthDiff === 0 && referenceDate.getDate() < birthDate.getDate())) {
+                age--;
+            }
+
+            if (age < 0 || age > 120) {
+                return null;
+            }
+
+            return age;
+        }
+
+        // Load enhanced cumulative trend chart using daily casualties API
+        async function loadEnhancedCasualtyTrendChart() {
+            try {
+                const response = await fetch(API_ENDPOINTS.casualtiesDaily);
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                }
+
+                const dailyData = await response.json();
+
+                // Filter data from October 7, 2023 onwards
+                const startDate = new Date('2023-10-07');
+                const filteredData = dailyData.filter(day => {
+                    const dayDate = new Date(day.report_date);
+                    return dayDate >= startDate;
+                });
+
+                // Sort by date to ensure proper order
+                filteredData.sort((a, b) => new Date(a.report_date) - new Date(b.report_date));
+
+                // Filter out data points where both killed_cum and injured_cum are null/0
+                const validDataPoints = filteredData.filter(day => {
+                    const killedCum = day.killed_cum;
+                    const injuredCum = day.injured_cum;
+
+                    return (killedCum !== null && killedCum !== undefined && killedCum > 0) ||
+                           (injuredCum !== null && injuredCum !== undefined && injuredCum > 0);
+                });
+
+                // Sample data for performance if we have too many points
+                let displayData = validDataPoints;
+                if (validDataPoints.length > 300) {
+                    displayData = validDataPoints.filter((_, index) =>
+                        index % Math.ceil(validDataPoints.length / 300) === 0
+                    );
+                }
+
+                // Create datasets with proper null handling
+                const killedData = displayData.map(day => {
+                    const value = day.killed_cum;
+                    return (value !== null && value !== undefined) ? value : null;
+                });
+
+                const injuredData = displayData.map(day => {
+                    const value = day.injured_cum;
+                    return (value !== null && value !== undefined) ? value : null;
+                });
+
+                const ctx = document.getElementById('casualtyTrendChart').getContext('2d');
+                if (charts.casualtyTrend) charts.casualtyTrend.destroy();
+
+                charts.casualtyTrend = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: displayData.map(day => formatDate(day.report_date)),
+                        datasets: [
+                            {
+                                label: 'Cumulative Deaths',
+                                data: killedData,
+                                borderColor: '#c0392b',
+                                backgroundColor: 'rgba(192, 57, 43, 0.1)',
+                                tension: 0.1,
+                                fill: true,
+                                borderWidth: 3,
+                                pointRadius: 0,
+                                pointHoverRadius: 6,
+                                spanGaps: true
+                            },
+                            {
+                                label: 'Cumulative Injuries',
+                                data: injuredData,
+                                borderColor: '#e67e22',
+                                backgroundColor: 'rgba(230, 126, 34, 0.1)',
+                                tension: 0.1,
+                                fill: true,
+                                borderWidth: 3,
+                                pointRadius: 0,
+                                pointHoverRadius: 6,
+                                spanGaps: true
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'top',
+                                labels: {
+                                    usePointStyle: true,
+                                    padding: 20,
+                                    font: {
+                                        size: 12,
+                                        weight: 'bold'
+                                    }
+                                }
+                            },
+                            tooltip: {
+                                mode: 'index',
+                                intersect: false,
+                                backgroundColor: 'rgba(0,0,0,0.8)',
+                                titleColor: 'white',
+                                bodyColor: 'white',
+                                borderColor: 'rgba(255,255,255,0.2)',
+                                borderWidth: 1,
+                                filter: function(tooltipItem) {
+                                    return tooltipItem.raw !== null;
+                                },
+                                callbacks: {
+                                    title: function(context) {
+                                        return 'Date: ' + context[0].label;
+                                    },
+                                    label: function(context) {
+                                        if (context.raw === null) return '';
+
+                                        const dataIndex = context.dataIndex;
+                                        const samplingFactor = Math.ceil(validDataPoints.length / 300);
+                                        const originalIndex = Math.min(dataIndex * samplingFactor, validDataPoints.length - 1);
+                                        const originalData = validDataPoints[originalIndex];
+
+                                        const dailyIncrease = context.datasetIndex === 0 ?
+                                            (originalData?.killed || 0) :
+                                            (originalData?.injured || 0);
+
+                                        return [
+                                            context.dataset.label + ': ' + context.raw.toLocaleString() + ' total',
+                                            'Daily increase: +' + dailyIncrease.toLocaleString()
+                                        ];
+                                    }
+                                }
+                            }
+                        },
+                        scales: {
+                            x: {
+                                display: true,
+                                title: {
+                                    display: true,
+                                    text: `Timeline Since October 7, 2023 (${Math.floor((new Date() - new Date('2023-10-07')) / (1000 * 60 * 60 * 24))} days)`,
+                                    font: {
+                                        size: 14,
+                                        weight: 'bold'
+                                    }
+                                },
+                                ticks: {
+                                    maxTicksLimit: 8,
+                                    font: {
+                                        size: 11
+                                    }
+                                },
+                                grid: {
+                                    color: 'rgba(0,0,0,0.1)'
+                                }
+                            },
+                            y: {
+                                display: true,
+                                title: {
+                                    display: true,
+                                    text: 'Cumulative Total',
+                                    font: {
+                                        size: 14,
+                                        weight: 'bold'
+                                    }
+                                },
+                                beginAtZero: true,
+                                ticks: {
+                                    precision: 0,
+                                    font: {
+                                        size: 11
+                                    },
+                                    callback: function(value) {
+                                        return value.toLocaleString();
+                                    }
+                                },
+                                grid: {
+                                    color: 'rgba(0,0,0,0.1)'
+                                }
+                            }
+                        },
+                        interaction: {
+                            mode: 'nearest',
+                            axis: 'x',
+                            intersect: false
+                        },
+                        elements: {
+                            line: {
+                                tension: 0.1
+                            }
+                        }
+                    }
+                });
+            } catch (error) {
+                console.error('Error loading cumulative trend chart:', error);
+                const ctx = document.getElementById('casualtyTrendChart').getContext('2d');
+                ctx.fillStyle = '#666';
+                ctx.font = '16px Arial';
+                ctx.textAlign = 'center';
+                ctx.fillText('Chart data unavailable', ctx.canvas.width / 2, ctx.canvas.height / 2);
+            }
+        }
+
+        // Load data from TechForPalestine API using new endpoints
+        async function loadLiveData() {
+            try {
+                // Load summary data (primary source for aggregate stats)
+                const summaryResponse = await fetch(API_ENDPOINTS.summary);
+                if (!summaryResponse.ok) {
+                    throw new Error(`HTTP ${summaryResponse.status}: ${summaryResponse.statusText}`);
+                }
+                const summaryData = await summaryResponse.json();
+
+                // Try to load individual records for detailed analysis
+                let killedData = [];
+                try {
+                    const killedResponse = await fetch(API_ENDPOINTS.killedInGaza);
+                    if (killedResponse.ok) {
+                        killedData = await killedResponse.json();
+                    }
+                } catch (individualError) {
+                    console.warn('Individual records not available, using summary data only:', individualError);
+                }
+
+                // Extract statistics from summary API with corrected men calculation
+                const summary = {
+                    total_killed: summaryData.killed?.total || 0,
+                    total_injured: summaryData.injured?.total || 0,
+                    children_killed: summaryData.killed?.children || 0,
+                    women_killed: summaryData.killed?.women || 0,
+                    men_killed: 0, // Will be calculated below
+                    elderly_killed: 0,
+                    avg_age: 0,
+                    unknown_age_count: 0,
+                    report_date: summaryData.last_update || new Date().toISOString(),
+                    report_source: 'TechForPalestine API'
+                };
+
+                // Calculate men killed correctly - total minus women and children
+                summary.men_killed = Math.max(0, summary.total_killed - summary.women_killed - summary.children_killed);
+
+                // Calculate additional stats from individual records if available
+                if (killedData.length > 0) {
+                    const processedRecords = killedData.map(record => {
+                        let age = parseAge(record.age);
+                        if (age === null && record.dob) {
+                            age = calculateAgeAtDeath(record.dob);
+                        }
+                        return { ...record, calculated_age: age };
+                    });
+
+                    const elderlyRecords = processedRecords.filter(person =>
+                        person.calculated_age !== null && person.calculated_age >= 60
+                    );
+                    summary.elderly_killed = elderlyRecords.length;
+
+                    const validAgeRecords = processedRecords.filter(person =>
+                        person.calculated_age !== null
+                    );
+                    summary.unknown_age_count = processedRecords.length - validAgeRecords.length;
+
+                    if (validAgeRecords.length > 0) {
+                        const totalAge = validAgeRecords.reduce((sum, person) =>
+                            sum + person.calculated_age, 0
+                        );
+                        summary.avg_age = (totalAge / validAgeRecords.length).toFixed(1);
+                    }
+                }
+
+                return {
+                    summary: summary,
+                    killed: killedData,
+                    lastUpdated: summary.report_date,
+                    dataSource: killedData.length > 0 ? 'detailed+summary' : 'summary'
+                };
+            } catch (error) {
+                console.error('Error loading live data:', error);
+                throw error;
+            }
+        }
+
+        // Load and parse CSV files (fallback)
+        function loadCSV(filename) {
+            return new Promise((resolve, reject) => {
+                const cacheBuster = `?v=${Date.now()}`;
+                const fullPath = filename + cacheBuster;
+
+                Papa.parse(fullPath, {
+                    download: true,
+                    header: true,
+                    skipEmptyLines: true,
+                    dynamicTyping: false,
+                    complete: function(results) {
+                        if (results.errors.length > 0) {
+                            console.warn('CSV parsing warnings:', results.errors);
+                            const criticalErrors = results.errors.filter(error =>
+                                error.type === 'Delimiter' || error.type === 'Quotes'
+                            );
+                            if (criticalErrors.length > 0) {
+                                reject(criticalErrors);
+                            } else {
+                                resolve(results.data);
+                            }
+                        } else {
+                            resolve(results.data);
+                        }
+                    },
+                    error: function(error) {
+                        console.error('CSV loading error:', error);
+                        reject(error);
+                    }
+                });
+            });
+        }
+
+        // Safe field access with fallback
+        function getField(record, field, fallback = '') {
+            return record[field] && record[field].toString().trim() || fallback;
+        }
+
+        // Load main content from live data
+        async function loadMainContent() {
+            try {
+                const data = await loadLiveData();
+                const summary = data.summary;
+
+                const mainContentHtml = `
+                    <div class="crisis-banner">
+                        <div class="banner-content">
+                            <h2>Total Civilian Casualties in Gaza<span class="data-source-badge">Live Data</span></h2>
+                            <div class="casualty-stats">
+                                <div class="stat-main">
+                                    <span class="stat-icon">💀</span>
+                                    <span class="stat-number">${summary.total_killed.toLocaleString()}</span>
+                                    <span class="stat-label">Total Killed</span>
+                                </div>
+                                <div class="stat-secondary">
+                                    <span class="stat-number">${summary.total_injured.toLocaleString()}</span>
+                                    <span class="stat-label">Total Injured</span>
+                                </div>
+                            </div>
+                            <p class="stat-description">Documentation of civilians killed as a result of armed conflict in Gaza including verified cases, legal references, and evidence collection. Data is automatically updated from verified sources.</p>
+                            <div class="banner-meta">
+                                <div class="last-updated">Last Updated: ${formatDate(summary.report_date)}</div>
+                                <div class="data-source">
+                                    Source: <a href="https://data.techforpalestine.org/" target="_blank">TechForPalestine Data API</a> - Gaza Ministry of Health
+                                    ${data.dataSource === 'detailed+summary' ? ' (Detailed + Summary Data)' : ' (Summary Data)'}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+
+                document.getElementById('main-content').innerHTML = mainContentHtml;
+
+                // Update all statistics immediately
+                updateAllStatistics(summary);
+
+                // Load enhanced cumulative trend chart
+                loadEnhancedCasualtyTrendChart();
+
+            } catch (error) {
+                console.error('Error loading main content:', error);
+                // Fallback to CSV
+                try {
+                    const data = await loadCSV('stat-civilian-casualties/stat-civilian-casualties-main.csv');
+                    const mainData = data[0];
+
+                    const mainContentHtml = `
+                        <h2>${getField(mainData, 'title')}<span class="data-source-badge">Local Data</span></h2>
+                        <div class="stat-main">
+                            <span class="stat-icon">${getField(mainData, 'icon', '💀')}</span>
+                            <span class="stat-number">${getField(mainData, 'number')}</span>
+                            <span class="stat-label">${getField(mainData, 'label')}</span>
+                        </div>
+                        <p class="stat-description">${getField(mainData, 'description')}</p>
+                        ${getField(mainData, 'last_updated') ? `<div class="last-updated">Last Updated: ${formatDate(getField(mainData, 'last_updated'))}</div>` : ''}
+                        ${getField(mainData, 'data_source') ? `<div class="data-source">Source: ${getField(mainData, 'data_source')}</div>` : ''}
+                    `;
+
+                    document.getElementById('main-content').innerHTML = mainContentHtml;
+                } catch (csvError) {
+                    showError('main-content', 'main content');
+                }
+            }
+        }
+
+        // Update all statistics with live data (FIXED VERSION)
+        function updateAllStatistics(summary) {
+            // Update consolidated statistics
+            document.getElementById('total-casualties').textContent = summary.total_killed.toLocaleString();
+            document.getElementById('total-injured').textContent = summary.total_injured.toLocaleString();
+            document.getElementById('avg-age').textContent = summary.avg_age > 0 ? summary.avg_age : 'N/A';
+            document.getElementById('last-update').textContent = formatDate(summary.report_date);
+
+            // Show data quality alert if there are unknown ages
+            if (summary.unknown_age_count > 0) {
+                const alert = document.getElementById('data-quality-alert');
+                alert.style.display = 'block';
+                alert.querySelector('p').textContent =
+                    `${summary.unknown_age_count.toLocaleString()} records have missing or unknown age information. Statistics are calculated based on available data only.`;
+            }
+
+            // Update casualty type breakdown with corrected men calculation
+            const total = summary.total_killed;
+
+            document.getElementById('children-casualties').textContent = summary.children_killed.toLocaleString();
+            document.getElementById('women-casualties').textContent = summary.women_killed.toLocaleString();
+            document.getElementById('men-casualties').textContent = summary.men_killed.toLocaleString();
+            document.getElementById('elderly-casualties').textContent = summary.elderly_killed.toLocaleString();
+
+            // Calculate and update percentages
+            document.getElementById('children-percentage').textContent = total > 0 ? `${((summary.children_killed / total) * 100).toFixed(1)}%` : '0%';
+            document.getElementById('women-percentage').textContent = total > 0 ? `${((summary.women_killed / total) * 100).toFixed(1)}%` : '0%';
+            document.getElementById('men-percentage').textContent = total > 0 ? `${((summary.men_killed / total) * 100).toFixed(1)}%` : '0%';
+            document.getElementById('elderly-percentage').textContent = total > 0 && summary.elderly_killed > 0 ? `${((summary.elderly_killed / total) * 100).toFixed(1)}%` : 'N/A';
+
+            // Update demographics charts
+            loadDemographicsCharts(summary);
+        }
+
+        // Load demographics charts without Unknown Age category (FIXED VERSION)
+        function loadDemographicsCharts(summary) {
+            // Enhanced Age Distribution Chart without Unknown category
+            const ageData = {
+                'Children (0-17)': summary.children_killed,
+                'Adults (18-59)': Math.max(0, summary.total_killed - summary.children_killed - summary.elderly_killed),
+                'Elderly (60+)': summary.elderly_killed
+            };
+
+            const ageCtx = document.getElementById('ageDistributionChart').getContext('2d');
+            if (charts.ageDistribution) charts.ageDistribution.destroy();
+
+            charts.ageDistribution = new Chart(ageCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: Object.keys(ageData),
+                    datasets: [{
+                        data: Object.values(ageData),
+                        backgroundColor: ['#ff6b6b', '#4ecdc4', '#45b7d1'], // Removed orange color
+                        borderWidth: 2,
+                        borderColor: '#fff'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: { padding: 20 }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                                    const percentage = ((context.parsed / total) * 100).toFixed(1);
+                                    return `${context.label}: ${context.parsed.toLocaleString()} (${percentage}%)`;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Update gender chart with actual data
+            updateGenderChart(summary);
+
+            // Killed vs Injured Chart
+            const casualtyTypeData = {
+                'Killed': summary.total_killed,
+                'Injured': summary.total_injured
+            };
+
+            const casualtyTypeCtx = document.getElementById('casualtyTypeChart').getContext('2d');
+            if (charts.casualtyType) charts.casualtyType.destroy();
+
+            charts.casualtyType = new Chart(casualtyTypeCtx, {
+                type: 'bar',
+                data: {
+                    labels: Object.keys(casualtyTypeData),
+                    datasets: [{
+                        data: Object.values(casualtyTypeData),
+                        backgroundColor: ['#e74c3c', '#ff9800'],
+                        borderWidth: 1,
+                        borderColor: '#fff'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return `${context.label}: ${context.parsed.y.toLocaleString()}`;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                precision: 0,
+                                callback: function(value) {
+                                    return value.toLocaleString();
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Update gender chart with enhanced data
+        async function updateGenderChart(summary) {
+            let genderData = {
+                'Male': summary.men_killed,
+                'Female': summary.women_killed,
+                'Unknown': Math.max(0, summary.total_killed - summary.men_killed - summary.women_killed)
+            };
+
+            // Try to get more accurate gender data from individual records
+            try {
+                if (allRecords && allRecords.length > 0) {
+                    const maleCount = allRecords.filter(record => getField(record, 'sex') === 'm').length;
+                    const femaleCount = allRecords.filter(record => getField(record, 'sex') === 'f').length;
+                    const unknownCount = allRecords.length - maleCount - femaleCount;
+
+                    genderData = {
+                        'Male': maleCount,
+                        'Female': femaleCount,
+                        'Unknown': unknownCount
+                    };
+                }
+            } catch (error) {
+                console.warn('Could not load detailed gender data, using summary data:', error);
+            }
+
+            const genderCtx = document.getElementById('genderChart').getContext('2d');
+            if (charts.gender) charts.gender.destroy();
+
+            charts.gender = new Chart(genderCtx, {
+                type: 'pie',
+                data: {
+                    labels: Object.keys(genderData),
+                    datasets: [{
+                        data: Object.values(genderData),
+                        backgroundColor: ['#4285f4', '#ea4335', '#fbbc04'],
+                        borderWidth: 2,
+                        borderColor: '#fff'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: { padding: 20 }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                                    const percentage = ((context.parsed / total) * 100).toFixed(1);
+                                    return `${context.label}: ${context.parsed.toLocaleString()} (${percentage}%)`;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Load individual records with enhanced age handling
+        async function loadIndividualRecords() {
+            try {
+                if (currentDataSource === 'live') {
+                    const data = await loadLiveData();
+                    const killedData = data.killed;
+
+                    if (killedData.length > 0) {
+                        // Transform live data with enhanced age calculation
+                        allRecords = killedData.map((record, index) => {
+                            // Parse birth date
+                            const birthDate = parseKilledInGazaDate(record.dob);
+
+                            // Parse death date if available
+                            const deathDateFields = ['death_date', 'date_of_death', 'killed_date', 'incident_date'];
+                            let deathDate = null;
+
+                            for (const field of deathDateFields) {
+                                if (record[field]) {
+                                    deathDate = parseKilledInGazaDate(record[field]);
+                                    if (deathDate) break;
+                                }
+                            }
+
+                            // Enhanced age calculation
+                            let age = parseAge(record.age);
+                            if (age === null && record.dob) {
+                                const deathDateFields = ['death_date', 'date_of_death', 'killed_date', 'incident_date'];
+                                let deathDateString = null;
+
+                                for (const field of deathDateFields) {
+                                    if (record[field] && record[field] !== '' && record[field] !== 'N/A') {
+                                        deathDateString = record[field];
+                                        break;
+                                    }
+                                }
+
+                                age = calculateAgeAtDeath(record.dob, deathDateString);
+                            }
+
+                            return {
+                                id: record.id || `live-${index}`,
+                                arabic_name: record.name || '',
+                                full_english_name: record.en_name || '',
+                                age: age,
+                                parsed_age: age,
+                                has_valid_age: age !== null,
+                                age_category: getAgeCategory(age),
+                                sex: record.sex || '',
+                                date_of_birth: record.dob || '',
+                                death_date: deathDate ? deathDate.toISOString().split('T')[0] : '',
+                                status: 'killed',
+                                location: record.location || 'Gaza',
+                                source: record.source || 'h'
+                            };
+                        });
+
+                        // Log data quality information
+                        const totalRecords = allRecords.length;
+                        const validAgeRecords = allRecords.filter(r => r.has_valid_age).length;
+                        const unknownAgeRecords = totalRecords - validAgeRecords;
+
+                        console.log(`Data Quality Report:
+                            Total Records: ${totalRecords}
+                            Valid Age Records: ${validAgeRecords}
+                            Unknown Age Records: ${unknownAgeRecords}`);
+
+                        document.getElementById('current-source').textContent = 'Live (Detailed)';
+                        document.getElementById('current-source').className = 'data-source-badge';
+
+                        // Update the recorded names count in summary statistics
+                        document.getElementById('recorded-names-count').textContent = totalRecords.toLocaleString();
+
+                        // Update gender chart with actual individual records data
+                        const summaryData = data.summary;
+                        updateGenderChart(summaryData);
+
+                    } else {
+                        allRecords = [];
+                        document.getElementById('current-source').textContent = 'Live (Aggregate Only)';
+                        document.getElementById('current-source').style.background = '#f39c12';
+                        document.getElementById('recorded-names-count').textContent = '0';
+                    }
+                } else {
+                    // Load from local CSV with enhanced age calculation
+                    const data = await loadCSV('stat-civilian-casualties/individual-records.csv');
+                    allRecords = data.filter(record => {
+                        return getField(record, 'arabic_name') && (getField(record, 'full_english_name') || getField(record, 'brief_english_name'));
+                    }).map(record => {
+                        // Enhanced age calculation for CSV data
+                        const birthDate = getField(record, 'date_of_birth');
+                        const deathDate = getField(record, 'death_date');
+                        let age = parseAge(getField(record, 'age'));
+
+                        if (age === null && birthDate) {
+                            age = calculateAgeAtDeath(birthDate, deathDate);
+                        }
+
+                        return {
+                            ...record,
+                            age: age,
+                            parsed_age: age,
+                            has_valid_age: age !== null,
+                            age_category: getAgeCategory(age)
+                        };
+                    });
+
+                    document.getElementById('current-source').textContent = 'Local';
+                    document.getElementById('current-source').style.background = '#e67e22';
+                    document.getElementById('recorded-names-count').textContent = allRecords.length.toLocaleString();
+                }
+
+                filteredRecords = [...allRecords];
+
+                // Update timestamp
+                const latestUpdate = new Date().toISOString().split('T')[0];
+                document.getElementById('records-updated').textContent = `Last Updated: ${formatDate(latestUpdate)}`;
+
+                // Populate location filter
+                populateLocationFilter();
+                displayRecords();
+                setupRecordsEventListeners();
+
+            } catch (error) {
+                console.error('Error loading individual records:', error);
+                showError('records-tbody', 'individual records');
+            }
+        }
+
+        // Populate location filter dropdown
+        function populateLocationFilter() {
+            const locations = [...new Set(allRecords.map(record => getField(record, 'location')).filter(loc => loc))];
+            const locationFilter = document.getElementById('location-filter');
+
+            locationFilter.innerHTML = '<option value="">All Locations</option>';
+
+            locations.sort().forEach(location => {
+                const option = document.createElement('option');
+                option.value = location;
+                option.textContent = location;
+                locationFilter.appendChild(option);
+            });
+        }
+
+        // Display records with enhanced age indicators
+        function displayRecords() {
+            const startIndex = (currentPage - 1) * recordsPerPage;
+            const endIndex = startIndex + recordsPerPage;
+            const pageRecords = filteredRecords.slice(startIndex, endIndex);
+
+            const tbody = document.getElementById('records-tbody');
+
+            if (pageRecords.length === 0) {
+                if (allRecords.length === 0 && currentDataSource === 'live') {
+                    tbody.innerHTML = '<tr><td colspan="8" class="no-results">Individual records are not available in live mode. Only aggregate statistics are provided by the API. Switch to "Local CSV Files" to view individual records.</td></tr>';
+                } else {
+                    tbody.innerHTML = '<tr><td colspan="8" class="no-results">No records found matching your criteria.</td></tr>';
+                }
+                document.getElementById('pagination').innerHTML = '';
+                return;
+            }
+
+            const recordsHtml = pageRecords.map(record => {
+                const ageDisplay = formatAgeDisplay(record.age);
+                const ageClass = record.has_valid_age ? 'age-cell' : 'age-cell unknown-age';
+                const sexDisplay = getField(record, 'sex') === 'm' ? 'Male' : getField(record, 'sex') === 'f' ? 'Female' : 'N/A';
+
+                return `
+                    <tr>
+                        <td>${getField(record, 'id')}</td>
+                        <td class="arabic-name">${getField(record, 'arabic_name')}</td>
+                        <td>${getField(record, 'full_english_name') || getField(record, 'brief_english_name')}</td>
+                        <td class="${ageClass}">${ageDisplay}</td>
+                        <td class="sex-cell">${sexDisplay}</td>
+                        <td>${formatDate(getField(record, 'date_of_birth'))}</td>
+                        <td>${getField(record, 'status', 'Killed')}</td>
+                        <td class="location-cell">${getField(record, 'location', 'Gaza')}</td>
+                    </tr>
+                `;
+            }).join('');
+
+            tbody.innerHTML = recordsHtml;
+            updatePagination();
+        }
+
+        // Update pagination controls
+        function updatePagination() {
+            const totalPages = Math.ceil(filteredRecords.length / recordsPerPage);
+            const pagination = document.getElementById('pagination');
+
+            if (totalPages <= 1) {
+                pagination.innerHTML = '';
+                return;
+            }
+
+            let paginationHtml = '';
+
+            // Previous button
+            paginationHtml += `<button ${currentPage === 1 ? 'disabled' : ''} onclick="changePage(${currentPage - 1})">Previous</button>`;
+
+            // Page numbers
+            const startPage = Math.max(1, currentPage - 2);
+            const endPage = Math.min(totalPages, currentPage + 2);
+
+            if (startPage > 1) {
+                paginationHtml += `<button onclick="changePage(1)">1</button>`;
+                if (startPage > 2) paginationHtml += `<span>...</span>`;
+            }
+
+            for (let i = startPage; i <= endPage; i++) {
+                paginationHtml += `<button class="${i === currentPage ? 'active' : ''}" onclick="changePage(${i})">${i}</button>`;
+            }
+
+            if (endPage < totalPages) {
+                if (endPage < totalPages - 1) paginationHtml += `<span>...</span>`;
+                paginationHtml += `<button onclick="changePage(${totalPages})">${totalPages}</button>`;
+            }
+
+            // Next button
+            paginationHtml += `<button ${currentPage === totalPages ? 'disabled' : ''} onclick="changePage(${currentPage + 1})">Next</button>`;
+
+            pagination.innerHTML = paginationHtml;
+        }
+
+        // Change page
+        function changePage(page) {
+            const totalPages = Math.ceil(filteredRecords.length / recordsPerPage);
+            if (page >= 1 && page <= totalPages) {
+                currentPage = page;
+                displayRecords();
+                document.getElementById('records-table').scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Enhanced filter records with unknown age support
+        function filterRecords() {
+            const nameSearch = document.getElementById('name-search').value.toLowerCase();
+            const ageFilter = document.getElementById('age-filter').value;
+            const sexFilter = document.getElementById('sex-filter').value;
+            const locationFilter = document.getElementById('location-filter').value;
+            const dateFilter = document.getElementById('date-filter').value;
+
+            filteredRecords = allRecords.filter(record => {
+                // Name search
+                const nameMatch = !nameSearch ||
+                    getField(record, 'arabic_name').toLowerCase().includes(nameSearch) ||
+                    getField(record, 'full_english_name').toLowerCase().includes(nameSearch) ||
+                    getField(record, 'brief_english_name').toLowerCase().includes(nameSearch);
+
+                // Enhanced age filter with unknown age support
+                let ageMatch = true;
+                if (ageFilter) {
+                    switch (ageFilter) {
+                        case 'child':
+                            ageMatch = record.age_category === 'child';
+                            break;
+                        case 'adult':
+                            ageMatch = record.age_category === 'adult';
+                            break;
+                        case 'elderly':
+                            ageMatch = record.age_category === 'elderly';
+                            break;
+                        case 'unknown':
+                            ageMatch = !record.has_valid_age;
+                            break;
+                    }
+                }
+
+                // Other filters
+                const sexMatch = !sexFilter || getField(record, 'sex') === sexFilter;
+                const locationMatch = !locationFilter || getField(record, 'location') === locationFilter;
+                const dateMatch = !dateFilter || getField(record, 'date_of_birth', '').startsWith(dateFilter);
+
+                return nameMatch && ageMatch && sexMatch && locationMatch && dateMatch;
+            });
+
+            currentPage = 1;
+            displayRecords();
+        }
+
+        // Setup event listeners for filters
+        function setupRecordsEventListeners() {
+            document.getElementById('name-search').addEventListener('input', filterRecords);
+            document.getElementById('age-filter').addEventListener('change', filterRecords);
+            document.getElementById('sex-filter').addEventListener('change', filterRecords);
+            document.getElementById('location-filter').addEventListener('change', filterRecords);
+            document.getElementById('date-filter').addEventListener('change', filterRecords);
+
+            // Data source toggle
+            document.querySelectorAll('input[name="datasource"]').forEach(radio => {
+                radio.addEventListener('change', function() {
+                    currentDataSource = this.value;
+                    loadIndividualRecords();
+                });
+            });
+        }
+
+        // Load image gallery
+        async function loadImageGallery() {
+            try {
+                const data = await loadCSV('stat-civilian-casualties/stat-civilian-casualties-images.csv');
+
+                const latestUpdate = data.reduce((latest, item) => {
+                    const currentDate = new Date(getField(item, 'last_updated', '1970-01-01'));
+                    return currentDate > new Date(latest || '1970-01-01') ? getField(item, 'last_updated') : latest;
+                }, null);
+
+                if (latestUpdate) {
+                    document.getElementById('images-updated').textContent = `Last Updated: ${formatDate(latestUpdate)}`;
+                }
+
+                const imagesHtml = data.map(image => {
+                    const verificationBadge = getField(image, 'verification_status') ?
+                        `<span class="verification-badge">${getField(image, 'verification_status')}</span>` : '';
+
+                    return `
+                        <div>
+                            <img src="${getField(image, 'src')}" alt="${getField(image, 'alt')}" />
+                            <div class="image-caption">
+                                <a href="${getField(image, 'link')}" target="_blank">${getField(image, 'caption')}</a>
+                            </div>
+                            <div class="image-meta">
+                                ${getField(image, 'last_updated') ? `<span>Updated: ${formatDate(getField(image, 'last_updated'))}</span>` : ''}
+                                ${verificationBadge}
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+
+                document.getElementById('image-gallery').innerHTML = imagesHtml;
+            } catch (error) {
+                console.error('Error loading images:', error);
+                document.getElementById('image-gallery').innerHTML = '<div class="error">Images section not available</div>';
+            }
+        }
+
+        // Load timeline
+        async function loadTimeline() {
+            try {
+                const data = await loadCSV('stat-civilian-casualties/stat-civilian-casualties-timeline.csv');
+
+                data.sort((a, b) => new Date(getField(b, 'date', '1970-01-01')) - new Date(getField(a, 'date', '1970-01-01')));
+
+                const latestUpdate = data.reduce((latest, item) => {
+                    const currentDate = new Date(getField(item, 'last_updated', '1970-01-01'));
+                    return currentDate > new Date(latest || '1970-01-01') ? getField(item, 'last_updated') : latest;
+                }, null);
+
+                if (latestUpdate) {
+                    document.getElementById('timeline-updated').textContent = `Last Updated: ${formatDate(latestUpdate)}`;
+                }
+
+                const timelineHtml = data.map(item => {
+                    const verificationBadge = getField(item, 'verification_status') ?
+                        `<span class="verification-badge">${getField(item, 'verification_status')}</span>` : '';
+
+                    return `
+                        <div class="timeline-item">
+                            <div class="timeline-date">${formatDate(getField(item, 'date'))}</div>
+                            <div class="timeline-content">
+                                <a href="${getField(item, 'link')}" target="_blank">${getField(item, 'content')}</a>
+                            </div>
+                            <div class="timeline-meta">
+                                ${getField(item, 'last_updated') ? `<span>Updated: ${formatDate(getField(item, 'last_updated'))}</span>` : ''}
+                                ${verificationBadge}
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+
+                document.getElementById('timeline').innerHTML = timelineHtml;
+            } catch (error) {
+                console.error('Error loading timeline:', error);
+                document.getElementById('timeline').innerHTML = '<div class="error">Timeline section not available</div>';
+            }
+        }
+
+        // Load resources
+        async function loadResources() {
+            try {
+                const data = await loadCSV('stat-civilian-casualties/stat-civilian-casualties-resources.csv');
+
+                const latestUpdate = data.reduce((latest, item) => {
+                    const currentDate = new Date(getField(item, 'last_updated', '1970-01-01'));
+                    return currentDate > new Date(latest || '1970-01-01') ? getField(item, 'last_updated') : latest;
+                }, null);
+
+                if (latestUpdate) {
+                    document.getElementById('resources-updated').textContent = `Last Updated: ${formatDate(latestUpdate)}`;
+                }
+
+                // Group resources by category
+                const groupedResources = data.reduce((acc, resource) => {
+                    const category = getField(resource, 'category', 'Other');
+                    if (!acc[category]) {
+                        acc[category] = [];
+                    }
+                    acc[category].push(resource);
+                    return acc;
+                }, {});
+
+                const resourcesHtml = Object.keys(groupedResources).map(category => `
+                    <div class="resource-category">
+                        <h4>${category}</h4>
+                        <ul class="resource-list">
+                            ${groupedResources[category].map(resource => {
+                                const verificationBadge = getField(resource, 'verification_status') ?
+                                    `<span class="verification-badge">${getField(resource, 'verification_status')}</span>` : '';
+
+                                return `
+                                    <li>
+                                        <a href="${getField(resource, 'link')}" target="_blank">${getField(resource, 'title')}</a>
+                                        <div class="resource-meta">
+                                            ${getField(resource, 'last_updated') ? `<span>Updated: ${formatDate(getField(resource, 'last_updated'))}</span>` : ''}
+                                            ${verificationBadge}
+                                        </div>
+                                    </li>
+                                `;
+                            }).join('')}
+                        </ul>
+                    </div>
+                `).join('');
+
+                document.getElementById('resources').innerHTML = resourcesHtml;
+            } catch (error) {
+                console.error('Error loading resources:', error);
+                document.getElementById('resources').innerHTML = '<div class="error">Resources section not available</div>';
+            }
+        }
+
+        // Auto-refresh data every 5 minutes
+        function startAutoRefresh() {
+            setInterval(async () => {
+                try {
+                    console.log('Auto-refreshing data...');
+                    await loadMainContent();
+                    // Also refresh individual records to update the names count and gender chart
+                    await loadIndividualRecords();
+                } catch (error) {
+                    console.error('Auto-refresh failed:', error);
+                }
+            }, 5 * 60 * 1000); // 5 minutes
+        }
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Gaza Crisis Documentation - Civilian Casualties Statistics');
+            console.log('Loading data from TechForPalestine Palestine Datasets...');
+
+            // Load main content first (required)
+            loadMainContent();
+
+            // Load individual records (core feature) - this will update names count and gender chart
+            loadIndividualRecords();
+
+            // Start auto-refresh for live data
+            if (currentDataSource === 'live') {
+                startAutoRefresh();
+            }
+
+            // Update demographics timestamp
+            const latestUpdate = new Date().toISOString().split('T')[0];
+            document.getElementById('demographics-updated').textContent = `Last Updated: ${formatDate(latestUpdate)}`;
+
+            // Load optional sections (won't break if files don't exist)
+            loadImageGallery();
+            loadTimeline();
+            loadResources();
+        });
+    </script>
+</body>
+</html>

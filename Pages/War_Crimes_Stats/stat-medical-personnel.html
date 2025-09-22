@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Personnel & Emergency Staff Casualties - Gaza Crisis Documentation</title>
+    <meta name="description" content="Comprehensive documentation of medical personnel and emergency staff casualties during the Gaza crisis: detailed records, statistics, and evidence.">
+    <link rel="stylesheet" href="../global-styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">
+                <a href="../../index.html">Gaza Crisis Documentation</a>
+            </h1>
+            <nav class="nav">
+                <a href="../../war-crimes-stats.html" class="nav-btn">← Back to War Crimes</a>
+            </nav>
+        </div>
+    </header>
+    <main class="main">
+        <!-- Medical Personnel Focus Banner -->
+        <section class="statistic-overview">
+            <div class="container">
+                <div id="main-content">
+                    <div class="loading">Loading medical personnel casualty data...</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Critical Medical Personnel Statistics -->
+        <section class="demographics-analysis">
+            <div class="container">
+                <div class="section-header">
+                    <h3>Medical Personnel & Emergency Staff Overview</h3>
+                    <div class="section-updated" id="overview-updated"></div>
+                </div>
+
+                <!-- Personnel Category Cards -->
+                <div class="personnel-breakdown-cards">
+                    <div class="personnel-card medical">
+                        <span class="personnel-number" id="medical-total">0</span>
+                        <div class="personnel-label">Medical Personnel</div>
+                        <div class="personnel-description">Doctors, Nurses, Medics</div>
+                    </div>
+                    <div class="personnel-card emergency">
+                        <span class="personnel-number" id="emergency-total">0</span>
+                        <div class="personnel-label">Civil Defense</div>
+                        <div class="personnel-description">Emergency Responders</div>
+                    </div>
+                    <div class="personnel-card total">
+                        <span class="personnel-number" id="total-personnel">0</span>
+                        <div class="personnel-label">Total Healthcare Workers</div>
+                        <div class="personnel-description">All Categories Combined</div>
+                    </div>
+                </div>
+
+                <!-- Critical Statistics Grid -->
+                <div class="critical-stats-grid">
+                    <div class="critical-stat">
+                        <span class="critical-number" id="total-verified">0</span>
+                        <span class="critical-label">Total Healthcare Workers Killed</span>
+                    </div>
+                    <div class="critical-stat">
+                        <span class="critical-number" id="daily-average">0</span>
+                        <span class="critical-label">Daily Average Loss</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Personnel Demographics Charts -->
+        <section class="age-demographics">
+            <div class="container">
+                <div class="section-header">
+                    <h3>Medical Personnel Analysis</h3>
+                    <div class="section-updated" id="demographics-updated"></div>
+                </div>
+
+                <!-- Data Quality Alert -->
+                <div class="data-quality-alert" id="personnel-data-alert" style="display: none;">
+                    <h4>Medical Personnel Data Notice</h4>
+                    <p>Analysis includes verified medical personnel and civil defense casualties. Data sourced from TechForPalestine Palestine Datasets tracking healthcare worker casualties.</p>
+                </div>
+
+                <div class="demographics-grid">
+                    <!-- Personnel Category Distribution -->
+                    <div class="chart-container">
+                        <h4>Personnel Category Distribution</h4>
+                        <canvas id="personnelCategoryChart"></canvas>
+                    </div>
+
+                    <!-- Casualties Over Time Comparison -->
+                    <div class="chart-container">
+                        <h4>Medical vs Civil Defense Casualties</h4>
+                        <canvas id="personnelComparisonChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Personnel Timeline Trend -->
+                <div class="chart-container trend-chart-container">
+                    <h4>Healthcare Workers Casualties Over Time</h4>
+                    <canvas id="personnelTimelineChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- Individual Medical Personnel Cases & Stories -->
+        <section class="individual-cases">
+            <div class="container">
+                <div class="section-header">
+                    <h3>Individual Medical Personnel Cases & Stories</h3>
+                    <p>Documented stories of medical personnel and emergency staff killed in Gaza, based on investigations by international media, human rights organizations, and witness testimonies. Each case represents a healthcare worker who lost their life while serving their community.</p>
+                </div>
+
+                <div class="cases-navigation">
+                    <button class="nav-button active" data-category="all">All Cases</button>
+                    <button class="nav-button" data-category="doctors">Doctors</button>
+                    <button class="nav-button" data-category="nurses">Nurses & Medics</button>
+                    <button class="nav-button" data-category="civil-defense">Civil Defense</button>
+                    <button class="nav-button" data-category="hospital-attacks">Hospital Attacks</button>
+                    <button class="nav-button" data-category="ambulance-attacks">Ambulance Attacks</button>
+                </div>
+
+                <div id="loadingState" class="loading">Loading cases...</div>
+                <div id="errorState" class="error" style="display: none;">
+                    Failed to load cases data. Please try again later.
+                </div>
+
+                <div class="cases-grid" id="casesGrid" style="display: none;"></div>
+            </div>
+        </section>
+
+        <!-- Evidence Documentation -->
+        <section class="image-gallery">
+            <div class="container">
+                <div class="section-header">
+                    <h3>Evidence & Documentation</h3>
+                    <div class="section-updated" id="evidence-updated"></div>
+                </div>
+                <div id="personnel-evidence" class="gallery-grid">
+                    <div class="loading">Loading evidence documentation...</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline -->
+        <section class="stat-timeline">
+            <div class="container">
+                <div class="section-header">
+                    <h3>Key Events Timeline</h3>
+                    <div class="section-updated" id="timeline-updated"></div>
+                </div>
+                <div id="personnel-timeline" class="timeline">
+                    <div class="loading">Loading timeline events...</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resources -->
+        <section class="stat-resources">
+            <div class="container">
+                <div class="section-header">
+                    <h3>Medical Personnel Protection & Legal Resources</h3>
+                    <div class="section-updated" id="resources-updated"></div>
+                </div>
+                <div id="personnel-resources" class="resources-grid">
+                    <div class="loading">Loading specialized resources...</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Case Modal -->
+    <div class="case-modal" id="caseModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+                <div id="modalHeader"></div>
+            </div>
+            <div class="modal-body">
+                <div id="modalBody"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Gaza Crisis Documentation - Medical Personnel & Emergency Staff Focus. Sources: TechForPalestine, WHO, UN OCHA, MSF, HRW.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Global variables for personnel data
+        let medicalPersonnelData = [];
+        let civilDefenseData = [];
+        let currentFilter = 'all';
+        let personnelCategoryChart, personnelComparisonChart, personnelTimelineChart;
+
+        // Individual cases variables
+        let casesData = [];
+
+        // Configuration - change this to switch between JSON and CSV
+        const DATA_CONFIG = {
+            format: 'csv', // 'json' or 'csv'
+            jsonFile: 'stat-medical-personnel/cases-data.json',
+            csvFile: 'stat-medical-personnel/cases-data.csv'
+        };
+
+        // Utility functions
+        function formatDate(dateString) {
+            if (!dateString) return 'N/A';
+            const date = new Date(dateString);
+            return date.toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+        }
+
+        function showError(containerId, message) {
+            const container = document.getElementById(containerId);
+            container.innerHTML = `<div class="error">Error loading ${message}. Please check the data source.</div>`;
+        }
+
+        // Load data from TechForPalestine Palestine Datasets API
+        async function loadPersonnelData() {
+            try {
+                console.log('Loading medical personnel and civil defense data from Palestine Datasets API...');
+                const response = await fetch('https://data.techforpalestine.org/api/v2/casualties_daily.min.json');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const dailyData = await response.json();
+
+                // Filter data from October 7, 2023 onwards
+                const startDate = new Date('2023-10-07');
+                const filteredData = dailyData.filter(day => {
+                    const dayDate = new Date(day.report_date);
+                    return dayDate >= startDate;
+                });
+
+                // Sort by date to ensure proper order
+                filteredData.sort((a, b) => new Date(a.report_date) - new Date(b.report_date));
+
+                // Extract medical and civil defense data
+                medicalPersonnelData = filteredData.filter(day =>
+                    day.ext_med_killed_cum !== null && day.ext_med_killed_cum !== undefined
+                );
+
+                civilDefenseData = filteredData.filter(day =>
+                    day.ext_civdef_killed_cum !== null && day.ext_civdef_killed_cum !== undefined
+                );
+
+                console.log(`Loaded ${medicalPersonnelData.length} medical personnel data points`);
+                console.log(`Loaded ${civilDefenseData.length} civil defense data points`);
+
+                // Update UI
+                const latestUpdate = new Date().toISOString().split('T')[0];
+                document.getElementById('overview-updated').textContent = `Last Updated: ${formatDate(latestUpdate)}`;
+                document.getElementById('demographics-updated').textContent = `Last Updated: ${formatDate(latestUpdate)}`;
+
+                updateMainContent();
+                updatePersonnelSummary();
+                loadPersonnelDemographics();
+
+            } catch (error) {
+                console.error('Error loading personnel data:', error);
+                showError('main-content', 'medical personnel data');
+            }
+        }
+
+        // Load cases data from JSON or CSV file
+        async function loadCasesData() {
+            try {
+                if (DATA_CONFIG.format === 'json') {
+                    await loadFromJSON();
+                } else {
+                    await loadFromCSV();
+                }
+
+                // Hide loading, show grid
+                document.getElementById('loadingState').style.display = 'none';
+                document.getElementById('casesGrid').style.display = 'grid';
+
+                renderCases();
+                setupCasesEventListeners();
+            } catch (error) {
+                console.error('Error loading cases data:', error);
+                document.getElementById('loadingState').style.display = 'none';
+                document.getElementById('errorState').style.display = 'block';
+            }
+        }
+
+        // Load data from JSON file
+        async function loadFromJSON() {
+            const response = await fetch(DATA_CONFIG.jsonFile);
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            const data = await response.json();
+            casesData = data.cases;
+        }
+
+        // Load data from CSV file
+        async function loadFromCSV() {
+            const response = await fetch(DATA_CONFIG.csvFile);
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            const csvText = await response.text();
+
+            return new Promise((resolve, reject) => {
+                Papa.parse(csvText, {
+                    header: true,
+                    skipEmptyLines: true,
+                    transformHeader: header => header.trim(),
+                    transform: value => value.trim(),
+                    complete: function(results) {
+                        try {
+                            casesData = results.data.map(row => {
+                                // Parse JSON fields safely
+                                let timeline = [];
+                                let witnesses = [];
+                                let mediaLinks = [];
+
+                                try {
+                                    timeline = row.timeline_json ? JSON.parse(row.timeline_json) : [];
+                                } catch (e) {
+                                    console.warn('Error parsing timeline_json for row:', row.id, e);
+                                    timeline = [];
+                                }
+
+                                try {
+                                    witnesses = row.witnesses_json ? JSON.parse(row.witnesses_json) : [];
+                                } catch (e) {
+                                    console.warn('Error parsing witnesses_json for row:', row.id, e);
+                                    witnesses = [];
+                                }
+
+                                try {
+                                    mediaLinks = row.mediaLinks_json ? JSON.parse(row.mediaLinks_json) : [];
+                                } catch (e) {
+                                    console.warn('Error parsing mediaLinks_json for row:', row.id, e);
+                                    mediaLinks = [];
+                                }
+
+                                return {
+                                    id: row.id || '',
+                                    name: row.name || '',
+                                    arabicName: row.arabicName || '',
+                                    profession: row.profession || '',
+                                    hospital: row.hospital || '',
+                                    date: row.date || '',
+                                    location: row.location || '',
+                                    categories: row.categories ? row.categories.split(',').map(cat => cat.trim()) : [],
+                                    tags: row.tags ? row.tags.split(',').map(tag => tag.trim()) : [],
+                                    summary: row.summary || '',
+                                    source: row.source || '',
+                                    hasPhoto: row.hasPhoto === 'true',
+                                    timeline: timeline,
+                                    witnesses: witnesses,
+                                    mediaLinks: mediaLinks
+                                };
+                            }).filter(row => row.id && row.name); // Filter out empty rows
+
+                            console.log(`Loaded ${casesData.length} medical personnel cases from CSV`);
+                            resolve();
+                        } catch (parseError) {
+                            console.error('Error processing CSV data:', parseError);
+                            reject(parseError);
+                        }
+                    },
+                    error: function(error) {
+                        console.error('Papa Parse error:', error);
+                        reject(error);
+                    }
+                });
+            });
+        }
+
+        // Update main content banner
+        function updateMainContent() {
+            const latestMedical = medicalPersonnelData.length > 0 ? medicalPersonnelData[medicalPersonnelData.length - 1].ext_med_killed_cum : 0;
+            const latestCivDef = civilDefenseData.length > 0 ? civilDefenseData[civilDefenseData.length - 1].ext_civdef_killed_cum : 0;
+            const totalPersonnel = latestMedical + latestCivDef;
+
+            const daysSinceStart = Math.floor((new Date() - new Date('2023-10-07')) / (1000 * 60 * 60 * 24));
+            const dailyAverage = daysSinceStart > 0 ? (totalPersonnel / daysSinceStart).toFixed(1) : 0;
+
+            const mainContentHtml = `
+                <h2>Medical Personnel & Emergency Staff Casualties <span class="personnel-focus-badge">Healthcare Workers</span></h2>
+                <div class="stat-main">
+                    <span class="stat-icon">🏥 Critical Loss: Healthcare Heroes</span>
+                    <span class="stat-number">${totalPersonnel.toLocaleString()}</span>
+                    <span class="stat-label">Healthcare Workers Killed by Israeli Forces</span>
+                </div>
+                <p class="stat-description">
+                    Comprehensive documentation of medical personnel and emergency staff casualties during the Gaza crisis.
+                    This includes doctors, nurses, paramedics, and civil defense workers who lost their lives while serving their communities.
+                </p>
+                <div class="last-updated">Daily Average: ${dailyAverage} healthcare workers killed per day</div>
+                <div class="data-source">Source: TechForPalestine Palestine Datasets</div>
+            `;
+
+            document.getElementById('main-content').innerHTML = mainContentHtml;
+        }
+
+        // Update personnel overview statistics
+        function updatePersonnelSummary() {
+            const latestMedical = medicalPersonnelData.length > 0 ? medicalPersonnelData[medicalPersonnelData.length - 1].ext_med_killed_cum : 0;
+            const latestCivDef = civilDefenseData.length > 0 ? civilDefenseData[civilDefenseData.length - 1].ext_civdef_killed_cum : 0;
+            const totalPersonnel = latestMedical + latestCivDef;
+
+            const daysSinceStart = Math.floor((new Date() - new Date('2023-10-07')) / (1000 * 60 * 60 * 24));
+            const dailyAverage = daysSinceStart > 0 ? (totalPersonnel / daysSinceStart).toFixed(1) : 0;
+
+            // Update overview cards
+            document.getElementById('medical-total').textContent = latestMedical.toLocaleString();
+            document.getElementById('emergency-total').textContent = latestCivDef.toLocaleString();
+            document.getElementById('total-personnel').textContent = totalPersonnel.toLocaleString();
+
+            // Update critical stats
+            document.getElementById('total-verified').textContent = totalPersonnel.toLocaleString();
+            document.getElementById('daily-average').textContent = dailyAverage;
+        }
+
+        // Load personnel demographics charts
+        function loadPersonnelDemographics() {
+            if (medicalPersonnelData.length === 0 && civilDefenseData.length === 0) return;
+
+            analyzePersonnelCategories();
+            analyzePersonnelComparison();
+            analyzePersonnelTimeline();
+
+            // Show data quality alert
+            const alert = document.getElementById('personnel-data-alert');
+            alert.style.display = 'block';
+        }
+
+        // Personnel category distribution chart
+        function analyzePersonnelCategories() {
+            const latestMedical = medicalPersonnelData.length > 0 ? medicalPersonnelData[medicalPersonnelData.length - 1].ext_med_killed_cum : 0;
+            const latestCivDef = civilDefenseData.length > 0 ? civilDefenseData[civilDefenseData.length - 1].ext_civdef_killed_cum : 0;
+
+            const ctx = document.getElementById('personnelCategoryChart').getContext('2d');
+            if (personnelCategoryChart) personnelCategoryChart.destroy();
+
+            personnelCategoryChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Medical Personnel', 'Civil Defense'],
+                    datasets: [{
+                        data: [latestMedical, latestCivDef],
+                        backgroundColor: ['#e74c3c', '#3498db'],
+                        borderWidth: 3,
+                        borderColor: '#fff'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                padding: 20,
+                                font: { size: 12, weight: 'bold' }
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                                    const percentage = ((context.parsed / total) * 100).toFixed(1);
+                                    return `${context.label}: ${context.parsed} (${percentage}%)`;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Personnel comparison chart
+        function analyzePersonnelComparison() {
+            const ctx = document.getElementById('personnelComparisonChart').getContext('2d');
+            if (personnelComparisonChart) personnelComparisonChart.destroy();
+
+            // Sample the last 30 data points for better performance
+            const sampleData = Math.min(30, Math.max(medicalPersonnelData.length, civilDefenseData.length));
+            const medicalSample = medicalPersonnelData.slice(-sampleData);
+            const civDefSample = civilDefenseData.slice(-sampleData);
+
+            // Align dates and data
+            const alignedData = [];
+            const maxLength = Math.max(medicalSample.length, civDefSample.length);
+
+            for (let i = 0; i < maxLength; i++) {
+                const medData = medicalSample[i] || { report_date: '', ext_med_killed_cum: 0 };
+                const civData = civDefSample[i] || { report_date: '', ext_civdef_killed_cum: 0 };
+
+                alignedData.push({
+                    date: medData.report_date || civData.report_date,
+                    medical: medData.ext_med_killed_cum || 0,
+                    civdef: civData.ext_civdef_killed_cum || 0
+                });
+            }
+
+            personnelComparisonChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: alignedData.map(d => {
+                        const date = new Date(d.date);
+                        return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+                    }),
+                    datasets: [
+                        {
+                            label: 'Medical Personnel',
+                            data: alignedData.map(d => d.medical),
+                            backgroundColor: 'rgba(231, 76, 60, 0.8)',
+                            borderColor: '#e74c3c',
+                            borderWidth: 1
+                        },
+                        {
+                            label: 'Civil Defense',
+                            data: alignedData.map(d => d.civdef),
+                            backgroundColor: 'rgba(52, 152, 219, 0.8)',
+                            borderColor: '#3498db',
+                            borderWidth: 1
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                            labels: {
+                                usePointStyle: true,
+                                padding: 20,
+                                font: { size: 12, weight: 'bold' }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: 'Cumulative Casualties',
+                                font: { size: 14, weight: 'bold' }
+                            }
+                        },
+                        x: {
+                            title: {
+                                display: true,
+                                text: 'Date',
+                                font: { size: 14, weight: 'bold' }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Personnel timeline analysis
+        async function analyzePersonnelTimeline() {
+            try {
+                // Combine medical and civil defense data for timeline
+                const combinedData = [];
+                const maxLength = Math.max(medicalPersonnelData.length, civilDefenseData.length);
+
+                for (let i = 0; i < maxLength; i++) {
+                    const medData = medicalPersonnelData[i];
+                    const civData = civilDefenseData[i];
+
+                    if (medData || civData) {
+                        const date = (medData?.report_date) || (civData?.report_date);
+                        const medCum = medData?.ext_med_killed_cum || 0;
+                        const civCum = civData?.ext_civdef_killed_cum || 0;
+
+                        combinedData.push({
+                            date: date,
+                            medical: medCum,
+                            civdef: civCum,
+                            total: medCum + civCum
+                        });
+                    }
+                }
+
+                // Sample data for performance if we have too many points
+                let displayData = combinedData;
+                if (combinedData.length > 300) {
+                    displayData = combinedData.filter((_, index) =>
+                        index % Math.ceil(combinedData.length / 300) === 0
+                    );
+                }
+
+                const ctx = document.getElementById('personnelTimelineChart').getContext('2d');
+                if (personnelTimelineChart) personnelTimelineChart.destroy();
+
+                personnelTimelineChart = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: displayData.map(day => {
+                            const date = new Date(day.date);
+                            return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+                        }),
+                        datasets: [
+                            {
+                                label: 'Medical Personnel',
+                                data: displayData.map(d => d.medical),
+                                borderColor: '#e74c3c',
+                                backgroundColor: 'rgba(231, 76, 60, 0.1)',
+                                tension: 0.1,
+                                fill: false,
+                                borderWidth: 3,
+                                pointRadius: 0,
+                                pointHoverRadius: 6
+                            },
+                            {
+                                label: 'Civil Defense',
+                                data: displayData.map(d => d.civdef),
+                                borderColor: '#3498db',
+                                backgroundColor: 'rgba(52, 152, 219, 0.1)',
+                                tension: 0.1,
+                                fill: false,
+                                borderWidth: 3,
+                                pointRadius: 0,
+                                pointHoverRadius: 6
+                            },
+                            {
+                                label: 'Total Healthcare Workers',
+                                data: displayData.map(d => d.total),
+                                borderColor: '#f39c12',
+                                backgroundColor: 'rgba(243, 156, 18, 0.1)',
+                                tension: 0.1,
+                                fill: true,
+                                borderWidth: 4,
+                                pointRadius: 0,
+                                pointHoverRadius: 8
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'top',
+                                labels: {
+                                    usePointStyle: true,
+                                    padding: 20,
+                                    font: { size: 12, weight: 'bold' }
+                                }
+                            },
+                            tooltip: {
+                                mode: 'index',
+                                intersect: false,
+                                backgroundColor: 'rgba(0,0,0,0.8)',
+                                titleColor: 'white',
+                                bodyColor: 'white'
+                            }
+                        },
+                        scales: {
+                            x: {
+                                display: true,
+                                title: {
+                                    display: true,
+                                    text: `Timeline Since October 7, 2023 (${Math.floor((new Date() - new Date('2023-10-07')) / (1000 * 60 * 60 * 24))} days)`,
+                                    font: { size: 14, weight: 'bold' }
+                                }
+                            },
+                            y: {
+                                display: true,
+                                title: {
+                                    display: true,
+                                    text: 'Cumulative Healthcare Workers Killed',
+                                    font: { size: 14, weight: 'bold' }
+                                },
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+
+                console.log(`Loaded personnel timeline with ${displayData.length} data points`);
+            } catch (error) {
+                console.error('Error loading personnel timeline:', error);
+
+                // Fallback chart
+                const ctx = document.getElementById('personnelTimelineChart').getContext('2d');
+                if (personnelTimelineChart) personnelTimelineChart.destroy();
+
+                personnelTimelineChart = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: ['Loading...'],
+                        datasets: [{
+                            label: 'Healthcare Workers (Data Unavailable)',
+                            data: [0],
+                            borderColor: '#e74c3c',
+                            borderWidth: 2
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: { display: true }
+                        },
+                        scales: {
+                            y: { beginAtZero: true }
+                        }
+                    }
+                });
+            }
+        }
+
+        // Render cases to the grid
+        function renderCases() {
+            const grid = document.getElementById('casesGrid');
+            grid.innerHTML = '';
+
+            const filteredCases = currentFilter === 'all'
+                ? casesData
+                : casesData.filter(caseItem => caseItem.categories.includes(currentFilter));
+
+            if (filteredCases.length === 0) {
+                grid.innerHTML = '<div class="no-results">No cases available for the selected category. Cases data can be added via CSV or JSON files.</div>';
+                return;
+            }
+
+            filteredCases.forEach(caseItem => {
+                const caseCard = createCaseCard(caseItem);
+                grid.appendChild(caseCard);
+            });
+        }
+
+        // Create a case card element
+        function createCaseCard(caseItem) {
+            const card = document.createElement('div');
+            card.className = 'case-card';
+            card.dataset.case = caseItem.id;
+            card.dataset.category = caseItem.categories.join(' ');
+
+            // Generate tags HTML
+            const tagsHTML = caseItem.tags.map(tag => {
+                let tagClass = 'case-tag';
+                const tagLower = tag.toLowerCase();
+                if (tagLower.includes('hospital') || tagLower.includes('who') || tagLower.includes('msf')) {
+                    tagClass += ' critical';
+                } else if (tagLower.includes('ambulance') || tagLower.includes('emergency') || tagLower.includes('rescue')) {
+                    tagClass += ' media';
+                } else if (tagLower.includes('witness') || tagLower.includes('testimony') || tagLower.includes('survivor')) {
+                    tagClass += ' witness';
+                }
+                return `<span class="${tagClass}">${tag}</span>`;
+            }).join('');
+
+            // Handle both Arabic and English names
+            const displayName = caseItem.name || caseItem.arabicName || 'Unknown';
+            const profession = caseItem.profession || 'Healthcare Worker';
+            const hospital = caseItem.hospital || '';
+
+            card.innerHTML = `
+                <div class="case-image ${caseItem.hasPhoto ? 'has-photo' : ''}">
+                    <div class="case-overlay"></div>
+                    <span>${displayName}</span>
+                </div>
+                <div class="case-profession-badge">${profession}</div>
+                <div class="case-content">
+                    <div class="case-name">${displayName}</div>
+                    ${hospital ? `<div class="case-hospital">${hospital}</div>` : ''}
+                    <div class="case-details">Profession: ${profession} • Date: ${caseItem.date} • Location: ${caseItem.location}</div>
+                    <div class="case-tags">
+                        ${tagsHTML}
+                    </div>
+                    <div class="case-summary">
+                        ${caseItem.summary}
+                    </div>
+                    <div class="case-meta">
+                        <div class="case-source">${caseItem.source}</div>
+                        <div class="case-date">${caseItem.date}</div>
+                    </div>
+                </div>
+            `;
+
+            // Add click event
+            card.addEventListener('click', () => openModal(caseItem.id));
+
+            return card;
+        }
+
+        // Setup event listeners for cases
+        function setupCasesEventListeners() {
+            // Filter functionality
+            document.querySelectorAll('.nav-button').forEach(button => {
+                button.addEventListener('click', function() {
+                    // Update active button
+                    document.querySelectorAll('.nav-button').forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+
+                    // Update filter and re-render
+                    currentFilter = this.dataset.category;
+                    renderCases();
+                });
+            });
+        }
+
+        // Modal functionality
+        function openModal(caseId) {
+            const caseData = casesData.find(c => c.id === caseId);
+            if (!caseData) return;
+
+            const modal = document.getElementById('caseModal');
+            const modalHeader = document.getElementById('modalHeader');
+            const modalBody = document.getElementById('modalBody');
+
+            // Header
+            modalHeader.innerHTML = `
+                <h2>${caseData.name}</h2>
+                <div style="color: #666; margin-top: 0.5rem;">
+                    ${caseData.profession} • ${caseData.date} • ${caseData.location}
+                    ${caseData.hospital ? `<br>Hospital: ${caseData.hospital}` : ''}
+                </div>
+            `;
+
+            // Body
+            modalBody.innerHTML = `
+                <div class="case-summary" style="font-size: 1.1rem; margin-bottom: 2rem; padding: 1rem; background: #f8f9fa; border-radius: 8px;">
+                    ${caseData.summary}
+                </div>
+
+                <div class="story-timeline">
+                    <h4 style="color: #2c3e50; margin-bottom: 1rem;">Timeline of Events</h4>
+                    ${caseData.timeline.map(item => `
+                        <div class="timeline-item">
+                            <div class="timeline-date">${item.date}</div>
+                            <div class="timeline-content">${item.event}</div>
+                        </div>
+                    `).join('')}
+                </div>
+
+                <div class="witness-accounts">
+                    <h4>Witness Accounts & Evidence</h4>
+                    ${caseData.witnesses.map(witness => `
+                        <div class="witness-quote">${witness}</div>
+                    `).join('')}
+                </div>
+
+                <div class="media-coverage">
+                    <h4 style="color: #2c3e50; margin-bottom: 1rem;">Media Coverage & Sources</h4>
+                    <div class="media-links">
+                        ${caseData.mediaLinks.map(link => `
+                            <a href="${link.url}" class="media-link" target="_blank" rel="noopener noreferrer">
+                                <div class="media-icon">${link.source.charAt(0)}</div>
+                                <div>
+                                    <div style="font-weight: 600;">${link.source}</div>
+                                    <div style="color: #666; font-size: 0.9rem;">${link.title}</div>
+                                </div>
+                            </a>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('caseModal');
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Load evidence documentation (personnel-focused)
+        async function loadPersonnelEvidence() {
+            try {
+                const evidenceHtml = `
+                    <div class="evidence-notice" style="background: #e3f2fd; color: #1976d2; border: 1px solid #90caf9; padding: 1rem; border-radius: 8px;">
+                        <h4>Medical Personnel Evidence Documentation</h4>
+                        <p>Evidence documentation for medical personnel and emergency staff casualties is being compiled from verified sources including hospital records, WHO reports, and international medical organizations.</p>
+                    </div>
+                `;
+                document.getElementById('personnel-evidence').innerHTML = evidenceHtml;
+                document.getElementById('evidence-updated').textContent = `Last Updated: ${formatDate(new Date().toISOString().split('T')[0])}`;
+            } catch (error) {
+                console.error('Error loading evidence:', error);
+                document.getElementById('personnel-evidence').innerHTML = '<div class="error">Evidence section temporarily unavailable</div>';
+            }
+        }
+
+        // Load personnel timeline events
+        async function loadPersonnelTimeline() {
+            try {
+                const timelineHtml = `
+                    <div class="timeline-item">
+                        <div class="timeline-date">October 7, 2023 - Ongoing</div>
+                        <div class="timeline-content">
+                            <a href="#" target="_blank">Systematic targeting of medical personnel and emergency responders documented throughout the Gaza crisis. Healthcare workers continue to face unprecedented challenges while serving their communities under siege.</a>
+                        </div>
+                        <div class="timeline-meta">
+                            <span>Source: WHO, MSF, Palestinian Ministry of Health</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Multiple Dates</div>
+                        <div class="timeline-content">
+                            <a href="#" target="_blank">Hospital attacks and ambulance strikes documented by international organizations, resulting in significant casualties among medical staff and civil defense personnel.</a>
+                        </div>
+                        <div class="timeline-meta">
+                            <span>Source: UN OCHA, International Red Cross</span>
+                        </div>
+                    </div>
+                `;
+                document.getElementById('personnel-timeline').innerHTML = timelineHtml;
+                document.getElementById('timeline-updated').textContent = `Last Updated: ${formatDate(new Date().toISOString().split('T')[0])}`;
+            } catch (error) {
+                console.error('Error loading timeline:', error);
+                document.getElementById('personnel-timeline').innerHTML = '<div class="error">Timeline section temporarily unavailable</div>';
+            }
+        }
+
+        // Load medical personnel protection resources
+        async function loadPersonnelResources() {
+            try {
+                const resourcesHtml = `
+                    <div class="resource-category">
+                        <h4>International Medical Protection Laws</h4>
+                        <ul class="resource-list">
+                            <li>
+                                <a href="https://www.icrc.org/en/doc/war-and-law/protected-persons/medical-personnel/overview-medical-personnel.htm" target="_blank">Geneva Conventions - Protection of Medical Personnel</a>
+                                <div class="resource-meta">
+                                    <span>Updated: ${formatDate(new Date().toISOString().split('T')[0])}</span>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="https://www.who.int/emergencies/attacks-on-health-care" target="_blank">WHO - Attacks on Health Care Initiative</a>
+                                <div class="resource-meta">
+                                    <span>Updated: ${formatDate(new Date().toISOString().split('T')[0])}</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="resource-category">
+                        <h4>Medical Organizations</h4>
+                        <ul class="resource-list">
+                            <li>
+                                <a href="https://www.msf.org/" target="_blank">Médecins Sans Frontières (Doctors Without Borders)</a>
+                                <div class="resource-meta">
+                                    <span>Updated: ${formatDate(new Date().toISOString().split('T')[0])}</span>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="https://www.who.int/" target="_blank">World Health Organization</a>
+                                <div class="resource-meta">
+                                    <span>Updated: ${formatDate(new Date().toISOString().split('T')[0])}</span>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="https://www.icrc.org/" target="_blank">International Committee of the Red Cross</a>
+                                <div class="resource-meta">
+                                    <span>Updated: ${formatDate(new Date().toISOString().split('T')[0])}</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="resource-category">
+                        <h4>Legal Documentation & Accountability</h4>
+                        <ul class="resource-list">
+                            <li>
+                                <a href="https://www.icc-cpi.int/" target="_blank">International Criminal Court</a>
+                                <div class="resource-meta">
+                                    <span>Updated: ${formatDate(new Date().toISOString().split('T')[0])}</span>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="https://www.ohchr.org/" target="_blank">UN Office of the High Commissioner for Human Rights</a>
+                                <div class="resource-meta">
+                                    <span>Updated: ${formatDate(new Date().toISOString().split('T')[0])}</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                `;
+                document.getElementById('personnel-resources').innerHTML = resourcesHtml;
+                document.getElementById('resources-updated').textContent = `Last Updated: ${formatDate(new Date().toISOString().split('T')[0])}`;
+            } catch (error) {
+                console.error('Error loading resources:', error);
+                document.getElementById('personnel-resources').innerHTML = '<div class="error">Resources section temporarily unavailable</div>';
+            }
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('caseModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        // Initialize the medical personnel page
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Gaza Crisis Documentation - Medical Personnel & Emergency Staff Focus');
+            console.log('Loading healthcare workers casualty data...');
+
+            // Load main personnel data
+            loadPersonnelData();
+
+            // Load individual cases data
+            loadCasesData();
+
+            // Load supplementary sections
+            loadPersonnelEvidence();
+            loadPersonnelTimeline();
+            loadPersonnelResources();
+        });
+
+        // Make functions globally available
+        window.closeModal = closeModal;
+    </script>
+
+    <style>
+        /* Additional styles specific to medical personnel page */
+
+        /* Personnel Focus Indicator */
+        .personnel-focus-badge {
+            background: linear-gradient(45deg, #e74c3c, #3498db);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            display: inline-block;
+            margin-left: 1rem;
+        }
+
+        /* Personnel Breakdown Cards */
+        .personnel-breakdown-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .personnel-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 5px solid;
+        }
+
+        .personnel-card.medical {
+            border-top-color: #e74c3c;
+        }
+
+        .personnel-card.emergency {
+            border-top-color: #3498db;
+        }
+
+        .personnel-card.total {
+            border-top-color: #f39c12;
+        }
+
+        .personnel-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+        }
+
+        .personnel-card .personnel-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .personnel-card.medical .personnel-number {
+            color: #e74c3c;
+        }
+
+        .personnel-card.emergency .personnel-number {
+            color: #3498db;
+        }
+
+        .personnel-card.total .personnel-number {
+            color: #f39c12;
+        }
+
+        .personnel-card .personnel-label {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        .personnel-card .personnel-description {
+            font-size: 0.8rem;
+            color: #666;
+            background: #f8f9fa;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            display: inline-block;
+        }
+
+        /* Case card profession badge */
+        .case-profession-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: #3498db;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-weight: bold;
+            font-size: 0.8rem;
+            z-index: 3;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        /* Case hospital info */
+        .case-hospital {
+            font-size: 0.9rem;
+            color: #3498db;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-style: italic;
+        }
+
+        /* Evidence notice styling */
+        .evidence-notice {
+            border-radius: 8px;
+            padding: 1.5rem;
+        }
+
+        .evidence-notice h4 {
+            margin: 0 0 0.5rem 0;
+            color: #1976d2;
+            font-size: 1.1rem;
+        }
+
+        .evidence-notice p {
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        /* Responsive Design for Personnel Page */
+        @media (max-width: 768px) {
+            .personnel-breakdown-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .personnel-focus-badge {
+                margin-left: 0;
+                margin-top: 0.5rem;
+                display: block;
+                text-align: center;
+            }
+
+            .case-profession-badge {
+                position: static;
+                margin-bottom: 0.5rem;
+                display: inline-block;
+            }
+
+            .case-hospital {
+                font-size: 0.85rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .personnel-card {
+                padding: 1rem;
+            }
+
+            .personnel-card .personnel-number {
+                font-size: 2rem;
+            }
+
+            .case-content {
+                padding: 1rem;
+            }
+
+            .case-name {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</body>
+</html>
