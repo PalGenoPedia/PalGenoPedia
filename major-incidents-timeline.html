@@ -10,14 +10,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.Default.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/timelinejs3/3.8.25/css/timeline.css">
-    
+
     <!-- Main Styles -->
     <link rel="stylesheet" href="shared-styles.css">
 
     <style>
         /* ===== DUAL TIMELINE SPECIFIC STYLES ===== */
-        
+
         /* Timeline Mode Selector */
         .timeline-mode-selector {
             background: var(--surface-color);
@@ -425,7 +424,7 @@
                 <a href="hunger-crisis-stats.html" class="nav-btn">🍽️ Hunger Crisis</a>
                 <button class="nav-btn active">📋 Major Incidents</button>
 
-                <!-- View Controls -->
+                <!-- View Controls - Timeline is active by default -->
                 <button class="nav-btn view-btn active" data-view="timeline">📅 Timeline</button>
                 <button class="nav-btn view-btn" data-view="map">🗺️ Map</button>
                 <button class="nav-btn view-btn" data-view="list">📋 List</button>
@@ -472,7 +471,7 @@
                     </span>
                 </div>
                 <div class="mode-buttons">
-                    <!-- Historical Mode -->
+                    <!-- Historical Mode - ACTIVE BY DEFAULT -->
                     <button class="mode-btn historical active" data-mode="historical">
                         <div class="mode-icon">📜</div>
                         <span class="mode-label">Historical Massacres</span>
@@ -700,7 +699,7 @@
                         📊 Casualty Scale
                     </label>
                     <div class="casualty-scale-filters">
-                        <button class="scale-chip" data-scale="all">All Scales</button>
+                        <button class="scale-chip active" data-scale="all">All Scales</button>
                         <button class="scale-chip" data-scale="low">1-50 casualties</button>
                         <button class="scale-chip" data-scale="medium">51-500 casualties</button>
                         <button class="scale-chip" data-scale="high">501-2000 casualties</button>
@@ -721,15 +720,15 @@
             </div>
         </div>
 
-        <!-- Timeline View -->
+        <!-- Timeline View - ACTIVE BY DEFAULT -->
         <section class="view-section active" id="timelineView">
             <div class="container">
                 <div class="timeline-container">
                     <div id="timeline-embed" class="timeline">
                         <div class="timeline-loading">
                             <div class="loading-spinner"></div>
-                            <div class="loading-message">Loading Timeline Data...</div>
-                            <div class="loading-detail">Fetching historical and current data from verified sources...</div>
+                            <div class="loading-message">Loading Historical Timeline...</div>
+                            <div class="loading-detail">Fetching massacres data from 1948-2023...</div>
                         </div>
                     </div>
                 </div>
@@ -780,7 +779,7 @@
                     <div class="no-results-icon">🔍</div>
                     <h3>No events found</h3>
                     <p>Try adjusting your filters or search criteria.</p>
-                    <button onclick="clearAllFilters()" class="clear-all-btn">Clear All Filters</button>
+                    <button onclick="window.dualTimeline.clearAllFilters()" class="clear-all-btn">Clear All Filters</button>
                 </div>
             </div>
         </section>
@@ -860,8 +859,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
 
-    <!-- Custom Scripts -->
-    <script src="timeline.js"></script>
+    <!-- Custom Scripts - ONLY dual-timeline-manager.js (timeline.js removed) -->
     <script src="dual-timeline-manager.js"></script>
 </body>
 </html>
