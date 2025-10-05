@@ -1,0 +1,778 @@
+```css
+/* ================================================
+   EVENT DOCUMENTATION STYLES
+   Reusable styles for massacre/war crime documentation pages
+   Compatible with: shared-styles.css, unified-crisis-styles.css
+   ================================================ */
+
+/* ================================================
+   1. CONTAINER & LAYOUT
+   ================================================ */
+.event-documentation {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* ================================================
+   2. HERO SECTION
+   ================================================ */
+.event-hero {
+    background: linear-gradient(135deg, rgba(220, 53, 69, 0.95), rgba(139, 0, 0, 0.95));
+    color: white;
+    padding: 2rem 1.5rem;
+    border-radius: var(--border-radius-lg);
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-lg);
+}
+
+.event-category {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.35rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.event-title {
+    font-size: 2rem;
+    font-weight: 900;
+    margin: 0 0 0.75rem 0;
+    line-height: 1.2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.event-subtitle {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.95;
+    font-weight: 300;
+    line-height: 1.4;
+}
+
+.event-meta-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+}
+
+.meta-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 0.75rem;
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.meta-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    opacity: 0.9;
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+}
+
+.meta-value {
+    font-size: 1.3rem;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.meta-detail {
+    font-size: 0.75rem;
+    opacity: 0.9;
+    margin-top: 0.25rem;
+}
+
+/* ================================================
+   3. BREADCRUMB NAVIGATION
+   ================================================ */
+.breadcrumb {
+    background: var(--bg-secondary);
+    padding: 0.75rem 1rem;
+    border-radius: var(--border-radius);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    font-size: 0.85rem;
+}
+
+.breadcrumb a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: var(--transition-base);
+}
+
+.breadcrumb a:hover {
+    color: var(--accent-color);
+}
+
+.breadcrumb-separator {
+    color: var(--text-muted);
+}
+
+/* ================================================
+   4. CONTENT SECTIONS
+   ================================================ */
+.content-section {
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.section-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.section-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.section-content {
+    color: var(--text-primary);
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+.section-content p {
+    margin-bottom: 1rem;
+}
+
+.section-content h3 {
+    color: var(--text-primary);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 1.5rem 0 0.75rem 0;
+}
+
+.section-content h4 {
+    color: var(--text-primary);
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin: 1.25rem 0 0.5rem 0;
+}
+
+/* ================================================
+   5. CASUALTIES BREAKDOWN
+   ================================================ */
+.casualties-breakdown {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 0.75rem;
+    margin: 1.5rem 0;
+}
+
+.casualty-card {
+    background: var(--bg-secondary);
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    text-align: center;
+    transition: var(--transition-base);
+}
+
+.casualty-card:hover {
+    border-color: var(--accent-color);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+}
+
+.casualty-card.deaths {
+    border-left: 4px solid #dc3545;
+}
+
+.casualty-card.injured {
+    border-left: 4px solid #ffc107;
+}
+
+.casualty-card.displaced {
+    border-left: 4px solid #6f42c1;
+}
+
+.casualty-card.missing {
+    border-left: 4px solid #6c757d;
+}
+
+.casualty-number {
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--accent-color);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.casualty-label {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    font-weight: 600;
+}
+
+.casualty-detail {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    margin-top: 0.5rem;
+    line-height: 1.3;
+}
+
+/* ================================================
+   6. WAR CRIMES LIST
+   ================================================ */
+.war-crimes-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.war-crimes-list li {
+    background: rgba(220, 53, 69, 0.05);
+    border-left: 3px solid #dc3545;
+    padding: 0.75rem;
+    margin-bottom: 0.75rem;
+    border-radius: var(--border-radius-sm);
+    transition: var(--transition-base);
+}
+
+.war-crimes-list li:hover {
+    background: rgba(220, 53, 69, 0.1);
+}
+
+.war-crime-title {
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.35rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.war-crime-description {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+.source-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    transition: var(--transition-base);
+}
+
+.source-link:hover {
+    color: var(--accent-color);
+    gap: 0.5rem;
+}
+
+/* ================================================
+   7. TIMELINE
+   ================================================ */
+.event-timeline {
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.event-timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--accent-color), var(--border-color));
+}
+
+.timeline-item {
+    position: relative;
+    padding-bottom: 1.25rem;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -1.65rem;
+    top: 0.2rem;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--accent-color);
+    border: 2px solid var(--surface-color);
+    box-shadow: 0 0 0 2px var(--accent-color);
+}
+
+.timeline-time {
+    font-weight: 700;
+    color: var(--accent-color);
+    margin-bottom: 0.35rem;
+    font-size: 0.85rem;
+}
+
+.timeline-content {
+    background: var(--bg-secondary);
+    padding: 0.75rem;
+    border-radius: var(--border-radius-sm);
+    border: 1px solid var(--border-light);
+    font-size: 0.9rem;
+}
+
+/* ================================================
+   8. TESTIMONIES
+   ================================================ */
+.testimony-card {
+    background: var(--bg-secondary);
+    border-left: 3px solid var(--info-color);
+    padding: 1rem;
+    border-radius: var(--border-radius-sm);
+    margin-bottom: 1rem;
+}
+
+.testimony-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.witness-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--info-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.witness-info {
+    flex: 1;
+}
+
+.witness-name {
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.15rem;
+    font-size: 0.9rem;
+}
+
+.witness-role {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+}
+
+.testimony-text {
+    font-style: italic;
+    line-height: 1.6;
+    color: var(--text-primary);
+    padding: 0.75rem;
+    background: var(--surface-color);
+    border-radius: var(--border-radius-sm);
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+}
+
+.testimony-source {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+}
+
+/* ================================================
+   9. SOURCES SECTION
+   ================================================ */
+.sources-compact {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.source-item-compact {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-sm);
+    padding: 1rem;
+    transition: var(--transition-base);
+}
+
+.source-item-compact:hover {
+    border-color: var(--secondary-color);
+    box-shadow: var(--shadow-sm);
+}
+
+.source-header-compact {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.source-icon-compact {
+    width: 35px;
+    height: 35px;
+    background: var(--secondary-color);
+    color: white;
+    border-radius: var(--border-radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.source-name-compact {
+    font-weight: 700;
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    line-height: 1.2;
+}
+
+.source-type-compact {
+    font-size: 0.7rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.source-description-compact {
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin-bottom: 0.75rem;
+    font-size: 0.85rem;
+}
+
+.source-verification {
+    display: inline-block;
+    background: rgba(40, 167, 69, 0.1);
+    color: #28a745;
+    padding: 0.2rem 0.6rem;
+    border-radius: 10px;
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+/* ================================================
+   10. ALERT BOXES
+   ================================================ */
+.alert-box {
+    padding: 1rem;
+    border-radius: var(--border-radius-sm);
+    margin: 1.5rem 0;
+    border-left: 4px solid;
+    font-size: 0.9rem;
+}
+
+.alert-box.warning {
+    background: rgba(255, 193, 7, 0.1);
+    border-color: #ffc107;
+}
+
+.alert-box.info {
+    background: rgba(23, 162, 184, 0.1);
+    border-color: #17a2b8;
+}
+
+.alert-box.critical {
+    background: rgba(220, 53, 69, 0.1);
+    border-color: #dc3545;
+}
+
+.alert-box.success {
+    background: rgba(40, 167, 69, 0.1);
+    border-color: #28a745;
+}
+
+.alert-icon {
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+}
+
+/* ================================================
+   11. CALL TO ACTION SECTION
+   ================================================ */
+.cta-section {
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+    color: #ffffff;
+    padding: 2rem 1.5rem;
+    border-radius: var(--border-radius-lg);
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.cta-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: #ffffff;
+}
+
+.cta-description {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.95;
+    color: #ffffff;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-btn {
+    background: #ffffff;
+    color: #2563eb;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: 700;
+    transition: var(--transition-base);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    border: 2px solid #ffffff;
+}
+
+.cta-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    background: #f0f9ff;
+}
+
+.cta-btn.secondary {
+    background: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+}
+
+.cta-btn.secondary:hover {
+    background: #ffffff;
+    color: #2563eb;
+}
+
+/* ================================================
+   12. QUICK INFO BOX
+   ================================================ */
+.quick-info-box {
+    background: var(--bg-secondary);
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    margin: 1.5rem 0;
+}
+
+.quick-info-title {
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+}
+
+.quick-info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    font-size: 0.85rem;
+}
+
+.quick-info-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-label {
+    color: var(--text-secondary);
+    font-size: 0.75rem;
+    margin-bottom: 0.15rem;
+}
+
+.info-value {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+/* ================================================
+   13. RESPONSIVE - DESKTOP
+   ================================================ */
+@media (min-width: 769px) {
+    .event-documentation {
+        padding: 2rem;
+    }
+
+    .event-title {
+        font-size: 2.5rem;
+    }
+
+    .event-meta-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .casualties-breakdown {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .quick-info-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .event-documentation {
+        padding: 2.5rem 3rem;
+    }
+}
+
+/* ================================================
+   14. RESPONSIVE - MOBILE
+   ================================================ */
+@media (max-width: 768px) {
+    .event-documentation {
+        padding: 0.75rem;
+    }
+
+    .event-hero {
+        padding: 1.5rem 1rem;
+    }
+
+    .event-title {
+        font-size: 1.5rem;
+    }
+
+    .event-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .event-meta-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .content-section {
+        padding: 1.25rem;
+    }
+
+    .section-title {
+        font-size: 1.15rem;
+    }
+
+    .casualties-breakdown {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+    }
+
+    .cta-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .quick-info-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .breadcrumb {
+        font-size: 0.75rem;
+        padding: 0.5rem 0.75rem;
+    }
+
+    .section-content {
+        font-size: 0.9rem;
+    }
+
+    .meta-value {
+        font-size: 1.1rem;
+    }
+
+    .casualty-number {
+        font-size: 1.75rem;
+    }
+
+    .cta-title {
+        font-size: 1.25rem;
+    }
+
+    .cta-description {
+        font-size: 0.9rem;
+    }
+}
+
+/* ================================================
+   15. PRINT STYLES
+   ================================================ */
+@media print {
+    .breadcrumb,
+    .cta-section {
+        display: none;
+    }
+
+    .event-hero {
+        background: #dc3545;
+        -webkit-print-color-adjust: exact;
+        color-adjust: exact;
+    }
+
+    .content-section {
+        page-break-inside: avoid;
+    }
+}
+
+/* ================================================
+   16. ACCESSIBILITY
+   ================================================ */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Focus styles for keyboard navigation */
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 2px;
+}
+```

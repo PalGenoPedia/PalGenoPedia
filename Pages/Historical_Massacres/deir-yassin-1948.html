@@ -1,0 +1,523 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Loading...</title>
+    <meta name="description" id="page-description" content="">
+    <meta name="keywords" id="page-keywords" content="">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="../../shared-styles.css">
+    <link rel="stylesheet" href="../../unified-crisis-styles.css">
+    <link rel="stylesheet" href="event-documentation-styles.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">
+                <a href="../../index.html">Gaza Crisis Documentation</a>
+            </h1>
+            <nav class="nav">
+                <a href="../../war-crimes-stats.html" class="nav-btn">⚖️ War Crimes</a>
+                <a href="../../hunger-crisis-stats.html" class="nav-btn">🍽️ Hunger Crisis</a>
+                <a href="../../major-incidents-timeline.html" class="nav-btn active">📋 Timeline</a>
+            </nav>
+            <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="event-documentation">
+        <!-- Breadcrumb Navigation -->
+        <div class="breadcrumb" id="breadcrumb-container">
+            <!-- Generated from JSON -->
+        </div>
+
+        <!-- Hero Section -->
+        <div class="event-hero" id="hero-section">
+            <!-- Generated from JSON -->
+        </div>
+
+        <!-- Quick Info -->
+        <div class="quick-info-box" id="quick-info">
+            <!-- Generated from JSON -->
+        </div>
+
+        <!-- Executive Summary -->
+        <section class="content-section" id="executive-summary">
+            <!-- Generated from JSON -->
+        </section>
+
+        <!-- Casualties Documentation -->
+        <section class="content-section" id="casualties-section">
+            <!-- Generated from JSON -->
+        </section>
+
+        <!-- Timeline -->
+        <section class="content-section" id="timeline-section">
+            <!-- Generated from JSON -->
+        </section>
+
+        <!-- Documented Atrocities -->
+        <section class="content-section" id="war-crimes-section">
+            <!-- Generated from JSON -->
+        </section>
+
+        <!-- International Law -->
+        <section class="content-section" id="international-law-section">
+            <!-- Generated from JSON -->
+        </section>
+
+        <!-- Witness Testimonies -->
+        <section class="content-section" id="testimonies-section">
+            <!-- Generated from JSON -->
+        </section>
+
+        <!-- Historical Impact -->
+        <section class="content-section" id="historical-impact-section">
+            <!-- Generated from JSON -->
+        </section>
+
+        <!-- Verified Sources -->
+        <section class="content-section" id="sources-section">
+            <!-- Generated from JSON -->
+        </section>
+
+        <!-- Call to Action -->
+        <div class="cta-section" id="cta-section">
+            <!-- Generated from JSON -->
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+    <script>
+        fetch('../../common-styles.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('footer-placeholder').innerHTML = html;
+            })
+            .catch(error => {
+                console.error('Error loading footer:', error);
+            });
+    </script>
+
+    <!-- Main Script - Load and Render JSON Data -->
+    <script>
+        // Get JSON filename from HTML filename (e.g., deir-yassin-1948.html -> deir-yassin-1948.json)
+        const jsonFilename = window.location.pathname.split('/').pop().replace('.html', '.json');
+        
+        // Load JSON data
+        async function loadEventData() {
+            try {
+                const response = await fetch(jsonFilename);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const data = await response.json();
+                renderPage(data);
+            } catch (error) {
+                console.error('Error loading event data:', error);
+                document.querySelector('.event-documentation').innerHTML = `
+                    <div class="alert-box critical">
+                        <span class="alert-icon">⚠️</span>
+                        <strong>Error:</strong> Unable to load event data. Please check that ${jsonFilename} exists.
+                    </div>
+                `;
+            }
+        }
+
+        // Render entire page from JSON data
+        function renderPage(data) {
+            // Update metadata
+            document.getElementById('page-title').textContent = data.metadata.pageTitle;
+            document.getElementById('page-description').setAttribute('content', data.metadata.description);
+            document.getElementById('page-keywords').setAttribute('content', data.metadata.keywords);
+
+            // Render breadcrumb
+            renderBreadcrumb(data.breadcrumb);
+
+            // Render hero section
+            renderHero(data.hero);
+
+            // Render quick facts
+            renderQuickFacts(data.quickFacts);
+
+            // Render executive summary
+            renderExecutiveSummary(data.executiveSummary);
+
+            // Render casualties
+            renderCasualties(data.casualties);
+
+            // Render timeline
+            renderTimeline(data.timeline);
+
+            // Render war crimes
+            renderWarCrimes(data.warCrimes);
+
+            // Render international law
+            renderInternationalLaw(data.internationalLaw);
+
+            // Render testimonies
+            renderTestimonies(data.testimonies);
+
+            // Render historical impact
+            renderHistoricalImpact(data.historicalImpact);
+
+            // Render sources
+            renderSources(data.sources);
+
+            // Render CTA
+            renderCTA(data.cta);
+
+            // Initialize animations
+            initializeAnimations();
+        }
+
+        // Render functions for each section
+        function renderBreadcrumb(breadcrumb) {
+            const container = document.getElementById('breadcrumb-container');
+            container.innerHTML = breadcrumb.items.map((item, index) => {
+                if (item.link) {
+                    return `<a href="${item.link}">${item.text}</a>`;
+                } else {
+                    return `<span>${item.text}</span>`;
+                }
+            }).join('<span class="breadcrumb-separator">→</span>');
+        }
+
+        function renderHero(hero) {
+            const container = document.getElementById('hero-section');
+            container.innerHTML = `
+                <div class="event-category">${hero.category}</div>
+                <h1 class="event-title">${hero.title}</h1>
+                <p class="event-subtitle">${hero.subtitle}</p>
+                <div class="event-meta-grid">
+                    ${hero.metaCards.map(card => `
+                        <div class="meta-card">
+                            <div class="meta-label">${card.icon} ${card.label}</div>
+                            <div class="meta-value">${card.value}</div>
+                            ${card.detail ? `<div class="meta-detail">${card.detail}</div>` : ''}
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+        }
+
+        function renderQuickFacts(quickFacts) {
+            const container = document.getElementById('quick-info');
+            container.innerHTML = `
+                <div class="quick-info-title">${quickFacts.title}</div>
+                <div class="quick-info-grid">
+                    ${quickFacts.items.map(item => `
+                        <div class="quick-info-item">
+                            <span class="info-label">${item.label}</span>
+                            <span class="info-value">${item.value}</span>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+        }
+
+        function renderExecutiveSummary(summary) {
+            const container = document.getElementById('executive-summary');
+            container.innerHTML = `
+                <div class="section-header">
+                    <span class="section-icon">${summary.icon}</span>
+                    <h2 class="section-title">${summary.title}</h2>
+                </div>
+                <div class="section-content">
+                    <div class="alert-box ${summary.alert.type}">
+                        <span class="alert-icon">${summary.alert.icon}</span>
+                        ${summary.alert.text}
+                    </div>
+                    ${summary.paragraphs.map(p => `<p>${p}</p>`).join('')}
+                </div>
+            `;
+        }
+
+        function renderCasualties(casualties) {
+            const container = document.getElementById('casualties-section');
+            container.innerHTML = `
+                <div class="section-header">
+                    <span class="section-icon">${casualties.icon}</span>
+                    <h2 class="section-title">${casualties.title}</h2>
+                </div>
+                <div class="section-content">
+                    <div class="casualties-breakdown">
+                        ${casualties.breakdown.map(item => `
+                            <div class="casualty-card ${item.type}">
+                                <div class="casualty-number">${item.number}</div>
+                                <div class="casualty-label">${item.label}</div>
+                                <div class="casualty-detail">${item.detail}</div>
+                            </div>
+                        `).join('')}
+                    </div>
+                    <div class="alert-box ${casualties.alert.type}">
+                        <span class="alert-icon">${casualties.alert.icon}</span>
+                        ${casualties.alert.text}
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderTimeline(timeline) {
+            const container = document.getElementById('timeline-section');
+            container.innerHTML = `
+                <div class="section-header">
+                    <span class="section-icon">${timeline.icon}</span>
+                    <h2 class="section-title">${timeline.title}</h2>
+                </div>
+                <div class="section-content">
+                    <div class="event-timeline">
+                        ${timeline.events.map(event => `
+                            <div class="timeline-item">
+                                <div class="timeline-time">${event.time}</div>
+                                <div class="timeline-content">
+                                    <strong>${event.title}:</strong> ${event.description}
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderWarCrimes(warCrimes) {
+            const container = document.getElementById('war-crimes-section');
+            container.innerHTML = `
+                <div class="section-header">
+                    <span class="section-icon">${warCrimes.icon}</span>
+                    <h2 class="section-title">${warCrimes.title}</h2>
+                </div>
+                <div class="section-content">
+                    <div class="alert-box ${warCrimes.alert.type}">
+                        <span class="alert-icon">${warCrimes.alert.icon}</span>
+                        ${warCrimes.alert.text}
+                    </div>
+                    <ul class="war-crimes-list">
+                        ${warCrimes.crimes.map(crime => `
+                            <li>
+                                <div class="war-crime-title">
+                                    <span>${crime.icon}</span>
+                                    ${crime.title}
+                                </div>
+                                <div class="war-crime-description">${crime.description}</div>
+                                ${crime.sourceLink ? `
+                                    <a href="${crime.sourceLink}" class="source-link" target="_blank" rel="noopener">
+                                        ${crime.sourceText}
+                                    </a>
+                                ` : ''}
+                            </li>
+                        `).join('')}
+                    </ul>
+                </div>
+            `;
+        }
+
+        function renderInternationalLaw(law) {
+            const container = document.getElementById('international-law-section');
+            container.innerHTML = `
+                <div class="section-header">
+                    <span class="section-icon">${law.icon}</span>
+                    <h2 class="section-title">${law.title}</h2>
+                </div>
+                <div class="section-content">
+                    <p>${law.introduction}</p>
+                    ${law.sections.map(section => `
+                        <h4>${section.heading}</h4>
+                        <ul style="margin: 0.5rem 0 1rem 1.5rem; line-height: 1.7;">
+                            ${section.violations.map(v => `<li>${v}</li>`).join('')}
+                        </ul>
+                    `).join('')}
+                    <div class="alert-box ${law.alert.type}">
+                        <span class="alert-icon">${law.alert.icon}</span>
+                        ${law.alert.text}
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderTestimonies(testimonies) {
+            const container = document.getElementById('testimonies-section');
+            container.innerHTML = `
+                <div class="section-header">
+                    <span class="section-icon">${testimonies.icon}</span>
+                    <h2 class="section-title">${testimonies.title}</h2>
+                </div>
+                <div class="section-content">
+                    <div class="alert-box ${testimonies.alert.type}">
+                        <span class="alert-icon">${testimonies.alert.icon}</span>
+                        ${testimonies.alert.text}
+                    </div>
+                    ${testimonies.witnesses.map(witness => `
+                        <div class="testimony-card">
+                            <div class="testimony-header">
+                                <div class="witness-avatar">${witness.initials}</div>
+                                <div class="witness-info">
+                                    <div class="witness-name">${witness.name}</div>
+                                    <div class="witness-role">${witness.role}</div>
+                                </div>
+                            </div>
+                            <div class="testimony-text">"${witness.testimony}"</div>
+                            <div class="testimony-source">
+                                <strong>Source:</strong> ${witness.source}
+                                ${witness.sourceLink ? `
+                                    <a href="${witness.sourceLink}" class="source-link" target="_blank" rel="noopener">
+                                        ${witness.sourceText}
+                                    </a>
+                                ` : ''}
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+        }
+
+        function renderHistoricalImpact(impact) {
+            const container = document.getElementById('historical-impact-section');
+            container.innerHTML = `
+                <div class="section-header">
+                    <span class="section-icon">${impact.icon}</span>
+                    <h2 class="section-title">${impact.title}</h2>
+                </div>
+                <div class="section-content">
+                    ${impact.sections.map(section => `
+                        <h3>${section.heading}</h3>
+                        <ul style="margin: 0.5rem 0; padding-left: 1.5rem; line-height: 1.7;">
+                            ${section.items.map(item => `<li>${item}</li>`).join('')}
+                        </ul>
+                    `).join('')}
+                </div>
+            `;
+        }
+
+        function renderSources(sources) {
+            const container = document.getElementById('sources-section');
+            container.innerHTML = `
+                <div class="section-header">
+                    <span class="section-icon">${sources.icon}</span>
+                    <h2 class="section-title">${sources.title}</h2>
+                </div>
+                <div class="section-content">
+                    <p style="margin-bottom: 1rem; font-size: 0.9rem;">${sources.introduction}</p>
+                    <div class="sources-compact">
+                        ${sources.list.map(source => `
+                            <div class="source-item-compact">
+                                <div class="source-header-compact">
+                                    <div class="source-icon-compact">${source.icon}</div>
+                                    <div>
+                                        <div class="source-name-compact">${source.name}</div>
+                                        <div class="source-type-compact">${source.type}</div>
+                                    </div>
+                                </div>
+                                <div class="source-description-compact">${source.description}</div>
+                                ${source.link ? `
+                                    <a href="${source.link}" class="source-link" target="_blank" rel="noopener">
+                                        ${source.linkText}
+                                    </a>
+                                ` : ''}
+                                ${source.verified ? '<span class="source-verification">✅ Verified</span>' : ''}
+                            </div>
+                        `).join('')}
+                    </div>
+                    <div class="alert-box ${sources.alert.type}" style="margin-top: 1.5rem;">
+                        <span class="alert-icon">${sources.alert.icon}</span>
+                        ${sources.alert.text}
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderCTA(cta) {
+            const container = document.getElementById('cta-section');
+            container.innerHTML = `
+                <h2 class="cta-title">${cta.title}</h2>
+                <p class="cta-description">${cta.description}</p>
+                <div class="cta-buttons">
+                    ${cta.buttons.map(button => `
+                        <a href="${button.link}" 
+                           class="cta-btn ${button.type === 'secondary' ? 'secondary' : ''}"
+                           ${button.action === 'print' ? 'onclick="window.print(); return false;"' : ''}
+                           ${button.link.startsWith('http') || button.link.startsWith('mailto') ? 'target="_blank" rel="noopener"' : ''}>
+                            ${button.text}
+                        </a>
+                    `).join('')}
+                </div>
+            `;
+        }
+
+        function initializeAnimations() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.content-section').forEach(section => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(20px)';
+                section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(section);
+            });
+        }
+
+        // Theme functions
+        function initializeTheme() {
+            const savedTheme = localStorage.getItem('gaza-docs-theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            updateThemeIcon(savedTheme);
+        }
+
+        function updateThemeIcon(theme) {
+            const themeToggle = document.querySelector('.theme-toggle');
+            if (themeToggle) {
+                themeToggle.textContent = theme === 'dark' ? '☀️' : '🌙';
+            }
+        }
+
+        document.querySelector('.theme-toggle')?.addEventListener('click', function() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('gaza-docs-theme', newTheme);
+            updateThemeIcon(newTheme);
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Initialize everything on load
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeTheme();
+            loadEventData();
+            console.log('✅ Event documentation page initialized with JSON data');
+        });
+    </script>
+</body>
+</html>
+```

@@ -1,0 +1,406 @@
+{
+  "metadata": {
+    "pageTitle": "Deir Yassin Massacre (1948) - Complete Documentation | Gaza Crisis Documentation",
+    "description": "Comprehensive documentation of the Deir Yassin Massacre of April 9, 1948. Verified sources, casualty records, war crimes documentation, and historical analysis.",
+    "keywords": "Deir Yassin, 1948, Nakba, Palestine, massacre, war crimes, Irgun, Lehi, historical documentation",
+    "lastUpdated": "2025-10-05"
+  },
+  "breadcrumb": {
+    "items": [
+      { "text": "🏠 Home", "link": "../../index.html" },
+      { "text": "📋 Timeline", "link": "../../major-incidents-timeline.html" },
+      { "text": "📜 Historical", "link": "../../major-incidents-timeline.html?mode=historical" },
+      { "text": "Deir Yassin 1948", "link": null }
+    ]
+  },
+  "hero": {
+    "category": "📜 HISTORICAL MASSACRE • NAKBA 1948",
+    "title": "Deir Yassin Massacre",
+    "subtitle": "The massacre that shocked the world and became a symbol of the Palestinian Nakba",
+    "metaCards": [
+      {
+        "icon": "📅",
+        "label": "Date",
+        "value": "April 9, 1948",
+        "detail": null
+      },
+      {
+        "icon": "📍",
+        "label": "Location",
+        "value": "Deir Yassin",
+        "detail": null
+      },
+      {
+        "icon": "💀",
+        "label": "Deaths",
+        "value": "107",
+        "detail": "Civilians"
+      },
+      {
+        "icon": "🏠",
+        "label": "Displaced",
+        "value": "600",
+        "detail": "Full village"
+      }
+    ]
+  },
+  "quickFacts": {
+    "title": "⚡ Quick Facts",
+    "items": [
+      {
+        "label": "Perpetrators",
+        "value": "Irgun & Lehi (Zionist militias)"
+      },
+      {
+        "label": "Verification",
+        "value": "✅ Verified by UN, Red Cross, British archives"
+      },
+      {
+        "label": "Injured",
+        "value": "50+ documented survivors"
+      },
+      {
+        "label": "Classification",
+        "value": "War Crime, Crimes Against Humanity"
+      }
+    ]
+  },
+  "executiveSummary": {
+    "title": "Executive Summary",
+    "icon": "📋",
+    "alert": {
+      "type": "critical",
+      "icon": "⚠️",
+      "text": "<strong>War Crime Classification:</strong> Deliberate killing of civilians, sexual violence, mutilation, and forced displacement."
+    },
+    "paragraphs": [
+      "On April 9, 1948, approximately 120 fighters from Irgun and Lehi attacked the Palestinian village of Deir Yassin near Jerusalem, killing at least 107 villagers including women and children. The massacre involved documented sexual violence, mutilation of bodies, and systematic destruction of homes.",
+      "The attack occurred despite Deir Yassin having signed a non-aggression pact with neighboring Jewish communities. The massacre became one of the most notorious events of the 1948 Palestine war (Nakba), triggering mass panic and contributing significantly to the Palestinian exodus.",
+      "Despite initial attempts to deny the atrocities, extensive documentation from Red Cross workers, British officials, and survivors confirmed the scale of violence. No perpetrators were prosecuted, and Irgun leader Menachem Begin later became Prime Minister of Israel."
+    ]
+  },
+  "casualties": {
+    "title": "Casualties",
+    "icon": "💀",
+    "breakdown": [
+      {
+        "type": "deaths",
+        "number": "107",
+        "label": "Deaths",
+        "detail": "35 women, 52 children, 20 elderly"
+      },
+      {
+        "type": "injured",
+        "number": "50+",
+        "label": "Injured",
+        "detail": "Severe trauma, gunshot wounds"
+      },
+      {
+        "type": "displaced",
+        "number": "600",
+        "label": "Displaced",
+        "detail": "Entire village population"
+      }
+    ],
+    "alert": {
+      "type": "info",
+      "icon": "ℹ️",
+      "text": "<strong>Data Sources:</strong> Red Cross documentation, British Mandate records, survivor testimonies, and historical research. Some sources cite higher tolls (up to 254), but 107 is the most reliably documented figure."
+    }
+  },
+  "timeline": {
+    "title": "Timeline of Events",
+    "icon": "⏱️",
+    "events": [
+      {
+        "time": "4:30 AM",
+        "title": "Attack Begins",
+        "description": "120 Irgun and Lehi fighters approach village under darkness. Loudspeaker warnings inaudible and confusing."
+      },
+      {
+        "time": "5:00 - 8:00 AM",
+        "title": "Heavy Fighting",
+        "description": "Village defenders resist with limited weapons. Attackers use explosives and grenades. Many shot while fleeing."
+      },
+      {
+        "time": "8:00 - 11:00 AM",
+        "title": "Haganah Arrives",
+        "description": "Haganah unit assists attackers. Village falls. Systematic house-to-house operations begin."
+      },
+      {
+        "time": "Late Morning - Afternoon",
+        "title": "Atrocities",
+        "description": "Mass executions, sexual violence, mutilation documented. Houses looted and destroyed."
+      },
+      {
+        "time": "Evening",
+        "title": "Aftermath",
+        "description": "Survivors paraded through Jerusalem. Bodies left for days before disposal. Red Cross arrives."
+      }
+    ]
+  },
+  "warCrimes": {
+    "title": "Documented Atrocities",
+    "icon": "⚠️",
+    "alert": {
+      "type": "warning",
+      "icon": "⚠️",
+      "text": "<strong>Content Warning:</strong> Graphic descriptions of violence documented for historical record."
+    },
+    "crimes": [
+      {
+        "icon": "💀",
+        "title": "Mass Execution of Civilians",
+        "description": "Villagers lined up against walls and executed by firing squad. Bodies found throughout village riddled with bullets.",
+        "sourceLink": "https://www.icrc.org/en/doc/resources/documents/misc/palestine-history.htm",
+        "sourceText": "📄 Red Cross Report 1948 →"
+      },
+      {
+        "icon": "👶",
+        "title": "Killing of Children and Infants",
+        "description": "Children killed alongside parents. Survivor Fahimi Zidan (age 12): \"They started shooting at us... most of us children were saved because we hid behind our parents.\"",
+        "sourceLink": "https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/palestine/",
+        "sourceText": "📄 British Police Testimony (April 13, 1948) →"
+      },
+      {
+        "icon": "🚺",
+        "title": "Sexual Violence Against Women",
+        "description": "Multiple survivor accounts documented rape and sexual violence. British Assistant Inspector Richard Catling: \"Many sexual atrocities were committed... Many young school girls were raped and later slaughtered.\"",
+        "sourceLink": "https://www.nationalarchives.gov.uk/",
+        "sourceText": "📄 British CID Secret Report (Declassified) →"
+      },
+      {
+        "icon": "⚰️",
+        "title": "Mutilation of Bodies",
+        "description": "Red Cross representative Jacques de Reynier and Haganah officer Meir Pa'il documented mutilated bodies, including \"cut off genitalia and women's crushed stomachs.\"",
+        "sourceLink": "https://www.icrc.org/",
+        "sourceText": "📄 ICRC Documentation →"
+      },
+      {
+        "icon": "🏠",
+        "title": "Destruction and Looting",
+        "description": "Systematic looting of homes, theft of valuables and livestock. Village later demolished; psychiatric hospital built on site.",
+        "sourceLink": null,
+        "sourceText": null
+      },
+      {
+        "icon": "🚶",
+        "title": "Forced Displacement",
+        "description": "Survivors paraded through Jewish neighborhoods before being dumped at Damascus Gate. Public humiliation photographed and publicized.",
+        "sourceLink": "https://www.palestine-studies.org/",
+        "sourceText": "📄 Institute for Palestine Studies →"
+      }
+    ]
+  },
+  "internationalLaw": {
+    "title": "International Law Violations",
+    "icon": "⚖️",
+    "introduction": "The Deir Yassin massacre violated multiple principles of international humanitarian law:",
+    "sections": [
+      {
+        "heading": "Under Geneva Conventions (1949)",
+        "violations": [
+          "<strong>Article 3:</strong> Protection of civilians - village had non-aggression pact",
+          "<strong>Article 27:</strong> Prohibition of sexual violence, torture, and cruel treatment"
+        ]
+      },
+      {
+        "heading": "Under Hague Conventions (1899, 1907)",
+        "violations": [
+          "<strong>Article 23:</strong> Killing defenseless persons explicitly prohibited",
+          "<strong>Article 25:</strong> Protection of undefended places violated"
+        ]
+      },
+      {
+        "heading": "Modern Classification (Rome Statute)",
+        "violations": [
+          "<strong>Crimes Against Humanity:</strong> Murder, rape, and inhumane acts against civilians",
+          "<strong>War Crimes:</strong> Willful killing, torture, extensive destruction not justified by military necessity"
+        ]
+      }
+    ],
+    "alert": {
+      "type": "critical",
+      "icon": "⚖️",
+      "text": "<strong>Legal Status:</strong> These crimes are imprescriptible (no statute of limitations) under international law. Despite documentation, no perpetrators were ever prosecuted."
+    }
+  },
+  "testimonies": {
+    "title": "Witness Testimonies",
+    "icon": "👥",
+    "alert": {
+      "type": "warning",
+      "icon": "⚠️",
+      "text": "<strong>Content Warning:</strong> Graphic first-hand accounts included for historical documentation."
+    },
+    "witnesses": [
+      {
+        "initials": "JR",
+        "name": "Jacques de Reynier",
+        "role": "Red Cross Representative",
+        "testimony": "The first thing I saw were people running everywhere, carrying and looting all sorts of things... All that I saw were young men and elderly civilians, and about a dozen bodies. The bodies were in cold blood, among them women and children.",
+        "source": "\"A Jerusalem Un Drapeau Flottait Sur La Ligne De Feu\" (1950)",
+        "sourceLink": "https://www.icrc.org/",
+        "sourceText": "📄 Read Full Report →"
+      },
+      {
+        "initials": "FZ",
+        "name": "Fahimi Zidan",
+        "role": "Child Survivor (Age 12)",
+        "testimony": "The Jews ordered all of us to line up against the wall. They started shooting at us. I was wounded in the side, but most of us children were saved because we hid behind our parents. The bullets hit my sister Kadri in the head, my sister Sameh in the cheek, my brother Muhammad in the chest.",
+        "source": "British Palestine Police, April 13, 1948",
+        "sourceLink": "https://www.nationalarchives.gov.uk/",
+        "sourceText": "📄 UK National Archives →"
+      },
+      {
+        "initials": "MP",
+        "name": "Meir Pa'il",
+        "role": "Haganah Intelligence Officer",
+        "testimony": "I saw cut off genitalia and women's crushed stomachs... It was direct murder. Haganah command tried to hush up the case... We had to admit there was something terrible here, a massacre.",
+        "source": "Interview with Yediot Aharonot, April 4, 1972",
+        "sourceLink": "https://www.ynetnews.com/",
+        "sourceText": "📄 Israeli Press Archive →"
+      },
+      {
+        "initials": "RC",
+        "name": "Richard Catling",
+        "role": "British Assistant Inspector General",
+        "testimony": "There is no doubt that many sexual atrocities were committed by the attacking Jews. Many young school girls were raped and later slaughtered. Old women were also molested.",
+        "source": "Secret report to British High Commissioner, April 13, 1948 (Declassified)",
+        "sourceLink": "https://www.nationalarchives.gov.uk/",
+        "sourceText": "📄 Declassified UK Archives →"
+      }
+    ]
+  },
+  "historicalImpact": {
+    "title": "Historical Impact",
+    "icon": "🌍",
+    "sections": [
+      {
+        "heading": "Immediate Impact",
+        "items": [
+          "<strong>Mass Panic:</strong> News spread rapidly, causing widespread fear among Palestinians",
+          "<strong>Mass Exodus:</strong> ~250,000 Palestinians fled their homes in following weeks (1/3 of total Nakba refugees)",
+          "<strong>Haifa Evacuation:</strong> 70,000 Palestinians fled Haifa citing Deir Yassin as reason",
+          "<strong>Strategic Impact:</strong> Depopulation facilitated Zionist military campaign"
+        ]
+      },
+      {
+        "heading": "Long-term Significance",
+        "items": [
+          "Central symbol in Palestinian collective memory of the Nakba",
+          "Commemorated annually on April 9",
+          "Referenced extensively in Palestinian literature and political discourse",
+          "Subject of ongoing historical debate in Israel (New Historians vs. traditional narratives)",
+          "Relevant to contemporary discussions of Palestinian right of return"
+        ]
+      },
+      {
+        "heading": "Justice & Accountability",
+        "items": [
+          "❌ No perpetrators ever prosecuted",
+          "❌ Menachem Begin (Irgun leader) became Israeli Prime Minister (1977-1983)",
+          "❌ Village site never returned; psychiatric hospital built on lands (1951)",
+          "❌ International condemnation but no accountability mechanisms implemented"
+        ]
+      }
+    ]
+  },
+  "sources": {
+    "title": "Verified Sources",
+    "icon": "📚",
+    "introduction": "Documentation based on cross-referenced primary sources from international organizations, government archives, and academic research.",
+    "list": [
+      {
+        "icon": "🇺🇳",
+        "name": "UN Security Council",
+        "type": "International Organization",
+        "description": "UN discussions and documents from April-May 1948 regarding Deir Yassin and broader Palestine violence.",
+        "link": "https://www.un.org/securitycouncil/",
+        "linkText": "View UN Archives →",
+        "verified": true
+      },
+      {
+        "icon": "🏥",
+        "name": "International Red Cross (ICRC)",
+        "type": "Humanitarian Organization",
+        "description": "First-hand reports by Jacques de Reynier who visited April 10-11, 1948. Detailed casualty documentation and eyewitness accounts.",
+        "link": "https://www.icrc.org/",
+        "linkText": "ICRC Website →",
+        "verified": true
+      },
+      {
+        "icon": "🇬🇧",
+        "name": "British Mandate Archives",
+        "type": "Government Records",
+        "description": "Declassified police investigations, witness testimonies, Richard Catling report (April 13, 1948).",
+        "link": "https://www.nationalarchives.gov.uk/",
+        "linkText": "UK National Archives →",
+        "verified": true
+      },
+      {
+        "icon": "⚖️",
+        "name": "Human Rights Watch",
+        "type": "Human Rights Organization",
+        "description": "Historical analysis within context of 1948 war and international humanitarian law.",
+        "link": "https://www.hrw.org/",
+        "linkText": "HRW Website →",
+        "verified": true
+      },
+      {
+        "icon": "📖",
+        "name": "Academic Research",
+        "type": "Peer-Reviewed Scholarship",
+        "description": "Key works: Benny Morris \"Birth of the Palestinian Refugee Problem\" (2004), Walid Khalidi \"Deir Yassin\" (1999), Matthew Hogan \"The 1948 Massacre\" (2001).",
+        "link": null,
+        "linkText": null,
+        "verified": true
+      },
+      {
+        "icon": "🇮🇱",
+        "name": "Israeli Military Archives",
+        "type": "IDF Historical Archives",
+        "description": "Declassified Haganah intelligence reports, internal communications, testimonies from officers present.",
+        "link": "https://www.archives.mod.gov.il/",
+        "linkText": "IDF Archives →",
+        "verified": true
+      },
+      {
+        "icon": "🇵🇸",
+        "name": "Institute for Palestine Studies",
+        "type": "Research Institute",
+        "description": "Survivor testimonies, photographic documentation, village records, demographic data.",
+        "link": "https://www.palestine-studies.org/",
+        "linkText": "IPS Website →",
+        "verified": true
+      }
+    ],
+    "alert": {
+      "type": "info",
+      "icon": "ℹ️",
+      "text": "<strong>Methodology:</strong> All sources cross-referenced. Casualty figures represent conservative estimates from most reliable documentation. Historical methodology prioritizes primary documents and eyewitness accounts."
+    }
+  },
+  "cta": {
+    "title": "Help Preserve Historical Memory",
+    "description": "Support ongoing documentation efforts to preserve historical truth and honor victims.",
+    "buttons": [
+      {
+        "text": "📅 View Full Timeline",
+        "link": "../../major-incidents-timeline.html",
+        "type": "primary"
+      },
+      {
+        "text": "🖨️ Print/Save PDF",
+        "link": "#",
+        "type": "secondary",
+        "action": "print"
+      },
+      {
+        "text": "📧 Submit Info",
+        "link": "mailto:palgeno.pedia@gmx.de?subject=Deir Yassin Massacre - Additional Information",
+        "type": "secondary"
+      }
+    ]
+  }
+}
