@@ -4,152 +4,412 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Major Incidents Timeline - Gaza Crisis Documentation</title>
-    <meta name="description" content="Interactive timeline, map, and detailed documentation of major incidents in Gaza">
+    <meta name="description" content="Comprehensive timeline of historical massacres (1948-2023) and current genocide (2023-present) in Gaza and Palestine">
 
     <!-- External CSS Libraries -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.Default.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/timelinejs3/3.8.25/css/timeline.css">
+    
     <!-- Main Styles -->
     <link rel="stylesheet" href="shared-styles.css">
 
-<style>
-/* Major incidents page specific styles */
-.controls {
-    background: var(--surface-color, #1a1a1a);
-    border: 1px solid var(--border-color, #333);
-    padding: 1rem;
-    margin-bottom: 2rem;
-    border-radius: var(--border-radius, 6px);
-}
+    <style>
+        /* ===== DUAL TIMELINE SPECIFIC STYLES ===== */
+        
+        /* Timeline Mode Selector */
+        .timeline-mode-selector {
+            background: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius-lg);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-md);
+        }
 
-.search-filter {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-    flex-wrap: wrap;
-}
+        .mode-selector-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
 
-.search-input, .filter-select, .sort-select {
-    background: var(--bg-secondary, rgba(255, 107, 53, 0.05));
-    border: 1px solid var(--border-color, #333);
-    color: var(--text-primary, #ffffff);
-    padding: 0.5rem 1rem;
-    border-radius: var(--border-radius, 6px);
-    font-size: 0.9rem;
-}
+        .mode-selector-header h3 {
+            color: var(--text-primary);
+            font-size: 1.2rem;
+            margin: 0;
+        }
 
-.clear-btn {
-    background: var(--secondary-color, #dc3545);
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: var(--border-radius, 6px);
-    cursor: pointer;
-}
+        .mode-buttons {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
 
-.timeline-container, .map-container {
-    background: var(--surface-color, #1a1a1a);
-    border-radius: var(--border-radius, 6px);
-    padding: 1rem;
-    min-height: 600px;
-}
+        .mode-btn {
+            background: var(--bg-secondary);
+            border: 2px solid var(--border-color);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: var(--transition-base);
+            text-align: center;
+        }
 
-.view-section {
-    display: none;
-}
+        .mode-btn:hover {
+            border-color: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-sm);
+        }
 
-.view-section.active {
-    display: block;
-}
+        .mode-btn.active {
+            border-color: var(--accent-color);
+            background: linear-gradient(135deg, rgba(220, 53, 69, 0.1), rgba(220, 53, 69, 0.05));
+            box-shadow: var(--shadow-md);
+        }
 
-/* Modal styles */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 10000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.8);
-}
+        .mode-btn.historical.active {
+            border-color: #6c757d;
+            background: linear-gradient(135deg, rgba(108, 117, 125, 0.1), rgba(108, 117, 125, 0.05));
+        }
 
-.modal-content {
-    background: var(--surface-color, #1a1a1a);
-    margin: 5% auto;
-    padding: 0;
-    border-radius: var(--border-radius, 6px);
-    width: 90%;
-    max-width: 800px;
-    max-height: 80vh;
-    overflow-y: auto;
-}
+        .mode-btn.current.active {
+            border-color: #dc3545;
+            background: linear-gradient(135deg, rgba(220, 53, 69, 0.1), rgba(220, 53, 69, 0.05));
+        }
 
-.modal-header {
-    padding: 1.5rem;
-    border-bottom: 1px solid var(--border-color, #333);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+        .mode-btn.both.active {
+            border-color: #0d6efd;
+            background: linear-gradient(135deg, rgba(13, 110, 253, 0.1), rgba(13, 110, 253, 0.05));
+        }
 
-.modal-close {
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: var(--text-secondary, #cccccc);
-}
+        .mode-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
 
-/* CSV loading indicator */
-.csv-loading {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 400px;
-    text-align: center;
-    color: var(--text-secondary);
-}
+        .mode-label {
+            font-weight: 600;
+            color: var(--text-primary);
+            display: block;
+            margin-bottom: 0.25rem;
+            font-size: 1rem;
+        }
 
-.csv-loading .loading-spinner {
-    width: 40px;
-    height: 40px;
-    border: 4px solid var(--border-color);
-    border-top: 4px solid var(--accent-color);
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-    margin-bottom: 20px;
-}
+        .mode-period {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
 
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
+        .mode-stats {
+            margin-top: 0.75rem;
+            padding-top: 0.75rem;
+            border-top: 1px solid var(--border-light);
+        }
 
-.csv-status {
-    background: var(--light-color);
-    border: 1px solid var(--border-color);
-    padding: 1rem;
-    border-radius: 6px;
-    margin-bottom: 1rem;
-    font-size: 14px;
-}
+        .mode-stat {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.25rem;
+        }
 
-.csv-success {
-    border-color: #28a745;
-    background: rgba(40, 167, 69, 0.1);
-    color: #28a745;
-}
+        .mode-stat strong {
+            color: var(--accent-color);
+            font-weight: 700;
+        }
 
-.csv-error {
-    border-color: #dc3545;
-    background: rgba(220, 53, 69, 0.1);
-    color: #dc3545;
-}
-</style>
+        /* Enhanced Filters */
+        .advanced-filters {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .filter-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .filter-label {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .casualty-scale-filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .scale-chip {
+            background: var(--bg-tertiary);
+            border: 2px solid transparent;
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: var(--transition-base);
+            white-space: nowrap;
+        }
+
+        .scale-chip:hover {
+            border-color: var(--secondary-color);
+        }
+
+        .scale-chip.active {
+            background: var(--secondary-color);
+            color: white;
+            border-color: var(--secondary-color);
+        }
+
+        /* Timeline Statistics Dashboard */
+        .timeline-stats-dashboard {
+            background: linear-gradient(135deg, var(--bg-secondary), var(--bg-tertiary));
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius-lg);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-md);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .stat-card {
+            background: var(--surface-color);
+            border: 1px solid var(--border-light);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            text-align: center;
+            transition: var(--transition-base);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .stat-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            margin-bottom: 0.25rem;
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .stat-sublabel {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-top: 0.25rem;
+        }
+
+        /* Period Comparison */
+        .period-comparison {
+            background: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .comparison-header {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .comparison-card {
+            background: var(--bg-secondary);
+            border-left: 4px solid var(--accent-color);
+            padding: 1rem;
+            border-radius: var(--border-radius-sm);
+        }
+
+        .comparison-card.historical {
+            border-left-color: #6c757d;
+        }
+
+        .comparison-card.current {
+            border-left-color: #dc3545;
+        }
+
+        .comparison-title {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .comparison-stats {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+
+        .comparison-stat {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .comparison-stat strong {
+            color: var(--text-primary);
+        }
+
+        /* Event Type Legend */
+        .event-type-legend {
+            background: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .legend-title {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.75rem;
+            font-size: 0.9rem;
+        }
+
+        .legend-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+        }
+
+        .legend-color {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            border: 2px solid white;
+            box-shadow: var(--shadow-sm);
+        }
+
+        /* Data Source Badge */
+        .data-source-indicator {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(13, 110, 253, 0.1);
+            color: #0d6efd;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border: 1px solid rgba(13, 110, 253, 0.3);
+        }
+
+        /* Loading States */
+        .timeline-loading {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 400px;
+            text-align: center;
+        }
+
+        .loading-spinner {
+            width: 60px;
+            height: 60px;
+            border: 6px solid var(--border-color);
+            border-top: 6px solid var(--accent-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 1.5rem;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .loading-message {
+            color: var(--text-primary);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .loading-detail {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .mode-buttons {
+                grid-template-columns: 1fr;
+            }
+
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .filter-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -169,7 +429,6 @@
                 <button class="nav-btn view-btn active" data-view="timeline">📅 Timeline</button>
                 <button class="nav-btn view-btn" data-view="map">🗺️ Map</button>
                 <button class="nav-btn view-btn" data-view="list">📋 List</button>
-
             </nav>
             <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
         </div>
@@ -182,20 +441,20 @@
             <div class="container">
                 <div class="header-content">
                     <div class="header-text">
-                        <h1>📋 Major Incidents Timeline</h1>
-                        <p>Comprehensive documentation of significant crisis events with interactive timeline, map visualization, and detailed incident records. <strong>Now powered by CSV data.</strong></p>
+                        <h1>📋 Historical & Current Timeline</h1>
+                        <p>Comprehensive documentation from 1948 Nakba through current genocide. Interactive timeline with verified sources from UN, Human Rights Watch, and other international organizations.</p>
                     </div>
                     <div class="header-stats" id="headerStats">
                         <div class="quick-stat">
-                            <span class="stat-value" id="totalIncidents">Loading...</span>
-                            <span class="stat-label">Total Incidents</span>
+                            <span class="stat-value" id="totalEvents">Loading...</span>
+                            <span class="stat-label">Total Events</span>
                         </div>
                         <div class="quick-stat">
-                            <span class="stat-value" id="verifiedIncidents">Loading...</span>
-                            <span class="stat-label">Verified</span>
+                            <span class="stat-value" id="totalDeaths">Loading...</span>
+                            <span class="stat-label">Total Deaths</span>
                         </div>
                         <div class="quick-stat">
-                            <span class="stat-value" id="lastUpdateStat">Loading...</span>
+                            <span class="stat-value" id="lastUpdate">Loading...</span>
                             <span class="stat-label">Last Updated</span>
                         </div>
                     </div>
@@ -203,38 +462,261 @@
             </div>
         </div>
 
-        <!-- CSV Loading Status -->
-        <div id="csvStatus" class="container" style="display: none;">
-            <div class="csv-status" id="csvStatusContent">
-                📊 Loading crisis data from CSV files...
-            </div>
-        </div>
-
-        <!-- Controls -->
-        <div id="controls" class="controls">
-            <div class="container">
-                <div class="search-filter">
-                    <input type="text" id="searchInput" placeholder="Search incidents, locations, descriptions..." class="search-input">
-                    <select id="typeFilter" class="filter-select">
-                        <option value="">All Types</option>
-                        <option value="hunger">Hunger Crisis</option>
-                        <option value="water">Water Shortage</option>
-                        <option value="aid">Aid Blockage</option>
-                        <option value="casualties">Casualties</option>
-                        <option value="infrastructure">Infrastructure</option>
-                    </select>
-                    <select id="dateFilter" class="filter-select">
-                        <option value="">All Dates</option>
-                        <option value="today">Today</option>
-                        <option value="week">This Week</option>
-                        <option value="month">This Month</option>
-                        <option value="quarter">Last 3 Months</option>
-                    </select>
-                    <button id="clearFilters" class="clear-btn">Clear Filters</button>
+        <div class="container">
+            <!-- Timeline Mode Selector -->
+            <div class="timeline-mode-selector">
+                <div class="mode-selector-header">
+                    <h3>📊 Select Timeline Period</h3>
+                    <span class="data-source-indicator">
+                        🔍 Sources: UN, Human Rights Watch
+                    </span>
                 </div>
-                <div class="stats">
-                    <span id="incidentCount">Loading incidents...</span>
-                    <span id="lastUpdated">Last updated: Loading...</span>
+                <div class="mode-buttons">
+                    <!-- Historical Mode -->
+                    <button class="mode-btn historical active" data-mode="historical">
+                        <div class="mode-icon">📜</div>
+                        <span class="mode-label">Historical Massacres</span>
+                        <span class="mode-period">1948 - October 6, 2023</span>
+                        <div class="mode-stats">
+                            <div class="mode-stat">
+                                <span>Events:</span>
+                                <strong id="historicalCount">17</strong>
+                            </div>
+                            <div class="mode-stat">
+                                <span>Deaths:</span>
+                                <strong id="historicalDeaths">27K+</strong>
+                            </div>
+                        </div>
+                    </button>
+
+                    <!-- Current Mode -->
+                    <button class="mode-btn current" data-mode="current">
+                        <div class="mode-icon">🚨</div>
+                        <span class="mode-label">Current Genocide</span>
+                        <span class="mode-period">October 7, 2023 - Present</span>
+                        <div class="mode-stats">
+                            <div class="mode-stat">
+                                <span>Events:</span>
+                                <strong id="currentCount">10</strong>
+                            </div>
+                            <div class="mode-stat">
+                                <span>Deaths:</span>
+                                <strong id="currentDeaths">61K+</strong>
+                            </div>
+                        </div>
+                    </button>
+
+                    <!-- Both Mode -->
+                    <button class="mode-btn both" data-mode="both">
+                        <div class="mode-icon">📊</div>
+                        <span class="mode-label">Complete Timeline</span>
+                        <span class="mode-period">1948 - Present</span>
+                        <div class="mode-stats">
+                            <div class="mode-stat">
+                                <span>Total Events:</span>
+                                <strong id="bothCount">27</strong>
+                            </div>
+                            <div class="mode-stat">
+                                <span>Total Deaths:</span>
+                                <strong id="bothDeaths">88K+</strong>
+                            </div>
+                        </div>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Statistics Dashboard -->
+            <div class="timeline-stats-dashboard" id="statsDashboard">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">⚠️</div>
+                        <div class="stat-number" id="massacresCount">0</div>
+                        <div class="stat-label">Massacres</div>
+                        <div class="stat-sublabel">Documented Events</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">💀</div>
+                        <div class="stat-number" id="deathsCount">0</div>
+                        <div class="stat-label">Total Deaths</div>
+                        <div class="stat-sublabel">Verified Casualties</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🏥</div>
+                        <div class="stat-number" id="injuredCount">0</div>
+                        <div class="stat-label">Injured</div>
+                        <div class="stat-sublabel">Documented Injuries</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🏠</div>
+                        <div class="stat-number" id="displacedCount">0</div>
+                        <div class="stat-label">Displaced</div>
+                        <div class="stat-sublabel">Forced Displacement</div>
+                    </div>
+                </div>
+
+                <!-- Period Comparison (shown in "both" mode) -->
+                <div class="period-comparison" id="periodComparison" style="display: none;">
+                    <div class="comparison-header">
+                        📊 Historical vs Current Comparison
+                    </div>
+                    <div class="comparison-grid">
+                        <div class="comparison-card historical">
+                            <div class="comparison-title">📜 Historical Period (1948-2023)</div>
+                            <div class="comparison-stats">
+                                <div class="comparison-stat">
+                                    <span>Duration:</span>
+                                    <strong>75 years</strong>
+                                </div>
+                                <div class="comparison-stat">
+                                    <span>Major Events:</span>
+                                    <strong id="compHistEvents">17</strong>
+                                </div>
+                                <div class="comparison-stat">
+                                    <span>Total Deaths:</span>
+                                    <strong id="compHistDeaths">27,000+</strong>
+                                </div>
+                                <div class="comparison-stat">
+                                    <span>Avg Deaths/Year:</span>
+                                    <strong id="compHistAvg">360</strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comparison-card current">
+                            <div class="comparison-title">🚨 Current Genocide (Oct 2023-Present)</div>
+                            <div class="comparison-stats">
+                                <div class="comparison-stat">
+                                    <span>Duration:</span>
+                                    <strong id="genocideDuration">12 months</strong>
+                                </div>
+                                <div class="comparison-stat">
+                                    <span>Major Events:</span>
+                                    <strong id="compCurrEvents">10</strong>
+                                </div>
+                                <div class="comparison-stat">
+                                    <span>Total Deaths:</span>
+                                    <strong id="compCurrDeaths">61,200+</strong>
+                                </div>
+                                <div class="comparison-stat">
+                                    <span>Avg Deaths/Day:</span>
+                                    <strong id="compCurrAvg">167</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event Type Legend -->
+            <div class="event-type-legend">
+                <div class="legend-title">📌 Event Types</div>
+                <div class="legend-items">
+                    <div class="legend-item">
+                        <span class="legend-color" style="background: #dc3545;"></span>
+                        <span>Massacres</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color" style="background: #fd7e14;"></span>
+                        <span>Military Operations</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color" style="background: #6f42c1;"></span>
+                        <span>Forced Displacement</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color" style="background: #e83e8c;"></span>
+                        <span>Hospital Attacks</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color" style="background: #6c757d;"></span>
+                        <span>Starvation Warfare</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color" style="background: #0d6efd;"></span>
+                        <span>Protest Suppression</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Advanced Filters -->
+            <div class="advanced-filters">
+                <div class="filter-grid">
+                    <!-- Date Range Filter -->
+                    <div class="filter-group">
+                        <label class="filter-label">
+                            📅 Date Range
+                        </label>
+                        <select id="dateRangeFilter" class="filter-select">
+                            <option value="">All Dates</option>
+                            <option value="nakba">Nakba (1948)</option>
+                            <option value="first_intifada">First Intifada (1987-1993)</option>
+                            <option value="second_intifada">Second Intifada (2000-2005)</option>
+                            <option value="gaza_operations">Gaza Operations (2008-2021)</option>
+                            <option value="current_genocide">Current Genocide (2023-Present)</option>
+                        </select>
+                    </div>
+
+                    <!-- Event Type Filter -->
+                    <div class="filter-group">
+                        <label class="filter-label">
+                            🏷️ Event Type
+                        </label>
+                        <select id="eventTypeFilter" class="filter-select">
+                            <option value="">All Types</option>
+                            <option value="massacre">Massacres</option>
+                            <option value="military_operation">Military Operations</option>
+                            <option value="forced_displacement">Forced Displacement</option>
+                            <option value="hospital_attack">Hospital Attacks</option>
+                            <option value="protected_site_attack">Protected Site Attacks</option>
+                            <option value="starvation_warfare">Starvation Warfare</option>
+                            <option value="protest_suppression">Protest Suppression</option>
+                        </select>
+                    </div>
+
+                    <!-- Search Filter -->
+                    <div class="filter-group">
+                        <label class="filter-label">
+                            🔍 Search
+                        </label>
+                        <input type="text" id="searchFilter" class="search-input" placeholder="Search events, locations...">
+                    </div>
+
+                    <!-- Verification Status -->
+                    <div class="filter-group">
+                        <label class="filter-label">
+                            ✅ Verification
+                        </label>
+                        <select id="verificationFilter" class="filter-select">
+                            <option value="">All Statuses</option>
+                            <option value="verified">Verified</option>
+                            <option value="disputed">Disputed</option>
+                            <option value="under_investigation">Under Investigation</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Casualty Scale Chips -->
+                <div class="filter-group" style="margin-top: 1rem;">
+                    <label class="filter-label">
+                        📊 Casualty Scale
+                    </label>
+                    <div class="casualty-scale-filters">
+                        <button class="scale-chip" data-scale="all">All Scales</button>
+                        <button class="scale-chip" data-scale="low">1-50 casualties</button>
+                        <button class="scale-chip" data-scale="medium">51-500 casualties</button>
+                        <button class="scale-chip" data-scale="high">501-2000 casualties</button>
+                        <button class="scale-chip" data-scale="massive">2000+ casualties</button>
+                    </div>
+                </div>
+
+                <div style="margin-top: 1rem; text-align: right;">
+                    <button id="clearAllFilters" class="clear-btn">🔄 Clear All Filters</button>
+                </div>
+            </div>
+
+            <!-- Loading Status -->
+            <div id="timelineStatus" class="container" style="display: none;">
+                <div class="csv-status" id="timelineStatusContent">
+                    📊 Loading timeline data...
                 </div>
             </div>
         </div>
@@ -244,13 +726,10 @@
             <div class="container">
                 <div class="timeline-container">
                     <div id="timeline-embed" class="timeline">
-                        <div class="csv-loading">
+                        <div class="timeline-loading">
                             <div class="loading-spinner"></div>
-                            <h3>Loading CSV Data...</h3>
-                            <p>Fetching incident data from CSV files...</p>
-                            <div class="csv-progress">
-                                <p id="csvProgress">Initializing...</p>
-                            </div>
+                            <div class="loading-message">Loading Timeline Data...</div>
+                            <div class="loading-detail">Fetching historical and current data from verified sources...</div>
                         </div>
                     </div>
                 </div>
@@ -264,11 +743,11 @@
                     <div id="map" class="map"></div>
                     <div class="map-legend">
                         <h4>Incident Types</h4>
-                        <div class="legend-item"><span class="marker hunger"></span> Hunger Crisis</div>
-                        <div class="legend-item"><span class="marker water"></span> Water Shortage</div>
-                        <div class="legend-item"><span class="marker aid"></span> Aid Blockage</div>
-                        <div class="legend-item"><span class="marker casualties"></span> Casualties</div>
-                        <div class="legend-item"><span class="marker infrastructure"></span> Infrastructure</div>
+                        <div class="legend-item"><span class="marker" style="background: #dc3545;"></span> Massacres</div>
+                        <div class="legend-item"><span class="marker" style="background: #fd7e14;"></span> Military Operations</div>
+                        <div class="legend-item"><span class="marker" style="background: #6f42c1;"></span> Forced Displacement</div>
+                        <div class="legend-item"><span class="marker" style="background: #e83e8c;"></span> Hospital Attacks</div>
+                        <div class="legend-item"><span class="marker" style="background: #6c757d;"></span> Starvation Warfare</div>
                     </div>
                 </div>
             </div>
@@ -278,26 +757,29 @@
         <section class="view-section" id="listView">
             <div class="container">
                 <div class="list-header">
-                    <h2>Incident Documentation</h2>
+                    <h2>Event Documentation</h2>
                     <div class="sort-controls">
                         <label for="sortSelect">Sort by:</label>
                         <select id="sortSelect" class="sort-select">
                             <option value="date-desc">Date (Newest First)</option>
                             <option value="date-asc">Date (Oldest First)</option>
-                            <option value="type">Type</option>
+                            <option value="deaths-desc">Deaths (Highest First)</option>
+                            <option value="type">Event Type</option>
                             <option value="location">Location</option>
-                            <option value="severity">Severity</option>
                         </select>
                     </div>
                 </div>
                 <div class="incident-grid" id="incidentGrid">
-                    <!-- Incidents will be populated here -->
+                    <!-- Events will be populated here -->
                 </div>
-                <div class="loading" id="loading">Loading incidents from CSV...</div>
+                <div class="loading" id="loading">
+                    <div class="loading-spinner"></div>
+                    <span>Loading events...</span>
+                </div>
                 <div class="no-results" id="noResults" style="display: none;">
                     <div class="no-results-icon">🔍</div>
-                    <h3>No incidents found</h3>
-                    <p>Try adjusting your search criteria or filters.</p>
+                    <h3>No events found</h3>
+                    <p>Try adjusting your filters or search criteria.</p>
                     <button onclick="clearAllFilters()" class="clear-all-btn">Clear All Filters</button>
                 </div>
             </div>
@@ -308,7 +790,7 @@
     <div class="modal" id="incidentModal">
         <div class="modal-content">
             <div class="modal-header">
-                <h2 id="modalTitle">Incident Details</h2>
+                <h2 id="modalTitle">Event Details</h2>
                 <button class="modal-close" aria-label="Close modal">&times;</button>
             </div>
             <div class="modal-body">
@@ -320,40 +802,42 @@
                                 <strong>📅 Date:</strong> <span id="modalDate"></span>
                             </div>
                             <div class="detail-item">
-                                <strong>🕒 Time:</strong> <span id="modalTime"></span>
-                            </div>
-                            <div class="detail-item">
                                 <strong>📍 Location:</strong> <span id="modalLocation"></span>
                             </div>
                             <div class="detail-item">
-                                <strong>🏷️ Type:</strong> <span id="modalType"></span>
+                                <strong>🏷️ Event Type:</strong> <span id="modalType"></span>
+                            </div>
+                            <div class="detail-item">
+                                <strong>✅ Verification:</strong> <span id="modalVerification"></span>
                             </div>
                         </div>
                     </div>
 
                     <div class="detail-section">
-                        <h4>📄 Description</h4>
-                        <p id="modalDescription"></p>
+                        <h4>📄 Summary</h4>
+                        <p id="modalSummary"></p>
                     </div>
 
                     <div class="detail-section" id="modalCasualtiesSection">
-                        <h4>👥 Impact & Casualties</h4>
-                        <div id="modalCasualties"></div>
+                        <h4>💥 Casualties & Impact</h4>
+                        <div id="modalCasualties" class="casualties-display"></div>
                     </div>
 
-                    <div class="detail-section" id="modalEvidenceSection">
-                        <h4>📸 Evidence</h4>
-                        <div id="modalEvidence" class="evidence-container"></div>
+                    <div class="detail-section" id="modalWarCrimesSection">
+                        <h4>⚖️ War Crimes Documented</h4>
+                        <div id="modalWarCrimes" class="war-crimes-list"></div>
                     </div>
 
                     <div class="detail-section">
-                        <h4>📰 Sources</h4>
+                        <h4>📰 Verified Sources</h4>
                         <div id="modalSources" class="sources-container"></div>
                     </div>
 
                     <div class="detail-section">
-                        <div class="verification-container">
-                            <span id="modalVerification" class="verification-badge"></span>
+                        <div class="modal-actions">
+                            <a id="modalDetailPage" href="#" class="detail-page-btn" target="_blank">
+                                📖 View Full Documentation →
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -361,6 +845,7 @@
         </div>
     </div>
 
+    <!-- Footer -->
     <div id="footer-placeholder"></div>
     <script>
         fetch('common-styles.html')
@@ -373,514 +858,10 @@
     <!-- External JavaScript Libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/timelinejs3/3.8.25/js/timeline.min.js"></script>
-
-    <!-- CRITICAL: Papa Parse for CSV parsing -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
 
-    <!-- Enhanced CSV Data Initialization Script -->
-    <script>
-        console.log('🔧 Initializing major incidents page with CSV data loading...');
-
-        // Enhanced CSV loading with progress tracking
-        let csvLoadingStatus = {
-            incidents: false,
-            casualties: false,
-            total: 0,
-            loaded: 0
-        };
-
-        // Initialize global variables properly
-        window.incidents = [];
-        window.filteredIncidents = [];
-        window.currentView = 'timeline';
-        window.map = null;
-        window.markers = [];
-        window.dataLoaded = false;
-
-        // Type colors configuration
-        window.GazaDocsPlatform = {
-            typeColors: {
-                hunger: '#e53e3e',
-                water: '#3182ce',
-                aid: '#d69e2e',
-                casualties: '#805ad5',
-                infrastructure: '#38a169'
-            },
-            incidents: [],
-            filteredIncidents: []
-        };
-
-        // Update loading progress
-        function updateCSVProgress(message) {
-            const progressEl = document.getElementById('csvProgress');
-            const statusEl = document.getElementById('csvStatusContent');
-
-            if (progressEl) {
-                progressEl.textContent = message;
-            }
-
-            if (statusEl) {
-                statusEl.innerHTML = `📊 ${message}`;
-                const statusContainer = document.getElementById('csvStatus');
-                if (statusContainer) {
-                    statusContainer.style.display = 'block';
-                }
-            }
-
-            console.log('CSV Progress:', message);
-        }
-
-        // Show CSV loading success
-        function showCSVSuccess(incidentCount) {
-            const statusEl = document.getElementById('csvStatusContent');
-            const statusContainer = document.getElementById('csvStatus');
-
-            if (statusEl) {
-                statusEl.innerHTML = `✅ Successfully loaded ${incidentCount} incidents from CSV files`;
-                statusEl.className = 'csv-status csv-success';
-            }
-
-            // Hide status after 3 seconds
-            setTimeout(() => {
-                if (statusContainer) {
-                    statusContainer.style.display = 'none';
-                }
-            }, 3000);
-        }
-
-        // Show CSV loading error
-        function showCSVError(error) {
-            const statusEl = document.getElementById('csvStatusContent');
-            const statusContainer = document.getElementById('csvStatus');
-
-            if (statusEl) {
-                statusEl.innerHTML = `❌ Error loading CSV data: ${error}`;
-                statusEl.className = 'csv-status csv-error';
-            }
-
-            console.error('CSV Loading Error:', error);
-        }
-
-        // Enhanced CSV data loading function
-        async function loadIncidentsDataFromCSV() {
-            try {
-                console.log('📊 Loading incidents data from CSV files...');
-                updateCSVProgress('Initializing CSV data loading...');
-
-                // Show loading state in header stats
-                document.getElementById('totalIncidents').textContent = 'Loading...';
-                document.getElementById('verifiedIncidents').textContent = 'Loading...';
-                document.getElementById('lastUpdateStat').textContent = 'Loading...';
-
-                // Load main incidents CSV
-                updateCSVProgress('Loading main incidents data...');
-                const incidentsData = await loadCSVFile('incidents.csv');
-                csvLoadingStatus.incidents = true;
-                console.log(`✅ Loaded ${incidentsData.length} incidents from CSV`);
-
-                // Load casualties details CSV
-                updateCSVProgress('Loading casualty details...');
-                const casualtiesData = await loadCSVFile('casualties-details.csv');
-                csvLoadingStatus.casualties = true;
-                console.log(`✅ Loaded ${casualtiesData.length} casualty records from CSV`);
-
-                // Process and combine the data
-                updateCSVProgress('Processing and combining data...');
-                const processedIncidents = processIncidentsData(incidentsData, casualtiesData);
-
-                console.log(`✅ Processed ${processedIncidents.length} complete incidents`);
-
-                // Update all global references
-                window.incidents = processedIncidents;
-                window.filteredIncidents = [...processedIncidents];
-                window.incidentsData = {
-                    incidents: processedIncidents,
-                    metadata: {
-                        lastUpdated: new Date().toISOString(),
-                        totalIncidents: processedIncidents.length,
-                        dataVersion: '2.0-csv'
-                    }
-                };
-                window.GazaDocsPlatform.incidents = processedIncidents;
-                window.GazaDocsPlatform.filteredIncidents = window.filteredIncidents;
-                window.dataLoaded = true;
-
-                // Update header stats immediately
-                updateHeaderStats(processedIncidents);
-                updateControlsStats(processedIncidents);
-
-                // Show success status
-                showCSVSuccess(processedIncidents.length);
-                updateCSVProgress(`Successfully loaded ${processedIncidents.length} incidents`);
-
-                console.log('🎯 CSV data loaded and global variables updated successfully');
-
-                return processedIncidents;
-
-            } catch (error) {
-                console.error('❌ Error loading CSV data:', error);
-                showCSVError(error.message);
-
-                // Show error state
-                document.getElementById('totalIncidents').textContent = 'Error';
-                document.getElementById('verifiedIncidents').textContent = 'Error';
-                document.getElementById('lastUpdateStat').textContent = 'Error';
-
-                // Show error in timeline
-                const timelineContainer = document.getElementById('timeline-embed');
-                if (timelineContainer) {
-                    timelineContainer.innerHTML = `
-                        <div class="timeline-error">
-                            <div class="error-icon">⚠️</div>
-                            <h3>Failed to Load CSV Data</h3>
-                            <p>Unable to load incident data from CSV files. Please check that the CSV files exist and are properly formatted.</p>
-                            <p><strong>Error:</strong> ${error.message}</p>
-                            <button onclick="location.reload()" class="retry-btn">🔄 Retry</button>
-                        </div>
-                    `;
-                }
-
-                return [];
-            }
-        }
-
-        // Enhanced CSV file loading with Papa Parse
-        async function loadCSVFile(filename) {
-            return new Promise((resolve, reject) => {
-                // Add cache busting
-                const timestamp = Date.now();
-                const random = Math.random().toString(36).substring(7);
-                const url = `${filename}?v=${timestamp}&r=${random}`;
-
-                console.log(`Loading CSV file: ${filename}`);
-                updateCSVProgress(`Loading ${filename}...`);
-
-                Papa.parse(url, {
-                    download: true,
-                    header: true,
-                    skipEmptyLines: true,
-                    dynamicTyping: true,
-                    delimitersToGuess: [',', '\t', '|', ';'],
-                    transformHeader: function(header) {
-                        // Clean and normalize headers
-                        return header.trim().toLowerCase().replace(/\s+/g, '_');
-                    },
-                    complete: function(results) {
-                        if (results.errors && results.errors.length > 0) {
-                            console.warn(`CSV parsing warnings for ${filename}:`, results.errors);
-                            // Only reject on severe errors, not warnings
-                            const severeErrors = results.errors.filter(err => err.type === 'FieldMismatch' && err.code === 'TooManyFields');
-                            if (severeErrors.length > 0) {
-                                reject(new Error(`Severe parsing errors in ${filename}: ${severeErrors[0].message}`));
-                                return;
-                            }
-                        }
-
-                        console.log(`✅ Successfully parsed ${results.data.length} rows from ${filename}`);
-                        resolve(results.data.filter(row => row && Object.keys(row).length > 0)); // Filter out empty rows
-                    },
-                    error: function(error) {
-                        console.error(`❌ Error loading ${filename}:`, error);
-                        reject(new Error(`Failed to load ${filename}: ${error.message || error}`));
-                    }
-                });
-            });
-        }
-
-        // Enhanced data processing function
-        function processIncidentsData(incidentsData, casualtiesDetailsData) {
-            console.log('Processing incidents data...', {
-                incidents: incidentsData.length,
-                casualties: casualtiesDetailsData.length
-            });
-
-            return incidentsData.map(row => {
-                try {
-                    // Validate required fields
-                    if (!row.id) {
-                        console.warn('Skipping row without ID:', row);
-                        return null;
-                    }
-
-                    // Build coordinates array
-                    const coordinates = [];
-                    if (row.location_coordinates_lng && row.location_coordinates_lat) {
-                        coordinates.push(parseFloat(row.location_coordinates_lng));
-                        coordinates.push(parseFloat(row.location_coordinates_lat));
-                    }
-
-                    // Parse casualties data
-                    const casualties = {};
-                    if (row.casualties_affected) casualties.affected = parseInt(row.casualties_affected) || 0;
-                    if (row.casualties_critical) casualties.critical = parseInt(row.casualties_critical) || 0;
-                    if (row.casualties_deaths) casualties.deaths = parseInt(row.casualties_deaths) || 0;
-                    if (row.casualties_injured) casualties.injured = parseInt(row.casualties_injured) || 0;
-                    if (row.casualties_hospitalized) casualties.hospitalized = parseInt(row.casualties_hospitalized) || 0;
-
-                    // Parse evidence data
-                    const evidence = [];
-                    if (row.evidence_types && row.evidence_urls) {
-                        const types = parseDelimitedField(row.evidence_types);
-                        const urls = parseDelimitedField(row.evidence_urls);
-                        const descriptions = parseDelimitedField(row.evidence_descriptions || '');
-
-                        types.forEach((type, index) => {
-                            if (urls[index]) {
-                                evidence.push({
-                                    type: type.trim(),
-                                    url: urls[index].trim(),
-                                    description: descriptions[index] ? descriptions[index].trim() : ''
-                                });
-                            }
-                        });
-                    }
-
-                    // Parse sources
-                    const sources = parseDelimitedField(row.sources || '');
-
-                    // Parse tags
-                    const tags = parseDelimitedField(row.tags || '');
-
-                    // Find related casualties details
-                    let casualtiesDetails = [];
-                    if (row.casualties_details_ids) {
-                        const detailIds = parseDelimitedField(row.casualties_details_ids);
-                        casualtiesDetails = casualtiesDetailsData.filter(detail =>
-                            detailIds.includes(detail.reference_id) ||
-                            detail.incident_id === row.id
-                        ).map(detail => ({
-                            reference_id: detail.reference_id,
-                            name: detail.name || 'Name not available',
-                            age: parseInt(detail.age) || 0,
-                            date: detail.date,
-                            cause: detail.cause || 'Cause not specified',
-                            location_details: detail.location_details || 'Location not specified',
-                            medical_facility: detail.medical_facility || 'Medical facility not specified',
-                            condition: detail.condition || 'Condition unknown',
-                            sources: parseDelimitedField(detail.sources || ''),
-                            public_identifiers: {
-                                published_name: parseBooleanField(detail.published_name),
-                                published_image: parseBooleanField(detail.published_image),
-                                consent_verified: parseBooleanField(detail.consent_verified)
-                            },
-                            ethical_notes: {
-                                content_warning: detail.content_warning || '',
-                                privacy_status: detail.privacy_status || '',
-                                documentation_purpose: detail.documentation_purpose || ''
-                            }
-                        }));
-                    }
-
-                    // Build the incident object
-                    const incident = {
-                        id: row.id,
-                        title: row.title || 'Untitled Incident',
-                        date: row.date,
-                        time: row.time || null,
-                        location: {
-                            name: row.location_name || 'Unknown location',
-                            coordinates: coordinates
-                        },
-                        type: row.type || 'other',
-                        description: row.description || 'No description available',
-                        casualties: Object.keys(casualties).length > 0 ? casualties : null,
-                        casualties_details: casualtiesDetails.length > 0 ? casualtiesDetails : null,
-                        evidence: evidence.length > 0 ? evidence : null,
-                        sources: sources.length > 0 ? sources : [],
-                        verified: row.verified || 'pending',
-                        tags: tags.length > 0 ? tags : []
-                    };
-
-                    return incident;
-                } catch (error) {
-                    console.error('Error processing incident row:', row, error);
-                    return null;
-                }
-            }).filter(incident => incident !== null); // Filter out failed processing attempts
-        }
-
-        // Helper function to parse delimited fields (supports | and , delimiters)
-        function parseDelimitedField(field) {
-            if (!field || typeof field !== 'string') return [];
-
-            // Try pipe delimiter first, then comma
-            let delimiter = '|';
-            if (field.includes('|')) {
-                delimiter = '|';
-            } else if (field.includes(',')) {
-                delimiter = ',';
-            } else {
-                return [field.trim()];
-            }
-
-            return field.split(delimiter)
-                .map(item => item.trim())
-                .filter(item => item.length > 0);
-        }
-
-        // Helper function to parse boolean fields
-        function parseBooleanField(field) {
-            if (typeof field === 'boolean') return field;
-            if (typeof field === 'string') {
-                const lower = field.toLowerCase().trim();
-                return lower === 'true' || lower === '1' || lower === 'yes';
-            }
-            return false;
-        }
-
-        // Update header statistics
-        function updateHeaderStats(incidents) {
-            try {
-                const totalIncidentsEl = document.getElementById('totalIncidents');
-                const verifiedIncidentsEl = document.getElementById('verifiedIncidents');
-                const lastUpdateStatEl = document.getElementById('lastUpdateStat');
-
-                if (totalIncidentsEl) {
-                    totalIncidentsEl.textContent = incidents.length;
-                }
-
-                if (verifiedIncidentsEl) {
-                    const verified = incidents.filter(i => i.verified === 'verified').length;
-                    verifiedIncidentsEl.textContent = verified;
-                }
-
-                if (lastUpdateStatEl) {
-                    const today = new Date();
-                    lastUpdateStatEl.textContent = today.toLocaleDateString('en-US', {
-                        month: 'short',
-                        day: 'numeric'
-                    });
-                }
-
-                console.log('📊 Header stats updated:', {
-                    total: incidents.length,
-                    verified: incidents.filter(i => i.verified === 'verified').length
-                });
-
-            } catch (error) {
-                console.error('Error updating header stats:', error);
-            }
-        }
-
-        // Update controls statistics
-        function updateControlsStats(incidents) {
-            try {
-                const incidentCountEl = document.getElementById('incidentCount');
-                const lastUpdatedEl = document.getElementById('lastUpdated');
-
-                if (incidentCountEl) {
-                    incidentCountEl.textContent = `${incidents.length} incidents documented`;
-                }
-
-                if (lastUpdatedEl) {
-                    const now = new Date().toLocaleDateString('en-US', {
-                        year: 'numeric',
-                        month: 'long',
-                        day: 'numeric'
-                    });
-                    lastUpdatedEl.textContent = `Last updated: ${now}`;
-                }
-            } catch (error) {
-                console.error('Error updating controls stats:', error);
-            }
-        }
-
-        // Initialize page when DOM is ready
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', initializePageWithCSV);
-        } else {
-            initializePageWithCSV();
-        }
-
-        async function initializePageWithCSV() {
-            console.log('🚀 Major incidents page initializing with CSV support...');
-
-            try {
-                // Load CSV data first
-                const incidents = await loadIncidentsDataFromCSV();
-
-                // Short delay to ensure all scripts are loaded
-                setTimeout(() => {
-                    console.log('📅 Initializing timeline with CSV data...');
-
-                    // Initialize timeline with the loaded data
-                    if (window.timelineManager && typeof window.timelineManager.init === 'function') {
-                        console.log('Using timelineManager.init with', incidents.length, 'CSV incidents');
-                        window.timelineManager.init(incidents);
-                    } else if (typeof window.initializeTimeline === 'function') {
-                        console.log('Using initializeTimeline function with', incidents.length, 'CSV incidents');
-                        window.initializeTimeline();
-                    } else {
-                        console.log('Timeline functions not yet available, retrying...');
-                        // Retry after scripts load
-                        setTimeout(() => {
-                            if (window.timelineManager) {
-                                window.timelineManager.init(incidents);
-                            } else if (typeof window.initializeTimeline === 'function') {
-                                window.initializeTimeline();
-                            }
-                        }, 500);
-                    }
-                }, 100);
-
-            } catch (error) {
-                console.error('Failed to initialize page with CSV data:', error);
-                showCSVError(error.message);
-            }
-        }
-
-        // Add enhanced loading and error styles
-        const enhancedStyles = document.createElement('style');
-        enhancedStyles.textContent = `
-            .timeline-error {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                height: 400px;
-                text-align: center;
-                color: var(--text-secondary);
-                padding: 40px;
-            }
-
-            .error-icon {
-                font-size: 64px;
-                margin-bottom: 20px;
-                opacity: 0.5;
-            }
-
-            .retry-btn {
-                background: var(--accent-color);
-                color: white;
-                border: none;
-                padding: 12px 24px;
-                border-radius: 6px;
-                cursor: pointer;
-                font-size: 14px;
-                margin-top: 16px;
-                transition: all 0.2s ease;
-            }
-
-            .retry-btn:hover {
-                background: var(--accent-color-dark, #0056b3);
-                transform: translateY(-1px);
-            }
-
-            .csv-progress {
-                margin-top: 20px;
-                padding: 15px;
-                background: var(--light-color);
-                border-radius: 6px;
-                font-size: 14px;
-                color: var(--text-secondary);
-            }
-        `;
-        document.head.appendChild(enhancedStyles);
-    </script>
-
-    <!-- Application JavaScript Files -->
+    <!-- Custom Scripts -->
     <script src="timeline.js"></script>
-    <script src="main.js"></script>
+    <script src="dual-timeline-manager.js"></script>
 </body>
 </html>
