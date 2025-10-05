@@ -1,9 +1,13 @@
 {
+  "id": "hist_001",
+  "event_type": "massacre",
+  "verification_status": "verified",
   "metadata": {
     "pageTitle": "Deir Yassin Massacre (1948) - Complete Documentation | Gaza Crisis Documentation",
     "description": "Comprehensive documentation of the Deir Yassin Massacre of April 9, 1948. Verified sources, casualty records, war crimes documentation, and historical analysis.",
     "keywords": "Deir Yassin, 1948, Nakba, Palestine, massacre, war crimes, Irgun, Lehi, historical documentation",
-    "lastUpdated": "2025-10-05"
+    "lastUpdated": "2025-10-05",
+    "dateISO": "1948-04-09"
   },
   "breadcrumb": {
     "items": [
@@ -27,8 +31,14 @@
       {
         "icon": "📍",
         "label": "Location",
-        "value": "Deir Yassin",
+        "value": "Deir Yassin Village, Jerusalem",
         "detail": null
+      },
+      {
+        "icon": "🗺️",
+        "label": "Coordinates",
+        "value": "35.1547, 31.7857",
+        "detail": "Geographic location"
       },
       {
         "icon": "💀",
@@ -44,9 +54,21 @@
       }
     ]
   },
+  "location": {
+    "name": "Deir Yassin Village, Jerusalem",
+    "coordinates": [35.1547, 31.7857]
+  },
   "quickFacts": {
     "title": "⚡ Quick Facts",
     "items": [
+      {
+        "label": "Event ID",
+        "value": "hist_001"
+      },
+      {
+        "label": "Event Type",
+        "value": "Massacre"
+      },
       {
         "label": "Perpetrators",
         "value": "Irgun & Lehi (Zionist militias)"
@@ -65,6 +87,8 @@
       }
     ]
   },
+  "brief_summary": "Massacre of Palestinian Arab villagers by Zionist paramilitary forces during the 1948 Palestine war. The attack on the village left over 100 civilians dead, including women and children.",
+  "perpetrators": ["Irgun", "Lehi"],
   "executiveSummary": {
     "title": "Executive Summary",
     "icon": "📋",
@@ -82,6 +106,9 @@
   "casualties": {
     "title": "Casualties",
     "icon": "💀",
+    "deaths": 107,
+    "injured": 50,
+    "forced_displacement": 600,
     "breakdown": [
       {
         "type": "deaths",
@@ -139,6 +166,7 @@
       }
     ]
   },
+  "war_crimes": ["Civilian killings", "Sexual violence", "Mutilation of bodies", "Forced displacement"],
   "warCrimes": {
     "title": "Documented Atrocities",
     "icon": "⚠️",
@@ -310,6 +338,11 @@
     "title": "Verified Sources",
     "icon": "📚",
     "introduction": "Documentation based on cross-referenced primary sources from international organizations, government archives, and academic research.",
+    "sourcesList": [
+      "UN Security Council Resolution",
+      "Human Rights Watch Historical Documentation",
+      "Red Cross Reports 1948"
+    ],
     "list": [
       {
         "icon": "🇺🇳",
@@ -381,6 +414,23 @@
       "text": "<strong>Methodology:</strong> All sources cross-referenced. Casualty figures represent conservative estimates from most reliable documentation. Historical methodology prioritizes primary documents and eyewitness accounts."
     }
   },
+  "media": {
+    "images": {
+      "local": [
+        "deir-yassin-memorial.jpg"
+      ],
+      "remote": [
+        "https://qantara.de/sites/default/files/import/2013-06/6420-Deir-Yassin-Maccascre-PD.jpg","https://electronicintifada.net/sites/default/files/styles/original_800w/public/2022-04/orphans_of_the_deir_yassin_massacre_grandmother_top_row_middle_photo.jpg?itok=LW7VXpk6&timestamp=1649417108"
+      ]
+    },
+    "documents": {
+      "local": [
+        "red-cross-report-1948.pdf"
+      ],
+      "remote": []
+    }
+  },
+  "detail_page": "Pages/Historical_Massacres/deir-yassin-1948.html",
   "cta": {
     "title": "Help Preserve Historical Memory",
     "description": "Support ongoing documentation efforts to preserve historical truth and honor victims.",
