@@ -21,7 +21,7 @@ class DualTimelineManager {
             verification: '',
             casualtyScale: 'all'
         };
-        
+
         // Event type colors
         this.eventColors = {
             massacre: '#dc3545',
@@ -36,46 +36,53 @@ class DualTimelineManager {
             hospital_siege: '#c0392b',
             mass_graves: '#8b0000',
             aid_workers_killing: '#dc143c',
-            urban_destruction: '#a9a9a9'
+            urban_destruction: '#a9a9a9',
+            military_raids: '#ff6b6b'
         };
     }
 
     // Initialize the dual timeline system
     async init() {
-        console.log('🚀 Initializing Dual Timeline Manager...');
-        
+        console.log('🚀 Initializing Dual Timeline System...');
+        console.log('📅 Default Mode: Historical Massacres (1948-2023)');
+
         try {
             // Show loading state
             this.showLoading('Initializing timeline system...');
-            
+
             // Load configuration first
             await this.loadConfiguration();
-            
+
             // Load sources metadata
             await this.loadSources();
-            
+
             // Load both historical and current data
             await Promise.all([
                 this.loadHistoricalData(),
                 this.loadCurrentData()
             ]);
-            
+
             // Combine data
             this.combineData();
-            
+
             // Initialize UI
             this.initializeUI();
-            
-            // Set default mode (historical)
+
+            // Set default mode to HISTORICAL and ensure timeline view is active
             this.switchMode('historical');
-            
-            // Initialize map if on map view
-            if (document.getElementById('map')) {
-                this.initializeMap();
+
+            // Make sure timeline view is the active view
+            this.switchView('timeline');
+
+            // Hide loading status
+            const statusContainer = document.getElementById('timelineStatus');
+            if (statusContainer) {
+                statusContainer.style.display = 'none';
             }
-            
+
             console.log('✅ Dual Timeline Manager initialized successfully');
-            
+            console.log('📅 Default view: Historical Massacres Timeline (1948-2023)');
+
         } catch (error) {
             console.error('❌ Error initializing Dual Timeline Manager:', error);
             this.showError('Failed to initialize timeline. Please refresh the page.');
@@ -87,14 +94,14 @@ class DualTimelineManager {
         try {
             console.log('📋 Loading timeline configuration...');
             const response = await fetch('timeline-data/timeline-config.json');
-            
+
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
-            
+
             this.config = await response.json();
             console.log('✅ Configuration loaded:', this.config);
-            
+
         } catch (error) {
             console.error('❌ Error loading configuration:', error);
             // Use default config
@@ -108,14 +115,14 @@ class DualTimelineManager {
         try {
             console.log('📰 Loading sources metadata...');
             const response = await fetch('timeline-data/timeline-sources.json');
-            
+
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
-            
+
             this.sources = await response.json();
             console.log('✅ Sources loaded:', this.sources);
-            
+
         } catch (error) {
             console.error('❌ Error loading sources:', error);
             this.sources = { primary_sources: [] };
@@ -127,18 +134,18 @@ class DualTimelineManager {
         try {
             console.log('📜 Loading historical massacres data...');
             this.showLoading('Loading historical data (1948-2023)...');
-            
+
             const response = await fetch('timeline-data/historical-massacres.json');
-            
+
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
-            
+
             const data = await response.json();
             this.historicalData = data.massacres || [];
-            
+
             console.log(`✅ Loaded ${this.historicalData.length} historical events`);
-            
+
         } catch (error) {
             console.error('❌ Error loading historical data:', error);
             this.historicalData = [];
@@ -151,18 +158,18 @@ class DualTimelineManager {
         try {
             console.log('🚨 Loading current genocide data...');
             this.showLoading('Loading current genocide data (2023-present)...');
-            
+
             const response = await fetch('timeline-data/civilian-casualties-current.json');
-            
+
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
-            
+
             const data = await response.json();
             this.currentData = data.incidents || [];
-            
+
             console.log(`✅ Loaded ${this.currentData.length} current genocide events`);
-            
+
         } catch (error) {
             console.error('❌ Error loading current data:', error);
             this.currentData = [];
@@ -176,14 +183,14 @@ class DualTimelineManager {
             ...this.historicalData.map(item => ({ ...item, period: 'historical' })),
             ...this.currentData.map(item => ({ ...item, period: 'current' }))
         ].sort((a, b) => new Date(a.date) - new Date(b.date));
-        
+
         console.log(`📊 Combined ${this.combinedData.length} total events`);
     }
 
     // Initialize UI components
     initializeUI() {
         console.log('🎨 Initializing UI components...');
-        
+
         // Mode selector buttons
         const modeButtons = document.querySelectorAll('.mode-btn');
         modeButtons.forEach(btn => {
@@ -192,28 +199,28 @@ class DualTimelineManager {
                 this.switchMode(mode);
             });
         });
-        
+
         // Filter controls
         document.getElementById('dateRangeFilter')?.addEventListener('change', (e) => {
             this.filters.dateRange = e.target.value;
             this.applyFilters();
         });
-        
+
         document.getElementById('eventTypeFilter')?.addEventListener('change', (e) => {
             this.filters.eventType = e.target.value;
             this.applyFilters();
         });
-        
+
         document.getElementById('searchFilter')?.addEventListener('input', (e) => {
             this.filters.search = e.target.value;
             this.debounce(() => this.applyFilters(), 300)();
         });
-        
+
         document.getElementById('verificationFilter')?.addEventListener('change', (e) => {
             this.filters.verification = e.target.value;
             this.applyFilters();
         });
-        
+
         // Casualty scale chips
         const scaleChips = document.querySelectorAll('.scale-chip');
         scaleChips.forEach(chip => {
@@ -224,12 +231,12 @@ class DualTimelineManager {
                 this.applyFilters();
             });
         });
-        
+
         // Clear filters button
         document.getElementById('clearAllFilters')?.addEventListener('click', () => {
             this.clearAllFilters();
         });
-        
+
         // View switcher
         const viewButtons = document.querySelectorAll('.view-btn');
         viewButtons.forEach(btn => {
@@ -238,82 +245,96 @@ class DualTimelineManager {
                 this.switchView(view);
             });
         });
-        
+
         // Sort select
         document.getElementById('sortSelect')?.addEventListener('change', (e) => {
             this.sortData(e.target.value);
             this.renderListView();
         });
-        
+
         // Modal close
         const modalClose = document.querySelector('.modal-close');
         if (modalClose) {
             modalClose.addEventListener('click', () => this.closeModal());
         }
-        
+
         const modal = document.getElementById('incidentModal');
         if (modal) {
             modal.addEventListener('click', (e) => {
                 if (e.target === modal) this.closeModal();
             });
         }
-        
+
         // Theme toggle
         const themeToggle = document.querySelector('.theme-toggle');
         if (themeToggle) {
             themeToggle.addEventListener('click', () => this.toggleTheme());
         }
-        
+
         // Initialize theme
         this.initializeTheme();
-        
+
         console.log('✅ UI components initialized');
     }
 
     // Switch between timeline modes
     switchMode(mode) {
         console.log(`🔄 Switching to mode: ${mode}`);
-        
+
         this.currentMode = mode;
-        
+
         // Update active button
         const modeButtons = document.querySelectorAll('.mode-btn');
         modeButtons.forEach(btn => {
             btn.classList.toggle('active', btn.dataset.mode === mode);
         });
-        
+
         // Get data based on mode
         let data;
+        let modeDescription;
+
         switch (mode) {
             case 'historical':
                 data = this.historicalData;
+                modeDescription = 'Historical Massacres (1948-2023)';
                 break;
             case 'current':
                 data = this.currentData;
+                modeDescription = 'Current Genocide (Oct 2023-Present)';
                 break;
             case 'both':
                 data = this.combinedData;
+                modeDescription = 'Complete Timeline (1948-Present)';
                 // Show comparison section
-                document.getElementById('periodComparison').style.display = 'block';
-                this.updateComparison();
+                const comparisonEl = document.getElementById('periodComparison');
+                if (comparisonEl) {
+                    comparisonEl.style.display = 'block';
+                    this.updateComparison();
+                }
                 break;
             default:
                 data = this.historicalData;
+                modeDescription = 'Historical Massacres (1948-2023)';
         }
-        
+
+        console.log(`📊 Loaded ${data.length} events for: ${modeDescription}`);
+
         // Hide comparison if not in 'both' mode
         if (mode !== 'both') {
-            document.getElementById('periodComparison').style.display = 'none';
+            const comparisonEl = document.getElementById('periodComparison');
+            if (comparisonEl) {
+                comparisonEl.style.display = 'none';
+            }
         }
-        
+
         this.filteredData = [...data];
-        
+
         // Update statistics
         this.updateStatistics();
-        
+
         // Apply any existing filters
         this.applyFilters();
-        
+
         // Render current view
         const activeView = document.querySelector('.view-section.active');
         if (activeView) {
@@ -331,7 +352,7 @@ class DualTimelineManager {
     // Apply filters to data
     applyFilters() {
         console.log('🔍 Applying filters:', this.filters);
-        
+
         let data;
         switch (this.currentMode) {
             case 'historical':
@@ -346,42 +367,42 @@ class DualTimelineManager {
             default:
                 data = [...this.historicalData];
         }
-        
+
         // Apply date range filter
         if (this.filters.dateRange) {
             data = this.filterByDateRange(data, this.filters.dateRange);
         }
-        
+
         // Apply event type filter
         if (this.filters.eventType) {
             data = data.filter(item => item.event_type === this.filters.eventType);
         }
-        
+
         // Apply search filter
         if (this.filters.search) {
             const searchTerm = this.filters.search.toLowerCase();
-            data = data.filter(item => 
+            data = data.filter(item =>
                 item.title?.toLowerCase().includes(searchTerm) ||
                 item.location?.name?.toLowerCase().includes(searchTerm) ||
                 item.brief_summary?.toLowerCase().includes(searchTerm)
             );
         }
-        
+
         // Apply verification filter
         if (this.filters.verification) {
             data = data.filter(item => item.verification_status === this.filters.verification);
         }
-        
+
         // Apply casualty scale filter
         if (this.filters.casualtyScale !== 'all') {
             data = this.filterByCasualtyScale(data, this.filters.casualtyScale);
         }
-        
+
         this.filteredData = data;
-        
+
         // Update statistics
         this.updateStatistics();
-        
+
         // Re-render current view
         const activeView = document.querySelector('.view-section.active');
         if (activeView) {
@@ -394,7 +415,7 @@ class DualTimelineManager {
                 this.renderListView();
             }
         }
-        
+
         console.log(`✅ Filtered to ${this.filteredData.length} events`);
     }
 
@@ -407,15 +428,15 @@ class DualTimelineManager {
             gaza_operations: { start: '2008-12-27', end: '2021-05-21' },
             current_genocide: { start: '2023-10-07', end: null }
         };
-        
+
         const preset = ranges[range];
         if (!preset) return data;
-        
+
         return data.filter(item => {
             const itemDate = new Date(item.date);
             const startDate = new Date(preset.start);
             const endDate = preset.end ? new Date(preset.end) : new Date();
-            
+
             return itemDate >= startDate && itemDate <= endDate;
         });
     }
@@ -428,10 +449,10 @@ class DualTimelineManager {
             high: { min: 501, max: 2000 },
             massive: { min: 2001, max: Infinity }
         };
-        
+
         const range = ranges[scale];
         if (!range) return data;
-        
+
         return data.filter(item => {
             const deaths = item.casualties?.deaths || 0;
             return deaths >= range.min && deaths <= range.max;
@@ -441,7 +462,7 @@ class DualTimelineManager {
     // Clear all filters
     clearAllFilters() {
         console.log('🔄 Clearing all filters');
-        
+
         this.filters = {
             dateRange: '',
             eventType: '',
@@ -449,19 +470,24 @@ class DualTimelineManager {
             verification: '',
             casualtyScale: 'all'
         };
-        
+
         // Reset UI elements
-        document.getElementById('dateRangeFilter').value = '';
-        document.getElementById('eventTypeFilter').value = '';
-        document.getElementById('searchFilter').value = '';
-        document.getElementById('verificationFilter').value = '';
-        
+        const dateRangeFilter = document.getElementById('dateRangeFilter');
+        const eventTypeFilter = document.getElementById('eventTypeFilter');
+        const searchFilter = document.getElementById('searchFilter');
+        const verificationFilter = document.getElementById('verificationFilter');
+
+        if (dateRangeFilter) dateRangeFilter.value = '';
+        if (eventTypeFilter) eventTypeFilter.value = '';
+        if (searchFilter) searchFilter.value = '';
+        if (verificationFilter) verificationFilter.value = '';
+
         // Reset scale chips
         const scaleChips = document.querySelectorAll('.scale-chip');
         scaleChips.forEach(chip => {
             chip.classList.toggle('active', chip.dataset.scale === 'all');
         });
-        
+
         // Reapply filters (which are now empty)
         this.applyFilters();
     }
@@ -469,93 +495,126 @@ class DualTimelineManager {
     // Update statistics dashboard
     updateStatistics() {
         const data = this.filteredData;
-        
+
         // Calculate totals
         const totalEvents = data.length;
         const totalDeaths = data.reduce((sum, item) => sum + (item.casualties?.deaths || 0), 0);
         const totalInjured = data.reduce((sum, item) => sum + (item.casualties?.injured || 0), 0);
         const totalDisplaced = data.reduce((sum, item) => sum + (item.casualties?.forced_displacement || 0), 0);
-        
+
         // Update header stats
-        document.getElementById('totalEvents').textContent = totalEvents.toLocaleString();
-        document.getElementById('totalDeaths').textContent = this.formatNumber(totalDeaths);
-        document.getElementById('lastUpdate').textContent = '2025-10-05';
-        
+        const totalEventsEl = document.getElementById('totalEvents');
+        const totalDeathsEl = document.getElementById('totalDeaths');
+        const lastUpdateEl = document.getElementById('lastUpdate');
+
+        if (totalEventsEl) totalEventsEl.textContent = totalEvents.toLocaleString();
+        if (totalDeathsEl) totalDeathsEl.textContent = this.formatNumber(totalDeaths);
+        if (lastUpdateEl) lastUpdateEl.textContent = '2025-10-05';
+
         // Update dashboard stats
-        document.getElementById('massacresCount').textContent = totalEvents.toLocaleString();
-        document.getElementById('deathsCount').textContent = this.formatNumber(totalDeaths);
-        document.getElementById('injuredCount').textContent = this.formatNumber(totalInjured);
-        document.getElementById('displacedCount').textContent = this.formatNumber(totalDisplaced);
-        
+        const massacresCountEl = document.getElementById('massacresCount');
+        const deathsCountEl = document.getElementById('deathsCount');
+        const injuredCountEl = document.getElementById('injuredCount');
+        const displacedCountEl = document.getElementById('displacedCount');
+
+        if (massacresCountEl) massacresCountEl.textContent = totalEvents.toLocaleString();
+        if (deathsCountEl) deathsCountEl.textContent = this.formatNumber(totalDeaths);
+        if (injuredCountEl) injuredCountEl.textContent = this.formatNumber(totalInjured);
+        if (displacedCountEl) displacedCountEl.textContent = this.formatNumber(totalDisplaced);
+
         // Update mode counts
-        document.getElementById('historicalCount').textContent = this.historicalData.length;
-        document.getElementById('historicalDeaths').textContent = this.formatNumber(
-            this.historicalData.reduce((sum, item) => sum + (item.casualties?.deaths || 0), 0)
-        );
-        
-        document.getElementById('currentCount').textContent = this.currentData.length;
-        document.getElementById('currentDeaths').textContent = this.formatNumber(
-            this.currentData.reduce((sum, item) => sum + (item.casualties?.deaths || 0), 0)
-        );
-        
-        document.getElementById('bothCount').textContent = this.combinedData.length;
-        document.getElementById('bothDeaths').textContent = this.formatNumber(
-            this.combinedData.reduce((sum, item) => sum + (item.casualties?.deaths || 0), 0)
-        );
+        const historicalCountEl = document.getElementById('historicalCount');
+        const historicalDeathsEl = document.getElementById('historicalDeaths');
+        const currentCountEl = document.getElementById('currentCount');
+        const currentDeathsEl = document.getElementById('currentDeaths');
+        const bothCountEl = document.getElementById('bothCount');
+        const bothDeathsEl = document.getElementById('bothDeaths');
+
+        if (historicalCountEl) historicalCountEl.textContent = this.historicalData.length;
+        if (historicalDeathsEl) {
+            historicalDeathsEl.textContent = this.formatNumber(
+                this.historicalData.reduce((sum, item) => sum + (item.casualties?.deaths || 0), 0)
+            );
+        }
+
+        if (currentCountEl) currentCountEl.textContent = this.currentData.length;
+        if (currentDeathsEl) {
+            currentDeathsEl.textContent = this.formatNumber(
+                this.currentData.reduce((sum, item) => sum + (item.casualties?.deaths || 0), 0)
+            );
+        }
+
+        if (bothCountEl) bothCountEl.textContent = this.combinedData.length;
+        if (bothDeathsEl) {
+            bothDeathsEl.textContent = this.formatNumber(
+                this.combinedData.reduce((sum, item) => sum + (item.casualties?.deaths || 0), 0)
+            );
+        }
     }
 
     // Update period comparison
     updateComparison() {
         const histDeaths = this.historicalData.reduce((sum, item) => sum + (item.casualties?.deaths || 0), 0);
         const currDeaths = this.currentData.reduce((sum, item) => sum + (item.casualties?.deaths || 0), 0);
-        
+
         const histYears = 75; // 1948 to 2023
         const histAvgPerYear = Math.round(histDeaths / histYears);
-        
+
         // Calculate current genocide duration
         const genocideStart = new Date('2023-10-07');
         const now = new Date('2025-10-05');
         const daysDiff = Math.floor((now - genocideStart) / (1000 * 60 * 60 * 24));
         const monthsDiff = Math.floor(daysDiff / 30);
         const currAvgPerDay = Math.round(currDeaths / daysDiff);
-        
-        document.getElementById('compHistEvents').textContent = this.historicalData.length;
-        document.getElementById('compHistDeaths').textContent = this.formatNumber(histDeaths);
-        document.getElementById('compHistAvg').textContent = histAvgPerYear.toLocaleString();
-        
-        document.getElementById('genocideDuration').textContent = `${monthsDiff} months`;
-        document.getElementById('compCurrEvents').textContent = this.currentData.length;
-        document.getElementById('compCurrDeaths').textContent = this.formatNumber(currDeaths);
-        document.getElementById('compCurrAvg').textContent = currAvgPerDay.toLocaleString();
+
+        const compHistEventsEl = document.getElementById('compHistEvents');
+        const compHistDeathsEl = document.getElementById('compHistDeaths');
+        const compHistAvgEl = document.getElementById('compHistAvg');
+        const genocideDurationEl = document.getElementById('genocideDuration');
+        const compCurrEventsEl = document.getElementById('compCurrEvents');
+        const compCurrDeathsEl = document.getElementById('compCurrDeaths');
+        const compCurrAvgEl = document.getElementById('compCurrAvg');
+
+        if (compHistEventsEl) compHistEventsEl.textContent = this.historicalData.length;
+        if (compHistDeathsEl) compHistDeathsEl.textContent = this.formatNumber(histDeaths);
+        if (compHistAvgEl) compHistAvgEl.textContent = histAvgPerYear.toLocaleString();
+
+        if (genocideDurationEl) genocideDurationEl.textContent = `${monthsDiff} months`;
+        if (compCurrEventsEl) compCurrEventsEl.textContent = this.currentData.length;
+        if (compCurrDeathsEl) compCurrDeathsEl.textContent = this.formatNumber(currDeaths);
+        if (compCurrAvgEl) compCurrAvgEl.textContent = currAvgPerDay.toLocaleString();
     }
 
-    // Render timeline view
+    // Render timeline view - UPDATED TO HORIZONTAL CARDS
     renderTimeline() {
         console.log('📅 Rendering timeline view...');
-        
+
         const container = document.getElementById('timeline-embed');
         if (!container) return;
-        
+
         const data = this.filteredData.sort((a, b) => new Date(a.date) - new Date(b.date));
-        
+
         if (data.length === 0) {
             container.innerHTML = this.getEmptyStateHTML();
             return;
         }
-        
+
         container.innerHTML = `
-            <div class="custom-timeline">
+            <div class="horizontal-timeline">
                 <div class="timeline-header">
                     <h2>${this.getTimelineTitle()}</h2>
-                    <p>Chronological documentation of ${data.length} verified events</p>
+                    <p>Scroll horizontally to view ${data.length} documented events</p>
                 </div>
-                <div class="timeline-line">
-                    ${data.map((item, index) => this.createTimelineItemHTML(item, index)).join('')}
+                <div class="timeline-scroll-container">
+                    <div class="timeline-cards-wrapper">
+                        ${data.map((item, index) => this.createTimelineItemHTML(item, index)).join('')}
+                    </div>
                 </div>
+                <div class="scroll-hint">← Scroll to see more →</div>
             </div>
         `;
-        
-        this.addCustomTimelineStyles();
+
+        this.addHorizontalTimelineStyles();
         this.attachTimelineEventListeners();
     }
 
@@ -573,92 +632,58 @@ class DualTimelineManager {
         }
     }
 
-    // Create timeline item HTML
+    // Create timeline item HTML - UPDATED TO HORIZONTAL CARD
     createTimelineItemHTML(item, index) {
         const casualties = item.casualties || {};
         const deaths = casualties.deaths || 0;
         const injured = casualties.injured || 0;
-        const displaced = casualties.forced_displacement || 0;
-        
+
         const color = this.eventColors[item.event_type] || '#6c757d';
-        const periodBadge = item.period === 'current' ? 
-            '<span class="period-badge current">🚨 Current Genocide</span>' : 
-            '<span class="period-badge historical">📜 Historical</span>';
-        
+        const periodBadge = item.period === 'current' ?
+            '<span class="period-badge current">🚨</span>' :
+            '<span class="period-badge historical">📜</span>';
+
         return `
-            <div class="timeline-item" data-event-id="${item.id}" data-index="${index}">
-                <div class="timeline-marker">
-                    <div class="timeline-icon" style="background-color: ${color}">
-                        ${this.getEventIcon(item.event_type)}
+            <div class="timeline-card" data-event-id="${item.id}" data-index="${index}">
+                <div class="card-header" style="background: linear-gradient(135deg, ${color}, ${this.adjustColor(color, -20)});">
+                    <div class="card-date">${this.formatDateShort(item.date)}</div>
+                    ${periodBadge}
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">${this.escapeHtml(this.truncate(item.title, 60))}</h4>
+                    <div class="card-location">📍 ${this.escapeHtml(item.location?.name || 'Unknown')}</div>
+                    <p class="card-description">${this.escapeHtml(this.truncate(item.brief_summary, 100))}</p>
+                    <div class="card-casualties">
+                        ${deaths > 0 ? `<span class="casualty-pill">💀 ${this.formatNumber(deaths)}</span>` : ''}
+                        ${injured > 0 ? `<span class="casualty-pill injured">🏥 ${this.formatNumber(injured)}</span>` : ''}
                     </div>
                 </div>
-                <div class="timeline-content-item ${index % 2 === 0 ? 'left' : 'right'}">
-                    <div class="timeline-date">${this.formatDate(item.date)}</div>
-                    ${periodBadge}
-                    <h3 class="timeline-title">${this.escapeHtml(item.title)}</h3>
-                    <div class="timeline-location">📍 ${this.escapeHtml(item.location?.name || 'Unknown')}</div>
-                    <div class="timeline-type" style="color: ${color}">
-                        🏷️ ${this.capitalizeWords(item.event_type?.replace(/_/g, ' ') || 'Unknown')}
-                    </div>
-                    <p class="timeline-description">${this.escapeHtml(this.truncate(item.brief_summary, 150))}</p>
-                    
-                    <div class="timeline-casualties">
-                        ${deaths > 0 ? `<span class="casualty-badge deaths">💀 ${deaths.toLocaleString()} deaths</span>` : ''}
-                        ${injured > 0 ? `<span class="casualty-badge injured">🏥 ${injured.toLocaleString()} injured</span>` : ''}
-                        ${displaced > 0 ? `<span class="casualty-badge displaced">🏠 ${this.formatNumber(displaced)} displaced</span>` : ''}
-                    </div>
-                    
-                    ${item.war_crimes && item.war_crimes.length > 0 ? `
-                        <div class="war-crimes-preview">
-                            <strong>⚖️ War Crimes:</strong> ${item.war_crimes.slice(0, 3).join(', ')}
-                            ${item.war_crimes.length > 3 ? ` (+${item.war_crimes.length - 3} more)` : ''}
-                        </div>
-                    ` : ''}
-                    
-                    <div class="timeline-meta">
-                        <span class="verification-badge ${item.verification_status}">
-                            ${this.getVerificationIcon(item.verification_status)} ${this.capitalizeWords(item.verification_status)}
-                        </span>
-                        ${item.sources && item.sources.length > 0 ? `
-                            <span class="sources-badge">📰 ${item.sources.length} source${item.sources.length > 1 ? 's' : ''}</span>
-                        ` : ''}
-                    </div>
-                    
-                    <button class="timeline-details-btn" data-event-id="${item.id}">
-                        📖 View Full Documentation →
-                    </button>
+                <div class="card-footer">
+                    <span class="verification-mini ${item.verification_status}">
+                        ${this.getVerificationIcon(item.verification_status)}
+                    </span>
+                    <button class="view-details-mini" data-event-id="${item.id}">View →</button>
                 </div>
             </div>
         `;
     }
 
-    // Attach event listeners to timeline items
+    // Attach event listeners to timeline items - UPDATED FOR HORIZONTAL CARDS
     attachTimelineEventListeners() {
-        const timelineItems = document.querySelectorAll('.timeline-item');
-        
-        timelineItems.forEach(item => {
-            // Intersection Observer for animations
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    }
-                });
-            }, { threshold: 0.1 });
-            
-            observer.observe(item);
-            
-            // Click handler for entire item
-            item.addEventListener('click', (e) => {
-                if (!e.target.classList.contains('timeline-details-btn')) {
-                    const eventId = item.dataset.eventId;
+        const timelineCards = document.querySelectorAll('.timeline-card');
+
+        timelineCards.forEach(card => {
+            // Click handler for entire card
+            card.addEventListener('click', (e) => {
+                if (!e.target.classList.contains('view-details-mini')) {
+                    const eventId = card.dataset.eventId;
                     this.showEventModal(eventId);
                 }
             });
         });
-        
+
         // Click handlers for detail buttons
-        const detailButtons = document.querySelectorAll('.timeline-details-btn');
+        const detailButtons = document.querySelectorAll('.view-details-mini');
         detailButtons.forEach(btn => {
             btn.addEventListener('click', (e) => {
                 e.stopPropagation();
@@ -666,6 +691,28 @@ class DualTimelineManager {
                 this.showEventModal(eventId);
             });
         });
+
+        // Add keyboard navigation for horizontal scrolling
+        const scrollContainer = document.querySelector('.timeline-scroll-container');
+        if (scrollContainer) {
+            scrollContainer.setAttribute('tabindex', '0');
+
+            scrollContainer.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowLeft') {
+                    scrollContainer.scrollBy({ left: -300, behavior: 'smooth' });
+                } else if (e.key === 'ArrowRight') {
+                    scrollContainer.scrollBy({ left: 300, behavior: 'smooth' });
+                }
+            });
+
+            // Make scrollable with mouse wheel
+            scrollContainer.addEventListener('wheel', (e) => {
+                if (e.deltaY !== 0) {
+                    e.preventDefault();
+                    scrollContainer.scrollBy({ left: e.deltaY, behavior: 'smooth' });
+                }
+            });
+        }
     }
 
     // Show event modal
@@ -675,23 +722,30 @@ class DualTimelineManager {
             console.error('Event not found:', eventId);
             return;
         }
-        
-        console.log('📖 Opening modal for:', event.title);
-        
+                console.log('📖 Opening modal for:', event.title);
+
         const modal = document.getElementById('incidentModal');
-        
+
         // Populate modal content
-        document.getElementById('modalTitle').textContent = event.title;
-        document.getElementById('modalDate').textContent = this.formatDate(event.date);
-        document.getElementById('modalLocation').textContent = event.location?.name || 'Unknown';
-        document.getElementById('modalType').textContent = this.capitalizeWords(event.event_type?.replace(/_/g, ' ') || 'Unknown');
-        document.getElementById('modalSummary').textContent = event.brief_summary;
-        
+        const modalTitle = document.getElementById('modalTitle');
+        const modalDate = document.getElementById('modalDate');
+        const modalLocation = document.getElementById('modalLocation');
+        const modalType = document.getElementById('modalType');
+        const modalSummary = document.getElementById('modalSummary');
+
+        if (modalTitle) modalTitle.textContent = event.title;
+        if (modalDate) modalDate.textContent = this.formatDate(event.date);
+        if (modalLocation) modalLocation.textContent = event.location?.name || 'Unknown';
+        if (modalType) modalType.textContent = this.capitalizeWords(event.event_type?.replace(/_/g, ' ') || 'Unknown');
+        if (modalSummary) modalSummary.textContent = event.brief_summary;
+
         // Verification status
         const verificationEl = document.getElementById('modalVerification');
-        verificationEl.className = `verification-badge ${event.verification_status}`;
-        verificationEl.textContent = `${this.getVerificationIcon(event.verification_status)} ${this.capitalizeWords(event.verification_status)}`;
-        
+        if (verificationEl) {
+            verificationEl.className = `verification-badge ${event.verification_status}`;
+            verificationEl.textContent = `${this.getVerificationIcon(event.verification_status)} ${this.capitalizeWords(event.verification_status)}`;
+        }
+
         // Casualties
         const casualties = event.casualties || {};
         const casualtiesHTML = `
@@ -702,21 +756,24 @@ class DualTimelineManager {
                 ${casualties.critical ? `<div class="casualty-stat"><strong>⚠️ Critical:</strong> ${casualties.critical.toLocaleString()}</div>` : ''}
             </div>
         `;
-        document.getElementById('modalCasualties').innerHTML = casualtiesHTML;
-        
+        const modalCasualties = document.getElementById('modalCasualties');
+        if (modalCasualties) modalCasualties.innerHTML = casualtiesHTML;
+
         // War crimes
+        const modalWarCrimesSection = document.getElementById('modalWarCrimesSection');
         if (event.war_crimes && event.war_crimes.length > 0) {
-            document.getElementById('modalWarCrimesSection').style.display = 'block';
+            if (modalWarCrimesSection) modalWarCrimesSection.style.display = 'block';
             const warCrimesHTML = `
                 <ul class="war-crimes-list">
                     ${event.war_crimes.map(crime => `<li>⚖️ ${this.escapeHtml(crime)}</li>`).join('')}
                 </ul>
             `;
-            document.getElementById('modalWarCrimes').innerHTML = warCrimesHTML;
+            const modalWarCrimes = document.getElementById('modalWarCrimes');
+            if (modalWarCrimes) modalWarCrimes.innerHTML = warCrimesHTML;
         } else {
-            document.getElementById('modalWarCrimesSection').style.display = 'none';
+            if (modalWarCrimesSection) modalWarCrimesSection.style.display = 'none';
         }
-        
+
         // Sources
         const sourcesHTML = event.sources && event.sources.length > 0 ?
             event.sources.map(source => `
@@ -725,17 +782,20 @@ class DualTimelineManager {
                 </div>
             `).join('') :
             '<p>No sources available</p>';
-        document.getElementById('modalSources').innerHTML = sourcesHTML;
-        
+        const modalSources = document.getElementById('modalSources');
+        if (modalSources) modalSources.innerHTML = sourcesHTML;
+
         // Detail page link
         const detailPageLink = document.getElementById('modalDetailPage');
-        if (event.detail_page) {
-            detailPageLink.href = event.detail_page;
-            detailPageLink.style.display = 'inline-block';
-        } else {
-            detailPageLink.style.display = 'none';
+        if (detailPageLink) {
+            if (event.detail_page) {
+                detailPageLink.href = event.detail_page;
+                detailPageLink.style.display = 'inline-block';
+            } else {
+                detailPageLink.style.display = 'none';
+            }
         }
-        
+
         // Show modal
         modal.classList.add('active');
         document.body.style.overflow = 'hidden';
@@ -751,31 +811,31 @@ class DualTimelineManager {
     // Render map view
     renderMap() {
         console.log('🗺️ Rendering map view...');
-        
+
         if (!this.map) {
             this.initializeMap();
         }
-        
+
         // Clear existing markers
         this.markers.forEach(marker => {
             this.map.removeLayer(marker);
         });
         this.markers = [];
-        
+
         // Add markers for filtered data
         const markerCluster = L.markerClusterGroup({
             chunkedLoading: true,
             maxClusterRadius: 50
         });
-        
+
         this.filteredData.forEach(event => {
             if (!event.location?.coordinates || event.location.coordinates.length < 2) {
                 return;
             }
-            
+
             const color = this.eventColors[event.event_type] || '#6c757d';
             const deaths = event.casualties?.deaths || 0;
-            
+
             const icon = L.divIcon({
                 className: 'custom-map-marker',
                 html: `<div class="marker-icon" style="background-color: ${color}; width: ${this.getMarkerSize(deaths)}px; height: ${this.getMarkerSize(deaths)}px;">
@@ -784,12 +844,12 @@ class DualTimelineManager {
                 iconSize: [this.getMarkerSize(deaths), this.getMarkerSize(deaths)],
                 iconAnchor: [this.getMarkerSize(deaths) / 2, this.getMarkerSize(deaths) / 2]
             });
-            
+
             const marker = L.marker(
                 [event.location.coordinates[1], event.location.coordinates[0]],
                 { icon }
             );
-            
+
             const popupContent = `
                 <div class="map-popup">
                     <h3>${this.escapeHtml(event.title)}</h3>
@@ -802,14 +862,14 @@ class DualTimelineManager {
                     </button>
                 </div>
             `;
-            
+
             marker.bindPopup(popupContent, { maxWidth: 300 });
             markerCluster.addLayer(marker);
             this.markers.push(marker);
         });
-        
+
         this.map.addLayer(markerCluster);
-        
+
         // Fit bounds if we have markers
         if (this.markers.length > 0) {
             const group = new L.featureGroup(this.markers);
@@ -821,16 +881,16 @@ class DualTimelineManager {
     initializeMap() {
         const mapContainer = document.getElementById('map');
         if (!mapContainer) return;
-        
+
         console.log('🗺️ Initializing map...');
-        
+
         this.map = L.map('map').setView([31.5204, 34.4668], 9);
-        
+
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '© OpenStreetMap contributors',
             maxZoom: 18
         }).addTo(this.map);
-        
+
         console.log('✅ Map initialized');
     }
 
@@ -845,25 +905,25 @@ class DualTimelineManager {
     // Render list view
     renderListView() {
         console.log('📋 Rendering list view...');
-        
+
         const container = document.getElementById('incidentGrid');
         const loading = document.getElementById('loading');
         const noResults = document.getElementById('noResults');
-        
+
         if (!container) return;
-        
-        loading.style.display = 'none';
-        
+
+        if (loading) loading.style.display = 'none';
+
         if (this.filteredData.length === 0) {
             container.innerHTML = '';
-            noResults.style.display = 'block';
+            if (noResults) noResults.style.display = 'block';
             return;
         }
-        
-        noResults.style.display = 'none';
-        
+
+        if (noResults) noResults.style.display = 'none';
+
         container.innerHTML = this.filteredData.map(event => this.createEventCardHTML(event)).join('');
-        
+
         // Attach click handlers
         const cards = container.querySelectorAll('.incident-card');
         cards.forEach(card => {
@@ -880,9 +940,9 @@ class DualTimelineManager {
         const deaths = casualties.deaths || 0;
         const injured = casualties.injured || 0;
         const displaced = casualties.forced_displacement || 0;
-        
+
         const color = this.eventColors[event.event_type] || '#6c757d';
-        
+
         return `
             <div class="incident-card" data-event-id="${event.id}">
                 <div class="incident-header">
@@ -943,19 +1003,19 @@ class DualTimelineManager {
     // Switch view
     switchView(view) {
         console.log(`🔄 Switching to view: ${view}`);
-        
+
         // Update active button
         const viewButtons = document.querySelectorAll('.view-btn');
         viewButtons.forEach(btn => {
             btn.classList.toggle('active', btn.dataset.view === view);
         });
-        
+
         // Update active section
         const viewSections = document.querySelectorAll('.view-section');
         viewSections.forEach(section => {
             section.classList.toggle('active', section.id === `${view}View`);
         });
-        
+
         // Render the view
         switch (view) {
             case 'timeline':
@@ -973,314 +1033,289 @@ class DualTimelineManager {
         }
     }
 
-    // Add custom timeline styles
-    addCustomTimelineStyles() {
-        if (document.getElementById('dual-timeline-styles')) return;
-        
+    // Add horizontal timeline styles - WITH LARGER SCROLLBAR
+    addHorizontalTimelineStyles() {
+        if (document.getElementById('horizontal-timeline-styles')) return;
+
         const styles = document.createElement('style');
-        styles.id = 'dual-timeline-styles';
+        styles.id = 'horizontal-timeline-styles';
         styles.textContent = `
-            .custom-timeline {
-                max-width: 1200px;
+            .horizontal-timeline {
+                max-width: 100%;
                 margin: 0 auto;
-                padding: 20px;
+                padding: 20px 0;
             }
 
             .timeline-header {
                 text-align: center;
-                margin-bottom: 40px;
+                margin-bottom: 30px;
             }
 
             .timeline-header h2 {
                 color: var(--text-primary);
                 margin-bottom: 10px;
-                font-size: 32px;
+                font-size: 28px;
                 font-weight: 700;
             }
 
             .timeline-header p {
                 color: var(--text-secondary);
-                font-size: 16px;
+                font-size: 14px;
             }
 
-            .timeline-line {
+            .timeline-scroll-container {
                 position: relative;
-                padding: 20px 0;
-            }
-
-            .timeline-line::before {
-                content: '';
-                position: absolute;
-                left: 50%;
-                top: 0;
-                bottom: 0;
-                width: 4px;
-                background: linear-gradient(to bottom, var(--accent-color), var(--border-color));
-                transform: translateX(-50%);
-                border-radius: 2px;
-            }
-
-            .timeline-item {
-                position: relative;
-                margin-bottom: 60px;
-                display: flex;
-                align-items: flex-start;
-                opacity: 0;
-                transform: translateY(30px);
-                transition: all 0.6s ease;
-                cursor: pointer;
-            }
-
-            .timeline-item.visible {
-                opacity: 1;
-                transform: translateY(0);
-            }
-
-            .timeline-marker {
-                position: absolute;
-                left: 50%;
-                transform: translateX(-50%);
-                width: 50px;
-                height: 50px;
-                border-radius: 50%;
-                background: var(--surface-color);
-                border: 4px solid var(--accent-color);
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                z-index: 2;
-                font-size: 20px;
-                box-shadow: var(--shadow-md);
-            }
-
-            .timeline-icon {
                 width: 100%;
-                height: 100%;
-                border-radius: 50%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: white;
-                font-weight: bold;
-                font-size: 18px;
+                overflow-x: auto;
+                overflow-y: hidden;
+                padding: 20px 0 30px 0;
+                margin-bottom: 10px;
+                
+                /* Custom scrollbar - LARGER SIZE */
+                scrollbar-width: auto;
+                scrollbar-color: var(--accent-color) var(--bg-secondary);
             }
 
-            .timeline-content-item {
+            .timeline-scroll-container::-webkit-scrollbar {
+                height: 20px; /* INCREASED SIZE */
+            }
+
+            .timeline-scroll-container::-webkit-scrollbar-track {
+                background: var(--bg-secondary);
+                border-radius: 12px;
+                border: 2px solid var(--border-color);
+                margin: 0 20px;
+                box-shadow: inset 0 0 4px rgba(0,0,0,0.05);
+            }
+
+            .timeline-scroll-container::-webkit-scrollbar-thumb {
+                background: linear-gradient(135deg, var(--accent-color), var(--accent-color-dark, #c0392b));
+                border-radius: 12px;
+                border: 3px solid var(--bg-secondary);
+                min-width: 60px;
+                box-shadow: 0 2px 6px rgba(220, 53, 69, 0.2);
+                transition: all 0.2s ease;
+            }
+
+            .timeline-scroll-container::-webkit-scrollbar-thumb:hover {
+                background: linear-gradient(135deg, var(--accent-color-dark, #c0392b), #a02516);
+                box-shadow: 0 3px 10px rgba(220, 53, 69, 0.4);
+                cursor: grab;
+            }
+
+            .timeline-scroll-container::-webkit-scrollbar-thumb:active {
+                cursor: grabbing;
+                background: linear-gradient(135deg, #a02516, #8b1f14);
+                box-shadow: 0 1px 4px rgba(220, 53, 69, 0.3);
+            }
+
+            .timeline-cards-wrapper {
+                display: flex;
+                gap: 20px;
+                padding: 10px 20px;
+                min-width: min-content;
+            }
+
+            .timeline-card {
+                flex: 0 0 280px;
+                width: 280px;
                 background: var(--surface-color);
                 border: 2px solid var(--border-color);
                 border-radius: 12px;
-                padding: 24px;
-                box-shadow: var(--shadow-md);
-                max-width: 450px;
-                width: 100%;
+                overflow: hidden;
+                cursor: pointer;
                 transition: all 0.3s ease;
+                box-shadow: var(--shadow-sm);
+                display: flex;
+                flex-direction: column;
             }
 
-            .timeline-content-item:hover {
+            .timeline-card:hover {
+                transform: translateY(-5px);
                 box-shadow: var(--shadow-lg);
-                transform: translateY(-3px);
                 border-color: var(--accent-color);
             }
 
-            .timeline-content-item.left {
-                margin-right: 55%;
+            .card-header {
+                padding: 12px 15px;
+                color: white;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-weight: 600;
             }
 
-            .timeline-content-item.right {
-                margin-left: 55%;
-            }
-
-            .timeline-date {
-                color: var(--accent-color);
-                font-size: 14px;
-                font-weight: 700;
-                margin-bottom: 8px;
+            .card-date {
+                font-size: 12px;
                 text-transform: uppercase;
                 letter-spacing: 0.5px;
             }
 
             .period-badge {
-                display: inline-block;
-                padding: 4px 10px;
-                border-radius: 12px;
-                font-size: 11px;
-                font-weight: 700;
-                margin-bottom: 8px;
-                text-transform: uppercase;
-                letter-spacing: 0.3px;
-            }
-
-            .period-badge.historical {
-                background: rgba(108, 117, 125, 0.2);
-                color: #6c757d;
-                border: 1px solid #6c757d;
-            }
-
-            .period-badge.current {
-                background: rgba(220, 53, 69, 0.2);
-                color: #dc3545;
-                border: 1px solid #dc3545;
-            }
-
-            .timeline-title {
-                color: var(--text-primary);
-                margin-bottom: 10px;
-                font-size: 22px;
-                line-height: 1.3;
-                font-weight: 700;
-            }
-
-            .timeline-location {
-                color: var(--text-secondary);
                 font-size: 14px;
-                margin-bottom: 6px;
+                padding: 2px 6px;
+                background: rgba(255, 255, 255, 0.2);
+                border-radius: 8px;
             }
 
-            .timeline-type {
-                font-size: 14px;
-                font-weight: 600;
-                margin-bottom: 12px;
-            }
-
-            .timeline-description {
-                color: var(--text-primary);
-                line-height: 1.6;
-                margin-bottom: 16px;
-                font-size: 15px;
-            }
-
-            .timeline-casualties {
+            .card-body {
+                padding: 15px;
+                flex: 1;
                 display: flex;
-                flex-wrap: wrap;
-                gap: 8px;
+                flex-direction: column;
+            }
+
+            .card-title {
+                color: var(--text-primary);
+                font-size: 16px;
+                font-weight: 700;
+                margin: 0 0 8px 0;
+                line-height: 1.3;
+                min-height: 40px;
+            }
+
+            .card-location {
+                color: var(--text-secondary);
+                font-size: 11px;
+                margin-bottom: 10px;
+            }
+
+            .card-description {
+                color: var(--text-primary);
+                font-size: 13px;
+                line-height: 1.5;
                 margin-bottom: 12px;
+                flex: 1;
             }
 
-            .casualty-badge {
-                display: inline-block;
-                padding: 6px 12px;
-                border-radius: 20px;
-                font-size: 12px;
-                font-weight: 600;
+            .card-casualties {
+                display: flex;
+                gap: 6px;
+                flex-wrap: wrap;
+                margin-top: auto;
             }
 
-            .casualty-badge.deaths {
+            .casualty-pill {
                 background: rgba(220, 53, 69, 0.1);
                 color: #dc3545;
                 border: 1px solid #dc3545;
-            }
-
-            .casualty-badge.injured {
-                background: rgba(255, 193, 7, 0.1);
-                color: #ffc107;
-                border: 1px solid #ffc107;
-            }
-
-            .casualty-badge.displaced {
-                background: rgba(111, 66, 193, 0.1);
-                color: #6f42c1;
-                border: 1px solid #6f42c1;
-            }
-
-            .war-crimes-preview {
-                background: rgba(220, 53, 69, 0.05);
-                border-left: 3px solid #dc3545;
-                padding: 10px 12px;
-                margin-bottom: 12px;
-                font-size: 13px;
-                line-height: 1.5;
-            }
-
-            .timeline-meta {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                margin-bottom: 16px;
-                flex-wrap: wrap;
-                gap: 8px;
-            }
-
-            .verification-badge {
-                padding: 4px 10px;
+                padding: 4px 8px;
                 border-radius: 12px;
                 font-size: 11px;
                 font-weight: 600;
-                text-transform: uppercase;
+                white-space: nowrap;
             }
 
-            .verification-badge.verified {
-                background: rgba(40, 167, 69, 0.1);
-                color: #28a745;
-                border: 1px solid #28a745;
-            }
-
-            .verification-badge.disputed {
+            .casualty-pill.injured {
                 background: rgba(255, 193, 7, 0.1);
                 color: #ffc107;
-                border: 1px solid #ffc107;
+                border-color: #ffc107;
             }
 
-            .verification-badge.under_investigation {
-                background: rgba(23, 162, 184, 0.1);
-                color: #17a2b8;
-                border: 1px solid #17a2b8;
-            }
-
-            .sources-badge {
-                font-size: 12px;
-                color: var(--text-secondary);
+            .card-footer {
+                padding: 10px 15px;
+                border-top: 1px solid var(--border-light);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
                 background: var(--bg-secondary);
-                padding: 4px 8px;
-                border-radius: 10px;
             }
 
-            .timeline-details-btn {
+            .verification-mini {
+                font-size: 16px;
+            }
+
+            .view-details-mini {
+                background: var(--secondary-color);
+                color: white;
+                border: none;
+                padding: 6px 12px;
+                border-radius: 6px;
+                font-size: 11px;
+                font-weight: 600;
+                cursor: pointer;
+                transition: all 0.2s ease;
+            }
+
+            .view-details-mini:hover {
                 background: var(--accent-color);
+                transform: scale(1.05);
+            }
+
+            .scroll-hint {
+                text-align: center;
+                color: var(--text-secondary);
+                font-size: 12px;
+                font-style: italic;
+                margin-top: 10px;
+                animation: pulse 2s infinite;
+            }
+
+            @keyframes pulse {
+                0%, 100% { opacity: 0.6; }
+                50% { opacity: 1; }
+            }
+
+            /* Responsive adjustments */
+            @media (max-width: 768px) {
+                .timeline-card {
+                    flex: 0 0 260px;
+                    width: 260px;
+                }
+
+                .timeline-cards-wrapper {
+                    padding: 10px;
+                    gap: 15px;
+                }
+
+                .card-title {
+                    font-size: 14px;
+                    min-height: 35px;
+                }
+
+                .card-description {
+                    font-size: 12px;
+                }
+
+                /* Slightly smaller scrollbar on mobile */
+                .timeline-scroll-container::-webkit-scrollbar {
+                    height: 16px;
+                }
+            }
+
+            /* Empty state styling */
+            .timeline-empty-state {
+                text-align: center;
+                padding: 60px 20px;
+                color: var(--text-secondary);
+            }
+
+            .empty-icon {
+                font-size: 64px;
+                margin-bottom: 20px;
+                opacity: 0.5;
+            }
+
+            .timeline-empty-state h3 {
+                color: var(--text-primary);
+                margin-bottom: 10px;
+            }
+
+            .clear-all-btn {
+                background: var(--secondary-color);
                 color: white;
                 border: none;
                 padding: 12px 24px;
                 border-radius: 8px;
                 cursor: pointer;
-                font-size: 14px;
                 font-weight: 600;
+                margin-top: 20px;
                 transition: all 0.2s ease;
-                width: 100%;
-                font-family: var(--font-family-base);
             }
 
-            .timeline-details-btn:hover {
-                background: var(--accent-color-dark, #c0392b);
+            .clear-all-btn:hover {
+                background: var(--accent-color);
                 transform: translateY(-2px);
-                box-shadow: var(--shadow-sm);
-            }
-
-            /* Responsive Design */
-            @media (max-width: 768px) {
-                .timeline-line::before {
-                    left: 30px;
-                }
-                
-                .timeline-marker {
-                    left: 30px;
-                    transform: none;
-                    width: 40px;
-                    height: 40px;
-                }
-                
-                .timeline-content-item.left,
-                .timeline-content-item.right {
-                    margin-left: 80px;
-                    margin-right: 0;
-                    max-width: none;
-                }
-
-                .timeline-content-item {
-                    padding: 20px;
-                }
-
-                .timeline-title {
-                    font-size: 18px;
-                }
             }
         `;
         document.head.appendChild(styles);
@@ -1290,12 +1325,33 @@ class DualTimelineManager {
     formatDate(dateString) {
         const date = new Date(dateString);
         if (isNaN(date)) return 'Unknown date';
-        
+
         return date.toLocaleDateString('en-US', {
             year: 'numeric',
             month: 'long',
             day: 'numeric'
         });
+    }
+
+    // Format date in short format
+    formatDateShort(dateString) {
+        const date = new Date(dateString);
+        if (isNaN(date)) return 'Unknown';
+
+        const month = date.toLocaleDateString('en-US', { month: 'short' });
+        const day = date.getDate();
+        const year = date.getFullYear();
+
+        return `${month} ${day}, ${year}`;
+    }
+
+    // Adjust color brightness
+    adjustColor(color, amount) {
+        const num = parseInt(color.replace('#', ''), 16);
+        const r = Math.max(0, Math.min(255, (num >> 16) + amount));
+        const g = Math.max(0, Math.min(255, ((num >> 8) & 0x00FF) + amount));
+        const b = Math.max(0, Math.min(255, (num & 0x0000FF) + amount));
+        return '#' + ((r << 16) | (g << 8) | b).toString(16).padStart(6, '0');
     }
 
     formatNumber(num) {
@@ -1321,7 +1377,7 @@ class DualTimelineManager {
 
     capitalizeWords(str) {
         if (!str) return '';
-        return str.split(' ').map(word => 
+        return str.split(' ').map(word =>
             word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
         ).join(' ');
     }
@@ -1340,7 +1396,8 @@ class DualTimelineManager {
             hospital_siege: '🚑',
             mass_graves: '⚰️',
             aid_workers_killing: '🚨',
-            urban_destruction: '💥'
+            urban_destruction: '💥',
+            military_raids: '🔫'
         };
         return icons[eventType] || '📍';
     }
@@ -1369,7 +1426,7 @@ class DualTimelineManager {
     showLoading(message) {
         const statusEl = document.getElementById('timelineStatusContent');
         const statusContainer = document.getElementById('timelineStatus');
-        
+
         if (statusEl && statusContainer) {
             statusEl.textContent = `📊 ${message}`;
             statusContainer.style.display = 'block';
@@ -1378,7 +1435,7 @@ class DualTimelineManager {
 
     showError(message) {
         console.error(message);
-        
+
         const container = document.getElementById('timeline-embed');
         if (container) {
             container.innerHTML = `
@@ -1416,11 +1473,11 @@ class DualTimelineManager {
     toggleTheme() {
         const currentTheme = document.documentElement.getAttribute('data-theme');
         const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-        
+
         document.documentElement.setAttribute('data-theme', newTheme);
         localStorage.setItem('gaza-docs-theme', newTheme);
         this.updateThemeIcon(newTheme);
-        
+
         // Refresh map if active
         if (this.map) {
             setTimeout(() => this.map.invalidateSize(), 100);
@@ -1453,10 +1510,19 @@ class DualTimelineManager {
     }
 }
 
+// Prevent timeline.js from interfering
+if (window.initializeTimeline) {
+    console.warn('⚠️ Overriding timeline.js functions with dual-timeline-manager');
+    window.initializeTimeline = function() {
+        console.log('📋 timeline.js disabled - using dual-timeline-manager instead');
+    };
+}
+
 // Initialize on DOM ready
 document.addEventListener('DOMContentLoaded', () => {
     console.log('🚀 Initializing Dual Timeline System...');
-    
+    console.log('📅 Default Mode: Historical Massacres (1948-2023)');
+
     window.dualTimeline = new DualTimelineManager();
     window.dualTimeline.init();
 });
