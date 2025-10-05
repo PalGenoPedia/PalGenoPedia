@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,91 +32,80 @@
     <!-- Main Content -->
     <main class="event-documentation">
         <!-- Breadcrumb Navigation -->
-        <div class="breadcrumb" id="breadcrumb-container">
-            <!-- Generated from JSON -->
-        </div>
+        <div class="breadcrumb" id="breadcrumb-container"></div>
 
         <!-- Hero Section -->
-        <div class="event-hero" id="hero-section">
-            <!-- Generated from JSON -->
-        </div>
+        <div class="event-hero" id="hero-section"></div>
 
         <!-- Quick Info -->
-        <div class="quick-info-box" id="quick-info">
-            <!-- Generated from JSON -->
-        </div>
+        <div class="quick-info-box" id="quick-info"></div>
+
+        <!-- Media Gallery Section -->
+        <div id="media-gallery-section"></div>
 
         <!-- Executive Summary -->
-        <section class="content-section" id="executive-summary">
-            <!-- Generated from JSON -->
-        </section>
+        <section class="content-section" id="executive-summary"></section>
 
         <!-- Casualties Documentation -->
-        <section class="content-section" id="casualties-section">
-            <!-- Generated from JSON -->
-        </section>
+        <section class="content-section" id="casualties-section"></section>
 
         <!-- Timeline -->
-        <section class="content-section" id="timeline-section">
-            <!-- Generated from JSON -->
-        </section>
+        <section class="content-section" id="timeline-section"></section>
 
         <!-- Documented Atrocities -->
-        <section class="content-section" id="war-crimes-section">
-            <!-- Generated from JSON -->
-        </section>
+        <section class="content-section" id="war-crimes-section"></section>
 
         <!-- International Law -->
-        <section class="content-section" id="international-law-section">
-            <!-- Generated from JSON -->
-        </section>
+        <section class="content-section" id="international-law-section"></section>
 
         <!-- Witness Testimonies -->
-        <section class="content-section" id="testimonies-section">
-            <!-- Generated from JSON -->
-        </section>
+        <section class="content-section" id="testimonies-section"></section>
 
         <!-- Historical Impact -->
-        <section class="content-section" id="historical-impact-section">
-            <!-- Generated from JSON -->
-        </section>
+        <section class="content-section" id="historical-impact-section"></section>
 
         <!-- Verified Sources -->
-        <section class="content-section" id="sources-section">
-            <!-- Generated from JSON -->
-        </section>
+        <section class="content-section" id="sources-section"></section>
 
         <!-- Call to Action -->
-        <div class="cta-section" id="cta-section">
-            <!-- Generated from JSON -->
-        </div>
+        <div class="cta-section" id="cta-section"></div>
     </main>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+        <button class="lightbox-nav lightbox-prev" onclick="changeImage(-1)">&#10094;</button>
+        <div class="lightbox-content">
+            <img id="lightbox-image" class="lightbox-image" src="" alt="">
+            <div id="lightbox-caption" class="lightbox-caption"></div>
+        </div>
+        <button class="lightbox-nav lightbox-next" onclick="changeImage(1)">&#10095;</button>
+    </div>
 
     <!-- Footer -->
     <div id="footer-placeholder"></div>
-    <script>
-        fetch('../../common-styles.html')
-            .then(response => response.text())
-            .then(html => {
-                document.getElementById('footer-placeholder').innerHTML = html;
-            })
-            .catch(error => {
-                console.error('Error loading footer:', error);
-            });
-    </script>
 
-    <!-- Main Script - Load and Render JSON Data -->
+    <!-- Main JavaScript -->
     <script>
-        // Get JSON filename from HTML filename (e.g., deir-yassin-1948.html -> deir-yassin-1948.json)
+        // ===================================================================
+        // EVENT DOCUMENTATION PAGE JAVASCRIPT
+        // Handles JSON data loading and rendering for historical massacres
+        // Author: aliattia02
+        // Last Updated: 2025-10-05 16:54:49 UTC
+        // ===================================================================
+
         const jsonFilename = window.location.pathname.split('/').pop().replace('.html', '.json');
-        
-        // Load JSON data
+        let currentImageIndex = 0;
+        let galleryImages = [];
+
+        // ===================================================================
+        // DATA LOADING
+        // ===================================================================
+
         async function loadEventData() {
             try {
                 const response = await fetch(jsonFilename);
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
                 const data = await response.json();
                 renderPage(data);
             } catch (error) {
@@ -131,89 +119,71 @@
             }
         }
 
-        // Render entire page from JSON data
+        // ===================================================================
+        // MAIN RENDER FUNCTION
+        // ===================================================================
+
         function renderPage(data) {
-            // Update metadata
             document.getElementById('page-title').textContent = data.metadata.pageTitle;
             document.getElementById('page-description').setAttribute('content', data.metadata.description);
             document.getElementById('page-keywords').setAttribute('content', data.metadata.keywords);
 
-            // Render breadcrumb
             renderBreadcrumb(data.breadcrumb);
-
-            // Render hero section
             renderHero(data.hero);
-
-            // Render quick facts
             renderQuickFacts(data.quickFacts);
-
-            // Render executive summary
+            if (data.media) renderMediaGallery(data.media);
             renderExecutiveSummary(data.executiveSummary);
-
-            // Render casualties
             renderCasualties(data.casualties);
-
-            // Render timeline
             renderTimeline(data.timeline);
-
-            // Render war crimes
             renderWarCrimes(data.warCrimes);
-
-            // Render international law
             renderInternationalLaw(data.internationalLaw);
-
-            // Render testimonies
             renderTestimonies(data.testimonies);
-
-            // Render historical impact
             renderHistoricalImpact(data.historicalImpact);
-
-            // Render sources
             renderSources(data.sources);
-
-            // Render CTA
             renderCTA(data.cta);
-
-            // Initialize animations
             initializeAnimations();
         }
 
-        // Render functions for each section
+        // ===================================================================
+        // RENDER FUNCTIONS
+        // ===================================================================
+
         function renderBreadcrumb(breadcrumb) {
-            const container = document.getElementById('breadcrumb-container');
-            container.innerHTML = breadcrumb.items.map((item, index) => {
-                if (item.link) {
-                    return `<a href="${item.link}">${item.text}</a>`;
-                } else {
-                    return `<span>${item.text}</span>`;
-                }
-            }).join('<span class="breadcrumb-separator">→</span>');
+            document.getElementById('breadcrumb-container').innerHTML = breadcrumb.items.map((item) =>
+                item.link ? `<a href="${item.link}">${item.text}</a>` : `<span>${item.text}</span>`
+            ).join('<span class="breadcrumb-separator">→</span>');
         }
 
-        function renderHero(hero) {
-            const container = document.getElementById('hero-section');
-            container.innerHTML = `
-                <div class="event-category">${hero.category}</div>
-                <h1 class="event-title">${hero.title}</h1>
-                <p class="event-subtitle">${hero.subtitle}</p>
-                <div class="event-meta-grid">
-                    ${hero.metaCards.map(card => `
-                        <div class="meta-card">
-                            <div class="meta-label">${card.icon} ${card.label}</div>
-                            <div class="meta-value">${card.value}</div>
-                            ${card.detail ? `<div class="meta-detail">${card.detail}</div>` : ''}
-                        </div>
-                    `).join('')}
+function renderHero(hero) {
+    // Filter out Coordinates from hero metaCards
+    const fieldsToHide = ['Coordinates'];
+    const filteredMetaCards = hero.metaCards.filter(card => !fieldsToHide.includes(card.label));
+
+    document.getElementById('hero-section').innerHTML = `
+        <div class="event-category">${hero.category}</div>
+        <h1 class="event-title">${hero.title}</h1>
+        <p class="event-subtitle">${hero.subtitle}</p>
+        <div class="event-meta-grid">
+            ${filteredMetaCards.map(card => `
+                <div class="meta-card">
+                    <div class="meta-label">${card.icon} ${card.label}</div>
+                    <div class="meta-value">${card.value}</div>
+                    ${card.detail ? `<div class="meta-detail">${card.detail}</div>` : ''}
                 </div>
-            `;
-        }
+            `).join('')}
+        </div>
+    `;
+}
 
         function renderQuickFacts(quickFacts) {
-            const container = document.getElementById('quick-info');
-            container.innerHTML = `
+            // Filter out specific fields: Coordinates, Event ID, Injured
+            const fieldsToHide = ['Coordinates', 'Event ID', 'Injured'];
+            const filteredItems = quickFacts.items.filter(item => !fieldsToHide.includes(item.label));
+
+            document.getElementById('quick-info').innerHTML = `
                 <div class="quick-info-title">${quickFacts.title}</div>
                 <div class="quick-info-grid">
-                    ${quickFacts.items.map(item => `
+                    ${filteredItems.map(item => `
                         <div class="quick-info-item">
                             <span class="info-label">${item.label}</span>
                             <span class="info-value">${item.value}</span>
@@ -223,9 +193,134 @@
             `;
         }
 
+        function renderMediaGallery(media) {
+            const container = document.getElementById('media-gallery-section');
+
+            // Combine local and remote images
+            const localImages = media.images?.local || [];
+            const remoteImages = media.images?.remote || [];
+            const allImages = [
+                ...localImages.map(img => ({ src: `images/${img}`, type: 'local', original: img })),
+                ...remoteImages.map(img => ({ src: img, type: 'remote', original: img }))
+            ];
+
+            // Combine local and remote documents
+            const localDocuments = media.documents?.local || [];
+            const remoteDocuments = media.documents?.remote || [];
+            const allDocuments = [
+                ...localDocuments.map(doc => ({ src: `documents/${doc}`, type: 'local', original: doc })),
+                ...remoteDocuments.map(doc => ({ src: doc, type: 'remote', original: doc }))
+            ];
+
+            const hasImages = allImages.length > 0;
+            const hasDocuments = allDocuments.length > 0;
+
+            if (!hasImages && !hasDocuments) {
+                container.style.display = 'none';
+                return;
+            }
+
+            // Prepare gallery images for lightbox
+            if (hasImages) {
+                galleryImages = allImages.map(img => ({
+                    src: img.src,
+                    caption: img.original.replace(/\.[^/.]+$/, "").replace(/-/g, ' ').replace(/_/g, ' ').split('/').pop(),
+                    type: img.type
+                }));
+            }
+
+            let html = `
+                <div class="media-gallery-section">
+                    <div class="media-gallery-header">
+                        <span style="font-size: 1.5rem;">📸</span>
+                        <h2>Media & Documentation</h2>
+                    </div>
+            `;
+
+            if (hasImages && hasDocuments) {
+                html += `
+                    <div class="media-tabs">
+                        <button class="media-tab active" onclick="switchMediaTab('images')">
+                            🖼️ Images (${allImages.length})
+                        </button>
+                        <button class="media-tab" onclick="switchMediaTab('documents')">
+                            📄 Documents (${allDocuments.length})
+                        </button>
+                    </div>
+                `;
+            }
+
+            if (hasImages) {
+                html += `
+                    <div id="media-images" class="media-content active">
+                        <div class="image-gallery">
+                            ${allImages.map((image, index) => {
+                                const imgName = image.original.replace(/\.[^/.]+$/, "").replace(/-/g, ' ').replace(/_/g, ' ').split('/').pop();
+                                const sourceLabel = image.type === 'remote' ? '🌐 External' : '📁 Local';
+
+                                return `
+                                    <div class="gallery-item" onclick="openLightbox(${index})">
+                                        <img src="${image.src}" alt="${imgName}" loading="lazy" onerror="this.parentElement.style.display='none';">
+                                        <div class="gallery-item-overlay">
+                                            <div>${imgName}</div>
+                                            <div style="font-size: 0.75rem; opacity: 0.8; margin-top: 0.25rem;">${sourceLabel}</div>
+                                        </div>
+                                    </div>
+                                `;
+                            }).join('')}
+                        </div>
+                    </div>
+                `;
+            }
+
+            if (hasDocuments) {
+                html += `
+                    <div id="media-documents" class="media-content ${!hasImages ? 'active' : ''}">
+                        <div class="documents-list">
+                            ${allDocuments.map(doc => {
+                                const extension = doc.original.split('.').pop().toUpperCase();
+                                const icon = getDocumentIcon(extension);
+                                const name = doc.original.replace(/\.[^/.]+$/, "").replace(/-/g, ' ').replace(/_/g, ' ').split('/').pop();
+                                const sourceLabel = doc.type === 'remote' ? '🌐 External Source' : '📁 Local File';
+
+                                return `
+                                    <a href="${doc.src}" class="document-item" target="_blank" rel="noopener">
+                                        <div class="document-icon">${icon}</div>
+                                        <div class="document-info">
+                                            <div class="document-name">${name}</div>
+                                            <div class="document-type">${extension} Document • ${sourceLabel}</div>
+                                        </div>
+                                        <span style="font-size: 1.5rem;">⬇️</span>
+                                    </a>
+                                `;
+                            }).join('')}
+                        </div>
+                    </div>
+                `;
+            }
+
+            html += `</div>`;
+            container.innerHTML = html;
+        }
+
+        function getDocumentIcon(extension) {
+            const icons = {
+                'PDF': '📕', 'DOC': '📘', 'DOCX': '📘', 'TXT': '📄',
+                'XLS': '📗', 'XLSX': '📗', 'PPT': '📙', 'PPTX': '📙',
+                'ZIP': '📦', 'RAR': '📦'
+            };
+            return icons[extension] || '📄';
+        }
+
+        function switchMediaTab(tab) {
+            document.querySelectorAll('.media-tab').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            document.querySelectorAll('.media-content').forEach(content => content.classList.remove('active'));
+            document.getElementById(`media-${tab}`).classList.add('active');
+        }
+
         function renderExecutiveSummary(summary) {
-            const container = document.getElementById('executive-summary');
-            container.innerHTML = `
+            document.getElementById('executive-summary').innerHTML = `
                 <div class="section-header">
                     <span class="section-icon">${summary.icon}</span>
                     <h2 class="section-title">${summary.title}</h2>
@@ -241,8 +336,7 @@
         }
 
         function renderCasualties(casualties) {
-            const container = document.getElementById('casualties-section');
-            container.innerHTML = `
+            document.getElementById('casualties-section').innerHTML = `
                 <div class="section-header">
                     <span class="section-icon">${casualties.icon}</span>
                     <h2 class="section-title">${casualties.title}</h2>
@@ -266,8 +360,7 @@
         }
 
         function renderTimeline(timeline) {
-            const container = document.getElementById('timeline-section');
-            container.innerHTML = `
+            document.getElementById('timeline-section').innerHTML = `
                 <div class="section-header">
                     <span class="section-icon">${timeline.icon}</span>
                     <h2 class="section-title">${timeline.title}</h2>
@@ -288,8 +381,7 @@
         }
 
         function renderWarCrimes(warCrimes) {
-            const container = document.getElementById('war-crimes-section');
-            container.innerHTML = `
+            document.getElementById('war-crimes-section').innerHTML = `
                 <div class="section-header">
                     <span class="section-icon">${warCrimes.icon}</span>
                     <h2 class="section-title">${warCrimes.title}</h2>
@@ -320,8 +412,7 @@
         }
 
         function renderInternationalLaw(law) {
-            const container = document.getElementById('international-law-section');
-            container.innerHTML = `
+            document.getElementById('international-law-section').innerHTML = `
                 <div class="section-header">
                     <span class="section-icon">${law.icon}</span>
                     <h2 class="section-title">${law.title}</h2>
@@ -343,8 +434,7 @@
         }
 
         function renderTestimonies(testimonies) {
-            const container = document.getElementById('testimonies-section');
-            container.innerHTML = `
+            document.getElementById('testimonies-section').innerHTML = `
                 <div class="section-header">
                     <span class="section-icon">${testimonies.icon}</span>
                     <h2 class="section-title">${testimonies.title}</h2>
@@ -379,8 +469,7 @@
         }
 
         function renderHistoricalImpact(impact) {
-            const container = document.getElementById('historical-impact-section');
-            container.innerHTML = `
+            document.getElementById('historical-impact-section').innerHTML = `
                 <div class="section-header">
                     <span class="section-icon">${impact.icon}</span>
                     <h2 class="section-title">${impact.title}</h2>
@@ -397,8 +486,7 @@
         }
 
         function renderSources(sources) {
-            const container = document.getElementById('sources-section');
-            container.innerHTML = `
+            document.getElementById('sources-section').innerHTML = `
                 <div class="section-header">
                     <span class="section-icon">${sources.icon}</span>
                     <h2 class="section-title">${sources.title}</h2>
@@ -434,13 +522,12 @@
         }
 
         function renderCTA(cta) {
-            const container = document.getElementById('cta-section');
-            container.innerHTML = `
+            document.getElementById('cta-section').innerHTML = `
                 <h2 class="cta-title">${cta.title}</h2>
                 <p class="cta-description">${cta.description}</p>
                 <div class="cta-buttons">
                     ${cta.buttons.map(button => `
-                        <a href="${button.link}" 
+                        <a href="${button.link}"
                            class="cta-btn ${button.type === 'secondary' ? 'secondary' : ''}"
                            ${button.action === 'print' ? 'onclick="window.print(); return false;"' : ''}
                            ${button.link.startsWith('http') || button.link.startsWith('mailto') ? 'target="_blank" rel="noopener"' : ''}>
@@ -451,12 +538,38 @@
             `;
         }
 
-        function initializeAnimations() {
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
+        // ===================================================================
+        // LIGHTBOX FUNCTIONS
+        // ===================================================================
 
+        function openLightbox(index) {
+            currentImageIndex = index;
+            const lightbox = document.getElementById('lightbox');
+            document.getElementById('lightbox-image').src = galleryImages[index].src;
+            document.getElementById('lightbox-caption').textContent = galleryImages[index].caption;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        function changeImage(direction) {
+            currentImageIndex += direction;
+            if (currentImageIndex < 0) currentImageIndex = galleryImages.length - 1;
+            else if (currentImageIndex >= galleryImages.length) currentImageIndex = 0;
+
+            document.getElementById('lightbox-image').src = galleryImages[currentImageIndex].src;
+            document.getElementById('lightbox-caption').textContent = galleryImages[currentImageIndex].caption;
+        }
+
+        // ===================================================================
+        // ANIMATIONS
+        // ===================================================================
+
+        function initializeAnimations() {
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -464,7 +577,7 @@
                         entry.target.style.transform = 'translateY(0)';
                     }
                 });
-            }, observerOptions);
+            }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
             document.querySelectorAll('.content-section').forEach(section => {
                 section.style.opacity = '0';
@@ -474,7 +587,10 @@
             });
         }
 
-        // Theme functions
+        // ===================================================================
+        // THEME MANAGEMENT
+        // ===================================================================
+
         function initializeTheme() {
             const savedTheme = localStorage.getItem('gaza-docs-theme') || 'light';
             document.documentElement.setAttribute('data-theme', savedTheme);
@@ -483,18 +599,27 @@
 
         function updateThemeIcon(theme) {
             const themeToggle = document.querySelector('.theme-toggle');
-            if (themeToggle) {
-                themeToggle.textContent = theme === 'dark' ? '☀️' : '🌙';
-            }
+            if (themeToggle) themeToggle.textContent = theme === 'dark' ? '☀️' : '🌙';
         }
 
+        // ===================================================================
+        // EVENT LISTENERS
+        // ===================================================================
+
+        // Theme toggle
         document.querySelector('.theme-toggle')?.addEventListener('click', function() {
             const currentTheme = document.documentElement.getAttribute('data-theme');
             const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            
             document.documentElement.setAttribute('data-theme', newTheme);
             localStorage.setItem('gaza-docs-theme', newTheme);
             updateThemeIcon(newTheme);
+        });
+
+        // Keyboard navigation for lightbox
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeLightbox();
+            else if (e.key === 'ArrowLeft') changeImage(-1);
+            else if (e.key === 'ArrowRight') changeImage(1);
         });
 
         // Smooth scrolling
@@ -511,13 +636,24 @@
             });
         });
 
-        // Initialize everything on load
+        // ===================================================================
+        // INITIALIZATION
+        // ===================================================================
+
+        // Load footer
+        fetch('../../common-styles.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('footer-placeholder').innerHTML = html;
+            })
+            .catch(error => console.error('Error loading footer:', error));
+
+        // Initialize on page load
         document.addEventListener('DOMContentLoaded', function() {
             initializeTheme();
             loadEventData();
-            console.log('✅ Event documentation page initialized with JSON data');
+            console.log('✅ Event documentation page initialized - 2025-10-05 16:54:49 UTC');
         });
     </script>
 </body>
 </html>
-```
