@@ -1,0 +1,328 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2025-10-05",
+    "period": "2023-10-07-present",
+    "genocide_start_date": "2023-10-07",
+    "data_sources": ["UN OCHA", "Human Rights Watch", "Gaza Health Ministry", "B'Tselem", "Euro-Med Monitor"],
+    "note": "This represents the ongoing genocide that began on October 7, 2023"
+  },
+  "current_statistics": {
+    "total_deaths": 61200,
+    "children_killed": 19000,
+    "women_killed": 12000,
+    "journalists_killed": 232,
+    "medical_personnel_killed": 1600,
+    "total_injured": 150671,
+    "displaced": 1900000,
+    "infrastructure_destroyed": {
+      "homes": 370000,
+      "hospitals": 36,
+      "schools": 352,
+      "mosques": 611,
+      "churches": 3
+    }
+  },
+  "incidents": [
+    {
+      "id": "curr_001",
+      "title": "Al-Ahli Baptist Hospital Strike",
+      "date": "2023-10-17",
+      "location": {
+        "name": "Al-Ahli Arab Hospital, Gaza City",
+        "coordinates": [34.4545, 31.5123]
+      },
+      "event_type": "hospital_attack",
+      "casualties": {
+        "deaths": 471,
+        "injured": 342,
+        "forced_displacement": 0
+      },
+      "perpetrators": ["Israeli Airstrikes (disputed)"],
+      "brief_summary": "Explosion at Al-Ahli Baptist Hospital compound where thousands of displaced Palestinians were sheltering. Massive casualties in hospital courtyard.",
+      "war_crimes": ["Attack on medical facility", "Targeting of protected site", "Civilian deaths", "Attack on displaced persons"],
+      "verification_status": "disputed",
+      "sources": [
+        "Gaza Health Ministry",
+        "Human Rights Watch Investigation",
+        "UN OCHA",
+        "Multiple witness testimonies"
+      ],
+      "detail_page": "Pages/Current_Genocide/ahli-hospital-2023.html",
+      "media": {
+        "images": ["ahli-hospital-aftermath.jpg"],
+        "documents": ["hrw-ahli-investigation.pdf"]
+      }
+    },
+    {
+      "id": "curr_002",
+      "title": "Jabalia Refugee Camp Bombardment (First Strike)",
+      "date": "2023-10-31",
+      "location": {
+        "name": "Jabalia Refugee Camp, North Gaza",
+        "coordinates": [34.4833, 31.5333]
+      },
+      "event_type": "refugee_camp_attack",
+      "casualties": {
+        "deaths": 195,
+        "injured": 777,
+        "forced_displacement": 0
+      },
+      "perpetrators": ["IDF"],
+      "brief_summary": "Massive airstrike on densely populated Jabalia refugee camp. Entire residential blocks destroyed. Israel admitted targeting Hamas commander.",
+      "war_crimes": ["Disproportionate attack", "Targeting civilians", "Collective punishment", "Destruction of civilian homes"],
+      "verification_status": "verified",
+      "sources": [
+        "UN OCHA",
+        "Human Rights Watch",
+        "Gaza Civil Defense",
+        "Multiple news agencies"
+      ],
+      "detail_page": "Pages/Current_Genocide/jabalia-first-strike-2023.html",
+      "media": {
+        "images": ["jabalia-destruction.jpg"],
+        "documents": ["un-ocha-jabalia-report.pdf"]
+      }
+    },
+    {
+      "id": "curr_003",
+      "title": "Flour Massacre - Al-Rashid Street",
+      "date": "2024-02-29",
+      "location": {
+        "name": "Al-Rashid Street, Gaza City",
+        "coordinates": [34.4501, 31.5147]
+      },
+      "event_type": "massacre",
+      "casualties": {
+        "deaths": 118,
+        "injured": 760,
+        "forced_displacement": 0
+      },
+      "perpetrators": ["IDF"],
+      "brief_summary": "Israeli forces opened fire on Palestinians waiting for food aid distribution. Hundreds of civilians killed and injured while trying to obtain flour.",
+      "war_crimes": ["Targeting civilians", "Firing on aid recipients", "Starvation as weapon of war", "Mass killing"],
+      "verification_status": "verified",
+      "sources": [
+        "UN OCHA",
+        "Gaza Health Ministry",
+        "Euro-Med Human Rights Monitor",
+        "Video evidence"
+      ],
+      "detail_page": "Pages/Current_Genocide/flour-massacre-2024.html",
+      "media": {
+        "images": ["flour-massacre.jpg"],
+        "documents": ["euro-med-flour-report.pdf"]
+      }
+    },
+    {
+      "id": "curr_004",
+      "title": "UNRWA School Strikes",
+      "date": "2023-10-15",
+      "location": {
+        "name": "Multiple UNRWA Schools, Gaza Strip",
+        "coordinates": [34.4668, 31.5204]
+      },
+      "event_type": "protected_site_attack",
+      "casualties": {
+        "deaths": 450,
+        "injured": 1200,
+        "forced_displacement": 0
+      },
+      "perpetrators": ["IDF"],
+      "brief_summary": "Series of attacks on UNRWA schools serving as shelters for displaced Palestinians. Multiple schools hit despite UN coordination with Israeli forces.",
+      "war_crimes": ["Attacks on UN facilities", "Targeting of protected sites", "Attacks on displaced persons", "Civilian casualties"],
+      "verification_status": "verified",
+      "sources": [
+        "UNRWA Official Statements",
+        "UN Secretary-General Reports",
+        "Human Rights Watch"
+      ],
+      "detail_page": "Pages/Current_Genocide/unrwa-schools-attacks-2023.html",
+      "media": {
+        "images": ["unrwa-school-damage.jpg"],
+        "documents": ["unrwa-incidents-report.pdf"]
+      }
+    },
+    {
+      "id": "curr_005",
+      "title": "Mass Graves Discovery at Nasser Hospital",
+      "date": "2024-04-22",
+      "location": {
+        "name": "Nasser Medical Complex, Khan Yunis",
+        "coordinates": [34.3062, 31.3459]
+      },
+      "event_type": "mass_graves",
+      "casualties": {
+        "deaths": 392,
+        "injured": 0,
+        "forced_displacement": 0
+      },
+      "perpetrators": ["IDF (alleged)"],
+      "brief_summary": "Mass graves discovered at Nasser Hospital after Israeli withdrawal. Bodies found with hands tied, evidence of executions. Some bodies taken from hospital by Israeli forces.",
+      "war_crimes": ["Extrajudicial executions", "Desecration of dead", "Forced disappearances", "War crimes"],
+      "verification_status": "verified",
+      "sources": [
+        "Gaza Civil Defense",
+        "UN OCHA",
+        "Human Rights Watch",
+        "Euro-Med Human Rights Monitor"
+      ],
+      "detail_page": "Pages/Current_Genocide/nasser-mass-graves-2024.html",
+      "media": {
+        "images": ["nasser-mass-graves.jpg"],
+        "documents": ["hrw-mass-graves-investigation.pdf"]
+      }
+    },
+    {
+      "id": "curr_006",
+      "title": "Al-Shifa Hospital Siege",
+      "date": "2023-11-11",
+      "location": {
+        "name": "Al-Shifa Hospital, Gaza City",
+        "coordinates": [34.4561, 31.5019]
+      },
+      "event_type": "hospital_siege",
+      "casualties": {
+        "deaths": 200,
+        "injured": 500,
+        "forced_displacement": 0
+      },
+      "perpetrators": ["IDF"],
+      "brief_summary": "Israeli forces besieged Gaza's largest hospital, cutting off power and water. Patients died due to lack of medical care. Hospital raided despite being protected under international law.",
+      "war_crimes": ["Attack on medical facility", "Denial of medical care", "Targeting protected site", "Civilian deaths"],
+      "verification_status": "verified",
+      "sources": [
+        "WHO",
+        "UN OCHA",
+        "Human Rights Watch",
+        "Doctors Without Borders"
+      ],
+      "detail_page": "Pages/Current_Genocide/shifa-hospital-siege-2023.html",
+      "media": {
+        "images": ["shifa-hospital-siege.jpg"],
+        "documents": ["who-shifa-report.pdf"]
+      }
+    },
+    {
+      "id": "curr_007",
+      "title": "Rafah Tent Camp Massacre",
+      "date": "2024-05-26",
+      "location": {
+        "name": "Displacement Camp, Rafah",
+        "coordinates": [34.2505, 31.2890]
+      },
+      "event_type": "massacre",
+      "casualties": {
+        "deaths": 45,
+        "injured": 200,
+        "forced_displacement": 0
+      },
+      "perpetrators": ["IDF"],
+      "brief_summary": "Israeli airstrike on tent camp sheltering displaced Palestinians in Rafah. Many victims burned alive in their tents. Israel claimed targeting Hamas operatives.",
+      "war_crimes": ["Targeting displaced persons", "Disproportionate force", "Civilian deaths", "Use of incendiary weapons"],
+      "verification_status": "verified",
+      "sources": [
+        "UN OCHA",
+        "Gaza Health Ministry",
+        "Human Rights Watch",
+        "Video evidence"
+      ],
+      "detail_page": "Pages/Current_Genocide/rafah-tent-massacre-2024.html",
+      "media": {
+        "images": ["rafah-tent-massacre.jpg"],
+        "documents": ["hrw-rafah-investigation.pdf"]
+      }
+    },
+    {
+      "id": "curr_008",
+      "title": "World Central Kitchen Workers Killing",
+      "date": "2024-04-01",
+      "location": {
+        "name": "Deir al-Balah, Central Gaza",
+        "coordinates": [34.3517, 31.4181]
+      },
+      "event_type": "aid_workers_killing",
+      "casualties": {
+        "deaths": 7,
+        "injured": 0,
+        "forced_displacement": 0
+      },
+      "perpetrators": ["IDF"],
+      "brief_summary": "Israeli forces targeted and killed seven World Central Kitchen aid workers in three consecutive strikes on clearly marked vehicles. International outcry followed.",
+      "war_crimes": ["Targeting aid workers", "Targeting clearly marked vehicles", "War crimes", "Obstruction of humanitarian aid"],
+      "verification_status": "verified",
+      "sources": [
+        "World Central Kitchen Statement",
+        "UN Security Council",
+        "Human Rights Watch",
+        "Multiple governments"
+      ],
+      "detail_page": "Pages/Current_Genocide/wck-workers-killing-2024.html",
+      "media": {
+        "images": ["wck-vehicles.jpg"],
+        "documents": ["wck-investigation-report.pdf"]
+      }
+    },
+    {
+      "id": "curr_009",
+      "title": "Gaza City Systematic Destruction",
+      "date": "2023-10-27",
+      "location": {
+        "name": "Gaza City",
+        "coordinates": [34.4668, 31.5204]
+      },
+      "event_type": "urban_destruction",
+      "casualties": {
+        "deaths": 5000,
+        "injured": 12000,
+        "forced_displacement": 800000
+      },
+      "perpetrators": ["IDF"],
+      "brief_summary": "Systematic destruction of entire neighborhoods in Gaza City. Thousands of buildings reduced to rubble. Mass displacement of population.",
+      "war_crimes": ["Collective punishment", "Destruction of civilian infrastructure", "Forced displacement", "War crimes"],
+      "verification_status": "verified",
+      "sources": [
+        "UN OCHA",
+        "Satellite imagery analysis",
+        "Human Rights Watch",
+        "UN Satellite Centre"
+      ],
+      "detail_page": "Pages/Current_Genocide/gaza-city-destruction-2023.html",
+      "media": {
+        "images": ["gaza-city-destruction.jpg"],
+        "documents": ["unosat-damage-assessment.pdf"]
+      }
+    },
+    {
+      "id": "curr_010",
+      "title": "Starvation Genocide - Northern Gaza Blockade",
+      "date": "2024-10-01",
+      "location": {
+        "name": "Northern Gaza Strip",
+        "coordinates": [34.4833, 31.5500]
+      },
+      "event_type": "starvation_warfare",
+      "casualties": {
+        "deaths": 169,
+        "injured": 0,
+        "forced_displacement": 0,
+        "starvation_affected": 500000
+      },
+      "perpetrators": ["IDF", "Israeli Government"],
+      "brief_summary": "Complete blockade of northern Gaza including Jabalia, Beit Hanoun, and Beit Lahiya. No food, water, or medical supplies allowed. Use of starvation as method of warfare.",
+      "war_crimes": ["Starvation as weapon of war", "Genocide", "Collective punishment", "Crimes against humanity", "Denial of humanitarian aid"],
+      "verification_status": "verified",
+      "sources": [
+        "UN Special Rapporteurs",
+        "World Food Programme",
+        "Human Rights Watch",
+        "Genocide Watch"
+      ],
+      "detail_page": "Pages/Current_Genocide/northern-gaza-starvation-2024.html",
+      "media": {
+        "images": ["northern-gaza-blockade.jpg"],
+        "documents": ["un-starvation-report-2024.pdf"]
+      }
+    }
+  ]
+}

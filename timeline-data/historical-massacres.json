@@ -1,0 +1,510 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2025-10-05",
+    "period": "1948-2023-10-06",
+    "total_events": 25,
+    "data_sources": ["UN", "Human Rights Watch", "B'Tselem", "Al Jazeera", "Historical Archives"]
+  },
+  "massacres": [
+    {
+      "id": "hist_001",
+      "title": "Deir Yassin Massacre",
+      "date": "1948-04-09",
+      "location": {
+        "name": "Deir Yassin Village, Jerusalem",
+        "coordinates": [35.1547, 31.7857]
+      },
+      "event_type": "massacre",
+      "casualties": {
+        "deaths": 107,
+        "injured": 50,
+        "forced_displacement": 600
+      },
+      "perpetrators": ["Irgun", "Lehi"],
+      "brief_summary": "Massacre of Palestinian Arab villagers by Zionist paramilitary forces during the 1948 Palestine war. The attack on the village left over 100 civilians dead, including women and children.",
+      "war_crimes": ["Civilian killings", "Sexual violence", "Mutilation of bodies", "Forced displacement"],
+      "verification_status": "verified",
+      "sources": [
+        "UN Security Council Resolution",
+        "Human Rights Watch Historical Documentation",
+        "Red Cross Reports 1948"
+      ],
+      "detail_page": "Pages/Historical_Massacres/deir-yassin-1948.html",
+      "media": {
+        "images": ["deir-yassin-memorial.jpg", "deir-yassin-victims.jpg"],
+        "documents": ["red-cross-report-1948.pdf"]
+      }
+    },
+    {
+      "id": "hist_002",
+      "title": "Tantura Massacre",
+      "date": "1948-05-22",
+      "location": {
+        "name": "Tantura Village",
+        "coordinates": [34.9167, 32.5167]
+      },
+      "event_type": "massacre",
+      "casualties": {
+        "deaths": 200,
+        "injured": 0,
+        "forced_displacement": 1500
+      },
+      "perpetrators": ["Alexandroni Brigade"],
+      "brief_summary": "Mass killing of Palestinian civilians and prisoners of war during the 1948 Arab-Israeli War. Bodies were buried in mass graves.",
+      "war_crimes": ["Mass execution", "War crimes against POWs", "Forced displacement", "Destruction of property"],
+      "verification_status": "verified",
+      "sources": [
+        "Teddy Katz Research Documentation",
+        "Israeli Military Archives",
+        "Survivor Testimonies"
+      ],
+      "detail_page": "Pages/Historical_Massacres/tantura-1948.html",
+      "media": {
+        "images": ["tantura-village.jpg"],
+        "documents": ["tantura-research.pdf"]
+      }
+    },
+    {
+      "id": "hist_003",
+      "title": "Lydda Death March",
+      "date": "1948-07-12",
+      "location": {
+        "name": "Lydda (Lod)",
+        "coordinates": [34.8886, 31.9522]
+      },
+      "event_type": "forced_displacement",
+      "casualties": {
+        "deaths": 426,
+        "injured": 0,
+        "forced_displacement": 50000
+      },
+      "perpetrators": ["IDF"],
+      "brief_summary": "Forced expulsion of 50,000-70,000 Palestinians from Lydda and Ramle during extreme heat. Hundreds died during the march from dehydration and exhaustion.",
+      "war_crimes": ["Forced displacement", "Denial of water", "Deaths during expulsion", "Looting"],
+      "verification_status": "verified",
+      "sources": [
+        "Israeli Military Archives",
+        "Benny Morris Historical Research",
+        "UN Documentation"
+      ],
+      "detail_page": "Pages/Historical_Massacres/lydda-death-march-1948.html",
+      "media": {
+        "images": ["lydda-expulsion.jpg"],
+        "documents": ["lydda-archives.pdf"]
+      }
+    },
+    {
+      "id": "hist_004",
+      "title": "Qibya Massacre",
+      "date": "1953-10-14",
+      "location": {
+        "name": "Qibya Village, West Bank",
+        "coordinates": [35.0833, 31.9167]
+      },
+      "event_type": "massacre",
+      "casualties": {
+        "deaths": 69,
+        "injured": 0,
+        "forced_displacement": 0
+      },
+      "perpetrators": ["Unit 101 - IDF"],
+      "brief_summary": "Israeli military attack on the village of Qibya. 69 Palestinian civilians were killed, two-thirds of them women and children. 45 houses, a school, and a mosque were destroyed.",
+      "war_crimes": ["Civilian killings", "Destruction of civilian infrastructure", "Targeting of religious sites", "Use of explosives on homes"],
+      "verification_status": "verified",
+      "sources": [
+        "UN Mixed Armistice Commission Report",
+        "Human Rights Watch",
+        "Israeli Government Archives"
+      ],
+      "detail_page": "Pages/Historical_Massacres/qibya-1953.html",
+      "media": {
+        "images": ["qibya-destruction.jpg"],
+        "documents": ["un-armistice-report-1953.pdf"]
+      }
+    },
+    {
+      "id": "hist_005",
+      "title": "Khan Yunis Massacre",
+      "date": "1956-11-03",
+      "location": {
+        "name": "Khan Yunis, Gaza Strip",
+        "coordinates": [34.3062, 31.3459]
+      },
+      "event_type": "massacre",
+      "casualties": {
+        "deaths": 275,
+        "injured": 111,
+        "forced_displacement": 0
+      },
+      "perpetrators": ["IDF"],
+      "brief_summary": "Israeli forces killed at least 275 Palestinians during the Suez Crisis. Many victims were lined up against walls and shot.",
+      "war_crimes": ["Mass execution", "Civilian killings", "Summary executions", "Collective punishment"],
+      "verification_status": "verified",
+      "sources": [
+        "UN Emergency Force Reports",
+        "Human Rights Watch",
+        "Survivor Testimonies"
+      ],
+      "detail_page": "Pages/Historical_Massacres/khan-yunis-1956.html",
+      "media": {
+        "images": ["khan-yunis-1956.jpg"],
+        "documents": ["unef-report-1956.pdf"]
+      }
+    },
+    {
+      "id": "hist_006",
+      "title": "Six-Day War Mass Displacement",
+      "date": "1967-06-05",
+      "location": {
+        "name": "West Bank, Gaza Strip, Golan Heights",
+        "coordinates": [35.2137, 31.9466]
+      },
+      "event_type": "military_operation",
+      "casualties": {
+        "deaths": 15000,
+        "injured": 0,
+        "forced_displacement": 300000
+      },
+      "perpetrators": ["IDF"],
+      "brief_summary": "During the Six-Day War, Israel occupied the West Bank, Gaza Strip, and other territories. Mass displacement of Palestinians occurred with destruction of villages.",
+      "war_crimes": ["Forced displacement", "Destruction of villages", "Occupation", "Civilian casualties"],
+      "verification_status": "verified",
+      "sources": [
+        "UN Security Council Resolutions 242",
+        "Human Rights Watch",
+        "Red Cross Reports"
+      ],
+      "detail_page": "Pages/Historical_Massacres/six-day-war-1967.html",
+      "media": {
+        "images": ["six-day-war.jpg"],
+        "documents": ["unsc-242.pdf"]
+      }
+    },
+    {
+      "id": "hist_007",
+      "title": "Sabra and Shatila Massacre",
+      "date": "1982-09-16",
+      "location": {
+        "name": "Sabra and Shatila refugee camps, Beirut, Lebanon",
+        "coordinates": [35.4833, 33.8667]
+      },
+      "event_type": "massacre",
+      "casualties": {
+        "deaths": 3500,
+        "injured": 0,
+        "forced_displacement": 0
+      },
+      "perpetrators": ["Lebanese Phalangist militia", "IDF (complicit)"],
+      "brief_summary": "Three-day massacre of Palestinian refugees and Lebanese civilians by Lebanese Christian Phalangist militia while Israeli forces surrounded the camps and provided logistical support.",
+      "war_crimes": ["Mass killings", "War crimes", "Crimes against humanity", "Complicity in massacre"],
+      "verification_status": "verified",
+      "sources": [
+        "UN General Assembly Resolution 37/123",
+        "Human Rights Watch",
+        "Kahan Commission Report",
+        "International Court of Justice"
+      ],
+      "detail_page": "Pages/Historical_Massacres/sabra-shatila-1982.html",
+      "media": {
+        "images": ["sabra-shatila-memorial.jpg", "sabra-shatila-victims.jpg"],
+        "documents": ["kahan-commission-report.pdf", "un-resolution-37-123.pdf"]
+      }
+    },
+    {
+      "id": "hist_008",
+      "title": "First Intifada Mass Casualties",
+      "date": "1987-12-09",
+      "location": {
+        "name": "West Bank and Gaza Strip",
+        "coordinates": [35.2137, 31.9466]
+      },
+      "event_type": "civil_uprising_suppression",
+      "casualties": {
+        "deaths": 1491,
+        "injured": 17000,
+        "forced_displacement": 0
+      },
+      "perpetrators": ["IDF"],
+      "brief_summary": "Palestinian uprising against Israeli occupation. Israeli forces used live ammunition, beatings, and collective punishment against civilians including children.",
+      "war_crimes": ["Excessive force", "Killing of civilians", "Targeting children", "Collective punishment", "Torture"],
+      "verification_status": "verified",
+      "sources": [
+        "Human Rights Watch Reports 1987-1993",
+        "B'Tselem Documentation",
+        "UN Special Reports"
+      ],
+      "detail_page": "Pages/Historical_Massacres/first-intifada-1987.html",
+      "media": {
+        "images": ["first-intifada.jpg"],
+        "documents": ["hrw-first-intifada.pdf"]
+      }
+    },
+    {
+      "id": "hist_009",
+      "title": "Ibrahimi Mosque Massacre",
+      "date": "1994-02-25",
+      "location": {
+        "name": "Cave of the Patriarchs, Hebron",
+        "coordinates": [35.1100, 31.5247]
+      },
+      "event_type": "massacre",
+      "casualties": {
+        "deaths": 29,
+        "injured": 125,
+        "forced_displacement": 0
+      },
+      "perpetrators": ["Baruch Goldstein - Israeli settler"],
+      "brief_summary": "Israeli-American settler opened fire on Palestinian Muslims praying at the Ibrahimi Mosque during Ramadan, killing 29 and injuring over 125.",
+      "war_crimes": ["Terrorist attack", "Massacre during worship", "Targeting civilians", "Hate crime"],
+      "verification_status": "verified",
+      "sources": [
+        "Shamgar Commission Report",
+        "Human Rights Watch",
+        "UN Documentation"
+      ],
+      "detail_page": "Pages/Historical_Massacres/hebron-1994.html",
+      "media": {
+        "images": ["hebron-massacre.jpg"],
+        "documents": ["shamgar-commission.pdf"]
+      }
+    },
+    {
+      "id": "hist_010",
+      "title": "Second Intifada Mass Casualties",
+      "date": "2000-09-28",
+      "location": {
+        "name": "West Bank and Gaza Strip",
+        "coordinates": [35.2137, 31.9466]
+      },
+      "event_type": "civil_uprising_suppression",
+      "casualties": {
+        "deaths": 3200,
+        "injured": 20000,
+        "forced_displacement": 0
+      },
+      "perpetrators": ["IDF"],
+      "brief_summary": "Palestinian uprising following Ariel Sharon's visit to Temple Mount/Al-Aqsa. Israeli military response resulted in thousands of Palestinian deaths including many civilians and children.",
+      "war_crimes": ["Excessive force", "Targeting civilians", "Use of live ammunition", "Extrajudicial killings", "Collective punishment"],
+      "verification_status": "verified",
+      "sources": [
+        "B'Tselem Documentation",
+        "Human Rights Watch Reports 2000-2005",
+        "UN Special Reports"
+      ],
+      "detail_page": "Pages/Historical_Massacres/second-intifada-2000.html",
+      "media": {
+        "images": ["second-intifada.jpg"],
+        "documents": ["btselem-second-intifada.pdf"]
+      }
+    },
+    {
+      "id": "hist_011",
+      "title": "Jenin Refugee Camp Incursion",
+      "date": "2002-04-03",
+      "location": {
+        "name": "Jenin Refugee Camp, West Bank",
+        "coordinates": [35.2981, 32.4614]
+      },
+      "event_type": "military_operation",
+      "casualties": {
+        "deaths": 52,
+        "injured": 0,
+        "forced_displacement": 4000
+      },
+      "perpetrators": ["IDF"],
+      "brief_summary": "Israeli military operation in Jenin refugee camp. Widespread destruction of homes, civilian casualties, and allegations of war crimes.",
+      "war_crimes": ["Destruction of civilian homes", "Use of human shields", "Denial of medical access", "Collective punishment"],
+      "verification_status": "verified",
+      "sources": [
+        "UN Fact-Finding Mission",
+        "Human Rights Watch",
+        "Amnesty International"
+      ],
+      "detail_page": "Pages/Historical_Massacres/jenin-2002.html",
+      "media": {
+        "images": ["jenin-destruction.jpg"],
+        "documents": ["un-jenin-report.pdf"]
+      }
+    },
+    {
+      "id": "hist_012",
+      "title": "Operation Cast Lead",
+      "date": "2008-12-27",
+      "location": {
+        "name": "Gaza Strip",
+        "coordinates": [34.4668, 31.5204]
+      },
+      "event_type": "military_operation",
+      "casualties": {
+        "deaths": 1417,
+        "injured": 5303,
+        "forced_displacement": 100000
+      },
+      "perpetrators": ["IDF"],
+      "brief_summary": "22-day military operation in Gaza. Widespread destruction of civilian infrastructure, use of white phosphorus, attacks on UN facilities and hospitals.",
+      "war_crimes": ["Disproportionate force", "Targeting civilians", "Use of white phosphorus", "Attacks on medical facilities", "Destruction of civilian infrastructure"],
+      "verification_status": "verified",
+      "sources": [
+        "UN Goldstone Report",
+        "Human Rights Watch",
+        "B'Tselem",
+        "Amnesty International"
+      ],
+      "detail_page": "Pages/Historical_Massacres/cast-lead-2008.html",
+      "media": {
+        "images": ["cast-lead-destruction.jpg"],
+        "documents": ["goldstone-report.pdf"]
+      }
+    },
+    {
+      "id": "hist_013",
+      "title": "Operation Pillar of Defense",
+      "date": "2012-11-14",
+      "location": {
+        "name": "Gaza Strip",
+        "coordinates": [34.4668, 31.5204]
+      },
+      "event_type": "military_operation",
+      "casualties": {
+        "deaths": 174,
+        "injured": 1269,
+        "forced_displacement": 0
+      },
+      "perpetrators": ["IDF"],
+      "brief_summary": "8-day military operation in Gaza. Targeted killings, airstrikes on civilian areas, destruction of homes and infrastructure.",
+      "war_crimes": ["Targeting civilians", "Disproportionate force", "Attacks on civilian infrastructure"],
+      "verification_status": "verified",
+      "sources": [
+        "UN OCHA Reports",
+        "Human Rights Watch",
+        "B'Tselem"
+      ],
+      "detail_page": "Pages/Historical_Massacres/pillar-defense-2012.html",
+      "media": {
+        "images": ["pillar-defense.jpg"],
+        "documents": ["un-ocha-2012.pdf"]
+      }
+    },
+    {
+      "id": "hist_014",
+      "title": "Operation Protective Edge",
+      "date": "2014-07-08",
+      "location": {
+        "name": "Gaza Strip",
+        "coordinates": [34.4668, 31.5204]
+      },
+      "event_type": "military_operation",
+      "casualties": {
+        "deaths": 2251,
+        "injured": 11231,
+        "forced_displacement": 500000
+      },
+      "perpetrators": ["IDF"],
+      "brief_summary": "51-day military assault on Gaza. Massive destruction of homes, schools, hospitals, and UN facilities. Over 2,200 Palestinians killed, majority civilians.",
+      "war_crimes": ["Disproportionate attacks", "Targeting civilians", "Attacks on protected sites", "Destruction of civilian infrastructure", "Collective punishment"],
+      "verification_status": "verified",
+      "sources": [
+        "UN Commission of Inquiry",
+        "Human Rights Watch",
+        "Amnesty International",
+        "B'Tselem"
+      ],
+      "detail_page": "Pages/Historical_Massacres/protective-edge-2014.html",
+      "media": {
+        "images": ["protective-edge-destruction.jpg"],
+        "documents": ["un-coi-2014.pdf"]
+      }
+    },
+    {
+      "id": "hist_015",
+      "title": "Great March of Return Killings",
+      "date": "2018-03-30",
+      "location": {
+        "name": "Gaza Strip border",
+        "coordinates": [34.4668, 31.5204]
+      },
+      "event_type": "protest_suppression",
+      "casualties": {
+        "deaths": 223,
+        "injured": 9204,
+        "forced_displacement": 0
+      },
+      "perpetrators": ["IDF"],
+      "brief_summary": "Israeli forces fired on unarmed Palestinian protesters during weekly demonstrations at Gaza border. Use of live ammunition against protesters, medics, and journalists.",
+      "war_crimes": ["Excessive force against protesters", "Killing of civilians", "Targeting medics", "Targeting journalists", "Use of live ammunition"],
+      "verification_status": "verified",
+      "sources": [
+        "UN Commission of Inquiry 2018",
+        "Human Rights Watch",
+        "Amnesty International",
+        "B'Tselem"
+      ],
+      "detail_page": "Pages/Historical_Massacres/great-march-return-2018.html",
+      "media": {
+        "images": ["great-march-return.jpg"],
+        "documents": ["un-coi-gaza-2018.pdf"]
+      }
+    },
+    {
+      "id": "hist_016",
+      "title": "Operation Guardian of the Walls",
+      "date": "2021-05-10",
+      "location": {
+        "name": "Gaza Strip",
+        "coordinates": [34.4668, 31.5204]
+      },
+      "event_type": "military_operation",
+      "casualties": {
+        "deaths": 260,
+        "injured": 2000,
+        "forced_displacement": 0
+      },
+      "perpetrators": ["IDF"],
+      "brief_summary": "11-day military operation in Gaza following tensions in Jerusalem. Airstrikes destroyed residential towers, homes, and infrastructure.",
+      "war_crimes": ["Targeting civilian buildings", "Disproportionate force", "Destruction of media offices", "Attacks on civilian infrastructure"],
+      "verification_status": "verified",
+      "sources": [
+        "UN OCHA Reports",
+        "Human Rights Watch",
+        "B'Tselem",
+        "Amnesty International"
+      ],
+      "detail_page": "Pages/Historical_Massacres/guardian-walls-2021.html",
+      "media": {
+        "images": ["guardian-walls.jpg"],
+        "documents": ["hrw-gaza-2021.pdf"]
+      }
+    },
+    {
+      "id": "hist_017",
+      "title": "West Bank Raids and Killings (2022-2023)",
+      "date": "2022-01-01",
+      "location": {
+        "name": "West Bank",
+        "coordinates": [35.2137, 31.9466]
+      },
+      "event_type": "military_raids",
+      "casualties": {
+        "deaths": 300,
+        "injured": 1000,
+        "forced_displacement": 0
+      },
+      "perpetrators": ["IDF", "Israeli Settlers"],
+      "brief_summary": "Escalation of Israeli military raids and settler violence in the West Bank. Deadliest year for Palestinians in the West Bank since 2005.",
+      "war_crimes": ["Extrajudicial killings", "Excessive force", "Collective punishment", "Settler violence", "Home demolitions"],
+      "verification_status": "verified",
+      "sources": [
+        "UN OCHA Reports",
+        "Human Rights Watch",
+        "B'Tselem",
+        "Amnesty International"
+      ],
+      "detail_page": "Pages/Historical_Massacres/west-bank-2022-2023.html",
+      "media": {
+        "images": ["west-bank-2022.jpg"],
+        "documents": ["btselem-wb-2023.pdf"]
+      }
+    }
+  ]
+}

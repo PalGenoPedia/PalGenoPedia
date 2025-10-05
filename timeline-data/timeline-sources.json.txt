@@ -1,0 +1,128 @@
+{
+  "version": "1.0",
+  "last_updated": "2025-10-05",
+  "primary_sources": [
+    {
+      "id": "un_ocha",
+      "name": "UN Office for the Coordination of Humanitarian Affairs (OCHA)",
+      "type": "international_organization",
+      "credibility": "verified",
+      "website": "https://www.ochaopt.org/",
+      "description": "UN agency responsible for coordinating humanitarian response. Provides regular reports on casualties and humanitarian situation in Palestine.",
+      "areas_of_focus": ["humanitarian_aid", "casualty_statistics", "displacement", "infrastructure_damage"]
+    },
+    {
+      "id": "hrw",
+      "name": "Human Rights Watch",
+      "type": "international_ngo",
+      "credibility": "verified",
+      "website": "https://www.hrw.org/",
+      "description": "International human rights organization that investigates and reports on violations of international humanitarian law and human rights.",
+      "areas_of_focus": ["war_crimes", "human_rights_violations", "investigations", "legal_analysis"]
+    },
+    {
+      "id": "btselem",
+      "name": "B'Tselem - The Israeli Information Center for Human Rights in the Occupied Territories",
+      "type": "israeli_ngo",
+      "credibility": "verified",
+      "website": "https://www.btselem.org/",
+      "description": "Israeli human rights organization documenting human rights violations in the occupied Palestinian territories.",
+      "areas_of_focus": ["occupation_violations", "casualty_documentation", "home_demolitions", "settler_violence"]
+    },
+    {
+      "id": "amnesty",
+      "name": "Amnesty International",
+      "type": "international_ngo",
+      "credibility": "verified",
+      "website": "https://www.amnesty.org/",
+      "description": "Global movement for human rights. Conducts investigations and advocacy on human rights violations worldwide.",
+      "areas_of_focus": ["human_rights", "war_crimes", "investigations", "advocacy"]
+    },
+    {
+      "id": "euro_med",
+      "name": "Euro-Mediterranean Human Rights Monitor",
+      "type": "international_ngo",
+      "credibility": "verified",
+      "website": "https://euromedmonitor.org/",
+      "description": "Independent organization that monitors and documents human rights violations in the Euro-Mediterranean region.",
+      "areas_of_focus": ["real_time_monitoring", "casualty_documentation", "genocide_documentation", "legal_analysis"]
+    },
+    {
+      "id": "un_coi",
+      "name": "UN Commission of Inquiry on the Occupied Palestinian Territory",
+      "type": "un_body",
+      "credibility": "verified",
+      "website": "https://www.ohchr.org/",
+      "description": "UN Human Rights Council investigative body examining violations of international law in Palestine.",
+      "areas_of_focus": ["legal_investigations", "war_crimes", "systematic_violations", "accountability"]
+    },
+    {
+      "id": "who",
+      "name": "World Health Organization",
+      "type": "un_agency",
+      "credibility": "verified",
+      "website": "https://www.who.int/",
+      "description": "UN agency responsible for international public health. Documents attacks on healthcare and health impacts.",
+      "areas_of_focus": ["health_facilities", "medical_personnel", "health_crisis", "disease_outbreak"]
+    },
+    {
+      "id": "unrwa",
+      "name": "United Nations Relief and Works Agency for Palestine Refugees",
+      "type": "un_agency",
+      "credibility": "verified",
+      "website": "https://www.unrwa.org/",
+      "description": "UN agency providing assistance and protection to Palestinian refugees. Documents attacks on its facilities.",
+      "areas_of_focus": ["refugee_services", "school_attacks", "shelter_attacks", "humanitarian_aid"]
+    },
+    {
+      "id": "pchr",
+      "name": "Palestinian Centre for Human Rights",
+      "type": "palestinian_ngo",
+      "credibility": "verified",
+      "website": "https://pchrgaza.org/",
+      "description": "Palestinian human rights organization based in Gaza. Provides detailed documentation of violations.",
+      "areas_of_focus": ["local_documentation", "casualty_lists", "witness_testimonies", "legal_work"]
+    },
+    {
+      "id": "al_haq",
+      "name": "Al-Haq",
+      "type": "palestinian_ngo",
+      "credibility": "verified",
+      "website": "https://www.alhaq.org/",
+      "description": "Palestinian human rights organization focused on legal advocacy and documentation.",
+      "areas_of_focus": ["legal_documentation", "international_law", "accountability", "advocacy"]
+    }
+  ],
+  "verification_methodology": {
+    "multi_source_requirement": true,
+    "minimum_sources": 2,
+    "preferred_sources": ["UN agencies", "International NGOs", "Local NGOs"],
+    "evidence_types": [
+      "witness_testimonies",
+      "video_evidence",
+      "photographic_evidence",
+      "satellite_imagery",
+      "medical_reports",
+      "official_statements",
+      "investigative_reports"
+    ],
+    "verification_levels": {
+      "verified": "Confirmed by multiple credible sources with evidence",
+      "disputed": "Multiple sources with conflicting accounts",
+      "under_investigation": "Single source or insufficient evidence pending further investigation"
+    }
+  },
+  "data_quality_standards": {
+    "casualty_counting": {
+      "methodology": "Conservative estimates from verified sources",
+      "death_toll_priority": "Official health ministry figures cross-referenced with international organizations",
+      "injury_toll": "Reported figures from health facilities",
+      "missing_persons": "Tracked separately from confirmed deaths"
+    },
+    "incident_documentation": {
+      "required_fields": ["date", "location", "type", "casualties", "sources"],
+      "optional_fields": ["perpetrators", "evidence", "legal_classification"],
+      "update_frequency": "Real-time for current events, periodic review for historical"
+    }
+  }
+}

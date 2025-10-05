@@ -1,0 +1,193 @@
+{
+  "version": "1.0",
+  "default_view": "historical",
+  "display_settings": {
+    "items_per_page": 20,
+    "animation_enabled": true,
+    "theme": "default",
+    "auto_update_interval": 300000
+  },
+  "filters": {
+    "date_range": {
+      "enabled": true,
+      "presets": [
+        {
+          "id": "nakba",
+          "label": "Nakba (1948)",
+          "start_date": "1948-01-01",
+          "end_date": "1948-12-31"
+        },
+        {
+          "id": "first_intifada",
+          "label": "First Intifada (1987-1993)",
+          "start_date": "1987-12-09",
+          "end_date": "1993-09-13"
+        },
+        {
+          "id": "second_intifada",
+          "label": "Second Intifada (2000-2005)",
+          "start_date": "2000-09-28",
+          "end_date": "2005-02-08"
+        },
+        {
+          "id": "gaza_operations",
+          "label": "Gaza Operations (2008-2021)",
+          "start_date": "2008-12-27",
+          "end_date": "2021-05-21"
+        },
+        {
+          "id": "current_genocide",
+          "label": "Current Genocide (2023-Present)",
+          "start_date": "2023-10-07",
+          "end_date": null
+        }
+      ]
+    },
+    "event_types": {
+      "enabled": true,
+      "types": [
+        {
+          "id": "massacre",
+          "label": "Massacres",
+          "color": "#dc3545",
+          "icon": "⚠️"
+        },
+        {
+          "id": "military_operation",
+          "label": "Military Operations",
+          "color": "#fd7e14",
+          "icon": "🎯"
+        },
+        {
+          "id": "forced_displacement",
+          "label": "Forced Displacement",
+          "color": "#6f42c1",
+          "icon": "🏠"
+        },
+        {
+          "id": "hospital_attack",
+          "label": "Hospital Attacks",
+          "color": "#e83e8c",
+          "icon": "🏥"
+        },
+        {
+          "id": "protected_site_attack",
+          "label": "Protected Site Attacks",
+          "color": "#d63384",
+          "icon": "🏛️"
+        },
+        {
+          "id": "starvation_warfare",
+          "label": "Starvation Warfare",
+          "color": "#6c757d",
+          "icon": "🍽️"
+        },
+        {
+          "id": "protest_suppression",
+          "label": "Protest Suppression",
+          "color": "#0d6efd",
+          "icon": "✊"
+        },
+        {
+          "id": "civil_uprising_suppression",
+          "label": "Civil Uprising Suppression",
+          "color": "#0dcaf0",
+          "icon": "🛡️"
+        }
+      ]
+    },
+    "casualty_scale": {
+      "enabled": true,
+      "ranges": [
+        {
+          "id": "low",
+          "label": "1-50 casualties",
+          "min": 1,
+          "max": 50
+        },
+        {
+          "id": "medium",
+          "label": "51-500 casualties",
+          "min": 51,
+          "max": 500
+        },
+        {
+          "id": "high",
+          "label": "501-2000 casualties",
+          "min": 501,
+          "max": 2000
+        },
+        {
+          "id": "massive",
+          "label": "2000+ casualties",
+          "min": 2001,
+          "max": null
+        }
+      ]
+    },
+    "verification_status": {
+      "enabled": true,
+      "statuses": [
+        {
+          "id": "verified",
+          "label": "Verified",
+          "color": "#28a745",
+          "icon": "✅"
+        },
+        {
+          "id": "disputed",
+          "label": "Disputed",
+          "color": "#ffc107",
+          "icon": "⚠️"
+        },
+        {
+          "id": "under_investigation",
+          "label": "Under Investigation",
+          "color": "#17a2b8",
+          "icon": "🔍"
+        }
+      ]
+    }
+  },
+  "timeline_modes": {
+    "historical": {
+      "label": "Historical Massacres (1948-2023)",
+      "data_source": "timeline-data/historical-massacres.json",
+      "color_theme": "#6c757d",
+      "icon": "📜"
+    },
+    "current": {
+      "label": "Current Genocide (2023-Present)",
+      "data_source": "timeline-data/civilian-casualties-current.json",
+      "color_theme": "#dc3545",
+      "icon": "🚨"
+    },
+    "both": {
+      "label": "Complete Timeline (1948-Present)",
+      "data_sources": [
+        "timeline-data/historical-massacres.json",
+        "timeline-data/civilian-casualties-current.json"
+      ],
+      "color_theme": "#0d6efd",
+      "icon": "📊"
+    }
+  },
+  "statistics_display": {
+    "show_totals": true,
+    "show_by_period": true,
+    "show_by_type": true,
+    "comparison_enabled": true
+  },
+  "map_settings": {
+    "default_center": [34.4668, 31.5204],
+    "default_zoom": 9,
+    "cluster_radius": 50,
+    "heat_map_enabled": true,
+    "marker_sizes": {
+      "low": 20,
+      "medium": 35,
+      "high": 50,
+      "massive": 70
+    }
+  }
+}
