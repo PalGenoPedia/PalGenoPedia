@@ -6,30 +6,11 @@
     <title>Gaza Crisis Documentation</title>
     <meta name="description" content="Comprehensive documentation of war crimes, hunger crisis, and humanitarian violations in Gaza">
 
-    <!-- TimelineJS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/timelinejs3/3.8.25/css/timeline.css">
-    <!-- Main Styles - Load first -->
+    <!-- Main Styles -->
     <link rel="stylesheet" href="shared-styles.css">
 
     <style>
-        /* ONLY Page-specific timeline styles - no banner overrides */
-        .timeline {
-            width: 100%;
-            height: 600px;
-        }
-
-        /* Enhanced timeline responsiveness */
-        @media (max-width: 768px) {
-            .timeline {
-                height: 500px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .timeline {
-                height: 400px;
-            }
-        }
+        /* ===== PAGE-SPECIFIC STYLES ===== */
 
         /* FIXED: Consistent banner heights and text handling */
         .crisis-banner {
@@ -38,8 +19,8 @@
             border-radius: 0 0 20px 20px;
             position: relative;
             overflow: hidden;
-            min-height: 160px; /* Set consistent minimum height */
-            max-height: 180px; /* Prevent excessive height */
+            min-height: 160px;
+            max-height: 180px;
         }
 
         .banner-content {
@@ -54,7 +35,7 @@
 
         .banner-text {
             flex: 1;
-            max-width: 400px; /* Limit text width */
+            max-width: 400px;
         }
 
         .banner-text h3 {
@@ -68,9 +49,9 @@
             margin: 0;
             opacity: 0.9;
             line-height: 1.4;
-            font-size: 0.95rem; /* Slightly smaller text */
+            font-size: 0.95rem;
             display: -webkit-box;
-            -webkit-line-clamp: 3; /* Limit to 3 lines */
+            -webkit-line-clamp: 3;
             -webkit-box-orient: vertical;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -90,12 +71,12 @@
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.2);
             min-width: 110px;
-            max-width: 120px; /* Prevent stats from getting too wide */
+            max-width: 120px;
         }
 
         .stat-value {
             display: block;
-            font-size: 1.6rem; /* Consistent stat size */
+            font-size: 1.6rem;
             font-weight: 900;
             margin-bottom: 0.25rem;
             line-height: 1;
@@ -137,7 +118,7 @@
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
         }
 
-        /* Data loading indicators - minimal styling */
+        /* Data loading indicators */
         .data-loading-indicator {
             display: inline-block;
             padding: 0.3rem 0.8rem;
@@ -165,7 +146,6 @@
             100% { opacity: 1; }
         }
 
-        /* Hide loading indicators in banners */
         .crisis-banner .data-loading-indicator,
         .crisis-banner .data-source-badge {
             display: none;
@@ -225,7 +205,7 @@
             }
 
             .banner-text p {
-                -webkit-line-clamp: 2; /* Reduce to 2 lines on mobile */
+                -webkit-line-clamp: 2;
             }
 
             .banner-stats {
@@ -268,6 +248,303 @@
                 font-size: 0.85rem;
             }
         }
+
+        /* ===== TIMELINE STYLES ===== */
+
+        /* Timeline Statistics Dashboard */
+        .timeline-stats-dashboard {
+            background: linear-gradient(135deg, var(--bg-secondary), var(--bg-tertiary));
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius-lg);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-md);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .stat-card {
+            background: var(--surface-color);
+            border: 1px solid var(--border-light);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            text-align: center;
+            transition: var(--transition-base);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .stat-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            margin-bottom: 0.25rem;
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+        }
+
+        .stat-sublabel {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-top: 0.25rem;
+        }
+
+        /* Period Comparison */
+        .period-comparison {
+            background: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .comparison-header {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .comparison-card {
+            background: var(--bg-secondary);
+            border-left: 4px solid var(--accent-color);
+            padding: 1rem;
+            border-radius: var(--border-radius-sm);
+        }
+
+        .comparison-card.historical {
+            border-left-color: #6c757d;
+        }
+
+        .comparison-card.current {
+            border-left-color: #dc3545;
+        }
+
+        .comparison-title {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .comparison-stats {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+
+        .comparison-stat {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .comparison-stat strong {
+            color: var(--text-primary);
+        }
+
+        /* Event Type Legend */
+        .event-type-legend {
+            background: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .legend-title {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.75rem;
+        }
+
+        .legend-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+        }
+
+        .legend-color {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            border: 2px solid white;
+            box-shadow: var(--shadow-sm);
+        }
+
+        /* Data Source Badge */
+        .data-source-indicator {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(13, 110, 253, 0.1);
+            color: #0d6efd;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border: 1px solid rgba(13, 110, 253, 0.3);
+        }
+
+        /* Advanced Filters */
+        .advanced-filters {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .filter-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .filter-label {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .casualty-scale-filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .scale-chip {
+            background: var(--bg-tertiary);
+            border: 2px solid transparent;
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: var(--transition-base);
+        }
+
+        .scale-chip:hover {
+            border-color: var(--secondary-color);
+        }
+
+        .scale-chip.active {
+            background: var(--secondary-color);
+            color: white;
+            border-color: var(--secondary-color);
+        }
+
+        /* Timeline Loading */
+        .timeline-loading {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 400px;
+            text-align: center;
+        }
+
+        .loading-message {
+            color: var(--text-primary);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .loading-detail {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Timeline Container */
+        .timeline-container {
+            width: 100%;
+            margin-top: 2rem;
+        }
+
+        .timeline {
+            width: 100%;
+            min-height: 600px;
+        }
+
+        /* Timeline Header */
+        .timeline-header-section {
+            background: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius-lg);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-md);
+            text-align: center;
+        }
+
+        .timeline-header-section h2 {
+            color: var(--text-primary);
+            font-size: 1.8rem;
+            margin: 0 0 0.5rem 0;
+            font-weight: 700;
+        }
+
+        .timeline-header-section p {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            margin: 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .filter-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
@@ -284,7 +561,7 @@
                 <a href="war-crimes-stats.html" class="nav-btn">⚖️ War Crimes</a>
                 <a href="hunger-crisis-stats.html" class="nav-btn">🍽️ Hunger Crisis</a>
                 <a href="major-incidents-timeline.html" class="nav-btn">📋 Major Incidents</a>
-<a href="https://palgenopedia-extractor.onrender.com" class="nav-btn tool-btn">🔍 Extract Incidents</a>
+                <a href="http://localhost:5000" class="nav-btn tool-btn">🔍 Extract Incidents</a>
             </nav>
             <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
         </div>
@@ -330,7 +607,7 @@
             </div>
         </div>
 
-        <!-- Hunger Crisis Banner - FIXED -->
+        <!-- Hunger Crisis Banner -->
         <div class="crisis-banner hunger-crisis-banner" id="hungerCrisisBanner">
             <div class="container">
                 <div class="banner-content">
@@ -366,21 +643,21 @@
             <div class="container">
                 <div class="banner-content">
                     <div class="banner-text">
-                        <h3>📋 Major Incidents Timeline</h3>
-                        <p>Interactive documentation of significant crisis events with detailed incident records, evidence, and source verification. <strong>Now powered by CSV data.</strong></p>
+                        <h3>📋 Complete Historical Timeline (1948-Present)</h3>
+                        <p>Interactive documentation from the 1948 Nakba through current genocide. Verified sources from UN, Human Rights Watch, and international organizations.</p>
                     </div>
                     <div class="banner-stats">
                         <div class="quick-stat">
-                            <span class="stat-value" id="totalIncidentsCount">Loading...</span>
-                            <span class="stat-label">Total Incidents</span>
+                            <span class="stat-value" id="totalIncidentsCount">27</span>
+                            <span class="stat-label">Total Events</span>
                         </div>
                         <div class="quick-stat">
-                            <span class="stat-value" id="verifiedIncidentsCount">Loading...</span>
+                            <span class="stat-value" id="verifiedIncidentsCount">27</span>
                             <span class="stat-label">Verified Cases</span>
                         </div>
                         <div class="quick-stat">
-                            <span class="stat-value" id="casualtiesCount">Loading...</span>
-                            <span class="stat-label">Total Casualties</span>
+                            <span class="stat-value" id="casualtiesCount">88K+</span>
+                            <span class="stat-label">Total Deaths</span>
                         </div>
                     </div>
                     <div class="banner-action">
@@ -392,53 +669,364 @@
             </div>
         </div>
 
-        <!-- Controls -->
-        <div class="controls" id="controls">
-            <div class="container">
-                <div class="search-filter">
-                    <input type="text" id="searchInput" placeholder="Search timeline events..." class="search-input">
-                    <select id="typeFilter" class="filter-select">
-                        <option value="">All Types</option>
-                        <option value="hunger">Hunger Crisis</option>
-                        <option value="water">Water Shortage</option>
-                        <option value="aid">Aid Blockage</option>
-                        <option value="casualties">Casualties</option>
-                        <option value="infrastructure">Infrastructure</option>
-                    </select>
-                    <select id="dateFilter" class="filter-select">
-                        <option value="">All Dates</option>
-                        <option value="today">Today</option>
-                        <option value="week">This Week</option>
-                        <option value="month">This Month</option>
-                        <option value="quarter">Last 3 Months</option>
-                    </select>
-                    <button id="clearFilters" class="clear-btn">Clear Filters</button>
-                </div>
-                <div class="stats">
-                    <span id="incidentCount">Loading timeline...</span>
-                    <span id="lastUpdated">Last updated: Loading...</span>
-                </div>
+        <!-- Timeline Section -->
+        <div class="container">
+            <!-- Timeline Header -->
+            <div class="timeline-header-section">
+                <h2>📊 Complete Historical Timeline (1948-Present)</h2>
+                <p>27 major documented massacres and war crimes from the Nakba to current genocide</p>
+                <span class="data-source-indicator">
+                    🔍 Sources: UN, Human Rights Watch, B'Tselem, Al-Haq, PCHR
+                </span>
             </div>
-        </div>
 
-        <!-- Timeline View -->
-        <section class="view-section active" id="timelineView">
-            <div class="container">
-                <div class="timeline-container">
-                    <div id="timeline-embed" class="timeline">
-                        <div class="data-loading">
-                            <div class="loading-spinner"></div>
-                            <h3>Loading Gaza Crisis Data...</h3>
-                            <p>Fetching latest data from Tech for Palestine API v3...</p>
-                            <div class="data-progress">
-                                <p id="dataProgress">Initializing...</p>
+            <!-- Statistics Dashboard -->
+            <div class="timeline-stats-dashboard" id="statsDashboard">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">⚠️</div>
+                        <div class="stat-number" id="massacresCount">27</div>
+                        <div class="stat-label">Total Events</div>
+                        <div class="stat-sublabel">Documented Incidents</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">💀</div>
+                        <div class="stat-number" id="deathsCount">88K+</div>
+                        <div class="stat-label">Total Deaths</div>
+                        <div class="stat-sublabel">Verified Casualties</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🏥</div>
+                        <div class="stat-number" id="injuredCount">150K+</div>
+                        <div class="stat-label">Injured</div>
+                        <div class="stat-sublabel">Documented Injuries</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🏠</div>
+                        <div class="stat-number" id="displacedCount">2.3M</div>
+                        <div class="stat-label">Displaced</div>
+                        <div class="stat-sublabel">Forced Displacement</div>
+                    </div>
+                </div>
+
+                <!-- Period Comparison -->
+                <div class="period-comparison" id="periodComparison">
+                    <div class="comparison-header">
+                        📊 Historical vs Current Comparison
+                    </div>
+                    <div class="comparison-grid">
+                        <div class="comparison-card historical">
+                            <div class="comparison-title">📜 Historical Period (1948-2023)</div>
+                            <div class="comparison-stats">
+                                <div class="comparison-stat">
+                                    <span>Duration:</span>
+                                    <strong>75 years</strong>
+                                </div>
+                                <div class="comparison-stat">
+                                    <span>Major Events:</span>
+                                    <strong>17</strong>
+                                </div>
+                                <div class="comparison-stat">
+                                    <span>Total Deaths:</span>
+                                    <strong>27,000+</strong>
+                                </div>
+                                <div class="comparison-stat">
+                                    <span>Avg Deaths/Year:</span>
+                                    <strong>360</strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comparison-card current">
+                            <div class="comparison-title">🚨 Current Genocide (Oct 2023-Present)</div>
+                            <div class="comparison-stats">
+                                <div class="comparison-stat">
+                                    <span>Duration:</span>
+                                    <strong>12 months</strong>
+                                </div>
+                                <div class="comparison-stat">
+                                    <span>Major Events:</span>
+                                    <strong>10</strong>
+                                </div>
+                                <div class="comparison-stat">
+                                    <span>Total Deaths:</span>
+                                    <strong>61,200+</strong>
+                                </div>
+                                <div class="comparison-stat">
+                                    <span>Avg Deaths/Day:</span>
+                                    <strong>167</strong>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+
+            <!-- Event Type Legend -->
+            <div class="event-type-legend">
+                <div class="legend-title">📌 Event Types</div>
+                <div class="legend-items">
+                    <div class="legend-item">
+                        <span class="legend-color" style="background: #dc3545;"></span>
+                        <span>Massacres</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color" style="background: #fd7e14;"></span>
+                        <span>Military Operations</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color" style="background: #6f42c1;"></span>
+                        <span>Forced Displacement</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color" style="background: #e83e8c;"></span>
+                        <span>Hospital Attacks</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color" style="background: #6c757d;"></span>
+                        <span>Starvation Warfare</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color" style="background: #0d6efd;"></span>
+                        <span>Protest Suppression</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Advanced Filters -->
+            <div class="advanced-filters">
+                <div class="filter-grid">
+                    <!-- Date Range Filter -->
+                    <div class="filter-group">
+                        <label class="filter-label">📅 Date Range</label>
+                        <select id="dateRangeFilter" class="filter-select">
+                            <option value="">All Dates (1948-Present)</option>
+                            <option value="nakba">Nakba (1948)</option>
+                            <option value="first_intifada">First Intifada (1987-1993)</option>
+                            <option value="second_intifada">Second Intifada (2000-2005)</option>
+                            <option value="gaza_operations">Gaza Operations (2008-2021)</option>
+                            <option value="current_genocide">Current Genocide (2023-Present)</option>
+                        </select>
+                    </div>
+
+                    <!-- Event Type Filter -->
+                    <div class="filter-group">
+                        <label class="filter-label">🏷️ Event Type</label>
+                        <select id="eventTypeFilter" class="filter-select">
+                            <option value="">All Types</option>
+                            <option value="massacre">Massacres</option>
+                            <option value="military_operation">Military Operations</option>
+                            <option value="forced_displacement">Forced Displacement</option>
+                            <option value="hospital_attack">Hospital Attacks</option>
+                            <option value="protected_site_attack">Protected Site Attacks</option>
+                            <option value="starvation_warfare">Starvation Warfare</option>
+                            <option value="protest_suppression">Protest Suppression</option>
+                        </select>
+                    </div>
+
+                    <!-- Search Filter -->
+                    <div class="filter-group">
+                        <label class="filter-label">🔍 Search</label>
+                        <input type="text" id="searchFilter" class="search-input" placeholder="Search events, locations...">
+                    </div>
+
+                    <!-- Verification Status -->
+                    <div class="filter-group">
+                        <label class="filter-label">✅ Verification</label>
+                        <select id="verificationFilter" class="filter-select">
+                            <option value="">All Statuses</option>
+                            <option value="verified">Verified</option>
+                            <option value="disputed">Disputed</option>
+                            <option value="under_investigation">Under Investigation</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Casualty Scale Chips -->
+                <div class="filter-group" style="margin-top: 1rem;">
+                    <label class="filter-label">📊 Casualty Scale</label>
+                    <div class="casualty-scale-filters">
+                        <button class="scale-chip active" data-scale="all">All Scales</button>
+                        <button class="scale-chip" data-scale="low">1-50 casualties</button>
+                        <button class="scale-chip" data-scale="medium">51-500 casualties</button>
+                        <button class="scale-chip" data-scale="high">501-2000 casualties</button>
+                        <button class="scale-chip" data-scale="massive">2000+ casualties</button>
+                    </div>
+                </div>
+
+                <div style="margin-top: 1rem; text-align: right;">
+                    <button id="clearAllFilters" class="clear-btn">🔄 Clear All Filters</button>
+                </div>
+            </div>
+
+            <!-- Loading Status -->
+            <div id="timelineStatus" class="container" style="display: none;">
+                <div class="csv-status" id="timelineStatusContent">
+                    📊 Loading timeline data...
+                </div>
+            </div>
+
+            <!-- Timeline View -->
+            <div class="timeline-container">
+                <div id="timeline-embed" class="timeline">
+                    <div class="timeline-loading">
+                        <div class="loading-spinner"></div>
+                        <div class="loading-message">Loading Complete Historical Timeline...</div>
+                        <div class="loading-detail">Fetching data from 1948 to present...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
+
+    <!-- Incident Detail Modal -->
+    <div class="modal" id="incidentModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Event Details</h2>
+                <button class="modal-close" aria-label="Close modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="incident-details">
+                    <div class="detail-section">
+                        <h4>📋 Basic Information</h4>
+                        <div class="detail-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
+                            <div class="detail-item">
+                                <strong>📅 Date:</strong> <span id="modalDate"></span>
+                            </div>
+                            <div class="detail-item">
+                                <strong>📍 Location:</strong> <span id="modalLocation"></span>
+                            </div>
+                            <div class="detail-item">
+                                <strong>🏷️ Event Type:</strong> <span id="modalType"></span>
+                            </div>
+                            <div class="detail-item">
+                                <strong>✅ Verification:</strong> <span id="modalVerification"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detail-section">
+                        <h4>📄 Summary</h4>
+                        <p id="modalSummary"></p>
+                    </div>
+
+                    <div class="detail-section" id="modalCasualtiesSection">
+                        <h4>💥 Casualties & Impact</h4>
+                        <div id="modalCasualties" class="casualties-display"></div>
+                    </div>
+
+                    <div class="detail-section" id="modalWarCrimesSection">
+                        <h4>⚖️ War Crimes Documented</h4>
+                        <div id="modalWarCrimes" class="war-crimes-list"></div>
+                    </div>
+
+                    <div class="detail-section">
+                        <h4>📰 Verified Sources</h4>
+                        <div id="modalSources" class="sources-container"></div>
+                    </div>
+
+                    <div class="detail-section">
+                        <div class="modal-actions">
+                            <a id="modalDetailPage" href="#" class="detail-page-btn" target="_blank" style="display: inline-block; background: var(--secondary-color); color: white; padding: 0.75rem 1.5rem; border-radius: var(--border-radius); text-decoration: none; transition: var(--transition-base);">
+                                📖 View Full Documentation →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Styles -->
+    <style>
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 10000;
+            overflow-y: auto;
+        }
+
+        .modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .modal-content {
+            background: var(--surface-color);
+            border-radius: var(--border-radius-lg);
+            max-width: 800px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: var(--shadow-xl);
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .modal-header h2 {
+            margin: 0;
+            color: var(--text-primary);
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+            color: var(--text-secondary);
+            transition: var(--transition-base);
+        }
+
+        .modal-close:hover {
+            color: var(--accent-color);
+        }
+
+        .modal-body {
+            padding: 2rem;
+        }
+
+        .detail-section {
+            margin-bottom: 2rem;
+        }
+
+        .detail-section h4 {
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .detail-item {
+            font-size: 0.9rem;
+        }
+
+        .detail-item strong {
+            color: var(--text-primary);
+        }
+
+        .detail-page-btn:hover {
+            background: var(--accent-color);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .detail-grid {
+                grid-template-columns: 1fr !important;
+            }
+        }
+    </style>
 
     <!-- Universal Footer Component -->
     <div id="footer-placeholder"></div>
@@ -450,7 +1038,6 @@
             })
             .catch(error => {
                 console.error('Error loading footer:', error);
-                // Fallback footer content
                 document.getElementById('footer-placeholder').innerHTML = `
                     <footer class="universal-footer">
                         <div class="footer-container">
@@ -459,7 +1046,7 @@
                                     © 2024 Gaza Crisis Documentation Platform. All rights reserved.
                                 </div>
                                 <div class="footer-meta">
-                                    <span class="footer-update-time">Last Updated: August 7, 2025</span>
+                                    <span class="footer-update-time">Last Updated: October 6, 2025</span>
                                 </div>
                             </div>
                         </div>
@@ -468,13 +1055,12 @@
             });
     </script>
 
-    <!-- Essential Scripts -->
+    <!-- External JavaScript Libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/timelinejs3/3.8.25/js/timeline.min.js"></script>
 
     <!-- Main Application Script -->
     <script>
-        console.log('🔧 Initializing main index page with Tech for Palestine API v3 and Hunger CSV Data...');
+        console.log('🔧 Initializing main index page with Complete Historical Timeline (1948-Present)...');
 
         // Initialize global variables
         window.incidents = [];
@@ -488,19 +1074,6 @@
         let childrenStarvationStats = [];
         let totalPopulationStats = [];
         let hungerReferences = [];
-
-        // Type colors configuration
-        window.GazaDocsPlatform = {
-            typeColors: {
-                hunger: '#e53e3e',
-                water: '#3182ce',
-                aid: '#d69e2e',
-                casualties: '#805ad5',
-                infrastructure: '#38a169'
-            },
-            incidents: [],
-            filteredIncidents: []
-        };
 
         // Data mapping configuration for API v3 structure
         const dataMapping = {
@@ -525,29 +1098,6 @@
                     apiKeys: ["gaza.killed.medical"],
                     fallbackValue: 1590,
                     severity: "warning"
-                },
-                {
-                    icon: "💀",
-                    label: "Total Deaths",
-                    apiKeys: ["gaza.killed.total"],
-                    fallbackValue: 61020,
-                    severity: "critical"
-                }
-            ],
-            displacement: [
-                {
-                    icon: "🏠",
-                    label: "Internally Displaced",
-                    apiKeys: [],
-                    fallbackValue: 1900000,
-                    severity: "urgent"
-                },
-                {
-                    icon: "🤕",
-                    label: "Total Injured",
-                    apiKeys: ["gaza.injured.total"],
-                    fallbackValue: 150671,
-                    severity: "warning"
                 }
             ]
         };
@@ -556,43 +1106,31 @@
         async function loadHungerCSVData() {
             try {
                 console.log('📊 Loading hunger crisis data from CSV files...');
-                updateHungerDataIndicator('Loading CSV files...');
 
-                // Load children starvation statistics
                 const childrenResponse = await fetch('children-starvation/children-starvation-statistics.csv');
                 const childrenCSV = await childrenResponse.text();
 
-                // Load total population statistics
                 const totalPopResponse = await fetch('total-population/total-population-statistics.csv');
                 const totalPopCSV = await totalPopResponse.text();
 
-                // Load references
                 const referencesResponse = await fetch('children-starvation/references.csv');
                 const referencesCSV = await referencesResponse.text();
 
-                // Parse CSV data
                 childrenStarvationStats = await parseCSV(childrenCSV);
                 totalPopulationStats = await parseCSV(totalPopCSV);
                 hungerReferences = await parseCSV(referencesCSV);
 
-                console.log(`✅ Loaded ${childrenStarvationStats.length} children stats, ${totalPopulationStats.length} total population stats, ${hungerReferences.length} references`);
-
-                updateHungerDataIndicator('Processing data...');
-                await new Promise(resolve => setTimeout(resolve, 500)); // Brief delay for UI
+                console.log(`✅ Loaded ${childrenStarvationStats.length} children stats, ${totalPopulationStats.length} total population stats`);
 
                 updateHungerBannerStats();
-                updateHungerDataIndicator('✅ Live Data');
-
                 return true;
             } catch (error) {
                 console.error('❌ Error loading hunger CSV data:', error);
-                updateHungerDataIndicator('⚠️ Error Loading');
                 loadFallbackHungerData();
                 return false;
             }
         }
 
-        // Parse CSV data using Papa Parse
         function parseCSV(csvText) {
             return new Promise((resolve, reject) => {
                 Papa.parse(csvText, {
@@ -610,7 +1148,6 @@
             });
         }
 
-        // Get statistic by ID from either dataset
         function getHungerStatistic(statId, dataset = 'combined') {
             if (dataset === 'children' || dataset === 'combined') {
                 const childStat = childrenStarvationStats.find(stat => stat.id == statId);
@@ -625,19 +1162,12 @@
             return null;
         }
 
-        // Get reference by ID
-        function getHungerReference(refId) {
-            return hungerReferences.find(ref => ref.reference_id === refId) || {};
-        }
-
-        // Update hunger banner statistics with CSV data
         function updateHungerBannerStats() {
             try {
                 console.log('📊 Updating hunger banner with CSV data...');
 
-                // Total Deaths from Starvation (combining children + total population data)
-                const childrenDeaths = getHungerStatistic(1, 'children'); // children deaths from starvation
-                const totalDeaths = getHungerStatistic(1, 'total'); // total confirmed starvation deaths
+                const childrenDeaths = getHungerStatistic(1, 'children');
+                const totalDeaths = getHungerStatistic(1, 'total');
 
                 let totalStarvationDeaths = 0;
                 if (childrenDeaths && childrenDeaths.value) {
@@ -647,13 +1177,9 @@
                     totalStarvationDeaths += parseInt(totalDeaths.value);
                 }
 
-                // People in Famine Conditions
-                const peopleInFamine = getHungerStatistic(3, 'total'); // people_in_famine from total population
+                const peopleInFamine = getHungerStatistic(3, 'total');
+                const totalAffected = getHungerStatistic(2, 'total');
 
-                // Total Affected Population
-                const totalAffected = getHungerStatistic(2, 'total'); // total_population_at_risk
-
-                // Update the display elements
                 const totalStarvationEl = document.getElementById('totalStarvationDeathsStat');
                 const peopleInFamineEl = document.getElementById('peopleInFamineStat');
                 const totalAffectedEl = document.getElementById('totalAffectedPopulationStat');
@@ -681,7 +1207,6 @@
                 }
 
                 console.log('✅ Hunger banner stats updated successfully');
-                console.log(`Deaths: ${totalStarvationDeaths}, Famine: ${peopleInFamine?.value || 'fallback'}, Affected: ${totalAffected?.value || 'fallback'}`);
 
             } catch (error) {
                 console.error('❌ Error updating hunger banner stats:', error);
@@ -689,7 +1214,6 @@
             }
         }
 
-        // Load fallback hunger data when CSV fails
         function loadFallbackHungerData() {
             console.log('📊 Loading fallback hunger data...');
 
@@ -700,30 +1224,8 @@
             if (totalStarvationEl) totalStarvationEl.textContent = '169+';
             if (peopleInFamineEl) peopleInFamineEl.textContent = '500K';
             if (totalAffectedEl) totalAffectedEl.textContent = '2.1M';
-
-            updateHungerDataIndicator('⚠️ Cached Data');
         }
 
-        // Update hunger data loading indicator
-        function updateHungerDataIndicator(message) {
-            const indicator = document.getElementById('hungerDataIndicator');
-            if (indicator) {
-                indicator.textContent = message;
-
-                if (message.includes('✅')) {
-                    indicator.style.background = 'rgba(34, 197, 94, 0.3)';
-                    indicator.style.color = '#fff';
-                } else if (message.includes('⚠️')) {
-                    indicator.style.background = 'rgba(245, 158, 11, 0.3)';
-                    indicator.style.color = '#fff';
-                } else {
-                    indicator.style.background = 'rgba(255, 255, 255, 0.2)';
-                    indicator.style.color = '#fff';
-                }
-            }
-        }
-
-        // Enhanced API fetch with multiple CORS bypass methods
         async function fetchApiData() {
             const apiUrl = 'https://data.techforpalestine.org/api/v3/summary.json';
 
@@ -732,16 +1234,6 @@
                     name: 'AllOrigins',
                     url: `https://api.allorigins.win/get?url=${encodeURIComponent(apiUrl)}`,
                     parseResponse: (data) => JSON.parse(data.contents)
-                },
-                {
-                    name: 'CORS Anywhere',
-                    url: `https://cors-anywhere.herokuapp.com/${apiUrl}`,
-                    parseResponse: (data) => data
-                },
-                {
-                    name: 'ThingProxy',
-                    url: `https://thingproxy.freeboard.io/fetch/${apiUrl}`,
-                    parseResponse: (data) => data
                 }
             ];
 
@@ -749,7 +1241,6 @@
                 console.log('Attempting to fetch data from Tech for Palestine API v3...');
                 updateApiStatus('loading', 'Loading API v3...');
 
-                // Try direct fetch first
                 try {
                     const response = await fetch(apiUrl, {
                         method: 'GET',
@@ -770,7 +1261,6 @@
                     console.log('Direct fetch failed (expected due to CORS):', directError.message);
                 }
 
-                // Try proxy services
                 for (const proxy of proxyServices) {
                     try {
                         console.log(`Trying ${proxy.name} proxy...`);
@@ -808,7 +1298,6 @@
             }
         }
 
-        // Update API status indicator
         function updateApiStatus(status, text) {
             const apiStatus = document.getElementById('apiStatus');
             if (apiStatus) {
@@ -817,7 +1306,6 @@
             }
         }
 
-        // Get nested object value by string path
         function getNestedValue(obj, path) {
             if (!obj || !path) return null;
             try {
@@ -830,7 +1318,6 @@
             }
         }
 
-        // Enhanced value retrieval with multiple API key attempts
         function getValueFromData(data, config) {
             if (!data) return config.fallbackValue;
 
@@ -844,7 +1331,6 @@
             return config.fallbackValue;
         }
 
-        // Enhanced number formatting
         function formatNumber(value) {
             if (value === null || value === undefined) return 'N/A';
 
@@ -860,53 +1346,18 @@
             }
         }
 
-        // Update loading progress
-        function updateDataProgress(message) {
-            const progressEl = document.getElementById('dataProgress');
-            const statusEl = document.getElementById('dataStatusContent');
-
-            if (progressEl) progressEl.textContent = message;
-            if (statusEl) {
-                statusEl.innerHTML = `📊 ${message}`;
-                const statusContainer = document.getElementById('dataStatus');
-                if (statusContainer) statusContainer.style.display = 'block';
-            }
-
-            console.log('Data Progress:', message);
-        }
-
-        // Show data loading success
         function showDataSuccess() {
-            const statusEl = document.getElementById('dataStatusContent');
-            const statusContainer = document.getElementById('dataStatus');
-
-            if (statusEl) {
-                statusEl.innerHTML = `✅ Successfully loaded data from Tech for Palestine API v3 and Hunger CSV sources`;
-                statusEl.className = 'data-status data-success';
-            }
-
-            setTimeout(() => {
-                if (statusContainer) statusContainer.style.display = 'none';
-            }, 3000);
+            console.log('✅ Data loaded successfully');
         }
 
-        // Show data loading error
         function showDataError(error) {
-            const statusEl = document.getElementById('dataStatusContent');
-            if (statusEl) {
-                statusEl.innerHTML = `❌ Error loading API data: ${error}`;
-                statusEl.className = 'data-status data-error';
-            }
             console.error('Data Loading Error:', error);
         }
 
-        // Enhanced data loading function
         async function loadMainPageData() {
             try {
                 console.log('📊 Loading main page data from Tech for Palestine API v3 and CSV sources...');
-                updateDataProgress('Initializing API v3 and CSV data loading...');
 
-                // Load both API data and CSV data in parallel
                 const [apiData, csvSuccess] = await Promise.all([
                     fetchApiData().catch(error => {
                         console.log('API fetch failed, continuing with CSV data only');
@@ -914,8 +1365,6 @@
                     }),
                     loadHungerCSVData()
                 ]);
-
-                updateDataProgress('Processing combined data...');
 
                 if (apiData && apiData.gaza) {
                     updateWarCrimesBannerStats(apiData);
@@ -925,8 +1374,6 @@
                     loadFallbackData();
                 }
 
-                // CSV data is handled separately in updateHungerBannerStats()
-                updateMajorIncidentsBanner();
                 showDataSuccess();
 
                 console.log('✅ Main page data loaded successfully from combined sources');
@@ -942,12 +1389,10 @@
             }
         }
 
-        // Update war crimes banner stats
         function updateWarCrimesBannerStats(data) {
             try {
                 console.log('📊 Updating war crimes banner stats with API data...');
 
-                // Update War Crimes Banner
                 const childrenKilled = getValueFromData(data, dataMapping.casualties[0]);
                 const journalistsKilled = getValueFromData(data, dataMapping.casualties[1]);
                 const medicalStaffKilled = getValueFromData(data, dataMapping.casualties[2]);
@@ -964,11 +1409,10 @@
 
             } catch (error) {
                 console.error('Error updating war crimes banner stats:', error);
-                updateBannerStatsError();
+                loadFallbackData();
             }
         }
 
-        // Load fallback data when API fails
         function loadFallbackData() {
             console.log('Loading fallback API data...');
             updateApiStatus('fallback', 'Cached Data');
@@ -985,214 +1429,14 @@
             console.log('Fallback API data loaded successfully');
         }
 
-        // Update major incidents banner with CSV data
-        function updateMajorIncidentsBanner() {
-            const totalIncidentsEl = document.getElementById('totalIncidentsCount');
-            const verifiedIncidentsEl = document.getElementById('verifiedIncidentsCount');
-            const casualtiesCountEl = document.getElementById('casualtiesCount');
-
-            if (window.incidents && window.incidents.length > 0) {
-                const verified = window.incidents.filter(i => i.verified === 'verified').length;
-                const totalCasualties = window.incidents.reduce((sum, incident) => {
-                    if (incident.casualties) {
-                        return sum + (incident.casualties.deaths || 0) + (incident.casualties.injured || 0);
-                    }
-                    return sum;
-                }, 0);
-
-                if (totalIncidentsEl) totalIncidentsEl.textContent = window.incidents.length.toLocaleString();
-                if (verifiedIncidentsEl) verifiedIncidentsEl.textContent = verified.toLocaleString();
-                if (casualtiesCountEl) casualtiesCountEl.textContent = totalCasualties.toLocaleString();
-            } else {
-                // Fallback estimates
-                if (totalIncidentsEl) totalIncidentsEl.textContent = '500+';
-                if (verifiedIncidentsEl) verifiedIncidentsEl.textContent = '350+';
-                if (casualtiesCountEl) casualtiesCountEl.textContent = '10K+';
-            }
-        }
-
-        // Update banner stats with error state
-        function updateBannerStatsError() {
-            const statElements = [
-                'childrenKilledStat', 'journalistsKilledStat', 'medicalStaffKilledStat'
-            ];
-
-            statElements.forEach(elementId => {
-                const element = document.getElementById(elementId);
-                if (element) element.textContent = 'Error';
-            });
-        }
-
-        // Update timeline controls
-        function updateTimelineControls() {
-            const incidentCount = document.getElementById('incidentCount');
-            const lastUpdatedEl = document.getElementById('lastUpdated');
-
-            if (incidentCount) {
-                const count = window.incidents ? window.incidents.length : 0;
-                incidentCount.textContent = `${count} incidents in timeline`;
-            }
-            if (lastUpdatedEl) {
-                const updateTime = lastUpdated || new Date().toISOString();
-                const date = new Date(updateTime).toLocaleDateString('en-US', {
-                    year: 'numeric',
-                    month: 'long',
-                    day: 'numeric'
-                });
-                lastUpdatedEl.textContent = `Last updated: ${date}`;
-            }
-        }
-
-        // Combined CSV loading for timeline
-        async function loadTimelineDataFromCSV() {
-            try {
-                console.log('📊 Loading timeline data from CSV files as fallback...');
-
-                // Load main incidents CSV
-                const incidentsData = await loadCSVFile('incidents.csv');
-                console.log(`✅ Loaded ${incidentsData.length} incidents from CSV`);
-
-                // Load casualties details CSV
-                const casualtiesData = await loadCSVFile('casualties-details.csv');
-                console.log(`✅ Loaded ${casualtiesData.length} casualty records from CSV`);
-
-                // Process and combine the data
-                const processedIncidents = processIncidentsData(incidentsData, casualtiesData);
-
-                // Update global variables
-                window.incidents = processedIncidents;
-                window.filteredIncidents = [...processedIncidents];
-                window.GazaDocsPlatform.incidents = processedIncidents;
-                window.GazaDocsPlatform.filteredIncidents = window.filteredIncidents;
-
-                // Update major incidents banner with CSV data
-                updateMajorIncidentsBanner();
-                updateTimelineControls();
-
-                return processedIncidents;
-
-            } catch (error) {
-                console.error('❌ Error loading CSV timeline data:', error);
-                return [];
-            }
-        }
-
-        // Enhanced CSV file loading with Papa Parse
-        async function loadCSVFile(filename) {
-            return new Promise((resolve, reject) => {
-                const timestamp = Date.now();
-                const random = Math.random().toString(36).substring(7);
-                const url = `${filename}?v=${timestamp}&r=${random}`;
-
-                Papa.parse(url, {
-                    download: true,
-                    header: true,
-                    skipEmptyLines: true,
-                    dynamicTyping: true,
-                    delimitersToGuess: [',', '\t', '|', ';'],
-                    transformHeader: function(header) {
-                        return header.trim().toLowerCase().replace(/\s+/g, '_');
-                    },
-                    complete: function(results) {
-                        if (results.errors && results.errors.length > 0) {
-                            console.warn(`CSV parsing warnings for ${filename}:`, results.errors);
-                        }
-                        resolve(results.data.filter(row => row && Object.keys(row).length > 0));
-                    },
-                    error: function(error) {
-                        console.error(`❌ Error loading ${filename}:`, error);
-                        reject(new Error(`Failed to load ${filename}: ${error.message || error}`));
-                    }
-                });
-            });
-        }
-
-        // Enhanced data processing function
-        function processIncidentsData(incidentsData, casualtiesDetailsData) {
-            return incidentsData.map(row => {
-                try {
-                    if (!row.id) return null;
-
-                    const coordinates = [];
-                    if (row.location_coordinates_lng && row.location_coordinates_lat) {
-                        coordinates.push(parseFloat(row.location_coordinates_lng));
-                        coordinates.push(parseFloat(row.location_coordinates_lat));
-                    }
-
-                    const casualties = {};
-                    if (row.casualties_affected) casualties.affected = parseInt(row.casualties_affected) || 0;
-                    if (row.casualties_critical) casualties.critical = parseInt(row.casualties_critical) || 0;
-                    if (row.casualties_deaths) casualties.deaths = parseInt(row.casualties_deaths) || 0;
-                    if (row.casualties_injured) casualties.injured = parseInt(row.casualties_injured) || 0;
-                    if (row.casualties_hospitalized) casualties.hospitalized = parseInt(row.casualties_hospitalized) || 0;
-
-                    const incident = {
-                        id: row.id,
-                        title: row.title || 'Untitled Incident',
-                        date: row.date,
-                        time: row.time || null,
-                        location: {
-                            name: row.location_name || 'Unknown location',
-                            coordinates: coordinates
-                        },
-                        type: row.type || 'other',
-                        description: row.description || 'No description available',
-                        casualties: Object.keys(casualties).length > 0 ? casualties : null,
-                        verified: row.verified || 'pending',
-                        tags: row.tags ? row.tags.split('|').map(tag => tag.trim()) : []
-                    };
-
-                    return incident;
-                } catch (error) {
-                    console.error('Error processing incident row:', row, error);
-                    return null;
-                }
-            }).filter(incident => incident !== null);
-        }
-
-        // Initialize page when DOM is ready
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', initializeIndexPage);
-        } else {
-            initializeIndexPage();
-        }
-
         async function initializeIndexPage() {
-            console.log('🚀 Index page initializing with Tech for Palestine API v3 and Hunger CSV Data...');
+            console.log('🚀 Index page initializing with Complete Historical Timeline (1948-Present)...');
 
-            // Initialize theme first
             initializeTheme();
 
-            // Setup event listeners
-            setupMainPageListeners();
-
             try {
-                // Load combined API and CSV data for banners
                 await loadMainPageData();
-
-                // Load CSV data for timeline
-                await loadTimelineDataFromCSV();
-
-                // Initialize timeline with delay
-                setTimeout(() => {
-                    console.log('📅 Initializing timeline...');
-
-                    if (window.timelineManager && typeof window.timelineManager.init === 'function') {
-                        window.timelineManager.init(window.incidents);
-                    } else if (typeof window.initializeTimeline === 'function') {
-                        window.initializeTimeline();
-                    } else {
-                        console.log('Timeline functions not yet available, retrying...');
-                        setTimeout(() => {
-                            if (window.timelineManager) {
-                                window.timelineManager.init(window.incidents);
-                            } else if (typeof window.initializeTimeline === 'function') {
-                                window.initializeTimeline();
-                            }
-                        }, 1000);
-                    }
-                }, 500);
-
+                console.log('📅 Dual Timeline Manager will auto-initialize with Complete Timeline (1948-Present)...');
             } catch (error) {
                 console.error('Failed to initialize page:', error);
                 showDataError(error.message);
@@ -1217,12 +1461,6 @@
             document.documentElement.setAttribute('data-theme', newTheme);
             localStorage.setItem('gaza-docs-theme', newTheme);
             updateThemeIcon(newTheme);
-
-            if (window.timelineManager) {
-                setTimeout(() => {
-                    window.timelineManager.refresh();
-                }, 100);
-            }
         }
 
         function updateThemeIcon(theme) {
@@ -1232,68 +1470,14 @@
             }
         }
 
-        function setupMainPageListeners() {
-            const searchInput = document.getElementById('searchInput');
-            const typeFilter = document.getElementById('typeFilter');
-            const dateFilter = document.getElementById('dateFilter');
-            const clearFilters = document.getElementById('clearFilters');
-
-            if (searchInput) {
-                searchInput.addEventListener('input', debounce(applyTimelineFilters, 300));
-            }
-            if (typeFilter) {
-                typeFilter.addEventListener('change', applyTimelineFilters);
-            }
-            if (dateFilter) {
-                dateFilter.addEventListener('change', applyTimelineFilters);
-            }
-            if (clearFilters) {
-                clearFilters.addEventListener('click', clearTimelineFilters);
-            }
-        }
-
-        function applyTimelineFilters() {
-            if (window.timelineManager && typeof window.timelineManager.applyFilters === 'function') {
-                const searchTerm = document.getElementById('searchInput')?.value || '';
-                const typeFilter = document.getElementById('typeFilter')?.value || '';
-                const dateFilter = document.getElementById('dateFilter')?.value || '';
-
-                window.timelineManager.applyFilters({
-                    search: searchTerm,
-                    type: typeFilter,
-                    date: dateFilter
-                });
-            }
-        }
-
-        function clearTimelineFilters() {
-            const searchInput = document.getElementById('searchInput');
-            const typeFilter = document.getElementById('typeFilter');
-            const dateFilter = document.getElementById('dateFilter');
-
-            if (searchInput) searchInput.value = '';
-            if (typeFilter) typeFilter.value = '';
-            if (dateFilter) dateFilter.value = '';
-
-            applyTimelineFilters();
-        }
-
-        // Utility function
-        function debounce(func, wait) {
-            let timeout;
-            return function executedFunction(...args) {
-                const later = () => {
-                    clearTimeout(timeout);
-                    func(...args);
-                };
-                clearTimeout(timeout);
-                timeout = setTimeout(later, wait);
-            };
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initializeIndexPage);
+        } else {
+            initializeIndexPage();
         }
     </script>
 
-    <!-- Custom Scripts -->
-    <script src="timeline.js"></script>
-    <script src="main.js"></script>
+    <!-- Custom Scripts - Use dual-timeline-manager.js -->
+    <script src="dual-timeline-manager.js"></script>
 </body>
 </html>
