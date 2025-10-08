@@ -1,0 +1,513 @@
+{
+  "id": "hist002",
+  "event_type": "Massacre, Forced Expulsion, Death March",
+  "verification_status": "verified",
+  "metadata": {
+    "pageTitle": "Lydda and Ramle Massacre & Expulsion (July 1948) | Historical Documentation",
+    "description": "Documented mass killings and forced expulsion from Lydda and Ramle (9–13 July 1948): city-wide shootings, Dahmash Mosque massacre, and the 'death march' during Operation Dani. Legal analysis under 1907 Hague/customary law.",
+    "keywords": "Lydda, Ramle, Lod, 1948, Nakba, Palestine, massacre, death march, expulsion, war crimes, Operation Dani, Yigal Allon, Yitzhak Rabin, Moshe Dayan",
+    "lastUpdated": "2025-01-08",
+    "author": "aliattia02"
+  },
+  "date": {
+    "start": "1948-07-09",
+    "end": "1948-07-13",
+    "duration_days": 5,
+    "display": "July 9–13, 1948",
+    "context": "Operation Dani, 1948 Arab-Israeli War"
+  },
+  "location": {
+    "historical": {
+      "name": "Lydda (Al-Lydd) and Ramle (Al-Ramla)",
+      "name_arabic": "اللد والرملة",
+      "admin_context": "British Mandate of Palestine (under Israeli occupation from July 11-12, 1948)",
+      "district": "Lydda District",
+      "coordinates": [31.9510, 34.8881],
+      "distance_to_jerusalem": "15 km northwest",
+      "population_1948": "Lydda ≈20,000; Ramle ≈17,000 (plus ~30,000 refugees)"
+    },
+    "current": {
+      "name": "Lod and Ramla",
+      "admin_context": "Central District, Israel",
+      "coordinates": [31.9510, 34.8881],
+      "notable_sites": "Ben Gurion Airport adjacent; Dahmash Mosque still standing",
+      "status": "Cities renamed and repopulated; small Palestinian minority remains"
+    }
+  },
+  "breadcrumb": {
+    "items": [
+      { "text": "🏠 Home", "link": "../../index.html" },
+      { "text": "📋 Timeline", "link": "../../major-incidents-timeline.html" },
+      { "text": "📜 Historical", "link": "../../major-incidents-timeline.html?mode=historical" },
+      { "text": "Lydda & Ramle 1948", "link": null }
+    ]
+  },
+  "hero": {
+    "category": "📜 HISTORICAL MASSACRE & EXPULSION • NAKBA 1948",
+    "title": "Lydda and Ramle Massacre & Expulsion",
+    "subtitle": "City-wide killings and mass expulsion culminating in the 'death march'",
+    "metaCards": [
+      { "icon": "📅", "label": "Date", "value": "July 9–13, 1948", "detail": "Operation Dani, 5-day operation" },
+      { "icon": "📍", "label": "Historical Location", "value": "Lydda & Ramle, Central Palestine", "detail": "Now Lod & Ramla, Israel" },
+      { "icon": "🗺️", "label": "Coordinates", "value": "31.9510, 34.8881", "detail": "Lydda center" },
+      { "icon": "💀", "label": "Deaths", "value": "≈400–1,000", "detail": "In-city killings + death march fatalities" },
+      { "icon": "🏠", "label": "Displaced", "value": "≈50,000–70,000", "detail": "Entire populations expelled eastward" }
+    ]
+  },
+  "quickFacts": {
+    "title": "⚡ Quick Facts",
+    "items": [
+      { "label": "Event ID", "value": "hist002" },
+      { "label": "Event Type", "value": "Massacre, Forced Expulsion, Death March" },
+      { "label": "Perpetrators", "value": "IDF: Yiftach Brigade (11th), 8th Armored Brigade; Operation Dani command" },
+      { "label": "Verification", "value": "IPS/PalQuest; eyewitness memoirs; Morris scholarship; British archives" },
+      { "label": "Classification", "value": "War Crime (1907 Hague/customary law); Crimes Against Humanity (modern)" }
+    ]
+  },
+  "brief_summary": "Between July 9–13, 1948, Israeli forces under Operation Dani captured Lydda and Ramle. In Lydda, civilians were killed in city-wide shootings, including a massacre at the Dahmash Mosque. Immediately after, 50,000–70,000 Palestinians from both towns were forcibly expelled on foot toward Ramallah in extreme heat—an ordeal known as the 'death march.' Deaths totaled approximately 400–1,000, including march fatalities from thirst and exhaustion.",
+  "perpetrators": [
+    "IDF Yiftach Brigade (11th Brigade)",
+    "IDF 8th Armored Brigade",
+    "Operation Dani command structure"
+  ],
+  "personalities": {
+    "title": "Key Individuals Involved",
+    "commanders": [
+      {
+        "name": "Yigal Allon",
+        "name_hebrew": "יגאל אלון",
+        "birth_death": "1918–1980",
+        "role": "Operation Dani Commander (Palmach)",
+        "responsibility": "Overall operational command; authorized assault and expulsion orders for Lydda and Ramle",
+        "later_positions": [
+          "Minister of Labor (1961–1968)",
+          "Deputy Prime Minister (1968–1977)",
+          "Foreign Minister (1974–1977)"
+        ],
+        "accountability": "Never prosecuted; defended 1948 actions as 'military necessity'",
+        "notes": "Key architect of central Palestine operations; later prominent Labor Party figure"
+      },
+      {
+        "name": "Yitzhak Rabin",
+        "name_hebrew": "יצחק רבין",
+        "birth_death": "1922–1995",
+        "role": "Deputy Commander, Operation Dani (Palmach)",
+        "responsibility": "Second-in-command under Allon; involved in implementing expulsion orders",
+        "later_positions": [
+          "IDF Chief of Staff (1964–1968)",
+          "Prime Minister (1974–1977, 1992–1995)",
+          "Nobel Peace Prize (1994, with Arafat & Peres)"
+        ],
+        "accountability": "Never prosecuted; memoir passages about Lydda expulsion initially censored (1979), later restored",
+        "notes": "Censored text from 'The Rabin Memoirs' described asking Ben-Gurion 'What shall we do with the Arabs?' and receiving hand gesture to expel"
+      },
+      {
+        "name": "Moshe Dayan",
+        "name_hebrew": "משה דיין",
+        "birth_death": "1915–1981",
+        "role": "Battalion Commander, 89th Commando Battalion (Operation Dani)",
+        "responsibility": "Led ground forces in Lydda assault; direct participation in city operations",
+        "later_positions": [
+          "IDF Chief of Staff (1953–1958)",
+          "Defense Minister (1967–1974, during Six-Day War)",
+          "Foreign Minister (1977–1979)"
+        ],
+        "accountability": "Never prosecuted",
+        "notes": "Later became iconic military figure; eyepatch symbol of Israeli military prowess"
+      },
+      {
+        "name": "Shmuel Lahis",
+        "name_hebrew": "שמואל להיס",
+        "birth_death": "1922–2024",
+        "role": "Officer, Yiftach Brigade (directly involved in Dahmash Mosque massacre)",
+        "responsibility": "Ordered or participated in killings at Dahmash Mosque (reports vary 70-250+ killed)",
+        "later_positions": [
+          "Attorney",
+          "Director General, Jewish Agency (1980s)"
+        ],
+        "accountability": "Convicted in 1950s for killing prisoners; conviction overturned 2020 (posthumously pardoned)",
+        "notes": "One of few Israeli commanders ever charged (though for different incident); Lydda mosque killings never prosecuted"
+      }
+    ],
+    "witnesses_critics": [
+      {
+        "name": "Reja-e Busailah",
+        "name_arabic": "رجائي البوصيلة",
+        "birth_death": "1930–unknown",
+        "role": "Teenage resident of Lydda (age 18 during events)",
+        "responsibility": "Survived death march; testified to crowds herded, loudspeakers compelling movement, widespread death",
+        "later_positions": ["Writer; preserved testimony for IPS"],
+        "notes": "Described march: 'Crowds were herded off the road into rough terrain... exhaustion and death'"
+      },
+      {
+        "name": "Ismail Shammout",
+        "name_arabic": "إسماعيل شمّوط",
+        "birth_death": "1930–2006",
+        "role": "Lydda resident (age 18); later renowned Palestinian artist",
+        "responsibility": "Witnessed death march; testified to infants dying, people chewing grass for moisture, soldiers threatening those seeking water",
+        "later_positions": [
+          "Pioneer of Palestinian art",
+          "Founding artist of PLO cultural institutions"
+        ],
+        "notes": "Art later depicted Nakba themes; his testimony among most vivid death march accounts"
+      }
+    ],
+    "organizational_context": {
+      "palmach": "Elite strike force of Haganah; Allon & Rabin were Palmach commanders leading Operation Dani",
+      "idf": "Newly formed (May 1948); Operation Dani among first major offensives under unified command",
+      "operation_dani": "Codenamed operation to capture Lydda-Ramle corridor; strategic goal: secure road to Jerusalem and Ben Gurion Airport area"
+    }
+  },
+  "executiveSummary": {
+    "title": "Executive Summary",
+    "icon": "📋",
+    "alert": {
+      "type": "critical",
+      "icon": "⚠️",
+      "text": "<strong>Legal note:</strong> The 1949 Geneva Conventions were not in force in July 1948; assessment relies on 1907 Hague Regulations and customary IHL. Modern instruments (Geneva IV, Rome Statute) provided for contextual classification only."
+    },
+    "paragraphs": [
+      "On July 9–13, 1948, during Operation Dani under the command of Yigal Allon (with Yitzhak Rabin as deputy), Israeli forces captured Lydda and Ramle. In Lydda, city-wide shootings killed hundreds of civilians; the Dahmash Mosque massacre alone claimed 70–250+ lives (estimates vary). Moshe Dayan's 89th Battalion participated in ground operations.",
+      "Immediately after the takeover, expulsion orders were executed: the entire Palestinian populations of both towns—approximately 50,000–70,000 people, including refugees—were forced to march on foot toward Ramallah in extreme July heat. This 'death march' saw numerous deaths from thirst, heat exhaustion, and deprivation; survivors reported infants dying, people chewing grass for moisture, and soldiers preventing access to water.",
+      "Total deaths are estimated at 400–1,000 (including in-city killings and march fatalities). No perpetrators were prosecuted. Allon became Deputy Prime Minister; Rabin became Prime Minister and Nobel Peace Prize laureate (1994); Dayan became Defense Minister and Foreign Minister. Rabin's memoir passages describing the expulsion order were censored in 1979, later restored."
+    ]
+  },
+  "casualties": {
+    "title": "Casualties",
+    "icon": "💀",
+    "deaths": "≈400–1,000",
+    "injured": "Unknown (not systematically recorded)",
+    "forced_displacement": "≈50,000–70,000",
+    "breakdown": [
+      { "type": "deaths", "number": "≈400–450", "label": "In-City Killings (Lydda)", "detail": "City-wide shootings; Dahmash Mosque massacre (70–250+); homes and streets" },
+      { "type": "deaths", "number": "≈100–550", "label": "Death March Fatalities", "detail": "Heat, thirst, exhaustion; infants, elderly particularly affected" },
+      { "type": "displaced", "number": "≈50,000–70,000", "label": "Displaced", "detail": "Entire populations of Lydda (~20K) & Ramle (~17K) + ~30K refugees; forced to Ramallah" }
+    ],
+    "alert": {
+      "type": "info",
+      "icon": "ℹ️",
+      "text": "<strong>Sources:</strong> IPS/PalQuest; Morris scholarship (1986, 2004); Munayyer memoir; eyewitness testimonies (Busailah, Shammout). Death toll ranges reflect uncertainty in march fatalities."
+    }
+  },
+  "timeline": {
+    "title": "Timeline of Events",
+    "icon": "⏱️",
+    "events": [
+      {
+        "time": "July 9–10, 1948",
+        "title": "Operation Dani begins",
+        "description": "Israeli forces advance toward Lydda-Ramle sector. Allon commands operation; Rabin deputy; Dayan leads ground battalion.",
+        "source": "Morris 1986; IPS/PalQuest"
+      },
+      {
+        "time": "July 11, 1948",
+        "title": "Assault on Lydda",
+        "description": "8th Armored Brigade and infantry enter Lydda. Heavy fire reported; panic spreads. Ramle falls same day with less resistance.",
+        "source": "IPS/PalQuest; Munayyer memoir"
+      },
+      {
+        "time": "July 12, 1948 (afternoon)",
+        "title": "Dahmash Mosque massacre",
+        "description": "Soldiers enter mosque compound; gunfire and grenades kill 70–250+ (estimates vary). Bodies piled inside and around mosque.",
+        "source": "Munayyer memoir; Morris 1986; IPS/PalQuest"
+      },
+      {
+        "time": "July 12, 1948 (evening)",
+        "title": "Expulsion order issued",
+        "description": "Allon/Rabin command issues expulsion order. Rabin later wrote he asked Ben-Gurion 'What shall we do with the Arabs?' and received hand gesture to expel (censored from 1979 memoir).",
+        "source": "Rabin memoirs (1979/later editions); Morris 2004"
+      },
+      {
+        "time": "July 12–13, 1948",
+        "title": "Death march begins",
+        "description": "50,000–70,000 Palestinians forced on foot toward Ramallah. Extreme heat (July); no water provided. Loudspeakers compel movement; soldiers prevent aid.",
+        "source": "Busailah testimony; Shammout testimony; IPS/PalQuest"
+      },
+      {
+        "time": "July 13–15, 1948",
+        "title": "March continues; deaths mount",
+        "description": "Infants, elderly die en route. Survivors describe chewing grass for moisture, bodies left along road. International observers later document suffering.",
+        "source": "Shammout testimony; Red Cross reports; IPS/PalQuest"
+      },
+      {
+        "time": "Late July–August 1948",
+        "title": "Humanitarian crisis observed",
+        "description": "International relief workers and observers document severe conditions of refugees arriving in Ramallah area.",
+        "source": "UN mediator reports; ICRC accounts"
+      }
+    ]
+  },
+  "war_crimes": [
+    "Killing of civilians (city-wide shootings, Dahmash Mosque massacre)",
+    "Forcible transfer/deportation (mass expulsion)",
+    "Denial of essentials during forced march (water, food, medical aid)",
+    "Looting and property seizure",
+    "Attacks on undefended places"
+  ],
+  "warCrimes": {
+    "title": "Documented Atrocities",
+    "icon": "⚠️",
+    "alert": {
+      "type": "warning",
+      "icon": "⚠️",
+      "text": "<strong>Content Warning:</strong> Graphic descriptions of mass violence, death march, and civilian deaths documented for historical record."
+    },
+    "crimes": [
+      {
+        "icon": "💀",
+        "title": "City-Wide Shootings",
+        "description": "Widespread killings in streets and homes during and after assault. Bodies reported throughout Lydda. Estimates: several hundred killed in city.",
+        "sourceLink": "https://www.palquest.org/en/highlight/24073/lydda-9-13-july-1948",
+        "sourceText": "📄 IPS/PalQuest Overview →"
+      },
+      {
+        "icon": "🕌",
+        "title": "Dahmash Mosque Massacre",
+        "description": "Soldiers entered mosque compound where civilians sheltered. Gunfire and grenades killed 70–250+ (estimates vary widely). Munayyer describes bodies piled inside; he helped burn corpses. Among deadliest single incidents of 1948.",
+        "sourceLink": "https://web.archive.org/web/20120723132022/http://www.palestine-studies.org/enakba/Memoirs/Munayyer%2C%20The%20Fall%20of%20Lydda.pdf",
+        "sourceText": "📄 'The Fall of Lydda' (Munayyer memoir) →"
+      },
+      {
+        "icon": "🚶",
+        "title": "Forced Expulsion & 'Death March'",
+        "description": "50,000–70,000 expelled on foot toward Ramallah in extreme July heat. Loudspeakers: 'Get out or we will shoot.' No water, no aid. Survivors: 'Crowds were herded into rough terrain... exhaustion and death.'",
+        "sourceLink": "https://en.wikipedia.org/wiki/Palestinian_expulsion_from_Lydda_and_Ramle",
+        "sourceText": "📄 Overview & Citations →"
+      },
+      {
+        "icon": "👶",
+        "title": "Deaths of Infants & Elderly on March",
+        "description": "Ismail Shammout: 'Infants died on the march. People chewed grass for moisture. Attempts to obtain water were met with threats.' Elderly collapsed; bodies left along road.",
+        "sourceLink": "https://www.palquest.org/en/highlight/24073/lydda-9-13-july-1948",
+        "sourceText": "📄 IPS/PalQuest Testimonies →"
+      },
+      {
+        "icon": "🚱",
+        "title": "Denial of Water & Aid",
+        "description": "Soldiers prevented access to water sources. Survivors report threats and violence when attempting to help collapsed marchers or seek water.",
+        "sourceLink": "https://www.palquest.org/en/highlight/24073/lydda-9-13-july-1948",
+        "sourceText": "📄 IPS/PalQuest Excerpts →"
+      },
+      {
+        "icon": "🏠",
+        "title": "Looting & Property Seizure",
+        "description": "Homes looted during and after takeover. Property of expelled population seized. Lydda and Ramle renamed Lod and Ramla; repopulated with Jewish immigrants.",
+        "sourceLink": "https://www.palestine-studies.org/en/node/1657540",
+        "sourceText": "📄 IPS Portal Entry →"
+      }
+    ]
+  },
+  "international_law": {
+    "title": "International Law — Temporal Applicability & Classification",
+    "icon": "⚖️",
+    "introduction": "Legal assessment distinguishes law applicable in July 1948 from modern treaty frameworks to avoid retroactivity.",
+    "sections": [
+      {
+        "heading": "Law Applicable in July 1948",
+        "violations": [
+          "<strong>Hague Convention IV (1907):</strong> Customary by 1948. Art. 23(c): killing enemies who laid down arms; Art. 25: attack on undefended places; Art. 28: pillage; Art. 46: protection of family honor, lives, property; Art. 52: prohibition of collective punishments.",
+          "<strong>Martens Clause (1899/1907):</strong> Humanitarian principles binding even where not explicitly codified.",
+          "<strong>Customary IHL:</strong> Prohibition of forcible transfer/deportation of civilians; obligation to allow access to essentials (water, medical care) during hostilities."
+        ]
+      },
+      {
+        "heading": "Post-1949 Context (Descriptive Classification)",
+        "violations": [
+          "<strong>Geneva Convention IV (1949):</strong> Adopted Aug 12, 1949 (one month after Lydda). Israel ratified Jul 6, 1951. Art. 49: 'Individual or mass forcible transfers... are prohibited regardless of their motive.' Not applicable retroactively to July 1948.",
+          "<strong>Rome Statute (1998):</strong> Art. 7(1)(d): Deportation or forcible transfer (crimes against humanity); Art. 7(1)(a): Murder (CAH); Art. 8(2)(a)(i): Willful killing (war crimes); Art. 8(2)(b)(xxv): Intentionally starving civilians (war crime). Used descriptively; not retroactive."
+        ]
+      },
+      {
+        "heading": "Command Responsibility",
+        "violations": [
+          "<strong>Nuremberg Principles (1946):</strong> Established that commanders bear responsibility for crimes committed by subordinates if they knew or should have known and failed to prevent/punish.",
+          "<strong>Application to Operation Dani:</strong> Allon (operational commander), Rabin (deputy), Dayan (battalion commander), and Lahis (unit officer) held command positions during documented atrocities. No investigations or prosecutions pursued."
+        ]
+      }
+    ],
+    "alert": {
+      "type": "critical",
+      "icon": "⚖️",
+      "text": "<strong>Legal Principle:</strong> Assessment uses 1907 Hague/customary law for contemporaneous violations; Geneva IV/Rome Statute for modern contextual classification only. No perpetrators prosecuted under any framework. Rabin's censored memoir suggests awareness at highest command level."
+    }
+  },
+  "testimonies": {
+    "title": "Witness Testimonies",
+    "icon": "👥",
+    "alert": {
+      "type": "warning",
+      "icon": "⚠️",
+      "text": "<strong>Content Warning:</strong> Graphic first-hand accounts of killings, death march, and civilian suffering."
+    },
+    "witnesses": [
+      {
+        "initials": "SM",
+        "name": "Suleiman (Sami) Munayyer",
+        "role": "Lydda resident, memoirist",
+        "testimony": "Describes fall of Lydda, city-wide panic, and Dahmash Mosque killings. 'Bodies piled inside the mosque. I helped burn corpses.' Estimates 70-80 killed at mosque; other accounts cite up to 250+.",
+        "source": "'The Fall of Lydda' memoir (archived PDF)",
+        "sourceLink": "https://web.archive.org/web/20120723132022/http://www.palestine-studies.org/enakba/Memoirs/Munayyer%2C%20The%20Fall%20of%20Lydda.pdf"
+      },
+      {
+        "initials": "RB",
+        "name": "Reja-e Busailah",
+        "role": "Teenage Lydda resident (age 18)",
+        "testimony": "Crowds were herded off the road into rough terrain. Loudspeakers compelled movement. The march brought exhaustion and death. Bodies left along the route.",
+        "source": "Memoir/testimony reproduced by IPS/PalQuest",
+        "sourceLink": "https://www.palquest.org/en/highlight/24073/lydda-9-13-july-1948"
+      },
+      {
+        "initials": "IS",
+        "name": "Ismail Shammout",
+        "role": "Lydda resident (age 18), later artist",
+        "testimony": "People chewed grass for moisture. Infants died on the march. Attempts to obtain water were met with threats. I saw elderly collapse and die. The heat was unbearable.",
+        "source": "Interview excerpt cited by IPS/PalQuest",
+        "sourceLink": "https://www.palquest.org/en/highlight/24073/lydda-9-13-july-1948"
+      },
+      {
+        "initials": "YR",
+        "name": "Yitzhak Rabin",
+        "role": "Deputy Commander, Operation Dani (perpetrator testimony)",
+        "testimony": "'What shall we do with the Arabs?' I asked [Ben-Gurion]. He waved his hand in a gesture meaning: Expel them. [This passage was censored from 1979 Hebrew edition of memoir; restored in later editions.]",
+        "source": "The Rabin Memoirs (1979/later editions); cited in Morris 2004",
+        "sourceLink": "https://en.wikipedia.org/wiki/1948_Palestinian_expulsion_from_Lydda_and_Ramle#Rabin's_account"
+      }
+    ]
+  },
+  "historicalImpact": {
+    "title": "Historical Impact",
+    "icon": "🌍",
+    "sections": [
+      {
+        "heading": "Immediate Impact",
+        "items": [
+          "Single largest expulsion event of 1948: ≈50,000–70,000 displaced from two cities in one operation",
+          "Strategic gain for Israel: secured corridor to Jerusalem; captured what would become Ben Gurion Airport area",
+          "Humanitarian catastrophe: 'death march' became defining symbol of Nakba brutality",
+          "Refugee crisis: expelled population strained resources in Ramallah/West Bank; many later fled to Jordan"
+        ]
+      },
+      {
+        "heading": "Long-term Significance",
+        "items": [
+          "Central episode in Palestinian collective memory; 'Lydda death march' referenced alongside Deir Yassin",
+          "Historiographical controversy: Israeli 'New Historians' (Morris, Pappé) challenged official narratives in 1980s-2000s",
+          "Rabin memoir censorship (1979) revealed in 1990s; became symbol of suppressed history",
+          "Ongoing legal/political relevance: descendants of expelled cite Lydda-Ramle in right-of-return claims",
+          "Dahmash Mosque still stands in Lod; occasional site of commemorations despite restrictions"
+        ]
+      },
+      {
+        "heading": "Accountability & Impunity",
+        "items": [
+          "❌ No perpetrators prosecuted for Lydda-Ramle killings or expulsions",
+          "❌ Yigal Allon (commander) became Deputy PM & Foreign Minister; honored as Israeli hero",
+          "❌ Yitzhak Rabin (deputy commander) became PM & Nobel Peace Prize laureate (1994)",
+          "❌ Moshe Dayan (battalion commander) became Defense Minister & Foreign Minister; iconic military figure",
+          "❌ Shmuel Lahis (Dahmash Mosque) convicted 1950s for different incident; conviction overturned 2020; mosque killings never charged",
+          "❌ Property never returned; Lydda/Ramle renamed Lod/Ramla; repopulated with Jewish immigrants",
+          "❌ UN mediator Count Bernadotte (who documented expulsions) assassinated by Lehi September 1948"
+        ]
+      }
+    ]
+  },
+  "sources": {
+    "title": "Verified & Cross-Referenced Sources",
+    "icon": "📚",
+    "introduction": "Documentation based on eyewitness memoirs, scholarly histories (including Israeli 'New Historians'), archival materials, and cross-referenced testimonies.",
+    "list": [
+      {
+        "icon": "🇵🇸",
+        "name": "Interactive Encyclopedia of the Palestine Question: Lydda, 9–13 July 1948",
+        "type": "Research Synthesis (IPS/PalQuest)",
+        "description": "Comprehensive synthesis: events, casualties, expulsion, testimonies (Busailah, Shammout, others).",
+        "link": "https://www.palquest.org/en/highlight/24073/lydda-9-13-july-1948",
+        "verified": true
+      },
+      {
+        "icon": "🗺️",
+        "name": "Institute for Palestine Studies Portal Entry",
+        "type": "Research Institute (IPS)",
+        "description": "Context, casualty ranges, displacement scale, operational details.",
+        "link": "https://www.palestine-studies.org/en/node/1657540",
+        "verified": true
+      },
+      {
+        "icon": "📝",
+        "name": "'The Fall of Lydda' — Suleiman/Sami Munayyer",
+        "type": "Memoir (archived)",
+        "description": "Resident account: fall of Lydda, Dahmash Mosque massacre, body disposal. Critical primary source.",
+        "link": "https://web.archive.org/web/20120723132022/http://www.palestine-studies.org/enakba/Memoirs/Munayyer%2C%20The%20Fall%20of%20Lydda.pdf",
+        "verified": true
+      },
+      {
+        "icon": "📖",
+        "name": "Wikipedia: Palestinian expulsion from Lydda and Ramle",
+        "type": "Encyclopedic overview",
+        "description": "Summary with extensive citations: expulsion, death tolls, units involved, Rabin censored text.",
+        "link": "https://en.wikipedia.org/wiki/Palestinian_expulsion_from_Lydda_and_Ramle",
+        "verified": true
+      },
+      {
+        "icon": "🎓",
+        "name": "Benny Morris — 'Operation Dani and the Palestinian Exodus from Lydda and Ramle in 1948'",
+        "type": "Peer-reviewed scholarship",
+        "description": "Seminal article: estimates ~400+ in-city deaths, ~50,000–70,000 expelled. Based on IDF archives.",
+        "link": "https://www.jstor.org/stable/4327250",
+        "verified": true
+      },
+      {
+        "icon": "📚",
+        "name": "Benny Morris — 'The Birth of the Palestinian Refugee Problem Revisited' (2004)",
+        "type": "Scholarly monograph",
+        "description": "Updated analysis with newly declassified materials; discusses Rabin censored passages.",
+        "link": null,
+        "verified": true
+      },
+      {
+        "icon": "📘",
+        "name": "Yitzhak Rabin — 'The Rabin Memoirs' (1979/later editions)",
+        "type": "Memoir (primary source)",
+        "description": "Rabin's account of asking Ben-Gurion about Arab population; expulsion hand gesture. Censored in 1979 Hebrew edition; revealed 1990s.",
+        "link": null,
+        "verified": true
+      },
+      {
+        "icon": "🇬🇧",
+        "name": "British Mandate Archives & UN Mediator Reports",
+        "type": "Government/International records",
+        "description": "Contemporary documentation of expulsions and humanitarian crisis. Count Bernadotte reports before assassination.",
+        "link": "https://www.nationalarchives.gov.uk/",
+        "verified": true
+      }
+    ],
+    "alert": {
+      "type": "info",
+      "icon": "ℹ️",
+      "text": "<strong>Methodology:</strong> Casualty ranges align with Morris scholarship (1986, 2004), IPS syntheses, and Munayyer memoir. Rabin censored text documented in multiple sources (Morris 2004, NY Times, academic analyses). Death march fatalities difficult to quantify; estimates from survivor accounts and humanitarian observers."
+    }
+  },
+  "media": {
+    "images": {
+      "local": [],
+      "remote": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Dahmash_Mosque.jpg/1200px-Dahmash_Mosque.jpg"
+      ]
+    },
+    "documents": {
+      "local": [],
+      "remote": [
+        "https://web.archive.org/web/20120723132022/http://www.palestine-studies.org/enakba/Memoirs/Munayyer%2C%20The%20Fall%20of%20Lydda.pdf"
+      ]
+    }
+  },
+  "cta": {
+    "title": "Help Preserve Historical Memory",
+    "description": "Support ongoing documentation efforts to preserve historical truth and honor victims of the Lydda-Ramle massacre and expulsion.",
+    "buttons": [
+      { "text": "📅 View Full Timeline", "link": "../../major-incidents-timeline.html", "type": "primary" },
+      { "text": "🖨️ Print/Save PDF", "link": "#", "type": "secondary", "action": "print" },
+      { "text": "📧 Submit Info", "link": "mailto:palgeno.pedia@gmx.de?subject=Lydda and Ramle Massacre (1948) - Additional Information", "type": "secondary" }
+    ]
+  }
+}
