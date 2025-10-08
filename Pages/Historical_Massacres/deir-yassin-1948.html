@@ -61,6 +61,9 @@
         <!-- Witness Testimonies -->
         <section class="content-section" id="testimonies-section"></section>
 
+        <!-- Personalities Section (New) -->
+        <!-- Dynamically inserted by JavaScript -->
+
         <!-- Historical Impact -->
         <section class="content-section" id="historical-impact-section"></section>
 
@@ -91,7 +94,8 @@
         // EVENT DOCUMENTATION PAGE JAVASCRIPT
         // Handles JSON data loading and rendering for historical massacres
         // Author: aliattia02
-        // Last Updated: 2025-10-05 16:54:49 UTC
+        // Last Updated: 2025-10-08 11:54:48 UTC
+        // Version: 2.0 - Added personalities, enhanced legal framework, location tracking
         // ===================================================================
 
         const jsonFilename = window.location.pathname.split('/').pop().replace('.html', '.json');
@@ -126,7 +130,7 @@
         function renderPage(data) {
             document.getElementById('page-title').textContent = data.metadata.pageTitle;
             document.getElementById('page-description').setAttribute('content', data.metadata.description);
-            document.getElementById('page-keywords').setAttribute('content', data.metadata.keywords);
+            document.getElementById('page-keywords').setAttribute('content', data.metadata.keywords || '');
 
             renderBreadcrumb(data.breadcrumb);
             renderHero(data.hero);
@@ -135,12 +139,13 @@
             renderExecutiveSummary(data.executiveSummary);
             renderCasualties(data.casualties);
             renderTimeline(data.timeline);
-            renderWarCrimes(data.warCrimes);
-            renderInternationalLaw(data.internationalLaw);
+            if (data.warCrimes) renderWarCrimes(data.warCrimes);
+            renderInternationalLaw(data.international_law || data.internationalLaw);
             renderTestimonies(data.testimonies);
+            if (data.personalities) renderPersonalities(data.personalities);
             renderHistoricalImpact(data.historicalImpact);
             renderSources(data.sources);
-            renderCTA(data.cta);
+            if (data.cta) renderCTA(data.cta);
             initializeAnimations();
         }
 
@@ -154,26 +159,26 @@
             ).join('<span class="breadcrumb-separator">→</span>');
         }
 
-function renderHero(hero) {
-    // Filter out Coordinates from hero metaCards
-    const fieldsToHide = ['Coordinates'];
-    const filteredMetaCards = hero.metaCards.filter(card => !fieldsToHide.includes(card.label));
+        function renderHero(hero) {
+            // Filter out Coordinates from hero metaCards
+            const fieldsToHide = ['Coordinates'];
+            const filteredMetaCards = hero.metaCards.filter(card => !fieldsToHide.includes(card.label));
 
-    document.getElementById('hero-section').innerHTML = `
-        <div class="event-category">${hero.category}</div>
-        <h1 class="event-title">${hero.title}</h1>
-        <p class="event-subtitle">${hero.subtitle}</p>
-        <div class="event-meta-grid">
-            ${filteredMetaCards.map(card => `
-                <div class="meta-card">
-                    <div class="meta-label">${card.icon} ${card.label}</div>
-                    <div class="meta-value">${card.value}</div>
-                    ${card.detail ? `<div class="meta-detail">${card.detail}</div>` : ''}
+            document.getElementById('hero-section').innerHTML = `
+                <div class="event-category">${hero.category}</div>
+                <h1 class="event-title">${hero.title}</h1>
+                <p class="event-subtitle">${hero.subtitle}</p>
+                <div class="event-meta-grid">
+                    ${filteredMetaCards.map(card => `
+                        <div class="meta-card">
+                            <div class="meta-label">${card.icon} ${card.label}</div>
+                            <div class="meta-value">${card.value}</div>
+                            ${card.detail ? `<div class="meta-detail">${card.detail}</div>` : ''}
+                        </div>
+                    `).join('')}
                 </div>
-            `).join('')}
-        </div>
-    `;
-}
+            `;
+        }
 
         function renderQuickFacts(quickFacts) {
             // Filter out specific fields: Coordinates, Event ID, Injured
@@ -372,6 +377,7 @@ function renderHero(hero) {
                                 <div class="timeline-time">${event.time}</div>
                                 <div class="timeline-content">
                                     <strong>${event.title}:</strong> ${event.description}
+                                    ${event.source ? `<div style="margin-top: 0.5rem; font-size: 0.85rem; opacity: 0.8;"><em>Source: ${event.source}</em></div>` : ''}
                                 </div>
                             </div>
                         `).join('')}
@@ -381,16 +387,36 @@ function renderHero(hero) {
         }
 
         function renderWarCrimes(warCrimes) {
+            // Handle both array format and object format
+            if (Array.isArray(warCrimes)) {
+                // Simple array format - create basic list
+                document.getElementById('war-crimes-section').innerHTML = `
+                    <div class="section-header">
+                        <span class="section-icon">⚠️</span>
+                        <h2 class="section-title">Documented War Crimes</h2>
+                    </div>
+                    <div class="section-content">
+                        <ul class="war-crimes-list">
+                            ${warCrimes.map(crime => `<li>${crime}</li>`).join('')}
+                        </ul>
+                    </div>
+                `;
+                return;
+            }
+
+            // Object format with detailed crimes
             document.getElementById('war-crimes-section').innerHTML = `
                 <div class="section-header">
                     <span class="section-icon">${warCrimes.icon}</span>
                     <h2 class="section-title">${warCrimes.title}</h2>
                 </div>
                 <div class="section-content">
-                    <div class="alert-box ${warCrimes.alert.type}">
-                        <span class="alert-icon">${warCrimes.alert.icon}</span>
-                        ${warCrimes.alert.text}
-                    </div>
+                    ${warCrimes.alert ? `
+                        <div class="alert-box ${warCrimes.alert.type}">
+                            <span class="alert-icon">${warCrimes.alert.icon}</span>
+                            ${warCrimes.alert.text}
+                        </div>
+                    ` : ''}
                     <ul class="war-crimes-list">
                         ${warCrimes.crimes.map(crime => `
                             <li>
@@ -412,23 +438,42 @@ function renderHero(hero) {
         }
 
         function renderInternationalLaw(law) {
+            if (!law) return;
+
             document.getElementById('international-law-section').innerHTML = `
                 <div class="section-header">
                     <span class="section-icon">${law.icon}</span>
                     <h2 class="section-title">${law.title}</h2>
                 </div>
                 <div class="section-content">
-                    <p>${law.introduction}</p>
+                    ${law.introduction ? `<p style="margin-bottom: 1.5rem;">${law.introduction}</p>` : ''}
                     ${law.sections.map(section => `
-                        <h4>${section.heading}</h4>
-                        <ul style="margin: 0.5rem 0 1rem 1.5rem; line-height: 1.7;">
-                            ${section.violations.map(v => `<li>${v}</li>`).join('')}
-                        </ul>
+                        <h4 style="margin-top: 1.5rem; margin-bottom: 0.75rem;">${section.heading}</h4>
+                        ${section.violations ? `
+                            <ul style="margin: 0.5rem 0 1rem 1.5rem; line-height: 1.7;">
+                                ${section.violations.map(v => `<li>${v}</li>`).join('')}
+                            </ul>
+                        ` : ''}
+                        ${section.notes ? `
+                            <ul style="margin: 0.5rem 0 1rem 1.5rem; line-height: 1.7;">
+                                ${section.notes.map(n => `<li>${n}</li>`).join('')}
+                            </ul>
+                        ` : ''}
+                        ${section.violations_examples ? `
+                            <div style="margin: 0.5rem 0 1rem 1.5rem; padding: 0.75rem; background: var(--card-bg); border-radius: 4px; border-left: 3px solid var(--primary-color);">
+                                <strong>Specific Violations:</strong>
+                                <ul style="margin: 0.5rem 0 0 1.5rem; line-height: 1.7;">
+                                    ${section.violations_examples.map(v => `<li>${v}</li>`).join('')}
+                                </ul>
+                            </div>
+                        ` : ''}
                     `).join('')}
-                    <div class="alert-box ${law.alert.type}">
-                        <span class="alert-icon">${law.alert.icon}</span>
-                        ${law.alert.text}
-                    </div>
+                    ${law.alert ? `
+                        <div class="alert-box ${law.alert.type}" style="margin-top: 1.5rem;">
+                            <span class="alert-icon">${law.alert.icon}</span>
+                            ${law.alert.text}
+                        </div>
+                    ` : ''}
                 </div>
             `;
         }
@@ -440,10 +485,12 @@ function renderHero(hero) {
                     <h2 class="section-title">${testimonies.title}</h2>
                 </div>
                 <div class="section-content">
-                    <div class="alert-box ${testimonies.alert.type}">
-                        <span class="alert-icon">${testimonies.alert.icon}</span>
-                        ${testimonies.alert.text}
-                    </div>
+                    ${testimonies.alert ? `
+                        <div class="alert-box ${testimonies.alert.type}">
+                            <span class="alert-icon">${testimonies.alert.icon}</span>
+                            ${testimonies.alert.text}
+                        </div>
+                    ` : ''}
                     ${testimonies.witnesses.map(witness => `
                         <div class="testimony-card">
                             <div class="testimony-header">
@@ -458,7 +505,7 @@ function renderHero(hero) {
                                 <strong>Source:</strong> ${witness.source}
                                 ${witness.sourceLink ? `
                                     <a href="${witness.sourceLink}" class="source-link" target="_blank" rel="noopener">
-                                        ${witness.sourceText}
+                                        ${witness.sourceText || '📄 View Source →'}
                                     </a>
                                 ` : ''}
                             </div>
@@ -466,6 +513,100 @@ function renderHero(hero) {
                     `).join('')}
                 </div>
             `;
+        }
+
+        function renderPersonalities(personalities) {
+            if (!personalities || (!personalities.commanders && !personalities.witnesses_critics)) return;
+
+            const container = document.createElement('section');
+            container.className = 'content-section';
+            container.id = 'personalities-section';
+
+            container.innerHTML = `
+                <div class="section-header">
+                    <span class="section-icon">👤</span>
+                    <h2 class="section-title">${personalities.title || 'Key Individuals Involved'}</h2>
+                </div>
+                <div class="section-content">
+                    ${personalities.commanders && personalities.commanders.length > 0 ? `
+                        <h4 style="margin-bottom: 1rem;">Commanders & Perpetrators</h4>
+                        ${personalities.commanders.map(person => `
+                            <div class="testimony-card" style="margin-bottom: 1.5rem;">
+                                <div class="testimony-header">
+                                    <div class="witness-avatar">${person.name.split(' ').map(n => n[0]).join('')}</div>
+                                    <div class="witness-info">
+                                        <div class="witness-name">${person.name} ${person.name_hebrew ? `<span style="opacity: 0.7;">(${person.name_hebrew})</span>` : ''}</div>
+                                        <div class="witness-role">${person.role} • ${person.birth_death}</div>
+                                    </div>
+                                </div>
+                                <div class="testimony-text">
+                                    <strong>Responsibility:</strong> ${person.responsibility}
+                                </div>
+                                ${person.later_positions && person.later_positions.length > 0 ? `
+                                    <div style="margin: 0.75rem 0; padding: 0.75rem; background: var(--card-bg); border-radius: 4px;">
+                                        <strong>Later Positions:</strong>
+                                        <ul style="margin: 0.5rem 0 0 1.5rem; line-height: 1.6;">
+                                            ${person.later_positions.map(pos => `<li>${pos}</li>`).join('')}
+                                        </ul>
+                                    </div>
+                                ` : ''}
+                                <div style="margin-top: 0.75rem; padding: 0.75rem; background: rgba(255, 193, 7, 0.1); border-left: 3px solid #ffc107; border-radius: 4px;">
+                                    <strong>⚖️ Accountability:</strong> ${person.accountability}
+                                </div>
+                                ${person.notes ? `<div style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;"><em>${person.notes}</em></div>` : ''}
+                            </div>
+                        `).join('')}
+                    ` : ''}
+
+                    ${personalities.witnesses_critics && personalities.witnesses_critics.length > 0 ? `
+                        <h4 style="margin-top: 2rem; margin-bottom: 1rem;">Witnesses & Critics</h4>
+                        ${personalities.witnesses_critics.map(person => `
+                            <div class="testimony-card" style="margin-bottom: 1.5rem;">
+                                <div class="testimony-header">
+                                    <div class="witness-avatar">${person.name.split(' ').map(n => n[0]).join('')}</div>
+                                    <div class="witness-info">
+                                        <div class="witness-name">${person.name} ${person.name_hebrew ? `<span style="opacity: 0.7;">(${person.name_hebrew})</span>` : ''}</div>
+                                        <div class="witness-role">${person.role} • ${person.birth_death}</div>
+                                    </div>
+                                </div>
+                                <div class="testimony-text">
+                                    <strong>Role:</strong> ${person.responsibility}
+                                </div>
+                                ${person.later_positions && person.later_positions.length > 0 ? `
+                                    <div style="margin: 0.75rem 0;">
+                                        <strong>Later Positions:</strong> ${person.later_positions.join('; ')}
+                                    </div>
+                                ` : ''}
+                                ${person.notes ? `<div style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;"><em>${person.notes}</em></div>` : ''}
+                            </div>
+                        `).join('')}
+                    ` : ''}
+
+                    ${personalities.organizational_context ? `
+                        <div class="alert-box info" style="margin-top: 1.5rem;">
+                            <span class="alert-icon">ℹ️</span>
+                            <strong>Organizational Context:</strong>
+                            <ul style="margin: 0.5rem 0 0 1.5rem; line-height: 1.6;">
+                                ${personalities.organizational_context.irgun ? `<li><strong>Irgun:</strong> ${personalities.organizational_context.irgun}</li>` : ''}
+                                ${personalities.organizational_context.lehi ? `<li><strong>Lehi:</strong> ${personalities.organizational_context.lehi}</li>` : ''}
+                                ${personalities.organizational_context.haganah ? `<li><strong>Haganah:</strong> ${personalities.organizational_context.haganah}</li>` : ''}
+                            </ul>
+                        </div>
+                    ` : ''}
+                </div>
+            `;
+
+            // Insert after testimonies section
+            const testimoniesSection = document.getElementById('testimonies-section');
+            if (testimoniesSection) {
+                testimoniesSection.after(container);
+            } else {
+                // Fallback: insert before historical impact
+                const historicalSection = document.getElementById('historical-impact-section');
+                if (historicalSection) {
+                    historicalSection.before(container);
+                }
+            }
         }
 
         function renderHistoricalImpact(impact) {
@@ -477,7 +618,7 @@ function renderHero(hero) {
                 <div class="section-content">
                     ${impact.sections.map(section => `
                         <h3>${section.heading}</h3>
-                        <ul style="margin: 0.5rem 0; padding-left: 1.5rem; line-height: 1.7;">
+                        <ul style="margin: 0.5rem 0 1.5rem; padding-left: 1.5rem; line-height: 1.7;">
                             ${section.items.map(item => `<li>${item}</li>`).join('')}
                         </ul>
                     `).join('')}
@@ -497,31 +638,35 @@ function renderHero(hero) {
                         ${sources.list.map(source => `
                             <div class="source-item-compact">
                                 <div class="source-header-compact">
-                                    <div class="source-icon-compact">${source.icon}</div>
+                                    ${source.icon ? `<div class="source-icon-compact">${source.icon}</div>` : ''}
                                     <div>
                                         <div class="source-name-compact">${source.name}</div>
                                         <div class="source-type-compact">${source.type}</div>
                                     </div>
                                 </div>
-                                <div class="source-description-compact">${source.description}</div>
+                                <div class="source-description-compact">${source.description || source.notes || ''}</div>
                                 ${source.link ? `
                                     <a href="${source.link}" class="source-link" target="_blank" rel="noopener">
-                                        ${source.linkText}
+                                        ${source.linkText || '📄 View Source →'}
                                     </a>
                                 ` : ''}
                                 ${source.verified ? '<span class="source-verification">✅ Verified</span>' : ''}
                             </div>
                         `).join('')}
                     </div>
-                    <div class="alert-box ${sources.alert.type}" style="margin-top: 1.5rem;">
-                        <span class="alert-icon">${sources.alert.icon}</span>
-                        ${sources.alert.text}
-                    </div>
+                    ${sources.alert ? `
+                        <div class="alert-box ${sources.alert.type}" style="margin-top: 1.5rem;">
+                            <span class="alert-icon">${sources.alert.icon}</span>
+                            ${sources.alert.text}
+                        </div>
+                    ` : ''}
                 </div>
             `;
         }
 
         function renderCTA(cta) {
+            if (!cta || !cta.buttons) return;
+
             document.getElementById('cta-section').innerHTML = `
                 <h2 class="cta-title">${cta.title}</h2>
                 <p class="cta-description">${cta.description}</p>
@@ -652,7 +797,8 @@ function renderHero(hero) {
         document.addEventListener('DOMContentLoaded', function() {
             initializeTheme();
             loadEventData();
-            console.log('✅ Event documentation page initialized - 2025-10-05 16:54:49 UTC');
+            console.log('✅ Event documentation page v2.0 initialized - 2025-10-08 11:54:48 UTC');
+            console.log('📝 New features: Personalities section, enhanced legal framework, location tracking');
         });
     </script>
 </body>
