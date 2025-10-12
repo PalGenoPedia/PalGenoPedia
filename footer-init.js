@@ -1,8 +1,8 @@
 /**
  * Universal Footer Initializer
  * Automatically loads footer and generates share buttons for ANY page
- * Version: 1.2.0 - Fixed translation path resolution
- * Last Updated: 2025-10-12 17:44:52
+ * Version: 1.3.0 - Fixed for GitHub Pages deployment
+ * Last Updated: 2025-10-12
  */
 
 console.log('🔧 Universal Footer Initializer loading...');
@@ -10,20 +10,76 @@ console.log('🔧 Universal Footer Initializer loading...');
 (function() {
     'use strict';
 
+    // Get base path for GitHub Pages or regular hosting
+    function getBasePath() {
+        // Check if we have a configured base path
+        if (window.siteConfig && window.siteConfig.baseUrl) {
+            return window.siteConfig.baseUrl;
+        }
+
+        // Auto-detect GitHub Pages repository name
+        const path = window.location.pathname;
+        const pathParts = path.split('/').filter(p => p.length > 0);
+
+        // If the first part doesn't contain .html, it might be a repo name
+        if (pathParts.length > 0 && !pathParts[0].includes('.html')) {
+            // Check if this looks like a GitHub Pages repo
+            if (window.location.hostname.includes('github.io')) {
+                return '/' + pathParts[0] + '/';
+            }
+        }
+
+        return '/';
+    }
+
+    // Calculate relative path to root from current page
+    function getPathToRoot() {
+        const basePath = getBasePath();
+        const currentPath = window.location.pathname;
+
+        // Remove base path from current path
+        let relativePath = currentPath;
+        if (basePath !== '/' && currentPath.startsWith(basePath)) {
+            relativePath = currentPath.substring(basePath.length);
+        }
+
+        // Count directory depth
+        const parts = relativePath.split('/').filter(p => p.length > 0);
+        const dirDepth = relativePath.endsWith('.html') ? parts.length - 1 : parts.length;
+
+        console.log(`📍 Path calculation: base="${basePath}", current="${currentPath}", depth=${dirDepth}`);
+
+        if (dirDepth <= 0) {
+            return './';
+        }
+
+        return Array(dirDepth).fill('..').join('/') + '/';
+    }
+
     // Check if translation system is ready or wait for it
     function ensureTranslationSystem(callback) {
         if (window.TranslationSystem) {
             callback();
         } else {
             console.log('⏳ Waiting for translation system to load...');
-            document.addEventListener('translationSystemReady', callback);
+            
+            let callbackExecuted = false;
+            
+            const executeCallback = () => {
+                if (!callbackExecuted) {
+                    callbackExecuted = true;
+                    callback();
+                }
+            };
+
+            document.addEventListener('translationSystemReady', executeCallback, { once: true });
 
             // Set a timeout in case translation system never loads
             setTimeout(() => {
                 if (!window.TranslationSystem) {
                     console.warn('⚠️ Translation system not available after timeout');
-                    callback();
                 }
+                executeCallback();
             }, 2000);
         }
     }
@@ -45,19 +101,31 @@ console.log('🔧 Universal Footer Initializer loading...');
         }
 
         try {
-            // Calculate path to root directory
-            const path = window.location.pathname;
-            const parts = path.split('/').filter(p => p.length > 0);
-            const dirDepth = path.endsWith('.html') ? parts.length - 1 : parts.length;
-            const rootPath = dirDepth <= 0 ? './' : Array(dirDepth).fill('..').join('/') + '/';
-
-            // Use correct path to common-styles.html
+            // Get root path
+            const rootPath = getPathToRoot();
             const commonStylesPath = `${rootPath}common-styles.html`;
+            
             console.log(`🔍 Loading footer from: ${commonStylesPath}`);
 
-            // Load the footer HTML
-            const response = await fetch(commonStylesPath);
+            // Load the footer HTML with error handling
+            let response;
+            try {
+                response = await fetch(commonStylesPath);
+            } catch (fetchError) {
+                console.error('❌ Network error loading footer:', fetchError);
+                throw new Error(`Network error: ${fetchError.message}`);
+            }
+            
+            if (!response.ok) {
+                console.error(`❌ HTTP error loading footer: ${response.status} ${response.statusText}`);
+                throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+            }
+            
             const html = await response.text();
+
+            if (!html || html.trim().length === 0) {
+                throw new Error('Footer HTML is empty');
+            }
 
             footerPlaceholder.innerHTML = html;
             console.log('✅ Footer HTML loaded successfully');
@@ -73,7 +141,7 @@ console.log('🔧 Universal Footer Initializer loading...');
 
             // Initialize translation system ONLY if not already initialized
             if (window.TranslationSystem) {
-                console.log('🌍 Translation system available, applying translations to footer');
+                console.log('🌐 Translation system available, applying translations to footer');
                 translateFooter();
 
                 // If translation system needs initialization
@@ -87,15 +155,19 @@ console.log('🔧 Universal Footer Initializer loading...');
                     };
 
                     // Initialize translation system with our config
-                    window.TranslationSystem.init(translationConfig);
+                    await window.TranslationSystem.init(translationConfig);
                 }
             } else {
-                console.warn('⚠️ Translation system not available');
+                console.warn('⚠️ Translation system not available, attempting to load...');
 
                 // Try to load translation system
                 const scriptElement = document.createElement('script');
                 scriptElement.src = `${rootPath}js/translation-system.js`;
+                scriptElement.onerror = function() {
+                    console.error('❌ Failed to load translation system script');
+                };
                 scriptElement.onload = function() {
+                    console.log('✅ Translation system script loaded');
                     if (window.TranslationSystem) {
                         const translationConfig = {
                             debug: true,
@@ -104,8 +176,9 @@ console.log('🔧 Universal Footer Initializer loading...');
                             }
                         };
 
-                        window.TranslationSystem.init(translationConfig);
-                        translateFooter();
+                        window.TranslationSystem.init(translationConfig).then(() => {
+                            translateFooter();
+                        });
                     }
                 };
                 document.head.appendChild(scriptElement);
@@ -120,21 +193,27 @@ console.log('🔧 Universal Footer Initializer loading...');
     }
 
     function translateFooter() {
-        if (!window.TranslationSystem || !window.TranslationSystem.getTranslation) return;
+        if (!window.TranslationSystem || !window.TranslationSystem.getTranslation) {
+            console.warn('⚠️ Translation system not ready for footer translation');
+            return;
+        }
 
         // Apply translations to footer elements
         const footerElements = document.querySelectorAll('.universal-footer [data-i18n]');
+        let translatedCount = 0;
+
         footerElements.forEach(el => {
             const key = el.getAttribute('data-i18n');
             if (key) {
                 const translation = window.TranslationSystem.getTranslation(key);
                 if (translation) {
                     el.textContent = translation;
+                    translatedCount++;
                 }
             }
         });
 
-        console.log('✅ Footer translations applied');
+        console.log(`✅ Footer translations applied (${translatedCount} elements)`);
     }
 
     function initializeSocialShareButtons() {
@@ -219,7 +298,8 @@ console.log('🔧 Universal Footer Initializer loading...');
                 return `
                     <button class="social-share-btn ${platform.class}"
                             onclick="window.FooterUtils.copyPageLink()"
-                            title="Copy link to clipboard">
+                            title="Copy link to clipboard"
+                            aria-label="Copy link to clipboard">
                         <span class="share-icon">${platform.icon}</span>
                         <span class="share-label">${platform.name}</span>
                     </button>
@@ -230,7 +310,8 @@ console.log('🔧 Universal Footer Initializer loading...');
                        class="social-share-btn ${platform.class}"
                        target="_blank"
                        rel="noopener noreferrer"
-                       title="Share on ${platform.name}">
+                       title="Share on ${platform.name}"
+                       aria-label="Share on ${platform.name}">
                         <span class="share-icon">${platform.icon}</span>
                         <span class="share-label">${platform.name}</span>
                     </a>
@@ -274,18 +355,27 @@ console.log('🔧 Universal Footer Initializer loading...');
                 column.classList.toggle('collapsed');
             });
         });
+
+        console.log(`✅ Mobile footer initialized (${footerColumns.length} sections)`);
     }
 
     function showFallbackFooter(container) {
+        console.log('⚠️ Loading fallback footer');
+        
         container.innerHTML = `
-            <footer class="universal-footer">
-                <div class="footer-container">
-                    <div class="footer-bottom">
-                        <div class="footer-copyright">
+            <footer class="universal-footer" style="background: var(--surface-color, #fff); border-top: 2px solid var(--border-color, #dee2e6); padding: 2rem 0; margin-top: 4rem;">
+                <div class="footer-container" style="max-width: 1400px; margin: 0 auto; padding: 0 1rem;">
+                    <div class="footer-bottom" style="text-align: center; padding: 1rem 0; border-top: 1px solid var(--border-color, #dee2e6);">
+                        <div class="footer-copyright" style="color: var(--text-secondary, #6c757d); margin-bottom: 0.5rem;">
                             © 2024 Gaza Crisis Documentation Platform. All rights reserved.
                         </div>
-                        <div class="footer-meta">
+                        <div class="footer-meta" style="color: var(--text-muted, #adb5bd); font-size: 0.85rem;">
                             <span class="footer-update-time">Last Updated: October 12, 2025</span>
+                        </div>
+                        <div style="margin-top: 1rem;">
+                            <button onclick="location.reload()" style="background: var(--accent-color, #ff6b35); color: white; border: none; padding: 0.5rem 1rem; border-radius: 6px; cursor: pointer;">
+                                🔄 Reload Page
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -300,8 +390,14 @@ console.log('🔧 Universal Footer Initializer loading...');
 
             if (navigator.clipboard && navigator.clipboard.writeText) {
                 navigator.clipboard.writeText(url)
-                    .then(() => showCopyNotification('✅ Link copied to clipboard!'))
-                    .catch(() => fallbackCopyToClipboard(url));
+                    .then(() => {
+                        console.log('✅ Link copied to clipboard');
+                        showCopyNotification('✅ Link copied to clipboard!');
+                    })
+                    .catch((err) => {
+                        console.warn('⚠️ Clipboard API failed, using fallback:', err);
+                        fallbackCopyToClipboard(url);
+                    });
             } else {
                 fallbackCopyToClipboard(url);
             }
@@ -313,6 +409,11 @@ console.log('🔧 Universal Footer Initializer loading...');
                 container.dataset.initialized = 'false';
                 initializeSocialShareButtons();
             }
+        },
+
+        reinitializeFooter: function() {
+            console.log('🔄 Reinitializing footer...');
+            initFooter();
         }
     };
 
@@ -329,13 +430,15 @@ console.log('🔧 Universal Footer Initializer loading...');
         try {
             const successful = document.execCommand('copy');
             if (successful) {
+                console.log('✅ Link copied using fallback method');
                 showCopyNotification('✅ Link copied to clipboard!');
             } else {
+                console.error('❌ Failed to copy link');
                 showCopyNotification('❌ Failed to copy link');
             }
         } catch (err) {
+            console.error('❌ Fallback copy failed:', err);
             showCopyNotification('❌ Failed to copy link');
-            console.error('Fallback copy failed:', err);
         }
 
         document.body.removeChild(textArea);
@@ -349,15 +452,37 @@ console.log('🔧 Universal Footer Initializer loading...');
         // Create notification
         const notification = document.createElement('div');
         notification.className = 'copy-notification';
+        notification.style.cssText = `
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: var(--success-color, #28a745);
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            font-weight: 600;
+            z-index: 10000;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        `;
         notification.innerHTML = `<span>${message}</span>`;
         document.body.appendChild(notification);
 
         // Show with animation
-        setTimeout(() => notification.classList.add('show'), 10);
+        setTimeout(() => {
+            notification.style.opacity = '1';
+            notification.style.transform = 'translateY(0)';
+        }, 10);
 
         // Hide and remove after 3 seconds
         setTimeout(() => {
-            notification.classList.remove('show');
+            notification.style.opacity = '0';
+            notification.style.transform = 'translateY(20px)';
             setTimeout(() => {
                 if (notification.parentNode) {
                     notification.parentNode.removeChild(notification);
@@ -371,6 +496,12 @@ console.log('🔧 Universal Footer Initializer loading...');
     window.addEventListener('resize', function() {
         clearTimeout(resizeTimeout);
         resizeTimeout = setTimeout(initializeMobileFooter, 250);
+    });
+
+    // Handle language change events
+    document.addEventListener('languageChanged', function(e) {
+        console.log('🌐 Language changed, updating footer translations');
+        translateFooter();
     });
 
     console.log('✅ Footer utilities initialized');
