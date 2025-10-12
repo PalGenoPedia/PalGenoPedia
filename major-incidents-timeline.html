@@ -854,43 +854,18 @@
     <script src="js/translation-system.js"></script>
 
     <!-- Footer -->
-    <div id="footer-placeholder"></div>
-    <script>
-        fetch('common-styles.html')
-            .then(response => response.text())
-            .then(html => {
-                document.getElementById('footer-placeholder').innerHTML = html;
+<div id="footer-placeholder"></div>
 
-                // Initialize translation system after footer loads
-                if (window.TranslationSystem && typeof window.TranslationSystem.init === 'function') {
-                    window.TranslationSystem.init();
-                }
-            })
-            .catch(error => {
-                console.error('Error loading footer:', error);
-                document.getElementById('footer-placeholder').innerHTML = `
-                    <footer class="universal-footer">
-                        <div class="footer-container">
-                            <div class="footer-bottom">
-                                <div class="footer-copyright" data-i18n="common.footer.copyright">
-                                    © 2024 Gaza Crisis Documentation Platform. All rights reserved.
-                                </div>
-                                <div class="footer-meta">
-                                    <span class="footer-update-time">Last Updated: October 11, 2025</span>
-                                </div>
-                            </div>
-                        </div>
-                    </footer>
-                `;
-            });
-    </script>
+<!-- Translation System Script - LOAD THIS FIRST -->
+<script src="js/translation-system.js"></script>
 
-    <!-- External JavaScript Libraries -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+<!-- Then load footer initializer -->
+<script src="footer-init.js"></script>
 
-    <!-- Custom Scripts - ONLY dual-timeline-manager.js (timeline.js removed) -->
-    <script src="dual-timeline-manager.js"></script>
-</body>
-</html>
+<!-- External JavaScript Libraries -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+
+<!-- Custom Scripts - ONLY dual-timeline-manager.js (timeline.js removed) -->
+<script src="dual-timeline-manager.js"></script>

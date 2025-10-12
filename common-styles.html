@@ -106,727 +106,6 @@
         transition: var(--transition-base);
     }
 
-    /* ===== LANGUAGE SELECTOR STYLES ===== */
-    .language-selector {
-        display: flex;
-        gap: 4px;
-        align-items: center;
-        margin-right: 10px;
-    }
-
-    .lang-btn {
-        background: var(--bg-secondary);
-        border: 2px solid var(--border-color);
-        padding: 8px;
-        border-radius: var(--border-radius);
-        cursor: pointer;
-        font-size: 0.8rem;
-        color: var(--text-secondary);
-        transition: var(--transition-base);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        min-width: 40px;
-    }
-
-    .lang-btn:hover {
-        border-color: var(--accent-color);
-        transform: translateY(-2px);
-    }
-
-    .lang-btn.active {
-        background: var(--accent-color);
-        color: var(--text-inverse);
-        border-color: var(--accent-color);
-    }
-
-    .lang-code {
-        font-weight: bold;
-        font-size: 0.85rem;
-    }
-
-    .lang-name {
-        font-size: 0.7rem;
-        opacity: 0.8;
-    }
-
-    /* RTL Support */
-    .rtl {
-        direction: rtl;
-        text-align: right;
-    }
-
-    .rtl .header .container,
-    .rtl .nav {
-        flex-direction: row-reverse;
-    }
-
-    .rtl .logo {
-        margin-right: 0;
-        margin-left: 1rem;
-    }
-
-    .rtl .incident-header,
-    .rtl .incident-meta,
-    .rtl .incident-footer {
-        flex-direction: row-reverse;
-    }
-
-    /* ===== UNIVERSAL HEADER STYLES ===== */
-
-    .header {
-        background: var(--surface-color);
-        border-bottom: 2px solid var(--border-color);
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-        box-shadow: var(--shadow-sm);
-    }
-
-    .header .container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 1rem;
-        gap: 2rem;
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-
-    .logo {
-        font-size: 1.5rem;
-        font-weight: 700;
-        color: var(--accent-color);
-        text-decoration: none;
-        flex-shrink: 0;
-        margin: 0;
-    }
-
-    .logo a {
-        color: inherit;
-        text-decoration: none;
-        transition: var(--transition-base);
-    }
-
-    .logo a:hover {
-        opacity: 0.8;
-    }
-
-    /* Navigation Styles */
-    .nav {
-        display: flex;
-        gap: 0.5rem;
-        align-items: center;
-        flex-wrap: wrap;
-    }
-
-    .nav-btn {
-        background: var(--bg-secondary);
-        border: 1px solid var(--border-color);
-        padding: 0.75rem 1.25rem;
-        border-radius: var(--border-radius);
-        cursor: pointer;
-        font-size: 0.9rem;
-        color: var(--text-secondary);
-        text-decoration: none;
-        transition: var(--transition-base);
-        white-space: nowrap;
-        font-weight: 500;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        font-family: var(--font-family-base);
-    }
-
-    .nav-btn:hover {
-        background: var(--accent-color);
-        color: var(--text-inverse);
-        border-color: var(--accent-color);
-        transform: translateY(-1px);
-        box-shadow: var(--shadow-sm);
-    }
-
-    .nav-btn.active {
-        background: var(--accent-color);
-        color: var(--text-inverse);
-        border-color: var(--accent-color);
-        box-shadow: var(--shadow-sm);
-    }
-
-    .nav-btn:active {
-        transform: translateY(0);
-    }
-
-    /* Theme Toggle */
-    .theme-toggle {
-        background: var(--bg-secondary);
-        border: 2px solid var(--border-color);
-        border-radius: 50%;
-        width: 3rem;
-        height: 3rem;
-        cursor: pointer;
-        font-size: 1.2rem;
-        transition: var(--transition-base);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-shrink: 0;
-    }
-
-    .theme-toggle:hover {
-        background: var(--accent-color);
-        border-color: var(--accent-color);
-        transform: scale(1.1);
-    }
-
-    /* ===== PAGE HEADER STYLES ===== */
-
-    .page-header {
-        background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
-        border-bottom: 2px solid var(--border-color);
-        padding: 2rem 0;
-    }
-
-    .page-header .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 1rem;
-    }
-
-    .header-content {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        gap: 2rem;
-    }
-
-    .header-text h1 {
-        font-size: 2.5rem;
-        font-weight: 700;
-        color: var(--text-primary);
-        margin: 0 0 0.5rem 0;
-        line-height: 1.2;
-    }
-
-    .header-text p {
-        font-size: 1.125rem;
-        color: var(--text-secondary);
-        margin: 0;
-        max-width: 600px;
-        line-height: 1.6;
-    }
-
-    .header-stats {
-        display: flex;
-        gap: 1.5rem;
-        flex-shrink: 0;
-    }
-
-    .quick-stat {
-        text-align: center;
-        min-width: 100px;
-    }
-
-    .stat-value {
-        display: block;
-        font-size: 1.5rem;
-        font-weight: 700;
-        color: var(--accent-color);
-        margin-bottom: 0.25rem;
-    }
-
-    .stat-label {
-        font-size: 0.75rem;
-        color: var(--text-secondary);
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-        font-weight: 600;
-    }
-
-    /* Mobile responsive language selector */
-    @media (max-width: 768px) {
-        .language-selector {
-            position: absolute;
-            top: 70px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--surface-color);
-            padding: 8px;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow-md);
-            z-index: 1000;
-        }
-    }
-
-    /* ===== MAIN CONTENT CONTAINER ===== */
-
-    .main {
-        min-height: calc(100vh - 200px);
-        background: var(--bg-primary);
-    }
-
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 1rem;
-    }
-
-    /* ===== MAIN PAGE SPECIFIC STYLES ===== */
-
-    /* Crisis Banner Styles */
-    .crisis-banner {
-        background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
-        border: 2px solid var(--border-color);
-        border-radius: var(--border-radius-lg);
-        margin-bottom: 2rem;
-        padding: 2rem;
-        transition: var(--transition-base);
-    }
-
-    .crisis-banner:hover {
-        box-shadow: var(--shadow-md);
-        transform: translateY(-2px);
-    }
-
-    .banner-content {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        gap: 2rem;
-    }
-
-    .banner-text {
-        flex: 1;
-        max-width: 400px;
-    }
-
-    .banner-text h3 {
-        font-size: 1.5rem;
-        font-weight: 700;
-        color: var(--text-primary);
-        margin: 0 0 0.5rem 0;
-    }
-
-    .banner-text p {
-        color: var(--text-secondary);
-        margin: 0;
-        line-height: 1.5;
-    }
-
-    .banner-stats {
-        display: flex;
-        gap: 1.5rem;
-        flex-shrink: 0;
-    }
-
-    .banner-action {
-        flex-shrink: 0;
-    }
-
-    .stats-btn {
-        background: var(--accent-color);
-        color: var(--text-inverse);
-        padding: 0.75rem 1.5rem;
-        border-radius: var(--border-radius);
-        text-decoration: none;
-        font-weight: 600;
-        transition: var(--transition-base);
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-    }
-
-    .stats-btn:hover {
-        background: var(--accent-color-dark);
-        transform: translateY(-1px);
-        box-shadow: var(--shadow-sm);
-    }
-
-    /* Controls Section */
-    .controls {
-        background: var(--surface-color);
-        border: 1px solid var(--border-color);
-        padding: 1rem;
-        margin-bottom: 2rem;
-        border-radius: var(--border-radius);
-    }
-
-    .search-filter {
-        display: flex;
-        gap: 1rem;
-        align-items: center;
-        flex-wrap: wrap;
-    }
-
-    .search-input, .filter-select {
-        background: var(--bg-secondary);
-        border: 1px solid var(--border-color);
-        color: var(--text-primary);
-        padding: 0.5rem 1rem;
-        border-radius: var(--border-radius);
-        font-size: 0.9rem;
-        transition: var(--transition-base);
-    }
-
-    .search-input:focus, .filter-select:focus {
-        outline: none;
-        border-color: var(--accent-color);
-        box-shadow: 0 0 0 2px rgba(255, 107, 53, 0.2);
-    }
-
-    .clear-btn {
-        background: var(--secondary-color);
-        color: var(--text-inverse);
-        border: none;
-        padding: 0.5rem 1rem;
-        border-radius: var(--border-radius);
-        cursor: pointer;
-        font-size: 0.9rem;
-        transition: var(--transition-base);
-    }
-
-    .clear-btn:hover {
-        background: var(--danger-color);
-        transform: translateY(-1px);
-    }
-
-    .stats {
-        margin-top: 1rem;
-        color: var(--text-secondary);
-        font-size: 0.9rem;
-    }
-
-    /* Timeline Container */
-    .timeline-container {
-        background: var(--surface-color);
-        border: 1px solid var(--border-color);
-        border-radius: var(--border-radius);
-        padding: 1rem;
-        min-height: 600px;
-    }
-
-    .timeline {
-        width: 100%;
-        height: 600px;
-    }
-
-    /* API Status Indicator */
-    .api-status {
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        padding: 0.5rem 1rem;
-        border-radius: 20px;
-        font-size: 0.8rem;
-        font-weight: 600;
-        z-index: 1000;
-        transition: all 0.3s ease;
-    }
-
-    .api-status.live {
-        background: var(--success-color);
-        color: var(--text-inverse);
-    }
-
-    .api-status.fallback {
-        background: var(--warning-color);
-        color: #000;
-    }
-
-    .api-status.loading {
-        background: var(--info-color);
-        color: var(--text-inverse);
-    }
-
-    /* Data Loading States */
-    .data-loading {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 400px;
-        text-align: center;
-        color: var(--text-secondary);
-    }
-
-    .loading-spinner {
-        width: 40px;
-        height: 40px;
-        border: 4px solid var(--border-color);
-        border-top: 4px solid var(--accent-color);
-        border-radius: 50%;
-        animation: spin 1s linear infinite;
-        margin-bottom: 20px;
-    }
-
-    @keyframes spin {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
-    }
-
-    .data-status {
-        background: var(--bg-secondary);
-        border: 1px solid var(--border-color);
-        padding: 1rem;
-        border-radius: var(--border-radius);
-        margin-bottom: 1rem;
-        font-size: 14px;
-    }
-
-    .data-success {
-        border-color: var(--success-color);
-        background: rgba(40, 167, 69, 0.1);
-        color: var(--success-color);
-    }
-
-    .data-error {
-        border-color: var(--danger-color);
-        background: rgba(220, 53, 69, 0.1);
-        color: var(--danger-color);
-    }
-
-    /* ===== MAJOR INCIDENTS PAGE STYLES ===== */
-
-    .incidents-header {
-        background: linear-gradient(135deg, var(--surface-color) 0%, var(--bg-secondary) 100%);
-        border-bottom: 3px solid var(--accent-color);
-        padding: 3rem 0;
-        margin-bottom: 2rem;
-    }
-
-    .incidents-header h2 {
-        font-size: 2.5rem;
-        font-weight: 700;
-        color: var(--text-primary);
-        margin: 0 0 1rem 0;
-        text-align: center;
-    }
-
-    .section-description {
-        font-size: 1.125rem;
-        color: var(--text-secondary);
-        max-width: 800px;
-        margin: 0 auto 2rem auto;
-        text-align: center;
-        line-height: 1.6;
-    }
-
-    .data-source-info {
-        background: var(--bg-secondary);
-        border: 1px solid var(--border-color);
-        border-radius: var(--border-radius);
-        padding: 1rem;
-        margin-bottom: 2rem;
-        text-align: center;
-    }
-
-    .source-badge {
-        background: var(--accent-color);
-        color: var(--text-inverse);
-        padding: 0.25rem 0.75rem;
-        border-radius: 15px;
-        font-size: 0.8rem;
-        font-weight: 600;
-        margin-right: 0.5rem;
-    }
-
-    /* Incidents Grid */
-    .incidents-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-        gap: 1.5rem;
-        margin-bottom: 2rem;
-    }
-
-    .incident-card {
-        background: var(--surface-color);
-        border: 1px solid var(--border-color);
-        border-radius: var(--border-radius);
-        padding: 1.5rem;
-        transition: var(--transition-base);
-        cursor: pointer;
-    }
-
-    .incident-card:hover {
-        transform: translateY(-2px);
-        box-shadow: var(--shadow-md);
-        border-color: var(--accent-color);
-    }
-
-    .incident-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        margin-bottom: 1rem;
-        gap: 1rem;
-    }
-
-    .incident-title {
-        font-size: 1.125rem;
-        font-weight: 600;
-        color: var(--text-primary);
-        margin: 0 0 0.5rem 0;
-        line-height: 1.3;
-        flex: 1;
-    }
-
-    .incident-type-badge {
-        padding: 0.25rem 0.75rem;
-        border-radius: 15px;
-        font-size: 0.75rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-        flex-shrink: 0;
-    }
-
-    .type-hunger { background: #e53e3e; color: white; }
-    .type-water { background: #3182ce; color: white; }
-    .type-aid { background: #d69e2e; color: white; }
-    .type-casualties { background: #805ad5; color: white; }
-    .type-infrastructure { background: #38a169; color: white; }
-    .type-other { background: var(--secondary-color); color: white; }
-
-    .incident-meta {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        font-size: 0.85rem;
-        color: var(--text-secondary);
-        margin-bottom: 1rem;
-    }
-
-    .incident-date {
-        font-weight: 500;
-    }
-
-    .incident-location {
-        background: var(--bg-secondary);
-        padding: 0.25rem 0.5rem;
-        border-radius: var(--border-radius);
-        font-size: 0.8rem;
-    }
-
-    .incident-description {
-        color: var(--text-secondary);
-        line-height: 1.5;
-        margin-bottom: 1rem;
-        display: -webkit-box;
-        -webkit-line-clamp: 3;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-    }
-
-    .incident-casualties {
-        background: rgba(220, 53, 69, 0.1);
-        border: 1px solid rgba(220, 53, 69, 0.3);
-        border-radius: var(--border-radius);
-        padding: 0.75rem;
-        margin-bottom: 1rem;
-    }
-
-    .casualties-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-        gap: 0.5rem;
-    }
-
-    .casualty-stat {
-        text-align: center;
-    }
-
-    .casualty-number {
-        display: block;
-        font-size: 1.1rem;
-        font-weight: 700;
-        color: var(--danger-color);
-    }
-
-    .casualty-label {
-        font-size: 0.7rem;
-        color: var(--text-secondary);
-        text-transform: uppercase;
-        letter-spacing: 0.3px;
-    }
-
-    .incident-footer {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        font-size: 0.8rem;
-    }
-
-    .verification-badge {
-        padding: 0.25rem 0.5rem;
-        border-radius: var(--border-radius);
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.3px;
-    }
-
-    .verified { background: var(--success-color); color: white; }
-    .pending { background: var(--warning-color); color: #000; }
-    .disputed { background: var(--secondary-color); color: white; }
-
-    /* ===== VIEW SECTIONS ===== */
-
-    .view-section {
-        display: none;
-        padding: 2rem 0;
-    }
-
-    .view-section.active {
-        display: block;
-    }
-
-    /* ===== CRISIS SECTION HEADERS ===== */
-
-    .war-crimes-header,
-    .hunger-crisis-header {
-        background: linear-gradient(135deg, var(--surface-color) 0%, var(--bg-secondary) 100%);
-        border-bottom: 3px solid var(--accent-color);
-        padding: 3rem 0;
-        margin-bottom: 2rem;
-    }
-
-    .war-crimes-header h2,
-    .hunger-crisis-header h2 {
-        font-size: 2.5rem;
-        font-weight: 700;
-        color: var(--text-primary);
-        margin: 0 0 1rem 0;
-        text-align: center;
-    }
-
-    .crisis-severity-indicator {
-        display: flex;
-        justify-content: center;
-        gap: 1rem;
-        margin-bottom: 1rem;
-    }
-
-    .crisis-severity-indicator span {
-        background: var(--danger-color);
-        color: var(--text-inverse);
-        padding: 0.5rem 1rem;
-        border-radius: var(--border-radius);
-        font-weight: 700;
-        font-size: 0.875rem;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-    }
-
-    .last-updated {
-        text-align: center;
-        margin-top: 1rem;
-    }
-
-    .last-updated span {
-        color: var(--text-muted);
-        font-size: 0.875rem;
-        font-style: italic;
-    }
-
     /* ===== SOCIAL MEDIA SHARE SECTION (FOOTER) ===== */
 
     .footer-social-share {
@@ -948,193 +227,6 @@
     .copy-notification.show {
         opacity: 1;
         transform: translateY(0);
-    }
-
-    /* ===== RESPONSIVE HEADER DESIGN ===== */
-
-    @media (max-width: 768px) {
-        .header .container {
-            flex-direction: column;
-            text-align: center;
-            gap: 1rem;
-            padding: 1rem;
-        }
-
-        .nav {
-            justify-content: center;
-            width: 100%;
-        }
-
-        .nav-btn {
-            padding: 0.6rem 1rem;
-            font-size: 0.85rem;
-            flex: 1;
-            min-width: 0;
-        }
-
-        .header-content {
-            flex-direction: column;
-            text-align: center;
-            gap: 1.5rem;
-        }
-
-        .header-text h1 {
-            font-size: 2rem;
-        }
-
-        .header-stats {
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .banner-content {
-            flex-direction: column;
-            text-align: center;
-            gap: 1.5rem;
-        }
-
-        .banner-stats {
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-
-        .crisis-severity-indicator {
-            flex-direction: column;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .war-crimes-header h2,
-        .hunger-crisis-header h2,
-        .incidents-header h2 {
-            font-size: 2rem;
-        }
-
-        .search-filter {
-            flex-direction: column;
-            align-items: stretch;
-        }
-
-        .search-input, .filter-select {
-            width: 100%;
-        }
-
-        .incidents-grid {
-            grid-template-columns: 1fr;
-        }
-
-        /* Social Share Mobile */
-        .social-share-buttons {
-            grid-template-columns: repeat(2, 1fr);
-            gap: 0.75rem;
-        }
-
-        .social-share-btn {
-            padding: 1rem 0.75rem;
-            min-height: 85px;
-        }
-
-        .share-icon {
-            font-size: 2rem;
-            margin-bottom: 0.375rem;
-        }
-
-        .share-label {
-            font-size: 0.8rem;
-        }
-
-        .social-share-title {
-            font-size: 1.5rem;
-        }
-
-        .copy-notification {
-            bottom: 1rem;
-            right: 1rem;
-            left: 1rem;
-            text-align: center;
-        }
-    }
-
-    @media (max-width: 480px) {
-        .nav {
-            flex-direction: column;
-            gap: 0.5rem;
-            width: 100%;
-        }
-
-        .nav-btn {
-            width: 100%;
-            padding: 0.75rem;
-        }
-
-        .logo {
-            font-size: 1.3rem;
-        }
-
-        .header-text h1 {
-            font-size: 1.75rem;
-        }
-
-        .banner-stats {
-            grid-template-columns: repeat(2, 1fr);
-        }
-
-        .crisis-banner {
-            padding: 1.5rem;
-        }
-
-        .incident-card {
-            padding: 1rem;
-        }
-
-        .casualties-grid {
-            grid-template-columns: repeat(2, 1fr);
-        }
-
-        /* Social Share Extra Small Mobile */
-        .footer-social-share {
-            padding: 1.5rem 0;
-        }
-
-        .social-share-buttons {
-            grid-template-columns: repeat(2, 1fr);
-            gap: 0.5rem;
-        }
-
-        .social-share-btn {
-            padding: 0.875rem 0.5rem;
-            min-height: 75px;
-        }
-
-        .share-icon {
-            font-size: 1.75rem;
-        }
-
-        .share-label {
-            font-size: 0.75rem;
-        }
-
-        .social-share-title {
-            font-size: 1.25rem;
-        }
-
-        .social-share-description {
-            font-size: 0.9rem;
-        }
-    }
-
-    /* Dark theme support for social share */
-    [data-theme="dark"] .footer-social-share {
-        background: linear-gradient(135deg, var(--bg-secondary), var(--bg-primary));
-    }
-
-    [data-theme="dark"] .social-share-btn {
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
-    }
-
-    [data-theme="dark"] .social-share-btn:hover {
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
     }
 
     /* ===== UNIVERSAL FOOTER NAVIGATION STYLES ===== */
@@ -1311,7 +403,6 @@
             padding: 1.5rem 1rem 1rem;
         }
 
-        /* Convert to Collapsible Layout */
         .footer-grid {
             grid-template-columns: 1fr;
             gap: 0;
@@ -1325,7 +416,6 @@
             border-bottom: none;
         }
 
-        /* Collapsible Headers */
         .footer-column h4 {
             cursor: pointer;
             user-select: none;
@@ -1352,7 +442,6 @@
             transform: rotate(-90deg);
         }
 
-        /* Collapsible Content */
         .footer-nav-list {
             max-height: 500px;
             overflow: hidden;
@@ -1367,7 +456,6 @@
             padding-bottom: 0;
         }
 
-        /* Mobile Stats */
         .footer-quick-stats {
             grid-template-columns: repeat(2, 1fr);
             gap: 0.5rem;
@@ -1387,7 +475,6 @@
             font-size: 0.7rem;
         }
 
-        /* Mobile Bottom Bar */
         .footer-bottom {
             flex-direction: column;
             text-align: center;
@@ -1397,6 +484,36 @@
         .footer-meta {
             flex-direction: column;
             gap: 0.5rem;
+        }
+
+        .social-share-buttons {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.75rem;
+        }
+
+        .social-share-btn {
+            padding: 1rem 0.75rem;
+            min-height: 85px;
+        }
+
+        .share-icon {
+            font-size: 2rem;
+            margin-bottom: 0.375rem;
+        }
+
+        .share-label {
+            font-size: 0.8rem;
+        }
+
+        .social-share-title {
+            font-size: 1.5rem;
+        }
+
+        .copy-notification {
+            bottom: 1rem;
+            right: 1rem;
+            left: 1rem;
+            text-align: center;
         }
     }
 
@@ -1419,6 +536,44 @@
             padding: 0.4rem 1rem;
             font-size: 0.85rem;
         }
+
+        .social-share-buttons {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.5rem;
+        }
+
+        .social-share-btn {
+            padding: 0.875rem 0.5rem;
+            min-height: 75px;
+        }
+
+        .share-icon {
+            font-size: 1.75rem;
+        }
+
+        .share-label {
+            font-size: 0.75rem;
+        }
+
+        .social-share-title {
+            font-size: 1.25rem;
+        }
+
+        .social-share-description {
+            font-size: 0.9rem;
+        }
+    }
+
+    [data-theme="dark"] .footer-social-share {
+        background: linear-gradient(135deg, var(--bg-secondary), var(--bg-primary));
+    }
+
+    [data-theme="dark"] .social-share-btn {
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    }
+
+    [data-theme="dark"] .social-share-btn:hover {
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
     }
 </style>
 
@@ -1438,10 +593,7 @@
                 </p>
             </div>
             <div class="social-share-buttons" id="socialShareButtons">
-                <!-- Buttons will be generated dynamically by JavaScript -->
-                <div style="text-align: center; padding: 2rem; color: var(--text-secondary);" data-i18n="common.share.loading">
-                    Loading share buttons...
-                </div>
+                <!-- Buttons will be generated by JavaScript immediately -->
             </div>
         </div>
     </div>
@@ -1516,14 +668,14 @@
             <div class="footer-column">
                 <h4 data-i18n="common.footer.platformInfo">📚 Platform Info</h4>
                 <ul class="footer-nav-list">
-                    <li><a href="#about" class="footer-nav-link" data-i18n="common.footer.about">ℹ️ About This Documentation</a></li>
-                    <li><a href="#methodology" class="footer-nav-link" data-i18n="common.footer.methodology">🔬 Data Methodology</a></li>
-                    <li><a href="#sources" class="footer-nav-link" data-i18n="common.footer.sources">📰 Sources & Verification</a></li>
-                    <li><a href="#legal" class="footer-nav-link" data-i18n="common.footer.legal">⚖️ Legal Framework</a></li>
-                    <li><a href="#contact" class="footer-nav-link" data-i18n="common.footer.contact">📧 Contact & Reports</a></li>
-                    <li><a href="#api" class="footer-nav-link" data-i18n="common.footer.api">🔌 Data API Access</a></li>
-                    <li><a href="#download" class="footer-nav-link" data-i18n="common.footer.download">📥 Download Reports</a></li>
-                    <li><a href="#share" class="footer-nav-link" data-i18n="common.footer.share">📤 Share & Embed</a></li>
+                    <li><span class="footer-nav-link disabled" title="Coming soon" data-i18n="common.footer.about">ℹ️ About This Documentation</span></li>
+                    <li><span class="footer-nav-link disabled" title="Coming soon" data-i18n="common.footer.methodology">🔬 Data Methodology</span></li>
+                    <li><span class="footer-nav-link disabled" title="Coming soon" data-i18n="common.footer.sources">📰 Sources & Verification</span></li>
+                    <li><span class="footer-nav-link disabled" title="Coming soon" data-i18n="common.footer.legal">⚖️ Legal Framework</span></li>
+                    <li><span class="footer-nav-link disabled" title="Coming soon" data-i18n="common.footer.contact">📧 Contact & Reports</span></li>
+                    <li><span class="footer-nav-link disabled" title="Coming soon" data-i18n="common.footer.api">🔌 Data API Access</span></li>
+                    <li><span class="footer-nav-link disabled" title="Coming soon" data-i18n="common.footer.download">📥 Download Reports</span></li>
+                    <li><span class="footer-nav-link disabled" title="Coming soon" data-i18n="common.footer.share">📤 Share & Embed</span></li>
                 </ul>
             </div>
 
@@ -1550,18 +702,47 @@
     // ===================================================================
     // UNIVERSAL SOCIAL MEDIA SHARE FUNCTIONALITY
     // Automatically detects page and generates share buttons
-    // Author: aliattia02
-    // Last Updated: 2025-10-11 22:36:38 UTC
     // ===================================================================
+
+    console.log('🔧 Footer script loading...');
 
     (function() {
         'use strict';
 
-        // Wait for DOM to be ready
+        // Try multiple initialization strategies
+        initializeSocialShareImmediately();
+
+        // Retry after a short delay
+        setTimeout(initializeSocialShareImmediately, 100);
+        setTimeout(initializeSocialShareImmediately, 500);
+
+        // Also setup on DOM ready as backup
         if (document.readyState === 'loading') {
             document.addEventListener('DOMContentLoaded', initializeFooter);
         } else {
             initializeFooter();
+        }
+
+        // Watch for the container to appear
+        const observer = new MutationObserver(function(mutations) {
+            const buttonsContainer = document.getElementById('socialShareButtons');
+            if (buttonsContainer && !buttonsContainer.dataset.initialized) {
+                console.log('📤 Container detected by observer, generating buttons...');
+                generateShareButtons(buttonsContainer);
+                observer.disconnect();
+            }
+        });
+
+        if (document.body) {
+            observer.observe(document.body, { childList: true, subtree: true });
+        }
+
+        function initializeSocialShareImmediately() {
+            const buttonsContainer = document.getElementById('socialShareButtons');
+            if (buttonsContainer && !buttonsContainer.dataset.initialized) {
+                console.log('📤 Initializing share buttons immediately...');
+                generateShareButtons(buttonsContainer);
+            }
         }
 
         function initializeFooter() {
@@ -1570,7 +751,6 @@
             try {
                 initializeSocialShare();
                 initializeMobileFooter();
-                updateFooterStats();
                 console.log('✅ Footer initialized successfully');
             } catch (error) {
                 console.error('❌ Error initializing footer:', error);
@@ -1585,15 +765,26 @@
                 return;
             }
 
+            if (buttonsContainer.dataset.initialized) {
+                console.log('📤 Share buttons already initialized');
+                return;
+            }
+
             console.log('📤 Generating social share buttons...');
+            generateShareButtons(buttonsContainer);
+        }
+
+        function generateShareButtons(container) {
+            if (!container) {
+                console.error('❌ Container not provided to generateShareButtons');
+                return;
+            }
+
+            // Mark as initialized
+            container.dataset.initialized = 'true';
 
             const currentUrl = encodeURIComponent(window.location.href);
             const pageTitle = encodeURIComponent(document.title || 'Gaza Crisis Documentation');
-            const metaDescription = document.querySelector('meta[name="description"]');
-            const description = metaDescription ?
-                encodeURIComponent(metaDescription.content) :
-                encodeURIComponent('Gaza Crisis Documentation - Verified data and comprehensive analysis');
-
             const shareText = document.title ?
                 `${document.title} - Gaza Crisis Documentation` :
                 'Gaza Crisis Documentation - Verified Data';
@@ -1651,14 +842,14 @@
                 }
             ];
 
-            buttonsContainer.innerHTML = socialPlatforms.map(platform => {
+            const buttonsHTML = socialPlatforms.map(platform => {
                 if (platform.action === 'copy') {
                     return `
                         <button class="social-share-btn ${platform.class}"
-                                onclick="window.FooterNavigation.copyLink()"
+                                onclick="if(window.FooterNavigation && window.FooterNavigation.copyLink) { window.FooterNavigation.copyLink(); } else { navigator.clipboard.writeText(window.location.href).then(() => alert('Link copied!')); }"
                                 title="Copy link to clipboard">
                             <span class="share-icon">${platform.icon}</span>
-                            <span class="share-label" data-i18n="common.share.copyLink">${platform.name}</span>
+                            <span class="share-label">${platform.name}</span>
                         </button>
                     `;
                 } else {
@@ -1669,13 +860,18 @@
                            rel="noopener noreferrer"
                            title="Share on ${platform.name}">
                             <span class="share-icon">${platform.icon}</span>
-                            <span class="share-label" data-i18n="common.share.${platform.name.toLowerCase().replace('/', '')}">${platform.name}</span>
+                            <span class="share-label">${platform.name}</span>
                         </a>
                     `;
                 }
             }).join('');
 
+            container.innerHTML = buttonsHTML;
             console.log(`✅ Generated ${socialPlatforms.length} social share buttons`);
+
+            // Verify buttons were added
+            const generatedButtons = container.querySelectorAll('.social-share-btn');
+            console.log(`✅ Verified ${generatedButtons.length} buttons in DOM`);
         }
 
         function copyPageLink() {
@@ -1719,7 +915,6 @@
         }
 
         function showCopyNotification(message) {
-            // Remove any existing notification
             const existingNotification = document.querySelector('.copy-notification');
             if (existingNotification) {
                 existingNotification.remove();
@@ -1744,10 +939,6 @@
             }, 3000);
         }
 
-        // ===================================================================
-        // MOBILE COLLAPSIBLE FOOTER FUNCTIONALITY
-        // ===================================================================
-
         function initializeMobileFooter() {
             const footerColumns = document.querySelectorAll('.footer-column');
             const isMobile = window.innerWidth <= 768;
@@ -1756,50 +947,32 @@
                 footerColumns.forEach((column, index) => {
                     const header = column.querySelector('h4');
                     if (header) {
-                        // Start with first section open, others collapsed
                         if (index !== 0) {
                             column.classList.add('collapsed');
                         }
 
-                        // Remove existing listeners
                         const newHeader = header.cloneNode(true);
                         header.parentNode.replaceChild(newHeader, header);
 
                         newHeader.addEventListener('click', function() {
                             column.classList.toggle('collapsed');
                         });
-                                    }
+                    }
                 });
             } else {
-                // Remove collapsed class on desktop
                 footerColumns.forEach(column => {
                     column.classList.remove('collapsed');
                 });
             }
         }
 
-        // Re-initialize on window resize
         let resizeTimeout;
         window.addEventListener('resize', function() {
             clearTimeout(resizeTimeout);
             resizeTimeout = setTimeout(initializeMobileFooter, 250);
         });
 
-        // ===================================================================
-        // UPDATE FOOTER STATS
-        // ===================================================================
-
-        function updateFooterStats() {
-            // Update last updated time
-            const updateTimeEl = document.querySelector('.footer-update-time');
-            if (updateTimeEl) {
-                updateTimeEl.textContent = `Last Updated: October 11, 2025`;
-            }
-        }
-
-        // Export functions for global use
         window.FooterNavigation = {
-            updateStats: updateFooterStats,
             copyLink: copyPageLink,
             initializeSocialShare: initializeSocialShare,
             toggleSection: function(sectionIndex) {
@@ -1815,11 +988,23 @@
 
 <!-- Translation System Script -->
 <script>
-    // Check if translation system is loaded, if not load it
+    // Load translation system synchronously if not already loaded
     if (!window.TranslationSystem) {
         const script = document.createElement('script');
         script.src = './js/translation-system.js';
-        script.async = true;
+        // DO NOT use async - we need this to load before footer initializes
+        script.defer = false;
         document.head.appendChild(script);
+
+        // Wait for it to load
+        script.onload = function() {
+            console.log('🌍 Translation system script loaded from footer');
+            // Trigger a custom event when loaded
+            document.dispatchEvent(new CustomEvent('translationSystemReady'));
+        };
+    } else {
+        console.log('🌍 Translation system already available');
+        // Already loaded, trigger event immediately
+        document.dispatchEvent(new CustomEvent('translationSystemReady'));
     }
 </script>

@@ -561,7 +561,6 @@
                 <a href="war-crimes-stats.html" class="nav-btn" data-i18n="common.nav.warCrimes">⚖️ War Crimes</a>
                 <a href="hunger-crisis-stats.html" class="nav-btn" data-i18n="common.nav.hungerCrisis">🍽️ Hunger Crisis</a>
                 <a href="major-incidents-timeline.html" class="nav-btn" data-i18n="common.nav.timeline">📋 Timeline</a>
-                <a href="http://localhost:5000" class="nav-btn tool-btn" data-i18n="common.nav.extractTool">🔍 Extract Incidents</a>
             </nav>
 
             <!-- Language Selector -->
@@ -1034,55 +1033,25 @@
         }
     </style>
 
-    <!-- Translation System Script -->
-    <script src="js/translation-system.js"></script>
-
     <!-- Universal Footer Component -->
     <div id="footer-placeholder"></div>
-    <script>
-        fetch('common-styles.html')
-            .then(response => response.text())
-            .then(html => {
-                document.getElementById('footer-placeholder').innerHTML = html;
+    <script src="footer-init.js"></script>
 
-                // Initialize translation system after footer loads
-                if (window.TranslationSystem && typeof window.TranslationSystem.init === 'function') {
-                    window.TranslationSystem.init();
-                }
-            })
-            .catch(error => {
-                console.error('Error loading footer:', error);
-                document.getElementById('footer-placeholder').innerHTML = `
-                    <footer class="universal-footer">
-                        <div class="footer-container">
-                            <div class="footer-bottom">
-                                <div class="footer-copyright" data-i18n="common.footer.copyright">
-                                    © 2024 Gaza Crisis Documentation Platform. All rights reserved.
-                                </div>
-                                <div class="footer-meta">
-                                    <span class="footer-update-time">Last Updated: October 11, 2025</span>
-                                </div>
-                            </div>
-                        </div>
-                    </footer>
-                `;
-            });
-    </script>
+
 
     <!-- External JavaScript Libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+<!-- Main Application Script -->
+<script>
+    console.log('🔧 Initializing main index page with Complete Historical Timeline (1948-Present)...');
 
-    <!-- Main Application Script -->
-    <script>
-        console.log('🔧 Initializing main index page with Complete Historical Timeline (1948-Present)...');
-
-        // Initialize global variables
-        window.incidents = [];
-        window.filteredIncidents = [];
-        window.dataLoaded = false;
-        window.apiData = null;
-        let lastUpdated = null;
-        let isUsingFallback = false;
+    // Initialize global variables
+    window.incidents = [];
+    window.filteredIncidents = [];
+    window.dataLoaded = false;
+    window.apiData = null;
+    let lastUpdated = null;
+    let isUsingFallback = false;
 
         // Hunger Crisis CSV Data
         let childrenStarvationStats = [];

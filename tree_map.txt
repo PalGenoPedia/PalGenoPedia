@@ -4,8 +4,9 @@ Gaza Crisis Documentation/
 │   ├── index.html                          # Main dashboard with timeline & crisis banners
 │   ├── war-crimes-stats.html               # ⚖️ War crimes overview (4 views: overview/violations/legal/resources)
 │   ├── hunger-crisis-stats.html            # 🍽️ Hunger crisis overview (4 views: overview/violations/legal/resources)
-│   └── major-incidents-timeline.html       # 📋 Interactive timeline/map/list views
-│
+│   └── major-incidents-timeline.html       # Historical massacres (1948-present) + causalities Interactive timeline/map/list views
+│   └── incident-extractor.html             # 🐍 Python-based incident extraction interface
+│ 
 ├── 🎨 STYLING & TEMPLATES
 │   ├── shared-styles.css                   # 🧩 Base styles for index & major incidents
 │   ├── unified-crisis-styles.css           # 🎨 Shared styles for war crimes & hunger pages
@@ -31,34 +32,41 @@ Gaza Crisis Documentation/
 │       │   ├── stat-journalists-killed/       # 📊 Journalists data folder (planned)
 │       │   ├── stat-medical-personnel.html    # 🏥 Healthcare workers killed
 │       │   ├── stat-medical-personnel/        # 📊 Medical workers data folder (planned)
-│       │   ├── stat-medical-detained.html     # 🚨 Medical staff detained
-│       │   ├── stat-hospitals-attacked.html   # 🏥 Medical facilities targeted
-│       │   ├── stat-schools-destroyed.html    # 🎓 Educational infrastructure
-│       │   ├── stat-religious-sites.html      # 🕌 Cultural/religious sites
-│       │   ├── stat-water-systems.html        # 💧 Water infrastructure
-│       │   ├── stat-civilian-casualties.html  # 💀 Total civilian deaths
-│       │   ├── stat-forced-displacement.html  # 🏠 Mass displacement
-│       │   ├── stat-un-facilities.html        # 🏛️ UN facilities attacked
-│       │   └── stat-siege-violations.html     # 🚫 Siege & collective punishment
+│       │   ├── stat-medical-detained.html     # 🚨 Medical staff detained (planned)
+│       │   ├── stat-hospitals-attacked.html   # 🏥 Medical facilities targeted (planned)
+│       │   ├── stat-schools-destroyed.html    # 🎓 Educational infrastructure (planned)
+│       │   ├── stat-religious-sites.html      # 🕌 Cultural/religious sites  (planned)
+│       │   ├── stat-water-systems.html        # 💧 Water infrastructure (planned)
+│       │   ├── stat-civilian-casualties.html  # 💀 Total civilian deaths 
+│       │   ├── stat-forced-displacement.html  # 🏠 Mass displacement (planned)
+│       │   ├── stat-un-facilities.html        # 🏛️ UN facilities attacked (planned)
+│       │   └── stat-siege-violations.html     # 🚫 Siege & collective punishment  (planned)
 │       │
 │       └── Hunger_Crisis/                  # 🍽️ Hunger Crisis Detail Pages + Data
 │           ├── hunger-malnutrition-rates.html    # 📊 Population food insecurity
 │           ├── hunger-malnutrition-rates/        # 📊 Malnutrition data folder (planned)
 │           ├── hunger-children-starving.html     # 👶 Child malnutrition
 │           ├── hunger-children-starving/         # 📊 Child starvation data folder (planned)
-│           ├── hunger-orphaned-children.html     # 👤 Orphaned children
+│           ├── hunger-orphaned-children.html     # 👤 Orphaned children 
 │           ├── hunger-food-shortages.html        # 🥖nternational donations blocked
-│           ├── hunger-unemployment.html          # 💼 Economic warfare
-│           ├── hunger-displaced-families.html    # 🏠 Displaced population impact
-│           ├── hunger-pregnant-women.html        # 🤱 Maternal malnutrition
-│           ├── hunger-trade-restrictions.html    # 🚛 Commercial food imports
-│           ├── hunger-bakeries-destroyed.html    # 🏭 Food production facilities
-│           ├── hunger-markets-targeted.html      # 🏪 Food distribution centers
-│           └── hunger-agriculture-destroyed.html # 🌾 Agricultural infrastructure
+│           ├── hunger-unemployment.html          # 💼 Economic warfare (planned)
+│           ├── hunger-displaced-families.html    # 🏠 Displaced population impact (planned)
+│           ├── hunger-pregnant-women.html        # 🤱 Maternal malnutrition (planned)
+│           ├── hunger-trade-restrictions.html    # 🚛 Commercial food imports (planned)
+│           ├── hunger-bakeries-destroyed.html    # 🏭 Food production facilities (planned)
+│           ├── hunger-markets-targeted.html      # 🏪 Food distribution centers (planned)
+│           └── hunger-agriculture-destroyed.html # 🌾 Agricultural infrastructure (planned)
 │           └── ... (each page gets matching data folder with 4 CSVs + images)
 │
 ├── 📊 MAIN DATA FILE
-│   └── incidents.json                      # 🗺️ Main data source for timeline/map
+│   └── 📊 TIMELINE DATA FILES
+│ ├── timeline-data/ # 📅 NEW: Dual timeline data structure
+│ │ ├── historical-massacres.json # 🔥 Timeline 1: Major massacres 1948-p # Contains: Deir Yassin, Sabra/Shatila, Cast Lead, etc.
+│ │ │ 
+│ │ ├── civilian-casualties-current.json # 💀 Timeline 2: Recent civilian deaths # Contains: Individual/family casualties with details
+│ │ │
+│ │ ├── timeline-config.json # ⚙️ Timeline display settings & filters
+│ │ └── timeline-sources.json # 📚 Source verification & references
 │
 └── 🔧 JAVASCRIPT
     ├── main.js                             # 🗺️ Map functionality + dashboard logic

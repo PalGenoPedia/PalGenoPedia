@@ -1,5 +1,6 @@
 // Dual Timeline Manager for Gaza Crisis Documentation
 // Handles both Historical Massacres (1948-2023) and Current Genocide (2023-Present)
+// Author: aliattia02
 // Last Updated: 2025-10-05
 // With multilingual support
 
