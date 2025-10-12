@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9cb16380-4a9d-4436-8a8c-e922e20f5639" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Gendata/config.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gendata/daily_automation.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gendata/daily_extractor.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gendata/data_files/backups/web_extraction_20250817_234656_backup_20250817_234656.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gendata/data_files/backups/web_extraction_20250818_000121_backup_20250818_000121.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gendata/data_files/backups/web_extraction_20250818_001309_backup_20250818_001309.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gendata/data_files/daily_reports/extraction_report_20250817_220701.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gendata/data_files/daily_reports/web_extraction_20250817_234656.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gendata/data_files/daily_reports/web_extraction_20250818_000121.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gendata/data_files/daily_reports/web_extraction_20250818_001309.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gendata/data_files/extraction_logs/daily_extractor_20250817.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gendata/data_files/extraction_logs/extraction.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gendata/data_files/references.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gendata/data_files/total-population-statistics.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gendata/incidents.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gendata/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gendata/static/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gendata/static/js/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gendata/target_urls.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gendata/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gendata/templates/index.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gendata/url_processor.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gendata/web_interface.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin-panel.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/casualties-details.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-styles.html" beforeDir="false" afterPath="$PROJECT_DIR$/common-styles.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hunger-crisis-stats.html" beforeDir="false" afterPath="$PROJECT_DIR$/hunger-crisis-stats.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/incident-extractor/app.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/incident-extractor/extractor.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/incident-extractor/extractor/text_parser.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/incident-extractor/extractor/url_parser.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/incident-extractor/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/incident-extractor/start.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/incident-extractor/static/css/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/incident-extractor/templates/history.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/incident-extractor/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/incident-extractor/templates/view_extraction.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/incidents.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/major-incidents-timeline.html" beforeDir="false" afterPath="$PROJECT_DIR$/major-incidents-timeline.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared-styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/shared-styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/timeline.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/bin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/war-crimes-stats.html" beforeDir="false" afterPath="$PROJECT_DIR$/war-crimes-stats.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform)); sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo, NoAppException&#10;for module in [&quot;main.py&quot;, &quot;wsgi.py&quot;, &quot;app.py&quot;]:&#10;    try: locals().update(ScriptInfo(app_import_path=module, create_app=None).load_app().make_shell_context()); print(&quot;\nFlask App: %s&quot; % app.import_name); break&#10;    except NoAppException: pass">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform)); sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo, NoAppException&#10;for module in [&quot;main.py&quot;, &quot;wsgi.py&quot;, &quot;app.py&quot;]:&#10;    try: locals().update(ScriptInfo(app_import_path=module, create_app=None).load_app().make_shell_context()); print(&quot;\nFlask App: %s&quot; % app.import_name); break&#10;    except NoAppException: pass" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="309I4bQogkAzPlwKmMwrIESlONG" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/aliat/OneDrive/Desktop/Gaza Starvation/GazaCrisis",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-b26f3e71634d-JavaScript-PY-251.26094.141" />
+        <option value="bundled-python-sdk-9f8e2b94138c-36ea0e71a18c-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-251.26094.141" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9cb16380-4a9d-4436-8a8c-e922e20f5639" name="Changes" comment="" />
+      <created>1753033171497</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1753033171497</updated>
+      <workItem from="1753033172744" duration="693000" />
+      <workItem from="1753034318924" duration="6213000" />
+      <workItem from="1753126345191" duration="4291000" />
+      <workItem from="1753222702462" duration="3023000" />
+      <workItem from="1753226343711" duration="305000" />
+      <workItem from="1753229287010" duration="970000" />
+      <workItem from="1753292297171" duration="2779000" />
+      <workItem from="1753508502925" duration="3641000" />
+      <workItem from="1753514805699" duration="3244000" />
+      <workItem from="1753556251089" duration="3802000" />
+      <workItem from="1753571098176" duration="772000" />
+      <workItem from="1753603279540" duration="2077000" />
+      <workItem from="1753644617034" duration="8485000" />
+      <workItem from="1753689716245" duration="2516000" />
+      <workItem from="1753729000431" duration="4938000" />
+      <workItem from="1753734666241" duration="1167000" />
+      <workItem from="1753739076741" duration="4543000" />
+      <workItem from="1753775250398" duration="3243000" />
+      <workItem from="1753815904769" duration="5693000" />
+      <workItem from="1753828192429" duration="1617000" />
+      <workItem from="1753853333746" duration="3539000" />
+      <workItem from="1753897946522" duration="312000" />
+      <workItem from="1753988096817" duration="3330000" />
+      <workItem from="1754045928730" duration="3152000" />
+      <workItem from="1754170834549" duration="15769000" />
+      <workItem from="1754226185764" duration="21855000" />
+      <workItem from="1754288779380" duration="2199000" />
+      <workItem from="1754326317019" duration="12701000" />
+      <workItem from="1754417681653" duration="11231000" />
+      <workItem from="1754462833888" duration="2728000" />
+      <workItem from="1754513838972" duration="5197000" />
+      <workItem from="1754550514930" duration="2842000" />
+      <workItem from="1754587558235" duration="2314000" />
+      <workItem from="1754632391226" duration="1486000" />
+      <workItem from="1754679239581" duration="5269000" />
+      <workItem from="1755082613458" duration="1614000" />
+      <workItem from="1755294862793" duration="1945000" />
+      <workItem from="1755444831253" duration="1997000" />
+      <workItem from="1755450209059" duration="14753000" />
+      <workItem from="1756067202160" duration="1693000" />
+      <workItem from="1756496655789" duration="871000" />
+      <workItem from="1756497548915" duration="1968000" />
+      <workItem from="1756659982103" duration="1644000" />
+      <workItem from="1757356521309" duration="8362000" />
+      <workItem from="1757371280175" duration="1550000" />
+      <workItem from="1758087772122" duration="10000" />
+      <workItem from="1758801456445" duration="1925000" />
+      <workItem from="1758967152721" duration="5802000" />
+      <workItem from="1759432719229" duration="62000" />
+      <workItem from="1759433145543" duration="5798000" />
+      <workItem from="1759661065112" duration="20061000" />
+      <workItem from="1759791474825" duration="791000" />
+      <workItem from="1759920541254" duration="8509000" />
+      <workItem from="1759946763101" duration="604000" />
+      <workItem from="1760025896670" duration="296000" />
+      <workItem from="1760221101558" duration="8659000" />
+      <workItem from="1760266624606" duration="17689000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
