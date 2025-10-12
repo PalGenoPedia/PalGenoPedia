@@ -106,6 +106,72 @@
         transition: var(--transition-base);
     }
 
+    /* ===== LANGUAGE SELECTOR STYLES ===== */
+    .language-selector {
+        display: flex;
+        gap: 4px;
+        align-items: center;
+        margin-right: 10px;
+    }
+
+    .lang-btn {
+        background: var(--bg-secondary);
+        border: 2px solid var(--border-color);
+        padding: 8px;
+        border-radius: var(--border-radius);
+        cursor: pointer;
+        font-size: 0.8rem;
+        color: var(--text-secondary);
+        transition: var(--transition-base);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-width: 40px;
+    }
+
+    .lang-btn:hover {
+        border-color: var(--accent-color);
+        transform: translateY(-2px);
+    }
+
+    .lang-btn.active {
+        background: var(--accent-color);
+        color: var(--text-inverse);
+        border-color: var(--accent-color);
+    }
+
+    .lang-code {
+        font-weight: bold;
+        font-size: 0.85rem;
+    }
+
+    .lang-name {
+        font-size: 0.7rem;
+        opacity: 0.8;
+    }
+
+    /* RTL Support */
+    .rtl {
+        direction: rtl;
+        text-align: right;
+    }
+
+    .rtl .header .container,
+    .rtl .nav {
+        flex-direction: row-reverse;
+    }
+
+    .rtl .logo {
+        margin-right: 0;
+        margin-left: 1rem;
+    }
+
+    .rtl .incident-header,
+    .rtl .incident-meta,
+    .rtl .incident-footer {
+        flex-direction: row-reverse;
+    }
+
     /* ===== UNIVERSAL HEADER STYLES ===== */
 
     .header {
@@ -277,6 +343,21 @@
         font-weight: 600;
     }
 
+    /* Mobile responsive language selector */
+    @media (max-width: 768px) {
+        .language-selector {
+            position: absolute;
+            top: 70px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--surface-color);
+            padding: 8px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-md);
+            z-index: 1000;
+        }
+    }
+
     /* ===== MAIN CONTENT CONTAINER ===== */
 
     .main {
@@ -312,6 +393,11 @@
         justify-content: space-between;
         align-items: flex-start;
         gap: 2rem;
+    }
+
+    .banner-text {
+        flex: 1;
+        max-width: 400px;
     }
 
     .banner-text h3 {
@@ -463,7 +549,7 @@
         color: var(--text-secondary);
     }
 
-    .data-loading .loading-spinner {
+    .loading-spinner {
         width: 40px;
         height: 40px;
         border: 4px solid var(--border-color);
@@ -569,7 +655,7 @@
 
     .incident-header {
         display: flex;
-        justify-content: between;
+        justify-content: space-between;
         align-items: flex-start;
         margin-bottom: 1rem;
         gap: 1rem;
@@ -741,6 +827,129 @@
         font-style: italic;
     }
 
+    /* ===== SOCIAL MEDIA SHARE SECTION (FOOTER) ===== */
+
+    .footer-social-share {
+        background: linear-gradient(135deg, var(--bg-secondary), var(--bg-tertiary));
+        border-top: 2px solid var(--accent-color);
+        border-bottom: 2px solid var(--border-color);
+        padding: 2.5rem 0;
+        margin-bottom: 2rem;
+    }
+
+    .social-share-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem;
+        text-align: center;
+    }
+
+    .social-share-header {
+        margin-bottom: 2rem;
+    }
+
+    .social-share-title {
+        font-size: 1.75rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        margin-bottom: 0.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .social-share-description {
+        font-size: 1rem;
+        color: var(--text-secondary);
+        margin: 0;
+        line-height: 1.5;
+    }
+
+    .social-share-buttons {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 1rem;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .social-share-btn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1.25rem 1rem;
+        border: none;
+        border-radius: 12px;
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.9rem;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        min-height: 100px;
+        font-family: var(--font-family-base);
+    }
+
+    .social-share-btn:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+        filter: brightness(1.1);
+    }
+
+    .social-share-btn:active {
+        transform: translateY(-2px);
+    }
+
+    .share-icon {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+        display: block;
+    }
+
+    .share-label {
+        font-size: 0.85rem;
+        text-align: center;
+        line-height: 1.2;
+    }
+
+    /* Platform-specific colors */
+    .btn-twitter { background-color: #000000; }
+    .btn-facebook { background-color: #1877F2; }
+    .btn-linkedin { background-color: #0A66C2; }
+    .btn-whatsapp { background-color: #25D366; }
+    .btn-telegram { background-color: #0088CC; }
+    .btn-reddit { background-color: #FF4500; }
+    .btn-email { background-color: #EA4335; }
+    .btn-copy { background-color: #6B7280; }
+
+    /* Copy notification */
+    .copy-notification {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        background: var(--success-color);
+        color: white;
+        padding: 1rem 1.5rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        font-weight: 600;
+        z-index: 10000;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .copy-notification.show {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
     /* ===== RESPONSIVE HEADER DESIGN ===== */
 
     @media (max-width: 768px) {
@@ -814,6 +1023,37 @@
         .incidents-grid {
             grid-template-columns: 1fr;
         }
+
+        /* Social Share Mobile */
+        .social-share-buttons {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.75rem;
+        }
+
+        .social-share-btn {
+            padding: 1rem 0.75rem;
+            min-height: 85px;
+        }
+
+        .share-icon {
+            font-size: 2rem;
+            margin-bottom: 0.375rem;
+        }
+
+        .share-label {
+            font-size: 0.8rem;
+        }
+
+        .social-share-title {
+            font-size: 1.5rem;
+        }
+
+        .copy-notification {
+            bottom: 1rem;
+            right: 1rem;
+            left: 1rem;
+            text-align: center;
+        }
     }
 
     @media (max-width: 480px) {
@@ -851,6 +1091,50 @@
         .casualties-grid {
             grid-template-columns: repeat(2, 1fr);
         }
+
+        /* Social Share Extra Small Mobile */
+        .footer-social-share {
+            padding: 1.5rem 0;
+        }
+
+        .social-share-buttons {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.5rem;
+        }
+
+        .social-share-btn {
+            padding: 0.875rem 0.5rem;
+            min-height: 75px;
+        }
+
+        .share-icon {
+            font-size: 1.75rem;
+        }
+
+        .share-label {
+            font-size: 0.75rem;
+        }
+
+        .social-share-title {
+            font-size: 1.25rem;
+        }
+
+        .social-share-description {
+            font-size: 0.9rem;
+        }
+    }
+
+    /* Dark theme support for social share */
+    [data-theme="dark"] .footer-social-share {
+        background: linear-gradient(135deg, var(--bg-secondary), var(--bg-primary));
+    }
+
+    [data-theme="dark"] .social-share-btn {
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    }
+
+    [data-theme="dark"] .social-share-btn:hover {
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
     }
 
     /* ===== UNIVERSAL FOOTER NAVIGATION STYLES ===== */
@@ -1020,7 +1304,7 @@
         font-weight: 600;
     }
 
-    /* ===== MOBILE RESPONSIVE DESIGN ===== */
+    /* ===== MOBILE RESPONSIVE FOOTER ===== */
 
     @media (max-width: 768px) {
         .footer-container {
@@ -1140,25 +1424,47 @@
 
 <!-- ===== UNIVERSAL FOOTER NAVIGATION HTML ===== -->
 <footer class="universal-footer">
+
+    <!-- ===== SOCIAL MEDIA SHARE SECTION ===== -->
+    <div class="footer-social-share" id="footerSocialShare">
+        <div class="social-share-container">
+            <div class="social-share-header">
+                <h3 class="social-share-title">
+                    <span>📤</span>
+                    <span data-i18n="common.share.title">Share This Documentation</span>
+                </h3>
+                <p class="social-share-description" data-i18n="common.share.description">
+                    Help spread awareness about this crisis by sharing this page on social media
+                </p>
+            </div>
+            <div class="social-share-buttons" id="socialShareButtons">
+                <!-- Buttons will be generated dynamically by JavaScript -->
+                <div style="text-align: center; padding: 2rem; color: var(--text-secondary);" data-i18n="common.share.loading">
+                    Loading share buttons...
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="footer-container">
 
         <!-- Quick Access Stats -->
         <div class="footer-quick-stats">
             <div class="footer-stat-item">
                 <span class="footer-stat-number">19.0K</span>
-                <span class="footer-stat-label">Children Killed</span>
+                <span class="footer-stat-label" data-i18n="common.stats.childrenKilled">Children Killed</span>
             </div>
             <div class="footer-stat-item">
                 <span class="footer-stat-number">232</span>
-                <span class="footer-stat-label">Journalists Killed</span>
+                <span class="footer-stat-label" data-i18n="common.stats.journalistsKilled">Journalists Killed</span>
             </div>
             <div class="footer-stat-item">
                 <span class="footer-stat-number">1.6K</span>
-                <span class="footer-stat-label">Medical Staff Killed</span>
+                <span class="footer-stat-label" data-i18n="common.stats.medicalStaffKilled">Medical Staff Killed</span>
             </div>
             <div class="footer-stat-item">
                 <span class="footer-stat-number">61.2K</span>
-                <span class="footer-stat-label">Total Deaths</span>
+                <span class="footer-stat-label" data-i18n="common.stats.totalDeaths">Total Deaths</span>
             </div>
         </div>
 
@@ -1167,57 +1473,57 @@
 
             <!-- Main Sections -->
             <div class="footer-column">
-                <h4>🏠 Main Sections</h4>
+                <h4 data-i18n="common.footer.mainSections">🏠 Main Sections</h4>
                 <ul class="footer-nav-list">
-                    <li><a href="index.html" class="footer-nav-link">🏠 Crisis Dashboard <span class="status-badge status-active">ACTIVE</span></a></li>
-                    <li><a href="war-crimes-stats.html" class="footer-nav-link">⚖️ War Crimes Documentation <span class="status-badge status-active">ACTIVE</span></a></li>
-                    <li><a href="hunger-crisis-stats.html" class="footer-nav-link">🍽️ Hunger Crisis Analysis <span class="status-badge status-active">ACTIVE</span></a></li>
-                    <li><a href="major-incidents-timeline.html" class="footer-nav-link">📋 Major Incidents Timeline <span class="status-badge status-active">ACTIVE</span></a></li>
+                    <li><a href="index.html" class="footer-nav-link" data-i18n="common.footer.dashboard">🏠 Crisis Dashboard <span class="status-badge status-active">ACTIVE</span></a></li>
+                    <li><a href="war-crimes-stats.html" class="footer-nav-link" data-i18n="common.footer.warCrimes">⚖️ War Crimes Documentation <span class="status-badge status-active">ACTIVE</span></a></li>
+                    <li><a href="hunger-crisis-stats.html" class="footer-nav-link" data-i18n="common.footer.hungerCrisis">🍽️ Hunger Crisis Analysis <span class="status-badge status-active">ACTIVE</span></a></li>
+                    <li><a href="major-incidents-timeline.html" class="footer-nav-link" data-i18n="common.footer.timeline">📋 Major Incidents Timeline <span class="status-badge status-active">ACTIVE</span></a></li>
                 </ul>
             </div>
 
             <!-- War Crimes Statistics -->
             <div class="footer-column">
-                <h4>⚖️ War Crimes Stats</h4>
+                <h4 data-i18n="common.footer.warCrimesStats">⚖️ War Crimes Stats</h4>
                 <ul class="footer-nav-list">
-                    <li><a href="Pages/War_Crimes_Stats/stat-children-killed.html" class="footer-nav-link">👶 Children Killed <span class="status-badge status-implemented">ACTIVE</span></a></li>
-                    <li><a href="Pages/War_Crimes_Stats/stat-journalists-killed.html" class="footer-nav-link">📰 Journalists Killed <span class="status-badge status-implemented">ACTIVE</span></a></li>
-                    <li><a href="Pages/War_Crimes_Stats/stat-medical-personnel.html" class="footer-nav-link">🏥 Medical Personnel Killed <span class="status-badge status-implemented">ACTIVE</span></a></li>
-                    <li><a href="Pages/War_Crimes_Stats/stat-total-deaths.html" class="footer-nav-link">💀 Total Deaths <span class="status-badge status-implemented">ACTIVE</span></a></li>
-                    <li><span class="footer-nav-link disabled">🚑 Medical Personnel Detained <span class="status-badge status-planned">COMING SOON</span></span></li>
-                    <li><span class="footer-nav-link disabled">🏥 Hospitals Attacked <span class="status-badge status-planned">COMING SOON</span></span></li>
-                    <li><span class="footer-nav-link disabled">💧 Water Infrastructure <span class="status-badge status-planned">COMING SOON</span></span></li>
-                    <li><span class="footer-nav-link disabled">🏠 Housing Destroyed <span class="status-badge status-planned">COMING SOON</span></span></li>
+                    <li><a href="Pages/War_Crimes_Stats/stat-children-killed.html" class="footer-nav-link" data-i18n="common.footer.childrenKilled">👶 Children Killed <span class="status-badge status-implemented">ACTIVE</span></a></li>
+                    <li><a href="Pages/War_Crimes_Stats/stat-journalists-killed.html" class="footer-nav-link" data-i18n="common.footer.journalistsKilled">📰 Journalists Killed <span class="status-badge status-implemented">ACTIVE</span></a></li>
+                    <li><a href="Pages/War_Crimes_Stats/stat-medical-personnel.html" class="footer-nav-link" data-i18n="common.footer.medicalPersonnel">🏥 Medical Personnel Killed <span class="status-badge status-implemented">ACTIVE</span></a></li>
+                    <li><a href="Pages/War_Crimes_Stats/stat-total-deaths.html" class="footer-nav-link" data-i18n="common.footer.totalDeaths">💀 Total Deaths <span class="status-badge status-implemented">ACTIVE</span></a></li>
+                    <li><span class="footer-nav-link disabled" data-i18n="common.footer.medicalPersonnelDetained">🚑 Medical Personnel Detained <span class="status-badge status-planned">COMING SOON</span></span></li>
+                    <li><span class="footer-nav-link disabled" data-i18n="common.footer.hospitalsAttacked">🏥 Hospitals Attacked <span class="status-badge status-planned">COMING SOON</span></span></li>
+                    <li><span class="footer-nav-link disabled" data-i18n="common.footer.waterInfrastructure">💧 Water Infrastructure <span class="status-badge status-planned">COMING SOON</span></span></li>
+                    <li><span class="footer-nav-link disabled" data-i18n="common.footer.housingDestroyed">🏠 Housing Destroyed <span class="status-badge status-planned">COMING SOON</span></span></li>
                 </ul>
             </div>
 
-                       <!-- Hunger Crisis Statistics -->
+            <!-- Hunger Crisis Statistics -->
             <div class="footer-column">
-                <h4>🍽️ Hunger Crisis Stats</h4>
+                <h4 data-i18n="common.footer.hungerCrisisStats">🍽️ Hunger Crisis Stats</h4>
                 <ul class="footer-nav-list">
-                    <li><a href="Pages/Hunger_Crisis/hunger-total-starvation.html" class="footer-nav-link">💀 Total Deaths Due to Starvation <span class="status-badge status-active">ACTIVE</span></a></li>
-                    <li><a href="Pages/Hunger_Crisis/hunger-starved-children.html" class="footer-nav-link">👶 Children Died from Starvation <span class="status-badge status-active">ACTIVE</span></a></li>
-                    <li><a href="Pages/Hunger_Crisis/hunger-starvation-rates.html" class="footer-nav-link">📊 Population Starvation Rate <span class="status-badge status-active">ACTIVE</span></a></li>
-                    <li><a href="Pages/Hunger_Crisis/hunger-displaced-families.html" class="footer-nav-link">🏠 Displaced People <span class="status-badge status-implemented">ACTIVE</span></a></li>
-                    <li><a href="Pages/Hunger_Crisis/hunger-food-shortages.html" class="footer-nav-link">🥖 Daily Calorie Deficit <span class="status-badge status-implemented">ACTIVE</span></a></li>
-                    <li><a href="Pages/Hunger_Crisis/hunger-aid-blocked.html" class="footer-nav-link">🚫 Aid Requests Denied <span class="status-badge status-implemented">ACTIVE</span></a></li>
-                    <li><a href="Pages/Hunger_Crisis/hunger-bakeries-destroyed.html" class="footer-nav-link">🏭 Bakeries Destroyed <span class="status-badge status-implemented">ACTIVE</span></a></li>
-                    <li><a href="Pages/Hunger_Crisis/hunger-agriculture-destroyed.html" class="footer-nav-link">🌾 Agricultural Land Destroyed <span class="status-badge status-implemented">ACTIVE</span></a></li>
+                    <li><a href="Pages/Hunger_Crisis/hunger-total-starvation.html" class="footer-nav-link" data-i18n="common.footer.totalStarvationDeaths">💀 Total Deaths Due to Starvation <span class="status-badge status-active">ACTIVE</span></a></li>
+                    <li><a href="Pages/Hunger_Crisis/hunger-starved-children.html" class="footer-nav-link" data-i18n="common.footer.childrenStarvation">👶 Children Died from Starvation <span class="status-badge status-active">ACTIVE</span></a></li>
+                    <li><a href="Pages/Hunger_Crisis/hunger-starvation-rates.html" class="footer-nav-link" data-i18n="common.footer.starvationRate">📊 Population Starvation Rate <span class="status-badge status-active">ACTIVE</span></a></li>
+                    <li><a href="Pages/Hunger_Crisis/hunger-displaced-families.html" class="footer-nav-link" data-i18n="common.footer.displacedPeople">🏠 Displaced People <span class="status-badge status-implemented">ACTIVE</span></a></li>
+                    <li><a href="Pages/Hunger_Crisis/hunger-food-shortages.html" class="footer-nav-link" data-i18n="common.footer.calorieDeficit">🥖 Daily Calorie Deficit <span class="status-badge status-implemented">ACTIVE</span></a></li>
+                    <li><a href="Pages/Hunger_Crisis/hunger-aid-blocked.html" class="footer-nav-link" data-i18n="common.footer.aidBlocked">🚫 Aid Requests Denied <span class="status-badge status-implemented">ACTIVE</span></a></li>
+                    <li><a href="Pages/Hunger_Crisis/hunger-bakeries-destroyed.html" class="footer-nav-link" data-i18n="common.footer.bakeriesDestroyed">🏭 Bakeries Destroyed <span class="status-badge status-implemented">ACTIVE</span></a></li>
+                    <li><a href="Pages/Hunger_Crisis/hunger-agriculture-destroyed.html" class="footer-nav-link" data-i18n="common.footer.agricultureDestroyed">🌾 Agricultural Land Destroyed <span class="status-badge status-implemented">ACTIVE</span></a></li>
                 </ul>
             </div>
 
             <!-- Platform Info -->
             <div class="footer-column">
-                <h4>📚 Platform Info</h4>
+                <h4 data-i18n="common.footer.platformInfo">📚 Platform Info</h4>
                 <ul class="footer-nav-list">
-                    <li><a href="#about" class="footer-nav-link">ℹ️ About This Documentation</a></li>
-                    <li><a href="#methodology" class="footer-nav-link">🔬 Data Methodology</a></li>
-                    <li><a href="#sources" class="footer-nav-link">📰 Sources & Verification</a></li>
-                    <li><a href="#legal" class="footer-nav-link">⚖️ Legal Framework</a></li>
-                    <li><a href="#contact" class="footer-nav-link">📧 Contact & Reports</a></li>
-                    <li><a href="#api" class="footer-nav-link">🔌 Data API Access</a></li>
-                    <li><a href="#download" class="footer-nav-link">📥 Download Reports</a></li>
-                    <li><a href="#share" class="footer-nav-link">📤 Share & Embed</a></li>
+                    <li><a href="#about" class="footer-nav-link" data-i18n="common.footer.about">ℹ️ About This Documentation</a></li>
+                    <li><a href="#methodology" class="footer-nav-link" data-i18n="common.footer.methodology">🔬 Data Methodology</a></li>
+                    <li><a href="#sources" class="footer-nav-link" data-i18n="common.footer.sources">📰 Sources & Verification</a></li>
+                    <li><a href="#legal" class="footer-nav-link" data-i18n="common.footer.legal">⚖️ Legal Framework</a></li>
+                    <li><a href="#contact" class="footer-nav-link" data-i18n="common.footer.contact">📧 Contact & Reports</a></li>
+                    <li><a href="#api" class="footer-nav-link" data-i18n="common.footer.api">🔌 Data API Access</a></li>
+                    <li><a href="#download" class="footer-nav-link" data-i18n="common.footer.download">📥 Download Reports</a></li>
+                    <li><a href="#share" class="footer-nav-link" data-i18n="common.footer.share">📤 Share & Embed</a></li>
                 </ul>
             </div>
 
@@ -1225,15 +1531,15 @@
 
         <!-- Footer Bottom -->
         <div class="footer-bottom">
-            <div class="footer-copyright">
+            <div class="footer-copyright" data-i18n="common.footer.copyright">
                 © 2024 Gaza Crisis Documentation Platform. All rights reserved.
             </div>
             <div class="footer-meta">
-                <span class="footer-update-time">Last Updated: August 7, 2025</span>
+                <span class="footer-update-time">Last Updated: October 11, 2025</span>
                 <span>•</span>
-                <span>🔍 All data verified through multiple sources</span>
+                <span data-i18n="common.footer.verifiedData">🔍 All data verified through multiple sources</span>
                 <span>•</span>
-                <span>⚖️ Preserved for legal accountability</span>
+                <span data-i18n="common.footer.legalAccountability">⚖️ Preserved for legal accountability</span>
             </div>
         </div>
 
@@ -1241,9 +1547,207 @@
 </footer>
 
 <script>
-    // Mobile Collapsible Footer Functionality
-    document.addEventListener('DOMContentLoaded', function() {
-        // Only apply mobile collapsible behavior on mobile devices
+    // ===================================================================
+    // UNIVERSAL SOCIAL MEDIA SHARE FUNCTIONALITY
+    // Automatically detects page and generates share buttons
+    // Author: aliattia02
+    // Last Updated: 2025-10-11 22:36:38 UTC
+    // ===================================================================
+
+    (function() {
+        'use strict';
+
+        // Wait for DOM to be ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initializeFooter);
+        } else {
+            initializeFooter();
+        }
+
+        function initializeFooter() {
+            console.log('🔄 Initializing footer with social share...');
+
+            try {
+                initializeSocialShare();
+                initializeMobileFooter();
+                updateFooterStats();
+                console.log('✅ Footer initialized successfully');
+            } catch (error) {
+                console.error('❌ Error initializing footer:', error);
+            }
+        }
+
+        function initializeSocialShare() {
+            const buttonsContainer = document.getElementById('socialShareButtons');
+
+            if (!buttonsContainer) {
+                console.warn('⚠️ Social share buttons container not found');
+                return;
+            }
+
+            console.log('📤 Generating social share buttons...');
+
+            const currentUrl = encodeURIComponent(window.location.href);
+            const pageTitle = encodeURIComponent(document.title || 'Gaza Crisis Documentation');
+            const metaDescription = document.querySelector('meta[name="description"]');
+            const description = metaDescription ?
+                encodeURIComponent(metaDescription.content) :
+                encodeURIComponent('Gaza Crisis Documentation - Verified data and comprehensive analysis');
+
+            const shareText = document.title ?
+                `${document.title} - Gaza Crisis Documentation` :
+                'Gaza Crisis Documentation - Verified Data';
+            const shareTextEncoded = encodeURIComponent(shareText);
+
+            const socialPlatforms = [
+                {
+                    name: 'Twitter/X',
+                    icon: '𝕏',
+                    class: 'btn-twitter',
+                    url: `https://twitter.com/intent/tweet?text=${shareTextEncoded}&url=${currentUrl}`
+                },
+                {
+                    name: 'Facebook',
+                    icon: '📘',
+                    class: 'btn-facebook',
+                    url: `https://www.facebook.com/sharer/sharer.php?u=${currentUrl}&quote=${shareTextEncoded}`
+                },
+                {
+                    name: 'LinkedIn',
+                    icon: '💼',
+                    class: 'btn-linkedin',
+                    url: `https://www.linkedin.com/sharing/share-offsite/?url=${currentUrl}`
+                },
+                {
+                    name: 'WhatsApp',
+                    icon: '💬',
+                    class: 'btn-whatsapp',
+                    url: `https://wa.me/?text=${shareTextEncoded}%20${currentUrl}`
+                },
+                {
+                    name: 'Telegram',
+                    icon: '✈️',
+                    class: 'btn-telegram',
+                    url: `https://t.me/share/url?url=${currentUrl}&text=${shareTextEncoded}`
+                },
+                {
+                    name: 'Reddit',
+                    icon: '🔴',
+                    class: 'btn-reddit',
+                    url: `https://reddit.com/submit?url=${currentUrl}&title=${shareTextEncoded}`
+                },
+                {
+                    name: 'Email',
+                    icon: '📧',
+                    class: 'btn-email',
+                    url: `mailto:?subject=${pageTitle}&body=${shareTextEncoded}%0A%0A${currentUrl}`
+                },
+                {
+                    name: 'Copy Link',
+                    icon: '🔗',
+                    class: 'btn-copy',
+                    url: '#',
+                    action: 'copy'
+                }
+            ];
+
+            buttonsContainer.innerHTML = socialPlatforms.map(platform => {
+                if (platform.action === 'copy') {
+                    return `
+                        <button class="social-share-btn ${platform.class}"
+                                onclick="window.FooterNavigation.copyLink()"
+                                title="Copy link to clipboard">
+                            <span class="share-icon">${platform.icon}</span>
+                            <span class="share-label" data-i18n="common.share.copyLink">${platform.name}</span>
+                        </button>
+                    `;
+                } else {
+                    return `
+                        <a href="${platform.url}"
+                           class="social-share-btn ${platform.class}"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           title="Share on ${platform.name}">
+                            <span class="share-icon">${platform.icon}</span>
+                            <span class="share-label" data-i18n="common.share.${platform.name.toLowerCase().replace('/', '')}">${platform.name}</span>
+                        </a>
+                    `;
+                }
+            }).join('');
+
+            console.log(`✅ Generated ${socialPlatforms.length} social share buttons`);
+        }
+
+        function copyPageLink() {
+            const url = window.location.href;
+
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(url).then(() => {
+                    showCopyNotification('✅ Link copied to clipboard!');
+                }).catch(err => {
+                    console.warn('Clipboard API failed, using fallback:', err);
+                    fallbackCopyToClipboard(url);
+                });
+            } else {
+                fallbackCopyToClipboard(url);
+            }
+        }
+
+        function fallbackCopyToClipboard(text) {
+            const textArea = document.createElement('textarea');
+            textArea.value = text;
+            textArea.style.position = 'fixed';
+            textArea.style.left = '-9999px';
+            textArea.style.top = '0';
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+
+            try {
+                const successful = document.execCommand('copy');
+                if (successful) {
+                    showCopyNotification('✅ Link copied to clipboard!');
+                } else {
+                    showCopyNotification('❌ Failed to copy link');
+                }
+            } catch (err) {
+                showCopyNotification('❌ Failed to copy link');
+                console.error('Fallback copy failed:', err);
+            }
+
+            document.body.removeChild(textArea);
+        }
+
+        function showCopyNotification(message) {
+            // Remove any existing notification
+            const existingNotification = document.querySelector('.copy-notification');
+            if (existingNotification) {
+                existingNotification.remove();
+            }
+
+            const notification = document.createElement('div');
+            notification.className = 'copy-notification';
+            notification.innerHTML = `<span>${message}</span>`;
+            document.body.appendChild(notification);
+
+            setTimeout(() => {
+                notification.classList.add('show');
+            }, 10);
+
+            setTimeout(() => {
+                notification.classList.remove('show');
+                setTimeout(() => {
+                    if (notification.parentNode) {
+                        notification.parentNode.removeChild(notification);
+                    }
+                }, 300);
+            }, 3000);
+        }
+
+        // ===================================================================
+        // MOBILE COLLAPSIBLE FOOTER FUNCTIONALITY
+        // ===================================================================
+
         function initializeMobileFooter() {
             const footerColumns = document.querySelectorAll('.footer-column');
             const isMobile = window.innerWidth <= 768;
@@ -1257,10 +1761,14 @@
                             column.classList.add('collapsed');
                         }
 
-                        header.addEventListener('click', function() {
+                        // Remove existing listeners
+                        const newHeader = header.cloneNode(true);
+                        header.parentNode.replaceChild(newHeader, header);
+
+                        newHeader.addEventListener('click', function() {
                             column.classList.toggle('collapsed');
                         });
-                    }
+                                    }
                 });
             } else {
                 // Remove collapsed class on desktop
@@ -1270,9 +1778,6 @@
             }
         }
 
-        // Initialize on load
-        initializeMobileFooter();
-
         // Re-initialize on window resize
         let resizeTimeout;
         window.addEventListener('resize', function() {
@@ -1280,41 +1785,41 @@
             resizeTimeout = setTimeout(initializeMobileFooter, 250);
         });
 
-        // Update stats dynamically if data is available
-        updateFooterStats();
-    });
+        // ===================================================================
+        // UPDATE FOOTER STATS
+        // ===================================================================
 
-    function updateFooterStats() {
-        // Try to get stats from global data if available
-        if (window.incidents) {
-            const totalIncidents = window.incidents.length;
-            const verifiedIncidents = window.incidents.filter(i => i.verified === 'verified').length;
-
-            // You can update specific stats here if needed
-            // This is just an example of how to make the footer dynamic
-        }
-
-        // Update last updated time
-        const updateTimeEl = document.querySelector('.footer-update-time');
-        if (updateTimeEl) {
-            const now = new Date();
-            const formatted = now.toLocaleDateString('en-US', {
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric'
-            });
-            updateTimeEl.textContent = `Last Updated: ${formatted}`;
-        }
-    }
-
-    // Export functions for use by parent pages
-    window.FooterNavigation = {
-        updateStats: updateFooterStats,
-        toggleSection: function(sectionIndex) {
-            const columns = document.querySelectorAll('.footer-column');
-            if (columns[sectionIndex]) {
-                columns[sectionIndex].classList.toggle('collapsed');
+        function updateFooterStats() {
+            // Update last updated time
+            const updateTimeEl = document.querySelector('.footer-update-time');
+            if (updateTimeEl) {
+                updateTimeEl.textContent = `Last Updated: October 11, 2025`;
             }
         }
-    };
+
+        // Export functions for global use
+        window.FooterNavigation = {
+            updateStats: updateFooterStats,
+            copyLink: copyPageLink,
+            initializeSocialShare: initializeSocialShare,
+            toggleSection: function(sectionIndex) {
+                const columns = document.querySelectorAll('.footer-column');
+                if (columns[sectionIndex]) {
+                    columns[sectionIndex].classList.toggle('collapsed');
+                }
+            }
+        };
+
+    })();
+</script>
+
+<!-- Translation System Script -->
+<script>
+    // Check if translation system is loaded, if not load it
+    if (!window.TranslationSystem) {
+        const script = document.createElement('script');
+        script.src = './js/translation-system.js';
+        script.async = true;
+        document.head.appendChild(script);
+    }
 </script>

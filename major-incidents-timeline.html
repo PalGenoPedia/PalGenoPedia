@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Major Incidents Timeline - Gaza Crisis Documentation</title>
-    <meta name="description" content="Comprehensive timeline of historical massacres (1948-2023) and current genocide (2023-present) in Gaza and Palestine">
+    <title data-i18n="timeline.pageTitle">Major Incidents Timeline - Gaza Crisis Documentation</title>
+    <meta name="description" data-i18n="timeline.metaDescription" content="Comprehensive timeline of historical massacres (1948-2023) and current genocide (2023-present) in Gaza and Palestine">
 
     <!-- External CSS Libraries -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
@@ -411,24 +411,30 @@
     </style>
 </head>
 
-<body>
+<body data-i18n-page-title="timeline.pageTitle" data-i18n-meta-desc="timeline.metaDescription">
     <!-- Header -->
     <header class="header">
         <div class="container">
             <h1 class="logo">
-                <a href="index.html">Gaza Crisis Documentation</a>
+                <a href="index.html" data-i18n="common.siteTitle">Gaza Crisis Documentation</a>
             </h1>
             <nav class="nav">
                 <!-- Main Navigation -->
-                <a href="war-crimes-stats.html" class="nav-btn">⚖️ War Crimes</a>
-                <a href="hunger-crisis-stats.html" class="nav-btn">🍽️ Hunger Crisis</a>
-                <button class="nav-btn active">📋 Major Incidents</button>
+                <a href="war-crimes-stats.html" class="nav-btn" data-i18n="common.nav.warCrimes">⚖️ War Crimes</a>
+                <a href="hunger-crisis-stats.html" class="nav-btn" data-i18n="common.nav.hungerCrisis">🍽️ Hunger Crisis</a>
+                <button class="nav-btn active" data-i18n="common.nav.timeline">📋 Major Incidents</button>
 
                 <!-- View Controls - Timeline is active by default -->
-                <button class="nav-btn view-btn active" data-view="timeline">📅 Timeline</button>
-                <button class="nav-btn view-btn" data-view="map">🗺️ Map</button>
-                <button class="nav-btn view-btn" data-view="list">📋 List</button>
+                <button class="nav-btn view-btn active" data-view="timeline" data-i18n="timeline.nav.timelineView">📅 Timeline</button>
+                <button class="nav-btn view-btn" data-view="map" data-i18n="timeline.nav.mapView">🗺️ Map</button>
+                <button class="nav-btn view-btn" data-view="list" data-i18n="timeline.nav.listView">📋 List</button>
             </nav>
+
+            <!-- Language Selector -->
+            <div id="language-selector" class="language-selector">
+                <!-- Will be populated by translation-system.js -->
+            </div>
+
             <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
         </div>
     </header>
@@ -440,21 +446,21 @@
             <div class="container">
                 <div class="header-content">
                     <div class="header-text">
-                        <h1>📋 Historical & Current Timeline</h1>
-                        <p>Comprehensive documentation from 1948 Nakba through current genocide. Interactive timeline with verified sources from UN, Human Rights Watch, and other international organizations.</p>
+                        <h1 data-i18n="timeline.header.title">📋 Historical & Current Timeline</h1>
+                        <p data-i18n="timeline.header.description">Comprehensive documentation from 1948 Nakba through current genocide. Interactive timeline with verified sources from UN, Human Rights Watch, and other international organizations.</p>
                     </div>
                     <div class="header-stats" id="headerStats">
                         <div class="quick-stat">
                             <span class="stat-value" id="totalEvents">Loading...</span>
-                            <span class="stat-label">Total Events</span>
+                            <span class="stat-label" data-i18n="timeline.stats.totalEvents">Total Events</span>
                         </div>
                         <div class="quick-stat">
                             <span class="stat-value" id="totalDeaths">Loading...</span>
-                            <span class="stat-label">Total Deaths</span>
+                            <span class="stat-label" data-i18n="timeline.stats.totalDeaths">Total Deaths</span>
                         </div>
                         <div class="quick-stat">
                             <span class="stat-value" id="lastUpdate">Loading...</span>
-                            <span class="stat-label">Last Updated</span>
+                            <span class="stat-label" data-i18n="timeline.stats.lastUpdate">Last Updated</span>
                         </div>
                     </div>
                 </div>
@@ -465,24 +471,24 @@
             <!-- Timeline Mode Selector -->
             <div class="timeline-mode-selector">
                 <div class="mode-selector-header">
-                    <h3>📊 Select Timeline Period</h3>
+                    <h3 data-i18n="timeline.modeSelector.title">📊 Select Timeline Period</h3>
                     <span class="data-source-indicator">
-                        🔍 Sources: UN, Human Rights Watch
+                        <span data-i18n="timeline.modeSelector.sources">🔍 Sources: UN, Human Rights Watch</span>
                     </span>
                 </div>
                 <div class="mode-buttons">
                     <!-- Historical Mode - ACTIVE BY DEFAULT -->
                     <button class="mode-btn historical active" data-mode="historical">
                         <div class="mode-icon">📜</div>
-                        <span class="mode-label">Historical Massacres</span>
-                        <span class="mode-period">1948 - October 6, 2023</span>
+                        <span class="mode-label" data-i18n="timeline.modes.historical.title">Historical Massacres</span>
+                        <span class="mode-period" data-i18n="timeline.modes.historical.period">1948 - October 6, 2023</span>
                         <div class="mode-stats">
                             <div class="mode-stat">
-                                <span>Events:</span>
+                                <span data-i18n="timeline.modes.historical.events">Events:</span>
                                 <strong id="historicalCount">17</strong>
                             </div>
                             <div class="mode-stat">
-                                <span>Deaths:</span>
+                                <span data-i18n="timeline.modes.historical.deaths">Deaths:</span>
                                 <strong id="historicalDeaths">27K+</strong>
                             </div>
                         </div>
@@ -491,15 +497,15 @@
                     <!-- Current Mode -->
                     <button class="mode-btn current" data-mode="current">
                         <div class="mode-icon">🚨</div>
-                        <span class="mode-label">Current Genocide</span>
-                        <span class="mode-period">October 7, 2023 - Present</span>
+                        <span class="mode-label" data-i18n="timeline.modes.current.title">Current Genocide</span>
+                        <span class="mode-period" data-i18n="timeline.modes.current.period">October 7, 2023 - Present</span>
                         <div class="mode-stats">
                             <div class="mode-stat">
-                                <span>Events:</span>
+                                <span data-i18n="timeline.modes.current.events">Events:</span>
                                 <strong id="currentCount">10</strong>
                             </div>
                             <div class="mode-stat">
-                                <span>Deaths:</span>
+                                <span data-i18n="timeline.modes.current.deaths">Deaths:</span>
                                 <strong id="currentDeaths">61K+</strong>
                             </div>
                         </div>
@@ -508,15 +514,15 @@
                     <!-- Both Mode -->
                     <button class="mode-btn both" data-mode="both">
                         <div class="mode-icon">📊</div>
-                        <span class="mode-label">Complete Timeline</span>
-                        <span class="mode-period">1948 - Present</span>
+                        <span class="mode-label" data-i18n="timeline.modes.both.title">Complete Timeline</span>
+                        <span class="mode-period" data-i18n="timeline.modes.both.period">1948 - Present</span>
                         <div class="mode-stats">
                             <div class="mode-stat">
-                                <span>Total Events:</span>
+                                <span data-i18n="timeline.modes.both.events">Total Events:</span>
                                 <strong id="bothCount">27</strong>
                             </div>
                             <div class="mode-stat">
-                                <span>Total Deaths:</span>
+                                <span data-i18n="timeline.modes.both.deaths">Total Deaths:</span>
                                 <strong id="bothDeaths">88K+</strong>
                             </div>
                         </div>
@@ -530,73 +536,73 @@
                     <div class="stat-card">
                         <div class="stat-icon">⚠️</div>
                         <div class="stat-number" id="massacresCount">0</div>
-                        <div class="stat-label">Massacres</div>
-                        <div class="stat-sublabel">Documented Events</div>
+                        <div class="stat-label" data-i18n="timeline.stats.massacres">Massacres</div>
+                        <div class="stat-sublabel" data-i18n="timeline.stats.documentedEvents">Documented Events</div>
                     </div>
                     <div class="stat-card">
                         <div class="stat-icon">💀</div>
                         <div class="stat-number" id="deathsCount">0</div>
-                        <div class="stat-label">Total Deaths</div>
-                        <div class="stat-sublabel">Verified Casualties</div>
+                        <div class="stat-label" data-i18n="timeline.stats.deaths">Total Deaths</div>
+                        <div class="stat-sublabel" data-i18n="timeline.stats.verifiedCasualties">Verified Casualties</div>
                     </div>
                     <div class="stat-card">
                         <div class="stat-icon">🏥</div>
                         <div class="stat-number" id="injuredCount">0</div>
-                        <div class="stat-label">Injured</div>
-                        <div class="stat-sublabel">Documented Injuries</div>
+                        <div class="stat-label" data-i18n="timeline.stats.injured">Injured</div>
+                        <div class="stat-sublabel" data-i18n="timeline.stats.documentedInjuries">Documented Injuries</div>
                     </div>
                     <div class="stat-card">
                         <div class="stat-icon">🏠</div>
                         <div class="stat-number" id="displacedCount">0</div>
-                        <div class="stat-label">Displaced</div>
-                        <div class="stat-sublabel">Forced Displacement</div>
+                        <div class="stat-label" data-i18n="timeline.stats.displaced">Displaced</div>
+                        <div class="stat-sublabel" data-i18n="timeline.stats.forcedDisplacement">Forced Displacement</div>
                     </div>
                 </div>
 
                 <!-- Period Comparison (shown in "both" mode) -->
                 <div class="period-comparison" id="periodComparison" style="display: none;">
-                    <div class="comparison-header">
+                    <div class="comparison-header" data-i18n="timeline.comparison.title">
                         📊 Historical vs Current Comparison
                     </div>
                     <div class="comparison-grid">
                         <div class="comparison-card historical">
-                            <div class="comparison-title">📜 Historical Period (1948-2023)</div>
+                            <div class="comparison-title" data-i18n="timeline.comparison.historical.title">📜 Historical Period (1948-2023)</div>
                             <div class="comparison-stats">
                                 <div class="comparison-stat">
-                                    <span>Duration:</span>
-                                    <strong>75 years</strong>
+                                    <span data-i18n="timeline.comparison.historical.duration">Duration:</span>
+                                    <strong data-i18n="timeline.comparison.historical.durationValue">75 years</strong>
                                 </div>
                                 <div class="comparison-stat">
-                                    <span>Major Events:</span>
+                                    <span data-i18n="timeline.comparison.historical.events">Major Events:</span>
                                     <strong id="compHistEvents">17</strong>
                                 </div>
                                 <div class="comparison-stat">
-                                    <span>Total Deaths:</span>
+                                    <span data-i18n="timeline.comparison.historical.deaths">Total Deaths:</span>
                                     <strong id="compHistDeaths">27,000+</strong>
                                 </div>
                                 <div class="comparison-stat">
-                                    <span>Avg Deaths/Year:</span>
+                                    <span data-i18n="timeline.comparison.historical.avgDeaths">Avg Deaths/Year:</span>
                                     <strong id="compHistAvg">360</strong>
                                 </div>
                             </div>
                         </div>
                         <div class="comparison-card current">
-                            <div class="comparison-title">🚨 Current Genocide (Oct 2023-Present)</div>
+                            <div class="comparison-title" data-i18n="timeline.comparison.current.title">🚨 Current Genocide (Oct 2023-Present)</div>
                             <div class="comparison-stats">
                                 <div class="comparison-stat">
-                                    <span>Duration:</span>
+                                    <span data-i18n="timeline.comparison.current.duration">Duration:</span>
                                     <strong id="genocideDuration">12 months</strong>
                                 </div>
                                 <div class="comparison-stat">
-                                    <span>Major Events:</span>
+                                    <span data-i18n="timeline.comparison.current.events">Major Events:</span>
                                     <strong id="compCurrEvents">10</strong>
                                 </div>
                                 <div class="comparison-stat">
-                                    <span>Total Deaths:</span>
+                                    <span data-i18n="timeline.comparison.current.deaths">Total Deaths:</span>
                                     <strong id="compCurrDeaths">61,200+</strong>
                                 </div>
                                 <div class="comparison-stat">
-                                    <span>Avg Deaths/Day:</span>
+                                    <span data-i18n="timeline.comparison.current.avgDeaths">Avg Deaths/Day:</span>
                                     <strong id="compCurrAvg">167</strong>
                                 </div>
                             </div>
@@ -607,31 +613,31 @@
 
             <!-- Event Type Legend -->
             <div class="event-type-legend">
-                <div class="legend-title">📌 Event Types</div>
+                <div class="legend-title" data-i18n="timeline.legend.title">📌 Event Types</div>
                 <div class="legend-items">
                     <div class="legend-item">
                         <span class="legend-color" style="background: #dc3545;"></span>
-                        <span>Massacres</span>
+                        <span data-i18n="timeline.legend.massacres">Massacres</span>
                     </div>
                     <div class="legend-item">
                         <span class="legend-color" style="background: #fd7e14;"></span>
-                        <span>Military Operations</span>
+                        <span data-i18n="timeline.legend.militaryOperations">Military Operations</span>
                     </div>
                     <div class="legend-item">
                         <span class="legend-color" style="background: #6f42c1;"></span>
-                        <span>Forced Displacement</span>
+                        <span data-i18n="timeline.legend.forcedDisplacement">Forced Displacement</span>
                     </div>
                     <div class="legend-item">
                         <span class="legend-color" style="background: #e83e8c;"></span>
-                        <span>Hospital Attacks</span>
+                        <span data-i18n="timeline.legend.hospitalAttacks">Hospital Attacks</span>
                     </div>
                     <div class="legend-item">
                         <span class="legend-color" style="background: #6c757d;"></span>
-                        <span>Starvation Warfare</span>
+                        <span data-i18n="timeline.legend.starvationWarfare">Starvation Warfare</span>
                     </div>
                     <div class="legend-item">
                         <span class="legend-color" style="background: #0d6efd;"></span>
-                        <span>Protest Suppression</span>
+                        <span data-i18n="timeline.legend.protestSuppression">Protest Suppression</span>
                     </div>
                 </div>
             </div>
@@ -641,80 +647,80 @@
                 <div class="filter-grid">
                     <!-- Date Range Filter -->
                     <div class="filter-group">
-                        <label class="filter-label">
+                        <label class="filter-label" data-i18n="timeline.filters.dateRange">
                             📅 Date Range
                         </label>
                         <select id="dateRangeFilter" class="filter-select">
-                            <option value="">All Dates</option>
-                            <option value="nakba">Nakba (1948)</option>
-                            <option value="first_intifada">First Intifada (1987-1993)</option>
-                            <option value="second_intifada">Second Intifada (2000-2005)</option>
-                            <option value="gaza_operations">Gaza Operations (2008-2021)</option>
-                            <option value="current_genocide">Current Genocide (2023-Present)</option>
+                            <option value="" data-i18n="timeline.filters.allDates">All Dates</option>
+                            <option value="nakba" data-i18n="timeline.filters.nakba">Nakba (1948)</option>
+                            <option value="first_intifada" data-i18n="timeline.filters.firstIntifada">First Intifada (1987-1993)</option>
+                            <option value="second_intifada" data-i18n="timeline.filters.secondIntifada">Second Intifada (2000-2005)</option>
+                            <option value="gaza_operations" data-i18n="timeline.filters.gazaOperations">Gaza Operations (2008-2021)</option>
+                            <option value="current_genocide" data-i18n="timeline.filters.currentGenocide">Current Genocide (2023-Present)</option>
                         </select>
                     </div>
 
                     <!-- Event Type Filter -->
                     <div class="filter-group">
-                        <label class="filter-label">
+                        <label class="filter-label" data-i18n="timeline.filters.eventType">
                             🏷️ Event Type
                         </label>
                         <select id="eventTypeFilter" class="filter-select">
-                            <option value="">All Types</option>
-                            <option value="massacre">Massacres</option>
-                            <option value="military_operation">Military Operations</option>
-                            <option value="forced_displacement">Forced Displacement</option>
-                            <option value="hospital_attack">Hospital Attacks</option>
-                            <option value="protected_site_attack">Protected Site Attacks</option>
-                            <option value="starvation_warfare">Starvation Warfare</option>
-                            <option value="protest_suppression">Protest Suppression</option>
+                            <option value="" data-i18n="timeline.filters.allTypes">All Types</option>
+                            <option value="massacre" data-i18n="timeline.filters.massacres">Massacres</option>
+                            <option value="military_operation" data-i18n="timeline.filters.militaryOperations">Military Operations</option>
+                            <option value="forced_displacement" data-i18n="timeline.filters.forcedDisplacement">Forced Displacement</option>
+                            <option value="hospital_attack" data-i18n="timeline.filters.hospitalAttacks">Hospital Attacks</option>
+                            <option value="protected_site_attack" data-i18n="timeline.filters.protectedSiteAttacks">Protected Site Attacks</option>
+                            <option value="starvation_warfare" data-i18n="timeline.filters.starvationWarfare">Starvation Warfare</option>
+                            <option value="protest_suppression" data-i18n="timeline.filters.protestSuppression">Protest Suppression</option>
                         </select>
                     </div>
 
                     <!-- Search Filter -->
                     <div class="filter-group">
-                        <label class="filter-label">
+                        <label class="filter-label" data-i18n="timeline.filters.search">
                             🔍 Search
                         </label>
-                        <input type="text" id="searchFilter" class="search-input" placeholder="Search events, locations...">
+                        <input type="text" id="searchFilter" class="search-input" data-i18n-placeholder="timeline.filters.searchPlaceholder" placeholder="Search events, locations...">
                     </div>
 
                     <!-- Verification Status -->
                     <div class="filter-group">
-                        <label class="filter-label">
+                        <label class="filter-label" data-i18n="timeline.filters.verification">
                             ✅ Verification
                         </label>
                         <select id="verificationFilter" class="filter-select">
-                            <option value="">All Statuses</option>
-                            <option value="verified">Verified</option>
-                            <option value="disputed">Disputed</option>
-                            <option value="under_investigation">Under Investigation</option>
+                            <option value="" data-i18n="timeline.filters.allStatuses">All Statuses</option>
+                            <option value="verified" data-i18n="timeline.filters.verified">Verified</option>
+                            <option value="disputed" data-i18n="timeline.filters.disputed">Disputed</option>
+                            <option value="under_investigation" data-i18n="timeline.filters.underInvestigation">Under Investigation</option>
                         </select>
                     </div>
                 </div>
 
                 <!-- Casualty Scale Chips -->
                 <div class="filter-group" style="margin-top: 1rem;">
-                    <label class="filter-label">
+                    <label class="filter-label" data-i18n="timeline.filters.casualtyScale">
                         📊 Casualty Scale
                     </label>
                     <div class="casualty-scale-filters">
-                        <button class="scale-chip active" data-scale="all">All Scales</button>
-                        <button class="scale-chip" data-scale="low">1-50 casualties</button>
-                        <button class="scale-chip" data-scale="medium">51-500 casualties</button>
-                        <button class="scale-chip" data-scale="high">501-2000 casualties</button>
-                        <button class="scale-chip" data-scale="massive">2000+ casualties</button>
+                        <button class="scale-chip active" data-scale="all" data-i18n="timeline.filters.allScales">All Scales</button>
+                        <button class="scale-chip" data-scale="low" data-i18n="timeline.filters.lowCasualties">1-50 casualties</button>
+                        <button class="scale-chip" data-scale="medium" data-i18n="timeline.filters.mediumCasualties">51-500 casualties</button>
+                        <button class="scale-chip" data-scale="high" data-i18n="timeline.filters.highCasualties">501-2000 casualties</button>
+                        <button class="scale-chip" data-scale="massive" data-i18n="timeline.filters.massiveCasualties">2000+ casualties</button>
                     </div>
                 </div>
 
                 <div style="margin-top: 1rem; text-align: right;">
-                    <button id="clearAllFilters" class="clear-btn">🔄 Clear All Filters</button>
+                    <button id="clearAllFilters" class="clear-btn" data-i18n="timeline.filters.clearAll">🔄 Clear All Filters</button>
                 </div>
             </div>
 
             <!-- Loading Status -->
             <div id="timelineStatus" class="container" style="display: none;">
-                <div class="csv-status" id="timelineStatusContent">
+                <div class="csv-status" id="timelineStatusContent" data-i18n="timeline.loading.status">
                     📊 Loading timeline data...
                 </div>
             </div>
@@ -727,8 +733,8 @@
                     <div id="timeline-embed" class="timeline">
                         <div class="timeline-loading">
                             <div class="loading-spinner"></div>
-                            <div class="loading-message">Loading Historical Timeline...</div>
-                            <div class="loading-detail">Fetching massacres data from 1948-2023...</div>
+                            <div class="loading-message" data-i18n="timeline.loading.message">Loading Historical Timeline...</div>
+                            <div class="loading-detail" data-i18n="timeline.loading.detail">Fetching massacres data from 1948-2023...</div>
                         </div>
                     </div>
                 </div>
@@ -741,12 +747,12 @@
                 <div class="map-container">
                     <div id="map" class="map"></div>
                     <div class="map-legend">
-                        <h4>Incident Types</h4>
-                        <div class="legend-item"><span class="marker" style="background: #dc3545;"></span> Massacres</div>
-                        <div class="legend-item"><span class="marker" style="background: #fd7e14;"></span> Military Operations</div>
-                        <div class="legend-item"><span class="marker" style="background: #6f42c1;"></span> Forced Displacement</div>
-                        <div class="legend-item"><span class="marker" style="background: #e83e8c;"></span> Hospital Attacks</div>
-                        <div class="legend-item"><span class="marker" style="background: #6c757d;"></span> Starvation Warfare</div>
+                        <h4 data-i18n="timeline.map.legendTitle">Incident Types</h4>
+                        <div class="legend-item"><span class="marker" style="background: #dc3545;"></span> <span data-i18n="timeline.map.massacres">Massacres</span></div>
+                        <div class="legend-item"><span class="marker" style="background: #fd7e14;"></span> <span data-i18n="timeline.map.militaryOperations">Military Operations</span></div>
+                        <div class="legend-item"><span class="marker" style="background: #6f42c1;"></span> <span data-i18n="timeline.map.forcedDisplacement">Forced Displacement</span></div>
+                        <div class="legend-item"><span class="marker" style="background: #e83e8c;"></span> <span data-i18n="timeline.map.hospitalAttacks">Hospital Attacks</span></div>
+                        <div class="legend-item"><span class="marker" style="background: #6c757d;"></span> <span data-i18n="timeline.map.starvationWarfare">Starvation Warfare</span></div>
                     </div>
                 </div>
             </div>
@@ -756,15 +762,15 @@
         <section class="view-section" id="listView">
             <div class="container">
                 <div class="list-header">
-                    <h2>Event Documentation</h2>
+                    <h2 data-i18n="timeline.list.title">Event Documentation</h2>
                     <div class="sort-controls">
-                        <label for="sortSelect">Sort by:</label>
+                        <label for="sortSelect" data-i18n="timeline.list.sortBy">Sort by:</label>
                         <select id="sortSelect" class="sort-select">
-                            <option value="date-desc">Date (Newest First)</option>
-                            <option value="date-asc">Date (Oldest First)</option>
-                            <option value="deaths-desc">Deaths (Highest First)</option>
-                            <option value="type">Event Type</option>
-                            <option value="location">Location</option>
+                            <option value="date-desc" data-i18n="timeline.list.sortDateDesc">Date (Newest First)</option>
+                            <option value="date-asc" data-i18n="timeline.list.sortDateAsc">Date (Oldest First)</option>
+                            <option value="deaths-desc" data-i18n="timeline.list.sortDeathsDesc">Deaths (Highest First)</option>
+                            <option value="type" data-i18n="timeline.list.sortType">Event Type</option>
+                            <option value="location" data-i18n="timeline.list.sortLocation">Location</option>
                         </select>
                     </div>
                 </div>
@@ -773,13 +779,13 @@
                 </div>
                 <div class="loading" id="loading">
                     <div class="loading-spinner"></div>
-                    <span>Loading events...</span>
+                    <span data-i18n="timeline.list.loading">Loading events...</span>
                 </div>
                 <div class="no-results" id="noResults" style="display: none;">
                     <div class="no-results-icon">🔍</div>
-                    <h3>No events found</h3>
-                    <p>Try adjusting your filters or search criteria.</p>
-                    <button onclick="window.dualTimeline.clearAllFilters()" class="clear-all-btn">Clear All Filters</button>
+                    <h3 data-i18n="timeline.list.noResults">No events found</h3>
+                    <p data-i18n="timeline.list.adjustFilters">Try adjusting your filters or search criteria.</p>
+                    <button onclick="window.dualTimeline.clearAllFilters()" class="clear-all-btn" data-i18n="timeline.list.clearAllFilters">Clear All Filters</button>
                 </div>
             </div>
         </section>
@@ -789,52 +795,52 @@
     <div class="modal" id="incidentModal">
         <div class="modal-content">
             <div class="modal-header">
-                <h2 id="modalTitle">Event Details</h2>
+                <h2 id="modalTitle" data-i18n="timeline.modal.title">Event Details</h2>
                 <button class="modal-close" aria-label="Close modal">&times;</button>
             </div>
             <div class="modal-body">
                 <div class="incident-details">
                     <div class="detail-section">
-                        <h4>📋 Basic Information</h4>
+                        <h4 data-i18n="timeline.modal.basicInfo">📋 Basic Information</h4>
                         <div class="detail-grid">
                             <div class="detail-item">
-                                <strong>📅 Date:</strong> <span id="modalDate"></span>
+                                <strong data-i18n="timeline.modal.date">📅 Date:</strong> <span id="modalDate"></span>
                             </div>
                             <div class="detail-item">
-                                <strong>📍 Location:</strong> <span id="modalLocation"></span>
+                                <strong data-i18n="timeline.modal.location">📍 Location:</strong> <span id="modalLocation"></span>
                             </div>
                             <div class="detail-item">
-                                <strong>🏷️ Event Type:</strong> <span id="modalType"></span>
+                                <strong data-i18n="timeline.modal.eventType">🏷️ Event Type:</strong> <span id="modalType"></span>
                             </div>
                             <div class="detail-item">
-                                <strong>✅ Verification:</strong> <span id="modalVerification"></span>
+                                <strong data-i18n="timeline.modal.verification">✅ Verification:</strong> <span id="modalVerification"></span>
                             </div>
                         </div>
                     </div>
 
                     <div class="detail-section">
-                        <h4>📄 Summary</h4>
+                        <h4 data-i18n="timeline.modal.summary">📄 Summary</h4>
                         <p id="modalSummary"></p>
                     </div>
 
                     <div class="detail-section" id="modalCasualtiesSection">
-                        <h4>💥 Casualties & Impact</h4>
+                        <h4 data-i18n="timeline.modal.casualties">💥 Casualties & Impact</h4>
                         <div id="modalCasualties" class="casualties-display"></div>
                     </div>
 
                     <div class="detail-section" id="modalWarCrimesSection">
-                        <h4>⚖️ War Crimes Documented</h4>
+                        <h4 data-i18n="timeline.modal.warCrimes">⚖️ War Crimes Documented</h4>
                         <div id="modalWarCrimes" class="war-crimes-list"></div>
                     </div>
 
                     <div class="detail-section">
-                        <h4>📰 Verified Sources</h4>
+                        <h4 data-i18n="timeline.modal.sources">📰 Verified Sources</h4>
                         <div id="modalSources" class="sources-container"></div>
                     </div>
 
                     <div class="detail-section">
                         <div class="modal-actions">
-                            <a id="modalDetailPage" href="#" class="detail-page-btn" target="_blank">
+                            <a id="modalDetailPage" href="#" class="detail-page-btn" target="_blank" data-i18n="timeline.modal.viewFullDoc">
                                 📖 View Full Documentation →
                             </a>
                         </div>
@@ -844,6 +850,9 @@
         </div>
     </div>
 
+    <!-- Translation System Script -->
+    <script src="js/translation-system.js"></script>
+
     <!-- Footer -->
     <div id="footer-placeholder"></div>
     <script>
@@ -851,6 +860,28 @@
             .then(response => response.text())
             .then(html => {
                 document.getElementById('footer-placeholder').innerHTML = html;
+
+                // Initialize translation system after footer loads
+                if (window.TranslationSystem && typeof window.TranslationSystem.init === 'function') {
+                    window.TranslationSystem.init();
+                }
+            })
+            .catch(error => {
+                console.error('Error loading footer:', error);
+                document.getElementById('footer-placeholder').innerHTML = `
+                    <footer class="universal-footer">
+                        <div class="footer-container">
+                            <div class="footer-bottom">
+                                <div class="footer-copyright" data-i18n="common.footer.copyright">
+                                    © 2024 Gaza Crisis Documentation Platform. All rights reserved.
+                                </div>
+                                <div class="footer-meta">
+                                    <span class="footer-update-time">Last Updated: October 11, 2025</span>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                `;
             });
     </script>
 
