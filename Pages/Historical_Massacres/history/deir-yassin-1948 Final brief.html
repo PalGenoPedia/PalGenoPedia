@@ -1,0 +1,1401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deir Yassin Massacre (1948) - Complete Documentation | Gaza Crisis Documentation</title>
+    <meta name="description" content="Comprehensive documentation of the Deir Yassin Massacre of April 9, 1948. Verified sources, casualty records, war crimes documentation, and historical analysis.">
+    <meta name="keywords" content="Deir Yassin, 1948, Nakba, Palestine, massacre, war crimes, Irgun, Lehi, historical documentation">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="../../shared-styles.css">
+    <link rel="stylesheet" href="../../unified-crisis-styles.css">
+    
+    <style>
+        /* Mobile-First Event Documentation Styles */
+        .event-documentation {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        /* Compact Hero Section */
+        .event-hero {
+            background: linear-gradient(135deg, rgba(220, 53, 69, 0.95), rgba(139, 0, 0, 0.95));
+            color: white;
+            padding: 2rem 1.5rem;
+            border-radius: var(--border-radius-lg);
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .event-category {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.35rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.75rem;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .event-title {
+            font-size: 2rem;
+            font-weight: 900;
+            margin: 0 0 0.75rem 0;
+            line-height: 1.2;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .event-subtitle {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            opacity: 0.95;
+            font-weight: 300;
+            line-height: 1.4;
+        }
+
+        .event-meta-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.75rem;
+        }
+
+        .meta-card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 0.75rem;
+            border-radius: var(--border-radius);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .meta-label {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            opacity: 0.9;
+            margin-bottom: 0.25rem;
+            font-weight: 600;
+        }
+
+        .meta-value {
+            font-size: 1.3rem;
+            font-weight: 900;
+            line-height: 1;
+        }
+
+        .meta-detail {
+            font-size: 0.75rem;
+            opacity: 0.9;
+            margin-top: 0.25rem;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            background: var(--bg-secondary);
+            padding: 0.75rem 1rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            font-size: 0.85rem;
+        }
+
+        .breadcrumb a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: var(--transition-base);
+        }
+
+        .breadcrumb a:hover {
+            color: var(--accent-color);
+        }
+
+        .breadcrumb-separator {
+            color: var(--text-muted);
+        }
+
+        /* Compact Content Sections */
+        .content-section {
+            background: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .section-icon {
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .section-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin: 0;
+        }
+
+        .section-content {
+            color: var(--text-primary);
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+
+        .section-content p {
+            margin-bottom: 1rem;
+        }
+
+        .section-content h3 {
+            color: var(--text-primary);
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+
+        .section-content h4 {
+            color: var(--text-primary);
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin: 1.25rem 0 0.5rem 0;
+        }
+
+        /* Compact Casualties */
+        .casualties-breakdown {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 0.75rem;
+            margin: 1.5rem 0;
+        }
+
+        .casualty-card {
+            background: var(--bg-secondary);
+            border: 2px solid var(--border-color);
+            border-radius: var(--border-radius);
+            padding: 1rem;
+            text-align: center;
+            transition: var(--transition-base);
+        }
+
+        .casualty-card:hover {
+            border-color: var(--accent-color);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .casualty-card.deaths {
+            border-left: 4px solid #dc3545;
+        }
+
+        .casualty-card.injured {
+            border-left: 4px solid #ffc107;
+        }
+
+        .casualty-card.displaced {
+            border-left: 4px solid #6f42c1;
+        }
+
+        .casualty-number {
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--accent-color);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .casualty-label {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+            font-weight: 600;
+        }
+
+        .casualty-detail {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            margin-top: 0.5rem;
+            line-height: 1.3;
+        }
+
+        /* Compact War Crimes List with Source Links */
+        .war-crimes-list {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0;
+        }
+
+        .war-crimes-list li {
+            background: rgba(220, 53, 69, 0.05);
+            border-left: 3px solid #dc3545;
+            padding: 0.75rem;
+            margin-bottom: 0.75rem;
+            border-radius: var(--border-radius-sm);
+            transition: var(--transition-base);
+        }
+
+        .war-crimes-list li:hover {
+            background: rgba(220, 53, 69, 0.1);
+        }
+
+        .war-crime-title {
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.35rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .war-crime-description {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            line-height: 1.5;
+        }
+
+        .source-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.8rem;
+            margin-top: 0.5rem;
+            transition: var(--transition-base);
+        }
+
+        .source-link:hover {
+            color: var(--accent-color);
+            gap: 0.5rem;
+        }
+
+        /* Compact Timeline */
+        .event-timeline {
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .event-timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--accent-color), var(--border-color));
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-bottom: 1.25rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -1.65rem;
+            top: 0.2rem;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--accent-color);
+            border: 2px solid var(--surface-color);
+            box-shadow: 0 0 0 2px var(--accent-color);
+        }
+
+        .timeline-time {
+            font-weight: 700;
+            color: var(--accent-color);
+            margin-bottom: 0.35rem;
+            font-size: 0.85rem;
+        }
+
+        .timeline-content {
+            background: var(--bg-secondary);
+            padding: 0.75rem;
+            border-radius: var(--border-radius-sm);
+            border: 1px solid var(--border-light);
+            font-size: 0.9rem;
+        }
+
+        /* Compact Testimonies with Source Links */
+        .testimony-card {
+            background: var(--bg-secondary);
+            border-left: 3px solid var(--info-color);
+            padding: 1rem;
+            border-radius: var(--border-radius-sm);
+            margin-bottom: 1rem;
+        }
+
+        .testimony-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .witness-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--info-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+
+        .witness-info {
+            flex: 1;
+        }
+
+        .witness-name {
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.15rem;
+            font-size: 0.9rem;
+        }
+
+        .witness-role {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+        }
+
+        .testimony-text {
+            font-style: italic;
+            line-height: 1.6;
+            color: var(--text-primary);
+            padding: 0.75rem;
+            background: var(--surface-color);
+            border-radius: var(--border-radius-sm);
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .testimony-source {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+        }
+
+        /* Compact Sources Section */
+        .sources-compact {
+            display: grid;
+            gap: 0.75rem;
+        }
+
+        .source-item-compact {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius-sm);
+            padding: 1rem;
+            transition: var(--transition-base);
+        }
+
+        .source-item-compact:hover {
+            border-color: var(--secondary-color);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .source-header-compact {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .source-icon-compact {
+            width: 35px;
+            height: 35px;
+            background: var(--secondary-color);
+            color: white;
+            border-radius: var(--border-radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+
+        .source-name-compact {
+            font-weight: 700;
+            color: var(--text-primary);
+            font-size: 0.9rem;
+            line-height: 1.2;
+        }
+
+        .source-type-compact {
+            font-size: 0.7rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+
+        .source-description-compact {
+            color: var(--text-secondary);
+            line-height: 1.5;
+            margin-bottom: 0.75rem;
+            font-size: 0.85rem;
+        }
+
+        .source-verification {
+            display: inline-block;
+            background: rgba(40, 167, 69, 0.1);
+            color: #28a745;
+            padding: 0.2rem 0.6rem;
+            border-radius: 10px;
+            font-size: 0.7rem;
+            font-weight: 600;
+        }
+
+        /* Compact Alert Boxes */
+        .alert-box {
+            padding: 1rem;
+            border-radius: var(--border-radius-sm);
+            margin: 1.5rem 0;
+            border-left: 4px solid;
+            font-size: 0.9rem;
+        }
+
+        .alert-box.warning {
+            background: rgba(255, 193, 7, 0.1);
+            border-color: #ffc107;
+        }
+
+        .alert-box.info {
+            background: rgba(23, 162, 184, 0.1);
+            border-color: #17a2b8;
+        }
+
+        .alert-box.critical {
+            background: rgba(220, 53, 69, 0.1);
+            border-color: #dc3545;
+        }
+
+        .alert-icon {
+            font-size: 1.2rem;
+            margin-right: 0.5rem;
+            vertical-align: middle;
+        }
+
+        /* Compact CTA Section - FIXED FOR MOBILE */
+        .cta-section {
+            background: linear-gradient(135deg, #2563eb, #1e40af);
+            color: #ffffff;
+            padding: 2rem 1.5rem;
+            border-radius: var(--border-radius-lg);
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .cta-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            color: #ffffff;
+        }
+
+        .cta-description {
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            opacity: 0.95;
+            color: #ffffff;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 0.75rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-btn {
+            background: #ffffff;
+            color: #2563eb;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 700;
+            transition: var(--transition-base);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            border: 2px solid #ffffff;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            background: #f0f9ff;
+        }
+
+        .cta-btn.secondary {
+            background: transparent;
+            color: #ffffff;
+            border: 2px solid #ffffff;
+        }
+
+        .cta-btn.secondary:hover {
+            background: #ffffff;
+            color: #2563eb;
+        }
+
+        /* Quick Info Box */
+        .quick-info-box {
+            background: var(--bg-secondary);
+            border: 2px solid var(--border-color);
+            border-radius: var(--border-radius);
+            padding: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .quick-info-title {
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .quick-info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.75rem;
+            font-size: 0.85rem;
+        }
+
+        .quick-info-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .info-label {
+            color: var(--text-secondary);
+            font-size: 0.75rem;
+            margin-bottom: 0.15rem;
+        }
+
+        .info-value {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        /* Desktop Responsive - REDUCED MARGINS */
+        @media (min-width: 769px) {
+            .event-documentation {
+                padding: 2rem;
+            }
+
+            .event-title {
+                font-size: 2.5rem;
+            }
+
+            .event-meta-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .casualties-breakdown {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .quick-info-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .event-documentation {
+                padding: 2.5rem 3rem;
+            }
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .event-documentation {
+                padding: 0.75rem;
+            }
+
+            .event-hero {
+                padding: 1.5rem 1rem;
+            }
+
+            .event-title {
+                font-size: 1.5rem;
+            }
+
+            .event-subtitle {
+                font-size: 0.9rem;
+            }
+
+            .event-meta-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .content-section {
+                padding: 1.25rem;
+            }
+
+            .section-title {
+                font-size: 1.15rem;
+            }
+
+            .casualties-breakdown {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .cta-btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .quick-info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .breadcrumb {
+                font-size: 0.75rem;
+                padding: 0.5rem 0.75rem;
+            }
+
+            .section-content {
+                font-size: 0.9rem;
+            }
+
+            .meta-value {
+                font-size: 1.1rem;
+            }
+
+            .casualty-number {
+                font-size: 1.75rem;
+            }
+
+            .cta-title {
+                font-size: 1.25rem;
+            }
+
+            .cta-description {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            .breadcrumb,
+            .cta-section {
+                display: none;
+            }
+
+            .event-hero {
+                background: #dc3545;
+                -webkit-print-color-adjust: exact;
+                color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">
+                <a href="../../index.html">Gaza Crisis Documentation</a>
+            </h1>
+            <nav class="nav">
+                <a href="../../war-crimes-stats.html" class="nav-btn">⚖️ War Crimes</a>
+                <a href="../../hunger-crisis-stats.html" class="nav-btn">🍽️ Hunger Crisis</a>
+                <a href="../../major-incidents-timeline.html" class="nav-btn active">📋 Timeline</a>
+            </nav>
+            <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="event-documentation">
+        <!-- Breadcrumb Navigation -->
+        <div class="breadcrumb">
+            <a href="../../index.html">🏠 Home</a>
+            <span class="breadcrumb-separator">→</span>
+            <a href="../../major-incidents-timeline.html">📋 Timeline</a>
+            <span class="breadcrumb-separator">→</span>
+            <a href="../../major-incidents-timeline.html?mode=historical">📜 Historical</a>
+            <span class="breadcrumb-separator">→</span>
+            <span>Deir Yassin 1948</span>
+        </div>
+
+        <!-- Compact Hero Section -->
+        <div class="event-hero">
+            <div class="event-category">
+                📜 HISTORICAL MASSACRE • NAKBA 1948
+            </div>
+            <h1 class="event-title">Deir Yassin Massacre</h1>
+            <p class="event-subtitle">
+                The massacre that shocked the world and became a symbol of the Palestinian Nakba
+            </p>
+            
+            <div class="event-meta-grid">
+                <div class="meta-card">
+                    <div class="meta-label">📅 Date</div>
+                    <div class="meta-value">April 9, 1948</div>
+                </div>
+                <div class="meta-card">
+                    <div class="meta-label">📍 Location</div>
+                    <div class="meta-value">Deir Yassin</div>
+                </div>
+                <div class="meta-card">
+                    <div class="meta-label">💀 Deaths</div>
+                    <div class="meta-value">107</div>
+                    <div class="meta-detail">Civilians</div>
+                </div>
+                <div class="meta-card">
+                    <div class="meta-label">🏠 Displaced</div>
+                    <div class="meta-value">600</div>
+                    <div class="meta-detail">Full village</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Info -->
+        <div class="quick-info-box">
+            <div class="quick-info-title">⚡ Quick Facts</div>
+            <div class="quick-info-grid">
+                <div class="quick-info-item">
+                    <span class="info-label">Perpetrators</span>
+                    <span class="info-value">Irgun & Lehi (Zionist militias)</span>
+                </div>
+                <div class="quick-info-item">
+                    <span class="info-label">Verification</span>
+                    <span class="info-value">✅ Verified by UN, Red Cross, British archives</span>
+                </div>
+                <div class="quick-info-item">
+                    <span class="info-label">Injured</span>
+                    <span class="info-value">50+ documented survivors</span>
+                </div>
+                <div class="quick-info-item">
+                    <span class="info-label">Classification</span>
+                    <span class="info-value">War Crime, Crimes Against Humanity</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Executive Summary -->
+        <section class="content-section">
+            <div class="section-header">
+                <span class="section-icon">📋</span>
+                <h2 class="section-title">Executive Summary</h2>
+            </div>
+            <div class="section-content">
+                <div class="alert-box critical">
+                    <span class="alert-icon">⚠️</span>
+                    <strong>War Crime Classification:</strong> Deliberate killing of civilians, sexual violence, mutilation, and forced displacement.
+                </div>
+
+                <p>
+                    On April 9, 1948, approximately 120 fighters from Irgun and Lehi attacked the Palestinian village of Deir Yassin near Jerusalem, killing at least 107 villagers including women and children. The massacre involved documented sexual violence, mutilation of bodies, and systematic destruction of homes.
+                </p>
+
+                <p>
+                    The attack occurred despite Deir Yassin having signed a non-aggression pact with neighboring Jewish communities. The massacre became one of the most notorious events of the 1948 Palestine war (Nakba), triggering mass panic and contributing significantly to the Palestinian exodus.
+                </p>
+
+                <p>
+                    Despite initial attempts to deny the atrocities, extensive documentation from Red Cross workers, British officials, and survivors confirmed the scale of violence. No perpetrators were prosecuted, and Irgun leader Menachem Begin later became Prime Minister of Israel.
+                </p>
+            </div>
+        </section>
+
+        <!-- Casualties Documentation -->
+        <section class="content-section">
+            <div class="section-header">
+                <span class="section-icon">💀</span>
+                <h2 class="section-title">Casualties</h2>
+            </div>
+            <div class="section-content">
+                <div class="casualties-breakdown">
+                    <div class="casualty-card deaths">
+                        <div class="casualty-number">107</div>
+                        <div class="casualty-label">Deaths</div>
+                        <div class="casualty-detail">35 women, 52 children, 20 elderly</div>
+                    </div>
+
+                    <div class="casualty-card injured">
+                        <div class="casualty-number">50+</div>
+                        <div class="casualty-label">Injured</div>
+                        <div class="casualty-detail">Severe trauma, gunshot wounds</div>
+                    </div>
+
+                    <div class="casualty-card displaced">
+                        <div class="casualty-number">600</div>
+                        <div class="casualty-label">Displaced</div>
+                        <div class="casualty-detail">Entire village population</div>
+                    </div>
+                </div>
+
+                <div class="alert-box info">
+                    <span class="alert-icon">ℹ️</span>
+                    <strong>Data Sources:</strong> Red Cross documentation, British Mandate records, survivor testimonies, and historical research. Some sources cite higher tolls (up to 254), but 107 is the most reliably documented figure.
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline -->
+        <section class="content-section">
+            <div class="section-header">
+                <span class="section-icon">⏱️</span>
+                <h2 class="section-title">Timeline of Events</h2>
+            </div>
+            <div class="section-content">
+                <div class="event-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-time">4:30 AM</div>
+                        <div class="timeline-content">
+                            <strong>Attack Begins:</strong> 120 Irgun and Lehi fighters approach village under darkness. Loudspeaker warnings inaudible and confusing.
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-time">5:00 - 8:00 AM</div>
+                        <div class="timeline-content">
+                            <strong>Heavy Fighting:</strong> Village defenders resist with limited weapons. Attackers use explosives and grenades. Many shot while fleeing.
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-time">8:00 - 11:00 AM</div>
+                        <div class="timeline-content">
+                            <strong>Haganah Arrives:</strong> Haganah unit assists attackers. Village falls. Systematic house-to-house operations begin.
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-time">Late Morning - Afternoon</div>
+                        <div class="timeline-content">
+                            <strong>Atrocities:</strong> Mass executions, sexual violence, mutilation documented. Houses looted and destroyed.
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-time">Evening</div>
+                        <div class="timeline-content">
+                            <strong>Aftermath:</strong> Survivors paraded through Jerusalem. Bodies left for days before disposal. Red Cross arrives.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Documented Atrocities -->
+        <section class="content-section">
+            <div class="section-header">
+                <span class="section-icon">⚠️</span>
+                <h2 class="section-title">Documented Atrocities</h2>
+            </div>
+            <div class="section-content">
+                <div class="alert-box warning">
+                    <span class="alert-icon">⚠️</span>
+                    <strong>Content Warning:</strong> Graphic descriptions of violence documented for historical record.
+                </div>
+
+                <ul class="war-crimes-list">
+                    <li>
+                        <div class="war-crime-title">
+                            <span>💀</span>
+                            Mass Execution of Civilians
+                        </div>
+                        <div class="war-crime-description">
+                            Villagers lined up against walls and executed by firing squad. Bodies found throughout village riddled with bullets.
+                        </div>
+                        <a href="https://www.icrc.org/en/doc/resources/documents/misc/palestine-history.htm" class="source-link" target="_blank" rel="noopener">
+                            📄 Red Cross Report 1948 →
+                        </a>
+                    </li>
+                    <li>
+                        <div class="war-crime-title">
+                            <span>👶</span>
+                            Killing of Children and Infants
+                        </div>
+                        <div class="war-crime-description">
+                            Children killed alongside parents. Survivor Fahimi Zidan (age 12): "They started shooting at us... most of us children were saved because we hid behind our parents."
+                        </div>
+                        <a href="https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/palestine/" class="source-link" target="_blank" rel="noopener">
+                            📄 British Police Testimony (April 13, 1948) →
+                        </a>
+                    </li>
+                    <li>
+                        <div class="war-crime-title">
+                            <span>🚺</span>
+                            Sexual Violence Against Women
+                        </div>
+                        <div class="war-crime-description">
+                            Multiple survivor accounts documented rape and sexual violence. British Assistant Inspector Richard Catling: "Many sexual atrocities were committed... Many young school girls were raped and later slaughtered."
+                        </div>
+                        <a href="https://www.nationalarchives.gov.uk/" class="source-link" target="_blank" rel="noopener">
+                            📄 British CID Secret Report (Declassified) →
+                        </a>
+                    </li>
+                    <li>
+                        <div class="war-crime-title">
+                            <span>⚰️</span>
+                            Mutilation of Bodies
+                        </div>
+                        <div class="war-crime-description">
+                            Red Cross representative Jacques de Reynier and Haganah officer Meir Pa'il documented mutilated bodies, including "cut off genitalia and women's crushed stomachs."
+                        </div>
+                        <a href="https://www.icrc.org/" class="source-link" target="_blank" rel="noopener">
+                            📄 ICRC Documentation →
+                        </a>
+                    </li>
+                    <li>
+                        <div class="war-crime-title">
+                            <span>🏠</span>
+                            Destruction and Looting
+                        </div>
+                        <div class="war-crime-description">
+                            Systematic looting of homes, theft of valuables and livestock. Village later demolished; psychiatric hospital built on site.
+                        </div>
+                    </li>
+                    <li>
+                        <div class="war-crime-title">
+                            <span>🚶</span>
+                            Forced Displacement
+                        </div>
+                        <div class="war-crime-description">
+                            Survivors paraded through Jewish neighborhoods before being dumped at Damascus Gate. Public humiliation photographed and publicized.
+                        </div>
+                        <a href="https://www.palestine-studies.org/" class="source-link" target="_blank" rel="noopener">
+                            📄 Institute for Palestine Studies →
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- War Crimes (Brief) -->
+        <section class="content-section">
+            <div class="section-header">
+                <span class="section-icon">⚖️</span>
+                <h2 class="section-title">International Law Violations</h2>
+            </div>
+            <div class="section-content">
+                <p>
+                    The Deir Yassin massacre violated multiple principles of international humanitarian law:
+                </p>
+
+                <h4>Under Geneva Conventions (1949)</h4>
+                <ul style="margin: 0.5rem 0 1rem 1.5rem; line-height: 1.7;">
+                    <li><strong>Article 3:</strong> Protection of civilians - village had non-aggression pact</li>
+                    <li><strong>Article 27:</strong> Prohibition of sexual violence, torture, and cruel treatment</li>
+                </ul>
+
+                <h4>Under Hague Conventions (1899, 1907)</h4>
+                <ul style="margin: 0.5rem 0 1rem 1.5rem; line-height: 1.7;">
+                    <li><strong>Article 23:</strong> Killing defenseless persons explicitly prohibited</li>
+                    <li><strong>Article 25:</strong> Protection of undefended places violated</li>
+                </ul>
+
+                <h4>Modern Classification (Rome Statute)</h4>
+                <ul style="margin: 0.5rem 0 1rem 1.5rem; line-height: 1.7;">
+                    <li><strong>Crimes Against Humanity:</strong> Murder, rape, and inhumane acts against civilians</li>
+                    <li><strong>War Crimes:</strong> Willful killing, torture, extensive destruction not justified by military necessity</li>
+                </ul>
+
+                <div class="alert-box critical">
+                    <span class="alert-icon">⚖️</span>
+                    <strong>Legal Status:</strong> These crimes are imprescriptible (no statute of limitations) under international law. Despite documentation, no perpetrators were ever prosecuted.
+                </div>
+            </div>
+        </section>
+
+        <!-- Witness Testimonies -->
+        <section class="content-section">
+            <div class="section-header">
+                <span class="section-icon">👥</span>
+                <h2 class="section-title">Witness Testimonies</h2>
+            </div>
+            <div class="section-content">
+                <div class="alert-box warning">
+                    <span class="alert-icon">⚠️</span>
+                    <strong>Content Warning:</strong> Graphic first-hand accounts included for historical documentation.
+                </div>
+
+                <div class="testimony-card">
+                    <div class="testimony-header">
+                        <div class="witness-avatar">JR</div>
+                        <div class="witness-info">
+                            <div class="witness-name">Jacques de Reynier</div>
+                            <div class="witness-role">Red Cross Representative</div>
+                        </div>
+                    </div>
+                    <div class="testimony-text">
+                        "The first thing I saw were people running everywhere, carrying and looting all sorts of things... All that I saw were young men and elderly civilians, and about a dozen bodies. The bodies were in cold blood, among them women and children."
+                    </div>
+                    <div class="testimony-source">
+                        <strong>Source:</strong> "A Jerusalem Un Drapeau Flottait Sur La Ligne De Feu" (1950)
+                        <a href="https://www.icrc.org/" class="source-link" target="_blank" rel="noopener">
+                            📄 Read Full Report →
+                        </a>
+                    </div>
+                </div>
+
+                <div class="testimony-card">
+                    <div class="testimony-header">
+                        <div class="witness-avatar">FZ</div>
+                        <div class="witness-info">
+                            <div class="witness-name">Fahimi Zidan</div>
+                            <div class="witness-role">Child Survivor (Age 12)</div>
+                        </div>
+                    </div>
+                    <div class="testimony-text">
+                        "The Jews ordered all of us to line up against the wall. They started shooting at us. I was wounded in the side, but most of us children were saved because we hid behind our parents. The bullets hit my sister Kadri in the head, my sister Sameh in the cheek, my brother Muhammad in the chest."
+                    </div>
+                    <div class="testimony-source">
+                        <strong>Source:</strong> British Palestine Police, April 13, 1948
+                        <a href="https://www.nationalarchives.gov.uk/" class="source-link" target="_blank" rel="noopener">
+                            📄 UK National Archives →
+                        </a>
+                    </div>
+                </div>
+
+                <div class="testimony-card">
+                    <div class="testimony-header">
+                        <div class="witness-avatar">MP</div>
+                        <div class="witness-info">
+                            <div class="witness-name">Meir Pa'il</div>
+                            <div class="witness-role">Haganah Intelligence Officer</div>
+                        </div>
+                    </div>
+                    <div class="testimony-text">
+                        "I saw cut off genitalia and women's crushed stomachs... It was direct murder. Haganah command tried to hush up the case... We had to admit there was something terrible here, a massacre."
+                    </div>
+                    <div class="testimony-source">
+                        <strong>Source:</strong> Interview with Yediot Aharonot, April 4, 1972
+                        <a href="https://www.ynetnews.com/" class="source-link" target="_blank" rel="noopener">
+                            📄 Israeli Press Archive →
+                        </a>
+                    </div>
+                </div>
+
+                <div class="testimony-card">
+                    <div class="testimony-header">
+                        <div class="witness-avatar">RC</div>
+                        <div class="witness-info">
+                            <div class="witness-name">Richard Catling</div>
+                            <div class="witness-role">British Assistant Inspector General</div>
+                        </div>
+                    </div>
+                    <div class="testimony-text">
+                        "There is no doubt that many sexual atrocities were committed by the attacking Jews. Many young school girls were raped and later slaughtered. Old women were also molested."
+                    </div>
+                    <div class="testimony-source">
+                        <strong>Source:</strong> Secret report to British High Commissioner, April 13, 1948 (Declassified)
+                        <a href="https://www.nationalarchives.gov.uk/" class="source-link" target="_blank" rel="noopener">
+                            📄 Declassified UK Archives →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Historical Impact -->
+        <section class="content-section">
+            <div class="section-header">
+                <span class="section-icon">🌍</span>
+                <h2 class="section-title">Historical Impact</h2>
+            </div>
+            <div class="section-content">
+                <h3>Immediate Impact</h3>
+                <ul style="margin: 0.5rem 0; padding-left: 1.5rem; line-height: 1.7;">
+                    <li><strong>Mass Panic:</strong> News spread rapidly, causing widespread fear among Palestinians</li>
+                    <li><strong>Mass Exodus:</strong> ~250,000 Palestinians fled their homes in following weeks (1/3 of total Nakba refugees)</li>
+                    <li><strong>Haifa Evacuation:</strong> 70,000 Palestinians fled Haifa citing Deir Yassin as reason</li>
+                    <li><strong>Strategic Impact:</strong> Depopulation facilitated Zionist military campaign</li>
+                </ul>
+
+                <h3>Long-term Significance</h3>
+                <ul style="margin: 0.5rem 0; padding-left: 1.5rem; line-height: 1.7;">
+                    <li>Central symbol in Palestinian collective memory of the Nakba</li>
+                    <li>Commemorated annually on April 9</li>
+                    <li>Referenced extensively in Palestinian literature and political discourse</li>
+                    <li>Subject of ongoing historical debate in Israel (New Historians vs. traditional narratives)</li>
+                    <li>Relevant to contemporary discussions of Palestinian right of return</li>
+                </ul>
+
+                <h3>Justice & Accountability</h3>
+                <ul style="margin: 0.5rem 0; padding-left: 1.5rem; line-height: 1.7;">
+                    <li>❌ No perpetrators ever prosecuted</li>
+                    <li>❌ Menachem Begin (Irgun leader) became Israeli Prime Minister (1977-1983)</li>
+                    <li>❌ Village site never returned; psychiatric hospital built on lands (1951)</li>
+                    <li>❌ International condemnation but no accountability mechanisms implemented</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Compact Sources -->
+        <section class="content-section">
+            <div class="section-header">
+                <span class="section-icon">📚</span>
+                <h2 class="section-title">Verified Sources</h2>
+            </div>
+            <div class="section-content">
+                <p style="margin-bottom: 1rem; font-size: 0.9rem;">
+                    Documentation based on cross-referenced primary sources from international organizations, government archives, and academic research.
+                </p>
+
+                <div class="sources-compact">
+                    <div class="source-item-compact">
+                        <div class="source-header-compact">
+                            <div class="source-icon-compact">🇺🇳</div>
+                            <div>
+                                <div class="source-name-compact">UN Security Council</div>
+                                <div class="source-type-compact">International Organization</div>
+                            </div>
+                        </div>
+                        <div class="source-description-compact">
+                            UN discussions and documents from April-May 1948 regarding Deir Yassin and broader Palestine violence.
+                        </div>
+                        <a href="https://www.un.org/securitycouncil/" class="source-link" target="_blank" rel="noopener">
+                            View UN Archives →
+                        </a>
+                        <span class="source-verification">✅ Verified</span>
+                    </div>
+
+                    <div class="source-item-compact">
+                        <div class="source-header-compact">
+                            <div class="source-icon-compact">🏥</div>
+                            <div>
+                                <div class="source-name-compact">International Red Cross (ICRC)</div>
+                                <div class="source-type-compact">Humanitarian Organization</div>
+                            </div>
+                        </div>
+                        <div class="source-description-compact">
+                            First-hand reports by Jacques de Reynier who visited April 10-11, 1948. Detailed casualty documentation and eyewitness accounts.
+                        </div>
+                        <a href="https://www.icrc.org/" class="source-link" target="_blank" rel="noopener">
+                            ICRC Website →
+                        </a>
+                        <span class="source-verification">✅ Verified</span>
+                    </div>
+
+                    <div class="source-item-compact">
+                        <div class="source-header-compact">
+                            <div class="source-icon-compact">🇬🇧</div>
+                            <div>
+                                <div class="source-name-compact">British Mandate Archives</div>
+                                <div class="source-type-compact">Government Records</div>
+                            </div>
+                        </div>
+                        <div class="source-description-compact">
+                            Declassified police investigations, witness testimonies, Richard Catling report (April 13, 1948).
+                        </div>
+                        <a href="https://www.nationalarchives.gov.uk/" class="source-link" target="_blank" rel="noopener">
+                            UK National Archives →
+                        </a>
+                        <span class="source-verification">✅ Verified</span>
+                    </div>
+
+                    <div class="source-item-compact">
+                        <div class="source-header-compact">
+                            <div class="source-icon-compact">⚖️</div>
+                            <div>
+                                <div class="source-name-compact">Human Rights Watch</div>
+                                <div class="source-type-compact">Human Rights Organization</div>
+                            </div>
+                        </div>
+                        <div class="source-description-compact">
+                            Historical analysis within context of 1948 war and international humanitarian law.
+                        </div>
+                        <a href="https://www.hrw.org/" class="source-link" target="_blank" rel="noopener">
+                            HRW Website →
+                        </a>
+                        <span class="source-verification">✅ Verified</span>
+                    </div>
+
+                    <div class="source-item-compact">
+                        <div class="source-header-compact">
+                            <div class="source-icon-compact">📖</div>
+                            <div>
+                                <div class="source-name-compact">Academic Research</div>
+                                <div class="source-type-compact">Peer-Reviewed Scholarship</div>
+                            </div>
+                        </div>
+                        <div class="source-description-compact">
+                            Key works: Benny Morris "Birth of the Palestinian Refugee Problem" (2004), Walid Khalidi "Deir Yassin" (1999), Matthew Hogan "The 1948 Massacre" (2001).
+                        </div>
+                        <span class="source-verification">✅ Verified</span>
+                    </div>
+
+                    <div class="source-item-compact">
+                        <div class="source-header-compact">
+                            <div class="source-icon-compact">🇮🇱</div>
+                            <div>
+                                <div class="source-name-compact">Israeli Military Archives</div>
+                                <div class="source-type-compact">IDF Historical Archives</div>
+                            </div>
+                        </div>
+                        <div class="source-description-compact">
+                            Declassified Haganah intelligence reports, internal communications, testimonies from officers present.
+                        </div>
+                        <a href="https://www.archives.mod.gov.il/" class="source-link" target="_blank" rel="noopener">
+                            IDF Archives →
+                        </a>
+                        <span class="source-verification">✅ Verified</span>
+                    </div>
+
+                    <div class="source-item-compact">
+                        <div class="source-header-compact">
+                            <div class="source-icon-compact">🇵🇸</div>
+                            <div>
+                                <div class="source-name-compact">Institute for Palestine Studies</div>
+                                <div class="source-type-compact">Research Institute</div>
+                            </div>
+                        </div>
+                        <div class="source-description-compact">
+                            Survivor testimonies, photographic documentation, village records, demographic data.
+                        </div>
+                        <a href="https://www.palestine-studies.org/" class="source-link" target="_blank" rel="noopener">
+                            IPS Website →
+                        </a>
+                        <span class="source-verification">✅ Verified</span>
+                    </div>
+                </div>
+
+                <div class="alert-box info" style="margin-top: 1.5rem;">
+                    <span class="alert-icon">ℹ️</span>
+                    <strong>Methodology:</strong> All sources cross-referenced. Casualty figures represent conservative estimates from most reliable documentation. Historical methodology prioritizes primary documents and eyewitness accounts.
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <div class="cta-section">
+            <h2 class="cta-title">Help Preserve Historical Memory</h2>
+            <p class="cta-description">
+                Support ongoing documentation efforts to preserve historical truth and honor victims.
+            </p>
+            <div class="cta-buttons">
+                <a href="../../major-incidents-timeline.html" class="cta-btn">
+                    📅 View Full Timeline
+                </a>
+                <a href="#" class="cta-btn secondary" onclick="window.print(); return false;">
+                    🖨️ Print/Save PDF
+                </a>
+                <a href="mailto:palgeno.pedia@gmx.de?subject=Deir Yassin Massacre - Additional Information" class="cta-btn secondary">
+                    📧 Submit Info
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+    <script>
+        fetch('../../common-styles.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('footer-placeholder').innerHTML = html;
+            })
+            .catch(error => {
+                console.error('Error loading footer:', error);
+            });
+    </script>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize theme
+        function initializeTheme() {
+            const savedTheme = localStorage.getItem('gaza-docs-theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            updateThemeIcon(savedTheme);
+        }
+
+        // Toggle theme
+        document.querySelector('.theme-toggle')?.addEventListener('click', function() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('gaza-docs-theme', newTheme);
+            updateThemeIcon(newTheme);
+        });
+
+        // Update theme icon
+        function updateThemeIcon(theme) {
+            const themeToggle = document.querySelector('.theme-toggle');
+            if (themeToggle) {
+                themeToggle.textContent = theme === 'dark' ? '☀️' : '🌙';
+            }
+        }
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Initialize on load
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeTheme();
+            
+            // Fade-in animation for content sections
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.content-section').forEach(section => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(20px)';
+                section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(section);
+            });
+
+            console.log('✅ Deir Yassin documentation page initialized');
+        });
+    </script>
+</body>
+</html>
