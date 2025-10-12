@@ -1,7 +1,7 @@
 // Dual Timeline Manager for Gaza Crisis Documentation
 // Handles both Historical Massacres (1948-2023) and Current Genocide (2023-Present)
-// Author: aliattia02
 // Last Updated: 2025-10-05
+// With multilingual support
 
 class DualTimelineManager {
     constructor() {
@@ -41,9 +41,9 @@ class DualTimelineManager {
         };
     }
 
-    // Initialize the dual timeline system
+    // Initialize the dual timeline system with multilingual support
     async init() {
-        console.log('🚀 Initializing Dual Timeline System...');
+        console.log('🚀 Initializing Dual Timeline System with multilingual support...');
         console.log('📅 Default Mode: Historical Massacres (1948-2023)');
 
         try {
@@ -67,6 +67,9 @@ class DualTimelineManager {
 
             // Initialize UI
             this.initializeUI();
+
+            // Add language change listener
+            this.initLanguageChangeListener();
 
             // Set default mode to HISTORICAL and ensure timeline view is active
             this.switchMode('historical');
@@ -185,6 +188,43 @@ class DualTimelineManager {
         ].sort((a, b) => new Date(a.date) - new Date(b.date));
 
         console.log(`📊 Combined ${this.combinedData.length} total events`);
+    }
+
+    // Listen for language change events
+    initLanguageChangeListener() {
+        document.addEventListener('languageChanged', (e) => {
+            console.log('🌐 Language changed in timeline to:', e.detail.language, 'with direction:', e.detail.direction);
+
+            // Update stats with new language
+            this.updateStatistics();
+
+            // Update comparison if visible
+            if (this.currentMode === 'both') {
+                this.updateComparison();
+            }
+
+            // Refresh current view
+            const activeView = document.querySelector('.view-section.active');
+            if (activeView) {
+                const viewId = activeView.id;
+                if (viewId === 'timelineView') {
+                    this.renderTimeline();
+                } else if (viewId === 'mapView') {
+                    this.renderMap();
+                } else if (viewId === 'listView') {
+                    this.renderListView();
+                }
+            }
+        });
+    }
+
+    // Get translated text
+    getTranslation(key, defaultText) {
+        if (window.TranslationSystem && typeof window.TranslationSystem.getTranslation === 'function') {
+            const translation = window.TranslationSystem.getTranslation(key);
+            return translation || defaultText;
+        }
+        return defaultText;
     }
 
     // Initialize UI components
@@ -599,18 +639,20 @@ class DualTimelineManager {
             return;
         }
 
+        const scrollHintText = this.getTranslation('timeline.scrollHint', 'Scroll horizontally to view');
+
         container.innerHTML = `
             <div class="horizontal-timeline">
                 <div class="timeline-header">
                     <h2>${this.getTimelineTitle()}</h2>
-                    <p>Scroll horizontally to view ${data.length} documented events</p>
+                    <p>${scrollHintText} ${data.length} ${this.getTranslation('timeline.documentedEvents', 'documented events')}</p>
                 </div>
                 <div class="timeline-scroll-container">
                     <div class="timeline-cards-wrapper">
                         ${data.map((item, index) => this.createTimelineItemHTML(item, index)).join('')}
                     </div>
                 </div>
-                <div class="scroll-hint">← Scroll to see more →</div>
+                <div class="scroll-hint">← ${this.getTranslation('timeline.scrollMore', 'Scroll to see more')} →</div>
             </div>
         `;
 
@@ -622,13 +664,13 @@ class DualTimelineManager {
     getTimelineTitle() {
         switch (this.currentMode) {
             case 'historical':
-                return 'Historical Massacres & War Crimes (1948-2023)';
+                return this.getTranslation('timeline.titles.historical', 'Historical Massacres & War Crimes (1948-2023)');
             case 'current':
-                return 'Current Genocide Documentation (Oct 2023-Present)';
+                return this.getTranslation('timeline.titles.current', 'Current Genocide Documentation (Oct 2023-Present)');
             case 'both':
-                return 'Complete Historical Timeline (1948-Present)';
+                return this.getTranslation('timeline.titles.complete', 'Complete Historical Timeline (1948-Present)');
             default:
-                return 'Gaza Crisis Timeline';
+                return this.getTranslation('timeline.titles.default', 'Gaza Crisis Timeline');
         }
     }
 
@@ -642,6 +684,8 @@ class DualTimelineManager {
         const periodBadge = item.period === 'current' ?
             '<span class="period-badge current">🚨</span>' :
             '<span class="period-badge historical">📜</span>';
+
+        const viewDetailsText = this.getTranslation('common.buttons.viewDetails', 'View');
 
         return `
             <div class="timeline-card" data-event-id="${item.id}" data-index="${index}">
@@ -662,7 +706,7 @@ class DualTimelineManager {
                     <span class="verification-mini ${item.verification_status}">
                         ${this.getVerificationIcon(item.verification_status)}
                     </span>
-                    <button class="view-details-mini" data-event-id="${item.id}">View →</button>
+                    <button class="view-details-mini" data-event-id="${item.id}">${viewDetailsText} →</button>
                 </div>
             </div>
         `;
@@ -722,7 +766,7 @@ class DualTimelineManager {
             console.error('Event not found:', eventId);
             return;
         }
-                console.log('📖 Opening modal for:', event.title);
+        console.log('📖 Opening modal for:', event.title);
 
         const modal = document.getElementById('incidentModal');
 
@@ -748,12 +792,17 @@ class DualTimelineManager {
 
         // Casualties
         const casualties = event.casualties || {};
+        const deathsLabel = this.getTranslation('casualties.deaths', 'Deaths');
+        const injuredLabel = this.getTranslation('casualties.injured', 'Injured');
+        const displacedLabel = this.getTranslation('casualties.displaced', 'Displaced');
+        const criticalLabel = this.getTranslation('casualties.critical', 'Critical');
+
         const casualtiesHTML = `
             <div class="casualties-grid">
-                ${casualties.deaths ? `<div class="casualty-stat"><strong>💀 Deaths:</strong> ${casualties.deaths.toLocaleString()}</div>` : ''}
-                ${casualties.injured ? `<div class="casualty-stat"><strong>🏥 Injured:</strong> ${casualties.injured.toLocaleString()}</div>` : ''}
-                ${casualties.forced_displacement ? `<div class="casualty-stat"><strong>🏠 Displaced:</strong> ${this.formatNumber(casualties.forced_displacement)}</div>` : ''}
-                ${casualties.critical ? `<div class="casualty-stat"><strong>⚠️ Critical:</strong> ${casualties.critical.toLocaleString()}</div>` : ''}
+                ${casualties.deaths ? `<div class="casualty-stat"><strong>💀 ${deathsLabel}:</strong> ${casualties.deaths.toLocaleString()}</div>` : ''}
+                ${casualties.injured ? `<div class="casualty-stat"><strong>🏥 ${injuredLabel}:</strong> ${casualties.injured.toLocaleString()}</div>` : ''}
+                ${casualties.forced_displacement ? `<div class="casualty-stat"><strong>🏠 ${displacedLabel}:</strong> ${this.formatNumber(casualties.forced_displacement)}</div>` : ''}
+                ${casualties.critical ? `<div class="casualty-stat"><strong>⚠️ ${criticalLabel}:</strong> ${casualties.critical.toLocaleString()}</div>` : ''}
             </div>
         `;
         const modalCasualties = document.getElementById('modalCasualties');
@@ -775,13 +824,14 @@ class DualTimelineManager {
         }
 
         // Sources
+        const noSourcesText = this.getTranslation('modal.noSources', 'No sources available');
         const sourcesHTML = event.sources && event.sources.length > 0 ?
             event.sources.map(source => `
                 <div class="source-item">
                     📰 ${this.escapeHtml(source)}
                 </div>
             `).join('') :
-            '<p>No sources available</p>';
+            `<p>${noSourcesText}</p>`;
         const modalSources = document.getElementById('modalSources');
         if (modalSources) modalSources.innerHTML = sourcesHTML;
 
@@ -850,15 +900,20 @@ class DualTimelineManager {
                 { icon }
             );
 
+            const dateLabel = this.getTranslation('modal.date', 'Date');
+            const locationLabel = this.getTranslation('modal.location', 'Location');
+            const deathsLabel = this.getTranslation('casualties.deaths', 'Deaths');
+            const viewDetailsText = this.getTranslation('common.buttons.viewDetails', 'View Details');
+
             const popupContent = `
                 <div class="map-popup">
                     <h3>${this.escapeHtml(event.title)}</h3>
-                    <p><strong>📅 Date:</strong> ${this.formatDate(event.date)}</p>
-                    <p><strong>📍 Location:</strong> ${this.escapeHtml(event.location.name)}</p>
-                    <p><strong>💀 Deaths:</strong> ${(event.casualties?.deaths || 0).toLocaleString()}</p>
+                    <p><strong>📅 ${dateLabel}:</strong> ${this.formatDate(event.date)}</p>
+                    <p><strong>📍 ${locationLabel}:</strong> ${this.escapeHtml(event.location.name)}</p>
+                    <p><strong>💀 ${deathsLabel}:</strong> ${(event.casualties?.deaths || 0).toLocaleString()}</p>
                     <p class="popup-summary">${this.escapeHtml(this.truncate(event.brief_summary, 100))}</p>
                     <button onclick="window.dualTimeline.showEventModal('${event.id}')" class="popup-details-btn">
-                        View Details
+                        ${viewDetailsText}
                     </button>
                 </div>
             `;
@@ -943,6 +998,11 @@ class DualTimelineManager {
 
         const color = this.eventColors[event.event_type] || '#6c757d';
 
+        const deathsLabel = this.getTranslation('casualties.deaths', 'deaths');
+        const injuredLabel = this.getTranslation('casualties.injured', 'injured');
+        const displacedLabel = this.getTranslation('casualties.displaced', 'displaced');
+        const sourcesLabel = this.getTranslation('modal.sources', 'sources');
+
         return `
             <div class="incident-card" data-event-id="${event.id}">
                 <div class="incident-header">
@@ -963,16 +1023,16 @@ class DualTimelineManager {
                     ${this.escapeHtml(this.truncate(event.brief_summary, 150))}
                 </div>
                 <div class="incident-casualties">
-                    ${deaths > 0 ? `<div>💀 ${deaths.toLocaleString()} deaths</div>` : ''}
-                    ${injured > 0 ? `<div>🏥 ${injured.toLocaleString()} injured</div>` : ''}
-                    ${displaced > 0 ? `<div>🏠 ${this.formatNumber(displaced)} displaced</div>` : ''}
+                    ${deaths > 0 ? `<div>💀 ${deaths.toLocaleString()} ${deathsLabel}</div>` : ''}
+                    ${injured > 0 ? `<div>🏥 ${injured.toLocaleString()} ${injuredLabel}</div>` : ''}
+                    ${displaced > 0 ? `<div>🏠 ${this.formatNumber(displaced)} ${displacedLabel}</div>` : ''}
                 </div>
                 <div class="incident-footer">
                     <span class="verification-badge ${event.verification_status}">
                         ${this.getVerificationIcon(event.verification_status)} ${this.capitalizeWords(event.verification_status)}
                     </span>
                     ${event.sources && event.sources.length > 0 ? `
-                        <span class="sources-count">📰 ${event.sources.length} sources</span>
+                        <span class="sources-count">📰 ${event.sources.length} ${sourcesLabel}</span>
                     ` : ''}
                 </div>
             </div>
@@ -1321,11 +1381,17 @@ class DualTimelineManager {
         document.head.appendChild(styles);
     }
 
-    // Utility functions
+    // Format date with translation system support
     formatDate(dateString) {
         const date = new Date(dateString);
         if (isNaN(date)) return 'Unknown date';
 
+        // Use TranslationSystem's date formatter if available
+        if (window.TranslationSystem && typeof window.TranslationSystem.formatDate === 'function') {
+            return window.TranslationSystem.formatDate(dateString);
+        }
+
+        // Fallback to default formatting
         return date.toLocaleDateString('en-US', {
             year: 'numeric',
             month: 'long',
@@ -1333,10 +1399,15 @@ class DualTimelineManager {
         });
     }
 
-    // Format date in short format
+    // Format date in short format with translation support
     formatDateShort(dateString) {
         const date = new Date(dateString);
         if (isNaN(date)) return 'Unknown';
+
+        // Use TranslationSystem's date formatter if available
+        if (window.TranslationSystem && typeof window.TranslationSystem.formatDateShort === 'function') {
+            return window.TranslationSystem.formatDateShort(dateString);
+        }
 
         const month = date.toLocaleDateString('en-US', { month: 'short' });
         const day = date.getDate();
@@ -1354,7 +1425,14 @@ class DualTimelineManager {
         return '#' + ((r << 16) | (g << 8) | b).toString(16).padStart(6, '0');
     }
 
+    // Format number with translation system support
     formatNumber(num) {
+        // Use TranslationSystem's number formatter if available
+        if (window.TranslationSystem && typeof window.TranslationSystem.formatNumber === 'function') {
+            return window.TranslationSystem.formatNumber(num);
+        }
+
+        // Fallback to default formatting
         if (num >= 1000000) {
             return (num / 1000000).toFixed(1) + 'M';
         } else if (num >= 1000) {
@@ -1423,40 +1501,54 @@ class DualTimelineManager {
         };
     }
 
+    // Show loading message with translation
     showLoading(message) {
         const statusEl = document.getElementById('timelineStatusContent');
         const statusContainer = document.getElementById('timelineStatus');
 
+        // Try to get translated message
+        const translatedMessage = this.getTranslation('timeline.loading.status', `📊 ${message}`);
+
         if (statusEl && statusContainer) {
-            statusEl.textContent = `📊 ${message}`;
+            statusEl.textContent = translatedMessage;
             statusContainer.style.display = 'block';
         }
     }
 
+    // Show error with translation
     showError(message) {
         console.error(message);
+
+        // Try to get translated error text
+        const reloadText = this.getTranslation('common.buttons.reload', '🔄 Retry');
+        const errorLoadingText = this.getTranslation('timeline.loading.error', 'Error Loading Timeline');
 
         const container = document.getElementById('timeline-embed');
         if (container) {
             container.innerHTML = `
                 <div class="timeline-error">
                     <div class="error-icon">⚠️</div>
-                    <h3>Error Loading Timeline</h3>
+                    <h3>${errorLoadingText}</h3>
                     <p>${message}</p>
-                    <button onclick="location.reload()" class="retry-btn">🔄 Retry</button>
+                    <button onclick="location.reload()" class="retry-btn">${reloadText}</button>
                 </div>
             `;
         }
     }
 
+    // Get empty state HTML with translation support
     getEmptyStateHTML() {
+        const noEventsText = this.getTranslation('timeline.list.noResults', 'No Events Found');
+        const noMatchText = this.getTranslation('timeline.list.adjustFilters', 'No events match your current filters.');
+        const clearAllText = this.getTranslation('timeline.list.clearAllFilters', 'Clear All Filters');
+
         return `
             <div class="timeline-empty-state">
                 <div class="empty-icon">📅</div>
-                <h3>No Events Found</h3>
-                <p>No events match your current filters.</p>
+                <h3>${noEventsText}</h3>
+                <p>${noMatchText}</p>
                 <button onclick="window.dualTimeline.clearAllFilters()" class="clear-all-btn">
-                    🔄 Clear All Filters
+                    🔄 ${clearAllText}
                 </button>
             </div>
         `;
@@ -1509,9 +1601,6 @@ class DualTimelineManager {
         };
     }
 }
-
-
-
 
 // Prevent timeline.js from interfering
 if (window.initializeTimeline) {
