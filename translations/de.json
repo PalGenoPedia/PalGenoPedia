@@ -1,0 +1,420 @@
+{
+  "common": {
+    "siteTitle": "Gaza-Krisen-Dokumentation",
+    "nav": {
+      "warCrimes": "⚖️ Kriegsverbrechen",
+      "hungerCrisis": "🍽️ Hungerkrise",
+      "timeline": "📋 Zeitleiste",
+      "extractTool": "🔍 Vorfälle extrahieren"
+    },
+    "footer": {
+      "copyright": "© 2024 Gaza-Krisen-Dokumentationsplattform. Alle Rechte vorbehalten.",
+      "mainSections": "🏠 Hauptbereiche",
+      "dashboard": "🏠 Krisen-Dashboard",
+      "warCrimes": "⚖️ Dokumentation von Kriegsverbrechen",
+      "hungerCrisis": "🍽️ Analyse der Hungerkrise",
+      "timeline": "📋 Zeitleiste wichtiger Vorfälle",
+      "warCrimesStats": "⚖️ Statistiken zu Kriegsverbrechen",
+      "childrenKilled": "👶 Getötete Kinder",
+      "journalistsKilled": "📰 Getötete Journalisten",
+      "medicalPersonnel": "🏥 Getötetes medizinisches Personal",
+      "totalDeaths": "💀 Gesamtzahl der Todesfälle",
+      "medicalPersonnelDetained": "🚑 Inhaftiertes medizinisches Personal",
+      "hospitalsAttacked": "🏥 Angegriffene Krankenhäuser",
+      "waterInfrastructure": "💧 Wasserinfrastruktur",
+      "housingDestroyed": "🏠 Zerstörte Wohnhäuser",
+      "hungerCrisisStats": "🍽️ Statistiken zur Hungerkrise",
+      "totalStarvationDeaths": "💀 Gesamttodesfälle durch Hunger",
+      "childrenStarvation": "👶 An Hunger gestorbene Kinder",
+      "starvationRate": "📊 Hungerrate der Bevölkerung",
+      "displacedPeople": "🏠 Vertriebene Menschen",
+      "calorieDeficit": "🥖 Tägliches Kaloriendefizit",
+      "aidBlocked": "🚫 Abgelehnte Hilfsersuchen",
+      "bakeriesDestroyed": "🏭 Zerstörte Bäckereien",
+      "agricultureDestroyed": "🌾 Zerstörtes landwirtschaftliches Land",
+      "platformInfo": "📚 Plattforminformationen",
+      "about": "ℹ️ Über diese Dokumentation",
+      "methodology": "🔬 Datenmethodik",
+      "sources": "📰 Quellen & Verifizierung",
+      "legal": "⚖️ Rechtlicher Rahmen",
+      "contact": "📧 Kontakt & Berichte",
+      "api": "🔌 Datenzugriff über API",
+      "download": "📥 Berichte herunterladen",
+      "share": "📤 Teilen & Einbetten",
+      "verifiedData": "🔍 Alle Daten durch mehrere Quellen verifiziert",
+      "legalAccountability": "⚖️ Für rechtliche Rechenschaftspflicht aufbewahrt"
+    },
+    "share": {
+      "title": "Diese Dokumentation teilen",
+      "description": "Helfen Sie, das Bewusstsein für diese Krise zu schärfen, indem Sie diese Seite in sozialen Medien teilen",
+      "loading": "Teilen-Buttons werden geladen...",
+      "copyLink": "Link kopieren",
+      "twitter": "Twitter/X",
+      "facebook": "Facebook",
+      "linkedin": "LinkedIn",
+      "whatsapp": "WhatsApp",
+      "telegram": "Telegram",
+      "reddit": "Reddit",
+      "email": "E-Mail"
+    },
+    "buttons": {
+      "viewDetails": "Details anzeigen",
+      "viewAll": "Alle anzeigen",
+      "readMore": "Weiterlesen",
+      "clearFilters": "Filter löschen",
+      "close": "×",
+      "reload": "🔄 Neu laden",
+      "reloadPage": "🔄 Seite neu laden"
+    },
+    "stats": {
+      "childrenKilled": "Getötete Kinder",
+      "journalistsKilled": "Getötete Journalisten",
+      "medicalStaffKilled": "Getötetes medizinisches Personal",
+      "totalDeaths": "Gesamtzahl der Todesfälle",
+      "injured": "Verletzte",
+      "deaths": "Todesfälle",
+      "children": "Kinder",
+      "journalists": "Journalisten",
+      "medicalStaff": "Medizinisches Personal",
+      "displaced": "Vertriebene",
+      "totalAffected": "Insgesamt betroffen",
+      "incidentsPlural": "dokumentierte Vorfälle",
+      "incidentsSingular": "dokumentierter Vorfall",
+      "lastUpdated": "Zuletzt aktualisiert:"
+    },
+    "incident": {
+      "date": "Datum",
+      "time": "Uhrzeit",
+      "location": "Ort",
+      "type": "Typ",
+      "overallImpact": "📊 Zusammenfassung der Gesamtauswirkungen:",
+      "totalAffected": "Insgesamt Betroffene",
+      "critical": "Kritischer Zustand",
+      "hospitalized": "Im Krankenhaus",
+      "deaths": "Todesfälle",
+      "affected": "betroffen",
+      "impactAssessing": "Auswirkungen werden bewertet",
+      "detailedDocumentation": "📋 Detaillierte Dokumentation",
+      "individualDocumentation": "📋 Individuelle Dokumentation (${count} Fälle):",
+      "documentedVictims": "Dokumentierte Opfer:",
+      "nameProtected": "Name geschützt",
+      "nameProtectedPrivacy": "👤 Name aus Datenschutzgründen geschützt",
+      "verified": "✓ Verifiziert",
+      "verifiedMultiple": "✅ Dieser Vorfall wurde durch mehrere Quellen verifiziert",
+      "pending": "⏳ Ausstehend",
+      "pendingVerification": "⏳ Dieser Vorfall wartet auf Überprüfung",
+      "documentedCasesPlural": "dokumentierte Fälle",
+      "documentedCasesSingular": "dokumentierter Fall",
+      "andMoreVictims": " und ${count} weitere",
+      "age": "Alter",
+      "cause": "💔 Ursache",
+      "medicalFacility": "🏥 Medizinische Einrichtung",
+      "reference": "🆔 Referenz",
+      "sources": "📰 Quellen",
+      "noSources": "Keine Quellen verfügbar",
+      "privacyNotes": "🔒 Datenschutz- und Dokumentationshinweise",
+      "privacyStatus": "Datenschutzstatus",
+      "documentationPurpose": "Dokumentationszweck",
+      "photoUnavailable": "📷 Foto nicht verfügbar",
+      "loading": "📷 Wird geladen...",
+      "photoProtected": "🔒 Foto geschützt",
+      "unknownTime": "Unbekannt"
+    },
+    "timeline": {
+      "loading": "Zeitleiste wird geladen...",
+      "pleaseWait": "Bitte warten Sie, während die Zeitleiste geladen wird.",
+      "dataAvailable": "Daten verfügbar"
+    },
+    "filters": {
+      "noResults": "Keine Ergebnisse gefunden. Bitte passen Sie Ihre Filter an."
+    }
+  },
+  "index": {
+    "pageTitle": "Gaza-Krisen-Dokumentation",
+    "metaDescription": "Umfassende Dokumentation von Kriegsverbrechen, Hungerkrise und humanitären Verstößen in Gaza",
+    "apiStatus": {
+      "loading": "Wird geladen...",
+      "live": "Live-Daten",
+      "fallback": "Zwischengespeicherte Daten"
+    },
+    "dataStatus": {
+      "loading": "📊 Krisendaten von Tech for Palestine API v3 werden geladen..."
+    },
+    "warCrimes": {
+      "title": "⚖️ Kriegsverbrechen & Verstöße gegen internationales Recht",
+      "description": "Umfassende Dokumentation systematischer Verstöße, darunter Angriffe auf Zivilisten, medizinische Einrichtungen und geschützte Orte.",
+      "viewStats": "Vollständige Statistiken ansehen →"
+    },
+    "hungerCrisis": {
+      "title": "🍽️ Hungerkrise & Hunger als Kriegswaffe",
+      "description": "Dokumentation systematischer Hungertaktiken, Hilfsblockaden und humanitärer Katastrophe, die 2,3 Millionen Menschen betrifft.",
+      "viewStats": "Hungerstatistiken ansehen →",
+      "starvationDeaths": "Gesamttodesfälle durch Hunger",
+      "famineConditions": "Menschen in Hungersnot",
+      "totalAffected": "Insgesamt von Hunger betroffen"
+    },
+    "timeline": {
+      "title": "📋 Vollständige historische Zeitleiste (1948-Gegenwart)",
+      "description": "Interaktive Dokumentation von der Nakba 1948 bis zum aktuellen Völkermord. Verifizierte Quellen von UN, Human Rights Watch und internationalen Organisationen.",
+      "viewTimeline": "Detaillierte Zeitleiste ansehen →",
+      "totalEvents": "Gesamtereignisse",
+      "verifiedCases": "Verifizierte Fälle",
+      "totalDeaths": "Gesamttodesfälle"
+    },
+    "timelineSection": {
+      "title": "📊 Vollständige historische Zeitleiste (1948-Gegenwart)",
+      "subtitle": "27 große dokumentierte Massaker und Kriegsverbrechen von der Nakba bis zum aktuellen Völkermord",
+      "sources": "🔍 Quellen: UN, Human Rights Watch, B'Tselem, Al-Haq, PCHR"
+    },
+    "stats": {
+      "totalEvents": "Gesamtereignisse",
+      "documentedIncidents": "Dokumentierte Vorfälle",
+      "totalDeaths": "Gesamttodesfälle",
+      "verifiedCasualties": "Verifizierte Opfer",
+      "injured": "Verletzte",
+      "documentedInjuries": "Dokumentierte Verletzungen",
+      "displaced": "Vertriebene",
+      "forcedDisplacement": "Zwangsvertreibung"
+    },
+    "comparison": {
+      "header": "📊 Historischer vs. aktueller Vergleich",
+      "historicalTitle": "📜 Historischer Zeitraum (1948-2023)",
+      "currentTitle": "🚨 Aktueller Völkermord (Okt 2023-Gegenwart)",
+      "duration": "Dauer:",
+      "majorEvents": "Wichtige Ereignisse:",
+      "totalDeaths": "Gesamttodesfälle:",
+      "avgDeathsYear": "Durchschn. Todesfälle/Jahr:",
+      "avgDeathsDay": "Durchschn. Todesfälle/Tag:"
+    },
+    "legend": {
+      "title": "📌 Ereignistypen",
+      "massacres": "Massaker",
+      "militaryOperations": "Militäroperationen",
+      "forcedDisplacement": "Zwangsvertreibung",
+      "hospitalAttacks": "Krankenhausangriffe",
+      "starvationWarfare": "Hunger als Kriegswaffe",
+      "protestSuppression": "Unterdrückung von Protesten"
+    },
+    "filters": {
+      "dateRange": "📅 Datumsbereich",
+      "allDates": "Alle Daten (1948-Gegenwart)",
+      "nakba": "Nakba (1948)",
+      "firstIntifada": "Erste Intifada (1987-1993)",
+      "secondIntifada": "Zweite Intifada (2000-2005)",
+      "gazaOperations": "Gaza-Operationen (2008-2021)",
+      "currentGenocide": "Aktueller Völkermord (2023-Gegenwart)",
+      "eventType": "🏷️ Ereignistyp",
+      "allTypes": "Alle Typen",
+      "massacres": "Massaker",
+      "militaryOperations": "Militäroperationen",
+      "forcedDisplacement": "Zwangsvertreibung",
+      "hospitalAttacks": "Krankenhausangriffe",
+      "protectedSiteAttacks": "Angriffe auf geschützte Orte",
+      "starvationWarfare": "Hunger als Kriegswaffe",
+      "protestSuppression": "Unterdrückung von Protesten",
+      "search": "🔍 Suche",
+      "searchPlaceholder": "Ereignisse, Orte durchsuchen...",
+      "verification": "✅ Verifizierung",
+      "allStatuses": "Alle Status",
+      "verified": "Verifiziert",
+      "disputed": "Umstritten",
+      "underInvestigation": "In Untersuchung",
+      "casualtyScale": "📊 Opfer-Umfang",
+      "allScales": "Alle Umfänge",
+      "lowCasualties": "1-50 Opfer",
+      "mediumCasualties": "51-500 Opfer",
+      "highCasualties": "501-2000 Opfer",
+      "massiveCasualties": "2000+ Opfer",
+      "clearAll": "🔄 Alle Filter löschen"
+    },
+    "timelineStatus": {
+      "loading": "📊 Zeitleisten-Daten werden geladen..."
+    },
+    "timelineLoading": {
+      "message": "Vollständige historische Zeitleiste wird geladen...",
+      "detail": "Daten von 1948 bis zur Gegenwart werden abgerufen..."
+    },
+    "modal": {
+      "title": "Ereignisdetails",
+      "basicInfo": "📋 Grundinformationen",
+      "date": "📅 Datum:",
+      "location": "📍 Ort:",
+      "eventType": "🏷️ Ereignistyp:",
+      "verification": "✅ Verifizierung:",
+      "summary": "📄 Zusammenfassung",
+      "casualties": "💥 Opfer & Auswirkungen",
+      "warCrimes": "⚖️ Dokumentierte Kriegsverbrechen",
+      "sources": "📰 Verifizierte Quellen",
+      "viewFull": "📖 Vollständige Dokumentation anzeigen →"
+    }
+  },
+  "timeline": {
+    "pageTitle": "Zeitleiste wichtiger Vorfälle - Gaza-Krisen-Dokumentation",
+    "metaDescription": "Umfassende Zeitleiste von historischen Massakern (1948-2023) und aktuellem Völkermord (2023-Gegenwart) in Gaza und Palästina",
+    "header": {
+      "title": "📋 Historische & aktuelle Zeitleiste",
+      "description": "Umfassende Dokumentation von der Nakba 1948 bis zum aktuellen Völkermord. Interaktive Zeitleiste mit verifizierten Quellen der UN, Human Rights Watch und anderen internationalen Organisationen."
+    },
+    "nav": {
+      "timelineView": "📅 Zeitleiste",
+      "mapView": "🗺️ Karte",
+      "listView": "📋 Liste"
+    },
+    "stats": {
+      "totalEvents": "Gesamtereignisse",
+      "totalDeaths": "Gesamttodesfälle",
+      "lastUpdate": "Zuletzt aktualisiert",
+      "massacres": "Massaker",
+      "documentedEvents": "Dokumentierte Ereignisse",
+      "deaths": "Gesamttodesfälle",
+      "verifiedCasualties": "Verifizierte Opfer",
+      "injured": "Verletzte",
+      "documentedInjuries": "Dokumentierte Verletzungen",
+      "displaced": "Vertriebene",
+      "forcedDisplacement": "Zwangsvertreibung"
+    },
+    "modeSelector": {
+      "title": "📊 Zeitleisten-Zeitraum auswählen",
+      "sources": "🔍 Quellen: UN, Human Rights Watch"
+    },
+    "modes": {
+      "historical": {
+        "title": "Historische Massaker",
+        "period": "1948 - 6. Oktober 2023",
+        "events": "Ereignisse:",
+        "deaths": "Todesfälle:"
+      },
+      "current": {
+        "title": "Aktueller Völkermord",
+        "period": "7. Oktober 2023 - Gegenwart",
+        "events": "Ereignisse:",
+        "deaths": "Todesfälle:"
+      },
+      "both": {
+        "title": "Vollständige Zeitleiste",
+        "period": "1948 - Gegenwart",
+        "events": "Gesamtereignisse:",
+        "deaths": "Gesamttodesfälle:"
+      }
+    },
+    "comparison": {
+      "title": "📊 Historischer vs. aktueller Vergleich",
+      "historical": {
+        "title": "📜 Historischer Zeitraum (1948-2023)",
+        "duration": "Dauer:",
+        "durationValue": "75 Jahre",
+        "events": "Wichtige Ereignisse:",
+        "deaths": "Gesamttodesfälle:",
+        "avgDeaths": "Durchschn. Todesfälle/Jahr:"
+      },
+      "current": {
+        "title": "🚨 Aktueller Völkermord (Okt 2023-Gegenwart)",
+        "duration": "Dauer:",
+        "events": "Wichtige Ereignisse:",
+        "deaths": "Gesamttodesfälle:",
+        "avgDeaths": "Durchschn. Todesfälle/Tag:"
+      }
+    },
+    "legend": {
+      "title": "📌 Ereignistypen",
+      "massacres": "Massaker",
+      "militaryOperations": "Militäroperationen",
+      "forcedDisplacement": "Zwangsvertreibung",
+      "hospitalAttacks": "Krankenhausangriffe",
+      "starvationWarfare": "Hunger als Kriegswaffe",
+      "protestSuppression": "Unterdrückung von Protesten"
+    },
+    "filters": {
+      "dateRange": "📅 Datumsbereich",
+      "allDates": "Alle Daten",
+      "nakba": "Nakba (1948)",
+      "firstIntifada": "Erste Intifada (1987-1993)",
+      "secondIntifada": "Zweite Intifada (2000-2005)",
+      "gazaOperations": "Gaza-Operationen (2008-2021)",
+      "currentGenocide": "Aktueller Völkermord (2023-Gegenwart)",
+      "eventType": "🏷️ Ereignistyp",
+      "allTypes": "Alle Typen",
+      "massacres": "Massaker",
+      "militaryOperations": "Militäroperationen",
+      "forcedDisplacement": "Zwangsvertreibung",
+      "hospitalAttacks": "Krankenhausangriffe",
+      "protectedSiteAttacks": "Angriffe auf geschützte Orte",
+      "starvationWarfare": "Hunger als Kriegswaffe",
+      "protestSuppression": "Unterdrückung von Protesten",
+      "search": "🔍 Suche",
+      "searchPlaceholder": "Ereignisse, Orte durchsuchen...",
+      "verification": "✅ Verifizierung",
+      "allStatuses": "Alle Status",
+      "verified": "Verifiziert",
+      "disputed": "Umstritten",
+      "underInvestigation": "In Untersuchung",
+      "casualtyScale": "📊 Opfer-Umfang",
+      "allScales": "Alle Umfänge",
+      "lowCasualties": "1-50 Opfer",
+      "mediumCasualties": "51-500 Opfer",
+      "highCasualties": "501-2000 Opfer",
+      "massiveCasualties": "2000+ Opfer",
+      "clearAll": "🔄 Alle Filter löschen"
+    },
+    "loading": {
+      "status": "📊 Zeitleisten-Daten werden geladen...",
+      "message": "Historische Zeitleiste wird geladen...",
+      "detail": "Massaker-Daten von 1948-2023 werden abgerufen..."
+    },
+    "map": {
+      "legendTitle": "Vorfallstypen",
+      "massacres": "Massaker",
+      "militaryOperations": "Militäroperationen",
+      "forcedDisplacement": "Zwangsvertreibung",
+      "hospitalAttacks": "Krankenhausangriffe",
+      "starvationWarfare": "Hunger als Kriegswaffe"
+    },
+    "list": {
+      "title": "Ereignisdokumentation",
+      "sortBy": "Sortieren nach:",
+      "sortDateDesc": "Datum (Neueste zuerst)",
+      "sortDateAsc": "Datum (Älteste zuerst)",
+      "sortDeathsDesc": "Todesfälle (Höchste zuerst)",
+      "sortType": "Ereignistyp",
+      "sortLocation": "Ort",
+      "loading": "Ereignisse werden geladen...",
+      "noResults": "Keine Ereignisse gefunden",
+      "adjustFilters": "Versuchen Sie, Ihre Filter oder Suchkriterien anzupassen.",
+      "clearAllFilters": "Alle Filter löschen"
+    },
+    "modal": {
+      "title": "Ereignisdetails",
+      "basicInfo": "📋 Grundinformationen",
+      "date": "📅 Datum:",
+      "location": "📍 Ort:",
+      "eventType": "🏷️ Ereignistyp:",
+      "verification": "✅ Verifizierung:",
+      "summary": "📄 Zusammenfassung",
+      "casualties": "💥 Opfer & Auswirkungen",
+      "warCrimes": "⚖️ Dokumentierte Kriegsverbrechen",
+      "sources": "📰 Verifizierte Quellen",
+      "viewFullDoc": "📖 Vollständige Dokumentation anzeigen →"
+    }
+  },
+  "deirYassin": {
+    "pageTitle": "Deir Yassin Massaker (9. April 1948) | Historische Dokumentation",
+    "breadcrumb": {
+      "home": "🏠 Startseite",
+      "timeline": "📋 Zeitleiste",
+      "historical": "📜 Historisch",
+      "current": "Deir Yassin 1948"
+    },
+    "hero": {
+      "category": "📜 HISTORISCHES MASSAKER • NAKBA 1948",
+      "title": "Deir Yassin Massaker",
+      "subtitle": "Tötung von Zivilisten in einem West-Jerusalem-Dorf während des Krieges 1948"
+    },
+    "quickFacts": {
+      "title": "⚡ Schnelle Fakten",
+      "eventType": "Ereignistyp",
+      "perpetrators": "Täter",
+      "verification": "Verifizierung",
+      "classification": "Klassifizierung"
+    }
+  }
+}

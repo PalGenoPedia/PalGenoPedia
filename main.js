@@ -1,13 +1,13 @@
-// Gaza Crisis Documentation Platform - Updated Main JavaScript with CSV Support
-// Now uses Papa Parse to load data from CSV files instead of JSON
+// Gaza Crisis Documentation Platform - Updated Main JavaScript with CSV and Multilingual Support
+// Now supports translations via the TranslationSystem module
 
 // Global variables
 let map;
 let incidents = [];
 let filteredIncidents = [];
 let currentView = 'timeline';
-let currentUser = 'aliattia11';
-let lastUpdated = '2025-07-22 22:50:22';
+let currentUser = 'aliattia02';
+let lastUpdated = '2025-10-12 08:14:25';
 
 // Detect which page we're on
 const isMainPage = document.querySelector('.main') && document.querySelector('.crisis-banner');
@@ -44,7 +44,7 @@ const elements = {
 
 // Initialize the application
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('Gaza Crisis Documentation Platform initializing with CSV support...');
+    console.log('Gaza Crisis Documentation Platform initializing with CSV and multilingual support...');
     initializeApp();
 });
 
@@ -75,7 +75,7 @@ async function initializeApp() {
             console.log('Main page detected - timeline handled by page-specific script');
         }
 
-        console.log('Application initialized successfully with CSV data');
+        console.log('Application initialized successfully with CSV data and multilingual support');
     } catch (error) {
         console.error('Error initializing app:', error);
         if (typeof showError === 'function' && isMajorIncidentsPage) {
@@ -309,7 +309,7 @@ function parseBooleanField(field) {
     return false;
 }
 
-// Update header statistics - with null checks
+// Update header statistics - with null checks and translation support
 function updateHeaderStats() {
     const totalIncidentsEl = document.getElementById('totalIncidents');
     const verifiedIncidentsEl = document.getElementById('verifiedIncidents');
@@ -325,8 +325,13 @@ function updateHeaderStats() {
     }
 
     if (lastUpdateStatEl && lastUpdated) {
-        const date = new Date(lastUpdated);
-        lastUpdateStatEl.textContent = date.toLocaleDateString();
+        // Use TranslationSystem to format date if available
+        if (window.TranslationSystem && typeof window.TranslationSystem.formatDate === 'function') {
+            lastUpdateStatEl.textContent = window.TranslationSystem.formatDate(lastUpdated);
+        } else {
+            const date = new Date(lastUpdated);
+            lastUpdateStatEl.textContent = date.toLocaleDateString();
+        }
     }
 }
 
@@ -375,6 +380,9 @@ function setupEventListeners() {
 
     // Keyboard shortcuts
     document.addEventListener('keydown', handleKeyboard);
+
+    // Listen for language change events
+    document.addEventListener('languageChanged', handleLanguageChange);
 }
 
 // Handle keyboard shortcuts
@@ -382,6 +390,25 @@ function handleKeyboard(e) {
     if (e.key === 'Escape') {
         closeModal();
     }
+}
+
+// Handle language change event
+function handleLanguageChange(e) {
+    console.log('🌐 Language changed to:', e.detail.language, 'with direction:', e.detail.direction);
+
+    // Re-render incident list if we're on that view
+    if (currentView === 'list' && isMajorIncidentsPage) {
+        renderIncidentList();
+    }
+
+    // Update the map if we're on that view
+    if (currentView === 'map' && map) {
+        addIncidentsToMap();
+    }
+
+    // Update stats with proper number formatting
+    updateStats();
+    updateHeaderStats();
 }
 
 // Initialize theme
@@ -444,7 +471,7 @@ function initializeMap() {
     }
 }
 
-// Add incidents to Leaflet map
+// Add incidents to Leaflet map with translation support
 function addIncidentsToMap() {
     if (!map || typeof L === 'undefined') return;
 
@@ -486,17 +513,33 @@ function addIncidentsToMap() {
                 icon: icon
             });
 
+            // Prepare translatable content for popup
+            const dateText = window.TranslationSystem ?
+                window.TranslationSystem.getTranslation('common.incident.date') || 'Date' : 'Date';
+            const locationText = window.TranslationSystem ?
+                window.TranslationSystem.getTranslation('common.incident.location') || 'Location' : 'Location';
+            const typeText = window.TranslationSystem ?
+                window.TranslationSystem.getTranslation('common.incident.type') || 'Type' : 'Type';
+            const detailedDocText = window.TranslationSystem ?
+                window.TranslationSystem.getTranslation('common.incident.detailedDocumentation') || 'Detailed Documentation' : 'Detailed Documentation';
+            const viewDetailsText = window.TranslationSystem ?
+                window.TranslationSystem.getTranslation('common.buttons.viewDetails') || 'View Full Details' : 'View Full Details';
+
+            // Format date using TranslationSystem if available
+            const formattedDate = window.TranslationSystem && typeof window.TranslationSystem.formatDate === 'function' ?
+                window.TranslationSystem.formatDate(incident.date) : formatDate(incident.date);
+
             const popupContent = `
                 <div class="map-popup">
                     <h3>${escapeHtml(incident.title)}</h3>
-                    <p><strong>Date:</strong> ${formatDate(incident.date)}</p>
-                    <p><strong>Location:</strong> ${escapeHtml(incident.location.name)}</p>
-                    <p><strong>Type:</strong> ${capitalizeFirst(incident.type)}</p>
+                    <p><strong>${dateText}:</strong> ${formattedDate}</p>
+                    <p><strong>${locationText}:</strong> ${escapeHtml(incident.location.name)}</p>
+                    <p><strong>${typeText}:</strong> ${capitalizeFirst(incident.type)}</p>
                     <p class="popup-description">${truncateText(escapeHtml(incident.description), 100)}</p>
                     ${incident.casualties_details && incident.casualties_details.length > 0 ? 
-                        `<p><strong>Detailed Documentation: ${incident.casualties_details.length} cases</strong></p>` : ''}
+                        `<p><strong>${detailedDocText}: ${incident.casualties_details.length} cases</strong></p>` : ''}
                     <button onclick="showIncidentModal(incidents.find(i => i.id === '${incident.id}'))" class="popup-details-btn">
-                        View Full Details
+                        ${viewDetailsText}
                     </button>
                 </div>
             `;
@@ -573,13 +616,26 @@ function switchView(view) {
                     console.error('Timeline manager not available');
                     const container = document.getElementById('timeline-embed');
                     if (container) {
+                        // Translate error message if possible
+                        let loadingMessage = 'Timeline Loading...';
+                        let waitMessage = 'Please wait while the timeline loads.';
+                        let dataAvailableMessage = 'Data available';
+                        let reloadPageMessage = '🔄 Reload Page';
+
+                        if (window.TranslationSystem) {
+                            loadingMessage = window.TranslationSystem.getTranslation('common.timeline.loading') || loadingMessage;
+                            waitMessage = window.TranslationSystem.getTranslation('common.timeline.pleaseWait') || waitMessage;
+                            dataAvailableMessage = window.TranslationSystem.getTranslation('common.timeline.dataAvailable') || dataAvailableMessage;
+                            reloadPageMessage = window.TranslationSystem.getTranslation('common.buttons.reloadPage') || reloadPageMessage;
+                        }
+
                         container.innerHTML = `
                             <div style="text-align: center; padding: 40px; color: var(--text-secondary);">
-                                <h3>Timeline Loading...</h3>
-                                <p>Please wait while the timeline loads.</p>
-                                <p>Data available: ${filteredIncidents.length} incidents</p>
+                                <h3>${loadingMessage}</h3>
+                                <p>${waitMessage}</p>
+                                <p>${dataAvailableMessage}: ${filteredIncidents.length} incidents</p>
                                 <button onclick="location.reload()" style="margin-top: 20px; padding: 10px 20px; background: var(--accent-color); color: white; border: none; border-radius: 6px; cursor: pointer;">
-                                    🔄 Reload Page
+                                    ${reloadPageMessage}
                                 </button>
                             </div>
                         `;
@@ -605,8 +661,14 @@ function getIncidentIcon(type) {
     return icons[type] || '📍';
 }
 
-// Enhanced incident card with proper casualty display
+// Updated incident card creator with translation support
 function createIncidentCard(incident) {
+    // Use new function with translation support
+    return createTranslatableIncidentCard(incident);
+}
+
+// Translatable incident card creation
+function createTranslatableIncidentCard(incident) {
     const card = document.createElement('div');
     card.className = 'incident-card';
     card.addEventListener('click', () => showIncidentModal(incident));
@@ -617,16 +679,28 @@ function createIncidentCard(incident) {
 
     // Calculate total affected and casualties
     if (casualties.affected) {
-        casualtyText = `${casualties.affected} affected`;
+        const affected = window.TranslationSystem ?
+            `${formatNumber(casualties.affected)} ${window.TranslationSystem.getTranslation('common.incident.affected') || 'affected'}` :
+            `${casualties.affected} affected`;
+        casualtyText = affected;
     }
     if (casualties.critical) {
-        casualtyText += casualtyText ? `, ${casualties.critical} critical` : `${casualties.critical} critical`;
+        const critical = window.TranslationSystem ?
+            `${formatNumber(casualties.critical)} ${window.TranslationSystem.getTranslation('common.incident.critical') || 'critical'}` :
+            `${casualties.critical} critical`;
+        casualtyText += casualtyText ? `, ${critical}` : critical;
     }
     if (casualties.hospitalized) {
-        casualtyText += casualtyText ? `, ${casualties.hospitalized} hospitalized` : `${casualties.hospitalized} hospitalized`;
+        const hospitalized = window.TranslationSystem ?
+            `${formatNumber(casualties.hospitalized)} ${window.TranslationSystem.getTranslation('common.incident.hospitalized') || 'hospitalized'}` :
+            `${casualties.hospitalized} hospitalized`;
+        casualtyText += casualtyText ? `, ${hospitalized}` : hospitalized;
     }
     if (casualties.deaths) {
-        casualtyText += casualtyText ? `, ${casualties.deaths} deaths` : `${casualties.deaths} deaths`;
+        const deaths = window.TranslationSystem ?
+            `${formatNumber(casualties.deaths)} ${window.TranslationSystem.getTranslation('common.incident.deaths') || 'deaths'}` :
+            `${casualties.deaths} deaths`;
+        casualtyText += casualtyText ? `, ${deaths}` : deaths;
     }
 
     // Show detailed casualties with names when available
@@ -636,18 +710,40 @@ function createIncidentCard(incident) {
             d.public_identifiers?.published_name && d.public_identifiers?.published_image
         );
 
-        casualtyText += `${casualtyText ? ' | ' : ''}${detailedCount} documented case${detailedCount > 1 ? 's' : ''}`;
+        // Get translation for "documented cases"
+        let documentedCasesText = window.TranslationSystem ?
+            window.TranslationSystem.getTranslation(detailedCount > 1 ? 'common.incident.documentedCasesPlural' : 'common.incident.documentedCasesSingular') ||
+            `documented case${detailedCount > 1 ? 's' : ''}` :
+            `documented case${detailedCount > 1 ? 's' : ''}`;
+
+        casualtyText += `${casualtyText ? ' | ' : ''}${formatNumber(detailedCount)} ${documentedCasesText}`;
 
         if (namesWithPhotos.length > 0) {
+            // Get translation for "Documented victims"
+            const documentedVictimsText = window.TranslationSystem ?
+                window.TranslationSystem.getTranslation('common.incident.documentedVictims') || 'Documented victims:' :
+                'Documented victims:';
+
+            // Get translation for "Name protected"
+            const nameProtectedText = window.TranslationSystem ?
+                window.TranslationSystem.getTranslation('common.incident.nameProtected') || 'Name protected' :
+                'Name protected';
+
+            // Get translation for "and X more"
+            const andMoreText = window.TranslationSystem && incident.casualties_details.length > 3 ?
+                window.TranslationSystem.getTranslation('common.incident.andMoreVictims')?.replace('${count}', incident.casualties_details.length - 3) ||
+                ` and ${incident.casualties_details.length - 3} more` :
+                ` and ${incident.casualties_details.length - 3} more`;
+
             detailedCasualtyInfo = `
                 <div class="casualty-preview">
-                    <strong>Documented victims:</strong>
+                    <strong>${documentedVictimsText}</strong>
                     ${incident.casualties_details.slice(0, 3).map(detail => 
                         detail.public_identifiers?.published_name ? 
                             `<span class="victim-name">${escapeHtml(detail.name)}, ${detail.age}</span>` : 
-                            `<span class="victim-name">Name protected, age ${detail.age}</span>`
+                            `<span class="victim-name">${nameProtectedText}, ${detail.age}</span>`
                     ).join(', ')}
-                    ${incident.casualties_details.length > 3 ? ` and ${incident.casualties_details.length - 3} more` : ''}
+                    ${incident.casualties_details.length > 3 ? andMoreText : ''}
                 </div>
             `;
         }
@@ -655,15 +751,35 @@ function createIncidentCard(incident) {
 
     // If no casualties information available
     if (!casualtyText) {
-        casualtyText = 'Impact being assessed';
+        casualtyText = window.TranslationSystem ?
+            window.TranslationSystem.getTranslation('common.incident.impactAssessing') || 'Impact being assessed' :
+            'Impact being assessed';
     }
+
+    // Get translation for "Detailed Documentation"
+    const detailedDocText = window.TranslationSystem ?
+        window.TranslationSystem.getTranslation('common.incident.detailedDocumentation') || '📋 Detailed Documentation' :
+        '📋 Detailed Documentation';
+
+    // Get translations for verification status
+    const verifiedText = window.TranslationSystem ?
+        window.TranslationSystem.getTranslation('common.incident.verified') || '✓ Verified' :
+        '✓ Verified';
+
+    const pendingText = window.TranslationSystem ?
+        window.TranslationSystem.getTranslation('common.incident.pending') || '⏳ Pending' :
+        '⏳ Pending';
+
+    // Format date using TranslationSystem if available
+    const formattedDate = window.TranslationSystem && typeof window.TranslationSystem.formatDate === 'function' ?
+        window.TranslationSystem.formatDate(incident.date) : formatDate(incident.date);
 
     card.innerHTML = `
         <div class="incident-header">
             <div>
                 <div class="incident-title">${escapeHtml(incident.title)}</div>
                 <div class="incident-meta">
-                    ${formatDate(incident.date)} ${incident.time ? `at ${incident.time}` : ''}
+                    ${formattedDate} ${incident.time ? `at ${incident.time}` : ''}
                 </div>
                 <div class="incident-meta">
                     📍 ${escapeHtml(incident.location.name)}
@@ -683,10 +799,10 @@ function createIncidentCard(incident) {
                     ${incident.type === 'casualties' ? '⚠️' : '👥'} ${casualtyText}
                 </span>
                 ${incident.casualties_details && incident.casualties_details.length > 0 ? 
-                    '<span class="detailed-badge">📋 Detailed Documentation</span>' : ''}
+                    `<span class="detailed-badge">${detailedDocText}</span>` : ''}
             </div>
             <span class="verification-badge ${incident.verified}">
-                ${incident.verified === 'verified' ? '✓ Verified' : '⏳ Pending'}
+                ${incident.verified === 'verified' ? verifiedText : pendingText}
             </span>
         </div>
     `;
@@ -694,7 +810,7 @@ function createIncidentCard(incident) {
     return card;
 }
 
-// Enhanced modal display with proper image handling
+// Enhanced modal display with proper image handling and translations
 function showIncidentModal(incident) {
     if (!incident || !elements.modal) {
         console.error('No incident data provided to modal or modal not available');
@@ -710,13 +826,21 @@ function showIncidentModal(incident) {
     const modalDescription = document.getElementById('modalDescription');
 
     if (modalTitle) modalTitle.textContent = incident.title;
-    if (modalDate) modalDate.textContent = formatDate(incident.date);
-    if (modalTime) modalTime.textContent = incident.time || 'Unknown';
+
+    // Format date using TranslationSystem if available
+    if (modalDate) {
+        modalDate.textContent = window.TranslationSystem && typeof window.TranslationSystem.formatDate === 'function' ?
+            window.TranslationSystem.formatDate(incident.date) : formatDate(incident.date);
+    }
+
+    if (modalTime) modalTime.textContent = incident.time ||
+        (window.TranslationSystem ? window.TranslationSystem.getTranslation('common.incident.unknownTime') || 'Unknown' : 'Unknown');
+
     if (modalLocation) modalLocation.textContent = incident.location.name;
     if (modalType) modalType.textContent = capitalizeFirst(incident.type);
     if (modalDescription) modalDescription.textContent = incident.description;
 
-    // Enhanced Casualties section
+    // Enhanced Casualties section with translations
     const casualties = incident.casualties;
     const modalCasualtiesSection = document.getElementById('modalCasualtiesSection');
     const modalCasualties = document.getElementById('modalCasualties');
@@ -725,27 +849,58 @@ function showIncidentModal(incident) {
         if (casualties || (incident.casualties_details && incident.casualties_details.length > 0)) {
             let casualtyContent = '';
 
+            // Get translations for casualties section
+            const overallImpactText = window.TranslationSystem ?
+                window.TranslationSystem.getTranslation('common.incident.overallImpact') || '📊 Overall Impact Summary:' :
+                '📊 Overall Impact Summary:';
+
+            const deathsText = window.TranslationSystem ?
+                window.TranslationSystem.getTranslation('common.stats.deaths') || 'Deaths' :
+                'Deaths';
+
+            const injuredText = window.TranslationSystem ?
+                window.TranslationSystem.getTranslation('common.stats.injured') || 'Injured' :
+                'Injured';
+
+            const affectedText = window.TranslationSystem ?
+                window.TranslationSystem.getTranslation('common.incident.totalAffected') || 'Total Affected' :
+                'Total Affected';
+
+            const criticalText = window.TranslationSystem ?
+                window.TranslationSystem.getTranslation('common.incident.critical') || 'Critical Condition' :
+                'Critical Condition';
+
+            const hospitalizedText = window.TranslationSystem ?
+                window.TranslationSystem.getTranslation('common.incident.hospitalized') || 'Hospitalized' :
+                'Hospitalized';
+
             // Aggregate casualties summary
             if (casualties && Object.keys(casualties).length > 0) {
                 casualtyContent += `
                     <div class="aggregate-casualties">
-                        <h5>📊 Overall Impact Summary:</h5>
+                        <h5>${overallImpactText}</h5>
                         <div class="casualty-stats">
-                            ${casualties.deaths ? `<div class="stat-item deaths">💀 ${casualties.deaths} Deaths</div>` : ''}
-                            ${casualties.injured ? `<div class="stat-item injured">🏥 ${casualties.injured} Injured</div>` : ''}
-                            ${casualties.affected ? `<div class="stat-item affected">👥 ${casualties.affected} Total Affected</div>` : ''}
-                            ${casualties.critical ? `<div class="stat-item critical">⚠️ ${casualties.critical} Critical Condition</div>` : ''}
-                            ${casualties.hospitalized ? `<div class="stat-item hospitalized">🏥 ${casualties.hospitalized} Hospitalized</div>` : ''}
+                            ${casualties.deaths ? `<div class="stat-item deaths">💀 ${formatNumber(casualties.deaths)} ${deathsText}</div>` : ''}
+                            ${casualties.injured ? `<div class="stat-item injured">🏥 ${formatNumber(casualties.injured)} ${injuredText}</div>` : ''}
+                            ${casualties.affected ? `<div class="stat-item affected">👥 ${formatNumber(casualties.affected)} ${affectedText}</div>` : ''}
+                            ${casualties.critical ? `<div class="stat-item critical">⚠️ ${formatNumber(casualties.critical)} ${criticalText}</div>` : ''}
+                            ${casualties.hospitalized ? `<div class="stat-item hospitalized">🏥 ${formatNumber(casualties.hospitalized)} ${hospitalizedText}</div>` : ''}
                         </div>
                     </div>
                 `;
             }
 
+            // Get translation for individual documentation
+            const individualDocText = window.TranslationSystem ?
+                window.TranslationSystem.getTranslation('common.incident.individualDocumentation')?.replace('${count}', incident.casualties_details?.length || 0) ||
+                `📋 Individual Documentation (${incident.casualties_details?.length || 0} cases):` :
+                `📋 Individual Documentation (${incident.casualties_details?.length || 0} cases):`;
+
             // Enhanced detailed casualties
             if (incident.casualties_details && incident.casualties_details.length > 0) {
                 casualtyContent += `
                     <div class="detailed-casualties">
-                        <h5>📋 Individual Documentation (${incident.casualties_details.length} cases):</h5>
+                        <h5>${individualDocText}</h5>
                         <div class="casualties-grid">
                             ${incident.casualties_details.map(detail => createCasualtyCard(detail, incident)).join('')}
                         </div>
@@ -774,7 +929,7 @@ function showIncidentModal(incident) {
     document.body.style.overflow = 'hidden';
 }
 
-// Enhanced casualty card with proper photo matching and display
+// Enhanced casualty card with proper photo matching and display and translation support
 function createCasualtyCard(detail, incident) {
     // Better photo matching logic
     let photo = null;
@@ -813,6 +968,67 @@ function createCasualtyCard(detail, incident) {
         }
     }
 
+    // Get translations for casualty card
+    const photoUnavailableText = window.TranslationSystem ?
+        window.TranslationSystem.getTranslation('common.incident.photoUnavailable') || '📷 Photo unavailable' :
+        '📷 Photo unavailable';
+
+    const loadingText = window.TranslationSystem ?
+        window.TranslationSystem.getTranslation('common.incident.loading') || '📷 Loading...' :
+        '📷 Loading...';
+
+    const photoProtectedText = window.TranslationSystem ?
+        window.TranslationSystem.getTranslation('common.incident.photoProtected') || '🔒 Photo protected' :
+        '🔒 Photo protected';
+
+    const nameProtectedText = window.TranslationSystem ?
+        window.TranslationSystem.getTranslation('common.incident.nameProtectedPrivacy') || '👤 Name Protected for Privacy' :
+        '👤 Name Protected for Privacy';
+
+    const ageText = window.TranslationSystem ?
+        window.TranslationSystem.getTranslation('common.incident.age') || 'Age' :
+        'Age';
+
+    const dateText = window.TranslationSystem ?
+        window.TranslationSystem.getTranslation('common.incident.date') || '📅 Date' :
+        '📅 Date';
+
+    const causeText = window.TranslationSystem ?
+        window.TranslationSystem.getTranslation('common.incident.cause') || '💔 Cause' :
+        '💔 Cause';
+
+    const locationText = window.TranslationSystem ?
+        window.TranslationSystem.getTranslation('common.incident.location') || '📍 Location' :
+        '📍 Location';
+
+    const medicalFacilityText = window.TranslationSystem ?
+        window.TranslationSystem.getTranslation('common.incident.medicalFacility') || '🏥 Medical Facility' :
+        '🏥 Medical Facility';
+
+    const referenceText = window.TranslationSystem ?
+        window.TranslationSystem.getTranslation('common.incident.reference') || '🆔 Reference' :
+        '🆔 Reference';
+
+    const sourcesText = window.TranslationSystem ?
+        window.TranslationSystem.getTranslation('common.incident.sources') || '📰 Sources' :
+        '📰 Sources';
+
+    const privacyNotesText = window.TranslationSystem ?
+        window.TranslationSystem.getTranslation('common.incident.privacyNotes') || '🔒 Privacy & Documentation Notes' :
+        '🔒 Privacy & Documentation Notes';
+
+    const privacyStatusText = window.TranslationSystem ?
+        window.TranslationSystem.getTranslation('common.incident.privacyStatus') || 'Privacy Status' :
+        'Privacy Status';
+
+    const documentationPurposeText = window.TranslationSystem ?
+        window.TranslationSystem.getTranslation('common.incident.documentationPurpose') || 'Documentation Purpose' :
+        'Documentation Purpose';
+
+    // Format date using TranslationSystem if available
+    const formattedDate = window.TranslationSystem && typeof window.TranslationSystem.formatDate === 'function' ?
+        window.TranslationSystem.formatDate(detail.date) : formatDate(detail.date);
+
     return `
         <div class="casualty-card ${detail.condition?.toLowerCase() === 'deceased' ? 'deceased' : 'injured'}">
             ${detail.ethical_notes?.content_warning ? `
@@ -828,12 +1044,12 @@ function createCasualtyCard(detail, incident) {
                              alt="Photo of ${escapeHtml(detail.name)}" 
                              onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" 
                              loading="lazy">
-                        <div class="photo-placeholder" style="display: none;">📷 Photo unavailable</div>
+                        <div class="photo-placeholder" style="display: none;">${photoUnavailableText}</div>
                     </div>
                 ` : `
                     <div class="casualty-photo">
                         <div class="photo-placeholder">
-                            ${detail.public_identifiers?.published_image ? '📷 Loading...' : '🔒 Photo protected'}
+                            ${detail.public_identifiers?.published_image ? loadingText : photoProtectedText}
                         </div>
                     </div>
                 `}
@@ -841,10 +1057,10 @@ function createCasualtyCard(detail, incident) {
                     <h6 class="casualty-name">
                         ${detail.public_identifiers?.published_name ? 
                             `👤 ${escapeHtml(detail.name)}` : 
-                            '👤 Name Protected for Privacy'}
+                            nameProtectedText}
                     </h6>
                     <div class="casualty-age-status">
-                        <span class="age">Age: ${detail.age}</span>
+                        <span class="age">${ageText}: ${detail.age}</span>
                         <span class="status ${detail.condition?.toLowerCase() || 'unknown'}">${escapeHtml(detail.condition || 'Unknown')}</span>
                     </div>
                 </div>
@@ -852,24 +1068,24 @@ function createCasualtyCard(detail, incident) {
 
             <div class="casualty-details">
                 <div class="detail-row">
-                    <strong>📅 Date:</strong> ${formatDate(detail.date)}
+                    <strong>${dateText}:</strong> ${formattedDate}
                 </div>
                 <div class="detail-row">
-                    <strong>💔 Cause:</strong> ${escapeHtml(detail.cause)}
+                    <strong>${causeText}:</strong> ${escapeHtml(detail.cause)}
                 </div>
                 <div class="detail-row">
-                    <strong>📍 Location:</strong> ${escapeHtml(detail.location_details)}
+                    <strong>${locationText}:</strong> ${escapeHtml(detail.location_details)}
                 </div>
                 <div class="detail-row">
-                    <strong>🏥 Medical Facility:</strong> ${escapeHtml(detail.medical_facility)}
+                    <strong>${medicalFacilityText}:</strong> ${escapeHtml(detail.medical_facility)}
                 </div>
                 <div class="detail-row">
-                    <strong>🆔 Reference:</strong> <code>${escapeHtml(detail.reference_id)}</code>
+                    <strong>${referenceText}:</strong> <code>${escapeHtml(detail.reference_id)}</code>
                 </div>
             </div>
 
             <div class="casualty-sources">
-                <strong>📰 Sources:</strong>
+                <strong>${sourcesText}:</strong>
                 <ul class="sources-list">
                     ${detail.sources.map(source => `<li>${escapeHtml(source)}</li>`).join('')}
                 </ul>
@@ -878,10 +1094,10 @@ function createCasualtyCard(detail, incident) {
             ${detail.ethical_notes ? `
                 <div class="ethical-notes">
                     <details>
-                        <summary>🔒 Privacy & Documentation Notes</summary>
+                        <summary>${privacyNotesText}</summary>
                         <div class="ethical-details">
-                            <p><strong>Privacy Status:</strong> ${escapeHtml(detail.ethical_notes.privacy_status)}</p>
-                            <p><strong>Documentation Purpose:</strong> ${escapeHtml(detail.ethical_notes.documentation_purpose)}</p>
+                            <p><strong>${privacyStatusText}:</strong> ${escapeHtml(detail.ethical_notes.privacy_status)}</p>
+                            <p><strong>${documentationPurposeText}:</strong> ${escapeHtml(detail.ethical_notes.documentation_purpose)}</p>
                         </div>
                     </details>
                 </div>
@@ -898,7 +1114,7 @@ function closeModal() {
     }
 }
 
-// Enhanced evidence display
+// Enhanced evidence display with translation support
 function displayEvidenceSection(incident) {
     const evidenceContainer = document.getElementById('modalEvidence');
     const evidenceSection = document.getElementById('modalEvidenceSection');
@@ -909,24 +1125,61 @@ function displayEvidenceSection(incident) {
         const images = incident.evidence.filter(e => e.type === 'image');
         const otherEvidence = incident.evidence.filter(e => e.type !== 'image');
 
+        // Get translations for evidence section
+        const photosText = window.TranslationSystem ?
+            window.TranslationSystem.getTranslation('common.incident.photographic') || '📸 Photographic Evidence:' :
+            '📸 Photographic Evidence:';
+
+        const additionalEvidenceText = window.TranslationSystem ?
+            window.TranslationSystem.getTranslation('common.incident.additionalEvidence') || '📋 Additional Evidence:' :
+            '📋 Additional Evidence:';
+
+        const imagesTabText = window.TranslationSystem ?
+            window.TranslationSystem.getTranslation('common.incident.imagesTab') || 'Images' :
+            'Images';
+
+        const documentsTabText = window.TranslationSystem ?
+            window.TranslationSystem.getTranslation('common.incident.documentsTab') || 'Documents' :
+            'Documents';
+
+        const externalSourceText = window.TranslationSystem ?
+            window.TranslationSystem.getTranslation('common.incident.externalSource') || '🌐 External' :
+            '🌐 External';
+
+        const localSourceText = window.TranslationSystem ?
+            window.TranslationSystem.getTranslation('common.incident.localSource') || '📁 Local' :
+            '📁 Local';
+
+        const viewEvidenceText = window.TranslationSystem ?
+            window.TranslationSystem.getTranslation('common.incident.viewEvidence') || 'View Evidence' :
+            'View Evidence';
+
         let evidenceHTML = '';
 
         // Display images
         if (images.length > 0) {
             evidenceHTML += `
                 <div class="evidence-images">
-                    <h6>📸 Photographic Evidence:</h6>
+                    <h6>${photosText}</h6>
                     <div class="image-gallery">
-                        ${images.map(evidence => `
-                            <div class="evidence-image-container">
-                                <img src="${escapeHtml(evidence.url)}" 
-                                     alt="${escapeHtml(evidence.description || 'Evidence image')}" 
-                                     loading="lazy"
-                                     onclick="openImageModal('${escapeHtml(evidence.url)}', '${escapeHtml(evidence.description || 'Evidence image')}')"
-                                     onerror="this.parentElement.innerHTML='<div class=\\'broken-image\\'>📷 Image unavailable: ${escapeHtml(evidence.description || evidence.url)}</div>'">
-                                ${evidence.description ? `<div class="image-caption">${escapeHtml(evidence.description)}</div>` : ''}
-                            </div>
-                        `).join('')}
+                        ${images.map((evidence, index) => {
+                            const imgName = evidence.original ? 
+                                evidence.original.replace(/\.[^/.]+$/, "").replace(/-/g, ' ').replace(/_/g, ' ').split('/').pop() :
+                                evidence.description || 'Evidence Image';
+                                
+                            const sourceLabel = evidence.type === 'remote' ? externalSourceText : localSourceText;
+
+                            return `
+                                <div class="evidence-image-container">
+                                    <img src="${escapeHtml(evidence.url)}" 
+                                         alt="${escapeHtml(evidence.description || 'Evidence image')}" 
+                                         loading="lazy"
+                                         onclick="openImageModal('${escapeHtml(evidence.url)}', '${escapeHtml(evidence.description || 'Evidence image')}')"
+                                         onerror="this.parentElement.innerHTML='<div class=\\'broken-image\\'>📷 Image unavailable: ${escapeHtml(evidence.description || evidence.url)}</div>'">
+                                    ${evidence.description ? `<div class="image-caption">${escapeHtml(evidence.description)}</div>` : ''}
+                                </div>
+                            `;
+                        }).join('')}
                     </div>
                 </div>
             `;
@@ -936,12 +1189,12 @@ function displayEvidenceSection(incident) {
         if (otherEvidence.length > 0) {
             evidenceHTML += `
                 <div class="other-evidence">
-                    <h6>📋 Additional Evidence:</h6>
+                    <h6>${additionalEvidenceText}</h6>
                     ${otherEvidence.map(evidence => `
                         <div class="evidence-item">
                             <a href="${escapeHtml(evidence.url)}" target="_blank" rel="noopener">
                                 ${evidence.type === 'video' ? '📹' : '📄'} 
-                                ${escapeHtml(evidence.description || 'View Evidence')}
+                                ${escapeHtml(evidence.description || viewEvidenceText)}
                             </a>
                         </div>
                     `).join('')}
@@ -956,7 +1209,7 @@ function displayEvidenceSection(incident) {
     }
 }
 
-// Helper function to open image in modal
+// Helper function to open image in modal with translation support
 function openImageModal(imageUrl, description) {
     const overlay = document.createElement('div');
     overlay.className = 'image-modal-overlay';
@@ -974,13 +1227,18 @@ function openImageModal(imageUrl, description) {
         cursor: pointer;
     `;
 
+    // Get translation for close button
+    const closeText = window.TranslationSystem ?
+        window.TranslationSystem.getTranslation('common.buttons.close') || '×' :
+        '×';
+
     overlay.innerHTML = `
         <div class="image-modal-content" style="max-width: 90%; max-height: 90%; position: relative;">
             <img src="${imageUrl}" alt="${description}" style="max-width: 100%; max-height: 100%; object-fit: contain;">
             <div class="image-modal-caption" style="position: absolute; bottom: -40px; left: 0; right: 0; color: white; text-align: center; padding: 10px;">
                 ${description}
             </div>
-            <button class="image-modal-close" style="position: absolute; top: -40px; right: 0; background: none; border: none; color: white; font-size: 2rem; cursor: pointer;">&times;</button>
+            <button class="image-modal-close" style="position: absolute; top: -40px; right: 0; background: none; border: none; color: white; font-size: 2rem; cursor: pointer;">${closeText}</button>
         </div>
     `;
 
@@ -995,7 +1253,7 @@ function openImageModal(imageUrl, description) {
     document.body.style.overflow = 'hidden';
 }
 
-// Sources display
+// Sources display with translation support
 function displaySourcesSection(incident) {
     const sourcesContainer = document.getElementById('modalSources');
     if (!sourcesContainer) return;
@@ -1007,19 +1265,31 @@ function displaySourcesSection(incident) {
                 `<p>📰 ${escapeHtml(source)}</p>`
         ).join('');
     } else {
-        sourcesContainer.innerHTML = '<p>No sources available</p>';
+        // Get translation for "No sources available"
+        const noSourcesText = window.TranslationSystem ?
+            window.TranslationSystem.getTranslation('common.incident.noSources') || 'No sources available' :
+            'No sources available';
+
+        sourcesContainer.innerHTML = `<p>${noSourcesText}</p>`;
     }
 }
 
-// Verification display
+// Verification display with translation support
 function displayVerificationStatus(incident) {
     const verificationEl = document.getElementById('modalVerification');
     if (!verificationEl) return;
 
-    verificationEl.className = `verification-badge ${incident.verified}`;
-    verificationEl.textContent = incident.verified === 'verified' ?
-        '✅ This incident has been verified through multiple sources' :
+    // Get translations for verification statuses
+    const verifiedText = window.TranslationSystem ?
+        window.TranslationSystem.getTranslation('common.incident.verifiedMultiple') || '✅ This incident has been verified through multiple sources' :
+        '✅ This incident has been verified through multiple sources';
+
+    const pendingText = window.TranslationSystem ?
+        window.TranslationSystem.getTranslation('common.incident.pendingVerification') || '⏳ This incident is pending verification' :
         '⏳ This incident is pending verification';
+
+    verificationEl.className = `verification-badge ${incident.verified}`;
+    verificationEl.textContent = incident.verified === 'verified' ? verifiedText : pendingText;
 }
 
 // Apply filters
@@ -1097,18 +1367,34 @@ function clearFilters() {
     applyFilters();
 }
 
-// Update statistics
+// Update statistics with translation support
 function updateStats() {
     const count = filteredIncidents.length;
     if (elements.incidentCount) {
-        elements.incidentCount.textContent = `${count} incident${count !== 1 ? 's' : ''} documented`;
+        // Get translation for "incidents documented" with proper pluralization
+        const incidentsText = window.TranslationSystem ?
+            window.TranslationSystem.getTranslation(count !== 1 ? 'common.stats.incidentsPlural' : 'common.stats.incidentsSingular') ||
+            `incident${count !== 1 ? 's' : ''} documented` :
+            `incident${count !== 1 ? 's' : ''} documented`;
+
+        elements.incidentCount.textContent = `${count} ${incidentsText}`;
     }
+
     if (elements.lastUpdated && lastUpdated) {
-        elements.lastUpdated.textContent = `Last updated: ${formatDate(lastUpdated)}`;
+        // Get translation for "Last updated"
+        const lastUpdatedText = window.TranslationSystem ?
+            window.TranslationSystem.getTranslation('common.stats.lastUpdated') || 'Last updated:' :
+            'Last updated:';
+
+        // Format date using TranslationSystem if available
+        const formattedDate = window.TranslationSystem && typeof window.TranslationSystem.formatDate === 'function' ?
+            window.TranslationSystem.formatDate(lastUpdated) : formatDate(lastUpdated);
+
+        elements.lastUpdated.textContent = `${lastUpdatedText} ${formattedDate}`;
     }
 }
 
-// Render incident list - only for major incidents page
+// Render incident list with translation support
 function renderIncidentList() {
     if (!elements.incidentGrid || !isMajorIncidentsPage) return;
 
@@ -1116,6 +1402,13 @@ function renderIncidentList() {
 
     if (filteredIncidents.length === 0) {
         if (elements.noResults) {
+            // Get translation for "No results found"
+            const noResultsText = window.TranslationSystem ?
+                window.TranslationSystem.getTranslation('common.filters.noResults') ||
+                'No results found. Please try different filters.' :
+                'No results found. Please try different filters.';
+
+            elements.noResults.innerHTML = `<p>${noResultsText}</p>`;
             elements.noResults.style.display = 'block';
         }
         return;
@@ -1126,9 +1419,14 @@ function renderIncidentList() {
     }
 
     filteredIncidents.forEach(incident => {
-        const card = createIncidentCard(incident);
+        const card = createTranslatableIncidentCard(incident);
         elements.incidentGrid.appendChild(card);
     });
+
+    // Apply translations to newly created elements
+    if (window.TranslationSystem) {
+        window.TranslationSystem.updatePageLanguage();
+    }
 }
 
 // Utility functions
@@ -1161,11 +1459,18 @@ function capitalizeFirst(str) {
     return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
+// Updated formatDate with translation support
 function formatDate(dateString) {
     if (!dateString) return 'Unknown';
     const date = new Date(dateString);
     if (isNaN(date)) return 'Invalid date';
 
+    // Use TranslationSystem's date formatter if available
+    if (window.TranslationSystem && typeof window.TranslationSystem.formatDate === 'function') {
+        return window.TranslationSystem.formatDate(dateString);
+    }
+
+    // Fallback to default formatting
     return date.toLocaleDateString('en-US', {
         year: 'numeric',
         month: 'long',
@@ -1173,8 +1478,35 @@ function formatDate(dateString) {
     });
 }
 
+// Format numbers with translation support
+function formatNumber(value) {
+    if (value === null || value === undefined) return 'N/A';
+
+    const num = parseInt(value);
+    if (isNaN(num)) return 'N/A';
+
+    // Use TranslationSystem's number formatter if available
+    if (window.TranslationSystem && typeof window.TranslationSystem.formatNumber === 'function') {
+        return window.TranslationSystem.formatNumber(num);
+    }
+
+    // Fallback formatting
+    if (num >= 1000000) {
+        return (num / 1000000).toFixed(1) + 'M';
+    } else if (num >= 1000) {
+        return (num / 1000).toFixed(1) + 'K';
+    } else {
+        return num.toLocaleString();
+    }
+}
+
 function showError(message) {
     console.error(message);
+
+    // Get translation for "Reload"
+    const reloadText = window.TranslationSystem ?
+        window.TranslationSystem.getTranslation('common.buttons.reload') || '×' :
+        '×';
 
     const errorDiv = document.createElement('div');
     errorDiv.style.cssText = `
@@ -1189,12 +1521,18 @@ function showError(message) {
         z-index: 9999;
         max-width: 400px;
     `;
+
+    // Get translation for close button
+    const closeText = window.TranslationSystem ?
+        window.TranslationSystem.getTranslation('common.buttons.close') || '×' :
+        '×';
+
     errorDiv.innerHTML = `
         <div style="display: flex; justify-content: space-between; align-items: center;">
             <span>${message}</span>
             <button onclick="this.parentElement.parentElement.remove()" 
                     style="background: none; border: none; color: white; font-size: 1.2rem; cursor: pointer; margin-left: 1rem;">
-                ×
+                ${closeText}
             </button>
         </div>
     `;
@@ -1213,18 +1551,66 @@ function clearAllFilters() {
     clearFilters();
 }
 
+// Update the lastUpdated timestamp
+function updateLastUpdated(timestamp) {
+    lastUpdated = timestamp || '2025-10-12 08:33:31';
+    currentUser = 'aliattia02';
+
+    if (elements.lastUpdated) {
+        // Get translation for "Last updated"
+        const lastUpdatedText = window.TranslationSystem ?
+            window.TranslationSystem.getTranslation('common.stats.lastUpdated') || 'Last updated:' :
+            'Last updated:';
+
+        // Format date using TranslationSystem if available
+        const formattedDate = window.TranslationSystem && typeof window.TranslationSystem.formatDate === 'function' ?
+            window.TranslationSystem.formatDate(lastUpdated) : formatDate(lastUpdated);
+
+        elements.lastUpdated.textContent = `${lastUpdatedText} ${formattedDate}`;
+    }
+}
+
 // Export functions and data for global access and timeline integration
 window.incidents = incidents;
 window.filteredIncidents = filteredIncidents;
 window.showIncidentModal = showIncidentModal;
 window.clearAllFilters = clearAllFilters;
 window.applyFilters = applyFilters;
+window.openImageModal = openImageModal;
+window.formatDate = formatDate;
+window.formatNumber = formatNumber;
+window.updateLastUpdated = updateLastUpdated;
+
+// Full platform export with multilingual support
 window.GazaDocsPlatform = {
     incidents,
     filteredIncidents,
     formatDate,
+    formatNumber,
     escapeHtml,
     capitalizeFirst,
     typeColors,
-    currentUser
+    currentUser,
+    lastUpdated,
+
+    // Add references to translation functions for external components
+    getTranslation: function(key) {
+        return window.TranslationSystem ?
+            window.TranslationSystem.getTranslation(key) :
+            null;
+    },
+
+    translateElement: function(element, key) {
+        if (window.TranslationSystem) {
+            window.TranslationSystem.translateElement(element, key);
+        }
+    },
+
+    applyTranslations: function() {
+        if (window.TranslationSystem) {
+            window.TranslationSystem.updatePageLanguage();
+        }
+    }
 };
+
+console.log('✅ Gaza Crisis Documentation Platform main.js initialized with multilingual support - 2025-10-12 08:33:31');

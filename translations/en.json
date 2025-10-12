@@ -1,0 +1,420 @@
+{
+  "common": {
+    "siteTitle": "Gaza Crisis Documentation",
+    "nav": {
+      "warCrimes": "⚖️ War Crimes",
+      "hungerCrisis": "🍽️ Hunger Crisis",
+      "timeline": "📋 Timeline",
+      "extractTool": "🔍 Extract Incidents"
+    },
+    "footer": {
+      "copyright": "© 2024 Gaza Crisis Documentation Platform. All rights reserved.",
+      "mainSections": "🏠 Main Sections",
+      "dashboard": "🏠 Crisis Dashboard",
+      "warCrimes": "⚖️ War Crimes Documentation",
+      "hungerCrisis": "🍽️ Hunger Crisis Analysis",
+      "timeline": "📋 Major Incidents Timeline",
+      "warCrimesStats": "⚖️ War Crimes Stats",
+      "childrenKilled": "👶 Children Killed",
+      "journalistsKilled": "📰 Journalists Killed",
+      "medicalPersonnel": "🏥 Medical Personnel Killed",
+      "totalDeaths": "💀 Total Deaths",
+      "medicalPersonnelDetained": "🚑 Medical Personnel Detained",
+      "hospitalsAttacked": "🏥 Hospitals Attacked",
+      "waterInfrastructure": "💧 Water Infrastructure",
+      "housingDestroyed": "🏠 Housing Destroyed",
+      "hungerCrisisStats": "🍽️ Hunger Crisis Stats",
+      "totalStarvationDeaths": "💀 Total Deaths Due to Starvation",
+      "childrenStarvation": "👶 Children Died from Starvation",
+      "starvationRate": "📊 Population Starvation Rate",
+      "displacedPeople": "🏠 Displaced People",
+      "calorieDeficit": "🥖 Daily Calorie Deficit",
+      "aidBlocked": "🚫 Aid Requests Denied",
+      "bakeriesDestroyed": "🏭 Bakeries Destroyed",
+      "agricultureDestroyed": "🌾 Agricultural Land Destroyed",
+      "platformInfo": "📚 Platform Info",
+      "about": "ℹ️ About This Documentation",
+      "methodology": "🔬 Data Methodology",
+      "sources": "📰 Sources & Verification",
+      "legal": "⚖️ Legal Framework",
+      "contact": "📧 Contact & Reports",
+      "api": "🔌 Data API Access",
+      "download": "📥 Download Reports",
+      "share": "📤 Share & Embed",
+      "verifiedData": "🔍 All data verified through multiple sources",
+      "legalAccountability": "⚖️ Preserved for legal accountability"
+    },
+    "share": {
+      "title": "Share This Documentation",
+      "description": "Help spread awareness about this crisis by sharing this page on social media",
+      "loading": "Loading share buttons...",
+      "copyLink": "Copy Link",
+      "twitter": "Twitter/X",
+      "facebook": "Facebook",
+      "linkedin": "LinkedIn",
+      "whatsapp": "WhatsApp",
+      "telegram": "Telegram",
+      "reddit": "Reddit",
+      "email": "Email"
+    },
+    "buttons": {
+      "viewDetails": "View Details",
+      "viewAll": "View All",
+      "readMore": "Read More",
+      "clearFilters": "Clear Filters",
+      "close": "×",
+      "reload": "🔄 Reload",
+      "reloadPage": "🔄 Reload Page"
+    },
+    "stats": {
+      "childrenKilled": "Children Killed",
+      "journalistsKilled": "Journalists Killed",
+      "medicalStaffKilled": "Medical Staff Killed",
+      "totalDeaths": "Total Deaths",
+      "injured": "Injured",
+      "deaths": "Deaths",
+      "children": "Children",
+      "journalists": "Journalists",
+      "medicalStaff": "Medical Staff",
+      "displaced": "Displaced",
+      "totalAffected": "Total Affected",
+      "incidentsPlural": "incidents documented",
+      "incidentsSingular": "incident documented",
+      "lastUpdated": "Last updated:"
+    },
+    "incident": {
+      "date": "Date",
+      "time": "Time",
+      "location": "Location",
+      "type": "Type",
+      "overallImpact": "📊 Overall Impact Summary:",
+      "totalAffected": "Total Affected",
+      "critical": "Critical Condition",
+      "hospitalized": "Hospitalized",
+      "deaths": "deaths",
+      "affected": "affected",
+      "impactAssessing": "Impact being assessed",
+      "detailedDocumentation": "📋 Detailed Documentation",
+      "individualDocumentation": "📋 Individual Documentation (${count} cases):",
+      "documentedVictims": "Documented victims:",
+      "nameProtected": "Name protected",
+      "nameProtectedPrivacy": "👤 Name Protected for Privacy",
+      "verified": "✓ Verified",
+      "verifiedMultiple": "✅ This incident has been verified through multiple sources",
+      "pending": "⏳ Pending",
+      "pendingVerification": "⏳ This incident is pending verification",
+      "documentedCasesPlural": "documented cases",
+      "documentedCasesSingular": "documented case",
+      "andMoreVictims": " and ${count} more",
+      "age": "Age",
+      "cause": "💔 Cause",
+      "medicalFacility": "🏥 Medical Facility",
+      "reference": "🆔 Reference",
+      "sources": "📰 Sources",
+      "noSources": "No sources available",
+      "privacyNotes": "🔒 Privacy & Documentation Notes",
+      "privacyStatus": "Privacy Status",
+      "documentationPurpose": "Documentation Purpose",
+      "photoUnavailable": "📷 Photo unavailable",
+      "loading": "📷 Loading...",
+      "photoProtected": "🔒 Photo protected",
+      "unknownTime": "Unknown"
+    },
+    "timeline": {
+      "loading": "Timeline Loading...",
+      "pleaseWait": "Please wait while the timeline loads.",
+      "dataAvailable": "Data available"
+    },
+    "filters": {
+      "noResults": "No results found. Please try different filters."
+    }
+  },
+  "index": {
+    "pageTitle": "Gaza Crisis Documentation",
+    "metaDescription": "Comprehensive documentation of war crimes, hunger crisis, and humanitarian violations in Gaza",
+    "apiStatus": {
+      "loading": "Loading...",
+      "live": "Live Data",
+      "fallback": "Cached Data"
+    },
+    "dataStatus": {
+      "loading": "📊 Loading crisis data from Tech for Palestine API v3..."
+    },
+    "warCrimes": {
+      "title": "⚖️ War Crimes & International Law Violations",
+      "description": "Comprehensive documentation of systematic violations including attacks on civilians, medical facilities, and protected sites.",
+      "viewStats": "View Full Statistics →"
+    },
+    "hungerCrisis": {
+      "title": "🍽️ Hunger Crisis & Starvation as Weapon of War",
+      "description": "Documentation of systematic starvation tactics, aid blockades, and humanitarian catastrophe affecting 2.3 million people.",
+      "viewStats": "View Hunger Statistics →",
+      "starvationDeaths": "Total Deaths from Starvation",
+      "famineConditions": "People in Famine Conditions",
+      "totalAffected": "Total Affected by Starvation"
+    },
+    "timeline": {
+      "title": "📋 Complete Historical Timeline (1948-Present)",
+      "description": "Interactive documentation from the 1948 Nakba through current genocide. Verified sources from UN, Human Rights Watch, and international organizations.",
+      "viewTimeline": "View Detailed Timeline →",
+      "totalEvents": "Total Events",
+      "verifiedCases": "Verified Cases",
+      "totalDeaths": "Total Deaths"
+    },
+    "timelineSection": {
+      "title": "📊 Complete Historical Timeline (1948-Present)",
+      "subtitle": "27 major documented massacres and war crimes from the Nakba to current genocide",
+      "sources": "🔍 Sources: UN, Human Rights Watch, B'Tselem, Al-Haq, PCHR"
+    },
+    "stats": {
+      "totalEvents": "Total Events",
+      "documentedIncidents": "Documented Incidents",
+      "totalDeaths": "Total Deaths",
+      "verifiedCasualties": "Verified Casualties",
+      "injured": "Injured",
+      "documentedInjuries": "Documented Injuries",
+      "displaced": "Displaced",
+      "forcedDisplacement": "Forced Displacement"
+    },
+    "comparison": {
+      "header": "📊 Historical vs Current Comparison",
+      "historicalTitle": "📜 Historical Period (1948-2023)",
+      "currentTitle": "🚨 Current Genocide (Oct 2023-Present)",
+      "duration": "Duration:",
+      "majorEvents": "Major Events:",
+      "totalDeaths": "Total Deaths:",
+      "avgDeathsYear": "Avg Deaths/Year:",
+      "avgDeathsDay": "Avg Deaths/Day:"
+    },
+    "legend": {
+      "title": "📌 Event Types",
+      "massacres": "Massacres",
+      "militaryOperations": "Military Operations",
+      "forcedDisplacement": "Forced Displacement",
+      "hospitalAttacks": "Hospital Attacks",
+      "starvationWarfare": "Starvation Warfare",
+      "protestSuppression": "Protest Suppression"
+    },
+    "filters": {
+      "dateRange": "📅 Date Range",
+      "allDates": "All Dates (1948-Present)",
+      "nakba": "Nakba (1948)",
+      "firstIntifada": "First Intifada (1987-1993)",
+      "secondIntifada": "Second Intifada (2000-2005)",
+      "gazaOperations": "Gaza Operations (2008-2021)",
+      "currentGenocide": "Current Genocide (2023-Present)",
+      "eventType": "🏷️ Event Type",
+      "allTypes": "All Types",
+      "massacres": "Massacres",
+      "militaryOperations": "Military Operations",
+      "forcedDisplacement": "Forced Displacement",
+      "hospitalAttacks": "Hospital Attacks",
+      "protectedSiteAttacks": "Protected Site Attacks",
+      "starvationWarfare": "Starvation Warfare",
+      "protestSuppression": "Protest Suppression",
+      "search": "🔍 Search",
+      "searchPlaceholder": "Search events, locations...",
+      "verification": "✅ Verification",
+      "allStatuses": "All Statuses",
+      "verified": "Verified",
+      "disputed": "Disputed",
+      "underInvestigation": "Under Investigation",
+      "casualtyScale": "📊 Casualty Scale",
+      "allScales": "All Scales",
+      "lowCasualties": "1-50 casualties",
+      "mediumCasualties": "51-500 casualties",
+      "highCasualties": "501-2000 casualties",
+      "massiveCasualties": "2000+ casualties",
+      "clearAll": "🔄 Clear All Filters"
+    },
+    "timelineStatus": {
+      "loading": "📊 Loading timeline data..."
+    },
+    "timelineLoading": {
+      "message": "Loading Complete Historical Timeline...",
+      "detail": "Fetching data from 1948 to present..."
+    },
+    "modal": {
+      "title": "Event Details",
+      "basicInfo": "📋 Basic Information",
+      "date": "📅 Date:",
+      "location": "📍 Location:",
+      "eventType": "🏷️ Event Type:",
+      "verification": "✅ Verification:",
+      "summary": "📄 Summary",
+      "casualties": "💥 Casualties & Impact",
+      "warCrimes": "⚖️ War Crimes Documented",
+      "sources": "📰 Verified Sources",
+      "viewFull": "📖 View Full Documentation →"
+    }
+  },
+  "timeline": {
+    "pageTitle": "Major Incidents Timeline - Gaza Crisis Documentation",
+    "metaDescription": "Comprehensive timeline of historical massacres (1948-2023) and current genocide (2023-present) in Gaza and Palestine",
+    "header": {
+      "title": "📋 Historical & Current Timeline",
+      "description": "Comprehensive documentation from 1948 Nakba through current genocide. Interactive timeline with verified sources from UN, Human Rights Watch, and other international organizations."
+    },
+    "nav": {
+      "timelineView": "📅 Timeline",
+      "mapView": "🗺️ Map",
+      "listView": "📋 List"
+    },
+    "stats": {
+      "totalEvents": "Total Events",
+      "totalDeaths": "Total Deaths",
+      "lastUpdate": "Last Updated",
+      "massacres": "Massacres",
+      "documentedEvents": "Documented Events",
+      "deaths": "Total Deaths",
+      "verifiedCasualties": "Verified Casualties",
+      "injured": "Injured",
+      "documentedInjuries": "Documented Injuries",
+      "displaced": "Displaced",
+      "forcedDisplacement": "Forced Displacement"
+    },
+    "modeSelector": {
+      "title": "📊 Select Timeline Period",
+      "sources": "🔍 Sources: UN, Human Rights Watch"
+    },
+    "modes": {
+      "historical": {
+        "title": "Historical Massacres",
+        "period": "1948 - October 6, 2023",
+        "events": "Events:",
+        "deaths": "Deaths:"
+      },
+      "current": {
+        "title": "Current Genocide",
+        "period": "October 7, 2023 - Present",
+        "events": "Events:",
+        "deaths": "Deaths:"
+      },
+      "both": {
+        "title": "Complete Timeline",
+        "period": "1948 - Present",
+        "events": "Total Events:",
+        "deaths": "Total Deaths:"
+      }
+    },
+    "comparison": {
+      "title": "📊 Historical vs Current Comparison",
+      "historical": {
+        "title": "📜 Historical Period (1948-2023)",
+        "duration": "Duration:",
+        "durationValue": "75 years",
+        "events": "Major Events:",
+        "deaths": "Total Deaths:",
+        "avgDeaths": "Avg Deaths/Year:"
+      },
+      "current": {
+        "title": "🚨 Current Genocide (Oct 2023-Present)",
+        "duration": "Duration:",
+        "events": "Major Events:",
+        "deaths": "Total Deaths:",
+        "avgDeaths": "Avg Deaths/Day:"
+      }
+    },
+    "legend": {
+      "title": "📌 Event Types",
+      "massacres": "Massacres",
+      "militaryOperations": "Military Operations",
+      "forcedDisplacement": "Forced Displacement",
+      "hospitalAttacks": "Hospital Attacks",
+      "starvationWarfare": "Starvation Warfare",
+      "protestSuppression": "Protest Suppression"
+    },
+    "filters": {
+      "dateRange": "📅 Date Range",
+      "allDates": "All Dates",
+      "nakba": "Nakba (1948)",
+      "firstIntifada": "First Intifada (1987-1993)",
+      "secondIntifada": "Second Intifada (2000-2005)",
+      "gazaOperations": "Gaza Operations (2008-2021)",
+      "currentGenocide": "Current Genocide (2023-Present)",
+      "eventType": "🏷️ Event Type",
+      "allTypes": "All Types",
+      "massacres": "Massacres",
+      "militaryOperations": "Military Operations",
+      "forcedDisplacement": "Forced Displacement",
+      "hospitalAttacks": "Hospital Attacks",
+      "protectedSiteAttacks": "Protected Site Attacks",
+      "starvationWarfare": "Starvation Warfare",
+      "protestSuppression": "Protest Suppression",
+      "search": "🔍 Search",
+      "searchPlaceholder": "Search events, locations...",
+      "verification": "✅ Verification",
+      "allStatuses": "All Statuses",
+      "verified": "Verified",
+      "disputed": "Disputed",
+      "underInvestigation": "Under Investigation",
+      "casualtyScale": "📊 Casualty Scale",
+      "allScales": "All Scales",
+      "lowCasualties": "1-50 casualties",
+      "mediumCasualties": "51-500 casualties",
+      "highCasualties": "501-2000 casualties",
+      "massiveCasualties": "2000+ casualties",
+      "clearAll": "🔄 Clear All Filters"
+    },
+    "loading": {
+      "status": "📊 Loading timeline data...",
+      "message": "Loading Historical Timeline...",
+      "detail": "Fetching massacres data from 1948-2023..."
+    },
+    "map": {
+      "legendTitle": "Incident Types",
+      "massacres": "Massacres",
+      "militaryOperations": "Military Operations",
+      "forcedDisplacement": "Forced Displacement",
+      "hospitalAttacks": "Hospital Attacks",
+      "starvationWarfare": "Starvation Warfare"
+    },
+    "list": {
+      "title": "Event Documentation",
+      "sortBy": "Sort by:",
+      "sortDateDesc": "Date (Newest First)",
+      "sortDateAsc": "Date (Oldest First)",
+      "sortDeathsDesc": "Deaths (Highest First)",
+      "sortType": "Event Type",
+      "sortLocation": "Location",
+      "loading": "Loading events...",
+      "noResults": "No events found",
+      "adjustFilters": "Try adjusting your filters or search criteria.",
+      "clearAllFilters": "Clear All Filters"
+    },
+    "modal": {
+      "title": "Event Details",
+      "basicInfo": "📋 Basic Information",
+      "date": "📅 Date:",
+      "location": "📍 Location:",
+      "eventType": "🏷️ Event Type:",
+      "verification": "✅ Verification:",
+      "summary": "📄 Summary",
+      "casualties": "💥 Casualties & Impact",
+      "warCrimes": "⚖️ War Crimes Documented",
+      "sources": "📰 Verified Sources",
+      "viewFullDoc": "📖 View Full Documentation →"
+    }
+  },
+  "deirYassin": {
+    "pageTitle": "Deir Yassin Massacre (9 April 1948) | Historical Documentation",
+    "breadcrumb": {
+      "home": "🏠 Home",
+      "timeline": "📋 Timeline",
+      "historical": "📜 Historical",
+      "current": "Deir Yassin 1948"
+    },
+    "hero": {
+      "category": "📜 HISTORICAL MASSACRE • NAKBA 1948",
+      "title": "Deir Yassin Massacre",
+      "subtitle": "Killings of civilians in a West-Jerusalem village during the 1948 war"
+    },
+    "quickFacts": {
+      "title": "⚡ Quick Facts",
+      "eventType": "Event Type",
+      "perpetrators": "Perpetrators",
+      "verification": "Verification",
+      "classification": "Classification"
+    }
+  }
+}

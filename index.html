@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gaza Crisis Documentation</title>
-    <meta name="description" content="Comprehensive documentation of war crimes, hunger crisis, and humanitarian violations in Gaza">
+    <title data-i18n="index.pageTitle">Gaza Crisis Documentation</title>
+    <meta name="description" data-i18n="index.metaDescription" content="Comprehensive documentation of war crimes, hunger crisis, and humanitarian violations in Gaza">
 
     <!-- Main Styles -->
     <link rel="stylesheet" href="shared-styles.css">
@@ -547,22 +547,28 @@
         }
     </style>
 </head>
-<body>
+<body data-i18n-page-title="index.pageTitle" data-i18n-meta-desc="index.metaDescription">
     <!-- API Status Indicator -->
-    <div id="apiStatus" class="api-status loading">Loading...</div>
+    <div id="apiStatus" class="api-status loading" data-i18n="index.apiStatus.loading">Loading...</div>
 
     <!-- Header -->
     <header class="header">
         <div class="container">
             <h1 class="logo">
-                <a href="index.html">Gaza Crisis Documentation</a>
+                <a href="index.html" data-i18n="common.siteTitle">Gaza Crisis Documentation</a>
             </h1>
             <nav class="nav">
-                <a href="war-crimes-stats.html" class="nav-btn">⚖️ War Crimes</a>
-                <a href="hunger-crisis-stats.html" class="nav-btn">🍽️ Hunger Crisis</a>
-                <a href="major-incidents-timeline.html" class="nav-btn">📋 Major Incidents</a>
-                <a href="http://localhost:5000" class="nav-btn tool-btn">🔍 Extract Incidents</a>
+                <a href="war-crimes-stats.html" class="nav-btn" data-i18n="common.nav.warCrimes">⚖️ War Crimes</a>
+                <a href="hunger-crisis-stats.html" class="nav-btn" data-i18n="common.nav.hungerCrisis">🍽️ Hunger Crisis</a>
+                <a href="major-incidents-timeline.html" class="nav-btn" data-i18n="common.nav.timeline">📋 Timeline</a>
+                <a href="http://localhost:5000" class="nav-btn tool-btn" data-i18n="common.nav.extractTool">🔍 Extract Incidents</a>
             </nav>
+
+            <!-- Language Selector -->
+            <div id="language-selector" class="language-selector">
+                <!-- Will be populated by translation-system.js -->
+            </div>
+
             <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
         </div>
     </header>
@@ -571,7 +577,7 @@
     <main class="main">
         <!-- Data Loading Status -->
         <div id="dataStatus" class="container" style="display: none;">
-            <div class="data-status" id="dataStatusContent">
+            <div class="data-status" id="dataStatusContent" data-i18n="index.dataStatus.loading">
                 📊 Loading crisis data from Tech for Palestine API v3...
             </div>
         </div>
@@ -581,25 +587,25 @@
             <div class="container">
                 <div class="banner-content">
                     <div class="banner-text">
-                        <h3>⚖️ War Crimes & International Law Violations</h3>
-                        <p>Comprehensive documentation of systematic violations including attacks on civilians, medical facilities, and protected sites.</p>
+                        <h3 data-i18n="index.warCrimes.title">⚖️ War Crimes & International Law Violations</h3>
+                        <p data-i18n="index.warCrimes.description">Comprehensive documentation of systematic violations including attacks on civilians, medical facilities, and protected sites.</p>
                     </div>
                     <div class="banner-stats">
                         <div class="quick-stat">
                             <span class="stat-value" id="childrenKilledStat">Loading...</span>
-                            <span class="stat-label">Children Killed</span>
+                            <span class="stat-label" data-i18n="common.stats.childrenKilled">Children Killed</span>
                         </div>
                         <div class="quick-stat">
                             <span class="stat-value" id="journalistsKilledStat">Loading...</span>
-                            <span class="stat-label">Journalists Killed</span>
+                            <span class="stat-label" data-i18n="common.stats.journalistsKilled">Journalists Killed</span>
                         </div>
                         <div class="quick-stat">
                             <span class="stat-value" id="medicalStaffKilledStat">Loading...</span>
-                            <span class="stat-label">Medical Staff Killed</span>
+                            <span class="stat-label" data-i18n="common.stats.medicalStaffKilled">Medical Staff Killed</span>
                         </div>
                     </div>
                     <div class="banner-action">
-                        <a href="war-crimes-stats.html" class="stats-btn">
+                        <a href="war-crimes-stats.html" class="stats-btn" data-i18n="index.warCrimes.viewStats">
                             View Full Statistics →
                         </a>
                     </div>
@@ -612,25 +618,25 @@
             <div class="container">
                 <div class="banner-content">
                     <div class="banner-text">
-                        <h3>🍽️ Hunger Crisis & Starvation as Weapon of War</h3>
-                        <p>Documentation of systematic starvation tactics, aid blockades, and humanitarian catastrophe affecting 2.3 million people.</p>
+                        <h3 data-i18n="index.hungerCrisis.title">🍽️ Hunger Crisis & Starvation as Weapon of War</h3>
+                        <p data-i18n="index.hungerCrisis.description">Documentation of systematic starvation tactics, aid blockades, and humanitarian catastrophe affecting 2.3 million people.</p>
                     </div>
                     <div class="banner-stats">
                         <div class="quick-stat">
                             <span class="stat-value" id="totalStarvationDeathsStat">Loading...</span>
-                            <span class="stat-label">Total Deaths from Starvation</span>
+                            <span class="stat-label" data-i18n="index.hungerCrisis.starvationDeaths">Total Deaths from Starvation</span>
                         </div>
                         <div class="quick-stat">
                             <span class="stat-value" id="peopleInFamineStat">Loading...</span>
-                            <span class="stat-label">People in Famine Conditions</span>
+                            <span class="stat-label" data-i18n="index.hungerCrisis.famineConditions">People in Famine Conditions</span>
                         </div>
                         <div class="quick-stat">
                             <span class="stat-value" id="totalAffectedPopulationStat">Loading...</span>
-                            <span class="stat-label">Total Affected by Starvation</span>
+                            <span class="stat-label" data-i18n="index.hungerCrisis.totalAffected">Total Affected by Starvation</span>
                         </div>
                     </div>
                     <div class="banner-action">
-                        <a href="hunger-crisis-stats.html" class="stats-btn">
+                        <a href="hunger-crisis-stats.html" class="stats-btn" data-i18n="index.hungerCrisis.viewStats">
                             View Hunger Statistics →
                         </a>
                     </div>
@@ -643,25 +649,25 @@
             <div class="container">
                 <div class="banner-content">
                     <div class="banner-text">
-                        <h3>📋 Complete Historical Timeline (1948-Present)</h3>
-                        <p>Interactive documentation from the 1948 Nakba through current genocide. Verified sources from UN, Human Rights Watch, and international organizations.</p>
+                        <h3 data-i18n="index.timeline.title">📋 Complete Historical Timeline (1948-Present)</h3>
+                        <p data-i18n="index.timeline.description">Interactive documentation from the 1948 Nakba through current genocide. Verified sources from UN, Human Rights Watch, and international organizations.</p>
                     </div>
                     <div class="banner-stats">
                         <div class="quick-stat">
                             <span class="stat-value" id="totalIncidentsCount">27</span>
-                            <span class="stat-label">Total Events</span>
+                            <span class="stat-label" data-i18n="index.timeline.totalEvents">Total Events</span>
                         </div>
                         <div class="quick-stat">
                             <span class="stat-value" id="verifiedIncidentsCount">27</span>
-                            <span class="stat-label">Verified Cases</span>
+                            <span class="stat-label" data-i18n="index.timeline.verifiedCases">Verified Cases</span>
                         </div>
                         <div class="quick-stat">
                             <span class="stat-value" id="casualtiesCount">88K+</span>
-                            <span class="stat-label">Total Deaths</span>
+                            <span class="stat-label" data-i18n="index.timeline.totalDeaths">Total Deaths</span>
                         </div>
                     </div>
                     <div class="banner-action">
-                        <a href="major-incidents-timeline.html" class="stats-btn">
+                        <a href="major-incidents-timeline.html" class="stats-btn" data-i18n="index.timeline.viewTimeline">
                             View Detailed Timeline →
                         </a>
                     </div>
@@ -673,10 +679,10 @@
         <div class="container">
             <!-- Timeline Header -->
             <div class="timeline-header-section">
-                <h2>📊 Complete Historical Timeline (1948-Present)</h2>
-                <p>27 major documented massacres and war crimes from the Nakba to current genocide</p>
+                <h2 data-i18n="index.timelineSection.title">📊 Complete Historical Timeline (1948-Present)</h2>
+                <p data-i18n="index.timelineSection.subtitle">27 major documented massacres and war crimes from the Nakba to current genocide</p>
                 <span class="data-source-indicator">
-                    🔍 Sources: UN, Human Rights Watch, B'Tselem, Al-Haq, PCHR
+                    <span data-i18n="index.timelineSection.sources">🔍 Sources: UN, Human Rights Watch, B'Tselem, Al-Haq, PCHR</span>
                 </span>
             </div>
 
@@ -686,73 +692,73 @@
                     <div class="stat-card">
                         <div class="stat-icon">⚠️</div>
                         <div class="stat-number" id="massacresCount">27</div>
-                        <div class="stat-label">Total Events</div>
-                        <div class="stat-sublabel">Documented Incidents</div>
+                        <div class="stat-label" data-i18n="index.stats.totalEvents">Total Events</div>
+                        <div class="stat-sublabel" data-i18n="index.stats.documentedIncidents">Documented Incidents</div>
                     </div>
                     <div class="stat-card">
                         <div class="stat-icon">💀</div>
                         <div class="stat-number" id="deathsCount">88K+</div>
-                        <div class="stat-label">Total Deaths</div>
-                        <div class="stat-sublabel">Verified Casualties</div>
+                        <div class="stat-label" data-i18n="index.stats.totalDeaths">Total Deaths</div>
+                        <div class="stat-sublabel" data-i18n="index.stats.verifiedCasualties">Verified Casualties</div>
                     </div>
                     <div class="stat-card">
                         <div class="stat-icon">🏥</div>
                         <div class="stat-number" id="injuredCount">150K+</div>
-                        <div class="stat-label">Injured</div>
-                        <div class="stat-sublabel">Documented Injuries</div>
+                        <div class="stat-label" data-i18n="index.stats.injured">Injured</div>
+                        <div class="stat-sublabel" data-i18n="index.stats.documentedInjuries">Documented Injuries</div>
                     </div>
                     <div class="stat-card">
                         <div class="stat-icon">🏠</div>
                         <div class="stat-number" id="displacedCount">2.3M</div>
-                        <div class="stat-label">Displaced</div>
-                        <div class="stat-sublabel">Forced Displacement</div>
+                        <div class="stat-label" data-i18n="index.stats.displaced">Displaced</div>
+                        <div class="stat-sublabel" data-i18n="index.stats.forcedDisplacement">Forced Displacement</div>
                     </div>
                 </div>
 
                 <!-- Period Comparison -->
                 <div class="period-comparison" id="periodComparison">
-                    <div class="comparison-header">
+                    <div class="comparison-header" data-i18n="index.comparison.header">
                         📊 Historical vs Current Comparison
                     </div>
                     <div class="comparison-grid">
                         <div class="comparison-card historical">
-                            <div class="comparison-title">📜 Historical Period (1948-2023)</div>
+                            <div class="comparison-title" data-i18n="index.comparison.historicalTitle">📜 Historical Period (1948-2023)</div>
                             <div class="comparison-stats">
                                 <div class="comparison-stat">
-                                    <span>Duration:</span>
+                                    <span data-i18n="index.comparison.duration">Duration:</span>
                                     <strong>75 years</strong>
                                 </div>
                                 <div class="comparison-stat">
-                                    <span>Major Events:</span>
+                                    <span data-i18n="index.comparison.majorEvents">Major Events:</span>
                                     <strong>17</strong>
                                 </div>
                                 <div class="comparison-stat">
-                                    <span>Total Deaths:</span>
+                                    <span data-i18n="index.comparison.totalDeaths">Total Deaths:</span>
                                     <strong>27,000+</strong>
                                 </div>
                                 <div class="comparison-stat">
-                                    <span>Avg Deaths/Year:</span>
+                                    <span data-i18n="index.comparison.avgDeathsYear">Avg Deaths/Year:</span>
                                     <strong>360</strong>
                                 </div>
                             </div>
                         </div>
                         <div class="comparison-card current">
-                            <div class="comparison-title">🚨 Current Genocide (Oct 2023-Present)</div>
+                            <div class="comparison-title" data-i18n="index.comparison.currentTitle">🚨 Current Genocide (Oct 2023-Present)</div>
                             <div class="comparison-stats">
                                 <div class="comparison-stat">
-                                    <span>Duration:</span>
+                                    <span data-i18n="index.comparison.duration">Duration:</span>
                                     <strong>12 months</strong>
                                 </div>
                                 <div class="comparison-stat">
-                                    <span>Major Events:</span>
+                                    <span data-i18n="index.comparison.majorEvents">Major Events:</span>
                                     <strong>10</strong>
                                 </div>
                                 <div class="comparison-stat">
-                                    <span>Total Deaths:</span>
+                                    <span data-i18n="index.comparison.totalDeaths">Total Deaths:</span>
                                     <strong>61,200+</strong>
                                 </div>
                                 <div class="comparison-stat">
-                                    <span>Avg Deaths/Day:</span>
+                                    <span data-i18n="index.comparison.avgDeathsDay">Avg Deaths/Day:</span>
                                     <strong>167</strong>
                                 </div>
                             </div>
@@ -763,31 +769,31 @@
 
             <!-- Event Type Legend -->
             <div class="event-type-legend">
-                <div class="legend-title">📌 Event Types</div>
+                <div class="legend-title" data-i18n="index.legend.title">📌 Event Types</div>
                 <div class="legend-items">
                     <div class="legend-item">
                         <span class="legend-color" style="background: #dc3545;"></span>
-                        <span>Massacres</span>
+                        <span data-i18n="index.legend.massacres">Massacres</span>
                     </div>
                     <div class="legend-item">
                         <span class="legend-color" style="background: #fd7e14;"></span>
-                        <span>Military Operations</span>
+                        <span data-i18n="index.legend.militaryOperations">Military Operations</span>
                     </div>
                     <div class="legend-item">
                         <span class="legend-color" style="background: #6f42c1;"></span>
-                        <span>Forced Displacement</span>
+                        <span data-i18n="index.legend.forcedDisplacement">Forced Displacement</span>
                     </div>
                     <div class="legend-item">
                         <span class="legend-color" style="background: #e83e8c;"></span>
-                        <span>Hospital Attacks</span>
+                        <span data-i18n="index.legend.hospitalAttacks">Hospital Attacks</span>
                     </div>
                     <div class="legend-item">
                         <span class="legend-color" style="background: #6c757d;"></span>
-                        <span>Starvation Warfare</span>
+                        <span data-i18n="index.legend.starvationWarfare">Starvation Warfare</span>
                     </div>
                     <div class="legend-item">
                         <span class="legend-color" style="background: #0d6efd;"></span>
-                        <span>Protest Suppression</span>
+                        <span data-i18n="index.legend.protestSuppression">Protest Suppression</span>
                     </div>
                 </div>
             </div>
@@ -797,70 +803,70 @@
                 <div class="filter-grid">
                     <!-- Date Range Filter -->
                     <div class="filter-group">
-                        <label class="filter-label">📅 Date Range</label>
+                        <label class="filter-label" data-i18n="index.filters.dateRange">📅 Date Range</label>
                         <select id="dateRangeFilter" class="filter-select">
-                            <option value="">All Dates (1948-Present)</option>
-                            <option value="nakba">Nakba (1948)</option>
-                            <option value="first_intifada">First Intifada (1987-1993)</option>
-                            <option value="second_intifada">Second Intifada (2000-2005)</option>
-                            <option value="gaza_operations">Gaza Operations (2008-2021)</option>
-                            <option value="current_genocide">Current Genocide (2023-Present)</option>
+                            <option value="" data-i18n="index.filters.allDates">All Dates (1948-Present)</option>
+                            <option value="nakba" data-i18n="index.filters.nakba">Nakba (1948)</option>
+                            <option value="first_intifada" data-i18n="index.filters.firstIntifada">First Intifada (1987-1993)</option>
+                            <option value="second_intifada" data-i18n="index.filters.secondIntifada">Second Intifada (2000-2005)</option>
+                            <option value="gaza_operations" data-i18n="index.filters.gazaOperations">Gaza Operations (2008-2021)</option>
+                            <option value="current_genocide" data-i18n="index.filters.currentGenocide">Current Genocide (2023-Present)</option>
                         </select>
                     </div>
 
                     <!-- Event Type Filter -->
                     <div class="filter-group">
-                        <label class="filter-label">🏷️ Event Type</label>
+                        <label class="filter-label" data-i18n="index.filters.eventType">🏷️ Event Type</label>
                         <select id="eventTypeFilter" class="filter-select">
-                            <option value="">All Types</option>
-                            <option value="massacre">Massacres</option>
-                            <option value="military_operation">Military Operations</option>
-                            <option value="forced_displacement">Forced Displacement</option>
-                            <option value="hospital_attack">Hospital Attacks</option>
-                            <option value="protected_site_attack">Protected Site Attacks</option>
-                            <option value="starvation_warfare">Starvation Warfare</option>
-                            <option value="protest_suppression">Protest Suppression</option>
+                            <option value="" data-i18n="index.filters.allTypes">All Types</option>
+                            <option value="massacre" data-i18n="index.filters.massacres">Massacres</option>
+                            <option value="military_operation" data-i18n="index.filters.militaryOperations">Military Operations</option>
+                            <option value="forced_displacement" data-i18n="index.filters.forcedDisplacement">Forced Displacement</option>
+                            <option value="hospital_attack" data-i18n="index.filters.hospitalAttacks">Hospital Attacks</option>
+                            <option value="protected_site_attack" data-i18n="index.filters.protectedSiteAttacks">Protected Site Attacks</option>
+                            <option value="starvation_warfare" data-i18n="index.filters.starvationWarfare">Starvation Warfare</option>
+                            <option value="protest_suppression" data-i18n="index.filters.protestSuppression">Protest Suppression</option>
                         </select>
                     </div>
 
                     <!-- Search Filter -->
                     <div class="filter-group">
-                        <label class="filter-label">🔍 Search</label>
-                        <input type="text" id="searchFilter" class="search-input" placeholder="Search events, locations...">
+                        <label class="filter-label" data-i18n="index.filters.search">🔍 Search</label>
+                        <input type="text" id="searchFilter" class="search-input" data-i18n-placeholder="index.filters.searchPlaceholder" placeholder="Search events, locations...">
                     </div>
 
                     <!-- Verification Status -->
                     <div class="filter-group">
-                        <label class="filter-label">✅ Verification</label>
+                        <label class="filter-label" data-i18n="index.filters.verification">✅ Verification</label>
                         <select id="verificationFilter" class="filter-select">
-                            <option value="">All Statuses</option>
-                            <option value="verified">Verified</option>
-                            <option value="disputed">Disputed</option>
-                            <option value="under_investigation">Under Investigation</option>
+                            <option value="" data-i18n="index.filters.allStatuses">All Statuses</option>
+                            <option value="verified" data-i18n="index.filters.verified">Verified</option>
+                            <option value="disputed" data-i18n="index.filters.disputed">Disputed</option>
+                            <option value="under_investigation" data-i18n="index.filters.underInvestigation">Under Investigation</option>
                         </select>
                     </div>
                 </div>
 
                 <!-- Casualty Scale Chips -->
                 <div class="filter-group" style="margin-top: 1rem;">
-                    <label class="filter-label">📊 Casualty Scale</label>
+                    <label class="filter-label" data-i18n="index.filters.casualtyScale">📊 Casualty Scale</label>
                     <div class="casualty-scale-filters">
-                        <button class="scale-chip active" data-scale="all">All Scales</button>
-                        <button class="scale-chip" data-scale="low">1-50 casualties</button>
-                        <button class="scale-chip" data-scale="medium">51-500 casualties</button>
-                        <button class="scale-chip" data-scale="high">501-2000 casualties</button>
-                        <button class="scale-chip" data-scale="massive">2000+ casualties</button>
+                        <button class="scale-chip active" data-scale="all" data-i18n="index.filters.allScales">All Scales</button>
+                        <button class="scale-chip" data-scale="low" data-i18n="index.filters.lowCasualties">1-50 casualties</button>
+                        <button class="scale-chip" data-scale="medium" data-i18n="index.filters.mediumCasualties">51-500 casualties</button>
+                        <button class="scale-chip" data-scale="high" data-i18n="index.filters.highCasualties">501-2000 casualties</button>
+                        <button class="scale-chip" data-scale="massive" data-i18n="index.filters.massiveCasualties">2000+ casualties</button>
                     </div>
                 </div>
 
                 <div style="margin-top: 1rem; text-align: right;">
-                    <button id="clearAllFilters" class="clear-btn">🔄 Clear All Filters</button>
+                    <button id="clearAllFilters" class="clear-btn" data-i18n="index.filters.clearAll">🔄 Clear All Filters</button>
                 </div>
             </div>
 
             <!-- Loading Status -->
             <div id="timelineStatus" class="container" style="display: none;">
-                <div class="csv-status" id="timelineStatusContent">
+                <div class="csv-status" id="timelineStatusContent" data-i18n="index.timelineStatus.loading">
                     📊 Loading timeline data...
                 </div>
             </div>
@@ -870,8 +876,8 @@
                 <div id="timeline-embed" class="timeline">
                     <div class="timeline-loading">
                         <div class="loading-spinner"></div>
-                        <div class="loading-message">Loading Complete Historical Timeline...</div>
-                        <div class="loading-detail">Fetching data from 1948 to present...</div>
+                        <div class="loading-message" data-i18n="index.timelineLoading.message">Loading Complete Historical Timeline...</div>
+                        <div class="loading-detail" data-i18n="index.timelineLoading.detail">Fetching data from 1948 to present...</div>
                     </div>
                 </div>
             </div>
@@ -882,52 +888,52 @@
     <div class="modal" id="incidentModal">
         <div class="modal-content">
             <div class="modal-header">
-                <h2 id="modalTitle">Event Details</h2>
+                <h2 id="modalTitle" data-i18n="index.modal.title">Event Details</h2>
                 <button class="modal-close" aria-label="Close modal">&times;</button>
             </div>
             <div class="modal-body">
                 <div class="incident-details">
                     <div class="detail-section">
-                        <h4>📋 Basic Information</h4>
+                        <h4 data-i18n="index.modal.basicInfo">📋 Basic Information</h4>
                         <div class="detail-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
                             <div class="detail-item">
-                                <strong>📅 Date:</strong> <span id="modalDate"></span>
+                                <strong data-i18n="index.modal.date">📅 Date:</strong> <span id="modalDate"></span>
                             </div>
                             <div class="detail-item">
-                                <strong>📍 Location:</strong> <span id="modalLocation"></span>
+                                <strong data-i18n="index.modal.location">📍 Location:</strong> <span id="modalLocation"></span>
                             </div>
                             <div class="detail-item">
-                                <strong>🏷️ Event Type:</strong> <span id="modalType"></span>
+                                <strong data-i18n="index.modal.eventType">🏷️ Event Type:</strong> <span id="modalType"></span>
                             </div>
                             <div class="detail-item">
-                                <strong>✅ Verification:</strong> <span id="modalVerification"></span>
+                                <strong data-i18n="index.modal.verification">✅ Verification:</strong> <span id="modalVerification"></span>
                             </div>
                         </div>
                     </div>
 
                     <div class="detail-section">
-                        <h4>📄 Summary</h4>
+                        <h4 data-i18n="index.modal.summary">📄 Summary</h4>
                         <p id="modalSummary"></p>
                     </div>
 
                     <div class="detail-section" id="modalCasualtiesSection">
-                        <h4>💥 Casualties & Impact</h4>
+                        <h4 data-i18n="index.modal.casualties">💥 Casualties & Impact</h4>
                         <div id="modalCasualties" class="casualties-display"></div>
                     </div>
 
                     <div class="detail-section" id="modalWarCrimesSection">
-                        <h4>⚖️ War Crimes Documented</h4>
+                        <h4 data-i18n="index.modal.warCrimes">⚖️ War Crimes Documented</h4>
                         <div id="modalWarCrimes" class="war-crimes-list"></div>
                     </div>
 
                     <div class="detail-section">
-                        <h4>📰 Verified Sources</h4>
+                        <h4 data-i18n="index.modal.sources">📰 Verified Sources</h4>
                         <div id="modalSources" class="sources-container"></div>
                     </div>
 
                     <div class="detail-section">
                         <div class="modal-actions">
-                            <a id="modalDetailPage" href="#" class="detail-page-btn" target="_blank" style="display: inline-block; background: var(--secondary-color); color: white; padding: 0.75rem 1.5rem; border-radius: var(--border-radius); text-decoration: none; transition: var(--transition-base);">
+                            <a id="modalDetailPage" href="#" class="detail-page-btn" target="_blank" style="display: inline-block; background: var(--secondary-color); color: white; padding: 0.75rem 1.5rem; border-radius: var(--border-radius); text-decoration: none; transition: var(--transition-base);" data-i18n="index.modal.viewFull">
                                 📖 View Full Documentation →
                             </a>
                         </div>
@@ -1028,6 +1034,9 @@
         }
     </style>
 
+    <!-- Translation System Script -->
+    <script src="js/translation-system.js"></script>
+
     <!-- Universal Footer Component -->
     <div id="footer-placeholder"></div>
     <script>
@@ -1035,6 +1044,11 @@
             .then(response => response.text())
             .then(html => {
                 document.getElementById('footer-placeholder').innerHTML = html;
+
+                // Initialize translation system after footer loads
+                if (window.TranslationSystem && typeof window.TranslationSystem.init === 'function') {
+                    window.TranslationSystem.init();
+                }
             })
             .catch(error => {
                 console.error('Error loading footer:', error);
@@ -1042,11 +1056,11 @@
                     <footer class="universal-footer">
                         <div class="footer-container">
                             <div class="footer-bottom">
-                                <div class="footer-copyright">
+                                <div class="footer-copyright" data-i18n="common.footer.copyright">
                                     © 2024 Gaza Crisis Documentation Platform. All rights reserved.
                                 </div>
                                 <div class="footer-meta">
-                                    <span class="footer-update-time">Last Updated: October 6, 2025</span>
+                                    <span class="footer-update-time">Last Updated: October 11, 2025</span>
                                 </div>
                             </div>
                         </div>
@@ -1302,6 +1316,18 @@
             const apiStatus = document.getElementById('apiStatus');
             if (apiStatus) {
                 apiStatus.className = `api-status ${status}`;
+
+                // Use translation if available
+                if (window.TranslationSystem) {
+                    const key = `index.apiStatus.${status}`;
+                    const translation = window.TranslationSystem.getTranslation(key);
+                    if (translation) {
+                        apiStatus.textContent = translation;
+                        return;
+                    }
+                }
+
+                // Fallback if no translation available
                 apiStatus.textContent = text;
             }
         }
@@ -1337,6 +1363,12 @@
             const num = parseInt(value);
             if (isNaN(num)) return 'N/A';
 
+            // Use TranslationSystem's number formatter if available
+            if (window.TranslationSystem && typeof window.TranslationSystem.formatNumber === 'function') {
+                return window.TranslationSystem.formatNumber(num);
+            }
+
+            // Fallback formatting
             if (num >= 1000000) {
                 return (num / 1000000).toFixed(1) + 'M';
             } else if (num >= 1000) {
@@ -1469,6 +1501,17 @@
                 themeToggle.textContent = theme === 'dark' ? '☀️' : '🌙';
             }
         }
+
+        // Listen for language change events
+        document.addEventListener('languageChanged', function(e) {
+            console.log('🌐 Language changed to:', e.detail.language, 'with direction:', e.detail.direction);
+
+            // Update stats after language change to format numbers correctly
+            if (window.apiData) {
+                updateWarCrimesBannerStats(window.apiData);
+            }
+            updateHungerBannerStats();
+        });
 
         if (document.readyState === 'loading') {
             document.addEventListener('DOMContentLoaded', initializeIndexPage);
