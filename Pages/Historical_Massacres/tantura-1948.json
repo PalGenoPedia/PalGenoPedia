@@ -1,120 +1,99 @@
 {
-  "id": "hist_002",
-  "event_type": "massacre",
+  "id": "hist002",
+  "event_type": "Massacre",
   "verification_status": "verified",
   "metadata": {
-    "pageTitle": "Tantura Massacre (1948) - Complete Documentation | Gaza Crisis Documentation",
-    "description": "Comprehensive documentation of the Tantura Massacre of May 22-23, 1948. Verified sources, casualty records, war crimes documentation, and historical analysis of the mass killing and burial of Palestinian civilians.",
-    "keywords": "Tantura, 1948, Nakba, Palestine, massacre, war crimes, Alexandroni Brigade, mass graves, historical documentation",
-    "lastUpdated": "2025-10-05",
-    "dateISO": "1948-05-22"
+    "pageTitle": "Tantura Massacre (May 1948) | Historical Documentation",
+    "description": "Documented mass executions and concealment of Palestinian civilians in Tantura village (May 22-23, 1948). Verified through Israeli soldier testimonies, survivor accounts, and academic research. Mass graves remain beneath Dor Beach parking lot.",
+    "keywords": "Tantura, 1948, Nakba, Palestine, massacre, war crimes, Alexandroni Brigade, mass graves, Teddy Katz, historical documentation",
+    "lastUpdated": "2025-10-12",
+    "author": "Yassin"
   },
-  "breadcrumb": {
-    "items": [
-      { "text": "🏠 Home", "link": "../../index.html" },
-      { "text": "📋 Timeline", "link": "../../major-incidents-timeline.html" },
-      { "text": "📜 Historical", "link": "../../major-incidents-timeline.html?mode=historical" },
-      { "text": "Tantura 1948", "link": null }
-    ]
+  "date": {
+    "start": "1948-05-22",
+    "end": "1948-05-23",
+    "duration_days": 2,
+    "display": "May 22-23, 1948",
+    "context": "1948 Arab-Israeli War, coastal operations"
+  },
+  "location": {
+    "historical": {
+      "name": "Tantura (Al-Tantura)",
+      "name_arabic": "الطنطورة",
+      "admin_context": "British Mandate of Palestine",
+      "district": "Haifa District",
+      "coordinates": [32.5167, 34.9167],
+      "distance_to_haifa": "35 km south",
+      "population_1948": "≈1,500"
+    },
+    "current": {
+      "name": "Dor Beach area",
+      "admin_context": "Haifa District, Israel",
+      "coordinates": [32.5167, 34.9167],
+      "notable_sites": "Kibbutz Nahsholim built on village ruins; Dor Beach parking lot over mass grave",
+      "status": "Village demolished; mass graves undisturbed"
+    }
   },
   "hero": {
     "category": "📜 HISTORICAL MASSACRE • NAKBA 1948",
     "title": "Tantura Massacre",
     "subtitle": "The suppressed massacre: mass executions and secret mass graves on the Mediterranean coast",
     "metaCards": [
-      {
-        "icon": "📅",
-        "label": "Date",
-        "value": "May 22-23, 1948",
-        "detail": null
-      },
-      {
-        "icon": "📍",
-        "label": "Location",
-        "value": "Tantura Village, Mediterranean Coast",
-        "detail": null
-      },
-      {
-        "icon": "🗺️",
-        "label": "Coordinates",
-        "value": "34.9167, 32.5167",
-        "detail": "Geographic location"
-      },
-      {
-        "icon": "💀",
-        "label": "Deaths",
-        "value": "200+",
-        "detail": "Estimates 200-250"
-      },
-      {
-        "icon": "🏠",
-        "label": "Displaced",
-        "value": "1,500",
-        "detail": "Entire village"
-      }
+      { "icon": "📅", "label": "Date", "value": "May 22-23, 1948", "detail": "2-day operation" },
+      { "icon": "📍", "label": "Historical Location", "value": "Tantura Village, Mediterranean Coast", "detail": "Now Dor Beach/Kibbutz Nahsholim" },
+      { "icon": "💀", "label": "Deaths", "value": "≈200-250", "detail": "Mass executions of male prisoners" },
+      { "icon": "🏠", "label": "Displaced", "value": "≈1,500", "detail": "Entire village population" }
     ]
-  },
-  "location": {
-    "name": "Tantura Village, Mediterranean Coast",
-    "coordinates": [34.9167, 32.5167]
   },
   "quickFacts": {
     "title": "⚡ Quick Facts",
     "items": [
-      {
-        "label": "Event ID",
-        "value": "hist_002"
-      },
-      {
-        "label": "Event Type",
-        "value": "Massacre"
-      },
-      {
-        "label": "Perpetrators",
-        "value": "Alexandroni Brigade (Haganah/IDF)"
-      },
-      {
-        "label": "Verification",
-        "value": "✅ Verified by survivor testimonies, Israeli soldier accounts, academic research"
-      },
-      {
-        "label": "Injured",
-        "value": "Unknown - most killed"
-      },
-      {
-        "label": "Classification",
-        "value": "War Crime, Crimes Against Humanity, Mass Execution of POWs"
-      }
+      { "label": "Event Type", "value": "Massacre" },
+      { "label": "Perpetrators", "value": "Alexandroni Brigade (Haganah/IDF)" },
+      { "label": "Verification", "value": "Israeli soldier testimonies; survivor accounts; Teddy Katz research; 2022 documentary" },
+      { "label": "Classification", "value": "War Crime (1907 Hague); Crimes Against Humanity (modern)" }
     ]
   },
-  "brief_summary": "Mass killing of Palestinian civilians and prisoners of war during the 1948 Arab-Israeli War. Bodies were buried in mass graves.",
-  "perpetrators": ["Alexandroni Brigade"],
+  "brief_summary": "On May 22-23, 1948, the Alexandroni Brigade attacked Tantura village. After surrender, an estimated 200-250 Palestinian men were systematically executed and buried in mass graves. The massacre was suppressed for over 50 years until documented by Israeli researcher Teddy Katz in 1998 through interviews with both perpetrators and survivors. Mass graves remain beneath Dor Beach parking lot; Israeli authorities refuse excavation.",
+  "perpetrators": ["Alexandroni Brigade (Haganah/IDF)"],
   "executiveSummary": {
     "title": "Executive Summary",
     "icon": "📋",
     "alert": {
       "type": "critical",
       "icon": "⚠️",
-      "text": "<strong>War Crime Classification:</strong> Mass execution of civilians and prisoners of war, summary executions, concealment of evidence through mass burial."
+      "text": "<strong>Legal note:</strong> The 1949 Geneva Conventions were not yet in force in May 1948; assessment relies on 1907 Hague Regulations and customary IHL for contemporaneous violations. Modern instruments provided for contextual classification only."
     },
     "paragraphs": [
-      "On May 22-23, 1948, the Alexandroni Brigade of the Haganah (which became the IDF) attacked the Palestinian coastal village of Tantura. After the village surrendered, an estimated 200-250 Palestinian men were systematically executed and buried in mass graves. The massacre was suppressed for over 50 years.",
-      "The village of Tantura had a population of approximately 1,500 people and was known for its fishing industry. Despite attempts at surrender and raising white flags, Israeli forces conducted house-to-house searches, separated men from women and children, and executed male villagers. Bodies were buried in multiple mass graves, including one beneath what is now the parking lot of Dor Beach.",
-      "The massacre remained largely unknown until 1998 when Israeli graduate student Teddy Katz documented it through interviews with both Palestinian survivors and Israeli soldiers who participated. Despite initial confirmation by veterans, Katz faced a libel lawsuit, and Israeli authorities have consistently refused to excavate the mass graves or conduct official investigations."
+      "On May 22-23, 1948, the Alexandroni Brigade of the Haganah (which became the IDF) attacked the Palestinian coastal village of Tantura. The village had a population of approximately 1,500 and was known for its fishing industry. Despite attempts at surrender and raising white flags, Israeli forces conducted house-to-house searches, separated men from women and children, and executed male villagers.",
+      "An estimated 200-250 Palestinian men were systematically executed after the village surrendered. Bodies were buried in multiple mass graves, including one beneath what is now the parking lot of Dor Beach. The massacre remained largely unknown until 1998 when Israeli graduate student Teddy Katz documented it through interviews with both Palestinian survivors and Israeli soldiers who participated.",
+      "Despite initial confirmation by veterans, Katz faced a libel lawsuit and was forced under pressure to sign an 'apology' (later withdrawn). Israeli authorities have consistently refused to excavate the mass graves or conduct official investigations. No perpetrators were prosecuted. The village was demolished and Kibbutz Nahsholim was built on its ruins."
     ]
   },
   "casualties": {
     "title": "Casualties",
     "icon": "💀",
-    "deaths": 200,
-    "injured": 0,
-    "forced_displacement": 1500,
+    "deaths": "≈200-250",
+    "injured": "Unknown (most male captives were killed)",
+    "forced_displacement": "≈1,500",
     "breakdown": [
       {
         "type": "deaths",
-        "number": "200-250",
-        "label": "Deaths",
-        "detail": "Primarily men aged 15-60, executed after surrender"
+        "number": "≈200-250",
+        "label": "Deaths (mass executions)",
+        "detail": "Primarily men aged 15-60, executed after surrender; bodies buried in mass graves",
+        "sources": [
+          {
+            "name": "Teddy Katz Research - MA Thesis (1998)",
+            "link": "https://www.haaretz.com/israel-news/2022-01-20/ty-article-magazine/.premium/tantura-the-massacre-at-the-heart-of-the-nakba-that-israelis-refuse-to-recogn/0000017f-e2a5-d7b2-a77f-e2a7ccb30000",
+            "icon": "🎓"
+          },
+          {
+            "name": "Israeli soldier testimonies (Katz interviews, 2022 documentary)",
+            "link": "https://www.aljazeera.com/features/2022/1/27/tantura-a-film-about-a-massacre-israel-didnt-want-you-to-see",
+            "icon": "👥"
+          }
+        ]
       },
       {
         "type": "injured",
@@ -124,15 +103,22 @@
       },
       {
         "type": "displaced",
-        "number": "1,500",
+        "number": "≈1,500",
         "label": "Displaced",
-        "detail": "Entire village population expelled"
+        "detail": "Entire village population expelled; many sent to Furaydis",
+        "sources": [
+          {
+            "name": "Zochrot - Tantura Village File",
+            "link": "https://www.zochrot.org/",
+            "icon": "🗺️"
+          }
+        ]
       }
     ],
     "alert": {
       "type": "info",
       "icon": "ℹ️",
-      "text": "<strong>Data Sources:</strong> Survivor testimonies, Israeli soldier testimonies (Teddy Katz research), academic documentation. Exact toll disputed; estimates range from 90 to 250. Most reliable estimates center on 200-250 executed men."
+      "text": "<strong>Sources:</strong> <a href='https://www.haaretz.com/israel-news/2022-01-20/ty-article-magazine/.premium/tantura-the-massacre-at-the-heart-of-the-nakba-that-israelis-refuse-to-recogn/0000017f-e2a5-d7b2-a77f-e2a7ccb30000' target='_blank' rel='noopener'>Teddy Katz research</a>; <a href='https://www.aljazeera.com/features/2022/1/27/tantura-a-film-about-a-massacre-israel-didnt-want-you-to-see' target='_blank' rel='noopener'>Israeli soldier testimonies</a>; <a href='https://www.palestine-studies.org/' target='_blank' rel='noopener'>survivor accounts (IPS)</a>. Exact toll disputed; most reliable estimates: 200-250 executed."
     }
   },
   "timeline": {
@@ -141,42 +127,161 @@
     "events": [
       {
         "time": "May 22, Early Morning",
-        "title": "Attack Begins",
-        "description": "Alexandroni Brigade attacks Tantura from land and sea. Village largely defenseless with minimal weapons."
+        "title": "Attack begins",
+        "description": "Alexandroni Brigade attacks Tantura from land and sea. Village largely defenseless with minimal weapons.",
+        "source": "Katz research; Israeli soldier testimonies",
+        "sourceLinks": [
+          {
+            "name": "Haaretz Investigation",
+            "url": "https://www.haaretz.com/israel-news/2022-01-20/ty-article-magazine/.premium/tantura-the-massacre-at-the-heart-of-the-nakba-that-israelis-refuse-to-recogn/0000017f-e2a5-d7b2-a77f-e2a7ccb30000"
+          }
+        ],
+        "additionalSources": [
+          {
+            "name": "Teddy Katz MA Thesis (1998)",
+            "link": "https://www.haaretz.com/israel-news/2022-01-20/ty-article-magazine/.premium/tantura-the-massacre-at-the-heart-of-the-nakba-that-israelis-refuse-to-recogn/0000017f-e2a5-d7b2-a77f-e2a7ccb30000",
+            "icon": "🎓"
+          }
+        ]
       },
       {
         "time": "May 22, Morning",
-        "title": "Village Surrenders",
-        "description": "Village elders raise white flags and negotiate surrender. Villagers told they will be safe if they comply."
+        "title": "Village surrenders",
+        "description": "Village elders raise white flags and negotiate surrender. Villagers told they will be safe if they comply. Israeli soldier: 'There was no battle. They raised white flags.'",
+        "source": "Israeli soldier testimony (Katz interviews)",
+        "sourceLinks": [
+          {
+            "name": "Soldier testimonies",
+            "url": "https://www.haaretz.com/israel-news/2022-01-20/ty-article-magazine/.premium/tantura-the-massacre-at-the-heart-of-the-nakba-that-israelis-refuse-to-recogn/0000017f-e2a5-d7b2-a77f-e2a7ccb30000"
+          }
+        ],
+        "additionalSources": [
+          {
+            "name": "Anonymous Alexandroni Brigade Soldier - Interview 1998",
+            "link": null,
+            "icon": "👥"
+          }
+        ]
       },
       {
         "time": "May 22, Late Morning",
-        "title": "Separation",
-        "description": "Men separated from women and children. Males aged 15-60 gathered in village square and on the beach."
+        "title": "Separation of men from families",
+        "description": "Men separated from women and children. Males aged 15-60 gathered in village square and on the beach.",
+        "source": "Survivor testimonies; soldier accounts",
+        "sourceLinks": [
+          {
+            "name": "IPS Oral History",
+            "url": "https://www.palestine-studies.org/"
+          }
+        ],
+        "additionalSources": [
+          {
+            "name": "Mariam Al-Yahya - Survivor testimony",
+            "link": "https://www.palestine-studies.org/",
+            "icon": "👥"
+          }
+        ]
       },
       {
         "time": "May 22-23, Day and Night",
-        "title": "Mass Executions",
-        "description": "Systematic execution of male prisoners throughout the day and into the night. Groups taken to execution sites and shot."
+        "title": "Mass executions",
+        "description": "Systematic execution of male prisoners throughout day and night. Groups taken to execution sites (cemetery, beach, village well) and shot. Soldier: 'They lined them up and shot them... I participated in the whole thing.'",
+        "source": "Israeli soldier testimonies (Katz research; 2022 documentary)",
+        "sourceLinks": [
+          {
+            "name": "Tantura documentary",
+            "url": "https://www.aljazeera.com/features/2022/1/27/tantura-a-film-about-a-massacre-israel-didnt-want-you-to-see"
+          }
+        ],
+        "additionalSources": [
+          {
+            "name": "Binyamin Shechter - Alexandroni intelligence officer testimony",
+            "link": "https://www.aljazeera.com/features/2022/1/27/tantura-a-film-about-a-massacre-israel-didnt-want-you-to-see",
+            "icon": "👥"
+          },
+          {
+            "name": "Haim Hermesh - Alexandroni soldier testimony",
+            "link": null,
+            "icon": "👥"
+          }
+        ]
       },
       {
         "time": "May 23, Morning",
-        "title": "Mass Burial",
-        "description": "Bodies buried in mass graves at various locations including the beach and cemetery. Some survivors forced to dig graves."
+        "title": "Mass burial",
+        "description": "Bodies buried in mass graves at various locations including beach and cemetery. Some survivors forced to dig graves. Soldier: 'We were ordered to bury them. Some Arab women were forced to help dig.'",
+        "source": "Soldier testimonies; survivor accounts",
+        "sourceLinks": [
+          {
+            "name": "Haaretz Investigation",
+            "url": "https://www.haaretz.com/israel-news/2022-01-20/ty-article-magazine/.premium/tantura-the-massacre-at-the-heart-of-the-nakba-that-israelis-refuse-to-recogn/0000017f-e2a5-d7b2-a77f-e2a7ccb30000"
+          }
+        ],
+        "additionalSources": [
+          {
+            "name": "Fawziyya Saleh - Survivor testimony (age 13)",
+            "link": "https://www.palestine-studies.org/",
+            "icon": "👥"
+          }
+        ]
       },
       {
         "time": "May 23-24",
-        "title": "Expulsion",
-        "description": "Surviving women, children, and elderly expelled from village. Many sent to Furaydis. Village looted and later demolished."
+        "title": "Expulsion of survivors",
+        "description": "Surviving women, children, elderly expelled from village. Many sent to Furaydis. Village looted; property confiscated.",
+        "source": "Survivor testimonies; Zochrot documentation",
+        "sourceLinks": [
+          {
+            "name": "Zochrot",
+            "url": "https://www.zochrot.org/"
+          }
+        ]
       },
       {
-        "time": "1948-Present",
-        "title": "Cover-up",
-        "description": "Kibbutz Nahsholim built on village ruins. Parking lot constructed over mass grave. Massacre suppressed from Israeli history."
+        "time": "1948-1950",
+        "title": "Village demolished; cover-up begins",
+        "description": "Tantura demolished. Kibbutz Nahsholim established on village ruins (1948-1950). Mass graves concealed; massacre suppressed from Israeli history.",
+        "source": "Zochrot; historical records",
+        "sourceLinks": [
+          {
+            "name": "Zochrot",
+            "url": "https://www.zochrot.org/"
+          }
+        ]
+      },
+      {
+        "time": "1998-2000",
+        "title": "The Katz Affair",
+        "description": "Teddy Katz documents massacre through 140+ interviews with veterans and survivors. Alexandroni veterans sue for libel despite their own testimonies. Katz forced to sign 'apology' under pressure (later withdrawn); thesis downgraded.",
+        "source": "Court documents; Haaretz reporting",
+        "sourceLinks": [
+          {
+            "name": "Haaretz Archive",
+            "url": "https://www.haaretz.com/"
+          }
+        ],
+        "additionalSources": [
+          {
+            "name": "Israeli Court Documents (2000) - Libel case",
+            "link": null,
+            "icon": "⚖️"
+          }
+        ]
+      },
+      {
+        "time": "2022",
+        "title": "Documentary renews attention",
+        "description": "'Tantura' film by Alon Schwarz features recorded soldier testimonies confirming massacre. Released at Sundance; Israeli authorities continue to refuse excavation of mass graves.",
+        "source": "Al Jazeera; documentary coverage",
+        "sourceLinks": [
+          {
+            "name": "Al Jazeera Documentary Report",
+            "url": "https://www.aljazeera.com/features/2022/1/27/tantura-a-film-about-a-massacre-israel-didnt-want-you-to-see"
+          }
+        ]
       }
     ]
   },
-  "war_crimes": ["Mass execution", "War crimes against POWs", "Forced displacement", "Destruction of property"],
   "warCrimes": {
     "title": "Documented Atrocities",
     "icon": "⚠️",
@@ -189,72 +294,87 @@
       {
         "icon": "💀",
         "title": "Mass Execution of Prisoners of War",
-        "description": "After the village surrendered, male prisoners were systematically executed. Israeli soldier testimony: \"They lined them up and shot them... I participated in the whole thing.\" Violations of laws of war regarding treatment of POWs.",
+        "description": "After village surrendered, male prisoners systematically executed. Israeli soldier: 'They lined them up and shot them... I participated in the whole thing.' Violations of laws of war regarding treatment of POWs.",
         "sourceLink": "https://www.haaretz.com/israel-news/2022-01-20/ty-article-magazine/.premium/tantura-the-massacre-at-the-heart-of-the-nakba-that-israelis-refuse-to-recogn/0000017f-e2a5-d7b2-a77f-e2a7ccb30000",
-        "sourceText": "📄 Haaretz Investigation 2022 →"
+        "sourceText": "📄 Haaretz Investigation 2022 ↗"
+      },
+      {
+        "icon": "🖐️",
+        "title": "Execution After Surrender",
+        "description": "Village raised white flags and negotiated surrender. Promises of safety violated. Soldier: 'There was no battle. They raised white flags... We gathered the men and took them.'",
+        "sourceLink": "https://www.haaretz.com/israel-news/2022-01-20/ty-article-magazine/.premium/tantura-the-massacre-at-the-heart-of-the-nakba-that-israelis-refuse-to-recogn/0000017f-e2a5-d7b2-a77f-e2a7ccb30000",
+        "sourceText": "📄 Soldier Testimonies ↗"
       },
       {
         "icon": "🏖️",
         "title": "Executions on the Beach",
-        "description": "Multiple testimonies describe executions carried out on Tantura beach. Survivor: \"They took the men in groups... we heard shooting. They didn't come back.\" Bodies left on beach before burial."
+        "description": "Multiple testimonies describe executions on Tantura beach. Survivor: 'They took the men in groups... we heard shooting. They didn't come back.' Bodies left on beach before burial.",
+        "sourceLink": "https://www.palestine-studies.org/",
+        "sourceText": "📄 IPS Oral History ↗"
       },
       {
         "icon": "⚰️",
-        "title": "Mass Graves and Concealment",
-        "description": "Bodies buried in multiple mass graves. One grave beneath current parking lot of Dor Beach. Israeli authorities refuse to allow excavation or investigation. Deliberate concealment of evidence.",
+        "title": "Mass Graves and Concealment of Evidence",
+        "description": "Bodies buried in multiple mass graves at cemetery, beach, and village well. One grave beneath current Dor Beach parking lot. Intelligence officer: 'I know of three locations... I estimate about 200-230 people were killed.' Israeli authorities refuse excavation.",
         "sourceLink": "https://www.aljazeera.com/features/2022/1/27/tantura-a-film-about-a-massacre-israel-didnt-want-you-to-see",
-        "sourceText": "📄 Al Jazeera Documentary Report →"
+        "sourceText": "📄 Documentary Evidence ↗"
       },
       {
         "icon": "👨‍👩‍👧‍👦",
         "title": "Separation of Families",
-        "description": "Deliberate separation of men from women and children before executions. Women and children forced to witness aftermath and used as forced labor to bury bodies."
+        "description": "Deliberate separation of men from women and children before executions. Women and children forced to witness aftermath; some forced to bury bodies.",
+        "sourceLink": null,
+        "sourceText": null
       },
       {
         "icon": "🏠",
-        "title": "Looting and Destruction",
-        "description": "Systematic looting of homes, theft of valuables, fishing boats, and property. Village completely demolished. Kibbutz Nahsholim established on village lands."
+        "title": "Looting and Complete Destruction",
+        "description": "Systematic looting of homes, theft of valuables, fishing boats, property. Village completely demolished. Kibbutz Nahsholim established on village lands; mass grave covered by parking lot.",
+        "sourceLink": "https://www.zochrot.org/",
+        "sourceText": "📄 Zochrot Documentation ↗"
       },
       {
         "icon": "🚶",
         "title": "Forced Expulsion",
-        "description": "Surviving population forcibly expelled to nearby villages. Prevented from returning or burying their dead. Property confiscated under Israeli Absentee Property Law."
+        "description": "Surviving population forcibly expelled to nearby villages. Prevented from returning or burying their dead. Property confiscated under Israeli Absentee Property Law.",
+        "sourceLink": null,
+        "sourceText": null
       }
     ]
   },
-  "internationalLaw": {
-    "title": "International Law Violations",
+  "international_law": {
+    "title": "International Law – Temporal Applicability & Classification",
     "icon": "⚖️",
-    "introduction": "The Tantura massacre violated multiple principles of international humanitarian law, particularly regarding treatment of prisoners of war and civilians:",
+    "introduction": "Legal assessment distinguishes law applicable in May 1948 from modern treaty frameworks to avoid retroactivity.",
     "sections": [
       {
-        "heading": "Under Geneva Conventions (1949)",
+        "heading": "Law Applicable in May 1948",
         "violations": [
-          "<strong>Article 3:</strong> Prohibition of violence to life and person, including murder of persons taking no active part in hostilities",
-          "<strong>Article 13:</strong> Prisoners of war must be treated humanely - summary execution explicitly prohibited",
-          "<strong>Article 17:</strong> Protection of civilians and civilian property"
+          "<strong>Hague Convention IV (1907):</strong> Customary by 1948. Art. 23(c): killing enemies who laid down arms; Art. 23(d): 'no quarter' declarations; Art. 25: attack on undefended places; Art. 28: pillage; Art. 46: protection of family honor, lives, property.",
+          "<strong>Martens Clause (1899/1907):</strong> Humanitarian principles binding even where not explicitly codified.",
+          "<em>Note:</em> These instruments were opposable to all parties in 1948 as customary international humanitarian law."
         ]
       },
       {
-        "heading": "Under Hague Conventions (1899, 1907)",
+        "heading": "Post-1949 Context (Descriptive Classification)",
         "violations": [
-          "<strong>Article 23:</strong> Prohibition of killing or wounding enemy who has surrendered",
-          "<strong>Article 46:</strong> Protection of family honor and rights, individual lives and private property",
-          "<strong>Article 50:</strong> Prohibition of collective penalties"
+          "<strong>Geneva Convention IV (1949):</strong> Adopted Aug 12, 1949 (3 months after Tantura). Israel ratified Jul 6, 1951. Art. 3: Prohibition of violence to life and person, including murder of persons taking no active part in hostilities. Not applicable retroactively to May 1948.",
+          "<strong>Rome Statute (1998):</strong> Modern framework characterizing acts as crimes against humanity (murder, persecution, deportation) and war crimes (willful killing of POWs, attacking civilians who surrendered). Used descriptively; not retroactive enforcement.",
+          "<em>Note:</em> Modern classifications aid understanding but do not create retroactive legal obligations."
         ]
       },
       {
-        "heading": "Modern Classification (Rome Statute)",
+        "heading": "Treaty Opposability",
         "violations": [
-          "<strong>Crimes Against Humanity:</strong> Murder, deportation or forcible transfer of population, persecution",
-          "<strong>War Crimes:</strong> Willful killing of protected persons, murder of POWs, extensive destruction and appropriation of property not justified by military necessity"
+          "<strong>Vienna Convention principle:</strong> Treaties not retroactive (Art. 28). Geneva IV cannot be invoked for events predating its adoption.",
+          "<strong>Customary IHL:</strong> Hague 1907 + Martens Clause bound all parties in 1948 regardless of ratification."
         ]
       }
     ],
     "alert": {
       "type": "critical",
       "icon": "⚖️",
-      "text": "<strong>Legal Status:</strong> Mass execution of POWs is one of the most serious war crimes under international law. Despite documentation, no perpetrators were prosecuted. Israeli authorities continue to suppress evidence and refuse excavation of mass graves."
+      "text": "<strong>Legal Principle:</strong> Assessment uses 1907 Hague/customary law for contemporaneous violations; Geneva IV/Rome Statute for modern contextual classification only. Mass execution of POWs is one of the most serious war crimes under international law. Despite documentation, no perpetrators prosecuted."
     }
   },
   "testimonies": {
@@ -272,8 +392,7 @@
         "role": "Israeli Soldier Participant",
         "testimony": "There was no battle. They raised white flags... We gathered the men and took them. Some were taken to the cemetery, others to the beach. They lined them up and shot them. I participated in the whole thing.",
         "source": "Interview with Teddy Katz, 1998",
-        "sourceLink": "https://www.haaretz.com/israel-news/2022-01-20/ty-article-magazine/.premium/tantura-the-massacre-at-the-heart-of-the-nakba-that-israelis-refuse-to-recogn/0000017f-e2a5-d7b2-a77f-e2a7ccb30000",
-        "sourceText": "📄 Haaretz Archive →"
+        "sourceLink": "https://www.haaretz.com/israel-news/2022-01-20/ty-article-magazine/.premium/tantura-the-massacre-at-the-heart-of-the-nakba-that-israelis-refuse-to-recogn/0000017f-e2a5-d7b2-a77f-e2a7ccb30000"
       },
       {
         "initials": "MA",
@@ -281,8 +400,7 @@
         "role": "Palestinian Survivor",
         "testimony": "They separated the men from us. We heard shooting all day and into the night. In the morning, we were told to leave. We never saw our men again. My father, my two brothers, my uncle - all gone.",
         "source": "Survivor testimony documented by Teddy Katz, 1998",
-        "sourceLink": null,
-        "sourceText": null
+        "sourceLink": "https://www.palestine-studies.org/"
       },
       {
         "initials": "BS",
@@ -290,8 +408,7 @@
         "role": "Alexandroni Brigade Intelligence Officer",
         "testimony": "I know of three locations where people were killed and buried: the cemetery, the beach south of the village, and near the village well. The numbers? I estimate about 200-230 people were killed.",
         "source": "Interview in 'Tantura' documentary, 2022",
-        "sourceLink": "https://www.aljazeera.com/features/2022/1/27/tantura-a-film-about-a-massacre-israel-didnt-want-you-to-see",
-        "sourceText": "📄 Documentary Interview →"
+        "sourceLink": "https://www.aljazeera.com/features/2022/1/27/tantura-a-film-about-a-massacre-israel-didnt-want-you-to-see"
       },
       {
         "initials": "HH",
@@ -299,8 +416,7 @@
         "role": "Alexandroni Brigade Soldier",
         "testimony": "They took them in groups, men aged 15 and up. They were shot. I saw the bodies. After some time, we were ordered to bury them. Some of the Arab women were forced to help dig.",
         "source": "Testimony recorded by Teddy Katz, later confirmed in court documents",
-        "sourceLink": null,
-        "sourceText": null
+        "sourceLink": "https://www.haaretz.com/israel-news/2022-01-20/ty-article-magazine/.premium/tantura-the-massacre-at-the-heart-of-the-nakba-that-israelis-refuse-to-recogn/0000017f-e2a5-d7b2-a77f-e2a7ccb30000"
       },
       {
         "initials": "FS",
@@ -308,8 +424,7 @@
         "role": "Village Survivor (age 13 at the time)",
         "testimony": "They made us carry bodies. I saw my teacher, dead. I saw men I knew since childhood, all dead on the beach. The soldiers were laughing and smoking cigarettes.",
         "source": "Oral history interview, Institute for Palestine Studies",
-        "sourceLink": "https://www.palestine-studies.org/",
-        "sourceText": "📄 IPS Oral History Project →"
+        "sourceLink": "https://www.palestine-studies.org/"
       }
     ]
   },
@@ -320,55 +435,51 @@
       {
         "heading": "Immediate Impact",
         "items": [
-          "<strong>Coastal Depopulation:</strong> Contributed to fear and exodus of Palestinians from coastal villages",
-          "<strong>Strategic Control:</strong> Secured Mediterranean coastline for Israeli state",
-          "<strong>Suppression:</strong> Immediately classified and suppressed from official Israeli history",
-          "<strong>Precedent:</strong> Established pattern of mass execution and concealment used elsewhere during Nakba"
+          "Contributed to fear and exodus of Palestinians from coastal villages during 1948 war",
+          "Secured Mediterranean coastline for Israeli state; strategic control of Haifa-Tel Aviv corridor",
+          "Immediately classified and suppressed from official Israeli history",
+          "Established pattern of mass execution and concealment used elsewhere during Nakba"
         ]
       },
       {
         "heading": "The Katz Affair (1998-2000)",
         "items": [
-          "<strong>1998:</strong> MA student Teddy Katz documents massacre through 140+ interviews with veterans and survivors",
-          "<strong>1999:</strong> Alexandroni Brigade veterans sue Katz for libel despite their own testimonies",
-          "<strong>2000:</strong> Under pressure, Katz forced to sign \"apology\" and retract findings (later withdrew apology)",
-          "<strong>Result:</strong> University of Haifa downgraded his thesis; Katz suffered breakdown from pressure",
-          "<strong>Impact:</strong> Chilling effect on Israeli historical research into 1948 atrocities"
+          "1998: MA student Teddy Katz documents massacre through 140+ interviews with veterans and survivors",
+          "1999: Alexandroni Brigade veterans sue Katz for libel despite their own recorded testimonies",
+          "2000: Under intense pressure, Katz forced to sign 'apology' and retract findings (later withdrew apology)",
+          "University of Haifa downgraded his thesis; Katz suffered psychological breakdown from pressure campaign",
+          "Chilling effect on Israeli historical research into 1948 atrocities for two decades"
         ]
       },
       {
         "heading": "Long-term Significance",
         "items": [
-          "Symbol of historical suppression and denial in Israel",
-          "<strong>2022 Documentary:</strong> 'Tantura' by Alon Schwarz brings renewed attention with soldier testimonies",
-          "Ongoing Palestinian demands for excavation of mass graves and proper burial",
+          "Symbol of historical suppression and denial in Israel; epitome of Nakba erasure",
+          "2022 Documentary 'Tantura' by Alon Schwarz brings renewed international attention with soldier testimonies",
+          "Ongoing Palestinian demands for excavation of mass graves and proper burial of victims",
           "Part of broader Nakba commemoration and right of return activism",
-          "Academic debate about Israeli historical narratives and accountability",
-          "Parking lot over mass grave remains as symbol of ongoing erasure"
+          "Academic debate about Israeli historical narratives, collective memory, and accountability",
+          "Parking lot over mass grave remains as physical symbol of ongoing erasure and denial"
         ]
       },
       {
-        "heading": "Justice & Accountability",
+        "heading": "Accountability",
         "items": [
-          "❌ No perpetrators ever prosecuted despite soldier confessions",
-          "❌ Israeli government refuses to acknowledge massacre officially",
-          "❌ Refused all requests to excavate mass graves for proper identification and burial",
-          "❌ Kibbutz Nahsholim built on village ruins - erasure of Palestinian presence",
-          "❌ Teddy Katz's academic career destroyed for documenting the massacre",
-          "❌ Mass grave beneath Dor Beach parking lot remains undisturbed"
+          "✘ No perpetrators ever prosecuted despite multiple soldier confessions on record",
+          "✘ Israeli government refuses to officially acknowledge massacre occurred",
+          "✘ Refused all requests to excavate mass graves for proper identification and burial",
+          "✘ Kibbutz Nahsholim built on village ruins - complete erasure of Palestinian presence",
+          "✘ Teddy Katz's academic career destroyed for documenting the massacre; became pariah in Israeli academia",
+          "✘ Mass grave beneath Dor Beach parking lot remains undisturbed despite known location",
+          "✘ Village lands never returned; survivors and descendants denied access to burial sites"
         ]
       }
     ]
   },
   "sources": {
-    "title": "Verified Sources",
+    "title": "Verified & Cross-Referenced Sources",
     "icon": "📚",
-    "introduction": "Documentation based on extensive interviews with Israeli soldiers who participated, Palestinian survivors, academic research, and recent documentary evidence.",
-    "sourcesList": [
-      "Teddy Katz Research Documentation",
-      "Israeli Military Archives",
-      "Survivor Testimonies"
-    ],
+    "introduction": "Documentation based on extensive interviews with Israeli soldiers who participated, Palestinian survivors, academic research, court documents, and 2022 documentary evidence.",
     "list": [
       {
         "icon": "🎓",
@@ -376,7 +487,6 @@
         "type": "Academic Research",
         "description": "MA thesis based on 140+ interviews with Alexandroni Brigade veterans and Palestinian survivors. Most comprehensive documentation despite forced retraction.",
         "link": "https://www.haaretz.com/israel-news/2022-01-20/ty-article-magazine/.premium/tantura-the-massacre-at-the-heart-of-the-nakba-that-israelis-refuse-to-recogn/0000017f-e2a5-d7b2-a77f-e2a7ccb30000",
-        "linkText": "Read Haaretz Investigation →",
         "verified": true
       },
       {
@@ -385,7 +495,6 @@
         "type": "Documentary Film",
         "description": "Film by Alon Schwarz featuring recorded testimonies from Alexandroni Brigade veterans confirming the massacre. Released at Sundance 2022.",
         "link": "https://www.aljazeera.com/features/2022/1/27/tantura-a-film-about-a-massacre-israel-didnt-want-you-to-see",
-        "linkText": "Al Jazeera Documentary Report →",
         "verified": true
       },
       {
@@ -394,7 +503,6 @@
         "type": "Investigative Journalism",
         "description": "Extensive reporting on Tantura massacre, Katz affair, and ongoing cover-up. Access to court documents and archived testimonies.",
         "link": "https://www.haaretz.com/",
-        "linkText": "Haaretz Archives →",
         "verified": true
       },
       {
@@ -403,16 +511,14 @@
         "type": "Research Institute",
         "description": "Oral history project documenting survivor testimonies, village records, and demographic data. Preservation of Palestinian collective memory.",
         "link": "https://www.palestine-studies.org/",
-        "linkText": "IPS Website →",
         "verified": true
       },
       {
-        "icon": "📖",
+        "icon": "📚",
         "name": "Academic Research",
         "type": "Peer-Reviewed Scholarship",
         "description": "Key works: Ilan Pappé 'The Ethnic Cleansing of Palestine' (2006), Benny Morris 'The Birth of the Palestinian Refugee Problem Revisited' (2004), Adam Raz archival research.",
         "link": null,
-        "linkText": null,
         "verified": true
       },
       {
@@ -421,16 +527,14 @@
         "type": "Legal Records",
         "description": "Libel case documents (2000) including soldier depositions, testimonies, and Katz's research materials. Public record despite attempted suppression.",
         "link": null,
-        "linkText": null,
         "verified": true
       },
       {
-        "icon": "🗃️",
+        "icon": "🗺️",
         "name": "Zochrot Organization",
         "type": "Israeli NGO",
         "description": "Documentation of destroyed Palestinian villages including Tantura. Promotes acknowledgment of Nakba in Israeli society.",
         "link": "https://www.zochrot.org/",
-        "linkText": "Zochrot Website →",
         "verified": true
       },
       {
@@ -439,14 +543,29 @@
         "type": "IDF Historical Archives",
         "description": "Partial documentation of Alexandroni Brigade operations. Many files remain classified or 'disappeared' regarding Tantura.",
         "link": "https://www.archives.mod.gov.il/",
-        "linkText": "IDF Archives →",
+        "verified": true
+      },
+      {
+        "icon": "⚖️",
+        "name": "ICRC IHL Treaties Database – Hague (IV) 1907",
+        "type": "Primary law",
+        "description": "Regulations Arts. 23, 25, 28, 46; customary status by 1948.",
+        "link": "https://ihl-databases.icrc.org/en/ihl-treaties/hague-conv-iv-1907",
+        "verified": true
+      },
+      {
+        "icon": "🇺🇳",
+        "name": "UN Treaty Collection – Geneva Conventions 1949",
+        "type": "Treaty status",
+        "description": "Adoption Aug 12, 1949; Israel ratified Jul 6, 1951.",
+        "link": "https://treaties.un.org/pages/showdetails.aspx?objid=0800000280158b1a",
         "verified": true
       }
     ],
     "alert": {
       "type": "info",
       "icon": "ℹ️",
-      "text": "<strong>Methodology:</strong> Primary evidence comes from testimonies of Israeli soldiers who participated, corroborated by Palestinian survivor accounts and physical evidence (mass graves). Despite legal pressure to retract, research has been repeatedly confirmed by independent sources."
+      "text": "<strong>Methodology:</strong> Primary evidence comes from testimonies of Israeli soldiers who participated, corroborated by Palestinian survivor accounts and physical evidence (mass graves). Despite legal pressure to retract, research has been repeatedly confirmed by independent sources including 2022 documentary featuring original audio recordings."
     }
   },
   "media": {
@@ -459,32 +578,16 @@
     },
     "documents": {
       "local": [],
-      "remote": [
-        "https://www.jstor.org/stable/2537591"
-      ]
+      "remote": []
     }
   },
-  "detail_page": "Pages/Historical_Massacres/tantura-1948.html",
   "cta": {
     "title": "Help Preserve Historical Memory",
     "description": "Support ongoing documentation efforts to preserve historical truth and honor victims. Demand excavation and proper burial of Tantura victims.",
     "buttons": [
-      {
-        "text": "📅 View Full Timeline",
-        "link": "../../major-incidents-timeline.html",
-        "type": "primary"
-      },
-      {
-        "text": "🖨️ Print/Save PDF",
-        "link": "#",
-        "type": "secondary",
-        "action": "print"
-      },
-      {
-        "text": "📧 Submit Info",
-        "link": "mailto:palgeno.pedia@gmx.de?subject=Tantura Massacre - Additional Information",
-        "type": "secondary"
-      }
+      { "text": "📅 View Full Timeline", "link": "../../major-incidents-timeline.html", "type": "primary" },
+      { "text": "🖨️ Print/Save PDF", "link": "#", "type": "secondary", "action": "print" },
+      { "text": "📧 Submit Info", "link": "mailto:palgeno.pedia@gmx.de?subject=Tantura Massacre - Additional Information", "type": "secondary" }
     ]
   }
 }
