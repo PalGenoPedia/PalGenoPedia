@@ -14,7 +14,8 @@
         "name": "دير ياسين (دير ياسين)",
         "admin_context": "فلسطين تحت الانتداب البريطاني",
         "district": "القدس",
-        "distance_to_jerusalem": "5 كم غرب"
+        "distance_to_jerusalem": "5 كم غرب",
+        "population_1948": 710
       },
       "current": {
         "name": "حي جفعات شاؤول",
@@ -70,7 +71,7 @@
     },
     "executiveSummary": {
       "title": "ملخص تنفيذي",
-      "alert": "ملاحظة قانونية: لم تكن اتفاقيات جنيف لعام 1949 سارية المفعول في أبريل 1948؛ يعتمد التقييم على أنظمة لاهاي لعام 1907 والقانون الإنساني الدولي العرفي للانتهاكات المعاصرة. الأدوات الحديثة مقدمة للتصنيف السياقي فقط.",
+      "alert": "<strong>ملاحظة قانونية:</strong> لم تكن اتفاقيات جنيف لعام 1949 سارية المفعول في أبريل 1948؛ يعتمد التقييم على أنظمة لاهاي لعام 1907 والقانون الإنساني الدولي العرفي للانتهاكات المعاصرة. الأدوات الحديثة مقدمة للتصنيف السياقي فقط.",
       "paragraph1": "وقعت مجزرة دير ياسين خلال القتال العنيف حول القدس في أوائل أبريل 1948 (في سياق عملية نحشون). كانت القرية قد أبرمت سابقاً تفاهماً محلياً لعدم الاعتداء مع المجتمعات اليهودية المجاورة؛ ومع ذلك، شن الإرغون والليحي هجوماً متعدد المحاور عند الفجر. قدمت عناصر من الهاغاناه/البلماخ الدعم لاحقاً.",
       "paragraph2": "تم توثيق قتل المدنيين - بمن فيهم النساء والأطفال وكبار السن - من قبل شهود إسرائيليين ودوليين؛ تم عرض الأسرى الناجين في القدس ثم إطلاق سراحهم لاحقاً. تختلف تقديرات الوفيات؛ تتمحور معظم الأبحاث حول ≈107، مع ظهور ادعاءات أعلى (≈200-250) في الروايات المعاصرة.",
       "paragraph3": "تم تهجير جميع سكان القرية (≈710 في عام 1948)؛ تم لاحقاً استيعاب أراضي دير ياسين في أحياء القدس الغربية. لم تتم محاكمة أي من مرتكبي الجريمة؛ أصبح قائد الإرجون مناحيم بيغن لاحقاً رئيساً للوزراء (1977-1983)."
@@ -84,14 +85,14 @@
         },
         {
           "label": "الجرحى",
-          "detail": "إصابات بالرصاص، صدمات انفجار"
+          "detail": "إصابات بالرصاص، صدمات انفجار؛ لم يتم الحفاظ على سجلات طبية منهجية"
         },
         {
           "label": "المهجرون",
           "detail": "جميع سكان القرية؛ لم يتم إعادة تشكيلها"
         }
       ],
-      "alert": "المصادر: IPS/PalQuest؛ ملف قرية ذاكرات؛ وثائق اللجنة الدولية للصليب الأحمر؛ سجلات الانتداب البريطاني."
+      "alert": "<strong>المصادر:</strong> <a href='https://www.palquest.org/en/highlight/21194/deir-yasin-massacre-9-april-1948' target='_blank' rel='noopener'>IPS/PalQuest</a>؛ <a href='https://www.zochrot.org/villages/village_details/49106/en' target='_blank' rel='noopener'>ملف قرية ذاكرات</a>؛ <a href='https://www.icrc.org/' target='_blank' rel='noopener'>وثائق اللجنة الدولية للصليب الأحمر</a>؛ <a href='https://www.nationalarchives.gov.uk/' target='_blank' rel='noopener'>سجلات الانتداب البريطاني</a>."
     },
     "timeline": {
       "title": "الجدول الزمني للأحداث",
@@ -117,19 +118,22 @@
     },
     "warCrimes": {
       "title": "الفظائع الموثقة",
-      "alert": "تحذير المحتوى: أوصاف مفصلة موثقة للسجل التاريخي.",
+      "alert": "<strong>تحذير المحتوى:</strong> أوصاف مفصلة موثقة للسجل التاريخي.",
       "crimes": {
         "0": {
           "title": "القتل الجماعي للمدنيين",
-          "description": "قتل المدنيين في عمليات من منزل إلى منزل؛ عثر على جثث في جميع أنحاء القرية. النساء والأطفال وكبار السن بين الضحايا."
+          "description": "قتل المدنيين في عمليات من منزل إلى منزل؛ عثر على جثث في جميع أنحاء القرية. النساء والأطفال وكبار السن بين الضحايا.",
+          "sourceText": "📄 وثائق اللجنة الدولية للصليب الأحمر ↗"
         },
         "1": {
-          "title": "عمليات الإعدام",
-          "description": "ذكر عدة شهود أن الأسرى تم اصطفافهم وإعدامهم. قال مئير بائيل (بلماخ): 'كان قتلاً مباشراً.'"
+          "title": "عمليات الإعدام الموجزة",
+          "description": "ذكر عدة شهود أن الأسرى تم اصطفافهم وإعدامهم. قال مئير بائيل (بلماخ): 'كان قتلاً مباشراً.'",
+          "sourceText": "📄 IPS/PalQuest ↗"
         },
         "2": {
           "title": "العنف الجنسي والتدنيس",
-          "description": "المفتش البريطاني المساعد ريتشارد كاتلينغ: 'ارتكبت العديد من الفظائع الجنسية... تم اغتصاب العديد من الفتيات الصغيرات وقتلهن لاحقاً.' تم تشويه الجثث."
+          "description": "المفتش البريطاني المساعد ريتشارد كاتلينغ: 'ارتكبت العديد من الفظائع الجنسية... تم اغتصاب العديد من الفتيات الصغيرات وقتلهن لاحقاً.' تم تشويه الجثث.",
+          "sourceText": "📄 الأرشيف الوطني البريطاني ↗"
         },
         "3": {
           "title": "النهب والتدمير",
@@ -137,7 +141,8 @@
         },
         "4": {
           "title": "التهجير القسري والإذلال",
-          "description": "تم عرض الناجين في الأحياء اليهودية قبل إطلاق سراحهم. تم تصوير الإذلال العلني ونشره."
+          "description": "تم عرض الناجين في الأحياء اليهودية قبل إطلاق سراحهم. تم تصوير الإذلال العلني ونشره.",
+          "sourceText": "📄 معهد الدراسات الفلسطينية ↗"
         }
       }
     },
@@ -148,25 +153,32 @@
         "0": {
           "heading": "القانون المطبق في أبريل 1948",
           "violations": [
-            "اتفاقية لاهاي الرابعة (1907): عرفية بحلول عام 1948. المادة 23(ج): قتل الأعداء الذين ألقوا أسلحتهم؛ المادة 25: الهجوم على أماكن غير محمية؛ المادة 28: النهب؛ المادة 46: حماية شرف الأسرة والأرواح والممتلكات.",
-            "بند مارتنز (1899/1907): المبادئ الإنسانية ملزمة حتى عندما لا تكون مدونة صراحة.",
-            "ملاحظة: كانت هذه الصكوك معارضة لجميع الأطراف في عام 1948 كقانون إنساني دولي عرفي."
+            "<strong>اتفاقية لاهاي الرابعة (1907):</strong> عرفية بحلول عام 1948. المادة 23(ج): قتل الأعداء الذين ألقوا أسلحتهم؛ المادة 25: الهجوم على أماكن غير محمية؛ المادة 28: النهب؛ المادة 46: حماية شرف الأسرة والأرواح والممتلكات.",
+            "<strong>بند مارتنز (1899/1907):</strong> المبادئ الإنسانية ملزمة حتى عندما لا تكون مدونة صراحة.",
+            "<em>ملاحظة:</em> كانت هذه الصكوك معارضة لجميع الأطراف في عام 1948 كقانون إنساني دولي عرفي."
           ]
         },
         "1": {
           "heading": "سياق ما بعد 1949 (تصنيف وصفي)",
           "violations": [
-            "اتفاقية جنيف الرابعة (1949): اعتمدت في 12 أغسطس 1949 (بعد 16 شهراً من دير ياسين). صدقت عليها إسرائيل في 6 يوليو 1951؛ الأردن في 29 مايو 1951. لا تنطبق بأثر رجعي على أحداث أبريل 1948.",
-            "نظام روما الأساسي (1998): إطار حديث يصف الأفعال بأنها جرائم ضد الإنسانية (القتل، الاضطهاد) وجرائم حرب (القتل العمد، مهاجمة المدنيين). يستخدم وصفياً؛ لا إنفاذ بأثر رجعي.",
-            "ملاحظة: تساعد التصنيفات الحديثة على الفهم لكنها لا تخلق التزامات قانونية بأثر رجعي."
+            "<strong>اتفاقية جنيف الرابعة (1949):</strong> اعتمدت في 12 أغسطس 1949 (بعد 16 شهراً من دير ياسين). صدقت عليها إسرائيل في 6 يوليو 1951؛ الأردن في 29 مايو 1951. لا تنطبق بأثر رجعي على أحداث أبريل 1948.",
+            "<strong>نظام روما الأساسي (1998):</strong> إطار حديث يصف الأفعال بأنها جرائم ضد الإنسانية (القتل، الاضطهاد) وجرائم حرب (القتل العمد، مهاجمة المدنيين). يستخدم وصفياً؛ لا إنفاذ بأثر رجعي.",
+            "<em>ملاحظة:</em> تساعد التصنيفات الحديثة على الفهم لكنها لا تخلق التزامات قانونية بأثر رجعي."
+          ]
+        },
+        "2": {
+          "heading": "قابلية تطبيق المعاهدات",
+          "violations": [
+            "<strong>مبدأ اتفاقية فيينا:</strong> المعاهدات لا تطبق بأثر رجعي (المادة 28). لا يمكن الاستشهاد باتفاقية جنيف الرابعة للأحداث التي سبقت اعتمادها.",
+            "<strong>القانون الإنساني الدولي العرفي:</strong> لاهاي 1907 + بند مارتنز ألزما جميع الأطراف في عام 1948 بغض النظر عن التصديق."
           ]
         }
       },
-      "alert": "المبدأ القانوني: يستخدم التقييم قانون لاهاي 1907/القانون العرفي للانتهاكات المعاصرة؛ اتفاقية جنيف الرابعة/نظام روما الأساسي للتصنيف السياقي الحديث فقط. لم تتم محاكمة أي من الجناة بموجب أي إطار."
+      "alert": "<strong>المبدأ القانوني:</strong> يستخدم التقييم قانون لاهاي 1907/القانون العرفي للانتهاكات المعاصرة؛ اتفاقية جنيف الرابعة/نظام روما الأساسي للتصنيف السياقي الحديث فقط. لم تتم محاكمة أي من الجناة بموجب أي إطار."
     },
     "testimonies": {
       "title": "شهادات الشهود",
-      "alert": "تحذير المحتوى: روايات مباشرة مفصلة.",
+      "alert": "<strong>تحذير المحتوى:</strong> روايات مباشرة مفصلة.",
       "witnesses": {
         "0": {
           "role": "مندوب اللجنة الدولية للصليب الأحمر (القدس)",
@@ -181,11 +193,37 @@
           "testimony": "أمرنا اليهود بالاصطفاف مقابل الجدار. بدأوا بإطلاق النار علينا. أصبت في الجانب، لكن معظمنا نحن الأطفال نجونا لأننا اختبأنا وراء والدينا. أصابت الرصاصات أختي قدري في الرأس، وأختي سامح في الخد، وأخي محمد في الصدر."
         },
         "3": {
-          "role": "المفتش البريطاني المساعد",
+          "role": "المفتش البريطاني المساعد العام",
           "testimony": "لا شك في أن العديد من الفظائع الجنسية ارتكبت من قبل اليهود المهاجمين. تم اغتصاب العديد من الفتيات الصغيرات وقتلهن لاحقاً. كما تم الاعتداء على نساء مسنات."
         }
       },
       "sourceLabel": "المصدر:"
+    },
+    "personalities": {
+      "title": "الشخصيات الرئيسية المتورطة",
+      "commandersTitle": "القادة والجناة",
+      "witnessesTitle": "الشهود والمنتقدون",
+      "responsibility": "المسؤولية:",
+      "laterPositions": "المناصب اللاحقة:",
+      "accountability": "المساءلة:",
+      "role": "الدور:",
+      "commanders": [
+        {
+          "responsibility": "قائد الإرغون (إتسل) عام 1943-1948. أمر وأشرف على هجوم دير ياسين. كتب في مذكراته 'الثورة' عن العملية دون ندم."
+        },
+        {
+          "responsibility": "زعيم ليحي (عصابة شتيرن) منذ عام 1940. شاركت وحداته في دير ياسين جنباً إلى جنب مع الإرغون."
+        },
+        {
+          "responsibility": "قائد ليحي في القدس. قاد وحدات ليحي في الهجوم على الأرض."
+        }
+      ],
+      "context": {
+        "irgun": "ميليشيا صهيونية تنقيحية؛ القائد عام 1948: مناحيم بيغن",
+        "lehi": "انفصلت عن إرغون عام 1940؛ القادة عام 1948: إسحاق شامير (عام)، يهوشوا زيتلر (القدس)",
+        "haganah": "الميليشيا الصهيونية الرئيسية؛ قدمت دعم المدفعية/التكتيكي خلال الهجوم"
+      },
+      "organizationalContext": "السياق التنظيمي:"
     },
     "historicalImpact": {
       "title": "التأثير التاريخي",
@@ -221,9 +259,43 @@
     "sources": {
       "title": "مصادر موثقة ومتقاطعة",
       "introduction": "المراجع الرئيسية للتواريخ والفاعلين ونطاقات الضحايا والتطبيق القانوني والبيانات السيرية.",
+      "list": [
+        {
+          "type": "تركيب بحثي (IPS/PalQuest)",
+          "description": "السرد الأساسي، الشهادات، سياق عدم الاعتداء، مناقشة الضحايا."
+        },
+        {
+          "type": "توثيق",
+          "description": "عدد السكان 1948 ≈710؛ تاريخ الاحتلال؛ الوحدات المرتكبة؛ حالة الموقع الحالي."
+        },
+        {
+          "type": "منظمة إنسانية",
+          "description": "شهادة عيان جاك دو رينييه (زار في 10-11 أبريل 1948)."
+        },
+        {
+          "type": "سجلات حكومية",
+          "description": "رفعت السرية: تقرير ريتشارد كاتلينغ (13 أبريل 1948)؛ شهادات الشهود."
+        },
+        {
+          "type": "نظرة موسوعية عامة",
+          "description": "التحقق من نطاق الوفيات، تفاصيل عدم الاعتداء، البيانات السيرية."
+        },
+        {
+          "type": "قانون أساسي",
+          "description": "اللوائح المواد 23، 25، 28، 46؛ الوضع العرفي بحلول عام 1948."
+        },
+        {
+          "type": "حالة المعاهدة",
+          "description": "الاعتماد 12 أغسطس 1949؛ صدقت إسرائيل في 6 يوليو 1951؛ الأردن 29 مايو 1951."
+        },
+        {
+          "type": "أعمال علمية",
+          "description": "بيني موريس 'ولادة مشكلة اللاجئين الفلسطينيين' (2004)؛ وليد الخالدي 'دير ياسين' (1999)؛ ماثيو هوغان 'مجزرة 1948' (2001)."
+        }
+      ],
       "viewSource": "📄 عرض المصدر ←",
       "verified": "✅ موثق",
-      "alert": "المنهجية: تم التحقق من جميع المصادر. تمثل أرقام الضحايا إجماع العلماء؛ تم التحقق من البيانات السيرية من خلال مصادر متعددة."
+      "alert": "<strong>المنهجية:</strong> تم التحقق من جميع المصادر. تمثل أرقام الضحايا إجماع العلماء؛ تم التحقق من البيانات السيرية من خلال مصادر متعددة."
     },
     "media": {
       "title": "الوسائط والتوثيق",
@@ -241,21 +313,6 @@
         "1": "🖨️ طباعة/حفظ PDF",
         "2": "📧 إرسال معلومات"
       }
-    },
-    "personalities": {
-      "title": "الشخصيات الرئيسية المتورطة",
-      "commandersTitle": "القادة والجناة",
-      "witnessesTitle": "الشهود والمنتقدون",
-      "responsibility": "المسؤولية:",
-      "laterPositions": "المناصب اللاحقة:",
-      "accountability": "المساءلة:",
-      "role": "الدور:",
-      "context": {
-        "irgun": "ميليشيا صهيونية تنقيحية؛ القائد عام 1948: مناحيم بيغن",
-        "lehi": "انفصلت عن إرغون عام 1940؛ القادة عام 1948: إسحاق شامير (عام)، يهوشوا زيتلر (القدس)",
-        "haganah": "الميليشيا الصهيونية الرئيسية؛ قدمت دعم المدفعية/التكتيكي خلال الهجوم"
-      },
-      "organizationalContext": "السياق التنظيمي:"
     }
   },
   "de": {
@@ -344,14 +401,14 @@
         },
         {
           "label": "Verletzte",
-          "detail": "Schusswunden, Explosionstrauma"
+          "detail": "Schusswunden, Explosionstrauma; systematische medizinische Aufzeichnungen nicht erhalten"
         },
         {
           "label": "Vertriebene",
           "detail": "Gesamte Dorfbevölkerung; nicht wiederhergestellt"
         }
       ],
-      "alert": "<strong>Quellen:</strong> IPS/PalQuest; Zochrot Dorfakte; IKRK-Dokumentation; Britische Mandatsaufzeichnungen."
+      "alert": "<strong>Quellen:</strong> <a href='https://www.palquest.org/en/highlight/21194/deir-yasin-massacre-9-april-1948' target='_blank' rel='noopener'>IPS/PalQuest</a>; <a href='https://www.zochrot.org/villages/village_details/49106/en' target='_blank' rel='noopener'>Zochrot Dorfakte</a>; <a href='https://www.icrc.org/' target='_blank' rel='noopener'>IKRK-Dokumentation</a>; <a href='https://www.nationalarchives.gov.uk/' target='_blank' rel='noopener'>Britische Mandatsaufzeichnungen</a>."
     },
     "timeline": {
       "title": "Zeitlicher Ablauf",
@@ -381,15 +438,18 @@
       "crimes": {
         "0": {
           "title": "Massentötung von Zivilisten",
-          "description": "Zivilisten wurden bei Haus-zu-Haus-Operationen getötet; Leichen wurden im ganzen Dorf gefunden. Frauen, Kinder und ältere Menschen unter den Opfern."
+          "description": "Zivilisten wurden bei Haus-zu-Haus-Operationen getötet; Leichen wurden im ganzen Dorf gefunden. Frauen, Kinder und ältere Menschen unter den Opfern.",
+          "sourceText": "📄 IKRK-Dokumentation ↗"
         },
         "1": {
-          "title": "Hinrichtungen",
-          "description": "Mehrere Zeugen berichteten, dass Gefangene aufgereiht und hingerichtet wurden. Meir Pa'il (Palmach): 'Es war direkter Mord.'"
+          "title": "Standrechtliche Hinrichtungen",
+          "description": "Mehrere Zeugen berichteten, dass Gefangene aufgereiht und hingerichtet wurden. Meir Pa'il (Palmach): 'Es war direkter Mord.'",
+          "sourceText": "📄 IPS/PalQuest ↗"
         },
         "2": {
           "title": "Sexuelle Gewalt & Schändung",
-          "description": "Britischer Assistenz-Inspektor Richard Catling: 'Viele sexuelle Gräueltaten wurden begangen... Viele junge Schulmädchen wurden vergewaltigt und später abgeschlachtet.' Leichen wurden verstümmelt."
+          "description": "Britischer Assistenz-Inspektor Richard Catling: 'Viele sexuelle Gräueltaten wurden begangen... Viele junge Schulmädchen wurden vergewaltigt und später abgeschlachtet.' Leichen wurden verstümmelt.",
+          "sourceText": "📄 UK Nationalarchiv ↗"
         },
         "3": {
           "title": "Plünderung & Zerstörung",
@@ -397,7 +457,8 @@
         },
         "4": {
           "title": "Zwangsvertreibung & Demütigung",
-          "description": "Überlebende wurden durch jüdische Viertel paradiert und dann freigelassen. Öffentliche Demütigung wurde fotografiert und veröffentlicht."
+          "description": "Überlebende wurden durch jüdische Viertel paradiert und dann freigelassen. Öffentliche Demütigung wurde fotografiert und veröffentlicht.",
+          "sourceText": "📄 Institut für Palästina-Studien ↗"
         }
       }
     },
@@ -419,6 +480,13 @@
             "<strong>Genfer Konvention IV (1949):</strong> Verabschiedet am 12. Aug. 1949 (16 Monate nach Deir Yassin). Israel ratifizierte am 6. Jul. 1951; Jordanien am 29. Mai 1951. Nicht rückwirkend auf Ereignisse vom April 1948 anwendbar.",
             "<strong>Römisches Statut (1998):</strong> Moderner Rahmen, der Handlungen als Verbrechen gegen die Menschlichkeit (Mord, Verfolgung) und Kriegsverbrechen (vorsätzliche Tötung, Angriff auf Zivilisten) charakterisiert. Beschreibend verwendet; keine rückwirkende Durchsetzung.",
             "<em>Hinweis:</em> Moderne Klassifikationen fördern das Verständnis, schaffen aber keine rückwirkenden rechtlichen Verpflichtungen."
+          ]
+        },
+        "2": {
+          "heading": "Vertragsanwendbarkeit",
+          "violations": [
+            "<strong>Wiener Vertragskonvention-Prinzip:</strong> Verträge sind nicht rückwirkend (Art. 28). Genfer IV kann nicht für Ereignisse vor ihrer Annahme herangezogen werden.",
+            "<strong>Gewohnheitsrechtliches humanitäres Völkerrecht:</strong> Haager 1907 + Martens-Klausel banden alle Parteien 1948 unabhängig von der Ratifizierung."
           ]
         }
       },
@@ -446,6 +514,32 @@
         }
       },
       "sourceLabel": "Quelle:"
+    },
+    "personalities": {
+      "title": "Beteiligte Schlüsselpersonen",
+      "commandersTitle": "Kommandeure & Täter",
+      "witnessesTitle": "Zeugen & Kritiker",
+      "responsibility": "Verantwortung:",
+      "laterPositions": "Spätere Positionen:",
+      "accountability": "Rechenschaftspflicht:",
+      "role": "Rolle:",
+      "commanders": [
+        {
+          "responsibility": "Irgun (Etzel) Kommandeur 1943-1948. Befahl und beaufsichtigte den Angriff auf Deir Yassin. Schrieb in seinen Memoiren 'Der Aufstand' über die Operation ohne Reue."
+        },
+        {
+          "responsibility": "Lehi (Stern-Gang) Führer ab 1940. Seine Einheiten nahmen an Deir Yassin zusammen mit Irgun teil."
+        },
+        {
+          "responsibility": "Lehi-Kommandeur in Jerusalem. Führte Lehi-Einheiten im Angriff vor Ort."
+        }
+      ],
+      "context": {
+        "irgun": "Revisionistisch-zionistische paramilitärische Gruppe; Kommandeur 1948: Menachem Begin",
+        "lehi": "Abspaltung von Irgun 1940; Anführer 1948: Yitzhak Shamir (gesamt), Yehoshua Zettler (Jerusalem)",
+        "haganah": "Mainstream-zionistische Miliz; lieferte Mörser/taktische Unterstützung während des Angriffs"
+      },
+      "organizationalContext": "Organisatorischer Kontext:"
     },
     "historicalImpact": {
       "title": "Historische Auswirkungen",
@@ -481,6 +575,40 @@
     "sources": {
       "title": "Verifizierte & Querverweisquellen",
       "introduction": "Wichtige Referenzen für Daten, Akteure, Opferzahlen, rechtliche Anwendbarkeit und biografische Daten.",
+      "list": [
+        {
+          "type": "Forschungssynthese (IPS/PalQuest)",
+          "description": "Kernerzählung, Zeugenaussagen, Nichtangriffskontext, Opferdiskussion."
+        },
+        {
+          "type": "Dokumentation",
+          "description": "Bevölkerung 1948 ≈710; Besatzungsdatum; täterische Einheiten; aktueller Standortstatus."
+        },
+        {
+          "type": "Humanitäre Organisation",
+          "description": "Jacques de Reynier Augenzeugenaccount (besuchte am 10.-11. April 1948)."
+        },
+        {
+          "type": "Regierungsaufzeichnungen",
+          "description": "Deklassifiziert: Richard Catling Bericht (13. April 1948); Zeugenaussagen."
+        },
+        {
+          "type": "Enzyklopädischer Überblick",
+          "description": "Überprüfung des Todesbereichs, Nichtangriffsdetails, biografische Daten."
+        },
+        {
+          "type": "Primärrecht",
+          "description": "Vorschriften Art. 23, 25, 28, 46; gewohnheitsrechtlicher Status bis 1948."
+        },
+        {
+          "type": "Vertragsstatus",
+          "description": "Annahme 12. Aug. 1949; Israel ratifizierte 6. Jul. 1951; Jordanien 29. Mai 1951."
+        },
+        {
+          "type": "Wissenschaftliche Arbeiten",
+          "description": "Benny Morris 'Geburt des palästinensischen Flüchtlingsproblems' (2004); Walid Khalidi 'Deir Yassin' (1999); Matthew Hogan 'Das Massaker von 1948' (2001)."
+        }
+      ],
       "viewSource": "📄 Quelle anzeigen →",
       "verified": "✅ Verifiziert",
       "alert": "<strong>Methodik:</strong> Alle Quellen querverwiesen. Opferzahlen repräsentieren wissenschaftlichen Konsens; biografische Daten durch mehrere Quellen verifiziert."
@@ -501,21 +629,6 @@
         "1": "🖨️ Drucken/PDF speichern",
         "2": "📧 Informationen einreichen"
       }
-    },
-    "personalities": {
-      "title": "Beteiligte Schlüsselpersonen",
-      "commandersTitle": "Kommandeure & Täter",
-      "witnessesTitle": "Zeugen & Kritiker",
-      "responsibility": "Verantwortung:",
-      "laterPositions": "Spätere Positionen:",
-      "accountability": "Rechenschaftspflicht:",
-      "role": "Rolle:",
-      "context": {
-        "irgun": "Revisionistisch-zionistische paramilitärische Gruppe; Kommandeur 1948: Menachem Begin",
-        "lehi": "Abspaltung von Irgun 1940; Anführer 1948: Yitzhak Shamir (gesamt), Yehoshua Zettler (Jerusalem)",
-        "haganah": "Mainstream-zionistische Miliz; lieferte Mörser/taktische Unterstützung während des Angriffs"
-      },
-      "organizationalContext": "Organisatorischer Kontext:"
     }
   }
 }

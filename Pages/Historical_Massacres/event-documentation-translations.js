@@ -1,15 +1,15 @@
 // ===================================================================
 // TRANSLATION SUPPORT FOR EVENT DOCUMENTATION
-// Version: 1.2.0 - Improved integration with main translation system
-// Last Updated: 2025-10-12 13:42:29 UTC
+// Version: 1.4.0 - Added hyperlinked sources support
+// Last Updated: 2025-10-12 20:00:00 UTC
 // Author: aliattia02
 // ===================================================================
 
 console.log('🔍 Event documentation translations loading...');
 
-let eventData = null;      // Main JSON data (English)
-let translations = null;   // Translation object for all languages
-let currentLang = 'en';    // Default language
+let eventData = null;
+let translations = null;
+let currentLang = 'en';
 
 async function loadEventData() {
     try {
@@ -19,45 +19,34 @@ async function loadEventData() {
 
         console.log(`📂 Attempting to load: ${mainJsonPath} and ${translationsPath}`);
 
-        // First load main data
         const mainResponse = await fetch(mainJsonPath);
         if (!mainResponse.ok) throw new Error(`HTTP error! status: ${mainResponse.status}`);
 
         eventData = await mainResponse.json();
         console.log(`✅ Loaded main JSON data for: ${mainJsonPath}`);
 
-        // Then try to load page-specific translations
         try {
             const transResponse = await fetch(translationsPath);
             if (transResponse.ok) {
                 translations = await transResponse.json();
                 console.log('✅ Page-specific translations loaded');
-
-                // CRITICAL: Now load and merge common translations
                 await loadAndMergeCommonTranslations();
-
             } else {
                 console.log('⚠️ No page-specific translations file found');
                 translations = {};
-
-                // Still load common translations
                 await loadAndMergeCommonTranslations();
             }
         } catch (transError) {
             console.log('⚠️ Error loading page-specific translations:', transError);
             translations = {};
-
-            // Still load common translations
             await loadAndMergeCommonTranslations();
         }
 
-        // Get current language from TranslationSystem if available
         if (window.TranslationSystem) {
             currentLang = window.TranslationSystem.currentLanguage || 'en';
-            console.log(`🌍 Using language: ${currentLang}`);
+            console.log(`🌐 Using language: ${currentLang}`);
         }
 
-        // Render page with translations if available
         renderPage(eventData);
 
     } catch (error) {
@@ -65,13 +54,10 @@ async function loadEventData() {
     }
 }
 
-// Updated function to load and merge common translations
 async function loadAndMergeCommonTranslations() {
     try {
         const rootPath = getPathToRoot();
         const timestamp = new Date().getTime();
-
-        // Load all language files from root
         const languages = ['en', 'ar', 'de'];
 
         for (const lang of languages) {
@@ -85,12 +71,10 @@ async function loadAndMergeCommonTranslations() {
                 const commonData = await response.json();
                 console.log(`✅ Loaded common translations for ${lang}`);
 
-                // Initialize translations object if needed
                 if (!translations[lang]) {
                     translations[lang] = {};
                 }
 
-                // Merge common translations (common translations should NOT override page-specific)
                 if (commonData.common) {
                     translations[lang].common = {
                         ...commonData.common,
@@ -98,7 +82,6 @@ async function loadAndMergeCommonTranslations() {
                     };
                 }
 
-                // Also merge any other root-level keys from common translations
                 for (const key in commonData) {
                     if (key !== 'common' && commonData.hasOwnProperty(key)) {
                         if (!translations[lang][key]) {
@@ -112,7 +95,6 @@ async function loadAndMergeCommonTranslations() {
             }
         }
 
-        // Make translations available to TranslationSystem
         if (window.TranslationSystem) {
             window.TranslationSystem.translations = translations;
             console.log('✅ Common translations merged and made available to TranslationSystem');
@@ -125,11 +107,9 @@ async function loadAndMergeCommonTranslations() {
     }
 }
 
-// Get translated content if available, otherwise use default
 function getTranslatedContent(path, defaultContent) {
     if (!translations || !currentLang || currentLang === 'en') return defaultContent;
 
-    // Navigate through the translations object based on the dot-notation path
     try {
         const pathParts = path.split('.');
         let result = translations[currentLang];
@@ -146,67 +126,56 @@ function getTranslatedContent(path, defaultContent) {
     }
 }
 
-// Handle language change events
 function setupLanguageChangeListener() {
     document.addEventListener('languageChanged', function(e) {
         console.log('🌐 Language changed to:', e.detail.language, 'with direction:', e.detail.direction);
-
-        // Update current language
         currentLang = e.detail.language;
-
-        // Re-render the page with the new language
         if (eventData) {
             renderPage(eventData);
         }
     });
 }
 
-// Override the main translation system's functionality to integrate properly
 function overrideTranslationSystem() {
     if (window.TranslationSystem) {
         console.log('🔄 Setting up custom translation handling');
 
-        // Make sure TranslationSystem uses our translations
         if (translations && Object.keys(translations).length > 0) {
             window.TranslationSystem.translations = translations;
         }
 
-        // Override it to avoid infinite loops
         const originalUpdatePageLanguage = window.TranslationSystem.updatePageLanguage;
+        const originalChangeLanguage = window.TranslationSystem.changeLanguage;
+
         window.TranslationSystem.updatePageLanguage = function() {
-            console.log('🛑 Preventing standard translation update to avoid recursion');
-            // Only update direction attributes
+            console.log('🔄 Custom translation update including footer');
+
             document.documentElement.lang = currentLang;
             document.documentElement.dir = window.TranslationSystem.languages[currentLang]?.dir || 'ltr';
 
-            // Update RTL class
             if (window.TranslationSystem.languages[currentLang]?.dir === 'rtl') {
                 document.body.classList.add('rtl');
             } else {
                 document.body.classList.remove('rtl');
             }
+
+            updateCommonTranslations();
         };
 
-        // Set current language for both systems
         window.TranslationSystem.currentLanguage = currentLang;
 
-        // Ensure language change in main system updates our system
-        const originalChangeLanguage = window.TranslationSystem.changeLanguage;
         window.TranslationSystem.changeLanguage = async function(lang) {
             currentLang = lang;
             window.TranslationSystem.currentLanguage = lang;
             localStorage.setItem('gaza-docs-lang', lang);
 
-            // Update the UI without recursive calls
             window.TranslationSystem.updateLanguageSelectorUI();
             window.TranslationSystem.updatePageLanguage();
 
-            // Re-render our content with the new language
             if (eventData) {
                 renderPage(eventData);
             }
 
-            // Trigger event
             document.dispatchEvent(new CustomEvent('languageChanged', {
                 detail: {
                     language: lang,
@@ -219,9 +188,7 @@ function overrideTranslationSystem() {
     }
 }
 
-// Update the original renderPage function to use translations
 function renderPage(data) {
-    // Set page metadata with translations
     document.getElementById('page-title').textContent = getTranslatedContent('metadata.pageTitle', data.metadata.pageTitle);
     document.getElementById('page-description').setAttribute('content', getTranslatedContent('metadata.description', data.metadata.description));
     document.getElementById('page-keywords').setAttribute('content', getTranslatedContent('metadata.keywords', data.metadata.keywords || ''));
@@ -241,56 +208,83 @@ function renderPage(data) {
     if (data.cta) renderCTA(data.cta);
     initializeAnimations();
 
-    // Set RTL/LTR direction based on language
     const isRTL = currentLang === 'ar';
     document.documentElement.dir = isRTL ? 'rtl' : 'ltr';
 
-    // IMPORTANT FIX: Don't call updatePageLanguage() which causes infinite loop
-    // Instead, manually update data-i18n attributes that were not handled by our renderer
-    updateRemainingTranslations();
+    updateCommonTranslations();
 }
 
-// New function to update remaining translations for elements that have data-i18n attributes
-function updateRemainingTranslations() {
-    // Only do this if TranslationSystem exists but do not call its updatePageLanguage method
+function updateCommonTranslations() {
     if (!window.TranslationSystem || !translations || !translations[currentLang]) return;
 
-    // Get all elements with data-i18n attributes that we didn't explicitly handle
+    console.log('🔄 Updating common translations (footer, header, etc.)');
+
     const elements = document.querySelectorAll('[data-i18n]');
 
     for (const element of elements) {
         const key = element.getAttribute('data-i18n');
         if (!key) continue;
 
-        // Try to find this key in our translations
         try {
             const parts = key.split('.');
             let value = translations[currentLang];
 
-            // Navigate to the value
             for (const part of parts) {
                 if (!value || typeof value !== 'object') break;
                 value = value[part];
             }
 
-            // If we have a valid translation string, apply it
             if (value && typeof value === 'string') {
-                element.textContent = value;
+                element.innerHTML = value;
             }
         } catch (e) {
-            // Silently fail for missing translations
         }
+    }
+
+    const placeholders = document.querySelectorAll('[data-i18n-placeholder]');
+    for (const element of placeholders) {
+        const key = element.getAttribute('data-i18n-placeholder');
+        const translation = getTranslationFromSystem(key);
+        if (translation) {
+            element.placeholder = translation;
+        }
+    }
+
+    const titles = document.querySelectorAll('[data-i18n-title]');
+    for (const element of titles) {
+        const key = element.getAttribute('data-i18n-title');
+        const translation = getTranslationFromSystem(key);
+        if (translation) {
+            element.title = translation;
+        }
+    }
+
+    console.log('✅ Common translations updated');
+}
+
+function getTranslationFromSystem(key) {
+    if (!translations || !translations[currentLang]) return null;
+
+    try {
+        const parts = key.split('.');
+        let value = translations[currentLang];
+
+        for (const part of parts) {
+            if (!value || typeof value !== 'object') return null;
+            value = value[part];
+        }
+
+        return value && typeof value === 'string' ? value : null;
+    } catch (e) {
+        return null;
     }
 }
 
-// Update each specific render function to use translations
 function renderHero(hero) {
-    // Get translated content for hero section
     const categoryText = getTranslatedContent('hero.category', hero.category);
     const titleText = getTranslatedContent('hero.title', hero.title);
     const subtitleText = getTranslatedContent('hero.subtitle', hero.subtitle);
 
-    // Filter out Coordinates from hero metaCards
     const fieldsToHide = ['Coordinates'];
     const filteredMetaCards = hero.metaCards.filter(card => !fieldsToHide.includes(card.label));
 
@@ -300,7 +294,6 @@ function renderHero(hero) {
         <p class="event-subtitle">${subtitleText}</p>
         <div class="event-meta-grid">
             ${filteredMetaCards.map((card, index) => {
-                // Try to get translated content for each meta card
                 let cardLabel = card.label.toLowerCase().replace(/\s+/g, '');
                 const translatedLabel = getTranslatedContent(`hero.metaCards.${cardLabel}.label`, card.label);
                 const translatedValue = getTranslatedContent(`hero.metaCards.${cardLabel}.value`, card.value);
@@ -319,10 +312,8 @@ function renderHero(hero) {
 }
 
 function renderQuickFacts(quickFacts) {
-    // Get translated title
     const titleText = getTranslatedContent('quickFacts.title', quickFacts.title);
 
-    // Filter out specific fields: Coordinates, Event ID, Injured
     const fieldsToHide = ['Coordinates', 'Event ID', 'Injured'];
     const filteredItems = quickFacts.items.filter(item => !fieldsToHide.includes(item.label));
 
@@ -330,7 +321,6 @@ function renderQuickFacts(quickFacts) {
         <div class="quick-info-title">${titleText}</div>
         <div class="quick-info-grid">
             ${filteredItems.map(item => {
-                // Determine translation key based on label
                 const labelKey = getQuickFactLabelKey(item.label);
                 const translatedLabel = labelKey ? 
                     getTranslatedContent(`quickFacts.${labelKey}`, item.label) : 
@@ -347,7 +337,6 @@ function renderQuickFacts(quickFacts) {
     `;
 }
 
-// Helper to get translation keys for quick fact labels
 function getQuickFactLabelKey(label) {
     const keyMap = {
         'Event Type': 'eventType',
@@ -362,7 +351,6 @@ function getQuickFactLabelKey(label) {
 function renderMediaGallery(media) {
     const container = document.getElementById('media-gallery-section');
 
-    // Combine local and remote images
     const localImages = media.images?.local || [];
     const remoteImages = media.images?.remote || [];
     const allImages = [
@@ -370,7 +358,6 @@ function renderMediaGallery(media) {
         ...remoteImages.map(img => ({ src: img, type: 'remote', original: img }))
     ];
 
-    // Combine local and remote documents
     const localDocuments = media.documents?.local || [];
     const remoteDocuments = media.documents?.remote || [];
     const allDocuments = [
@@ -386,7 +373,6 @@ function renderMediaGallery(media) {
         return;
     }
 
-    // Prepare gallery images for lightbox
     if (hasImages) {
         window.galleryImages = allImages.map(img => ({
             src: img.src,
@@ -395,7 +381,6 @@ function renderMediaGallery(media) {
         }));
     }
 
-    // Get translated text
     const galleryTitle = getTranslatedContent('media.title', 'Media & Documentation');
     const imagesTabText = getTranslatedContent('media.imagesTab', 'Images');
     const documentsTabText = getTranslatedContent('media.documentsTab', 'Documents');
@@ -483,7 +468,6 @@ function renderMediaGallery(media) {
 }
 
 function renderExecutiveSummary(summary) {
-    // Get translated content
     const titleText = getTranslatedContent('executiveSummary.title', summary.title);
     const alertText = getTranslatedContent('executiveSummary.alert', summary.alert.text);
 
@@ -507,7 +491,6 @@ function renderExecutiveSummary(summary) {
 }
 
 function renderCasualties(casualties) {
-    // Get translated title
     const titleText = getTranslatedContent('casualties.title', casualties.title);
     const alertText = getTranslatedContent('casualties.alert', casualties.alert.text);
 
@@ -519,15 +502,30 @@ function renderCasualties(casualties) {
         <div class="section-content">
             <div class="casualties-breakdown">
                 ${casualties.breakdown.map((item, index) => {
-                    // Get translated content for each item
                     const translatedLabel = getTranslatedContent(`casualties.breakdown.${index}.label`, item.label);
                     const translatedDetail = getTranslatedContent(`casualties.breakdown.${index}.detail`, item.detail);
+                    
+                    let sourcesHTML = '';
+                    if (item.sources && item.sources.length > 0) {
+                        sourcesHTML = `
+                            <div style="margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid var(--border-light);">
+                                <div style="font-size: 0.75rem; font-weight: 600; margin-bottom: 0.5rem; opacity: 0.8;">📚 Sources:</div>
+                                ${item.sources.map(source => `
+                                    <a href="${source.link}" class="source-link" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 0.25rem; font-size: 0.7rem; margin-bottom: 0.25rem;">
+                                        <span>${source.icon}</span>
+                                        <span>${source.name}</span>
+                                    </a>
+                                `).join('')}
+                            </div>
+                        `;
+                    }
                     
                     return `
                         <div class="casualty-card ${item.type}">
                             <div class="casualty-number">${item.number}</div>
                             <div class="casualty-label">${translatedLabel}</div>
                             <div class="casualty-detail">${translatedDetail}</div>
+                            ${sourcesHTML}
                         </div>
                     `;
                 }).join('')}
@@ -541,7 +539,6 @@ function renderCasualties(casualties) {
 }
 
 function renderTimeline(timeline) {
-    // Get translated title
     const titleText = getTranslatedContent('timeline.title', timeline.title);
     const sourcePrefixText = getTranslatedContent('timeline.sourcePrefix', 'Source:');
 
@@ -553,9 +550,18 @@ function renderTimeline(timeline) {
         <div class="section-content">
             <div class="event-timeline">
                 ${timeline.events.map((event, index) => {
-                    // Get translated content for each timeline event
                     const translatedTitle = getTranslatedContent(`timeline.events.${index}.title`, event.title);
                     const translatedDesc = getTranslatedContent(`timeline.events.${index}.description`, event.description);
+                    
+                    let sourceHTML = '';
+                    if (event.sourceLinks && event.sourceLinks.length > 0) {
+                        const links = event.sourceLinks.map(link => 
+                            `<a href="${link.url}" target="_blank" rel="noopener" style="color: var(--primary-color); text-decoration: none; border-bottom: 1px dotted var(--primary-color);">${link.name}</a>`
+                        ).join('; ');
+                        sourceHTML = `<div style="margin-top: 0.5rem; font-size: 0.85rem; opacity: 0.8;"><em>${sourcePrefixText}</em> ${links}</div>`;
+                    } else if (event.source) {
+                        sourceHTML = `<div style="margin-top: 0.5rem; font-size: 0.85rem; opacity: 0.8;"><em>${sourcePrefixText}</em> ${event.source}</div>`;
+                    }
                     
                     return `
                         <div class="timeline-item">
@@ -563,7 +569,7 @@ function renderTimeline(timeline) {
                             <div class="timeline-content">
                                 <strong>${translatedTitle}:</strong>
                                 <span>${translatedDesc}</span>
-                                ${event.source ? `<div style="margin-top: 0.5rem; font-size: 0.85rem; opacity: 0.8;"><em>${sourcePrefixText}</em> ${event.source}</div>` : ''}
+                                ${sourceHTML}
                             </div>
                         </div>
                     `;
@@ -574,9 +580,7 @@ function renderTimeline(timeline) {
 }
 
 function renderWarCrimes(warCrimes) {
-    // Handle both array format and object format
     if (Array.isArray(warCrimes)) {
-        // Simple array format - create basic list
         document.getElementById('war-crimes-section').innerHTML = `
             <div class="section-header">
                 <span class="section-icon">⚠️</span>
@@ -593,11 +597,9 @@ function renderWarCrimes(warCrimes) {
         return;
     }
 
-    // Get translated title and alert
     const titleText = getTranslatedContent('warCrimes.title', warCrimes.title);
     const alertText = warCrimes.alert ? getTranslatedContent('warCrimes.alert', warCrimes.alert.text) : '';
 
-    // Object format with detailed crimes
     document.getElementById('war-crimes-section').innerHTML = `
         <div class="section-header">
             <span class="section-icon">${warCrimes.icon}</span>
@@ -612,11 +614,10 @@ function renderWarCrimes(warCrimes) {
             ` : ''}
             <ul class="war-crimes-list">
                 ${warCrimes.crimes.map((crime, index) => {
-                    // Get translated content for each crime
                     const translatedTitle = getTranslatedContent(`warCrimes.crimes.${index}.title`, crime.title);
                     const translatedDesc = getTranslatedContent(`warCrimes.crimes.${index}.description`, crime.description);
                     const translatedSourceText = crime.sourceLink ? 
-                        getTranslatedContent(`warCrimes.crimes.${index}.sourceText`, crime.sourceText || '📄 View Source →') : '';
+                        getTranslatedContent(`warCrimes.crimes.${index}.sourceText`, crime.sourceText || '📄 View Source ↗') : '';
                     
                     return `
                         <li>
@@ -641,7 +642,6 @@ function renderWarCrimes(warCrimes) {
 function renderInternationalLaw(law) {
     if (!law) return;
 
-    // Get translated content
     const titleText = getTranslatedContent('internationalLaw.title', law.title);
     const introText = law.introduction ? getTranslatedContent('internationalLaw.introduction', law.introduction) : '';
     const alertText = law.alert ? getTranslatedContent('internationalLaw.alert', law.alert.text) : '';
@@ -654,10 +654,8 @@ function renderInternationalLaw(law) {
         <div class="section-content">
             ${introText ? `<p style="margin-bottom: 1.5rem;">${introText}</p>` : ''}
             ${law.sections.map((section, sIndex) => {
-                // Get translated heading
                 const heading = getTranslatedContent(`internationalLaw.sections.${sIndex}.heading`, section.heading);
                 
-                // Translate violations if present
                 let violationsHTML = '';
                 if (section.violations) {
                     violationsHTML = `
@@ -672,45 +670,9 @@ function renderInternationalLaw(law) {
                     `;
                 }
                 
-                // Translate notes if present
-                let notesHTML = '';
-                if (section.notes) {
-                    notesHTML = `
-                        <ul style="margin: 0.5rem 0 1rem 1.5rem; line-height: 1.7;">
-                            ${section.notes.map((n, nIndex) => {
-                                const translatedNote = getTranslatedContent(
-                                    `internationalLaw.sections.${sIndex}.notes.${nIndex}`, n
-                                );
-                                return `<li>${translatedNote}</li>`;
-                            }).join('')}
-                        </ul>
-                    `;
-                }
-                
-                // Translate violation examples if present
-                let violationExamplesHTML = '';
-                if (section.violations_examples) {
-                    const specificViolationsText = getTranslatedContent('internationalLaw.specificViolations', 'Specific Violations:');
-                    violationExamplesHTML = `
-                        <div style="margin: 0.5rem 0 1rem 1.5rem; padding: 0.75rem; background: var(--card-bg); border-radius: 4px; border-left: 3px solid var(--primary-color);">
-                            <strong>${specificViolationsText}</strong>
-                            <ul style="margin: 0.5rem 0 0 1.5rem; line-height: 1.7;">
-                                ${section.violations_examples.map((v, vIndex) => {
-                                    const translatedExample = getTranslatedContent(
-                                        `internationalLaw.sections.${sIndex}.violations_examples.${vIndex}`, v
-                                    );
-                                    return `<li>${translatedExample}</li>`;
-                                }).join('')}
-                            </ul>
-                        </div>
-                    `;
-                }
-                
                 return `
                     <h4 style="margin-top: 1.5rem; margin-bottom: 0.75rem;">${heading}</h4>
                     ${violationsHTML}
-                    ${notesHTML}
-                    ${violationExamplesHTML}
                 `;
             }).join('')}
             ${law.alert ? `
@@ -722,7 +684,6 @@ function renderInternationalLaw(law) {
         </div>
     `;
 }
-
 function renderTestimonies(testimonies) {
     // Get translated content
     const titleText = getTranslatedContent('testimonies.title', testimonies.title);
@@ -745,8 +706,6 @@ function renderTestimonies(testimonies) {
                 // Get translated content for each witness
                 const translatedRole = getTranslatedContent(`testimonies.witnesses.${wIndex}.role`, witness.role);
                 const translatedTestimony = getTranslatedContent(`testimonies.witnesses.${wIndex}.testimony`, witness.testimony);
-                const translatedSourceText = witness.sourceLink ? 
-                    getTranslatedContent(`testimonies.witnesses.${wIndex}.sourceText`, witness.sourceText || '📄 View Source →') : '';
                 
                 return `
                     <div class="testimony-card">
@@ -762,7 +721,7 @@ function renderTestimonies(testimonies) {
                             <strong>${sourceLabelText}</strong> ${witness.source}
                             ${witness.sourceLink ? `
                                 <a href="${witness.sourceLink}" class="source-link" target="_blank" rel="noopener">
-                                    <span>${translatedSourceText}</span>
+                                    📄 View Source →
                                 </a>
                             ` : ''}
                         </div>
@@ -779,108 +738,26 @@ function renderPersonalities(personalities) {
     // Get translated content
     const titleText = getTranslatedContent('personalities.title', personalities.title || 'Key Individuals Involved');
     const commandersTitleText = getTranslatedContent('personalities.commandersTitle', 'Commanders & Perpetrators');
-    const witnessesTitleText = getTranslatedContent('personalities.witnessesTitle', 'Witnesses & Critics');
-    const responsibilityText = getTranslatedContent('personalities.responsibility', 'Responsibility:');
-    const laterPositionsText = getTranslatedContent('personalities.laterPositions', 'Later Positions:');
-    const accountabilityText = getTranslatedContent('personalities.accountability', 'Accountability:');
-    const roleText = getTranslatedContent('personalities.role', 'Role:');
-    const organizationalContextText = getTranslatedContent('personalities.organizationalContext', 'Organizational Context:');
-
-    // Create organizational context HTML
-    const organizationalContextHTML = personalities.organizational_context ? `
-        <div class="alert-box info" style="margin-top: 1.5rem;">
-            <span class="alert-icon">ℹ️</span>
-            <strong>${organizationalContextText}</strong>
-            <ul style="margin: 0.5rem 0 0 1.5rem; line-height: 1.6;">
-                ${personalities.organizational_context.irgun ? 
-                    `<li><strong>Irgun:</strong> <span>${getTranslatedContent('personalities.context.irgun', personalities.organizational_context.irgun)}</span></li>` : ''}
-                ${personalities.organizational_context.lehi ? 
-                    `<li><strong>Lehi:</strong> <span>${getTranslatedContent('personalities.context.lehi', personalities.organizational_context.lehi)}</span></li>` : ''}
-                ${personalities.organizational_context.haganah ? 
-                    `<li><strong>Haganah:</strong> <span>${getTranslatedContent('personalities.context.haganah', personalities.organizational_context.haganah)}</span></li>` : ''}
-            </ul>
-        </div>
-    ` : '';
 
     // Create commanders HTML
     const commandersHTML = personalities.commanders && personalities.commanders.length > 0 ? `
         <h4 style="margin-bottom: 1rem;">${commandersTitleText}</h4>
         ${personalities.commanders.map((person, pIndex) => {
-            // Get translated content for each person
             const translatedResponsibility = getTranslatedContent(`personalities.commanders.${pIndex}.responsibility`, person.responsibility);
-            const translatedAccountability = getTranslatedContent(`personalities.commanders.${pIndex}.accountability`, person.accountability);
-            const translatedNotes = person.notes ? getTranslatedContent(`personalities.commanders.${pIndex}.notes`, person.notes) : '';
-            
-            // Create later positions HTML
-            const laterPositionsHTML = person.later_positions && person.later_positions.length > 0 ? `
-                <div style="margin: 0.75rem 0; padding: 0.75rem; background: var(--card-bg); border-radius: 4px;">
-                    <strong>${laterPositionsText}</strong>
-                    <ul style="margin: 0.5rem 0 0 1.5rem; line-height: 1.6;">
-                        ${person.later_positions.map((pos, lIndex) => {
-                            const translatedPosition = getTranslatedContent(
-                                `personalities.commanders.${pIndex}.later_positions.${lIndex}`, pos
-                            );
-                            return `<li>${translatedPosition}</li>`;
-                        }).join('')}
-                    </ul>
-                </div>
-            ` : '';
             
             return `
                 <div class="testimony-card" style="margin-bottom: 1.5rem;">
                     <div class="testimony-header">
                         <div class="witness-avatar">${person.name.split(' ').map(n => n[0]).join('')}</div>
                         <div class="witness-info">
-                            <div class="witness-name">${person.name} ${person.name_hebrew ? `<span style="opacity: 0.7;">(${person.name_hebrew})</span>` : ''}</div>
+                            <div class="witness-name">${person.name}</div>
                             <div class="witness-role">${person.role} • ${person.birth_death}</div>
                         </div>
                     </div>
                     <div class="testimony-text">
-                        <strong>${responsibilityText}</strong>
+                        <strong>Responsibility:</strong>
                         <span>${translatedResponsibility}</span>
                     </div>
-                    ${laterPositionsHTML}
-                    <div style="margin-top: 0.75rem; padding: 0.75rem; background: rgba(255, 193, 7, 0.1); border-left: 3px solid #ffc107; border-radius: 4px;">
-                        <strong>⚖️ ${accountabilityText}</strong>
-                        <span>${translatedAccountability}</span>
-                    </div>
-                    ${translatedNotes ? `<div style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;"><em>${translatedNotes}</em></div>` : ''}
-                </div>
-            `;
-        }).join('')}
-    ` : '';
-
-    // Create witnesses/critics HTML
-    const witnessesHTML = personalities.witnesses_critics && personalities.witnesses_critics.length > 0 ? `
-        <h4 style="margin-top: 2rem; margin-bottom: 1rem;">${witnessesTitleText}</h4>
-        ${personalities.witnesses_critics.map((person, pIndex) => {
-            // Get translated content for each person
-            const translatedResponsibility = getTranslatedContent(`personalities.witnesses.${pIndex}.responsibility`, person.responsibility);
-            const translatedLaterPositions = person.later_positions ? 
-                getTranslatedContent(`personalities.witnesses.${pIndex}.laterPositions`, person.later_positions.join('; ')) : '';
-            const translatedNotes = person.notes ? 
-                getTranslatedContent(`personalities.witnesses.${pIndex}.notes`, person.notes) : '';
-            
-            return `
-                <div class="testimony-card" style="margin-bottom: 1.5rem;">
-                    <div class="testimony-header">
-                        <div class="witness-avatar">${person.name.split(' ').map(n => n[0]).join('')}</div>
-                        <div class="witness-info">
-                            <div class="witness-name">${person.name} ${person.name_hebrew ? `<span style="opacity: 0.7;">(${person.name_hebrew})</span>` : ''}</div>
-                            <div class="witness-role">${person.role} • ${person.birth_death}</div>
-                        </div>
-                    </div>
-                    <div class="testimony-text">
-                        <strong>${roleText}</strong>
-                        <span>${translatedResponsibility}</span>
-                    </div>
-                    ${person.later_positions && person.later_positions.length > 0 ? `
-                        <div style="margin: 0.75rem 0;">
-                            <strong>${laterPositionsText}</strong>
-                            <span>${translatedLaterPositions}</span>
-                        </div>
-                    ` : ''}
-                    ${translatedNotes ? `<div style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;"><em>${translatedNotes}</em></div>` : ''}
                 </div>
             `;
         }).join('')}
@@ -898,8 +775,6 @@ function renderPersonalities(personalities) {
         </div>
         <div class="section-content">
             ${commandersHTML}
-            ${witnessesHTML}
-            ${organizationalContextHTML}
         </div>
     `;
 
@@ -907,12 +782,6 @@ function renderPersonalities(personalities) {
     const testimoniesSection = document.getElementById('testimonies-section');
     if (testimoniesSection) {
         testimoniesSection.after(container);
-    } else {
-        // Fallback: insert before historical impact
-        const historicalSection = document.getElementById('historical-impact-section');
-        if (historicalSection) {
-            historicalSection.before(container);
-        }
     }
 }
 
@@ -950,9 +819,6 @@ function renderSources(sources) {
     // Get translated content
     const titleText = getTranslatedContent('sources.title', sources.title);
     const introText = getTranslatedContent('sources.introduction', sources.introduction);
-    const alertText = sources.alert ? getTranslatedContent('sources.alert', sources.alert.text) : '';
-    const viewSourceText = getTranslatedContent('sources.viewSource', '📄 View Source →');
-    const verifiedText = getTranslatedContent('sources.verified', '✅ Verified');
 
     document.getElementById('sources-section').innerHTML = `
         <div class="section-header">
@@ -963,9 +829,8 @@ function renderSources(sources) {
             <p style="margin-bottom: 1rem; font-size: 0.9rem;">${introText}</p>
             <div class="sources-compact">
                 ${sources.list.map((source, sIndex) => {
-                    // Get translated source type and description
                     const translatedType = getTranslatedContent(`sources.list.${sIndex}.type`, source.type);
-                    const translatedDesc = getTranslatedContent(`sources.list.${sIndex}.description`, source.description || source.notes || '');
+                    const translatedDesc = getTranslatedContent(`sources.list.${sIndex}.description`, source.description || '');
                     
                     return `
                         <div class="source-item-compact">
@@ -979,20 +844,14 @@ function renderSources(sources) {
                             <div class="source-description-compact">${translatedDesc}</div>
                             ${source.link ? `
                                 <a href="${source.link}" class="source-link" target="_blank" rel="noopener">
-                                    <span>${source.linkText || viewSourceText}</span>
+                                    📄 View Source →
                                 </a>
                             ` : ''}
-                            ${source.verified ? `<span class="source-verification">${verifiedText}</span>` : ''}
+                            ${source.verified ? `<span class="source-verification">✅ Verified</span>` : ''}
                         </div>
                     `;
                 }).join('')}
             </div>
-            ${sources.alert ? `
-                <div class="alert-box ${sources.alert.type}" style="margin-top: 1.5rem;">
-                    <span class="alert-icon">${sources.alert.icon}</span>
-                    <span>${alertText}</span>
-                </div>
-            ` : ''}
         </div>
     `;
 }
@@ -1009,7 +868,6 @@ function renderCTA(cta) {
         <p class="cta-description">${descText}</p>
         <div class="cta-buttons">
             ${cta.buttons.map((button, index) => {
-                // Get translated button text
                 const btnText = getTranslatedContent(`cta.buttons.${index}`, button.text);
                 
                 return `
@@ -1025,7 +883,7 @@ function renderCTA(cta) {
     `;
 }
 
-// Helper function for document icons - referenced in the code
+// Helper function for document icons
 function getDocumentIcon(extension) {
     const icons = {
         'PDF': '📕', 'DOC': '📘', 'DOCX': '📘', 'TXT': '📄',
@@ -1033,6 +891,14 @@ function getDocumentIcon(extension) {
         'ZIP': '📦', 'RAR': '📦'
     };
     return icons[extension] || '📄';
+}
+
+// Helper to get path to root
+function getPathToRoot() {
+    const path = window.location.pathname;
+    const parts = path.split('/').filter(p => p.length > 0);
+    const dirDepth = path.endsWith('.html') ? parts.length - 1 : parts.length;
+    return dirDepth <= 0 ? './' : Array(dirDepth).fill('..').join('/') + '/';
 }
 
 // Initialize on page load
@@ -1045,7 +911,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Load event data with translations
     loadEventData();
-    
+
     console.log('✅ Event documentation translation system initialized');
-    console.log('🌐 Supports English, Arabic, and German translations');
+    console.log('🌐 Supports English, Arabic, and German translations with footer integration');
 });
