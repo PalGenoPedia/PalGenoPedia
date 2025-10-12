@@ -556,7 +556,7 @@ function renderTimeline(timeline) {
                     let sourceHTML = '';
                     if (event.sourceLinks && event.sourceLinks.length > 0) {
                         const links = event.sourceLinks.map(link => 
-                            `<a href="${link.url}" target="_blank" rel="noopener" style="color: var(--primary-color); text-decoration: none; border-bottom: 1px dotted var(--primary-color);">${link.name}</a>`
+                            `<a href="${link.url}" target="_blank" rel="noopener" style="color: #2563eb; text-decoration: none; border-bottom: 1px dotted #2563eb;">${link.name}</a>`
                         ).join('; ');
                         sourceHTML = `<div style="margin-top: 0.5rem; font-size: 0.85rem; opacity: 0.8;"><em>${sourcePrefixText}</em> ${links}</div>`;
                     } else if (event.source) {
