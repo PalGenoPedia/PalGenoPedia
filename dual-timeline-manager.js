@@ -1510,6 +1510,9 @@ class DualTimelineManager {
     }
 }
 
+
+
+
 // Prevent timeline.js from interfering
 if (window.initializeTimeline) {
     console.warn('⚠️ Overriding timeline.js functions with dual-timeline-manager');
@@ -1530,70 +1533,4 @@ document.addEventListener('DOMContentLoaded', () => {
 // Export for module systems
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = DualTimelineManager;
-}
-// Format date with translation system support
-formatDate(dateString) {
-    const date = new Date(dateString);
-    if (isNaN(date)) return 'Unknown date';
-
-    // Use TranslationSystem's date formatter if available
-    if (window.TranslationSystem && typeof window.TranslationSystem.formatDate === 'function') {
-        return window.TranslationSystem.formatDate(dateString);
-    }
-
-    // Fallback to default formatting
-    return date.toLocaleDateString('en-US', {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric'
-    });
-}
-
-// Format number with translation system support
-formatNumber(num) {
-    // Use TranslationSystem's number formatter if available
-    if (window.TranslationSystem && typeof window.TranslationSystem.formatNumber === 'function') {
-        return window.TranslationSystem.formatNumber(num);
-    }
-
-    // Fallback to default formatting
-    if (num >= 1000000) {
-        return (num / 1000000).toFixed(1) + 'M';
-    } else if (num >= 1000) {
-        return (num / 1000).toFixed(1) + 'K';
-    }
-    return num.toLocaleString();
-}
-
-// Get translated text
-getTranslation(key, defaultText) {
-    if (window.TranslationSystem && typeof window.TranslationSystem.getTranslation === 'function') {
-        const translation = window.TranslationSystem.getTranslation(key);
-        return translation || defaultText;
-    }
-    return defaultText;
-}
-
-// Listen for language change events
-initLanguageChangeListener() {
-    document.addEventListener('languageChanged', (e) => {
-        console.log('🌐 Language changed in timeline to:', e.detail.language);
-
-        // Update stats with new language
-        this.updateStatistics();
-
-        // Refresh current view
-        if (this.currentView === 'timeline') {
-            this.renderTimeline();
-        } else if (this.currentView === 'map') {
-            this.renderMap();
-        } else if (this.currentView === 'list') {
-            this.renderListView();
-        }
-
-        // Update comparison if visible
-        if (this.currentMode === 'both') {
-            this.updateComparison();
-        }
-    });
 }
