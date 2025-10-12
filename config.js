@@ -1,38 +1,95 @@
 /**
  * Site Configuration
  * Global settings for Gaza Crisis Documentation
- * Last Updated: 2025-10-12 17:44:52
+ * Compatible with GitHub Pages and localhost
+ * Last Updated: 2025-10-12
  */
 
-window.siteConfig = {
-    // Base URL for the site (used for calculating paths)
-    baseUrl: '/',
-    
-    // Path to translation files
-    translationsPath: '/translations/',
-    
-    // Default language
-    defaultLanguage: 'en',
-    
-    // Debug mode (enables detailed logging)
-    debug: true
-};
+(function() {
+    'use strict';
 
-// Global translation configuration
-window.translationConfig = {
-    debug: true,
-    // Dynamic function to calculate path to translations based on page depth
-    customTranslationPath: function(lang) {
-        // Calculate path to root directory
-        const path = window.location.pathname;
-        const parts = path.split('/').filter(p => p.length > 0);
-        const dirDepth = path.endsWith('.html') ? parts.length - 1 : parts.length;
-        const rootPath = dirDepth <= 0 ? './' : Array(dirDepth).fill('..').join('/') + '/';
+    // Detect if we're on GitHub Pages
+    function detectGitHubPages() {
+        const hostname = window.location.hostname;
+        const pathname = window.location.pathname;
         
-        console.log(`🔍 Translation path resolution: Current depth=${dirDepth}, path to root=${rootPath}`);
+        // Check for GitHub Pages hosting
+        if (hostname.includes('github.io')) {
+            // Extract repository name from path
+            const pathParts = pathname.split('/').filter(p => p.length > 0);
+            if (pathParts.length > 0 && !pathParts[0].includes('.html')) {
+                return '/' + pathParts[0] + '/';
+            }
+        }
         
-        return `${rootPath}translations/${lang}.json`;
+        return '/';
     }
-};
 
-console.log('✅ Site configuration loaded');
+    // Get base URL
+    const baseUrl = detectGitHubPages();
+    
+    console.log(`🌍 Site base URL detected: ${baseUrl}`);
+    
+    window.siteConfig = {
+        // Base URL for the site (used for calculating paths)
+        baseUrl: baseUrl,
+        
+        // Path to translation files (relative to base)
+        translationsPath: baseUrl + 'translations/',
+        
+        // Default language
+        defaultLanguage: 'en',
+        
+        // Debug mode (enables detailed logging)
+        debug: true,
+        
+        // GitHub Pages mode
+        isGitHubPages: baseUrl !== '/',
+        
+        // Repository name (if on GitHub Pages)
+        repoName: baseUrl !== '/' ? baseUrl.split('/').filter(p => p)[0] : null
+    };
+
+    // Global translation configuration
+    window.translationConfig = {
+        debug: true,
+        
+        // Dynamic function to calculate path to translations based on page depth
+        customTranslationPath: function(lang) {
+            // Calculate path to root directory
+            const path = window.location.pathname;
+            let cleanPath = path;
+            
+            // Remove base URL from path
+            if (window.siteConfig.baseUrl !== '/') {
+                cleanPath = path.replace(window.siteConfig.baseUrl, '/');
+            }
+            
+            const parts = cleanPath.split('/').filter(p => p.length > 0);
+            const dirDepth = cleanPath.endsWith('.html') ? parts.length - 1 : parts.length;
+            
+            // Build path to root
+            let rootPath;
+            if (dirDepth <= 0) {
+                rootPath = './';
+            } else {
+                rootPath = Array(dirDepth).fill('..').join('/') + '/';
+            }
+            
+            const translationPath = `${rootPath}translations/${lang}.json`;
+            
+            if (window.siteConfig.debug) {
+                console.log(`🔍 Translation path for ${lang}: ${translationPath} (depth: ${dirDepth})`);
+            }
+            
+            return translationPath;
+        }
+    };
+
+    console.log('✅ Site configuration loaded:', {
+        baseUrl: window.siteConfig.baseUrl,
+        isGitHubPages: window.siteConfig.isGitHubPages,
+        repoName: window.siteConfig.repoName,
+        translationsPath: window.siteConfig.translationsPath
+    });
+})();
