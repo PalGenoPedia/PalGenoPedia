@@ -1,0 +1,448 @@
+{
+  "id": "hist_004",
+  "event_type": "Massacre",
+  "verification_status": "verified",
+  "metadata": {
+    "pageTitle": "Qibya Massacre (14 October 1953) | Historical Documentation",
+    "description": "IDF Unit 101 under Ariel Sharon attacked Qibya village, killing 69 civilians and destroying 45 houses. UN condemned as violation of armistice agreement.",
+    "keywords": "Qibya, 1953, West Bank, massacre, Unit 101, Ariel Sharon, war crimes, UN Security Council Resolution 101",
+    "lastUpdated": "2025-10-18",
+    "author": "aliattia02"
+  },
+  "date": {
+    "start": "1953-10-14",
+    "end": "1953-10-15",
+    "duration_days": 1,
+    "display": "14-15 October 1953",
+    "context": "Jordanian-controlled West Bank"
+  },
+  "location": {
+    "historical": {
+      "name": "Qibya (Qibyā)",
+      "name_arabic": "قبية",
+      "admin_context": "Jordanian West Bank",
+      "district": "Ramallah",
+      "coordinates": [31.9167, 35.0667],
+      "distance_to_jerusalem": "30 km northwest",
+      "population_1953": "~2,000"
+    },
+    "current": {
+      "name": "Qibya",
+      "admin_context": "West Bank, Palestinian Territories",
+      "coordinates": [31.9167, 35.0667],
+      "status": "Village rebuilt; under Israeli occupation since 1967"
+    }
+  },
+  "hero": {
+    "category": "🏛️ HISTORICAL MASSACRE • 1953 REPRISAL OPERATION",
+    "title": "Qibya Massacre",
+    "subtitle": "IDF Unit 101 attack on West Bank village resulting in 69 civilian deaths",
+    "metaCards": [
+      { "icon": "📅", "label": "Date", "value": "14-15 Oct 1953", "detail": "Night operation" },
+      { "icon": "📍", "label": "Historical Location", "value": "Qibya, West Bank", "detail": "Under Jordanian control" },
+      { "icon": "💀", "label": "Deaths", "value": "69", "detail": "Mostly women and children" },
+      { "icon": "🏠", "label": "Destruction", "value": "45 houses", "detail": "Plus school and mosque" }
+    ]
+  },
+  "quickFacts": {
+    "title": "⚡ Quick Facts",
+    "items": [
+      { "label": "Event Type", "value": "Reprisal Massacre" },
+      { "label": "Perpetrators", "value": "IDF Unit 101, led by Ariel Sharon" },
+      { "label": "Verification", "value": "UN Security Council; Mixed Armistice Commission" },
+      { "label": "Legal Response", "value": "UN Resolution 101 - 'strongest censure'" }
+    ]
+  },
+  "brief_summary": "On the night of October 14-15, 1953, Israeli forces from Unit 101 under Major Ariel Sharon attacked the Jordanian village of Qibya. The operation involved approximately 300-700 soldiers who destroyed 45 houses with explosives while civilians were inside, killing 69 people—two-thirds women and children. The attack was framed as retaliation for Palestinian raids but was condemned by the UN Security Council, the US, and sparked global outcry.",
+  "perpetrators": ["IDF Unit 101 (Commander: Ariel Sharon)", "Paratroop companies", "Supporting Israeli regular army units"],
+  "executiveSummary": {
+    "title": "Executive Summary",
+    "icon": "📋",
+    "alert": {
+      "type": "critical",
+      "icon": "⚠️",
+      "text": "<strong>Historical context:</strong> Operation Shoshana was Israel's first major 'reprisal raid' establishing a pattern of disproportionate responses. Commander Ariel Sharon later became Israeli Prime Minister (2001-2006)."
+    },
+    "paragraphs": [
+      "The Qibya massacre occurred during heightened tensions along the Jordan-Israel armistice line. Following the October 12, 1953 killing of an Israeli woman and her two children in Yehud, Israel launched 'Operation Shoshana'—a large-scale reprisal attack on the Jordanian village of Qibya.",
+      "Unit 101, led by 25-year-old Major Ariel Sharon, attacked with approximately half a battalion of soldiers. After a mortar barrage, demolition squads systematically destroyed homes with inhabitants inside using explosives and grenades. Sharon later wrote the operation was meant to be 'an example for everyone' with orders for 'maximal killing and damage to property.'",
+      "The UN Mixed Armistice Commission condemned the attack as a breach of the Israel-Jordan armistice agreement. The UN Security Council passed Resolution 101 expressing 'strongest censure.' The US State Department called it 'shocking' and suspended economic aid to Israel. Despite international condemnation, no perpetrators were prosecuted."
+    ]
+  },
+  "casualties": {
+    "title": "Casualties & Destruction",
+    "icon": "💀",
+    "deaths": "69",
+    "injured": "15 documented",
+    "forced_displacement": "Temporary evacuation during attack",
+    "breakdown": [
+      {
+        "type": "deaths",
+        "number": "69",
+        "label": "Civilians Killed",
+        "detail": "Two-thirds women and children; killed in homes",
+        "sources": [
+          {
+            "name": "UN Security Council Report S/3113 (1953)",
+            "link": "https://www.un.org/unispal/document/auto-insert-177183/",
+            "icon": "🇺🇳"
+          },
+          {
+            "name": "US State Department - Foreign Relations 1952-54",
+            "link": "https://history.state.gov/historicaldocuments/frus1952-54v09p1/d689",
+            "icon": "🇺🇸"
+          }
+        ]
+      },
+      {
+        "type": "injured",
+        "number": "15",
+        "label": "Wounded",
+        "detail": "Documented by Jordanian authorities; actual number likely higher"
+      },
+      {
+        "type": "destruction",
+        "number": "45",
+        "label": "Houses Destroyed",
+        "detail": "Plus school and mosque demolished with explosives",
+        "sources": [
+          {
+            "name": "Mixed Armistice Commission Report",
+            "link": "https://www.un.org/unispal/document/auto-insert-177183/",
+            "icon": "📄"
+          }
+        ]
+      }
+    ],
+    "alert": {
+      "type": "info",
+      "icon": "ℹ️",
+      "text": "<strong>Sources:</strong> UN Security Council Official Records; US State Department declassified documents; Mixed Armistice Commission reports; Israeli and Jordanian official accounts."
+    }
+  },
+  "timeline": {
+    "title": "Timeline of Events",
+    "icon": "⏱️",
+    "events": [
+      {
+        "time": "12 October 1953",
+        "title": "Yehud incident",
+        "description": "Grenade attack kills Israeli woman Suzanne Kinyas and her two children in Yehud. Israel attributes attack to infiltrators from Qibya.",
+        "sourceLinks": [
+          {
+            "name": "Wikipedia - Qibya Massacre",
+            "url": "https://en.wikipedia.org/wiki/Qibya_massacre"
+          }
+        ]
+      },
+      {
+        "time": "14 October, 9:30 PM",
+        "title": "Attack begins",
+        "description": "Israeli force (300-700 soldiers) from Unit 101 and paratroop companies crosses into Jordan. Mortar and artillery barrage on Qibya for 3-4 hours.",
+        "sourceLinks": [
+          {
+            "name": "UN Security Council S/3113",
+            "url": "https://www.un.org/unispal/document/auto-insert-177183/"
+          },
+          {
+            "name": "US State Department Cable",
+            "url": "https://history.state.gov/historicaldocuments/frus1952-54v09p1/d689"
+          }
+        ]
+      },
+      {
+        "time": "Late night-Early morning",
+        "title": "Systematic destruction",
+        "description": "Demolition squads enter village, throw grenades into houses, plant explosives. Civilians trapped inside homes as buildings demolished. Systematic looting of shops.",
+        "sourceLinks": [
+          {
+            "name": "Mixed Armistice Commission",
+            "url": "https://www.un.org/unispal/document/auto-insert-177183/"
+          }
+        ]
+      },
+      {
+        "time": "15 October, Afternoon",
+        "title": "Emergency MAC meeting",
+        "description": "Mixed Armistice Commission convenes, adopts resolution condemning Israeli army for breach of armistice agreement (Israel delegation sole dissenting vote).",
+        "sourceLinks": [
+          {
+            "name": "UN Official Records",
+            "url": "https://www.un.org/unispal/document/auto-insert-177183/"
+          }
+        ]
+      },
+      {
+        "time": "27 October 1953",
+        "title": "UN Security Council Resolution 100",
+        "description": "Security Council addresses the attack.",
+        "sourceLinks": [
+          {
+            "name": "UN Resolutions 1953",
+            "url": "https://www.un.org/unispal/"
+          }
+        ]
+      },
+      {
+        "time": "24 November 1953",
+        "title": "UN Resolution 101",
+        "description": "Security Council expresses 'strongest censure' of Israeli action. US State Department suspends economic aid to Israel.",
+        "sourceLinks": [
+          {
+            "name": "UN Security Council Resolution 101",
+            "url": "https://www.un.org/unispal/"
+          }
+        ]
+      }
+    ]
+  },
+  "warCrimes": {
+    "title": "Documented Atrocities",
+    "icon": "⚠️",
+    "alert": {
+      "type": "warning",
+      "icon": "⚠️",
+      "text": "<strong>Content Warning:</strong> Documented accounts of systematic killing of civilians."
+    },
+    "crimes": [
+      {
+        "icon": "💀",
+        "title": "House-to-House Killings",
+        "description": "Soldiers systematically threw grenades through doors and windows, then demolished houses with explosives while civilians remained inside. Bodies found buried in rubble.",
+        "sourceLink": "https://www.un.org/unispal/document/auto-insert-177183/",
+        "sourceText": "📄 UN MAC Report →"
+      },
+      {
+        "icon": "👨‍👩‍👧‍👦",
+        "title": "Women and Children Targeted",
+        "description": "Of 69 killed, two-thirds were women and children. Families trapped in homes as explosives detonated.",
+        "sourceLink": "https://history.state.gov/historicaldocuments/frus1952-54v09p1/d689",
+        "sourceText": "📄 US State Dept →"
+      },
+      {
+        "icon": "🏚️",
+        "title": "Deliberate Civilian Infrastructure Destruction",
+        "description": "School and mosque systematically demolished. 45 houses destroyed with explosives—approximately 22% of village housing stock.",
+        "sourceLink": null,
+        "sourceText": null
+      },
+      {
+        "icon": "🛍️",
+        "title": "Systematic Looting",
+        "description": "Shops looted during operation. Unused explosives found dropped by attackers, indicating extensive demolition supplies brought to scene.",
+        "sourceLink": "https://history.state.gov/historicaldocuments/frus1952-54v09p1/d689",
+        "sourceText": "📄 US Archives →"
+      },
+      {
+        "icon": "🚧",
+        "title": "Prevention of Rescue",
+        "description": "Israeli forces shelled neighboring villages Budrus (43 mortar shells) and Shuqba to prevent Jordanian Arab Legion from reaching Qibya to assist civilians.",
+        "sourceLink": "https://history.state.gov/historicaldocuments/frus1952-54v09p1/d689",
+        "sourceText": "📄 US State Dept Cable →"
+      }
+    ]
+  },
+  "international_law": {
+    "title": "International Law Violations",
+    "icon": "⚖️",
+    "introduction": "The Qibya operation violated the 1949 Israel-Jordan Armistice Agreement and customary laws of war.",
+    "sections": [
+      {
+        "heading": "Armistice Agreement Violations (1949)",
+        "violations": [
+          "<strong>Article II & III breaches:</strong> Unprovoked military attack across armistice line into Jordanian territory. Mixed Armistice Commission found Israel in 'clear breach' of agreement.",
+          "<strong>Disproportionate force:</strong> Response to one incident (3 deaths) with military operation killing 69 civilians deemed grossly disproportionate by international observers."
+        ]
+      },
+      {
+        "heading": "Customary International Humanitarian Law",
+        "violations": [
+          "<strong>Distinction principle:</strong> Failed to distinguish between military and civilian targets. Deliberate targeting of civilian homes, school, and mosque.",
+          "<strong>Proportionality:</strong> UN and international community condemned attack as massively disproportionate retaliation.",
+          "<strong>Unnecessary suffering:</strong> Use of explosives on occupied civilian homes caused preventable death and suffering."
+        ]
+      },
+      {
+        "heading": "Modern Classification (Descriptive)",
+        "violations": [
+          "Under contemporary international law (Geneva Conventions, Rome Statute), actions would constitute: willful killing of civilians, extensive destruction not justified by military necessity, attacks on civilian objects.",
+          "UN Security Council Resolution 101 described attack as 'inconsistent with obligations under the Charter.'"
+        ]
+      }
+    ],
+    "alert": {
+      "type": "critical",
+      "icon": "⚖️",
+      "text": "<strong>Accountability:</strong> Despite 'strongest censure' from UN Security Council, no prosecutions occurred. Commander Ariel Sharon later became Israeli Prime Minister (2001-2006) and Defense Minister."
+    }
+  },
+  "testimonies": {
+    "title": "Witness Testimonies & Official Accounts",
+    "icon": "👥",
+    "witnesses": [
+      {
+        "initials": "AS",
+        "name": "Ariel Sharon",
+        "role": "Unit 101 Commander (later Israeli PM)",
+        "testimony": "Sharon wrote in his memoir that he received orders: 'Qibya was to be an example for everyone.' He described ordering 'maximal killing and damage to property.' In autobiography 'Warrior': 'The orders were utterly clear.'",
+        "source": "Sharon, Ariel. 'Warrior: An Autobiography' (1989)",
+        "sourceLink": "https://en.wikipedia.org/wiki/Qibya_massacre"
+      },
+      {
+        "initials": "DB",
+        "name": "David Ben-Gurion",
+        "role": "Israeli Prime Minister",
+        "testimony": "Initially claimed attack was carried out by Israeli civilians acting on their own: 'border settlers in Israel...who were tired of the bloodshed.' Later privately acknowledged military operation. Stated: 'It doesn't make any real difference what will be said about Qibya around the world.'",
+        "source": "Knesset speech, October 1953; Sharett Diary",
+        "sourceLink": "https://en.wikipedia.org/wiki/Qibya_massacre"
+      },
+      {
+        "initials": "VB",
+        "name": "Major General Vagn Bennike",
+        "role": "UN Chief of Staff, Truce Supervision Organization",
+        "testimony": "Reported to UN Security Council that attack conducted by 'roughly half a battalion strength of soldiers from Israeli regular army' using mortars, Bangalore torpedoes, and TNT explosives in coordinated military operation.",
+        "source": "Report to UN Security Council, October 1953",
+        "sourceLink": "https://www.un.org/unispal/document/auto-insert-177183/"
+      },
+      {
+        "initials": "MS",
+        "name": "Moshe Sharett",
+        "role": "Israeli Foreign Minister",
+        "testimony": "In private diary opposed the operation: 'I told Lavon that this will be a grave error...it was never proved that reprisal actions serve their declared purpose.' Later wrote: 'I must underline that when I opposed the action I didn't even remotely suspect such a bloodbath.'",
+        "source": "Moshe Sharett Diary, October 14, 1953",
+        "sourceLink": "https://en.wikipedia.org/wiki/Qibya_massacre"
+      },
+      {
+        "initials": "JF",
+        "name": "Jordanian Foreign Minister",
+        "role": "Hashemite Kingdom of Jordan",
+        "testimony": "Reported to UN: 'massacre of sixty-six inhabitants by organized military forces of Israel.' Called emergency MAC meeting. Described systematic demolition of homes and civilian casualties as unprecedented attack.",
+        "source": "Statement to UN Security Council, November 1953",
+        "sourceLink": "https://www.un.org/unispal/document/auto-insert-177183/"
+      }
+    ]
+  },
+  "historicalImpact": {
+    "title": "Historical Impact & Legacy",
+    "icon": "🌍",
+    "sections": [
+      {
+        "heading": "Immediate Impact",
+        "items": [
+          "First major 'reprisal raid' establishing Israeli policy of disproportionate retaliation",
+          "Universal international condemnation including from US, UN, and global Jewish communities",
+          "US suspended economic aid to Israel until cooperation with UN investigations",
+          "Jordanian authorities arrested over 1,000 suspected fedayeen to prevent Israeli reprisals",
+          "Relative quiet on Jordanian border for period following operation"
+        ]
+      },
+      {
+        "heading": "Long-term Significance",
+        "items": [
+          "Established precedent for Israeli 'collective punishment' operations",
+          "UN Resolution 101 became reference point for future condemnations",
+          "Created template for Unit 101 operations (Sharon's 'special forces' model)",
+          "Demonstrated pattern: major Palestinian attacks followed by massive Israeli reprisals",
+          "Part of escalating cycle leading to 1956 Suez Crisis"
+        ]
+      },
+      {
+        "heading": "Accountability & Leadership",
+        "items": [
+          "✗ No Israeli personnel prosecuted or held criminally accountable",
+          "✗ Ariel Sharon promoted, later became Defense Minister (1981) then Prime Minister (2001-2006)",
+          "✗ Sharon awarded Nobel Peace Prize (with Arafat, Rabin) in 1994 for Oslo Accords",
+          "✗ International attempts to prosecute Sharon for war crimes (Sabra/Shatila) blocked",
+          "✓ UN Resolution 101 remains on record as 'strongest censure'"
+        ]
+      }
+    ]
+  },
+  "sources": {
+    "title": "Verified Sources & Documentation",
+    "icon": "📚",
+    "introduction": "Primary sources include UN official documents, declassified US State Department records, Israeli memoirs, and contemporary reports.",
+    "list": [
+      {
+        "icon": "🇺🇳",
+        "name": "UN Security Council - Verbatim Record (S/3113)",
+        "type": "Primary UN Document",
+        "description": "Complete transcript of Security Council debate on Qibya. Contains Jordanian complaint, Israeli response, and observer reports.",
+        "link": "https://www.un.org/unispal/document/auto-insert-177183/",
+        "verified": true
+      },
+      {
+        "icon": "🇺🇳",
+        "name": "UN Security Council Resolution 101 (1953)",
+        "type": "UN Resolution",
+        "description": "Expressed 'strongest censure' of attack. Called action inconsistent with UN Charter and armistice obligations.",
+        "link": "https://www.un.org/unispal/",
+        "verified": true
+      },
+      {
+        "icon": "🇺🇸",
+        "name": "US State Department - Foreign Relations 1952-54, Vol IX",
+        "type": "Declassified US Government",
+        "description": "Cable from US Ambassador to Jordan describing attack: '45 Jordanian civilians (great majority women and children) counted dead.' Details demolition and casualties.",
+        "link": "https://history.state.gov/historicaldocuments/frus1952-54v09p1/d689",
+        "verified": true
+      },
+      {
+        "icon": "📄",
+        "name": "Mixed Armistice Commission Report",
+        "type": "Official Investigation",
+        "description": "Emergency MAC investigation October 15, 1953. Found Israeli regular army conducted attack with 'approximately one half battalion' using explosives and automatic weapons.",
+        "link": "https://www.un.org/unispal/",
+        "verified": true
+      },
+      {
+        "icon": "📖",
+        "name": "Wikipedia - Qibya Massacre",
+        "type": "Encyclopedic Overview",
+        "description": "Comprehensive article synthesizing Israeli, Jordanian, UN, and historical sources. Extensive citations to primary documents.",
+        "link": "https://en.wikipedia.org/wiki/Qibya_massacre",
+        "verified": true
+      },
+      {
+        "icon": "📚",
+        "name": "Benny Morris - 'Righteous Victims' (2001)",
+        "type": "Historical Scholarship",
+        "description": "Israeli historian's account based on Israeli archives. Confirms Sharon's role, casualties, and military planning.",
+        "link": null,
+        "verified": true
+      },
+      {
+        "icon": "📕",
+        "name": "Ariel Sharon - 'Warrior: An Autobiography' (1989)",
+        "type": "Primary Source - Perpetrator Account",
+        "description": "Sharon's memoir includes discussion of Qibya operation, though minimizes civilian casualties. Confirms command responsibility.",
+        "link": null,
+        "verified": true
+      }
+    ],
+    "alert": {
+      "type": "info",
+      "icon": "ℹ️",
+      "text": "<strong>Methodology:</strong> All casualty figures cross-referenced between UN, US, Jordanian, and Israeli sources. Consensus: 69 killed, 45 houses destroyed."
+    }
+  },
+  "media": {
+    "images": {
+      "local": [],
+      "remote": []
+    },
+    "documents": {
+      "local": [],
+      "remote": []
+    }
+  },
+  "cta": {
+    "title": "Document Historical Accountability",
+    "description": "Help preserve documentation of historical events to prevent recurrence and honor victims.",
+    "buttons": [
+      { "text": "📅 View Full Timeline", "link": "../../major-incidents-timeline.html", "type": "primary" },
+      { "text": "🖨️ Print/Save PDF", "link": "#", "type": "secondary", "action": "print" },
+      { "text": "📧 Submit Info", "link": "mailto:palgeno.pedia@gmx.de?subject=Qibya Massacre - Additional Information", "type": "secondary" }
+    ]
+  }
+}
