@@ -1,0 +1,721 @@
+{
+  "id": "hist_009",
+  "event_type": "Massacre / Mass Shooting",
+  "verification_status": "verified",
+  "metadata": {
+    "pageTitle": "Ibrahimi Mosque Massacre (25 February 1994) | Historical Documentation",
+    "description": "US-born Israeli settler Baruch Goldstein massacred 29 Palestinian worshippers and wounded 125+ during dawn prayer in Hebron's Ibrahimi Mosque. Israeli forces killed 25+ more during protests. Hebron divided, mosque partitioned, Old City strangled.",
+    "keywords": "Ibrahimi Mosque massacre, Hebron 1994, Baruch Goldstein, Cave of Patriarchs, Kach movement, settler terrorism, Ramadan",
+    "lastUpdated": "2025-10-18",
+    "author": "aliattia02"
+  },
+  "date": {
+    "start": "1994-02-25",
+    "end": "1994-03-18",
+    "duration_days": 21,
+    "display": "25 February 1994 (protests through 18 March)",
+    "context": "Ramadan 1994, following Oslo Accords (September 1993)"
+  },
+  "location": {
+    "historical": {
+      "name": "Al-Ibrahimi Mosque (Cave of the Patriarchs), Hebron, West Bank",
+      "admin_context": "Israeli-occupied West Bank; Hebron under Israeli military control (H2 area)",
+      "significance": "Sacred site for Muslims and Jews; believed burial site of Prophet Abraham/Ibrahim"
+    },
+    "current": {
+      "name": "Hebron Old City, West Bank",
+      "admin_context": "H2 area under full Israeli military control since 1997 Hebron Protocol",
+      "status": "Ibrahimi Mosque divided 60% for Jews, 40% for Muslims since massacre; Old City strangled by checkpoints, closures, settler violence"
+    }
+  },
+  "hero": {
+    "category": "📜 SETTLER TERRORISM • HEBRON MASSACRE 1994",
+    "title": "Ibrahimi Mosque Massacre",
+    "subtitle": "Israeli settler's mass shooting of Palestinian worshippers during Ramadan dawn prayer",
+    "metaCards": [
+      { "icon": "📅", "label": "Date", "value": "25 February 1994", "detail": "15th day of Ramadan" },
+      { "icon": "📍", "label": "Location", "value": "Ibrahimi Mosque, Hebron", "detail": "Cave of the Patriarchs" },
+      { "icon": "💀", "label": "Killed in Mosque", "value": "29 worshippers", "detail": "125+ wounded" },
+      { "icon": "☠️", "label": "Total Killed", "value": "50-60 Palestinians", "detail": "Including protests & funeral" }
+    ]
+  },
+  "quickFacts": {
+    "title": "⚡ Quick Facts",
+    "items": [
+      { "label": "Event Type", "value": "Mass Shooting / Settler Terrorism" },
+      { "label": "Perpetrator", "value": "Baruch Goldstein (US-born settler)" },
+      { "label": "Affiliation", "value": "Kach Movement (banned terrorist org)" },
+      { "label": "Weapon", "value": "IMI Galil assault rifle + pistol" },
+      { "label": "Verification", "value": "UN Security Council; Shamgar Commission; eyewitnesses" },
+      { "label": "Israeli Response", "value": "Punished Palestinians, partitioned mosque" }
+    ]
+  },
+  "brief_summary": "On Friday, February 25, 1994—the 15th day of Ramadan—Baruch Goldstein, a 37-year-old US-born Israeli settler, physician, and member of the far-right Kach movement, entered the Ibrahimi Mosque in Hebron dressed in his Israeli army reserve uniform. As approximately 800 Palestinian worshippers prostrated in dawn prayer (Fajr), Goldstein positioned himself behind a pillar at the back of the prayer hall and opened fire with an IMI Galil assault rifle. He killed 29 worshippers and wounded 125 before survivors overpowered and killed him. Israeli soldiers present at the mosque closed the gates, trapping survivors inside and preventing medical help from reaching the wounded. In the protests and clashes that followed over the next three weeks, Israeli forces killed at least 25 more Palestinians, bringing the total death toll to 50-60. Rather than protect Palestinians, Israel closed Hebron for six months, partitioned the Ibrahimi Mosque (60% for Jews, 40% for Muslims), closed 520 businesses in the Old City, and sealed Shuhada Street—the main commercial artery. The massacre and its aftermath transformed Hebron into a ghost town, strangling Palestinian life while facilitating settler expansion.",
+  "perpetrators": ["Baruch Goldstein (direct perpetrator)", "Kach movement (ideological support)", "Israeli military (facilitation through absence/inaction)", "Israeli government (collective punishment of victims after massacre)"],
+  "executiveSummary": {
+    "title": "Executive Summary",
+    "icon": "📋",
+    "alert": {
+      "type": "critical",
+      "icon": "⚠️",
+      "text": "<strong>Context:</strong> Massacre occurred 5 months after Oslo Accords, which Goldstein and Kach movement violently opposed. Goldstein aimed to derail peace process by provoking Palestinian retaliation. Many Palestinians believe attack was planned with Israeli military complicity."
+    },
+    "paragraphs": [
+      "Baruch Goldstein was born Benjamin Carl Goldstein in Brooklyn, New York in 1956 to an Orthodox Jewish family. In the 1970s, he became a charter member of the Jewish Defense League (JDL), a militant organization founded by Rabbi Meir Kahane. After graduating from Yeshiva University's Albert Einstein College of Medicine, Goldstein emigrated to Israel in 1983. He served as a physician in the Israel Defense Forces and later settled in Kiryat Arba, an extremist settlement adjacent to Hebron. Goldstein was an active member of Kach, Kahane's ultranationalist party, and was third on its list for the 1984 Knesset elections. Israeli press reported that Goldstein refused to treat Arabs, even Arab soldiers serving in the IDF, believing it violated Jewish religious law to treat non-Jews. He compared Israel's democracy to Nazism and wore a yellow star marked 'JUDE' in protest. In the weeks before the massacre, Goldstein made ominous statements and was involved in violent incidents at the mosque, including pouring acid on carpets. Palestinian authorities wrote to Prime Minister Rabin warning about Goldstein's dangerous behavior, but no action was taken.",
+      "On the morning of February 25, 1994, the 15th day of Ramadan, worshippers noticed the unusual absence of Israeli soldiers from their normal positions around the Ibrahimi Mosque despite tensions the previous evening. At approximately 5:30 AM, as Imam Khalil Muhsen Jabari led hundreds in Fajr (dawn) prayer, Goldstein entered the Isaac Hall—the main prayer area—dressed in his IDF reserve uniform and carrying a Galil assault rifle and pistol. He positioned himself behind a pillar at the rear of the hall. When worshippers prostrated (sujood position), Goldstein opened fire. He reloaded multiple times, methodically shooting prostrate worshippers who were trapped and defenseless. Survivors report the shooting continued for ten minutes. Some eyewitnesses claim they saw additional gunmen, though Israeli investigations denied this. When worshippers finally overcame Goldstein, they beat him to death. By then, 29 Palestinians lay dead—including children as young as 11—and 125 were wounded.",
+      "The horror did not end with the shooting. Israeli soldiers present at the mosque closed the gates, trapping survivors inside with the dead and wounded, and preventing medical help from entering. When the gates finally opened, Israeli forces fired on protesters outside, killing more Palestinians. Over the next three weeks, as news of the massacre spread, Palestinians rioted throughout Hebron and the West Bank. Israeli forces killed at least 25 more Palestinians during these protests, including at victims' funerals. The total death toll reached 50-60. Israel's response was to punish the victims: a six-month closure of Hebron; formation of the one-sided Shamgar Commission whose recommendations all favored settlers; partition of the Ibrahimi Mosque giving 60% to Jews (who comprised 0.003% of Hebron's population); closure of 520 businesses and 1,800 shops in the Old City; sealing of Shuhada Street (the main commercial artery); and a network of military checkpoints suffocating Palestinian life. The massacre achieved Goldstein's goal: it did not stop Oslo, but it transformed Hebron into a strangled city, its Old City a ghost town, its Palestinian population subjected to daily humiliation while a few hundred extremist settlers lived under heavy military protection."
+    ]
+  },
+  "casualties": {
+    "title": "Casualties & Impact",
+    "icon": "💀",
+    "deaths": "50-60 Palestinians total (29 in mosque shooting + 25+ killed by Israeli forces during protests)",
+    "injured": "125+ in mosque; hundreds more during protests",
+    "forced_displacement": "Mass exodus from Hebron Old City due to closures and restrictions",
+    "breakdown": [
+      {
+        "type": "killed",
+        "number": "29",
+        "label": "Killed in Mosque",
+        "detail": "Shot by Baruch Goldstein during Fajr prayer in Ibrahimi Mosque",
+        "sources": [
+          {
+            "name": "Institute for Palestine Studies",
+            "link": "https://www.palestine-studies.org/en/node/1652605",
+            "icon": "📚"
+          },
+          {
+            "name": "WAFA News Agency Documentation",
+            "link": "https://english.wafa.ps/Pages/Details/133561",
+            "icon": "🇵🇸"
+          }
+        ]
+      },
+      {
+        "type": "killed",
+        "number": "25+",
+        "label": "Killed by Israeli Forces",
+        "detail": "Shot during protests, funerals, and riots following massacre (Feb 25 - Mar 18)",
+        "sources": [
+          {
+            "name": "Al Jazeera - Massacre Remembrance",
+            "link": "https://www.aljazeera.com/news/2016/2/26/remembering-the-ibrahimi-mosque-massacre",
+            "icon": "📰"
+          },
+          {
+            "name": "Middle East Monitor",
+            "link": "https://www.middleeastmonitor.com/20210227-the-massacre-of-ibrahimi-mosque/",
+            "icon": "📄"
+          }
+        ]
+      },
+      {
+        "type": "injured",
+        "number": "125+",
+        "label": "Wounded in Mosque",
+        "detail": "Shot and wounded by Goldstein; many with permanent disabilities",
+        "sources": [
+          {
+            "name": "Hebron Rehabilitation Committee",
+            "link": "https://www.hebronrc.ps/en/node/27",
+            "icon": "🏥"
+          }
+        ]
+      },
+      {
+        "type": "injured",
+        "number": "Hundreds",
+        "label": "Wounded in Protests",
+        "detail": "Injured by Israeli forces during three weeks of protests and clashes",
+        "sources": [
+          {
+            "name": "WAFA News Agency",
+            "link": "https://english.wafa.ps/Pages/Details/128189",
+            "icon": "🇵🇸"
+          }
+        ]
+      },
+      {
+        "type": "closed",
+        "number": "520",
+        "label": "Businesses Closed",
+        "detail": "Ordered shut by Israeli military; most never reopened",
+        "sources": [
+          {
+            "name": "Middle East Monitor Documentation",
+            "link": "https://www.middleeastmonitor.com/20210227-the-massacre-of-ibrahimi-mosque/",
+            "icon": "📊"
+          }
+        ]
+      },
+      {
+        "type": "closed",
+        "number": "1,800+",
+        "label": "Shops Closed",
+        "detail": "Old City shops sealed by military order; commercial heart destroyed",
+        "sources": [
+          {
+            "name": "Middle East Monitor",
+            "link": "https://www.middleeastmonitor.com/20210227-the-massacre-of-ibrahimi-mosque/",
+            "icon": "📄"
+          }
+        ]
+      }
+    ],
+    "alert": {
+      "type": "info",
+      "icon": "ℹ️",
+      "text": "<strong>Sources:</strong> UN Security Council Resolution 904; Shamgar Commission Report; eyewitness testimonies; Palestinian documentation; Israeli military records; international media; human rights organizations."
+    }
+  },
+  "timeline": {
+    "title": "Timeline of Events",
+    "icon": "⏱️",
+    "events": [
+      {
+        "time": "October 1993",
+        "title": "Warning signs: Goldstein attacks mosque",
+        "description": "Baruch Goldstein pours acid on mosque floor carpets, leaving giant holes. Six worshippers assaulted. Sanctuary guards identify Goldstein as culprit. Palestinian authorities write to PM Yitzhak Rabin warning of dangers posed by Goldstein, requesting action. No measures taken.",
+        "sourceLinks": [
+          {
+            "name": "Historical Documentation",
+            "url": "https://www.aljazeera.com/news/2016/2/26/remembering-the-ibrahimi-mosque-massacre"
+          }
+        ]
+      },
+      {
+        "time": "24 February 1994 (evening)",
+        "title": "Eve of massacre: tensions at mosque",
+        "description": "Disagreement at Ibrahimi Mosque when large crowd of Jewish worshippers want to enter during Muslim prayer time for Purim holiday (Jewish festival coinciding with Ramadan). Clashes between Palestinians and settlers. Heightened tension.",
+        "sourceLinks": [
+          {
+            "name": "Al Jazeera - Survivor Testimonies",
+            "url": "https://www.aljazeera.com/news/2016/2/26/remembering-the-ibrahimi-mosque-massacre"
+          }
+        ]
+      },
+      {
+        "time": "25 February 1994, ~5:00 AM",
+        "title": "Suspicious absence of Israeli soldiers",
+        "description": "Worshippers notice Israeli soldiers absent from their usual positions around mosque despite previous evening's tensions. Survivors later testify this was highly unusual and suspect Israeli military complicity or foreknowledge of attack.",
+        "sourceLinks": [
+          {
+            "name": "Anadolu Agency - Eyewitness Accounts",
+            "url": "https://www.aa.com.tr/en/middle-east/palestine-27-years-since-ibrahimi-mosque-massacre/2156877"
+          }
+        ]
+      },
+      {
+        "time": "25 February 1994, 5:30 AM",
+        "title": "MASSACRE: Goldstein opens fire during Fajr prayer",
+        "description": "Baruch Goldstein, dressed in IDF uniform, enters Isaac Hall of Ibrahimi Mosque where ~800 Palestinians pray Fajr. Positions himself behind pillar at rear. When worshippers prostrate (sujood), opens fire with Galil assault rifle. Methodically shoots defenseless worshippers, reloading multiple times. Continues for ~10 minutes. 29 killed, 125+ wounded. Finally overpowered and beaten to death by survivors.",
+        "sourceLinks": [
+          {
+            "name": "Hebron Rehabilitation Committee",
+            "url": "https://www.hebronrc.ps/en/node/27"
+          },
+          {
+            "name": "Institute for Palestine Studies",
+            "url": "https://www.palestine-studies.org/en/node/1652605"
+          }
+        ]
+      },
+      {
+        "time": "25 February 1994, 5:40-6:30 AM",
+        "title": "Israeli soldiers trap survivors inside",
+        "description": "Israeli soldiers present at mosque close gates, trapping survivors inside with dead and wounded. Prevent worshippers from leaving and medical help from entering. Survivors describe blood everywhere, scattered body parts, children dead, wounded crying for help. Soldiers delay aid for extended period.",
+        "sourceLinks": [
+          {
+            "name": "WAFA News Agency",
+            "url": "https://english.wafa.ps/Pages/Details/133561"
+          },
+          {
+            "name": "Hebron Rehabilitation Committee",
+            "url": "https://www.hebronrc.ps/en/node/27"
+          }
+        ]
+      },
+      {
+        "time": "25 February 1994, morning-afternoon",
+        "title": "Protests erupt; Israeli forces kill more Palestinians",
+        "description": "News of massacre spreads. Palestinians pour into streets in grief and rage. Protests outside mosque, Ahli Hospital, and cemetery where victims being buried. Israeli forces fire on protesters, killing at least 4 more Palestinians on same day as massacre.",
+        "sourceLinks": [
+          {
+            "name": "WAFA Documentation",
+            "url": "https://english.wafa.ps/Pages/Details/128189"
+          }
+        ]
+      },
+      {
+        "time": "25 February - 18 March 1994",
+        "title": "Three weeks of protests; death toll rises to 50-60",
+        "description": "Riots and clashes throughout West Bank. Israeli forces kill at least 25 more Palestinians (some sources say up to 31) during protests, bringing total death toll to 50-60. Five Israeli civilians also killed in retaliatory attacks.",
+        "sourceLinks": [
+          {
+            "name": "Middle East Monitor",
+            "url": "https://www.middleeastmonitor.com/20210227-the-massacre-of-ibrahimi-mosque/"
+          }
+        ]
+      },
+      {
+        "time": "25 February - August 1994",
+        "title": "Israel closes Hebron for six months",
+        "description": "Israeli military imposes full closure on Ibrahimi Mosque and Hebron Old City for six months under pretext of 'investigation.' 120,000 Palestinians under curfew; 400 Jewish settlers free to move. Collective punishment of victims.",
+        "sourceLinks": [
+          {
+            "name": "Middle East Monitor Documentation",
+            "url": "https://www.middleeastmonitor.com/20210227-the-massacre-of-ibrahimi-mosque/"
+          }
+        ]
+      },
+      {
+        "time": "18 March 1994",
+        "title": "UN Security Council Resolution 904",
+        "description": "Security Council condemns massacre, calls it 'abhorrent.' Demands measures to protect Palestinian civilians including disarming of settlers. Israel ignores resolution; never implements measures.",
+        "sourceLinks": [
+          {
+            "name": "Middle East Monitor",
+            "url": "https://www.middleeastmonitor.com/20210227-the-massacre-of-ibrahimi-mosque/"
+          }
+        ]
+      },
+      {
+        "time": "March 1994",
+        "title": "Kach party banned by Israel",
+        "description": "Israeli government bans Kach movement and designates it terrorist organization following statements praising Goldstein's attack. However, many Kach members and ideology persist in settler movement and later resurface through parties like Jewish Power (Otzma Yehudit).",
+        "sourceLinks": [
+          {
+            "name": "Jacobin Investigation",
+            "url": "https://jacobin.com/2023/02/ibrahimi-mosque-massacre-anniversary-kahanism-hebron-itamar-ben-gvir-israel-far-right"
+          }
+        ]
+      },
+      {
+        "time": "26 June 1994",
+        "title": "Shamgar Commission Report released",
+        "description": "Israeli-appointed commission concludes Goldstein acted alone, denies military complicity. Recommends security measures—but all burden falls on Palestinians, not settlers. Report criticized as whitewash. Recommends partitioning mosque to accommodate settlers, collective punishment of Palestinian community.",
+        "sourceLinks": [
+          {
+            "name": "Al Jazeera Analysis",
+            "url": "https://www.aljazeera.com/news/2016/2/26/remembering-the-ibrahimi-mosque-massacre"
+          }
+        ]
+      },
+      {
+        "time": "1994-1996",
+        "title": "Ibrahimi Mosque partitioned; Old City strangled",
+        "description": "Following Shamgar recommendations, Israel partitions Ibrahimi Mosque: 60% for Jewish worship, 40% for Muslim worship—despite Jews being 0.003% of Hebron population. Closes 520 businesses, 1,800 shops in Old City. Seals Shuhada Street (main commercial artery). Erects network of checkpoints. Hebron Old City transformed into ghost town.",
+        "sourceLinks": [
+          {
+            "name": "Middle East Monitor",
+            "url": "https://www.middleeastmonitor.com/20210227-the-massacre-of-ibrahimi-mosque/"
+          }
+        ]
+      },
+      {
+        "time": "1997",
+        "title": "Hebron Protocol divides city (H1/H2)",
+        "description": "Hebron Protocol divides city: H1 (80% of city) under Palestinian Authority; H2 (20%, including Old City) under full Israeli control. H2 contains ~40,000 Palestinians and ~400-800 settlers. Settlements expanded, restrictions increased. Massacre's legacy institutionalized.",
+        "sourceLinks": [
+          {
+            "name": "WAFA News Agency",
+            "url": "https://english.wafa.ps/Pages/Details/128189"
+          }
+        ]
+      },
+      {
+        "time": "Present Day",
+        "title": "Goldstein's grave becomes shrine for extremists",
+        "description": "Baruch Goldstein buried in Kiryat Arba. Grave becomes pilgrimage site for far-right Jewish extremists who revere him as martyr and hero. Tomb inscription called his actions 'pure soul.' Israeli government later forced removal of laudatory text, but site remains shrine. Annual commemorations held by Kahanist supporters.",
+        "sourceLinks": [
+          {
+            "name": "Jacobin Investigation",
+            "url": "https://jacobin.com/2023/02/ibrahimi-mosque-massacre-anniversary-kahanism-hebron-itamar-ben-gvir-israel-far-right"
+          }
+        ]
+      }
+    ]
+  },
+  "warCrimes": {
+    "title": "Documented Violations & Israeli Complicity",
+    "icon": "⚠️",
+    "alert": {
+      "type": "warning",
+      "icon": "⚠️",
+      "text": "<strong>UN Security Council:</strong> Resolution 904 condemned massacre, called it 'abhorrent,' demanded measures to protect Palestinian civilians. Israel never implemented protections; instead punished Palestinian victims collectively."
+    },
+    "crimes": [
+      {
+        "icon": "🔫",
+        "title": "Mass Murder / Terrorist Attack",
+        "description": "Baruch Goldstein massacred 29 unarmed Palestinian worshippers during prayer in deliberate terrorist attack. Premeditated mass murder of civilians in place of worship. Goldstein member of Kach, designated terrorist organization. Attack aimed to derail Oslo peace process by provoking Palestinian retaliation.",
+        "sourceLink": "https://www.palestine-studies.org/en/node/1652605",
+        "sourceText": "📄 Institute for Palestine Studies →"
+      },
+      {
+        "icon": "🚪",
+        "title": "Israeli Military Facilitation and Complicity",
+        "description": "Suspicious absence of Israeli soldiers from usual positions despite previous evening's tensions. Soldiers present during massacre closed gates, trapping survivors with dead and wounded, preventing medical aid. Many Palestinians believe Israeli military had foreknowledge and facilitated attack. Shamgar Commission whitewashed these issues.",
+        "sourceLink": "https://www.aljazeera.com/news/2016/2/26/remembering-the-ibrahimi-mosque-massacre",
+        "sourceText": "📄 Eyewitness Documentation →"
+      },
+      {
+        "icon": "⚰️",
+        "title": "Collective Punishment of Victims",
+        "description": "Rather than protect Palestinians or remove settlers after massacre, Israel: closed Hebron for 6 months; partitioned Ibrahimi Mosque favoring settlers (60% to Jews); closed 520 businesses and 1,800 shops; sealed Shuhada Street; erected checkpoint network. Violated Geneva Convention Article 33: collective punishment prohibited.",
+        "sourceLink": "https://www.middleeastmonitor.com/20210227-the-massacre-of-ibrahimi-mosque/",
+        "sourceText": "📄 Middle East Monitor →"
+      },
+      {
+        "icon": "🔫",
+        "title": "Killing of Palestinian Protesters",
+        "description": "Israeli forces killed at least 25 Palestinians during protests following massacre—shot while expressing grief and anger over attack. Use of lethal force against protesters grossly excessive and disproportionate. Many killed at victims' funerals.",
+        "sourceLink": "https://english.wafa.ps/Pages/Details/128189",
+        "sourceText": "📄 WAFA Documentation →"
+      },
+      {
+        "icon": "🛡️",
+        "title": "Failure to Protect Civilians",
+        "description": "Israeli authorities ignored warnings about Goldstein's dangerous behavior months before massacre. Goldstein had attacked mosque previously (acid on carpets), yet no preventive action taken. After massacre, Israel failed to implement UN Security Council Resolution 904 calling for protection of Palestinian civilians and disarming of settlers.",
+        "sourceLink": "https://www.middleeastmonitor.com/20210227-the-massacre-of-ibrahimi-mosque/",
+        "sourceText": "📄 Documentation →"
+      },
+      {
+        "icon": "🕌",
+        "title": "Religious Site Appropriation",
+        "description": "Following massacre of Muslim worshippers, Israel partitioned Ibrahimi Mosque—giving 60% to Jewish worship despite Jews being 0.003% of Hebron population. Appropriation of sacred Islamic site as collective punishment. During certain Jewish holidays, entire mosque closed to Muslims—at site of their victimization.",
+        "sourceLink": "https://www.hebronrc.ps/en/node/27",
+        "sourceText": "📄 Hebron Rehabilitation Committee →"
+      },
+      {
+        "icon": "💰",
+        "title": "Economic Strangulation of Palestinian Community",
+        "description": "Closure of 520 businesses and 1,800 shops destroyed Hebron Old City economy. Sealing of Shuhada Street—once thriving commercial center—created ghost town. Mass unemployment, displacement. Economic warfare as collective punishment for being victims of massacre.",
+        "sourceLink": "https://www.middleeastmonitor.com/20210227-the-massacre-of-ibrahimi-mosque/",
+        "sourceText": "📄 Economic Impact Documentation →"
+      }
+    ]
+  },
+  "international_law": {
+    "title": "International Law Framework",
+    "icon": "⚖️",
+    "introduction": "The Ibrahimi Mosque massacre and Israel's response violated multiple provisions of international humanitarian law, human rights law, and UN Security Council resolutions.",
+    "sections": [
+      {
+        "heading": "Fourth Geneva Convention - Violations",
+        "violations": [
+          "<strong>Article 27:</strong> 'Protected persons...shall at all times be humanely treated, and shall be protected especially against all acts of violence or threats thereof.' Israel failed to protect Palestinians from settler violence; facilitated attack through military absence.",
+          "<strong>Article 33:</strong> 'No protected person may be punished for an offence he or she has not personally committed. Collective penalties...are prohibited.' Six-month closure, business closures, mosque partition, Shuhada Street sealing all constituted collective punishment.",
+          "<strong>Article 53:</strong> 'Any destruction...of property...is prohibited, except where such destruction is rendered absolutely necessary by military operations.' Economic strangulation of Old City had no military necessity."
+        ]
+      },
+      {
+        "heading": "International Human Rights Law",
+        "violations": [
+          "<strong>Right to Life (ICCPR Article 6):</strong> Israel failed duty to protect life by ignoring warnings about Goldstein; soldiers' actions during and after massacre facilitated deaths; excessive force against protesters violated right to life.",
+          "<strong>Freedom of Religion (ICCPR Article 18):</strong> Partition of Ibrahimi Mosque and restrictions on Muslim worship violated right to freedom of religion and worship.",
+          "<strong>Right to Non-Discrimination:</strong> Grossly unequal treatment—Palestinians collectively punished while settler population protected and expanded."
+        ]
+      },
+      {
+        "heading": "UN Security Council Resolution 904 (1994)",
+        "violations": [
+          "<strong>Condemnation:</strong> Security Council 'strongly condemns the massacre...and calls it abhorrent.'",
+          "<strong>Protection Measures:</strong> Called for 'measures to be taken to guarantee the safety and protection of Palestinian civilians throughout the occupied territory, including, inter alia, a temporary international or foreign presence.' Israel never implemented.",
+          "<strong>Disarmament:</strong> Implicitly called for disarming of settlers. Israel ignored; settlers armed and expanded.",
+          "<strong>Implementation:</strong> Israel never complied with any provision of Resolution 904."
+        ]
+      },
+      {
+        "heading": "Terrorism and International Criminal Law",
+        "violations": [
+          "<strong>Act of Terrorism:</strong> Massacre meets all definitions of terrorism—premeditated attack on civilians to achieve political goal (derailing peace process).",
+          "<strong>Crimes Against Humanity:</strong> Part of widespread attack on Palestinian civilian population; systematic persecution.",
+          "<strong>State Responsibility:</strong> Israel's failure to prevent attack despite warnings, facilitation through military absence, collective punishment of victims, and failure to implement UNSC Resolution 904 constitute state responsibility for violations."
+        ]
+      }
+    ],
+    "alert": {
+      "type": "critical",
+      "icon": "⚖️",
+      "text": "<strong>Accountability failure:</strong> No Israeli officials held accountable for facilitating massacre or implementing collective punishment. Goldstein revered as hero by segments of settler community. His ideology persists in current Israeli far-right government through Kahanist parties."
+    }
+  },
+  "testimonies": {
+    "title": "Witness Testimonies & Official Accounts",
+    "icon": "👥",
+    "witnesses": [
+      {
+        "initials": "HAS",
+        "name": "Hazem Abu Sneineh",
+        "role": "Survivor; witness to massacre",
+        "testimony": "Interviewed by Al Jazeera 22 years later: 'When we got down to do sujood [prostration], I heard heavy gunfire and I got shot in my leg. I couldn't get up, and there was a big pool of blood under me and around me. The wounded were many, and they are lying all over the place...Children were torn apart, martyrs had lost their heads, their stomachs were ripped open, and there were scattered body parts everywhere.'",
+        "source": "Al Jazeera interview (2016)",
+        "sourceLink": "https://www.aljazeera.com/news/2016/2/26/remembering-the-ibrahimi-mosque-massacre"
+      },
+      {
+        "initials": "MAK",
+        "name": "Mohammed Abdelkader",
+        "role": "11-year-old boy; youngest victim",
+        "testimony": "Mohammed was 11 years old when Goldstein shot him dead during Fajr prayer. He was praying beside his father. His story represents the dozens of children present during massacre, many of whom died or were wounded.",
+        "source": "Victim documentation",
+        "sourceLink": "https://www.hebronrc.ps/en/node/27"
+      },
+      {
+        "initials": "Anonymous",
+        "name": "Survivor testimony",
+        "role": "Palestinian worshipper present during massacre",
+        "testimony": "Speaking to Anadolu Agency: 'What we saw inside the hall resembled a slaughterhouse. There were bodies in parts everywhere, blood covering the floor and walls. The Israeli soldiers who were supposed to protect us closed the doors on us, trapping us inside with the dead and wounded. They prevented ambulances from reaching us for a long time.'",
+        "source": "Anadolu Agency interview (2021)",
+        "sourceLink": "https://www.aa.com.tr/en/middle-east/palestine-27-years-since-ibrahimi-mosque-massacre/2156877"
+      },
+      {
+        "initials": "KMJ",
+        "name": "Khalil Muhsen Jabari",
+        "role": "Imam of Ibrahimi Mosque; led prayers during massacre",
+        "testimony": "Imam Jabari was leading Fajr prayer when Goldstein opened fire. He survived. Later testified about the horror: 'We were in prostration when the shooting started. People could not escape because we were packed so tightly. The shooting went on for minutes that felt like hours. When we finally overpowered him, we found he had reloaded several times.'",
+        "source": "Court testimony and interviews",
+        "sourceLink": null
+      },
+      {
+        "initials": "UN",
+        "name": "UN Security Council",
+        "role": "International body",
+        "testimony": "Resolution 904 (18 March 1994): 'Strongly condemns the massacre in Hebron and its aftermath which took the lives of more than 50 Palestinian civilians and injured several hundred others' and calls the massacre 'an abhorrent act.' Demanded measures to protect Palestinian civilians. Israel never complied.",
+        "source": "UN Security Council Resolution 904",
+        "sourceLink": "https://www.middleeastmonitor.com/20210227-the-massacre-of-ibrahimi-mosque/"
+      },
+      {
+        "initials": "YR",
+        "name": "Yitzhak Rabin",
+        "role": "Israeli Prime Minister (1992-1995)",
+        "testimony": "Condemned massacre: 'You are not part of the community of Israel...You are not partners in the Zionist enterprise. You are a shame on Zionism and an embarrassment to Judaism.' However, his government then implemented collective punishment against Palestinian victims rather than protecting them or removing settlers.",
+        "source": "Public statement, March 1994",
+        "sourceLink": null
+      },
+      {
+        "initials": "Anonymous",
+        "name": "Israeli soldier (present at scene)",
+        "role": "IDF soldier stationed at Ibrahimi Mosque",
+        "testimony": "Anonymous testimony to Shamgar Commission: 'We heard shots but the officer told us to stay at our posts outside. When we finally entered, it was chaos. We closed the gates to prevent more people from entering.' Palestinians argue this testimony reveals military complicity—soldiers present but did not stop massacre.",
+        "source": "Shamgar Commission testimony (leaked excerpts)",
+        "sourceLink": null
+      },
+      {
+        "initials": "Kach",
+        "name": "Kach Movement Statements",
+        "role": "Far-right terrorist organization (Goldstein's affiliation)",
+        "testimony": "Following massacre, Kach leaders praised Goldstein as hero and martyr. Distributed literature defending attack. Statement: 'Goldstein acted to save Jewish lives.' These statements led Israeli government to ban Kach and designate it terrorist organization. However, ideology persists in current Israeli far-right through parties like Otzma Yehudit.",
+        "source": "Kach publications and statements (1994)",
+        "sourceLink": "https://jacobin.com/2023/02/ibrahimi-mosque-massacre-anniversary-kahanism-hebron-itamar-ben-gvir-israel-far-right"
+      }
+    ]
+  },
+  "personalities": {
+    "title": "Key Figures",
+    "icon": "👤",
+    "commanders": [
+      {
+        "name": "Baruch Goldstein (born Benjamin Carl Goldstein)",
+        "role": "Perpetrator of massacre",
+        "birth_death": "1956-1994 (killed by survivors)",
+        "responsibility": "US-born Israeli settler, physician, IDF reserve officer, Kach member. Massacred 29 Palestinian worshippers during Ramadan prayer. Acted to derail Oslo peace process. Revered as martyr by far-right extremists; grave in Kiryat Arba became pilgrimage site."
+      },
+      {
+        "name": "Meir Kahane",
+        "role": "Founder of Kach movement; ideological inspiration",
+        "birth_death": "1932-1990 (assassinated in New York)",
+        "responsibility": "US-born extremist rabbi. Founded Jewish Defense League (JDL) and Kach party. Advocated expulsion of all Arabs from Israel/Palestine, Jewish supremacy. Goldstein was follower. Kahane assassinated 1990, but ideology lives on through followers and current Israeli far-right parties."
+      },
+      {
+        "name": "Yitzhak Rabin",
+        "role": "Israeli Prime Minister (1992-1995)",
+        "birth_death": "1922-1995 (assassinated)",
+        "responsibility": "Condemned Goldstein's act rhetorically but government implemented collective punishment against Palestinian victims. Led Oslo peace process Goldstein sought to derail. Assassinated by Israeli extremist in 1995."
+      },
+      {
+        "name": "Meir Shamgar",
+        "role": "Head of Israeli investigation commission",
+        "birth_death": "1925-2019",
+        "responsibility": "Former Israeli Supreme Court President who led commission investigating massacre. Report concluded Goldstein acted alone (denying military complicity), recommended measures that all burdened Palestinians. Criticized as whitewash."
+      },
+      {
+        "name": "Itamar Ben-Gvir",
+        "role": "Current Israeli Minister of National Security; Kahanist",
+        "birth_death": "1976-present",
+        "responsibility": "Former Kach activist who hung portrait of Goldstein in his home. Now serves in Israeli government as National Security Minister. Represents continuation of Goldstein's ideology in Israeli mainstream politics. Visited Goldstein's grave and praised him."
+      }
+    ]
+  },
+  "historicalImpact": {
+    "title": "Historical Impact & Legacy",
+    "icon": "🌍",
+    "sections": [
+      {
+        "heading": "Immediate Impact (1994)",
+        "items": [
+          "29 Palestinians massacred during prayer; 125+ wounded; 25+ killed by Israeli forces during protests",
+          "UN Security Council condemned massacre (Resolution 904); Israel never complied",
+          "Israel banned Kach movement and designated it terrorist organization",
+          "Oslo peace process continued but deeply damaged—Palestinian trust shattered",
+          "Hamas and Islamic Jihad launched retaliatory attacks; beginning of suicide bombing campaign",
+          "International spotlight on Hebron and settler violence",
+          "First use of 'collective punishment of victims' strategy that became template"
+        ]
+      },
+      {
+        "heading": "Long-term Transformation of Hebron (1994-Present)",
+        "items": [
+          "Ibrahimi Mosque partitioned: 60% Jewish, 40% Muslim (Jews 0.003% of population)",
+          "520 businesses and 1,800 shops closed; Old City economy destroyed",
+          "Shuhada Street (main commercial artery) sealed to Palestinians—ghost town created",
+          "1997 Hebron Protocol divided city: H2 (20%, Old City) under full Israeli military control",
+          "~40,000 Palestinians in H2 live under military rule to protect ~400-800 extremist settlers",
+          "Network of checkpoints, closures, restrictions strangling Palestinian life",
+          "Mass displacement from Old City; population dropped from 35,000 to ~7,000",
+          "Hebron became symbol of occupation's most oppressive face"
+        ]
+      },
+      {
+        "heading": "Ideological Legacy: Kahanism in Israeli Politics",
+        "items": [
+          "Goldstein buried in Kiryat Arba; grave became shrine for extremists",
+          "Annual commemorations by Kahanist supporters praising Goldstein as 'hero'",
+          "Kach ideology never eliminated—adherents joined other settler groups",
+          "2022-present: Kahanists entered Israeli government through parties like Otzma Yehudit (Jewish Power)",
+          "Itamar Ben-Gvir (National Security Minister) former Kach activist who hung Goldstein's portrait in home",
+          "Bezalel Smotrich (Finance Minister) promotes annexation and expulsion policies echoing Kahane",
+          "Goldstein's goal—derailing peace and preventing Palestinian state—largely achieved",
+          "Settler population grew from ~100,000 (1994) to ~700,000+ (2024)"
+        ]
+      },
+      {
+        "heading": "Accountability & Justice",
+        "items": [
+          "✗ No Israeli officials prosecuted for facilitating massacre or ignoring warnings",
+          "✗ No accountability for military's suspicious absence or trapping of survivors",
+          "✗ No Israeli soldiers charged for killing 25+ Palestinians during protests",
+          "✗ Collective punishment of Palestinian victims never reversed",
+          "✗ UN Security Council Resolution 904 never implemented",
+          "✗ Goldstein revered as hero/martyr by segments of Israeli society",
+          "✗ His ideological descendants now govern Israel",
+          "✓ Kach briefly banned (1994), though ideology persists",
+          "✓ International condemnation documented",
+          "✗ Old City businesses never reopened; Palestinians never compensated",
+          "✗ Ibrahimi Mosque partition remains; Palestinians restricted at site of their victimization"
+        ]
+      }
+    ]
+  },
+  "sources": {
+    "title": "Verified Sources & Documentation",
+    "icon": "📚",
+    "introduction": "Documentation includes UN Security Council resolutions, Shamgar Commission report, survivor testimonies, human rights investigations, Palestinian documentation, Israeli records, and international media coverage.",
+    "list": [
+      {
+        "icon": "🕌",
+        "name": "Hebron Rehabilitation Committee - Massacre Documentation",
+        "type": "Palestinian NGO / Direct Documentation",
+        "description": "Local Palestinian organization providing comprehensive documentation of massacre: victim lists, survivor testimonies, details of attack, aftermath, and ongoing impact on Hebron Old City.",
+        "link": "https://www.hebronrc.ps/en/node/27",
+        "verified": true
+      },
+      {
+        "icon": "📚",
+        "name": "Institute for Palestine Studies - Ibrahimi Mosque Massacre",
+        "type": "Academic Research Institution",
+        "description": "Scholarly documentation and analysis of massacre, including casualty statistics, political context, Israeli response, and long-term impact on Hebron and peace process.",
+        "link": "https://www.palestine-studies.org/en/node/1652605",
+        "verified": true
+      },
+      {
+        "icon": "📰",
+        "name": "Al Jazeera - Remembering the Ibrahimi Mosque Massacre",
+        "type": "Investigative Journalism / Survivor Interviews",
+        "description": "Comprehensive report including survivor testimonies 22 years after massacre. Details of attack, military complicity questions, and transformation of Hebron.",
+        "link": "https://www.aljazeera.com/news/2016/2/26/remembering-the-ibrahimi-mosque-massacre",
+        "verified": true
+      },
+      {
+        "icon": "🇵🇸",
+        "name": "WAFA Palestinian News Agency - Massacre Documentation",
+        "type": "Official Palestinian News Agency",
+        "description": "Official Palestinian documentation of massacre, protests, casualties, Israeli military response, and collective punishment measures implemented after attack.",
+        "link": "https://english.wafa.ps/Pages/Details/133561",
+        "verified": true
+      },
+      {
+        "icon": "📄",
+        "name": "Middle East Monitor - The Massacre of Ibrahimi Mosque",
+        "type": "News Analysis and Documentation",
+        "description": "Detailed analysis of massacre, its aftermath, partition of mosque, economic strangulation of Old City, and lasting impact on Hebron Palestinian community.",
+        "link": "https://www.middleeastmonitor.com/20210227-the-massacre-of-ibrahimi-mosque/",
+        "verified": true
+      },
+      {
+        "icon": "🌍",
+        "name": "Anadolu Agency - Palestine: 27 Years Since Ibrahimi Mosque Massacre",
+        "type": "International News Agency / Eyewitness Accounts",
+        "description": "Survivor testimonies and documentation from 27th anniversary. Describes conditions inside mosque during attack, military response, and ongoing restrictions.",
+        "link": "https://www.aa.com.tr/en/middle-east/palestine-27-years-since-ibrahimi-mosque-massacre/2156877",
+        "verified": true
+      },
+      {
+        "icon": "🔴",
+        "name": "Jacobin - Kahanism and the Ibrahimi Mosque Massacre",
+        "type": "Political Analysis",
+        "description": "Investigation of ideological links between Goldstein, Kach movement, and current Israeli far-right government. Traces Kahanism from Meir Kahane through Goldstein to Ben-Gvir and current coalition.",
+        "link": "https://jacobin.com/2023/02/ibrahimi-mosque-massacre-anniversary-kahanism-hebron-itamar-ben-gvir-israel-far-right",
+        "verified": true
+      },
+      {
+        "icon": "🇺🇳",
+        "name": "UN Security Council Resolution 904 (1994)",
+        "type": "Official UN Document",
+        "description": "Security Council resolution condemning massacre, calling it 'abhorrent,' demanding measures to protect Palestinian civilians. Never implemented by Israel.",
+        "link": "https://www.un.org/unispal/",
+        "verified": true
+      },
+      {
+        "icon": "⚖️",
+        "name": "Shamgar Commission Report (June 1994)",
+        "type": "Official Israeli Investigation",
+        "description": "Israeli government commission investigating massacre. Concluded Goldstein acted alone (disputed by Palestinians), recommended security measures that burdened Palestinians. Criticized as whitewash.",
+        "link": null,
+        "verified": true
+      },
+      {
+        "icon": "🏥",
+        "name": "Medical Documentation and Casualty Reports",
+        "type": "Hospital Records / Forensic Evidence",
+        "description": "Documentation from Ahli Hospital and other medical facilities treating massacre victims. Forensic evidence of gunshot wounds, injury patterns, cause of death.",
+        "link": null,
+        "verified": true
+      }
+    ],
+    "alert": {
+      "type": "info",
+      "icon": "ℹ️",
+      "text": "<strong>Methodology:</strong> Casualty figures (29 killed in mosque, 25+ in protests) represent consensus from multiple independent sources including UN, Palestinian documentation, Israeli records, and medical facilities. Total death toll 50-60 Palestinians over three weeks."
+    }
+  },
+  "media": {
+    "images": {
+      "local": [],
+      "remote": []
+    },
+    "documents": {
+      "local": [],
+      "remote": []
+    }
+  },
+  "cta": {
+    "title": "Remember the Ibrahimi Mosque Massacre",
+    "description": "Honor the memory of victims and understand how this massacre transformed Hebron into a strangled city.",
+    "buttons": [
+      { "text": "📅 View Full Timeline", "link": "../../major-incidents-timeline.html", "type": "primary" },
+      { "text": "🖨️ Print/Save PDF", "link": "#", "type": "secondary", "action": "print" },
+      { "text": "📧 Submit Info", "link": "mailto:palgeno.pedia@gmx.de?subject=Ibrahimi Mosque Massacre - Additional Information", "type": "secondary" }
+    ]
+  }
+}

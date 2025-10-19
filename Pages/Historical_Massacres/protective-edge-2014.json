@@ -1,0 +1,860 @@
+{
+  "id": "hist_014",
+  "event_type": "Military Operation",
+  "verification_status": "verified",
+  "metadata": {
+    "pageTitle": "Operation Protective Edge (7 Jul - 26 Aug 2014) | Historical Documentation",
+    "description": "51-day Israeli military operation killing 2,251 Palestinians including 1,462 civilians and 551 children. UN Commission found evidence of war crimes; 18,000 homes destroyed.",
+    "keywords": "Operation Protective Edge, Gaza War 2014, Shuja'iya massacre, UN Commission Inquiry, war crimes, civilian casualties, Rafah Black Friday",
+    "lastUpdated": "2025-10-18",
+    "author": "aliattia02"
+  },
+  "date": {
+    "start": "2014-07-07",
+    "end": "2014-08-26",
+    "duration_days": 51,
+    "display": "7 July - 26 August 2014",
+    "context": "51-day Israeli military operation in Gaza Strip; deadliest Gaza conflict"
+  },
+  "location": {
+    "historical": {
+      "name": "Gaza Strip and Southern Israel",
+      "admin_context": "Hamas-governed Gaza Strip under Israeli blockade since 2007",
+      "specific_sites": ["Shuja'iya (Gaza City)", "Rafah", "Khuza'a", "Beit Hanoun", "Khan Yunis", "Al-Batsh family home", "Gaza power plant"]
+    },
+    "current": {
+      "name": "Gaza Strip",
+      "admin_context": "Under Israeli blockade; governed by Hamas",
+      "status": "Reconstruction incomplete; ongoing blockade; infrastructure severely damaged"
+    }
+  },
+  "hero": {
+    "category": "🔴 MILITARY OPERATION • GAZA 2014",
+    "title": "Operation Protective Edge",
+    "subtitle": "Most destructive Gaza operation: 2,251 Palestinians killed; UN found evidence of war crimes",
+    "metaCards": [
+      { "icon": "📅", "label": "Duration", "value": "51 days", "detail": "7 Jul - 26 Aug 2014" },
+      { "icon": "💀", "label": "Palestinians Killed", "value": "2,251", "detail": "1,462 civilians, 551 children" },
+      { "icon": "💀", "label": "Israelis Killed", "value": "73", "detail": "67 soldiers, 6 civilians" },
+      { "icon": "🏠", "label": "Homes Destroyed", "value": "18,000", "detail": "89,000 damaged" }
+    ]
+  },
+  "quickFacts": {
+    "title": "⚡ Quick Facts",
+    "items": [
+      { "label": "Event Type", "value": "Military Operation / Armed Conflict" },
+      { "label": "Perpetrators", "value": "Israel Defense Forces; Hamas; Palestinian Islamic Jihad" },
+      { "label": "Verification", "value": "UN Commission of Inquiry; HRW; Amnesty; B'Tselem" },
+      { "label": "UN Response", "value": "Commission found evidence of war crimes by both sides" }
+    ]
+  },
+  "brief_summary": "Operation Protective Edge was the deadliest and most destructive of Israel's military operations in Gaza, lasting 51 days from July 7 to August 26, 2014. According to the UN Commission of Inquiry, 2,251 Palestinians were killed including 1,462 civilians (299 women and 551 children). Israel reported 73 killed (67 soldiers and 6 civilians). The operation involved over 6,000 Israeli airstrikes and massive ground operations. The UN Commission documented numerous incidents constituting potential war crimes including attacks on residential buildings killing entire families, the Shuja'iya assault killing over 100 civilians, and 'Black Friday' in Rafah where 130-150 Palestinians died after Israeli forces invoked the Hannibal Directive following a soldier's capture. Israel systematically targeted civilian infrastructure including destroying Gaza's only power plant, 18,000 homes, 73 medical facilities, and 262 schools. The operation displaced 500,000 Palestinians (one-third of Gaza's population). Human Rights Watch and Amnesty International documented Israeli forces' use of disproportionate force, attacks on medical facilities, and targeting of fleeing civilians. The UN Commission also found that Palestinian armed groups committed war crimes through indiscriminate rocket fire and extrajudicial execution of 21 alleged 'collaborators.'",
+  "perpetrators": ["Israel Defense Forces", "Israeli Air Force", "Israeli Artillery", "Hamas military wing (Izz ad-Din al-Qassam Brigades)", "Palestinian Islamic Jihad", "Hamas authorities in Gaza"],
+  "executiveSummary": {
+    "title": "Executive Summary",
+    "icon": "📋",
+    "alert": {
+      "type": "critical",
+      "icon": "⚠️",
+      "text": "<strong>UN Commission findings:</strong> Investigating 15 strikes on residential buildings, the Commission found 'actions amounting to war crimes' in multiple cases. Israel refused cooperation with the inquiry."
+    },
+    "paragraphs": [
+      "Operation Protective Edge began on July 7, 2014, ostensibly in response to escalating rocket fire from Gaza, but in a context of heightened tensions following the abduction and murder of three Israeli teenagers in the West Bank in June. Israel launched massive airstrikes across Gaza, conducting over 6,000 air raids in 51 days. The operation had three phases: an initial week of intensive aerial bombardment, a ground invasion beginning July 17 aimed at destroying cross-border tunnels, and a final phase from August 5 characterized by alternating ceasefires and continued strikes. The stated objectives were to stop rocket attacks and destroy Hamas's military infrastructure and tunnel network.",
+      "The human toll was unprecedented. The UN Commission of Inquiry documented 2,251 Palestinian deaths, with 1,462 identified as civilians—65% of all deaths. Among the dead were 551 children and 299 women. Entire families were wiped out in single strikes: 18 members of the Al-Batsh family killed on July 13, 17 members of the Abu Jame family on July 20, 26 members of the Al-Najjar family on July 20. The Commission investigated 15 cases of attacks on residential buildings and found that in many instances there was no evidence of a legitimate military target, or the attacks were grossly disproportionate. B'Tselem documented 606 attacks on residential buildings killing 1,447 civilians. The percentage of women among civilian deaths (20.2%) was significantly higher than in previous operations.",
+      "Several specific incidents stood out for their brutality. On July 19-20, Israeli forces launched a massive assault on Shuja'iya, one of Gaza's most densely populated neighborhoods. Over 100 Palestinians were killed in approximately 24 hours as Israeli artillery fired thousands of shells into residential areas. Witnesses described civilians being shot while attempting to flee with white flags. On August 1, after an Israeli soldier was reportedly captured in Rafah, Israel invoked the Hannibal Directive—calling for overwhelming force without regard for civilian life. In three hours, Israeli forces fired over 1,000 artillery shells into Rafah, killing 130-150 Palestinians, overwhelmingly civilians. The UN described this as a 'moral outrage and a criminal act.' The systematic destruction of Gaza's infrastructure was also staggering: Gaza's only power plant destroyed, 18,000 homes razed, 89,000 damaged, 73 medical facilities attacked, 262 schools damaged. The UN Commission concluded there was evidence indicating serious violations of international humanitarian law amounting to war crimes by Israeli forces, including deliberate attacks on civilians and civilian infrastructure. The Commission also found Palestinian armed groups committed war crimes through indiscriminate rocket attacks and the extrajudicial execution of 21 alleged collaborators. On the Israeli side, 73 people died: 67 soldiers and 6 civilians killed by rockets and mortars."
+    ]
+  },
+  "casualties": {
+    "title": "Casualties & Destruction",
+    "icon": "🚶",
+    "deaths": "2,251 Palestinians (1,462 civilians, 551 children, 299 women); 73 Israelis (67 soldiers, 6 civilians)",
+    "injured": "11,231 Palestinians (3,436 children); 1,600 Israelis (270 children)",
+    "forced_displacement": "500,000 Palestinians (1/3 of Gaza's population); 100,000 remained displaced one year later",
+    "breakdown": [
+      {
+        "type": "killed",
+        "number": "2,251",
+        "label": "Palestinians Killed",
+        "detail": "UN Commission: 1,462 civilians, 551 combatants, 238 status unclear. B'Tselem: 2,202 killed, 1,391 civilians",
+        "sources": [
+          {
+            "name": "UN Commission of Inquiry Report A/HRC/29/52",
+            "link": "https://www.un.org/unispal/document/auto-insert-185919/",
+            "icon": "🇺🇳"
+          },
+          {
+            "name": "B'Tselem Comprehensive Database",
+            "link": "https://www.btselem.org/gaza_strip/gaza_201407_operation",
+            "icon": "📊"
+          }
+        ]
+      },
+      {
+        "type": "killed",
+        "number": "551 children",
+        "label": "Child Fatalities",
+        "detail": "UN documented 551 children killed; 299 women killed. 20.2% of civilian deaths were women—higher than previous operations",
+        "sources": [
+          {
+            "name": "UN Commission Report para. 24",
+            "link": "https://www.un.org/unispal/document/auto-insert-185919/",
+            "icon": "📄"
+          },
+          {
+            "name": "OCHA Key Figures Report",
+            "link": "https://www.ochaopt.org/content/key-figures-2014-hostilities",
+            "icon": "🇺🇳"
+          }
+        ]
+      },
+      {
+        "type": "pattern",
+        "number": "72 families",
+        "label": "Entire Families Killed",
+        "detail": "B'Tselem documented 72 incidents where entire families killed in homes. Al-Batsh family: 18 killed; Abu Jame family: 17 killed; Al-Najjar family: 26 killed",
+        "sources": [
+          {
+            "name": "B'Tselem Report on Residential Buildings",
+            "link": "https://www.btselem.org/gaza_strip/gaza_201407_operation",
+            "icon": "🏠"
+          }
+        ]
+      },
+      {
+        "type": "injured",
+        "number": "11,231",
+        "label": "Palestinians Wounded",
+        "detail": "Including 3,436 children. Approximately 1,000 children left with permanent disabilities; 1,500 children orphaned",
+        "sources": [
+          {
+            "name": "UN Commission Report",
+            "link": "https://www.un.org/unispal/document/auto-insert-185919/",
+            "icon": "🏥"
+          }
+        ]
+      },
+      {
+        "type": "destroyed",
+        "number": "18,000 units",
+        "label": "Homes Completely Destroyed",
+        "detail": "Additional 89,000 homes damaged (10,000 severely). Entire neighborhoods razed: Shuja'iya, Beit Hanoun, Khuza'a",
+        "sources": [
+          {
+            "name": "UN OCHA Assessment",
+            "link": "https://www.ochaopt.org/content/key-figures-2014-hostilities",
+            "icon": "🏚️"
+          },
+          {
+            "name": "IMEU Documentation",
+            "link": "https://imeu.org/article/50-days-of-death-destruction-israels-operation-protective-edge",
+            "icon": "📋"
+          }
+        ]
+      },
+      {
+        "type": "destroyed",
+        "number": "262 schools",
+        "label": "Schools Damaged or Destroyed",
+        "detail": "3 public schools completely destroyed, 23 severely damaged. Multiple UN schools sheltering displaced attacked",
+        "sources": [
+          {
+            "name": "IMEU Report",
+            "link": "https://imeu.org/article/50-days-of-death-destruction-israels-operation-protective-edge",
+            "icon": "🏫"
+          }
+        ]
+      },
+      {
+        "type": "destroyed",
+        "number": "73 facilities",
+        "label": "Medical Facilities Attacked",
+        "detail": "Hospitals, clinics, ambulances destroyed or damaged. Al-Aqsa hospital attack killed 5. Amnesty found 'mounting evidence' of deliberate targeting",
+        "sources": [
+          {
+            "name": "Amnesty International Statement",
+            "link": "https://www.amnesty.org/",
+            "icon": "🏥"
+          },
+          {
+            "name": "IMEU Documentation",
+            "link": "https://imeu.org/article/50-days-of-death-destruction-israels-operation-protective-edge",
+            "icon": "📄"
+          }
+        ]
+      },
+      {
+        "type": "destroyed",
+        "number": "Power plant",
+        "label": "Gaza's Only Power Plant Destroyed",
+        "detail": "Amnesty condemned as 'collective punishment.' HRW: 'unlawful disproportionate attack causing far greater civilian harm than military gain'",
+        "sources": [
+          {
+            "name": "Amnesty International Statement",
+            "link": "https://www.amnesty.org/",
+            "icon": "⚡"
+          },
+          {
+            "name": "Human Rights Watch Statement",
+            "link": "https://www.hrw.org/",
+            "icon": "📄"
+          }
+        ]
+      },
+      {
+        "type": "killed",
+        "number": "73",
+        "label": "Israelis Killed",
+        "detail": "67 soldiers, 6 civilians (including 1 child). 4 killed by friendly fire",
+        "sources": [
+          {
+            "name": "UN Commission Report",
+            "link": "https://www.un.org/unispal/document/auto-insert-185919/",
+            "icon": "🇮🇱"
+          },
+          {
+            "name": "OCHA Key Figures",
+            "link": "https://www.ochaopt.org/content/key-figures-2014-hostilities",
+            "icon": "🇺🇳"
+          }
+        ]
+      },
+      {
+        "type": "injured",
+        "number": "1,600",
+        "label": "Israelis Wounded",
+        "detail": "Including 270 children. Injured by rockets, mortars, shrapnel from 4,881 projectiles fired",
+        "sources": [
+          {
+            "name": "OCHA Statistics",
+            "link": "https://www.ochaopt.org/content/key-figures-2014-hostilities",
+            "icon": "🇮🇱"
+          }
+        ]
+      },
+      {
+        "type": "attacks",
+        "number": "6,000+",
+        "label": "Israeli Airstrikes",
+        "detail": "IDF fired 5,000 tons of munitions, 14,500 tank shells, 35,000 artillery shells over 51 days",
+        "sources": [
+          {
+            "name": "OCHA Report citing IDF data",
+            "link": "https://www.ochaopt.org/content/key-figures-2014-hostilities",
+            "icon": "🎯"
+          }
+        ]
+      },
+      {
+        "type": "attacks",
+        "number": "4,881",
+        "label": "Rockets/Mortars Fired from Gaza",
+        "detail": "Palestinian armed groups fired 4,881 projectiles into Israel; many intercepted by Iron Dome",
+        "sources": [
+          {
+            "name": "OCHA citing IDF",
+            "link": "https://www.ochaopt.org/content/key-figures-2014-hostilities",
+            "icon": "🚀"
+          }
+        ]
+      }
+    ],
+    "alert": {
+      "type": "info",
+      "icon": "ℹ️",
+      "text": "<strong>Sources:</strong> UN Commission of Inquiry; UN OCHA; B'Tselem; Human Rights Watch; Amnesty International; IDF. Israel refused to cooperate with UN inquiry. Casualty classifications vary between sources due to methodological differences."
+    }
+  },
+  "timeline": {
+    "title": "Timeline of Events",
+    "icon": "⏱️",
+    "events": [
+      {
+        "time": "12 June 2014",
+        "title": "Three Israeli teenagers abducted",
+        "description": "Three Israeli teenagers (Eyal Yifrach, Gilad Shaer, Naftali Frenkel) abducted in West Bank. Israel launches massive search operation. Later revealed Israeli authorities knew teenagers were dead within hours but concealed information. Bodies discovered June 30.",
+        "sourceLinks": [
+          {
+            "name": "UN Documentation",
+            "url": "https://www.un.org/unispal/"
+          }
+        ]
+      },
+      {
+        "time": "June 13-30",
+        "title": "West Bank crackdown; tensions escalate",
+        "description": "Israel conducts massive sweep operation in West Bank arresting hundreds of Palestinians. Five Palestinians killed. Rocket fire from Gaza increases. Palestinian teenager Muhammad Abu Khdeir kidnapped and burned alive by Israeli extremists July 2 in revenge attack.",
+        "sourceLinks": [
+          {
+            "name": "UN Commission Report para. 69-70",
+            "url": "https://www.un.org/unispal/document/auto-insert-185919/"
+          }
+        ]
+      },
+      {
+        "time": "7 July 2014",
+        "title": "Operation Protective Edge begins",
+        "description": "Israel launches Operation Protective Edge with massive airstrikes across Gaza. Stated objective: stop rocket attacks and destroy Hamas military capabilities. Over 50 strikes in opening hours targeting government buildings, police stations, Hamas infrastructure.",
+        "sourceLinks": [
+          {
+            "name": "UN Commission Report para. 19",
+            "url": "https://www.un.org/unispal/document/auto-insert-185919/"
+          }
+        ]
+      },
+      {
+        "time": "9 July 2014",
+        "title": "Four boys killed on Gaza beach",
+        "description": "Israeli naval vessel fires at four boys (aged 9-11) from Bakr family playing on Gaza City beach. All four killed. Incident witnessed by multiple international journalists. Human Rights Watch investigation found no evidence of military target—indicative of war crime.",
+        "sourceLinks": [
+          {
+            "name": "HRW Investigation",
+            "url": "https://www.hrw.org/"
+          },
+          {
+            "name": "IMEU Documentation",
+            "url": "https://imeu.org/article/50-days-of-death-destruction-israels-operation-protective-edge"
+          }
+        ]
+      },
+      {
+        "time": "13 July 2014",
+        "title": "Al-Batsh family massacre",
+        "description": "Israeli airstrike on Al-Batsh family home in Gaza City kills 18 family members including 6 children and 3 women (one pregnant). At least 45 injured. UN Commission investigated; found no evidence of legitimate military target. Witnesses reported no warning given.",
+        "sourceLinks": [
+          {
+            "name": "UN Detailed Findings Report",
+            "url": "https://www.un.org/unispal/wp-content/uploads/2015/06/cb361dbaf1526e5785257e6c004b1e94_20150622%20--%20OHCHR%20Report%20on%20Palestine%20%5BA_HRC_CRP_4%5D.pdf"
+          }
+        ]
+      },
+      {
+        "time": "17 July 2014",
+        "title": "Ground invasion begins",
+        "description": "Israeli ground forces invade Gaza from multiple points. Stated goal: locate and destroy cross-border tunnels. Massive deployment of tanks, artillery, infantry. Fighting intensifies dramatically. Civilian casualties surge.",
+        "sourceLinks": [
+          {
+            "name": "UN Commission Report para. 19",
+            "url": "https://www.un.org/unispal/document/auto-insert-185919/"
+          }
+        ]
+      },
+      {
+        "time": "19-20 July 2014",
+        "title": "Shuja'iya massacre",
+        "description": "Israeli forces launch massive assault on Shuja'iya neighborhood in eastern Gaza City. Over 100 Palestinians killed in approximately 24 hours. Thousands of artillery shells fired into densely populated area (92,000 people in 6 km²). Multiple reports of civilians shot while fleeing with white flags. Entire neighborhood largely destroyed.",
+        "sourceLinks": [
+          {
+            "name": "MERIP Analysis",
+            "url": "https://merip.org/2015/10/operation-protective-edge/"
+          },
+          {
+            "name": "UN Commission Investigation",
+            "url": "https://www.un.org/unispal/document/auto-insert-185919/"
+          }
+        ]
+      },
+      {
+        "time": "20 July 2014",
+        "title": "Multiple family massacres",
+        "description": "Abu Jame family: 17 killed in airstrike on home in Khan Yunis. Al-Najjar family: 26 killed (mostly women and children) when four homes struck by missiles. Several other families wiped out same day. One of deadliest days of operation.",
+        "sourceLinks": [
+          {
+            "name": "B'Tselem Documentation",
+            "url": "https://www.btselem.org/gaza_strip/gaza_201407_operation"
+          }
+        ]
+      },
+      {
+        "time": "23 July 2014",
+        "title": "UN Human Rights Council establishes Commission",
+        "description": "UN Human Rights Council passes resolution S-21/1 establishing independent Commission of Inquiry to investigate violations of international law. Israel immediately rejects and refuses cooperation.",
+        "sourceLinks": [
+          {
+            "name": "UN HRC Resolution",
+            "url": "https://www.ohchr.org/en/hr-bodies/hrc/co-i-gaza-conflict/report-co-i-gaza"
+          }
+        ]
+      },
+      {
+        "time": "29 July 2014",
+        "title": "Gaza power plant destroyed",
+        "description": "Israeli strikes destroy Gaza's only power plant. Causes shutdown of water treatment plants, sewage systems. Amnesty condemns as 'collective punishment.' HRW: 'unlawful disproportionate attack' causing far greater civilian harm than any military gain.",
+        "sourceLinks": [
+          {
+            "name": "Amnesty Statement",
+            "url": "https://www.amnesty.org/"
+          },
+          {
+            "name": "HRW Statement",
+            "url": "https://www.hrw.org/"
+          }
+        ]
+      },
+      {
+        "time": "1 August 2014",
+        "title": "'Black Friday' - Rafah massacre",
+        "description": "After Israeli soldier reportedly captured, Israel invokes Hannibal Directive. In three hours, Israeli forces fire over 1,000 artillery shells into Rafah. Between 130-150 Palestinians killed, overwhelming majority civilians. UN Secretary General Ban Ki-moon calls it 'moral outrage and criminal act.' US State Department: 'appalling' and 'disgraceful.'",
+        "sourceLinks": [
+          {
+            "name": "UN Commission para. 27",
+            "link": "https://www.un.org/unispal/document/auto-insert-185919/"
+          },
+          {
+            "name": "IMEU Documentation",
+            "url": "https://imeu.org/article/50-days-of-death-destruction-israels-operation-protective-edge"
+          }
+        ]
+      },
+      {
+        "time": "3 August 2014",
+        "title": "UN school shelters attacked",
+        "description": "Multiple attacks on UN schools sheltering displaced Palestinians documented throughout operation. UNRWA schools in Beit Hanoun, Jabalya, Rafah hit despite clear marking and coordination with Israeli military. 44 Palestinians killed in UN facilities; 227 injured according to UN investigation.",
+        "sourceLinks": [
+          {
+            "name": "UN Investigation Report",
+            "url": "https://www.un.org/unispal/"
+          }
+        ]
+      },
+      {
+        "time": "5-22 August 2014",
+        "title": "Hamas executes 21 alleged 'collaborators'",
+        "description": "Hamas executes 21 alleged Israeli collaborators by firing squad. 16 taken from Al-Katiba prison where held in custody of Gaza authorities. Executed without proper legal process. UN Commission found executions constitute war crime under Common Article 3 of Geneva Conventions.",
+        "sourceLinks": [
+          {
+            "name": "UN Commission para. 67-68",
+            "url": "https://www.un.org/unispal/document/auto-insert-185919/"
+          }
+        ]
+      },
+      {
+        "time": "26 August 2014",
+        "title": "Ceasefire takes effect",
+        "description": "After Egyptian mediation, unconditional ceasefire agreed. Operation ends after 51 days. Both sides claim victory but neither achieves stated objectives. Gaza devastated: 18,000 homes destroyed, 500,000 displaced, infrastructure in ruins.",
+        "sourceLinks": [
+          {
+            "name": "UN OCHA Final Assessment",
+            "url": "https://www.ochaopt.org/content/key-figures-2014-hostilities"
+          }
+        ]
+      },
+      {
+        "time": "22 June 2015",
+        "title": "UN Commission releases report",
+        "description": "After extensive investigation (Israel refused cooperation), UN Commission releases comprehensive report documenting violations by both sides. Concludes there is evidence indicating serious violations of international humanitarian law amounting to war crimes by Israeli forces. Also finds Palestinian armed groups committed war crimes.",
+        "sourceLinks": [
+          {
+            "name": "UN Commission Report A/HRC/29/52",
+            "url": "https://www.un.org/unispal/document/auto-insert-185919/"
+          },
+          {
+            "name": "OHCHR Full Report",
+            "url": "https://www.ohchr.org/en/hr-bodies/hrc/co-i-gaza-conflict/report-co-i-gaza"
+          }
+        ]
+      }
+    ]
+  },
+  "warCrimes": {
+    "title": "Documented Violations of International Law",
+    "icon": "⚠️",
+    "alert": {
+      "type": "warning",
+      "icon": "⚠️",
+      "text": "<strong>UN Commission conclusion:</strong> 'There is evidence indicating serious violations of international humanitarian law and international human rights law... amounting to war crimes' by Israeli forces. Palestinian armed groups also committed war crimes."
+    },
+    "crimes": [
+      {
+        "icon": "🏠",
+        "title": "Systematic Attacks on Residential Buildings",
+        "description": "UN Commission investigated 15 cases of strikes on residential buildings killing 216 people including 115 children and 50 women. Found in multiple cases no evidence of military target or attacks were grossly disproportionate. B'Tselem documented 606 attacks on homes killing 1,447 civilians. Entire families wiped out: Al-Batsh (18 killed), Abu Jame (17), Al-Najjar (26).",
+        "sourceLink": "https://www.un.org/unispal/document/auto-insert-185919/",
+        "sourceText": "📄 UN Commission Report para. 26-35 ↑"
+      },
+      {
+        "icon": "💥",
+        "title": "Shuja'iya Massacre - Indiscriminate Artillery Fire",
+        "description": "July 19-20: Israeli forces fired thousands of artillery shells into Shuja'iya, one of Gaza's most densely populated areas (92,000 people in 6 km²—three times density of Tel Aviv). Over 100 Palestinians killed in ~24 hours. Use of imprecise artillery in densely populated area constitutes indiscriminate attack—war crime.",
+        "sourceLink": "https://merip.org/2015/10/operation-protective-edge/",
+        "sourceText": "📄 MERIP Analysis ↑"
+      },
+      {
+        "icon": "🚩",
+        "title": "Rafah 'Black Friday' - Hannibal Directive",
+        "description": "August 1: After soldier reportedly captured, Israeli forces fired over 1,000 artillery shells into Rafah in three hours killing 130-150 Palestinians, overwhelmingly civilians. Hannibal Directive explicitly calls for 'overwhelming force without regard to' imperiled soldier or civilians present. UN: 'moral outrage and criminal act.'",
+        "sourceLink": "https://www.un.org/unispal/document/auto-insert-185919/",
+        "sourceText": "📄 UN Commission para. 27 ↑"
+      },
+      {
+        "icon": "🏥",
+        "title": "Attacks on Medical Facilities and Personnel",
+        "description": "73 medical facilities and ambulances destroyed or damaged. Al-Aqsa hospital attack killed 5. Multiple hospitals struck including facilities for paralyzed and elderly patients. Amnesty: 'mounting evidence' of deliberate targeting. Attacks on medical units are war crimes unless they commit acts harmful to enemy.",
+        "sourceLink": "https://www.amnesty.org/",
+        "sourceText": "📄 Amnesty International Statement ↑"
+      },
+      {
+        "icon": "🏫",
+        "title": "Attacks on UN Schools Sheltering Displaced",
+        "description": "Multiple UN schools clearly marked and sheltering displaced civilians attacked. UNRWA schools in Beit Hanoun, Jabalya, Rafah struck despite coordination with Israeli military. UN investigation found Israel responsible for 44 Palestinian deaths in UN facilities, 227 injured. Protected facilities under IHL.",
+        "sourceLink": "https://www.un.org/unispal/",
+        "sourceText": "📄 UN Investigation Report ↑"
+      },
+      {
+        "icon": "⚡",
+        "title": "Destruction of Civilian Infrastructure - Power Plant",
+        "description": "Deliberate destruction of Gaza's only power plant caused shutdown of water treatment, sewage systems, hospitals. Amnesty: 'collective punishment' of entire population. HRW: 'unlawful disproportionate attack' causing 'far greater civilian harm than military gain.' Extensive destruction of property not justified by military necessity.",
+        "sourceLink": "https://www.amnesty.org/",
+        "sourceText": "📄 Amnesty & HRW Statements ↑"
+      },
+      {
+        "icon": "👶",
+        "title": "Gaza City Beach - Killing of Four Boys",
+        "description": "July 9: Israeli naval vessel fired at four boys (aged 9-11) from Bakr family playing football on Gaza City beach. All four killed. Witnessed by multiple international journalists. HRW investigation found no evidence of military target nearby—indicative of war crime.",
+        "sourceLink": "https://www.hrw.org/",
+        "sourceText": "📄 Human Rights Watch Investigation ↑"
+      },
+      {
+        "icon": "🚀",
+        "title": "Palestinian Indiscriminate Rocket Attacks (War Crime)",
+        "description": "Palestinian armed groups fired 4,881 rockets and mortars at Israeli civilian population centers. UN Commission concluded these attacks were indiscriminate, intended to spread terror among civilians, and constituted war crimes. 6 Israeli civilians killed.",
+        "sourceLink": "https://www.un.org/unispal/document/auto-insert-185919/",
+        "sourceText": "📄 UN Commission Report ↑"
+      },
+      {
+        "icon": "⚖️",
+        "title": "Extrajudicial Executions by Hamas (War Crime)",
+        "description": "Hamas executed 21 alleged Israeli collaborators by firing squad without proper legal process during operation. UN Commission found executions violated Common Article 3 of Geneva Conventions and constituted war crime. 16 taken from Al-Katiba prison while in custody of Gaza authorities.",
+        "sourceLink": "https://www.un.org/unispal/document/auto-insert-185919/",
+        "sourceText": "📄 UN Commission para. 67-68 ↑"
+      }
+    ]
+  },
+  "international_law": {
+    "title": "International Law Framework",
+    "icon": "⚖️",
+    "introduction": "Operation Protective Edge occurred under framework of Fourth Geneva Convention (1949), Additional Protocols, and customary international humanitarian law. UN Commission of Inquiry conducted extensive investigation.",
+    "sections": [
+      {
+        "heading": "Fourth Geneva Convention Violations - Israeli Forces",
+        "violations": [
+          "<strong>Article 27 (Protected Persons):</strong> 'Protected persons...shall be treated humanely...protected against all acts of violence.' Attacks on residential buildings killing entire families, beach killings, and Shuja'iya assault violated this protection.",
+          "<strong>Article 33 (Collective Punishments):</strong> 'Collective penalties...prohibited.' Destruction of power plant causing shutdown of water, sewage, medical services for entire population constitutes collective punishment.",
+          "<strong>Article 53 (Destruction of Property):</strong> 'Any destruction...prohibited, except where rendered absolutely necessary by military operations.' Destruction of 18,000 homes, power plant, medical facilities, schools far exceeded military necessity.",
+          "<strong>Article 147 (Grave Breaches):</strong> 'Wilful killing...torture...wilfully causing great suffering...extensive destruction...not justified by military necessity' are grave breaches. Multiple documented incidents meet this threshold."
+        ]
+      },
+      {
+        "heading": "Customary International Humanitarian Law Violations",
+        "violations": [
+          "<strong>Distinction:</strong> Attacks must distinguish between civilians and combatants. Use of artillery in Shuja'iya (92,000 civilians/6 km²), attacks on residential buildings, beach killings violated distinction principle.",
+          "<strong>Proportionality:</strong> Civilian harm must not be excessive relative to military advantage. UN Commission found multiple attacks 'grossly disproportionate.' Rafah assault, power plant destruction clearly disproportionate.",
+          "<strong>Precautions in Attack:</strong> Parties must take feasible precautions to minimize civilian harm. Despite 'roof knocking' and warnings, 551 children killed suggests inadequate precautions. Attacks on marked UN schools violated this.",
+          "<strong>Indiscriminate Attacks Prohibited:</strong> Use of imprecise artillery in densely populated areas (Shuja'iya, Rafah) constitutes indiscriminate attack. Palestinian rocket attacks also indiscriminate."
+        ]
+      },
+      {
+        "heading": "UN Commission of Inquiry Findings (June 2015)",
+        "violations": [
+          "<strong>War Crimes - Israeli Forces:</strong> Commission found 'evidence indicating serious violations of international humanitarian law amounting to war crimes.' Specific findings: attacks on residential buildings without military justification, disproportionate attacks, indiscriminate use of artillery in populated areas.",
+          "<strong>Possible Crimes Against Humanity:</strong> Commission noted pattern and scale of attacks on civilians may constitute crimes against humanity, though refrained from definitive conclusion pending full investigation.",
+          "<strong>War Crimes - Palestinian Armed Groups:</strong> Commission found indiscriminate rocket attacks and extrajudicial executions constituted war crimes under Common Article 3 and customary IHL.",
+          "<strong>Accountability Failure:</strong> Commission found Israeli investigations 'inconsistent with international standards' and unlikely to produce genuine accountability. Palestinian authorities conducted no known investigations."
+        ]
+      },
+      {
+        "heading": "Specific Incident Investigations",
+        "violations": [
+          "<strong>15 Residential Building Attacks:</strong> UN investigated 15 attacks on homes killing 216 people (115 children, 50 women). Found in multiple cases: no evidence of military target, or attacks grossly disproportionate.",
+          "<strong>Shuja'iya:</strong> Commission found indiscriminate use of artillery in area with civilian density three times that of Tel Aviv violated laws of war. Over 100 killed in 24 hours.",
+          "<strong>Rafah Black Friday:</strong> 1,000+ shells in 3 hours killing 130-150 (mostly civilians) found to be 'disproportionate in the extreme' and indicative of violations.",
+          "<strong>Gaza Beach Boys:</strong> HRW investigation found killing of four boys on beach with no military target present indicative of war crime.",
+          "<strong>UN Facilities:</strong> Attacks on clearly marked UN schools sheltering displaced found to lack military justification; some attacks may constitute war crimes."
+        ]
+      },
+      {
+        "heading": "Protected Persons and Objects",
+        "violations": [
+          "<strong>Medical Facilities:</strong> Fourth Geneva Convention Article 18 mandates protection of hospitals. 73 medical facilities attacked. Amnesty found 'mounting evidence' of deliberate targeting—grave breach.",
+          "<strong>Schools and Cultural Property:</strong> 262 schools damaged/destroyed. Hague Convention protects cultural property; attacks must be militarily necessary. Evidence suggests many attacks lacked necessity.",
+          "<strong>UN Facilities:</strong> UN marked facilities have special protected status. Multiple attacks on UNRWA schools despite coordination violated this protection.",
+          "<strong>Essential Civilian Infrastructure:</strong> Additional Protocol I Article 54 prohibits attacks on objects indispensable to survival of civilian population. Power plant destruction violated this."
+        ]
+      }
+    ],
+    "alert": {
+      "type": "critical",
+      "icon": "⚖️",
+      "text": "<strong>Israel's refusal to cooperate:</strong> Israel denied UN Commission access, refused requests for information, and rejected findings. No meaningful domestic investigations of major incidents. ICC investigation ongoing."
+    }
+  },
+  "testimonies": {
+    "title": "Witness Testimonies & Official Accounts",
+    "icon": "👥",
+    "witnesses": [
+      {
+        "initials": "MD",
+        "name": "Maher Mahdouqa",
+        "role": "UN Commission of Inquiry member",
+        "testimony": "In presenting report to UN Human Rights Council June 2015: 'What we found during our investigation suggests that significant violations of international humanitarian law occurred...There is evidence indicating serious violations amounting to war crimes. The attacks on residential buildings killing entire families are particularly concerning.'",
+        "source": "UN Commission Press Conference, June 22, 2015",
+        "sourceLink": "https://www.ohchr.org/en/hr-bodies/hrc/co-i-gaza-conflict/report-co-i-gaza"
+      },
+      {
+        "initials": "SK",
+        "name": "Survivor from Shuja'iya",
+        "role": "Palestinian resident (identity protected)",
+        "testimony": "Testified to UN Commission: 'The shelling was everywhere, continuous, terrifying. We tried to flee but they were shooting at everyone, even people carrying white flags. I saw entire families killed trying to escape. Bodies everywhere. The neighborhood was destroyed—nothing left but rubble and blood.'",
+        "source": "UN Commission testimony, 2014-2015",
+        "sourceLink": "https://www.un.org/unispal/document/auto-insert-185919/"
+      },
+      {
+        "initials": "BKM",
+        "name": "Ban Ki-moon",
+        "role": "UN Secretary-General",
+        "testimony": "Regarding Rafah 'Black Friday' August 1: 'The shelling of civilians in Rafah is a moral outrage and a criminal act. The Secretary-General condemns this action in the strongest terms.' Regarding UN schools attacked: 'Nothing is more shameful than attacking sleeping children.'",
+        "source": "UN Secretary-General statements, August 2014",
+        "sourceLink": "https://www.un.org/unispal/"
+      },
+      {
+        "initials": "PS",
+        "name": "Pierre Krähenbühl",
+        "role": "UNRWA Commissioner-General",
+        "testimony": "After attacks on UN schools: 'Today the world stands disgraced...There are no Hamas rockets stored in the basements of our schools; there are only frightened civilians who come there to escape the fighting. This is the third time one of our schools has been hit...The precise location of the school was communicated to the Israeli military 17 times.'",
+        "source": "UNRWA Statement, August 3, 2014",
+        "sourceLink": "https://www.unrwa.org/"
+      },
+      {
+        "initials": "AI",
+        "name": "Amnesty International",
+        "role": "Human rights organization",
+        "testimony": "In comprehensive report: 'Mounting evidence suggests Israeli forces carried out indiscriminate and disproportionate attacks that killed hundreds of civilians in Gaza, including attacks on medical facilities, in violation of the laws of war...The destruction of the Gaza power plant caused massive and predictable harm to civilians, consistent with collective punishment.'",
+        "source": "Amnesty Report: 'Families Under the Rubble', November 2014",
+        "sourceLink": "https://www.amnesty.org/"
+      },
+      {
+        "initials": "HRW",
+        "name": "Human Rights Watch",
+        "role": "International rights organization",
+        "testimony": "Regarding killing of four boys on beach: 'Our investigation into the attack found no evidence of a military target in the area at the time...This appears to be indicative of a war crime.' Regarding power plant: 'An unlawful disproportionate attack...far greater civilian harm than any military gain.'",
+        "source": "HRW Report 'Findings on Violations', September 2014",
+        "sourceLink": "https://www.hrw.org/"
+      },
+      {
+        "initials": "BT",
+        "name": "Breaking the Silence (Israeli soldiers)",
+        "role": "IDF veterans' organization",
+        "testimony": "Testimony 42: 'When you see these [F-16] strikes on TV, a little poof there, a little poof here—you don't understand what's really happening. It's a neighborhood being erased, families wiped out.' Testimony 56: 'The firepower was insane. We fired and fired. Neighborhoods leveled. They told us better a Palestinian kid than one of ours.'",
+        "source": "Breaking the Silence testimonies, 2014-2015",
+        "sourceLink": "https://www.breakingthesilence.org.il/"
+      },
+      {
+        "initials": "RC",
+        "name": "Dr. Rania Abu Anza",
+        "role": "Palestinian physician, Gaza",
+        "testimony": "Testimony to human rights investigators: 'I have never seen such injuries—children with limbs blown off, burns from white phosphorus, shrapnel throughout their small bodies. We operated non-stop for weeks with no electricity, no supplies. The hospital itself was hit multiple times. This was not war—this was slaughter.'",
+        "source": "Medical testimonies compilation, UN Commission",
+        "sourceLink": "https://www.un.org/unispal/"
+      }
+    ]
+  },
+  "personalities": {
+    "title": "Key Figures",
+    "icon": "👤",
+    "commanders": [
+      {
+        "name": "Benjamin Netanyahu",
+        "role": "Prime Minister of Israel (2009-2021)",
+        "birth_death": "1949-present",
+        "responsibility": "Authorized Operation Protective Edge. Made key policy decisions including continuation despite international outcry. Defended operation as proportionate and necessary. Rejected UN Commission findings."
+      },
+      {
+        "name": "Moshe Ya'alon",
+        "role": "Defense Minister (2013-2016)",
+        "birth_death": "1950-present",
+        "responsibility": "Oversaw military planning and execution. Defended IDF actions including power plant destruction. Later expressed some regret about civilian toll but maintained operation was justified."
+      },
+      {
+        "name": "Benny Gantz",
+        "role": "IDF Chief of General Staff (2011-2015)",
+        "birth_death": "1959-present",
+        "responsibility": "Top military commander during operation. Responsible for operational decisions including artillery use in Shuja'iya, Rafah assault. Later boasted about 'sending Gaza back to Stone Age.' Became Defense Minister 2020."
+      },
+      {
+        "name": "Ismail Haniyeh",
+        "role": "Hamas Deputy Chairman (2012-2017)",
+        "birth_death": "1962-present",
+        "responsibility": "Hamas political leader during operation. Authorized continued rocket attacks throughout operation. Rejected ceasefire offers. Currently heads Hamas Political Bureau."
+      },
+      {
+        "name": "Mohammad Deif",
+        "role": "Commander, Izz ad-Din al-Qassam Brigades",
+        "birth_death": "1965-present",
+        "responsibility": "Commander of Hamas military wing. Directed rocket attacks and tunnel operations. Survived multiple Israeli assassination attempts including during this operation. Wife and children killed in airstrike August 19, 2014."
+      },
+      {
+        "name": "Mary McGowan Davis",
+        "role": "Chair, UN Commission of Inquiry",
+        "birth_death": "1945-present",
+        "responsibility": "Led UN investigation into Operation Protective Edge. Former US federal judge. Commission documented violations by both sides, found evidence of war crimes."
+      }
+    ]
+  },
+  "historicalImpact": {
+    "title": "Historical Impact & Legacy",
+    "icon": "🌍",
+    "sections": [
+      {
+        "heading": "Immediate Impact (2014-2016)",
+        "items": [
+          "Deadliest Gaza conflict: 2,251 Palestinians killed (1,462 civilians, 551 children); 73 Israelis (67 soldiers, 6 civilians)",
+          "Unprecedented destruction: 18,000 homes destroyed, 89,000 damaged; 500,000 displaced (1/3 of population)",
+          "Infrastructure devastation: power plant, 262 schools, 73 medical facilities, water/sewage systems destroyed",
+          "Economic collapse: $6 billion in damages; Gaza GDP contracted by 15%",
+          "UN Commission found evidence of war crimes by both Israeli forces and Palestinian armed groups",
+          "Israel's refusal to cooperate with UN inquiry set precedent for rejecting international accountability",
+          "1,000+ children left with permanent disabilities; massive psychological trauma across Gaza population"
+        ]
+      },
+      {
+        "heading": "Long-term Consequences (2016-Present)",
+        "items": [
+          "Reconstruction severely hampered: Four years later, 75% of destroyed homes still not rebuilt due to blockade",
+          "Gaza's humanitarian crisis deepened catastrophically; UN warned Gaza could be 'uninhabitable' by 2020",
+          "Complete impunity: Zero Israeli prosecutions for documented violations; no accountability mechanisms enforced",
+          "Pattern established: Operation became model for 2021, 2023-2024 escalations with similar tactics",
+          "International law erosion: UN findings ignored; precedent set for rejection of international accountability",
+          "ICC investigation opened 2015 (Palestine accepted jurisdiction) but years later no charges filed re: Protective Edge",
+          "Political entrenchment: Netanyahu's security narrative strengthened; Hamas remained in power despite devastation",
+          "Generational trauma: UNICEF reported 400,000+ children requiring psychological support"
+        ]
+      },
+      {
+        "heading": "Accountability Status",
+        "items": [
+          "✗ No Israeli officials or soldiers prosecuted for documented violations",
+          "✗ No accountability for Shuja'iya assault (100+ civilians killed)",
+          "✗ No accountability for Rafah Black Friday (130-150 civilians killed)",
+          "✗ No accountability for attacks on residential buildings (72 families wiped out)",
+          "✗ No accountability for killing four boys on beach or destruction of power plant",
+          "✗ No accountability for attacks on UN schools, medical facilities",
+          "✗ Israeli military investigations: hundreds of complaints, handful of minor convictions unrelated to major incidents",
+          "✗ Palestinian armed groups: no known investigations or prosecutions for indiscriminate rocket attacks or executions",
+          "✓ UN Commission documented violations and called for accountability",
+          "✓ ICC has jurisdiction and ongoing investigation (2021-present)",
+          "✓ International consensus: Both sides committed violations; Israel's far greater in scale and severity"
+        ]
+      }
+    ]
+  },
+  "sources": {
+    "title": "Verified Sources & Documentation",
+    "icon": "📚",
+    "introduction": "Primary sources include UN Commission of Inquiry comprehensive investigation, human rights organization reports, medical documentation, survivor testimonies, and Israeli military statements.",
+    "list": [
+      {
+        "icon": "🇺🇳",
+        "name": "UN Human Rights Council - Report of the Commission of Inquiry on the 2014 Gaza Conflict (A/HRC/29/52)",
+        "type": "Primary UN Investigation",
+        "description": "Comprehensive investigation by independent Commission led by Mary McGowan Davis. Documented violations by both sides. Found evidence of war crimes by Israeli forces including attacks on residential buildings, disproportionate force, indiscriminate artillery use. Also documented Palestinian war crimes. Released June 22, 2015.",
+        "link": "https://www.un.org/unispal/document/auto-insert-185919/",
+        "verified": true
+      },
+      {
+        "icon": "🇺🇳",
+        "name": "OHCHR - Detailed Findings of the Commission of Inquiry (A/HRC/CRP.4)",
+        "type": "UN Detailed Investigation Report",
+        "description": "Detailed 281-page report documenting individual incidents, witness testimonies, legal analysis. Includes investigation of 15 residential building attacks, Shuja'iya assault, Rafah Black Friday, attacks on UN facilities.",
+        "link": "https://www.un.org/unispal/wp-content/uploads/2015/06/cb361dbaf1526e5785257e6c004b1e94_20150622%20--%20OHCHR%20Report%20on%20Palestine%20%5BA_HRC_CRP_4%5D.pdf",
+        "verified": true
+      },
+      {
+        "icon": "🇺🇳",
+        "name": "UN OCHA - Key Figures Report on 2014 Gaza Hostilities",
+        "type": "UN Humanitarian Assessment",
+        "description": "Comprehensive statistics on casualties, destruction, displacement. Documents 2,251 Palestinian deaths, 18,000 homes destroyed, 500,000 displaced. Includes breakdown by age, gender, combatant status.",
+        "link": "https://www.ochaopt.org/content/key-figures-2014-hostilities",
+        "verified": true
+      },
+      {
+        "icon": "📊",
+        "name": "B'Tselem - Operation Protective Edge Comprehensive Database",
+        "type": "Israeli Human Rights Documentation",
+        "description": "Detailed database documenting 2,202 Palestinian deaths including 1,391 civilians. Documented 606 attacks on residential buildings. Individual incident reports with names, circumstances, locations.",
+        "link": "https://www.btselem.org/gaza_strip/gaza_201407_operation",
+        "verified": true
+      },
+      {
+        "icon": "⚖️",
+        "name": "Human Rights Watch - Multiple Reports on Gaza 2014",
+        "type": "Human Rights Investigation",
+        "description": "Series of detailed reports documenting specific violations: beach boys killing investigation, attacks on medical facilities, use of munitions in populated areas. Found evidence of war crimes by both sides.",
+        "link": "https://www.hrw.org/",
+        "verified": true
+      },
+      {
+        "icon": "🔴",
+        "name": "Amnesty International - Families Under the Rubble (November 2014)",
+        "type": "Human Rights Documentation",
+        "description": "Comprehensive report documenting indiscriminate and disproportionate attacks. Special focus on power plant destruction as collective punishment. Investigation of attacks on medical facilities.",
+        "link": "https://www.amnesty.org/",
+        "verified": true
+      },
+      {
+        "icon": "📋",
+        "name": "IMEU - 50 Days of Death & Destruction",
+        "type": "Documentation Organization",
+        "description": "Detailed compilation of statistics, timelines, specific incidents. Documents destruction of infrastructure: 262 schools, 73 medical facilities, power plant, water systems.",
+        "link": "https://imeu.org/article/50-days-of-death-destruction-israels-operation-protective-edge",
+        "verified": true
+      },
+      {
+        "icon": "📖",
+        "name": "MERIP - Operation Protective Edge Analysis",
+        "type": "Academic Journal",
+        "description": "Scholarly analysis of Shuja'iya assault documenting use of artillery in densely populated area. Comparative analysis of civilian density: Shuja'iya 3x density of Tel Aviv.",
+        "link": "https://merip.org/2015/10/operation-protective-edge/",
+        "verified": true
+      },
+      {
+        "icon": "🎖️",
+        "name": "Breaking the Silence - Soldiers' Testimonies from Protective Edge",
+        "type": "IDF Veterans Documentation",
+        "description": "Anonymous testimonies from Israeli soldiers who participated. Documented rules of engagement, firepower use, destruction orders, and perspectives on civilian casualties.",
+        "link": "https://www.breakingthesilence.org.il/",
+        "verified": true
+      },
+      {
+        "icon": "🇺🇳",
+        "name": "UNRWA - Statements on Attacks on UN Facilities",
+        "type": "UN Agency",
+        "description": "Real-time statements documenting attacks on UN schools sheltering displaced. Commissioner-General Pierre Krähenbühl's statements condemning attacks. Damage assessments.",
+        "link": "https://www.unrwa.org/",
+        "verified": true
+      }
+    ],
+    "alert": {
+      "type": "info",
+      "icon": "ℹ️",
+      "text": "<strong>Methodology:</strong> UN Commission conducted extensive field investigation, interviewed hundreds of witnesses, reviewed medical records, satellite imagery, video evidence. Israel refused all cooperation. Casualty classifications vary between sources due to methodological differences in determining combatant status."
+    }
+  },
+  "media": {
+    "images": {
+      "local": [],
+      "remote": []
+    },
+    "documents": {
+      "local": [],
+      "remote": []
+    }
+  },
+  "cta": {
+    "title": "Demand Accountability",
+    "description": "Support international justice mechanisms to ensure accountability for violations during Operation Protective Edge.",
+    "buttons": [
+      { "text": "📅 View Full Timeline", "link": "../../major-incidents-timeline.html", "type": "primary" },
+      { "text": "🖨️ Print/Save PDF", "link": "#", "type": "secondary", "action": "print" },
+      { "text": "📧 Submit Info", "link": "mailto:palgeno.pedia@gmx.de?subject=Operation Protective Edge - Additional Information", "type": "secondary" }
+    ]
+  }
+}

@@ -56,6 +56,88 @@
   },
   "brief_summary": "On May 22-23, 1948, the Alexandroni Brigade attacked Tantura village. After surrender, an estimated 200-250 Palestinian men were systematically executed and buried in mass graves. The massacre was suppressed for over 50 years until documented by Israeli researcher Teddy Katz in 1998 through interviews with both perpetrators and survivors. Mass graves remain beneath Dor Beach parking lot; Israeli authorities refuse excavation.",
   "perpetrators": ["Alexandroni Brigade (Haganah/IDF)"],
+  "keyFigures": {
+    "title": "Key Figures: Commanders & Perpetrators",
+    "icon": "👤",
+    "introduction": "Alexandroni Brigade commanders and soldiers responsible for the Tantura assault and subsequent executions. Despite documented testimonies from perpetrators themselves, no prosecutions occurred. The massacre was actively suppressed for 50+ years.",
+    "figures": [
+      {
+        "name": "Dan Epstein",
+        "role": "Alexandroni Brigade Commander (May 1948)",
+        "responsibility": "Overall brigade command during coastal operations; responsible for Tantura assault planning and execution",
+        "laterCareer": "Continued military career in IDF; honored as brigade founder",
+        "accountability": "Never prosecuted; never publicly acknowledged massacre despite subordinate testimonies",
+        "sources": [
+          {
+            "name": "Katz, Teddy. MA Thesis (1998) - Based on IDF archives and veteran interviews",
+            "link": "https://www.haaretz.com/israel-news/2022-01-20/ty-article-magazine/.premium/tantura-the-massacre-at-the-heart-of-the-nakba-that-israelis-refuse-to-recogn/0000017f-e2a5-d7b2-a77f-e2a7ccb30000",
+            "icon": "🎓"
+          }
+        ]
+      },
+      {
+        "name": "Binyamin Shechter",
+        "role": "Alexandroni Intelligence Officer",
+        "responsibility": "Present during operations; witnessed executions and burials. Testified: 'I know of three locations where people were killed and buried... I estimate about 200-230 people were killed.'",
+        "laterCareer": "Civilian life; broke silence in interviews with Katz (1998) and documentary (2022)",
+        "accountability": "Never prosecuted despite admitting direct knowledge; testimonies recorded but ignored by Israeli authorities",
+        "sources": [
+          {
+            "name": "Schwarz, Alon. 'Tantura' documentary (2022) - On-camera testimony",
+            "link": "https://www.aljazeera.com/features/2022/1/27/tantura-a-film-about-a-massacre-israel-didnt-want-you-to-see",
+            "icon": "🎬"
+          }
+        ]
+      },
+      {
+        "name": "Haim Hermesh",
+        "role": "Alexandroni Brigade Soldier",
+        "responsibility": "Participated in operations; testified: 'They took them in groups, men aged 15 and up. They were shot... we were ordered to bury them.'",
+        "laterCareer": "Civilian life; provided testimony to Katz confirming executions and burials",
+        "accountability": "Never prosecuted despite confession of participation in killings and burials",
+        "sources": [
+          {
+            "name": "Katz, Teddy. MA Thesis (1998) - Interview testimony",
+            "link": "https://www.haaretz.com/israel-news/2022-01-20/ty-article-magazine/.premium/tantura-the-massacre-at-the-heart-of-the-nakba-that-israelis-refuse-to-recogn/0000017f-e2a5-d7b2-a77f-e2a7ccb30000",
+            "icon": "🎓"
+          }
+        ]
+      },
+      {
+        "name": "Anonymous Alexandroni Veterans (Multiple)",
+        "role": "Various ranks - soldiers and officers",
+        "responsibility": "Over 135 veterans interviewed by Katz; many confirmed executions, mass graves, and systematic killings. Several provided detailed locations and casualty estimates.",
+        "laterCareer": "Various civilian careers; some became prominent in Israeli society",
+        "accountability": "None prosecuted; many initially confirmed accounts then sued Katz for libel despite their own recorded testimonies",
+        "sources": [
+          {
+            "name": "Katz, Teddy. Research archive - 140+ interviews (1998)",
+            "link": "https://www.haaretz.com/israel-news/2022-01-20/ty-article-magazine/.premium/tantura-the-massacre-at-the-heart-of-the-nakba-that-israelis-refuse-to-recogn/0000017f-e2a5-d7b2-a77f-e2a7ccb30000",
+            "icon": "🎓"
+          }
+        ]
+      },
+      {
+        "name": "Teddy Katz (Researcher)",
+        "role": "Israeli graduate student who documented the massacre",
+        "responsibility": "Not a perpetrator; included here for his role in uncovering suppressed history through 140+ interviews",
+        "laterCareer": "Academic career destroyed after Alexandroni veterans' libel suit; forced under pressure to sign 'apology' (later withdrawn); suffered psychological breakdown",
+        "accountability": "Victim of suppression campaign; his research validated by 2022 documentary but never officially acknowledged",
+        "sources": [
+          {
+            "name": "Haaretz. 'The Tantura Massacre and the Man Who Revealed It' (2022)",
+            "link": "https://www.haaretz.com/israel-news/2022-01-20/ty-article-magazine/.premium/tantura-the-massacre-at-the-heart-of-the-nakba-that-israelis-refuse-to-recogn/0000017f-e2a5-d7b2-a77f-e2a7ccb30000",
+            "icon": "📰"
+          }
+        ]
+      }
+    ],
+    "alert": {
+      "type": "critical",
+      "icon": "⚖️",
+      "text": "<strong>Historical Suppression:</strong> Despite recorded confessions from Israeli soldiers who participated, Alexandroni Brigade veterans sued researcher Teddy Katz for libel in 2000. Under intense pressure, Katz was forced to sign an 'apology' (later withdrawn). His thesis was downgraded and his career destroyed. The 2022 documentary vindicated his research by presenting the same soldier testimonies on camera, yet Israeli authorities continue to refuse excavation of mass graves."
+    }
+  },
   "executiveSummary": {
     "title": "Executive Summary",
     "icon": "📋",
@@ -84,12 +166,12 @@
         "detail": "Primarily men aged 15-60, executed after surrender; bodies buried in mass graves",
         "sources": [
           {
-            "name": "Teddy Katz Research - MA Thesis (1998)",
+            "name": "Katz, Teddy. MA Thesis (1998) - Based on 140+ interviews",
             "link": "https://www.haaretz.com/israel-news/2022-01-20/ty-article-magazine/.premium/tantura-the-massacre-at-the-heart-of-the-nakba-that-israelis-refuse-to-recogn/0000017f-e2a5-d7b2-a77f-e2a7ccb30000",
             "icon": "🎓"
           },
           {
-            "name": "Israeli soldier testimonies (Katz interviews, 2022 documentary)",
+            "name": "Shechter, Binyamin. Testimony in 'Tantura' documentary (2022)",
             "link": "https://www.aljazeera.com/features/2022/1/27/tantura-a-film-about-a-massacre-israel-didnt-want-you-to-see",
             "icon": "👥"
           }
@@ -138,7 +220,7 @@
         ],
         "additionalSources": [
           {
-            "name": "Teddy Katz MA Thesis (1998)",
+            "name": "Katz, Teddy. MA Thesis (University of Haifa, 1998)",
             "link": "https://www.haaretz.com/israel-news/2022-01-20/ty-article-magazine/.premium/tantura-the-massacre-at-the-heart-of-the-nakba-that-israelis-refuse-to-recogn/0000017f-e2a5-d7b2-a77f-e2a7ccb30000",
             "icon": "🎓"
           }
@@ -157,7 +239,7 @@
         ],
         "additionalSources": [
           {
-            "name": "Anonymous Alexandroni Brigade Soldier - Interview 1998",
+            "name": "Anonymous Alexandroni Brigade Soldier - Interview with Katz (1998)",
             "link": null,
             "icon": "👥"
           }
@@ -176,7 +258,7 @@
         ],
         "additionalSources": [
           {
-            "name": "Mariam Al-Yahya - Survivor testimony",
+            "name": "Al-Yahya, Mariam. Survivor testimony - IPS oral history",
             "link": "https://www.palestine-studies.org/",
             "icon": "👥"
           }
@@ -195,12 +277,12 @@
         ],
         "additionalSources": [
           {
-            "name": "Binyamin Shechter - Alexandroni intelligence officer testimony",
+            "name": "Shechter, Binyamin. Alexandroni intelligence officer testimony - 'Tantura' documentary (2022)",
             "link": "https://www.aljazeera.com/features/2022/1/27/tantura-a-film-about-a-massacre-israel-didnt-want-you-to-see",
             "icon": "👥"
           },
           {
-            "name": "Haim Hermesh - Alexandroni soldier testimony",
+            "name": "Hermesh, Haim. Alexandroni soldier testimony - Katz interviews",
             "link": null,
             "icon": "👥"
           }
@@ -219,7 +301,7 @@
         ],
         "additionalSources": [
           {
-            "name": "Fawziyya Saleh - Survivor testimony (age 13)",
+            "name": "Saleh, Fawziyya. Survivor testimony (age 13) - IPS oral history",
             "link": "https://www.palestine-studies.org/",
             "icon": "👥"
           }
@@ -262,7 +344,7 @@
         ],
         "additionalSources": [
           {
-            "name": "Israeli Court Documents (2000) - Libel case",
+            "name": "Israeli Supreme Court. Alexandroni Brigade Association v. Katz (2000) - Libel case",
             "link": null,
             "icon": "⚖️"
           }
@@ -299,7 +381,7 @@
         "sourceText": "📄 Haaretz Investigation 2022 ↗"
       },
       {
-        "icon": "🖐️",
+        "icon": "🏳",
         "title": "Execution After Surrender",
         "description": "Village raised white flags and negotiated surrender. Promises of safety violated. Soldier: 'There was no battle. They raised white flags... We gathered the men and took them.'",
         "sourceLink": "https://www.haaretz.com/israel-news/2022-01-20/ty-article-magazine/.premium/tantura-the-massacre-at-the-heart-of-the-nakba-that-israelis-refuse-to-recogn/0000017f-e2a5-d7b2-a77f-e2a7ccb30000",
@@ -391,7 +473,7 @@
         "name": "Anonymous Alexandroni Brigade Soldier",
         "role": "Israeli Soldier Participant",
         "testimony": "There was no battle. They raised white flags... We gathered the men and took them. Some were taken to the cemetery, others to the beach. They lined them up and shot them. I participated in the whole thing.",
-        "source": "Interview with Teddy Katz, 1998",
+        "source": "Interview with Teddy Katz (1998)",
         "sourceLink": "https://www.haaretz.com/israel-news/2022-01-20/ty-article-magazine/.premium/tantura-the-massacre-at-the-heart-of-the-nakba-that-israelis-refuse-to-recogn/0000017f-e2a5-d7b2-a77f-e2a7ccb30000"
       },
       {
@@ -399,7 +481,7 @@
         "name": "Mariam Al-Yahya",
         "role": "Palestinian Survivor",
         "testimony": "They separated the men from us. We heard shooting all day and into the night. In the morning, we were told to leave. We never saw our men again. My father, my two brothers, my uncle - all gone.",
-        "source": "Survivor testimony documented by Teddy Katz, 1998",
+        "source": "Survivor testimony documented by Teddy Katz (1998)",
         "sourceLink": "https://www.palestine-studies.org/"
       },
       {
@@ -407,7 +489,7 @@
         "name": "Binyamin Shechter",
         "role": "Alexandroni Brigade Intelligence Officer",
         "testimony": "I know of three locations where people were killed and buried: the cemetery, the beach south of the village, and near the village well. The numbers? I estimate about 200-230 people were killed.",
-        "source": "Interview in 'Tantura' documentary, 2022",
+        "source": "Interview in 'Tantura' documentary (2022)",
         "sourceLink": "https://www.aljazeera.com/features/2022/1/27/tantura-a-film-about-a-massacre-israel-didnt-want-you-to-see"
       },
       {
@@ -483,80 +565,88 @@
     "list": [
       {
         "icon": "🎓",
-        "name": "Teddy Katz Research (1998-1999)",
+        "name": "Katz, Teddy. 'The Exodus of Arabs from Villages at the Foot of Southern Mount Carmel in 1948' - MA Thesis, University of Haifa (1998)",
         "type": "Academic Research",
-        "description": "MA thesis based on 140+ interviews with Alexandroni Brigade veterans and Palestinian survivors. Most comprehensive documentation despite forced retraction.",
+        "description": "Based on 140+ interviews with Alexandroni Brigade veterans and Palestinian survivors. Most comprehensive documentation despite forced retraction.",
         "link": "https://www.haaretz.com/israel-news/2022-01-20/ty-article-magazine/.premium/tantura-the-massacre-at-the-heart-of-the-nakba-that-israelis-refuse-to-recogn/0000017f-e2a5-d7b2-a77f-e2a7ccb30000",
         "verified": true
       },
       {
         "icon": "🎬",
-        "name": "Tantura Documentary (2022)",
-        "type": "Documentary Film",
-        "description": "Film by Alon Schwarz featuring recorded testimonies from Alexandroni Brigade veterans confirming the massacre. Released at Sundance 2022.",
+        "name": "Schwarz, Alon. 'Tantura' Documentary Film (2022)",
+        "type": "Documentary Evidence",
+        "description": "Features recorded testimonies from Alexandroni Brigade veterans confirming the massacre. Premiered at Sundance Film Festival 2022.",
         "link": "https://www.aljazeera.com/features/2022/1/27/tantura-a-film-about-a-massacre-israel-didnt-want-you-to-see",
         "verified": true
       },
       {
         "icon": "📰",
-        "name": "Haaretz Investigations",
+        "name": "Haaretz. 'Tantura: The Massacre at the Heart of the Nakba That Israelis Refuse to Recognize' (January 2022)",
         "type": "Investigative Journalism",
-        "description": "Extensive reporting on Tantura massacre, Katz affair, and ongoing cover-up. Access to court documents and archived testimonies.",
-        "link": "https://www.haaretz.com/",
+        "description": "Comprehensive investigation into the massacre, Katz affair, and ongoing cover-up. Access to court documents and archived testimonies.",
+        "link": "https://www.haaretz.com/israel-news/2022-01-20/ty-article-magazine/.premium/tantura-the-massacre-at-the-heart-of-the-nakba-that-israelis-refuse-to-recogn/0000017f-e2a5-d7b2-a77f-e2a7ccb30000",
         "verified": true
       },
       {
         "icon": "🇵🇸",
-        "name": "Institute for Palestine Studies",
-        "type": "Research Institute",
-        "description": "Oral history project documenting survivor testimonies, village records, and demographic data. Preservation of Palestinian collective memory.",
+        "name": "Institute for Palestine Studies - Oral History Project",
+        "type": "Primary Sources - Survivor Testimonies",
+        "description": "Documented survivor testimonies, village records, and demographic data. Preservation of Palestinian collective memory.",
         "link": "https://www.palestine-studies.org/",
         "verified": true
       },
       {
         "icon": "📚",
-        "name": "Academic Research",
+        "name": "Pappé, Ilan. 'The Ethnic Cleansing of Palestine' (Oneworld Publications, 2006)",
         "type": "Peer-Reviewed Scholarship",
-        "description": "Key works: Ilan Pappé 'The Ethnic Cleansing of Palestine' (2006), Benny Morris 'The Birth of the Palestinian Refugee Problem Revisited' (2004), Adam Raz archival research.",
-        "link": null,
+        "description": "Includes analysis of Tantura massacre within broader context of 1948 expulsions and Plan Dalet.",
+        "link": "https://www.oip.oup.com/www.oup.com/academic/pdf/13/9781851685554.pdf",
+        "verified": true
+      },
+      {
+        "icon": "📚",
+        "name": "Morris, Benny. 'The Birth of the Palestinian Refugee Problem Revisited' (Cambridge, 2004)",
+        "type": "Peer-Reviewed Scholarship",
+        "description": "References Tantura in coastal operations; acknowledges killings occurred though disputes scale.",
+        "link": "https://www.cambridge.org/core/books/birth-of-the-palestinian-refugee-problem-revisited/4A0958EED322D2FAC1D245128A1D44CB",
         "verified": true
       },
       {
         "icon": "⚖️",
-        "name": "Israeli Court Documents",
+        "name": "Israeli Supreme Court. Alexandroni Brigade Association v. Katz (2000) - Libel Case Documents",
         "type": "Legal Records",
-        "description": "Libel case documents (2000) including soldier depositions, testimonies, and Katz's research materials. Public record despite attempted suppression.",
+        "description": "Court case documents including soldier depositions, testimonies, and Katz's research materials. Public record despite attempted suppression.",
         "link": null,
         "verified": true
       },
       {
         "icon": "🗺️",
-        "name": "Zochrot Organization",
-        "type": "Israeli NGO",
+        "name": "Zochrot Organization - Tantura Village File",
+        "type": "Israeli NGO Documentation",
         "description": "Documentation of destroyed Palestinian villages including Tantura. Promotes acknowledgment of Nakba in Israeli society.",
         "link": "https://www.zochrot.org/",
         "verified": true
       },
       {
-        "icon": "🇮🇱",
-        "name": "Israeli Military Archives",
-        "type": "IDF Historical Archives",
-        "description": "Partial documentation of Alexandroni Brigade operations. Many files remain classified or 'disappeared' regarding Tantura.",
+        "icon": "🏛️",
+        "name": "Israeli Defense Forces Archives",
+        "type": "Military Records",
+        "description": "Partial documentation of Alexandroni Brigade operations May 1948. Many files remain classified or 'disappeared' regarding Tantura.",
         "link": "https://www.archives.mod.gov.il/",
         "verified": true
       },
       {
         "icon": "⚖️",
-        "name": "ICRC IHL Treaties Database – Hague (IV) 1907",
-        "type": "Primary law",
+        "name": "ICRC IHL Treaties Database – Hague Convention IV (1907)",
+        "type": "Primary International Law",
         "description": "Regulations Arts. 23, 25, 28, 46; customary status by 1948.",
         "link": "https://ihl-databases.icrc.org/en/ihl-treaties/hague-conv-iv-1907",
         "verified": true
       },
       {
         "icon": "🇺🇳",
-        "name": "UN Treaty Collection – Geneva Conventions 1949",
-        "type": "Treaty status",
+        "name": "UN Treaty Collection – Geneva Conventions (1949)",
+        "type": "Treaty Status Documentation",
         "description": "Adoption Aug 12, 1949; Israel ratified Jul 6, 1951.",
         "link": "https://treaties.un.org/pages/showdetails.aspx?objid=0800000280158b1a",
         "verified": true

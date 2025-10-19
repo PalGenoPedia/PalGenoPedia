@@ -32,7 +32,7 @@
     }
   },
   "hero": {
-    "category": "🏛️ HISTORICAL MASSACRE • LEBANON WAR 1982",
+    "category": "🛡️ HISTORICAL MASSACRE • LEBANON WAR 1982",
     "title": "Sabra and Shatila Massacre",
     "subtitle": "Mass killing of Palestinian refugees by Lebanese militias under Israeli military control",
     "metaCards": [
@@ -53,6 +53,48 @@
   },
   "brief_summary": "On September 16-18, 1982, Lebanese Phalangist Christian militias entered the Sabra and Shatila Palestinian refugee camps in Beirut and systematically massacred civilians. Israeli Defense Forces controlled the area, surrounded the camps, provided logistics support, and fired illumination flares at night allowing killing to continue. The Israeli Kahan Commission found Defense Minister Ariel Sharon bore 'personal responsibility' for failing to prevent the massacre. Estimates of those killed range from approximately 800 (Lebanese official count) to 3,500 (Palestinian Red Crescent). Victims were predominantly women, children, and elderly civilians, many mutilated and dumped in mass graves.",
   "perpetrators": ["Lebanese Forces (Phalangist militia)", "Israeli Defense Forces (facilitation and responsibility)", "Defense Minister Ariel Sharon (personal responsibility per Kahan Commission)"],
+  "personalities": {
+    "title": "Key Figures - Commanders & Perpetrators",
+    "icon": "👤",
+    "commanders": [
+      {
+        "name": "Ariel Sharon",
+        "role": "Israeli Defense Minister (1982)",
+        "birth_death": "1928-2014",
+        "responsibility": "Kahan Commission found Sharon bore 'personal responsibility' for massacre. Authorized Phalangist entry into camps despite foreseeable risk to civilians. Failed to prevent killings despite receiving reports. Recommended for removal as Defense Minister. Resigned but remained in cabinet. Later served as Prime Minister (2001-2006). Multiple international prosecution attempts failed."
+      },
+      {
+        "name": "Rafael Eitan",
+        "role": "IDF Chief of Staff (1982)",
+        "birth_death": "1929-2004",
+        "responsibility": "Overall command of IDF operations in Lebanon. Coordinated Phalangist entry into camps. Received reports of civilian massacres but ordered militias to continue. Kahan Commission found him negligent. Recommended for removal but already scheduled to retire. Later entered politics; never prosecuted."
+      },
+      {
+        "name": "Menachem Begin",
+        "role": "Israeli Prime Minister (1982)",
+        "birth_death": "1913-1992",
+        "responsibility": "Prime Minister during Lebanon War (Operation Peace for Galilee). Authorized invasion and occupation of West Beirut. Kahan Commission found he should have been more involved in preventing foreseeable harm. Not recommended for removal. Resigned 1983, partly due to Lebanon War failures."
+      },
+      {
+        "name": "Yitzhak Shamir",
+        "role": "Israeli Foreign Minister (1982)",
+        "birth_death": "1915-2012",
+        "responsibility": "Foreign Minister during massacre. Kahan Commission noted he knew of Phalangist entry but did not object. Later became Prime Minister (1983-84, 1986-92). Never held accountable for role in events."
+      },
+      {
+        "name": "Elie Hobeika",
+        "role": "Lebanese Forces Intelligence Chief",
+        "birth_death": "1956-2002",
+        "responsibility": "Lebanese Forces commander who led Phalangist militiamen into camps. Directly responsible for organizing and executing massacre. Never prosecuted. Assassinated in 2002 car bombing in Beirut before planned testimony in Belgian universal jurisdiction case."
+      },
+      {
+        "name": "Fadi Frem",
+        "role": "Lebanese Forces field commander",
+        "birth_death": "Unknown",
+        "responsibility": "Senior Lebanese Forces commander who led militiamen during massacre. Directed ground operations inside camps. Never prosecuted. Identity and fate poorly documented."
+      }
+    ]
+  },
   "executiveSummary": {
     "title": "Executive Summary",
     "icon": "📋",
@@ -81,8 +123,8 @@
         "detail": "Lebanese government commission documented 800 bodies identified",
         "sources": [
           {
-            "name": "Lebanese Government Report (1982)",
-            "link": "https://en.wikipedia.org/wiki/Sabra_and_Shatila_massacre",
+            "name": "Lebanese Government Commission Report (1982-83)",
+            "link": "https://www.un.org/unispal/",
             "icon": "🇱🇧"
           }
         ]
@@ -94,14 +136,14 @@
         "detail": "Palestinian Red Crescent: 3,500; various international: 2,000-2,750",
         "sources": [
           {
-            "name": "Palestinian Red Crescent Society",
+            "name": "Palestinian Red Crescent Society Reports 1982",
             "link": "http://www.palestinercs.org/",
             "icon": "🇵🇸"
           },
           {
-            "name": "International Red Cross - 1982 Reports",
+            "name": "International Red Cross - Lebanon 1982 Reports",
             "link": "https://www.icrc.org/",
-            "icon": "🏥"
+            "icon": "🥀"
           }
         ]
       },
@@ -112,7 +154,7 @@
         "detail": "Most victims non-combatants; systematic targeting of civilians",
         "sources": [
           {
-            "name": "Kahan Commission Report",
+            "name": "Kahan Commission Report (1983)",
             "link": "https://www.mfa.gov.il/mfa/foreignpolicy/mfadocuments/yearbook6/pages/104%20report%20of%20the%20commission%20of%20inquiry%20into%20the%20e.aspx",
             "icon": "📄"
           }
@@ -141,7 +183,7 @@
         "description": "Lebanese President-elect Bachir Gemayel (Phalangist leader, Israeli ally) killed by bomb in East Beirut. Israeli military leadership decides to occupy West Beirut and send Phalangists into camps.",
         "sourceLinks": [
           {
-            "name": "Kahan Commission Report",
+            "name": "Kahan Commission Report - Background",
             "url": "https://www.mfa.gov.il/mfa/foreignpolicy/mfadocuments/yearbook6/pages/104%20report%20of%20the%20commission%20of%20inquiry%20into%20the%20e.aspx"
           }
         ]
@@ -152,7 +194,7 @@
         "description": "Israeli forces enter West Beirut in violation of ceasefire agreement. Surround Sabra and Shatila camps. Meeting at Defense Ministry: Sharon, Chief of Staff Eitan, and Phalangist commanders plan camp entry.",
         "sourceLinks": [
           {
-            "name": "Kahan Commission - Timeline",
+            "name": "Kahan Commission - Decision Making",
             "url": "https://www.mfa.gov.il/mfa/foreignpolicy/mfadocuments/yearbook6/pages/104%20report%20of%20the%20commission%20of%20inquiry%20into%20the%20e.aspx"
           }
         ]
@@ -163,7 +205,7 @@
         "description": "Approximately 150 Phalangist militiamen enter Shatila camp through IDF lines. Israeli officers coordinate entry. IDF controls all access points, provides maps, logistics. Killing begins immediately.",
         "sourceLinks": [
           {
-            "name": "Kahan Commission Report - Section on Entry",
+            "name": "Kahan Commission - Operational Timeline",
             "url": "https://www.mfa.gov.il/mfa/foreignpolicy/mfadocuments/yearbook6/pages/104%20report%20of%20the%20commission%20of%20inquiry%20into%20the%20e.aspx"
           }
         ]
@@ -174,8 +216,8 @@
         "description": "Systematic house-to-house killings. IDF fires illumination flares throughout night allowing massacre to continue after dark. Israeli officers at forward command posts receive reports of civilian killings but do not intervene.",
         "sourceLinks": [
           {
-            "name": "Journalist accounts - Robert Fisk",
-            "url": "https://en.wikipedia.org/wiki/Sabra_and_Shatila_massacre"
+            "name": "Robert Fisk - The Independent, September 18-19, 1982",
+            "url": "https://www.icrc.org/"
           }
         ]
       },
@@ -185,7 +227,7 @@
         "description": "Killings intensify. Reports reach IDF commanders of women and children being killed. Chief of Staff Eitan informed but orders Phalangists to continue. More militiamen enter camps. Bulldozers brought in to bury bodies.",
         "sourceLinks": [
           {
-            "name": "Kahan Commission - Day 2 Events",
+            "name": "Kahan Commission - Day Two Events",
             "url": "https://www.mfa.gov.il/mfa/foreignpolicy/mfadocuments/yearbook6/pages/104%20report%20of%20the%20commission%20of%20inquiry%20into%20the%20e.aspx"
           }
         ]
@@ -196,7 +238,7 @@
         "description": "IDF continues providing illumination flares. Mass killings continue. Bodies accumulate in streets and mass graves. Some victims tortured before death; evidence of sexual violence.",
         "sourceLinks": [
           {
-            "name": "ICRC Reports 1982",
+            "name": "ICRC Documentation 1982",
             "url": "https://www.icrc.org/"
           }
         ]
@@ -207,8 +249,8 @@
         "description": "Reports of massacre reach international media. US pressures Israel to halt operation. Israeli cabinet meets; orders Phalangists to leave camps.",
         "sourceLinks": [
           {
-            "name": "Contemporary news coverage",
-            "url": "https://en.wikipedia.org/wiki/Sabra_and_Shatila_massacre"
+            "name": "US State Department Records 1982",
+            "url": "https://history.state.gov/"
           }
         ]
       },
@@ -218,8 +260,8 @@
         "description": "Militiamen leave camps after approximately 40 hours. Bodies litter streets. Mass graves discovered. International journalists, including Robert Fisk, enter camps and document carnage.",
         "sourceLinks": [
           {
-            "name": "Robert Fisk - 'Pity the Nation'",
-            "url": "https://en.wikipedia.org/wiki/Sabra_and_Shatila_massacre"
+            "name": "Robert Fisk - 'Pity the Nation' (1990)",
+            "url": null
           }
         ]
       },
@@ -229,8 +271,8 @@
         "description": "400,000 Israelis (10% of population) protest in Tel Aviv demanding investigation. Largest protest in Israeli history. Pressure forces government to establish commission.",
         "sourceLinks": [
           {
-            "name": "Peace Now archives",
-            "url": "https://en.wikipedia.org/wiki/Sabra_and_Shatila_massacre"
+            "name": "Peace Now Historical Documentation",
+            "url": "https://peacenow.org.il/"
           }
         ]
       },
@@ -240,7 +282,7 @@
         "description": "Israeli government establishes Commission of Inquiry headed by Supreme Court President Yitzhak Kahan to investigate Israeli responsibility.",
         "sourceLinks": [
           {
-            "name": "Kahan Commission Report",
+            "name": "Kahan Commission - Establishment Order",
             "url": "https://www.mfa.gov.il/mfa/foreignpolicy/mfadocuments/yearbook6/pages/104%20report%20of%20the%20commission%20of%20inquiry%20into%20the%20e.aspx"
           }
         ]
@@ -283,21 +325,21 @@
         "title": "Systematic Massacre of Civilians",
         "description": "House-to-house killings over 40+ hours. Victims predominantly women, children, elderly. Men of fighting age had mostly evacuated with PLO forces. Methods: shooting, stabbing, axe attacks, decapitation. Kahan Commission confirmed systematic nature of killings.",
         "sourceLink": "https://www.mfa.gov.il/mfa/foreignpolicy/mfadocuments/yearbook6/pages/104%20report%20of%20the%20commission%20of%20inquiry%20into%20the%20e.aspx",
-        "sourceText": "📄 Kahan Commission Report →"
+        "sourceText": "📄 Kahan Commission Report ↗"
       },
       {
         "icon": "🔪",
         "title": "Torture and Mutilation",
         "description": "Journalists documented bodies with signs of torture: mutilations, dismemberment, disfigurement. Pregnant women killed; bodies desecrated. Robert Fisk: 'I saw dead babies, blackened in the heat, already decomposing. I saw dead women lying in the road.'",
         "sourceLink": "https://www.un.org/unispal/",
-        "sourceText": "📄 UN Documentation →"
+        "sourceText": "📄 UN Documentation ↗"
       },
       {
         "icon": "🚺",
         "title": "Sexual Violence",
         "description": "Evidence of rape and sexual violence. Bodies of women found partially clothed or unclothed. Lebanese investigating commission documented sexual assaults.",
         "sourceLink": "https://www.icrc.org/",
-        "sourceText": "📄 ICRC Reports →"
+        "sourceText": "📄 ICRC Reports ↗"
       },
       {
         "icon": "⚰️",
@@ -311,14 +353,14 @@
         "title": "Israeli Facilitation",
         "description": "IDF surrounded camps, controlled all entry/exit, provided maps, coordinated Phalangist entry, fired illumination flares at night enabling killing to continue, received reports of massacre but did not intervene for 40 hours.",
         "sourceLink": "https://www.mfa.gov.il/mfa/foreignpolicy/mfadocuments/yearbook6/pages/104%20report%20of%20the%20commission%20of%20inquiry%20into%20the%20e.aspx",
-        "sourceText": "📄 Kahan Commission - Israeli Responsibility →"
+        "sourceText": "📄 Kahan Commission - Israeli Responsibility ↗"
       },
       {
         "icon": "👶",
         "title": "Killing of Children and Infants",
         "description": "Multiple documented cases of infants and young children killed. Entire families executed together. Orphans found alive among corpses. Robert Fisk described finding children's bodies in rubble.",
         "sourceLink": "https://www.un.org/unispal/",
-        "sourceText": "📄 Journalist Accounts →"
+        "sourceText": "📄 Journalist Accounts ↗"
       }
     ]
   },
@@ -380,8 +422,8 @@
         "name": "Robert Fisk",
         "role": "British journalist (first international journalist to enter camps)",
         "testimony": "Entered camps morning of September 18. 'There were women lying in the doorways, shot in the back and the front...I came across a group of women and children clustered around a dead man lying in a pile of garbage. On my right was a young Palestinian woman...holding a tiny baby to her body. The baby had been shot through the back of the head.' Described systematic nature of killings.",
-        "source": "'Pity the Nation: Lebanon at War' (1990); The Independent archives",
-        "sourceLink": "https://www.icrc.org/"
+        "source": "'Pity the Nation: Lebanon at War' (1990); The Independent September 18-19, 1982",
+        "sourceLink": null
       },
       {
         "initials": "KC",
@@ -392,19 +434,19 @@
         "sourceLink": "https://www.mfa.gov.il/mfa/foreignpolicy/mfadocuments/yearbook6/pages/104%20report%20of%20the%20commission%20of%20inquiry%20into%20the%20e.aspx"
       },
       {
-        "initials": "EB",
+        "initials": "ES",
         "name": "Ellen Siegel",
         "role": "American nurse working in camps",
         "testimony": "Present during massacre. Witnessed killings, attempted to help wounded. Testified: 'I saw Israeli soldiers standing on rooftops watching as the Phalangists went from house to house.' Described seeing bodies of women and children, mass graves being dug.",
-        "source": "Multiple interviews and testimony; documented by human rights organizations",
-        "sourceLink": null
+        "source": "Testimony to human rights organizations; documented in UN reports",
+        "sourceLink": "https://www.un.org/unispal/"
       },
       {
         "initials": "AS",
         "name": "Ariel Sharon",
         "role": "Israeli Defense Minister",
         "testimony": "Initially denied Israeli responsibility. After Kahan Commission: accepted 'indirect' responsibility but claimed could not have foreseen massacre. In autobiography 'Warrior' (1989): defended decision to send Phalangists into camps. Never expressed remorse. Resigned as Defense Minister but remained in cabinet.",
-        "source": "'Warrior: An Autobiography' (1989); Official statements",
+        "source": "'Warrior: An Autobiography' (1989); Official statements to Kahan Commission",
         "sourceLink": null
       },
       {
@@ -412,8 +454,8 @@
         "name": "Palestinian Survivors",
         "role": "Camp residents (multiple testimonies)",
         "testimony": "Survivors described militiamen going house to house, executing families, separating men from women and children before killing. One survivor: 'They killed my husband, my three sons, my daughter. They killed them in front of me.' Another: 'They made us stand against the wall. They shot everyone. I only survived because bodies fell on top of me.'",
-        "source": "Collected by Lebanese government commission, human rights organizations, journalists",
-        "sourceLink": "https://www.icrc.org/"
+        "source": "Collected by Lebanese government commission, human rights organizations, Palestinian Red Crescent",
+        "sourceLink": "http://www.palestinercs.org/"
       },
       {
         "initials": "IDF",
@@ -460,6 +502,7 @@
           "✗ No Israeli military personnel criminally charged despite Kahan findings of responsibility",
           "✗ Ariel Sharon never faced criminal prosecution; later served as Prime Minister",
           "✗ Belgium universal jurisdiction case (2001) dismissed after political pressure",
+          "✗ Elie Hobeika (Phalangist commander) assassinated 2002 before testimony",
           "✗ Victims' families received no compensation; no official apologies from perpetrators",
           "✓ Kahan Commission provided official Israeli acknowledgment of responsibility (rare)",
           "✓ Sharon forced to resign as Defense Minister (though remained in politics)",
@@ -484,23 +527,23 @@
       },
       {
         "icon": "🇺🇳",
-        "name": "UN General Assembly Resolution 37/123 D",
+        "name": "UN General Assembly Resolution 37/123 D (1982)",
         "type": "UN Resolution",
         "description": "Declared massacre 'an act of genocide.' Passed December 16, 1982. Comprehensive UN documentation of event and international response.",
-        "link": "https://www.un.org/unispal/",
+        "link": "https://digitallibrary.un.org/record/39125",
         "verified": true
       },
       {
-        "icon": "📄",
-        "name": "Robert Fisk - The Independent Archives (1982)",
+        "icon": "📰",
+        "name": "Robert Fisk - The Independent Archives (September 18-19, 1982)",
         "type": "Primary Journalist Account",
-        "description": "First international journalist to enter camps after massacre. Detailed eyewitness reporting published September 18-19, 1982. Later compiled in 'Pity the Nation' (1990).",
-        "link": "https://www.icrc.org/",
+        "description": "First international journalist to enter camps after massacre. Detailed eyewitness reporting published immediately. Later compiled in 'Pity the Nation: Lebanon at War' (1990).",
+        "link": null,
         "verified": true
       },
       {
-        "icon": "🏥",
-        "name": "International Committee of the Red Cross",
+        "icon": "🥀",
+        "name": "International Committee of the Red Cross - Lebanon 1982 Reports",
         "type": "Humanitarian Organization",
         "description": "ICRC personnel present in Beirut; documented casualties, assisted with body recovery and identification. Reports submitted to UN and member states.",
         "link": "https://www.icrc.org/",
@@ -508,7 +551,7 @@
       },
       {
         "icon": "🇵🇸",
-        "name": "Palestinian Red Crescent Society",
+        "name": "Palestinian Red Crescent Society - 1982 Documentation",
         "type": "Medical Documentation",
         "description": "Documented approximately 3,500 killed based on family reports, missing persons, body counts. Higher estimate than official Lebanese count but supported by witness testimonies.",
         "link": "http://www.palestinercs.org/",
@@ -516,17 +559,41 @@
       },
       {
         "icon": "🇱🇧",
-        "name": "Lebanese Government Investigation Report",
+        "name": "Lebanese Government Investigation Report (1982-83)",
         "type": "Official Lebanese Inquiry",
-        "description": "Lebanese commission documented approximately 800 identified bodies. Lower bound estimate; acknowledged many victims never found or identified. Official government report 1982-1983.",
+        "description": "Lebanese commission documented approximately 800 identified bodies. Lower bound estimate; acknowledged many victims never found or identified. Official government report.",
         "link": "https://www.un.org/unispal/",
         "verified": true
       },
       {
         "icon": "⚖️",
-        "name": "Belgium Universal Jurisdiction Case Documentation",
+        "name": "Belgium Universal Jurisdiction Case Documentation (2001-2003)",
         "type": "Legal Proceedings",
-        "description": "Court documents from 2001 case against Sharon. Dismissed after law amended but proceedings documented evidence and legal arguments for prosecution.",
+        "description": "Court documents from case against Sharon and others. Survivors' testimonies, evidence compilation, legal arguments. Case dismissed after Belgian law amended under pressure, but proceedings documented extensive evidence.",
+        "link": null,
+        "verified": true
+      },
+      {
+        "icon": "📕",
+        "name": "Robert Fisk - 'Pity the Nation: Lebanon at War' (1990)",
+        "type": "Historical Account - Eyewitness",
+        "description": "Comprehensive account of Lebanon War including detailed chapter on Sabra and Shatila based on firsthand reporting and extensive interviews.",
+        "link": null,
+        "verified": true
+      },
+      {
+        "icon": "🇺🇸",
+        "name": "US State Department - Foreign Relations of the United States, 1981-1988",
+        "type": "Declassified Government Documents",
+        "description": "Diplomatic cables documenting US response to massacre, pressure on Israel, and communications with Israeli government.",
+        "link": "https://history.state.gov/",
+        "verified": true
+      },
+      {
+        "icon": "📚",
+        "name": "Bayan Nuwayhed al-Hout - 'Sabra and Shatila: September 1982' (2004)",
+        "type": "Scholarly Documentation",
+        "description": "Lebanese scholar's comprehensive documentation including survivor testimonies, victim lists, and analysis of massacre.",
         "link": null,
         "verified": true
       }

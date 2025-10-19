@@ -1,0 +1,774 @@
+{
+  "id": "hist_010",
+  "event_type": "Armed Uprising / Mass Casualties",
+  "verification_status": "verified",
+  "metadata": {
+    "pageTitle": "Second Intifada Mass Casualties (2000-2005) | Historical Documentation",
+    "description": "Second Palestinian uprising against Israeli occupation from September 2000 to 2005. Over 3,200 Palestinians killed, 1,000+ Israelis killed. Characterized by suicide bombings, Israeli military operations, targeted assassinations, and mass arrests.",
+    "keywords": "Second Intifada, Al-Aqsa Intifada, 2000, Palestinian uprising, suicide bombings, Operation Defensive Shield, separation barrier, Jenin, targeted assassinations",
+    "lastUpdated": "2025-10-18",
+    "author": "aliattia02"
+  },
+  "date": {
+    "start": "2000-09-28",
+    "end": "2005-12-31",
+    "duration_days": 1920,
+    "display": "28 September 2000 - late 2005",
+    "context": "Collapse of Camp David peace talks; Ariel Sharon's provocative Temple Mount visit"
+  },
+  "location": {
+    "historical": {
+      "name": "West Bank, Gaza Strip, Israel",
+      "admin_context": "Israeli-occupied Palestinian territories and Israel proper",
+      "primary_centers": ["Jenin", "Nablus", "Ramallah", "Bethlehem", "Gaza City", "Israeli cities targeted by suicide bombings"]
+    },
+    "current": {
+      "name": "Occupied Palestinian Territories and Israel",
+      "admin_context": "West Bank under Israeli military occupation with PA limited control; Gaza under blockade",
+      "status": "Second Intifada led to Israeli disengagement from Gaza (2005), construction of separation barrier, and collapse of peace process"
+    }
+  },
+  "hero": {
+    "category": "📜 ARMED UPRISING • AL-AQSA INTIFADA 2000-2005",
+    "title": "Second Intifada Mass Casualties",
+    "subtitle": "Five-year violent uprising marked by Palestinian suicide bombings and massive Israeli military operations",
+    "metaCards": [
+      { "icon": "📅", "label": "Duration", "value": "~5 years", "detail": "Sep 2000 - late 2005" },
+      { "icon": "📍", "label": "Location", "value": "West Bank, Gaza, Israel", "detail": "All territories" },
+      { "icon": "💀", "label": "Palestinians Killed", "value": "3,200+", "detail": "47% civilians" },
+      { "icon": "☠️", "label": "Israelis Killed", "value": "1,000+", "detail": "64% civilians" }
+    ]
+  },
+  "quickFacts": {
+    "title": "⚡ Quick Facts",
+    "items": [
+      { "label": "Event Type", "value": "Armed Uprising / Asymmetric Conflict" },
+      { "label": "Trigger", "value": "Ariel Sharon's Temple Mount visit" },
+      { "label": "Palestinian Tactics", "value": "Suicide bombings, armed attacks" },
+      { "label": "Israeli Response", "value": "Military operations, assassinations, siege" },
+      { "label": "Verification", "value": "B'Tselem; UN; Human Rights Watch; ICRC" },
+      { "label": "Outcome", "value": "Gaza disengagement; separation barrier; peace process collapse" }
+    ]
+  },
+  "brief_summary": "The Second Intifada (also called Al-Aqsa Intifada) erupted on September 28, 2000, when Israeli opposition leader Ariel Sharon made a provocative visit to the Temple Mount/Haram al-Sharif compound in Jerusalem, surrounded by 1,000 Israeli police. The visit, amid failed Camp David peace talks, sparked Palestinian protests that Israeli forces met with live fire, killing 7 and wounding 300 on the first day. Unlike the largely non-violent First Intifada, the Second Intifada quickly became militarized, characterized by Palestinian suicide bombings targeting Israeli civilians and massive Israeli military operations using tanks, helicopters, and F-16 jets in densely populated Palestinian areas. Over five years, the conflict killed over 3,200 Palestinians (including 700+ children) and over 1,000 Israelis (including 300+ children). Major Israeli operations included Operation Defensive Shield (2002), the largest military operation in the West Bank since 1967, and the devastating assault on Jenin refugee camp. Israel constructed the separation barrier deep inside the West Bank, expanded settlements, implemented targeted assassinations, and maintained brutal siege conditions. The Second Intifada ended Palestinian hopes for statehood through negotiation, entrenched occupation, and created the framework for current conflict.",
+  "perpetrators": ["Palestinian armed groups (Hamas, Islamic Jihad, Al-Aqsa Martyrs' Brigades, PFLP)", "Israel Defense Forces", "Israeli government policy", "Israeli settlers"],
+  "executiveSummary": {
+    "title": "Executive Summary",
+    "icon": "📋",
+    "alert": {
+      "type": "critical",
+      "icon": "⚠️",
+      "text": "<strong>Historical context:</strong> Second Intifada erupted after Camp David peace talks collapsed (July 2000) and amid growing Palestinian disillusionment with Oslo process. Unlike First Intifada's civil disobedience, Second became highly militarized almost immediately, with catastrophic consequences for both populations."
+    },
+    "paragraphs": [
+      "The Second Intifada's immediate trigger was Ariel Sharon's September 28, 2000 visit to the Temple Mount/Haram al-Sharif, accompanied by 1,000 Israeli police. Palestinians viewed this as deliberate provocation at one of Islam's holiest sites by a figure they associated with past massacres (Sabra and Shatila 1982, Qibya 1953). Protests erupted immediately. The next day, September 29 (a Friday), after prayers at Al-Aqsa Mosque, Israeli police fired on Palestinian demonstrators, killing 7 and wounding over 300. By October 1, violence had spread throughout the occupied territories and into Israel. Thirteen Palestinian citizens of Israel were shot dead by Israeli police during protests inside Israel proper. Within two weeks, 100 Palestinians and 10 Israelis had been killed. The uprising's deeper causes lay in the failure of the Oslo peace process: seven years after Oslo, Palestinians remained under occupation, settlements had doubled, movement restrictions had increased, and statehood seemed further away than ever.",
+      "Unlike the First Intifada's stones and civil disobedience, the Second Intifada quickly became armed conflict. Palestinian militant groups—Hamas, Islamic Jihad, Al-Aqsa Martyrs' Brigades (affiliated with Fatah), and PFLP—launched devastating suicide bombing campaigns targeting Israeli civilians in buses, restaurants, markets, and nightclubs. The peak came in March 2002 with the Passover massacre at Park Hotel in Netanya (30 killed), triggering Israel's massive Operation Defensive Shield. Israel responded with overwhelming military force: helicopter gunships, F-16 fighter jets, tanks, and bulldozers deployed in densely populated Palestinian areas. Targeted assassinations by helicopter missile strikes often killed bystanders. Entire cities were placed under curfew for months. The 2002 siege of Jenin refugee camp became emblematic: Israeli forces demolished 140+ buildings, killed 52 Palestinians (23 civilians), and faced international accusations of war crimes.",
+      "By the Second Intifada's end in late 2005, the toll was catastrophic: 3,223-4,789 Palestinians killed (including 700+ children, 47% civilians); 1,024-1,100 Israelis killed (including 300+ children, 64% civilians); 45,000+ Palestinians wounded; 7,500+ Israelis wounded; approximately 40,000-50,000 Palestinians imprisoned; and massive infrastructure destruction. Israel unilaterally withdrew from Gaza in August 2005 while accelerating settlement expansion in the West Bank. The separation barrier was constructed—declared illegal by the International Court of Justice—confiscating thousands of acres of Palestinian land. The Second Intifada destroyed what remained of the peace process, entrenched the occupation, empowered Hamas, and created the siege of Gaza. It established patterns that continue today: Palestinian resistance met with disproportionate Israeli force; suicide bombings used to justify collective punishment; negotiated peace deemed impossible. The human cost was immense on both sides, but the political outcome was clear: Israeli control deepened while Palestinian freedom receded further."
+    ]
+  },
+  "casualties": {
+    "title": "Casualties & Impact",
+    "icon": "💀",
+    "deaths": "3,200-4,800 Palestinians; 1,000-1,100 Israelis",
+    "injured": "45,000+ Palestinians; 7,500+ Israelis",
+    "forced_displacement": "Thousands displaced through home demolitions and military operations",
+    "breakdown": [
+      {
+        "type": "killed",
+        "number": "3,223",
+        "label": "Palestinians Killed (B'Tselem count)",
+        "detail": "Including 700+ children; 47% classified as civilians not participating in hostilities",
+        "sources": [
+          {
+            "name": "B'Tselem - Second Intifada Fatalities",
+            "link": "https://www.btselem.org/statistics/fatalities/after-cast-lead/by-date-of-event",
+            "icon": "🇮🇱"
+          }
+        ]
+      },
+      {
+        "type": "killed",
+        "number": "4,789",
+        "label": "Palestinians Killed (Palestinian sources)",
+        "detail": "Higher count from Palestinian Red Crescent and other Palestinian documentation",
+        "sources": [
+          {
+            "name": "Palestinian Red Crescent Society",
+            "link": "https://www.palestinercs.org/",
+            "icon": "🇵🇸"
+          }
+        ]
+      },
+      {
+        "type": "killed",
+        "number": "709",
+        "label": "Palestinian Children Killed",
+        "detail": "Minors under 18 killed by Israeli forces during Second Intifada",
+        "sources": [
+          {
+            "name": "B'Tselem Statistics",
+            "link": "https://www.btselem.org/",
+            "icon": "📊"
+          }
+        ]
+      },
+      {
+        "type": "killed",
+        "number": "1,024",
+        "label": "Israelis Killed",
+        "detail": "Including 301 children and soldiers; 64% were civilians. Mostly from suicide bombings",
+        "sources": [
+          {
+            "name": "B'Tselem Statistics",
+            "link": "https://www.btselem.org/",
+            "icon": "📊"
+          }
+        ]
+      },
+      {
+        "type": "injured",
+        "number": "45,000+",
+        "label": "Palestinians Wounded",
+        "detail": "Injured by Israeli forces; thousands with permanent disabilities",
+        "sources": [
+          {
+            "name": "Palestinian Ministry of Health",
+            "link": "https://www.moh.gov.ps/",
+            "icon": "🏥"
+          }
+        ]
+      },
+      {
+        "type": "injured",
+        "number": "7,500+",
+        "label": "Israelis Wounded",
+        "detail": "Injured in Palestinian attacks; many in suicide bombings",
+        "sources": [
+          {
+            "name": "Israeli Ministry of Foreign Affairs",
+            "link": "https://mfa.gov.il/",
+            "icon": "🇮🇱"
+          }
+        ]
+      },
+      {
+        "type": "arrested",
+        "number": "40,000-50,000",
+        "label": "Palestinians Arrested",
+        "detail": "Arrested during Second Intifada; thousands held in administrative detention",
+        "sources": [
+          {
+            "name": "Addameer Prisoner Support",
+            "link": "https://www.addameer.org/",
+            "icon": "⛓️"
+          }
+        ]
+      },
+      {
+        "type": "demolished",
+        "number": "4,000+",
+        "label": "Palestinian Homes Demolished",
+        "detail": "Homes demolished as punishment or during military operations",
+        "sources": [
+          {
+            "name": "B'Tselem Reports",
+            "link": "https://www.btselem.org/",
+            "icon": "🏠"
+          }
+        ]
+      }
+    ],
+    "alert": {
+      "type": "info",
+      "icon": "ℹ️",
+      "text": "<strong>Sources:</strong> B'Tselem (Israeli human rights organization); Palestinian Red Crescent; UN OCHA; Human Rights Watch; Amnesty International; Israeli Ministry of Foreign Affairs; Palestinian Ministry of Health."
+    }
+  },
+  "timeline": {
+    "title": "Timeline of Major Events",
+    "icon": "⏱️",
+    "events": [
+      {
+        "time": "July 2000",
+        "title": "Camp David peace talks collapse",
+        "description": "US President Clinton hosts Israeli PM Ehud Barak and Palestinian President Yasser Arafat at Camp David. Talks fail to reach agreement. Israeli narrative blames Arafat; Palestinian narrative cites inadequate Israeli offers. Failure creates atmosphere of despair and anger among Palestinians.",
+        "sourceLinks": [
+          {
+            "name": "CFR - Second Intifada Overview",
+            "url": "https://www.cfr.org/timeline/israeli-palestinian-conflict"
+          }
+        ]
+      },
+      {
+        "time": "28 September 2000",
+        "title": "Trigger: Sharon's Temple Mount visit",
+        "description": "Israeli opposition leader Ariel Sharon visits Temple Mount/Haram al-Sharif with 1,000 police. Palestinians view as deliberate provocation at holy site by figure associated with past atrocities. Clashes erupt immediately; Israeli forces kill 4 Palestinians that day, wound dozens.",
+        "sourceLinks": [
+          {
+            "name": "Britannica - Second Intifada",
+            "url": "https://www.britannica.com/event/intifada-Palestinian-movement"
+          }
+        ]
+      },
+      {
+        "time": "29 September 2000",
+        "title": "Friday prayers massacre: 7 killed, 300+ wounded",
+        "description": "Day after Sharon's visit, Palestinian worshippers exit Al-Aqsa Mosque after Friday prayers and protest. Israeli police open fire with live ammunition. Kill 7 Palestinians, wound over 300. Violence spreads throughout occupied territories. Second Intifada has begun.",
+        "sourceLinks": [
+          {
+            "name": "Council on Foreign Relations",
+            "url": "https://www.cfr.org/timeline/israeli-palestinian-conflict"
+          }
+        ]
+      },
+      {
+        "time": "30 September 2000",
+        "title": "Muhammad al-Durrah killed on camera",
+        "description": "12-year-old Muhammad al-Durrah shot and killed while cowering with his father behind concrete barrel at Netzarim Junction, Gaza. Death captured on video by France 2 cameraman. Becomes iconic image of Second Intifada. Israeli investigation later claims uncertainty about source of fatal bullets, but footage shows sustained Israeli fire toward the two.",
+        "sourceLinks": [
+          {
+            "name": "Historical Documentation",
+            "url": "https://www.britannica.com/event/intifada-Palestinian-movement"
+          }
+        ]
+      },
+      {
+        "time": "1 October 2000",
+        "title": "Thirteen Palestinian citizens of Israel killed",
+        "description": "Palestinian citizens of Israel (inside Israel proper) hold protests in solidarity with occupied territories. Israeli police fire on demonstrators, killing 13 Palestinian citizens of Israel. Or Commission later finds police used excessive force. Event traumatizes Palestinian community inside Israel.",
+        "sourceLinks": [
+          {
+            "name": "CFR Timeline",
+            "url": "https://www.cfr.org/timeline/israeli-palestinian-conflict"
+          }
+        ]
+      },
+      {
+        "time": "October 2000",
+        "title": "Lynch of two Israeli reservists in Ramallah",
+        "description": "Two Israeli reserve soldiers accidentally enter Ramallah, taken into Palestinian Authority custody. Mob storms police station, lynches the two soldiers. Brutal killings filmed and broadcast. Provides Israeli justification for targeting PA facilities. Deeply traumatic for Israeli public.",
+        "sourceLinks": [
+          {
+            "name": "Historical Records",
+            "url": "https://www.britannica.com/event/intifada-Palestinian-movement"
+          }
+        ]
+      },
+      {
+        "time": "9 November 2000",
+        "title": "First Israeli targeted assassination",
+        "description": "Israel assassinates Hussein Abayat, Fatah Tanzim leader, with helicopter missile strike in Bethlehem. Policy of targeted assassinations begins—Israel will kill 232 Palestinians in targeted strikes during Second Intifada, many attacks also killing bystanders.",
+        "sourceLinks": [
+          {
+            "name": "B'Tselem - Targeted Assassinations",
+            "url": "https://www.btselem.org/"
+          }
+        ]
+      },
+      {
+        "time": "27 March 2002",
+        "title": "Passover massacre: 30 killed in Netanya hotel",
+        "description": "Hamas suicide bomber attacks Passover seder at Park Hotel in Netanya. Kills 30 Israelis, wounds 140. Deadliest single attack of Second Intifada. Triggers massive Israeli military response: Operation Defensive Shield.",
+        "sourceLinks": [
+          {
+            "name": "CFR Timeline",
+            "url": "https://www.cfr.org/timeline/israeli-palestinian-conflict"
+          }
+        ]
+      },
+      {
+        "time": "29 March - May 2002",
+        "title": "Operation Defensive Shield: largest West Bank operation since 1967",
+        "description": "Israel launches massive military operation throughout West Bank. Tanks, helicopters, F-16s deployed. Reoccupies Palestinian cities under PA control. Jenin refugee camp siege becomes particularly devastating: 52 Palestinians killed (23 civilians), 140+ buildings demolished. Ramallah under siege; Arafat's compound (Muqata'a) surrounded and partially destroyed.",
+        "sourceLinks": [
+          {
+            "name": "B'Tselem - Operation Defensive Shield",
+            "url": "https://www.btselem.org/"
+          }
+        ]
+      },
+      {
+        "time": "3-11 April 2002",
+        "title": "Siege of Jenin refugee camp",
+        "description": "Israeli forces besiege Jenin refugee camp. House-to-house fighting. Israel uses armored bulldozers to demolish homes with people inside. 52 Palestinians killed (23 civilians), 23 Israeli soldiers killed. Over 140 buildings demolished. UN fact-finding mission blocked by Israel. International accusations of war crimes.",
+        "sourceLinks": [
+          {
+            "name": "Human Rights Watch - Jenin Report",
+            "url": "https://www.hrw.org/"
+          }
+        ]
+      },
+      {
+        "time": "2002-2003",
+        "title": "Peak of suicide bombing campaign",
+        "description": "Hamas, Islamic Jihad, Al-Aqsa Martyrs' Brigades launch sustained suicide bombing campaign. Attacks on buses, markets, restaurants, nightclubs throughout Israel. Hundreds of Israeli civilians killed. Creates atmosphere of terror in Israeli society. Israel responds with intensified military operations, assassinations, closures.",
+        "sourceLinks": [
+          {
+            "name": "CFR Documentation",
+            "url": "https://www.cfr.org/timeline/israeli-palestinian-conflict"
+          }
+        ]
+      },
+      {
+        "time": "June 2002 - 2005",
+        "title": "Separation barrier construction begins",
+        "description": "Israel begins constructing separation barrier—85% inside West Bank (not on Green Line). Stated purpose: prevent suicide bombers. Reality: annexes land, divides Palestinian communities, restricts movement. International Court of Justice rules barrier illegal (2004). Israel continues construction, eventually spanning 700+ km.",
+        "sourceLinks": [
+          {
+            "name": "B'Tselem - Separation Barrier",
+            "url": "https://www.btselem.org/"
+          }
+        ]
+      },
+      {
+        "time": "22 July 2002",
+        "title": "Israeli F-16 strike kills Salah Shehadeh + 14 civilians",
+        "description": "Israel drops one-ton bomb on apartment building in Gaza City to assassinate Hamas military leader Salah Shehadeh. Kills Shehadeh plus 14 civilians including 9 children. Widespread international condemnation. Exemplifies 'collateral damage' from targeted assassination policy.",
+        "sourceLinks": [
+          {
+            "name": "Human Rights Watch Report",
+            "url": "https://www.hrw.org/"
+          }
+        ]
+      },
+      {
+        "time": "22 March 2004",
+        "title": "Israel assassinates Sheikh Ahmed Yassin",
+        "description": "Israeli helicopter strike kills Hamas founder Sheikh Ahmed Yassin, quadriplegic spiritual leader, as he leaves mosque after dawn prayer. Seven others killed. Massive Palestinian anger. Month later (17 April), Israel assassinates Yassin's successor Abdel Aziz al-Rantisi. Hamas vows revenge.",
+        "sourceLinks": [
+          {
+            "name": "CFR Timeline",
+            "url": "https://www.cfr.org/timeline/israeli-palestinian-conflict"
+          }
+        ]
+      },
+      {
+        "time": "11 November 2004",
+        "title": "Yasser Arafat dies",
+        "description": "PLO Chairman and Palestinian Authority President Yasser Arafat dies in Paris hospital under mysterious circumstances. Had been under Israeli siege in Muqata'a compound for previous two years. Mahmoud Abbas succeeds him. Arafat's death marks end of an era; Second Intifada begins winding down.",
+        "sourceLinks": [
+          {
+            "name": "Historical Documentation",
+            "url": "https://www.britannica.com/event/intifada-Palestinian-movement"
+          }
+        ]
+      },
+      {
+        "time": "August 2005",
+        "title": "Israel's unilateral disengagement from Gaza",
+        "description": "Israel withdraws 8,500 settlers and military from Gaza Strip. Presented as concession but maintains control of borders, airspace, territorial waters. Disengagement strengthens Israel's hold on West Bank—settlements there accelerate. Gaza becomes 'open-air prison.' Hamas wins Palestinian elections months later (January 2006).",
+        "sourceLinks": [
+          {
+            "name": "CFR Timeline",
+            "url": "https://www.cfr.org/timeline/israeli-palestinian-conflict"
+          }
+        ]
+      },
+      {
+        "time": "8 February 2005",
+        "title": "Sharm el-Sheikh Summit: unofficial end of Intifada",
+        "description": "Israeli PM Ariel Sharon and PA President Mahmoud Abbas meet in Egypt. Declare mutual ceasefire. Violence decreases significantly. Generally considered unofficial end of Second Intifada, though no formal declaration. Final toll: 3,200+ Palestinians, 1,000+ Israelis killed over 5 years.",
+        "sourceLinks": [
+          {
+            "name": "Britannica - Intifada",
+            "url": "https://www.britannica.com/event/intifada-Palestinian-movement"
+          }
+        ]
+      }
+    ]
+  },
+  "warCrimes": {
+    "title": "Documented Violations",
+    "icon": "⚠️",
+    "alert": {
+      "type": "warning",
+      "icon": "⚠️",
+      "text": "<strong>Both sides committed serious violations:</strong> Palestinian suicide bombings deliberately targeted Israeli civilians (war crimes). Israeli military operations involved disproportionate force, targeting of civilians, collective punishment, and other violations of international humanitarian law."
+    },
+    "crimes": [
+      {
+        "icon": "💣",
+        "title": "Palestinian Suicide Bombings (War Crimes)",
+        "description": "Palestinian armed groups (Hamas, Islamic Jihad, Al-Aqsa Martyrs' Brigades) carried out deliberate attacks on Israeli civilians in buses, restaurants, markets, nightclubs. 138 suicide bombings during Second Intifada killed 515 Israeli civilians. Deliberate targeting of civilians constitutes war crimes under international humanitarian law.",
+        "sourceLink": "https://www.mfa.gov.il/",
+        "sourceText": "📄 Attack Documentation →"
+      },
+      {
+        "icon": "🚁",
+        "title": "Targeted Assassinations and Disproportionate Force",
+        "description": "Israel carried out 232 targeted assassinations during Second Intifada. Helicopter missiles and F-16 bombs dropped on densely populated areas killed hundreds of bystanders. July 2002 assassination of Salah Shehadeh killed 14 civilians including 9 children. February 2003 attack on Hamas operative in Gaza killed 11 civilians including 8 children. Disproportionate force violated international humanitarian law.",
+        "sourceLink": "https://www.btselem.org/",
+        "sourceText": "📄 B'Tselem Documentation →"
+      },
+      {
+        "icon": "🏘️",
+        "title": "Excessive Destruction in Jenin Refugee Camp",
+        "description": "During April 2002 Jenin siege, Israeli forces demolished over 140 buildings, many with people inside. Armored bulldozers destroyed entire neighborhoods. Israel blocked UN fact-finding mission. Human Rights Watch documented 52 Palestinian deaths (23 civilians). International accusations of war crimes.",
+        "sourceLink": "https://www.hrw.org/",
+        "sourceText": "📄 Human Rights Watch Report →"
+      },
+      {
+        "icon": "🏠",
+        "title": "Mass Home Demolitions",
+        "description": "Israel demolished 4,000+ Palestinian homes during Second Intifada—as punishment, for 'military necessity,' or to clear firing zones. Demolished homes of families of suspected attackers without trial. Collective punishment prohibited under Geneva Convention Article 33. Tens of thousands rendered homeless.",
+        "sourceLink": "https://www.btselem.org/",
+        "sourceText": "📄 B'Tselem Reports →"
+      },
+      {
+        "icon": "👶",
+        "title": "Killing of Children",
+        "description": "709 Palestinian children and 301 Israeli children killed during Second Intifada. Muhammad al-Durrah (12) became iconic victim—killed while cowering with father under Israeli fire. Many Palestinian children killed by sniper fire, helicopter strikes, or tank shells in residential areas. Failure to protect children and distinguish between combatants and civilians violated international humanitarian law.",
+        "sourceLink": "https://www.btselem.org/statistics",
+        "sourceText": "📄 Casualty Statistics →"
+      },
+      {
+        "icon": "⛓️",
+        "title": "Mass Arbitrary Detention",
+        "description": "40,000-50,000 Palestinians arrested during Second Intifada. Thousands held in administrative detention without charge or trial. Widespread torture documented by human rights organizations. Mass arrests, night raids on homes, detention of minors. Violated rights to liberty, fair trial, and prohibition on torture.",
+        "sourceLink": "https://www.addameer.org/",
+        "sourceText": "📄 Addameer Documentation →"
+      },
+      {
+        "icon": "🚧",
+        "title": "Collective Punishment and Closure",
+        "description": "Israel imposed prolonged curfews on entire Palestinian cities (Nablus under curfew for months). Siege of Ramallah, Bethlehem, other cities cut off food, medicine, electricity. Closure system divided West Bank into isolated cantons. Collective punishment prohibited under Geneva Convention Article 33.",
+        "sourceLink": "https://www.btselem.org/",
+        "sourceText": "📄 B'Tselem Reports →"
+      },
+      {
+        "icon": "🧱",
+        "title": "Separation Barrier (Illegal Under International Law)",
+        "description": "Israel constructed separation barrier 85% inside West Bank (not on Green Line). International Court of Justice ruled (2004) barrier illegal, constitutes annexation of Palestinian land, must be dismantled. Israel ignored ruling. Barrier divides Palestinian communities, confiscates agricultural land, restricts movement.",
+        "sourceLink": "https://www.icj-cij.org/",
+        "sourceText": "📄 ICJ Advisory Opinion →"
+      }
+    ]
+  },
+  "international_law": {
+    "title": "International Law Framework",
+    "icon": "⚖️",
+    "introduction": "The Second Intifada involved serious violations of international humanitarian law by both sides. Palestinian suicide bombings targeting civilians constituted war crimes. Israeli military operations involved disproportionate force, collective punishment, and targeting of civilians—also violations of international humanitarian law.",
+    "sections": [
+      {
+        "heading": "Geneva Conventions - Violations by Both Sides",
+        "violations": [
+          "<strong>Common Article 3:</strong> Both sides violated prohibition on 'violence to life and person' and 'outrages upon personal dignity.' Palestinian suicide bombings deliberately killed civilians. Israeli forces killed civilians disproportionately.",
+          "<strong>Article 33 (Collective Punishment):</strong> Israel's home demolitions, prolonged curfews, closures, and siege conditions constituted collective punishment prohibited under Fourth Geneva Convention.",
+          "<strong>Article 147 (Grave Breaches):</strong> Both sides committed grave breaches. Palestinian deliberate targeting of civilians and Israeli 'extensive destruction...not justified by military necessity' constitute war crimes."
+        ]
+      },
+      {
+        "heading": "International Court of Justice - Wall Advisory Opinion (2004)",
+        "violations": [
+          "<strong>Barrier declared illegal:</strong> ICJ ruled separation barrier violates international law because it's built on occupied Palestinian territory. Constitutes de facto annexation.",
+          "<strong>Must be dismantled:</strong> Court ordered barrier be dismantled and compensation paid. Israel rejected ruling and continued construction.",
+          "<strong>Fourth Geneva Convention applies:</strong> ICJ reaffirmed Fourth Geneva Convention applies to occupied Palestinian territories and Israel must comply."
+        ]
+      },
+      {
+        "heading": "Principle of Distinction and Proportionality",
+        "violations": [
+          "<strong>Palestinian violations:</strong> Suicide bombings deliberately targeted civilians—clear violation of principle of distinction between combatants and civilians.",
+          "<strong>Israeli violations:</strong> F-16 strikes and helicopter missiles in densely populated areas with high civilian casualties violated principle of proportionality. Military advantage did not justify civilian deaths."
+        ]
+      },
+      {
+        "heading": "International Humanitarian Law - Occupation Obligations",
+        "violations": [
+          "<strong>Duty to protect civilians:</strong> As occupying power, Israel had obligation to protect Palestinian civilian population. Prolonged curfews denying access to food and medicine violated this duty.",
+          "<strong>Prohibition on collective punishment:</strong> Home demolitions, area closures, and punishment of entire communities for actions of individuals violated absolute prohibition.",
+          "<strong>Protection of medical personnel:</strong> Both sides violated protections for medical personnel and ambulances. Israeli forces fired on ambulances; Palestinian ambulances used to transport militants."
+        ]
+      }
+    ],
+    "alert": {
+      "type": "critical",
+      "icon": "⚖️",
+      "text": "<strong>Accountability failure:</strong> No Israeli officials or Palestinian leaders prosecuted for Second Intifada war crimes despite clear violations by both sides. International Criminal Court did not have jurisdiction at time. Culture of impunity persists."
+    }
+  },
+  "testimonies": {
+    "title": "Witness Testimonies & Official Accounts",
+    "icon": "👥",
+    "witnesses": [
+      {
+        "initials": "JB",
+        "name": "Jamal al-Durrah",
+        "role": "Father of Muhammad al-Durrah",
+        "testimony": "Jamal and his 12-year-old son Muhammad were caught in crossfire at Netzarim Junction, Gaza (30 September 2000). Testified: 'We crouched behind the barrel. I tried to protect my son with my body. The shooting continued for 45 minutes. Muhammad was crying \"Father, they're killing me!\" Then he was shot and died in my arms.' Their ordeal was filmed. Jamal badly wounded; Muhammad killed.",
+        "source": "France 2 television footage; testimony",
+        "sourceLink": null
+      },
+      {
+        "initials": "AB",
+        "name": "Anonymous survivor, Jenin refugee camp",
+        "role": "Jenin resident during April 2002 siege",
+        "testimony": "Testified to Human Rights Watch: 'The bulldozers were demolishing homes with people inside. We could hear people screaming. Israeli soldiers wouldn't let us help them. The entire neighborhood was destroyed in a few hours. Bodies were buried under the rubble for days before we could recover them.'",
+        "source": "Human Rights Watch - Jenin Report (2002)",
+        "sourceLink": "https://www.hrw.org/"
+      },
+      {
+        "initials": "GB",
+        "name": "Giora Beka",
+        "role": "Israeli survivor of Passover massacre",
+        "testimony": "Survived Park Hotel attack (27 March 2002) that killed 30. Testified: 'We were celebrating Passover seder with families. Suddenly there was a massive explosion. Bodies everywhere. Children killed. It was hell. This wasn't war—it was deliberate murder of civilians celebrating a holiday.'",
+        "source": "Israeli survivor testimony",
+        "sourceLink": null
+      },
+      {
+        "initials": "AS",
+        "name": "Dr. Ahmed Shabaan",
+        "role": "Palestinian physician, Ramallah",
+        "testimony": "Worked during siege of Ramallah (2002). Testified to UN: 'Israeli forces imposed total curfew for weeks. Prevented ambulances from reaching patients. We had pregnant women in labor who couldn't reach hospital. People died from treatable conditions because they couldn't get medical care. Entire city was a prison.'",
+        "source": "UN human rights documentation",
+        "sourceLink": null
+      },
+      {
+        "initials": "BM",
+        "name": "Anonymous Israeli soldier",
+        "role": "IDF soldier during Operation Defensive Shield",
+        "testimony": "Testimony to Breaking the Silence: 'We were ordered to demolish homes without checking if people were inside. Used bulldozers to create wide paths for tanks—destroyed entire streets. Officers said it was to protect us, but the destruction was far beyond military necessity. Entire families lost everything.'",
+        "source": "Breaking the Silence testimonies",
+        "sourceLink": "https://www.breakingthesilence.org.il/"
+      },
+      {
+        "initials": "HRW",
+        "name": "Human Rights Watch",
+        "role": "International human rights organization",
+        "testimony": "Report on Jenin (May 2002): 'Israeli forces committed serious violations of international humanitarian law, some amounting prima facie to war crimes... The IDF used armored bulldozers to demolish buildings, in some cases with civilians inside. Israel's refusal to allow an impartial investigation raises concerns about what it is trying to hide.'",
+        "source": "Human Rights Watch - Jenin: IDF Military Operations (May 2002)",
+        "sourceLink": "https://www.hrw.org/"
+      },
+      {
+        "initials": "ICJ",
+        "name": "International Court of Justice",
+        "role": "UN's principal judicial organ",
+        "testimony": "Advisory Opinion on Wall (9 July 2004): 'The Court finds that the construction of the wall... and its associated régime, are contrary to international law.' Ruled barrier must be dismantled. Found Fourth Geneva Convention applicable. Israel rejected ruling; US vetoed Security Council resolution enforcing it.",
+        "source": "ICJ Advisory Opinion (2004)",
+        "sourceLink": "https://www.icj-cij.org/"
+      },
+      {
+        "initials": "KA",
+        "name": "Kofi Annan",
+        "role": "UN Secretary-General (1997-2006)",
+        "testimony": "Statement on Second Intifada (October 2000): 'I deplore the excessive use of force by the Israeli authorities. The firing of live ammunition at unarmed demonstrators is totally unjustifiable.' Later (2004) on separation barrier: 'I have consistently said that the wall is illegal under international law.'",
+        "source": "UN Secretary-General statements",
+        "sourceLink": null
+      }
+    ]
+  },
+  "personalities": {
+    "title": "Key Figures",
+    "icon": "👤",
+    "commanders": [
+      {
+        "name": "Ariel Sharon",
+        "role": "Israeli Prime Minister (2001-2006); triggered Intifada as opposition leader",
+        "birth_death": "1928-2014",
+        "responsibility": "Made provocative Temple Mount visit triggering Second Intifada. As PM, implemented Operation Defensive Shield, targeted assassinations, separation barrier construction, Gaza disengagement. Figure associated with Sabra/Shatila massacre (1982)."
+      },
+      {
+        "name": "Yasser Arafat",
+        "role": "Palestinian Authority President; PLO Chairman",
+        "birth_death": "1929-2004",
+        "responsibility": "Led Palestinians during Second Intifada. Israel accused him of directing violence; Palestinians viewed him as under siege. Spent final two years confined to Muqata'a compound. Death in 2004 marked end of era. Controversial legacy."
+      },
+      {
+        "name": "Mahmoud Abbas (Abu Mazen)",
+        "role": "PA Prime Minister (2003); President (2005-present)",
+        "birth_death": "1935-present",
+        "responsibility": "Became PA President after Arafat's death. Negotiated Sharm el-Sheikh ceasefire with Sharon (February 2005) unofficially ending Second Intifada. Continues as PA President, though hasn't held elections since 2006."
+      },
+      {
+        "name": "Sheikh Ahmed Yassin",
+        "role": "Hamas founder and spiritual leader",
+        "birth_death": "1937-2004 (assassinated by Israel)",
+        "responsibility": "Quadriplegic spiritual leader of Hamas. Organization carried out numerous suicide bombings during Second Intifada. Assassinated by Israeli helicopter strike after leaving mosque (22 March 2004). Death further radicalized Hamas supporters."
+      },
+      {
+        "name": "Ehud Barak",
+        "role": "Israeli Prime Minister (1999-2001)",
+        "birth_death": "1942-present",
+        "responsibility": "PM when Second Intifada erupted. Presided over Camp David talks failure (July 2000). Initial Israeli military response to uprising. Lost election to Sharon (February 2001) due to Intifada violence."
+      }
+    ]
+  },
+  "historicalImpact": {
+    "title": "Historical Impact & Legacy",
+    "icon": "🌍",
+    "sections": [
+      {
+        "heading": "Immediate Impact (2000-2005)",
+        "items": [
+          "3,200+ Palestinians and 1,000+ Israelis killed; tens of thousands wounded on both sides",
+          "Palestinian suicide bombing campaign terrorized Israeli society; 138 attacks killed 515 civilians",
+          "Israeli military operations devastated Palestinian infrastructure, economy, institutions",
+          "Oslo peace process completely collapsed—negotiated two-state solution deemed impossible",
+          "International Court of Justice ruled separation barrier illegal (2004); Israel ignored ruling",
+          "Hamas gained popularity as resistance movement while PA weakened and discredited",
+          "Israel's 2005 Gaza disengagement ended settlements there but tightened control elsewhere",
+          "Jenin siege, targeted assassinations, mass home demolitions created lasting trauma",
+          "Second Intifada far more violent than First—established 'armed resistance' as dominant paradigm"
+        ]
+      },
+      {
+        "heading": "Long-term Transformation (2005-Present)",
+        "items": [
+          "Hamas won 2006 Palestinian elections; Israel refused to recognize government",
+          "2007 Hamas-Fatah civil war split Palestinian territories: Hamas in Gaza, Fatah in West Bank",
+          "Gaza blockade imposed (2007-present)—17+ years of siege, 'open-air prison'",
+          "Separation barrier completed, confiscating thousands of acres of West Bank land",
+          "Settlement expansion accelerated—now 700,000+ settlers in West Bank and East Jerusalem",
+          "Israeli right-wing ascendancy: Second Intifada convinced many Israelis peace impossible",
+          "Palestinian Authority reduced to subcontractor for Israeli occupation",
+          "Cycle of violence established: Gaza wars (2008-09, 2012, 2014, 2021, 2023-24)",
+          "Two-state solution increasingly unviable due to settlement expansion",
+          "October 7, 2023 Hamas attack and subsequent Gaza war rooted in unresolved Second Intifada dynamics"
+        ]
+      },
+      {
+        "heading": "Accountability & Justice",
+        "items": [
+          "✗ No Israeli officials prosecuted for war crimes during Second Intifada",
+          "✗ No Palestinian leaders held accountable for suicide bombing campaigns",
+          "✗ International Court of Justice ruling on barrier ignored by Israel",
+          "✗ No compensation for families of civilians killed by either side",
+          "✗ 4,000+ demolished Palestinian homes never rebuilt; families never compensated",
+          "✗ Targeted assassination policy never investigated despite civilian deaths",
+          "✗ Jenin investigation blocked by Israel; no accountability for potential war crimes",
+          "✗ Culture of impunity established—violations continue without consequences",
+          "✓ Human rights organizations (B'Tselem, HRW, Amnesty) documented violations comprehensively",
+          "✓ International legal precedent set by ICJ wall ruling (even if not enforced)",
+          "✗ Separation barrier remains despite illegality; continues to expand"
+        ]
+      }
+    ]
+  },
+  "sources": {
+    "title": "Verified Sources & Documentation",
+    "icon": "📚",
+    "introduction": "Documentation includes B'Tselem comprehensive statistics, UN reports, Human Rights Watch investigations, International Court of Justice ruling, Israeli government records, Palestinian documentation, and international media coverage.",
+    "list": [
+      {
+        "icon": "🇮🇱",
+        "name": "B'Tselem - Second Intifada Statistics and Documentation",
+        "type": "Human Rights Organization",
+        "description": "Comprehensive casualty statistics, documentation of home demolitions, targeted assassinations, military operations. Most authoritative source for fatality data. Israeli human rights organization.",
+        "link": "https://www.btselem.org/statistics",
+        "verified": true
+      },
+      {
+        "icon": "📕",
+        "name": "Britannica - Intifada (Second Intifada)",
+        "type": "Encyclopedic Reference",
+        "description": "Scholarly overview of Second Intifada covering causes, major events, casualties, and outcomes. Includes timeline and analysis of peace process collapse.",
+        "link": "https://www.britannica.com/event/intifada-Palestinian-movement",
+        "verified": true
+      },
+      {
+        "icon": "🏛️",
+        "name": "Council on Foreign Relations - Israeli-Palestinian Conflict Timeline",
+        "type": "Policy Research / Timeline",
+        "description": "Comprehensive timeline of Second Intifada events from Sharon's Temple Mount visit through Gaza disengagement. Documents major attacks, military operations, political developments.",
+        "link": "https://www.cfr.org/timeline/israeli-palestinian-conflict",
+        "verified": true
+      },
+      {
+        "icon": "⚖️",
+        "name": "International Court of Justice - Wall Advisory Opinion (2004)",
+        "type": "International Court Ruling",
+        "description": "Landmark ICJ advisory opinion ruling separation barrier illegal under international law. Comprehensive legal analysis of occupation, Fourth Geneva Convention applicability, Palestinian rights.",
+        "link": "https://www.icj-cij.org/",
+        "verified": true
+      },
+      {
+        "icon": "🏥",
+        "name": "Human Rights Watch - Second Intifada Reports",
+        "type": "Human Rights Documentation",
+        "description": "Multiple detailed reports documenting violations by both sides including Jenin siege, targeted assassinations, suicide bombings, collective punishment. Based on field investigations.",
+        "link": "https://www.hrw.org/",
+        "verified": true
+      },
+      {
+        "icon": "🕊️",
+        "name": "Amnesty International - Israel/OPT Reports (2000-2005)",
+        "type": "Human Rights Documentation",
+        "description": "Documentation of human rights violations during Second Intifada by both Israeli forces and Palestinian armed groups. Reports on torture, arbitrary detention, home demolitions.",
+        "link": "https://www.amnesty.org/",
+        "verified": true
+      },
+      {
+        "icon": "🇺🇳",
+        "name": "UN OCHA - Occupied Palestinian Territory Reports",
+        "type": "UN Humanitarian Documentation",
+        "description": "UN Office for Coordination of Humanitarian Affairs documentation of humanitarian impact, casualties, infrastructure destruction, access restrictions during Second Intifada.",
+        "link": "https://www.ochaopt.org/",
+        "verified": true
+      },
+      {
+        "icon": "⛓️",
+        "name": "Addameer Prisoner Support - Detention Documentation",
+        "type": "Palestinian Human Rights Organization",
+        "description": "Documentation of mass arrests, administrative detention, torture, and prison conditions during Second Intifada. Statistics on 40,000-50,000 Palestinians detained.",
+        "link": "https://www.addameer.org/",
+        "verified": true
+      },
+      {
+        "icon": "🇵🇸",
+        "name": "Palestinian Red Crescent Society - Casualty Documentation",
+        "type": "Medical/Humanitarian Organization",
+        "description": "Palestinian medical organization documentation of casualties, wounded, and humanitarian impact. Higher casualty counts than Israeli sources (4,789 vs 3,223 Palestinians killed).",
+        "link": "https://www.palestinercs.org/",
+        "verified": true
+      },
+      {
+        "icon": "🎖️",
+        "name": "Breaking the Silence - IDF Soldier Testimonies",
+        "type": "Israeli Veterans Organization",
+        "description": "Anonymous testimonies from Israeli soldiers who served during Second Intifada documenting excessive force, home demolitions, abuse of Palestinians, and violations of rules of engagement.",
+        "link": "https://www.breakingthesilence.org.il/",
+        "verified": true
+      },
+      {
+        "icon": "🇮🇱",
+        "name": "Israeli Ministry of Foreign Affairs - Second Intifada Documentation",
+        "type": "Israeli Government Source",
+        "description": "Official Israeli government documentation of Palestinian attacks, suicide bombings, Israeli casualties. Presents Israeli narrative and justifications for military operations.",
+        "link": "https://mfa.gov.il/",
+        "verified": true
+      },
+      {
+        "icon": "🏥",
+        "name": "Palestinian Ministry of Health - Casualty Statistics",
+        "type": "Palestinian Government Source",
+        "description": "Official Palestinian government documentation of casualties, wounded, and health impact during Second Intifada. Hospital records and medical statistics.",
+        "link": "https://www.moh.gov.ps/",
+        "verified": true
+      }
+    ],
+    "alert": {
+      "type": "info",
+      "icon": "ℹ️",
+      "text": "<strong>Methodology:</strong> Casualty figures vary by source. B'Tselem (Israeli organization): 3,223 Palestinians killed. Palestinian sources: 4,789 killed. Range reflects challenges documenting casualties during five years of intense violence. All sources agree: thousands killed on both sides, with Palestinian deaths far exceeding Israeli deaths."
+    }
+  },
+  "media": {
+    "images": {
+      "local": [],
+      "remote": []
+    },
+    "documents": {
+      "local": [],
+      "remote": []
+    }
+  },
+  "cta": {
+    "title": "Understand the Second Intifada",
+    "description": "Study this devastating five-year conflict that killed thousands, destroyed the peace process, and created today's realities.",
+    "buttons": [
+      { "text": "📅 View Full Timeline", "link": "../../major-incidents-timeline.html", "type": "primary" },
+      { "text": "🖨️ Print/Save PDF", "link": "#", "type": "secondary", "action": "print" },
+      { "text": "📧 Submit Info", "link": "mailto:palgeno.pedia@gmx.de?subject=Second Intifada - Additional Information", "type": "secondary" }
+    ]
+  }
+}

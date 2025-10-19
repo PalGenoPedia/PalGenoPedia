@@ -32,71 +32,109 @@
     }
   },
   "hero": {
-    "category": "🏛️ HISTORICAL MASSACRE • SUEZ CRISIS 1956",
+    "category": "🛡️ HISTORICAL MASSACRE • 1956 SUEZ CRISIS",
     "title": "Khan Yunis Massacre",
-    "subtitle": "Mass killings of Palestinian civilians during Israeli occupation of Gaza Strip",
+    "subtitle": "IDF systematic killings during Gaza occupation resulting in 275-525 civilian deaths",
     "metaCards": [
-      { "icon": "📅", "label": "Date", "value": "3-12 Nov 1956", "detail": "During Suez War" },
-      { "icon": "📍", "label": "Historical Location", "value": "Khan Yunis, Gaza", "detail": "Town and refugee camp" },
-      { "icon": "💀", "label": "Deaths", "value": "275-525", "detail": "UNRWA: 275; witnesses: 400-525" },
-      { "icon": "⚖️", "label": "UN Documentation", "value": "UNRWA Special Report", "detail": "December 1956" }
+      { "icon": "📅", "label": "Date", "value": "3-12 Nov 1956", "detail": "Suez Crisis period" },
+      { "icon": "📍", "label": "Historical Location", "value": "Khan Yunis, Gaza", "detail": "Egyptian-administered" },
+      { "icon": "💀", "label": "Deaths", "value": "275-525", "detail": "Documented by UNRWA" },
+      { "icon": "⚰️", "label": "Mass Graves", "value": "Multiple sites", "detail": "Bodies buried in streets" }
     ]
   },
   "quickFacts": {
     "title": "⚡ Quick Facts",
     "items": [
       { "label": "Event Type", "value": "Mass Execution / Massacre" },
-      { "label": "Perpetrators", "value": "Israel Defense Forces" },
-      { "label": "Verification", "value": "UNRWA; UN Reports; International Red Cross" },
-      { "label": "Context", "value": "Suez Crisis / Operation Kadesh" }
+      { "label": "Perpetrators", "value": "Israel Defense Forces; IDF Intelligence units" },
+      { "label": "Verification", "value": "UNRWA Special Report to UN General Assembly" },
+      { "label": "UN Response", "value": "UNRWA Director documented 275 deaths minimum" }
     ]
   },
-  "brief_summary": "During the November 1956 Israeli occupation of Gaza Strip (part of the Suez Crisis), IDF forces systematically killed Palestinian civilians in Khan Yunis town and refugee camp. On November 3, after taking the town, Israeli troops conducted house-to-house searches for fedayeen, executing men on sight or after screening. UNRWA documented 275 deaths; Palestinian sources report 400-525. Victims were lined against walls and machine-gunned, or forced to jump over ditches before being shot. Mass graves discovered after Israeli withdrawal in March 1957 contained bodies of men shot execution-style.",
+  "brief_summary": "During Israel's occupation of Gaza Strip in November 1956 (part of Suez Crisis), Israeli Defense Forces conducted systematic screenings and executions in Khan Yunis and nearby Rafah. UNRWA officially documented 275 deaths in Khan Yunis and 111 in Rafah, though Palestinian sources estimate 520+ total deaths. Victims included refugees and civilians shot during curfew violations, mass screenings, and arbitrary detentions. Bodies were buried in mass graves. UNRWA Director submitted detailed victim lists and methods of killing to UN General Assembly.",
   "perpetrators": ["Israel Defense Forces", "IDF Intelligence units", "Shin Bet security forces"],
+  "personalities": {
+    "title": "Key Figures - Commanders & Perpetrators",
+    "icon": "👤",
+    "commanders": [
+      {
+        "name": "Moshe Dayan",
+        "role": "IDF Chief of Staff (1956)",
+        "birth_death": "1915-1981",
+        "responsibility": "Overall command of IDF operations during Suez Crisis including Operation Kadesh. Oversaw Gaza Strip occupation and screening procedures that led to mass killings in Khan Yunis and Rafah. Later Defense Minister (1967, 1969-74). Never prosecuted for 1956 Gaza operations."
+      },
+      {
+        "name": "David Ben-Gurion",
+        "role": "Prime Minister and Defense Minister (1956)",
+        "birth_death": "1886-1973",
+        "responsibility": "Ordered Operation Kadesh in coordination with France and UK during Suez Crisis. Authorized occupation of Gaza Strip. Made final decisions on military operations in Khan Yunis and Rafah. Oversaw policies during occupation period."
+      },
+      {
+        "name": "Moshe Carmel",
+        "role": "OC Southern Command (1956)",
+        "birth_death": "1911-2003",
+        "responsibility": "Commander of Israeli forces occupying Gaza Strip. Directly responsible for ground operations including screening procedures, curfews, and security operations in Khan Yunis and Rafah that resulted in mass civilian deaths."
+      },
+      {
+        "name": "Shimon Peres",
+        "role": "Director General of Defense Ministry (1956)",
+        "birth_death": "1923-2016",
+        "responsibility": "Key architect of Israel's alliance with France and UK for Suez operation. Facilitated military coordination. Later Prime Minister and President. Never faced accountability for role in 1956 Gaza operations."
+      }
+    ]
+  },
   "executiveSummary": {
     "title": "Executive Summary",
     "icon": "📋",
     "alert": {
       "type": "critical",
       "icon": "⚠️",
-      "text": "<strong>Historical context:</strong> Part of wider Suez Crisis. Israel, France, and UK attacked Egypt after nationalization of Suez Canal. Israeli forces occupied Gaza Strip and Sinai October 29-November 1956."
+      "text": "<strong>Historical context:</strong> Massacres occurred during brief Israeli occupation of Gaza (November 1956-March 1957) as part of coordinated attack with France and UK on Egypt during Suez Crisis."
     },
     "paragraphs": [
-      "The Khan Yunis massacre occurred during Israel's occupation of the Gaza Strip as part of Operation Kadesh (the Israeli component of the Suez Crisis). After occupying Khan Yunis on November 3, 1956, Israeli forces conducted what they termed 'screening operations' to identify Palestinian fedayeen fighters who had operated under Egyptian command.",
-      "The killings began immediately upon occupation. Israeli soldiers conducted house-to-house searches, executing men on suspicion of being fedayeen. All males aged 15-60 were ordered to assemble for 'screening.' According to UNRWA Director's report to the UN General Assembly, soldiers lined men against the walls of the Ottoman-era caravanserai in the town square and machine-gunned them. In the refugee camp, men were forced to jump over a ditch dug along a school wall while soldiers with machine guns shot them.",
-      "UNRWA compiled a 'credible' list of 275 killed. Palestinian sources documented 415 deaths plus 57 missing. Witness accounts, including from future Hamas leader Abdel Aziz al-Rantisi (age 8 at the time), placed deaths at 525. After Israeli withdrawal in March 1957, a mass grave was discovered containing 40 men shot execution-style in the back of the head. No perpetrators were prosecuted. Similar massacre occurred in Rafah on November 12, killing 111."
+      "In October-November 1956, Israel launched Operation Kadesh in coordination with France and the UK's invasion of Egypt during the Suez Crisis. Israeli forces rapidly occupied the Gaza Strip and Sinai Peninsula. During the occupation of Gaza, IDF conducted systematic 'screening' operations ostensibly to identify Egyptian soldiers and Palestinian fighters (fedayeen) who had infiltrated Israel.",
+      "On November 3, 1956, in Khan Yunis and its refugee camp, Israeli forces conducted mass roundups of male residents. During screenings, curfews, and arbitrary detentions, IDF personnel systematically executed civilians. UNRWA Director for Gaza Affairs compiled detailed victim lists and reported to UN General Assembly that 275 men were killed in Khan Yunis and 111 in nearby Rafah. Palestinian sources documented 415 killed with 57 missing. Methods included shooting during curfew, execution after screening, and arbitrary killings.",
+      "Bodies were buried in mass graves, including in the streets of Khan Yunis. UNRWA provided names, ages, and circumstances of death for verified victims. Despite international documentation and UN reports, no Israeli personnel were prosecuted. Israel withdrew from Gaza in March 1957 under international pressure, particularly from the United States and Soviet Union."
     ]
   },
   "casualties": {
     "title": "Casualties & Documentation",
     "icon": "💀",
     "deaths": "275-525",
-    "injured": "Dozens (not systematically recorded)",
-    "forced_displacement": "Thousands fled during occupation",
+    "injured": "Unknown number; not systematically documented",
+    "forced_displacement": "Temporary displacement during operations",
     "breakdown": [
       {
         "type": "deaths",
         "number": "275",
-        "label": "UNRWA Documented Deaths",
-        "detail": "Credible list compiled by UN agency; 135 local residents, 140 refugees",
+        "label": "Khan Yunis Deaths (UNRWA)",
+        "detail": "Officially documented by UNRWA Director with names and circumstances",
         "sources": [
           {
-            "name": "UNRWA Special Report - December 15, 1956",
+            "name": "UNRWA Special Report to UN General Assembly (A/3512)",
             "link": "https://www.un.org/unispal/",
             "icon": "🇺🇳"
-          },
-          {
-            "name": "UN General Assembly - GAOR 11th Session Annexes",
-            "link": "https://www.un.org/unispal/",
-            "icon": "📄"
           }
         ]
       },
       {
         "type": "deaths",
-        "number": "400-525",
-        "label": "Palestinian Sources",
-        "detail": "Local documentation: 415 killed + 57 missing; witness accounts up to 525",
+        "number": "111",
+        "label": "Rafah Deaths (UNRWA)",
+        "detail": "Separate incident November 12, 1956; documented by UNRWA",
+        "sources": [
+          {
+            "name": "UNRWA Report December 15, 1956",
+            "link": "https://www.un.org/unispal/",
+            "icon": "🇺🇳"
+          }
+        ]
+      },
+      {
+        "type": "deaths",
+        "number": "415+57",
+        "label": "Palestinian Documentation",
+        "detail": "Palestinian Central Bureau of Statistics: 415 killed, 57 missing",
         "sources": [
           {
             "name": "Palestinian Central Bureau of Statistics",
@@ -106,29 +144,16 @@
         ]
       },
       {
-        "type": "executed",
-        "number": "40+",
-        "label": "Mass Grave Victims",
-        "detail": "Discovered March 1957; execution-style killings (shot in back of head)",
-        "sources": [
-          {
-            "name": "ICRC Documentation",
-            "link": "https://www.icrc.org/",
-            "icon": "🏥"
-          }
-        ]
-      },
-      {
-        "type": "injured",
-        "number": "Unknown",
-        "label": "Wounded",
-        "detail": "Medical facilities overwhelmed; systematic recording not possible"
+        "type": "method",
+        "number": "Various",
+        "label": "Methods of Killing",
+        "detail": "Shot during curfew violations, executed after screenings, arbitrary killings, collective punishment"
       }
     ],
     "alert": {
       "type": "info",
       "icon": "ℹ️",
-      "text": "<strong>Sources:</strong> UNRWA official reports to UN General Assembly; Palestinian documentation; witness testimonies; International Red Cross; contemporary press accounts."
+      "text": "<strong>Sources:</strong> UNRWA official reports to UN General Assembly; Palestinian documentation; International Committee of the Red Cross; Israeli military archives (via historians)."
     }
   },
   "timeline": {
@@ -138,51 +163,51 @@
       {
         "time": "29 October 1956",
         "title": "Operation Kadesh begins",
-        "description": "Israel invades Sinai and Gaza Strip as part of coordinated attack with France and UK on Egypt following Suez Canal nationalization.",
+        "description": "Israel launches invasion of Sinai Peninsula in coordination with Franco-British attack on Egypt. Part of coordinated Suez Crisis military operations.",
         "sourceLinks": [
           {
-            "name": "Wikipedia - Suez Crisis",
-            "url": "https://en.wikipedia.org/wiki/Suez_Crisis"
+            "name": "UN Security Council Records 1956",
+            "url": "https://www.un.org/unispal/"
+          }
+        ]
+      },
+      {
+        "time": "2 November 1956",
+        "title": "IDF occupies Gaza Strip",
+        "description": "Israeli forces complete occupation of Gaza Strip and Khan Yunis. Begin imposing military administration and curfews.",
+        "sourceLinks": [
+          {
+            "name": "UNRWA Historical Records",
+            "url": "https://www.unrwa.org/"
           }
         ]
       },
       {
         "time": "3 November 1956",
-        "title": "Khan Yunis captured",
-        "description": "IDF occupies Khan Yunis town and refugee camp. Killings begin immediately. House-to-house searches for fedayeen; men executed on sight or after brief screening.",
+        "title": "Khan Yunis massacre begins",
+        "description": "IDF conducts mass screenings of male residents in Khan Yunis and refugee camp. Systematic executions begin. Men rounded up for 'identification' of fedayeen and Egyptian soldiers.",
         "sourceLinks": [
           {
-            "name": "UNRWA Report 1956",
+            "name": "UNRWA Special Report A/3512",
             "url": "https://www.un.org/unispal/"
           }
         ]
       },
       {
-        "time": "3 November, afternoon",
-        "title": "Mass screening and executions",
-        "description": "All males aged 15-60 ordered to assemble. Groups lined against walls of town square caravanserai, machine-gunned. In refugee camp, men forced to jump over ditch while soldiers shot them. UNRWA: 'men were ordered to run gauntlet while Israeli troops fired on them.'",
+        "time": "3-12 November",
+        "title": "Systematic killings",
+        "description": "Over 10 days, IDF personnel shoot civilians during curfew, execute detainees after screenings, conduct arbitrary killings. Bodies buried in streets and mass graves. UNRWA documents 275 deaths in Khan Yunis.",
         "sourceLinks": [
           {
-            "name": "UNRWA Director Report - GA/11",
+            "name": "UNRWA Director Report, December 15, 1956",
             "url": "https://www.un.org/unispal/"
-          }
-        ]
-      },
-      {
-        "time": "3-5 November",
-        "title": "Continued killings",
-        "description": "Systematic house searches continue. Summary executions of suspected fedayeen. Bodies left in streets; families prevented from retrieving them for burial.",
-        "sourceLinks": [
-          {
-            "name": "Palestine Post coverage",
-            "url": "https://en.wikipedia.org/wiki/Khan_Yunis_massacre"
           }
         ]
       },
       {
         "time": "12 November 1956",
         "title": "Rafah massacre",
-        "description": "Similar pattern of killings in nearby Rafah refugee camp. UNRWA documented 111 killed using same methods (screening, mass shootings).",
+        "description": "Separate mass killing in nearby Rafah refugee camp. UNRWA documents 111 deaths. Similar pattern of screenings and executions.",
         "sourceLinks": [
           {
             "name": "UNRWA Special Report",
@@ -192,23 +217,23 @@
       },
       {
         "time": "15 December 1956",
-        "title": "UNRWA Special Report",
-        "description": "Director of UNRWA Affairs in Gaza submits report to UN General Assembly detailing massacres. Lists 275 credible deaths in Khan Yunis, 111 in Rafah.",
+        "title": "UNRWA report submitted",
+        "description": "UNRWA Director for Gaza Affairs submits detailed report to UN General Assembly (Document A/3512) documenting 275 deaths in Khan Yunis, 111 in Rafah, with names, ages, and circumstances.",
         "sourceLinks": [
           {
-            "name": "UN General Assembly - GAOR 11",
+            "name": "UN General Assembly Official Records - 11th Session",
             "url": "https://www.un.org/unispal/"
           }
         ]
       },
       {
         "time": "March 1957",
-        "title": "Israeli withdrawal and discovery",
-        "description": "Israel withdraws from Gaza under international pressure. Mass grave discovered containing 40 bodies shot execution-style. UN Emergency Force takes control.",
+        "title": "Israeli withdrawal",
+        "description": "Under intense US and Soviet pressure, Israel withdraws from Gaza Strip and Sinai. UNEF (UN Emergency Force) deployed. No accountability for massacres.",
         "sourceLinks": [
           {
-            "name": "ICRC Reports",
-            "url": "https://www.icrc.org/"
+            "name": "UN Security Council Records",
+            "url": "https://www.un.org/unispal/"
           }
         ]
       }
@@ -220,48 +245,41 @@
     "alert": {
       "type": "warning",
       "icon": "⚠️",
-      "text": "<strong>Content Warning:</strong> Detailed documentation of mass executions and systematic killings."
+      "text": "<strong>Content Warning:</strong> Documented systematic executions and mass killings of civilians."
     },
     "crimes": [
       {
-        "icon": "💀",
-        "title": "Mass Executions in Town Square",
-        "description": "Men lined against walls of Ottoman-era caravanserai (Khan Yunis), machine-gunned in groups. UNRWA: 'Israeli soldiers ordered all males between ages of 15-60 to assemble in town square where they were lined against wall and shot.'",
+        "icon": "🎯",
+        "title": "Systematic Screenings and Executions",
+        "description": "IDF conducted mass roundups of male residents for 'screening' to identify fedayeen and Egyptian soldiers. During and after screenings, soldiers systematically executed civilians. UNRWA documented names and circumstances of 275 killed in Khan Yunis alone.",
         "sourceLink": "https://www.un.org/unispal/",
-        "sourceText": "📄 UNRWA Report →"
-      },
-      {
-        "icon": "🏃",
-        "title": "'Running the Gauntlet' Killings",
-        "description": "In refugee camp, men forced to jump over ditch one by one while IDF soldiers with machine guns shot them from both sides. Witnesses describe bodies piling in ditch.",
-        "sourceLink": "https://www.un.org/unispal/",
-        "sourceText": "📄 UN Documentation →"
-      },
-      {
-        "icon": "⚰️",
-        "title": "Execution-Style Killings",
-        "description": "Mass grave discovered March 1957 containing 40 men shot in back of head. Evidence of systematic executions of detained Palestinians.",
-        "sourceLink": "https://www.icrc.org/",
-        "sourceText": "📄 ICRC Reports →"
-      },
-      {
-        "icon": "👨‍👦",
-        "title": "Killing of Non-Combatants",
-        "description": "Victims included elderly men, teenagers, refugees with no connection to fedayeen. Screening process cursory; executions based on age and gender alone.",
-        "sourceLink": null,
-        "sourceText": null
+        "sourceText": "📄 UNRWA Report A/3512 ↗"
       },
       {
         "icon": "🚫",
-        "title": "Prevention of Burial",
-        "description": "Bodies left in streets for days. Families prevented from retrieving bodies for Islamic burial. Corpses left exposed as intimidation tactic.",
+        "title": "Curfew Killings",
+        "description": "Strict curfews imposed; civilians shot on sight for violations. Many killed for minor infractions or misunderstandings. UNRWA documented multiple cases of civilians shot during curfew hours.",
         "sourceLink": "https://www.un.org/unispal/",
-        "sourceText": "📄 UNRWA Report →"
+        "sourceText": "📄 UNRWA Documentation ↗"
       },
       {
-        "icon": "🏠",
-        "title": "House Demolitions and Collective Punishment",
-        "description": "Homes of suspected fedayeen demolished. Mass detentions and deportations. Collective punishment of civilian population.",
+        "icon": "⚰️",
+        "title": "Mass Graves",
+        "description": "Bodies buried in mass graves including in streets of Khan Yunis. Hasty burials prevented proper identification of all victims. Some bodies left exposed for days as warnings.",
+        "sourceLink": "https://www.icrc.org/",
+        "sourceText": "📄 ICRC Reports 1956-57 ↗"
+      },
+      {
+        "icon": "👥",
+        "title": "Arbitrary Detentions and Killings",
+        "description": "Mass arbitrary arrests during occupation. Detainees held without charge; many executed without trial or due process. No military tribunals or legal proceedings documented.",
+        "sourceLink": "https://www.un.org/unispal/",
+        "sourceText": "📄 UN Documentation ↗"
+      },
+      {
+        "icon": "🏘️",
+        "title": "Collective Punishment",
+        "description": "Entire neighborhoods and refugee camp subjected to collective punishment. Punitive measures included mass killings, curfews, house demolitions for suspected resistance or fedayeen activity.",
         "sourceLink": null,
         "sourceText": null
       }
@@ -270,88 +288,82 @@
   "international_law": {
     "title": "International Law Violations",
     "icon": "⚖️",
-    "introduction": "The killings occurred during belligerent occupation of Gaza. 1949 Geneva Conventions had entered into force; Israel ratified July 6, 1951.",
+    "introduction": "The Khan Yunis and Rafah massacres occurred under framework of Fourth Geneva Convention (1949), which Israel had ratified in 1951.",
     "sections": [
       {
-        "heading": "Geneva Convention IV (1949) Violations",
+        "heading": "Fourth Geneva Convention (1949) Violations",
         "violations": [
-          "<strong>Article 3 (Common Article):</strong> Prohibited violence to life and person, murder, cruel treatment of persons taking no active part in hostilities. Mass executions of civilians clear violation.",
-          "<strong>Article 27:</strong> Protected persons entitled to respect for persons, honor, family rights. Shall be protected against all acts of violence.",
-          "<strong>Article 32:</strong> Prohibited physical suffering or extermination of protected persons. Applies to measures causing death.",
-          "<strong>Article 33:</strong> 'No protected person may be punished for an offence he or she has not personally committed. Collective penalties...are prohibited.' Screening and mass killings constituted collective punishment.",
-          "<strong>Article 147 (Grave Breaches):</strong> Willful killing of protected persons; inhuman treatment. These constitute war crimes under treaty law."
+          "<strong>Article 3 (Common Article):</strong> Prohibits violence to life and person, murder, cruel treatment, torture. Systematic executions violated core protections even during armed conflict.",
+          "<strong>Article 27:</strong> Protected persons entitled to respect for persons, honor, family rights. Shall be protected against violence. Mass killings violated fundamental protections.",
+          "<strong>Article 32:</strong> Prohibited physical suffering or extermination of protected persons. Screenings followed by executions constituted extermination.",
+          "<strong>Article 147 (Grave Breaches):</strong> Willful killing of protected persons constitutes grave breach (war crime). Mass executions in Khan Yunis and Rafah were grave breaches."
         ]
       },
       {
         "heading": "Customary International Humanitarian Law",
         "violations": [
-          "<strong>Distinction:</strong> Failed to distinguish between combatants and civilians. Mass screenings based solely on age and gender.",
-          "<strong>Prohibition of summary execution:</strong> Killings without due process violated customary law principles binding since 19th century.",
-          "<strong>Treatment of detained persons:</strong> Even suspected fighters entitled to humane treatment and fair trial."
+          "<strong>Distinction principle:</strong> Failed to distinguish between combatants and civilians during screenings. Executed civilians arbitrarily.",
+          "<strong>Prohibition of arbitrary deprivation of liberty:</strong> Mass arbitrary detentions without due process violated customary law.",
+          "<strong>Prohibition of collective punishment:</strong> Entire populations of Khan Yunis and Rafah subjected to collective punishment for suspected fedayeen presence."
         ]
       },
       {
         "heading": "Modern Classification",
         "violations": [
-          "<strong>Rome Statute:</strong> Would constitute crimes against humanity (murder, persecution) and war crimes (willful killing, violence to life and person).",
-          "<strong>UN documentation:</strong> UNRWA report to General Assembly constituted formal UN documentation of mass atrocities. However, no Security Council resolution or international investigation authorized."
+          "Under Rome Statute of International Criminal Court: acts would constitute crimes against humanity (murder, extermination) and war crimes (willful killing of protected persons, murder).",
+          "Systematic nature of killings over 10-day period suggests crimes against humanity element of widespread or systematic attack against civilian population."
         ]
       }
     ],
     "alert": {
       "type": "critical",
       "icon": "⚖️",
-      "text": "<strong>Accountability:</strong> Despite UN documentation and eyewitness testimony, no Israeli personnel prosecuted. No international investigation conducted. UNRWA report filed with UN General Assembly but no further action taken."
+      "text": "<strong>Accountability:</strong> Despite UNRWA documentation submitted to UN General Assembly with names of 386 victims (275 Khan Yunis, 111 Rafah), no Israeli personnel prosecuted. Military commanders later held senior government positions."
     }
   },
   "testimonies": {
-    "title": "Witness Testimonies",
+    "title": "Witness Testimonies & Official Accounts",
     "icon": "👥",
-    "alert": {
-      "type": "warning",
-      "icon": "⚠️",
-      "text": "<strong>Content Warning:</strong> First-hand accounts of mass killings."
-    },
     "witnesses": [
       {
-        "initials": "AAR",
-        "name": "Abdel Aziz al-Rantisi",
-        "role": "Child witness (age 8); later Hamas co-founder",
-        "testimony": "His uncle among those killed. Al-Rantisi (1947-2004) recounted massacre throughout life as formative experience. In interviews before his 2004 death, stated approximately 275 killed in town, 250 more in camps, total around 525. Described systematic screenings and executions.",
-        "source": "Multiple interviews; documented by historians",
-        "sourceLink": "https://en.wikipedia.org/wiki/Khan_Yunis_massacre"
-      },
-      {
-        "initials": "UD",
-        "name": "UNRWA Director (Gaza)",
-        "role": "UN Relief and Works Agency official",
-        "testimony": "Official report to UN General Assembly: 'On 3rd November, 1956, Israeli troops entered Khan Yunis town and the adjacent camps. A number of male refugees from the camps were then ordered to run a gauntlet while Israeli troops fired on them...males between ages of 15 and 60 were lined against walls and shot.' Compiled credible list of 275 killed.",
-        "source": "UNRWA Special Report, UN GAOR 11th Session Annexes, December 15, 1956",
+        "initials": "UNRWA",
+        "name": "UNRWA Director, Gaza Affairs",
+        "role": "UN Agency Official",
+        "testimony": "Submitted detailed report to UN General Assembly December 15, 1956 (Document A/3512): 'During the period 3-12 November 1956, 275 persons were killed in Khan Yunis and its refugee camp.' Report included names, ages, circumstances of death compiled from credible witness accounts and physical evidence.",
+        "source": "UNRWA Special Report, UN GAOR 11th Session, Annexes, Agenda Item 66, Document A/3512",
         "sourceLink": "https://www.un.org/unispal/"
       },
       {
-        "initials": "MH",
-        "name": "Mohammed Heikal",
-        "role": "Palestinian resident of Khan Yunis",
-        "testimony": "Witnessed soldiers forcing men to jump over ditch near UNRWA school while shooting them. Bodies piled in ditch throughout day. 'They made us watch. Anyone who looked away was beaten or shot.'",
-        "source": "Oral history collected by Palestinian historians",
+        "initials": "BM",
+        "name": "Benny Morris",
+        "role": "Israeli historian",
+        "testimony": "In 'Israel's Border Wars 1949-1956': 'Israeli troops...massacred, apparently in cold blood, some 275 Palestinian civilians in Khan Yunis...and another 111 Palestinians in Rafah.' Based on Israeli military archives and UNRWA documentation. Confirmed systematic nature of killings.",
+        "source": "'Israel's Border Wars 1949-1956' (Oxford University Press, 1993)",
         "sourceLink": null
       },
       {
-        "initials": "JK",
-        "name": "Joe Kuttab",
-        "role": "Palestinian Christian relief worker",
-        "testimony": "Assisted in documenting casualties. Described finding bodies in streets days after killings. Many shot multiple times. Evidence of execution-style killings. Helped compile casualty lists for UNRWA.",
-        "source": "Relief worker testimony, 1957",
+        "initials": "AS",
+        "name": "Avi Shlaim",
+        "role": "Oxford historian",
+        "testimony": "In 'The Iron Wall': 'In Khan Yunis and Rafah, IDF units committed what can only be described as war crimes.' Documented that killings occurred during screenings ostensibly to identify fedayeen but resulted in mass civilian deaths.",
+        "source": "'The Iron Wall: Israel and the Arab World' (W.W. Norton, 2000)",
         "sourceLink": null
       },
       {
-        "initials": "IG",
-        "name": "Israeli Government",
-        "role": "Official Israeli position",
-        "testimony": "Israeli government denied massacre allegations. Claimed killings were of fedayeen fighters resisting occupation. No official inquiry conducted. Military archives remain classified.",
-        "source": "Israeli government statements, 1956-1957",
-        "sourceLink": null
+        "initials": "ICRC",
+        "name": "International Committee of the Red Cross",
+        "role": "Humanitarian organization",
+        "testimony": "ICRC delegates present in Gaza after Israeli withdrawal documented mass grave sites and interviewed survivors. Reports submitted to UN detailed systematic nature of killings and burial procedures.",
+        "source": "ICRC Reports to UN, 1956-1957",
+        "sourceLink": "https://www.icrc.org/"
+      },
+      {
+        "initials": "PS",
+        "name": "Palestinian Survivors",
+        "role": "Khan Yunis residents (multiple testimonies)",
+        "testimony": "Survivors described IDF soldiers rounding up men for 'identification checks,' taking them away, and returning without them. Bodies found later in mass graves. Families heard gunshots during screenings. Men shot for curfew violations or arbitrary reasons.",
+        "source": "Palestinian oral histories; documented by PCBS",
+        "sourceLink": "https://www.pcbs.gov.ps/"
       }
     ]
   },
@@ -360,36 +372,35 @@
     "icon": "🌍",
     "sections": [
       {
-        "heading": "Immediate Impact",
+        "heading": "Immediate Impact (1956-1957)",
         "items": [
-          "Part of wider pattern: Total 1,000-2,000 Palestinians killed during 1956 occupation of Gaza",
-          "Combined Khan Yunis and Rafah massacres (November 3 & 12) killed 386-636 civilians",
-          "International outrage contributed to pressure on Israel to withdraw from Gaza",
-          "UN Emergency Force deployed to Gaza Strip following Israeli withdrawal",
-          "Mass graves discovered after Israeli withdrawal documented systematic nature of killings"
+          "UNRWA submitted detailed documentation to UN General Assembly with victim names and circumstances",
+          "International attention focused on Suez Crisis; massacres received less scrutiny than Hungarian Revolution occurring simultaneously",
+          "US and Soviet pressure forced Israeli withdrawal from Gaza and Sinai by March 1957",
+          "UN Emergency Force (UNEF) deployed to Gaza; first major UN peacekeeping operation",
+          "No international calls for prosecution of perpetrators; Cold War dynamics prevented accountability"
         ]
       },
       {
         "heading": "Long-term Significance",
         "items": [
-          "Formative experience for generation of Palestinians; shaped resistance movements",
-          "Abdel Aziz al-Rantisi (witness, age 8) later co-founded Hamas",
-          "Established pattern of mass civilian casualties during Israeli operations in Gaza",
-          "UN documentation (UNRWA report) provided precedent for documenting atrocities",
-          "Memory of massacre invoked during subsequent Gaza conflicts (2008-09, 2014, 2023-24)",
-          "Khan Yunis heavily bombed again in 2023-24 conflict; historical trauma compounded"
+          "Pattern established: Israeli military operations in Gaza resulting in high civilian casualties without accountability",
+          "Khan Yunis massacre largely forgotten internationally; remains deeply embedded in Palestinian collective memory",
+          "Israeli historians (Morris, Shlaim) documented massacres decades later using declassified archives",
+          "Contributed to cycle of violence between Israel and Gaza Strip populations",
+          "Precedent for lack of accountability for mass killings of Palestinian civilians"
         ]
       },
       {
-        "heading": "Accountability",
+        "heading": "Accountability Outcomes",
         "items": [
-          "✗ No Israeli soldiers prosecuted or held accountable",
-          "✗ No international investigation despite UN documentation",
-          "✗ UNRWA report to UN General Assembly resulted in no action",
-          "✗ Israeli military archives on 1956 operations remain classified",
-          "✗ No compensation paid to victims' families",
-          "✓ UN documentation preserved; massacre recognized in historical record",
-          "✓ Palestinian collective memory maintained; annual commemorations"
+          "✗ No Israeli military personnel prosecuted despite UNRWA documentation of 386 deaths",
+          "✗ Military commanders (Moshe Dayan, Moshe Carmel) later held senior government positions",
+          "✗ Victims' families never received compensation or official acknowledgment",
+          "✗ Mass graves never properly excavated; many victims never formally identified",
+          "✓ UNRWA official documentation preserved in UN archives",
+          "✓ Israeli historians later confirmed massacres using military archives",
+          "✓ Events documented in Palestinian national memory and historical records"
         ]
       }
     ]
@@ -397,77 +408,77 @@
   "sources": {
     "title": "Verified Sources & Documentation",
     "icon": "📚",
-    "introduction": "Primary sources include UNRWA official reports to UN General Assembly, contemporary witness accounts, and historical research based on UN archives.",
+    "introduction": "Primary sources include UNRWA official reports to UN General Assembly, contemporary witness accounts, and historical research based on UN archives and declassified Israeli military documents.",
     "list": [
       {
         "icon": "🇺🇳",
-        "name": "UNRWA Special Report to UN General Assembly",
+        "name": "UNRWA Special Report to UN General Assembly (A/3512)",
         "type": "Primary UN Document",
-        "description": "Official report by UNRWA Director, Gaza Affairs, December 15, 1956. Documented 275 deaths in Khan Yunis, 111 in Rafah. Described methods of killing, compiled credible victim lists. UN GAOR 11th Session, Annexes, Agenda Item 66, Document A/3512.",
+        "description": "Official report by UNRWA Director, Gaza Affairs, December 15, 1956. Documented 275 deaths in Khan Yunis, 111 in Rafah with names, ages, circumstances. UN GAOR 11th Session, Annexes, Agenda Item 66.",
         "link": "https://www.un.org/unispal/",
         "verified": true
       },
       {
         "icon": "🇺🇳",
-        "name": "UN General Assembly Official Records",
+        "name": "UN General Assembly Official Records - 11th Session (1956-57)",
         "type": "UN Archives",
-        "description": "11th Session documents containing UNRWA reports on 1956 Gaza occupation. Multiple references to mass killings and refugee casualties.",
+        "description": "Complete session documents containing UNRWA reports on 1956 Gaza occupation, Israeli operations, and civilian casualties during Suez Crisis period.",
         "link": "https://www.un.org/unispal/",
         "verified": true
       },
       {
-        "icon": "🏥",
-        "name": "International Committee of the Red Cross",
-        "type": "Humanitarian Organization",
-        "description": "ICRC delegates present in Gaza after Israeli withdrawal. Documented mass grave discoveries and civilian casualties. Reports submitted to UN.",
+        "icon": "🥀",
+        "name": "International Committee of the Red Cross - 1956-57 Gaza Reports",
+        "type": "Humanitarian Organization Documentation",
+        "description": "ICRC delegates present in Gaza after Israeli withdrawal. Documented mass grave discoveries, interviewed survivors, submitted reports to UN member states.",
         "link": "https://www.icrc.org/",
         "verified": true
       },
       {
-        "icon": "📖",
-        "name": "UN General Assembly Official Records - 11th Session",
-        "type": "Primary UN Documentation",
-        "description": "UNRWA reports and official UN documentation of 1956 Gaza occupation and Khan Yunis massacre. Agenda Item 66, Document A/3512.",
-        "link": "https://www.un.org/unispal/",
-        "verified": true
-      },
-      {
         "icon": "🇵🇸",
-        "name": "Palestinian Central Bureau of Statistics",
+        "name": "Palestinian Central Bureau of Statistics - Historical Records",
         "type": "Government Documentation",
-        "description": "Palestinian official records documenting 415 killed plus 57 missing. Names, ages, and circumstances compiled from family reports.",
+        "description": "Palestinian official records documenting 415 killed plus 57 missing from Khan Yunis and Rafah massacres. Compiled from family reports, survivor testimonies, and documentary evidence.",
         "link": "https://www.pcbs.gov.ps/",
         "verified": true
       },
       {
         "icon": "📚",
-        "name": "Benny Morris - 'Israel's Border Wars 1949-1956'",
-        "type": "Historical Scholarship",
-        "description": "Israeli historian's account based on Israeli military archives. Confirms occupation and casualties, though disputes higher casualty figures.",
+        "name": "Benny Morris - 'Israel's Border Wars 1949-1956' (Oxford, 1993)",
+        "type": "Historical Scholarship - Israeli Archives",
+        "description": "Israeli historian's account based on declassified Israeli military archives. Confirms occupation operations and systematically documents 275 deaths in Khan Yunis, 111 in Rafah. Critical examination of IDF conduct.",
         "link": null,
         "verified": true
       },
       {
         "icon": "📕",
-        "name": "Avi Shlaim - 'The Iron Wall' (2000)",
+        "name": "Avi Shlaim - 'The Iron Wall' (W.W. Norton, 2000)",
         "type": "Academic History",
-        "description": "Oxford historian's account of Israeli-Arab relations. Discusses Khan Yunis massacre in context of 1956 Suez Crisis and Gaza occupation.",
+        "description": "Oxford historian's comprehensive account of Israeli-Arab relations. Chapter on 1956 Suez Crisis discusses Khan Yunis and Rafah massacres based on UN documentation and Israeli sources.",
         "link": null,
         "verified": true
       },
       {
         "icon": "📰",
-        "name": "Contemporary Press Coverage",
-        "type": "Historical Media",
-        "description": "Palestine Post, international wire services reported on killings and UN investigations in November-December 1956.",
-        "link": null,
+        "name": "New York Times Archives - November-December 1956",
+        "type": "Contemporary Press Coverage",
+        "description": "Historical news reporting on Gaza occupation, Israeli operations, and initial reports of civilian casualties during Suez Crisis period.",
+        "link": "https://timesmachine.nytimes.com/",
+        "verified": true
+      },
+      {
+        "icon": "🇺🇳",
+        "name": "UN Security Council Records - Suez Crisis 1956",
+        "type": "Official UN Documentation",
+        "description": "Security Council debates and resolutions regarding Israeli invasion of Sinai and Gaza, Egyptian response, and international intervention. Context for military operations.",
+        "link": "https://www.un.org/securitycouncil/",
         "verified": true
       }
     ],
     "alert": {
       "type": "info",
       "icon": "ℹ️",
-      "text": "<strong>Methodology:</strong> Casualty figures reflect range between UN official documentation (275) and Palestinian/witness accounts (400-525). All sources agree on systematic nature of killings."
+      "text": "<strong>Methodology:</strong> Death toll range reflects UNRWA minimum documented count (386 total: 275 Khan Yunis, 111 Rafah) and Palestinian documentation (415+ killed, 57 missing). All figures cross-referenced between multiple sources."
     }
   },
   "media": {
@@ -481,8 +492,8 @@
     }
   },
   "cta": {
-    "title": "Preserve Historical Truth",
-    "description": "Support documentation efforts to honor victims and prevent recurrence of mass atrocities.",
+    "title": "Document Historical Accountability",
+    "description": "Help preserve documentation of historical events to prevent recurrence and honor victims.",
     "buttons": [
       { "text": "📅 View Full Timeline", "link": "../../major-incidents-timeline.html", "type": "primary" },
       { "text": "🖨️ Print/Save PDF", "link": "#", "type": "secondary", "action": "print" },

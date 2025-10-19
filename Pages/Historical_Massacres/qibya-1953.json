@@ -34,7 +34,7 @@
     }
   },
   "hero": {
-    "category": "🏛️ HISTORICAL MASSACRE • 1953 REPRISAL OPERATION",
+    "category": "🛡️ HISTORICAL MASSACRE • 1953 REPRISAL OPERATION",
     "title": "Qibya Massacre",
     "subtitle": "IDF Unit 101 attack on West Bank village resulting in 69 civilian deaths",
     "metaCards": [
@@ -55,6 +55,36 @@
   },
   "brief_summary": "On the night of October 14-15, 1953, Israeli forces from Unit 101 under Major Ariel Sharon attacked the Jordanian village of Qibya. The operation involved approximately 300-700 soldiers who destroyed 45 houses with explosives while civilians were inside, killing 69 people—two-thirds women and children. The attack was framed as retaliation for Palestinian raids but was condemned by the UN Security Council, the US, and sparked global outcry.",
   "perpetrators": ["IDF Unit 101 (Commander: Ariel Sharon)", "Paratroop companies", "Supporting Israeli regular army units"],
+  "personalities": {
+    "title": "Key Figures - Commanders & Perpetrators",
+    "icon": "👤",
+    "commanders": [
+      {
+        "name": "Ariel Sharon",
+        "role": "Unit 101 Commander (1953)",
+        "birth_death": "1928-2014",
+        "responsibility": "Commanded Unit 101 during Qibya operation. Led approximately 600 troops in attack. Later wrote orders were for 'maximal killing and damage.' Never prosecuted. Subsequently served as Defense Minister (1981-83) and Prime Minister (2001-2006)."
+      },
+      {
+        "name": "Moshe Dayan",
+        "role": "IDF Chief of Operations (1953)",
+        "birth_death": "1915-1981",
+        "responsibility": "Supervised planning of Operation Shoshana. Approved Sharon's operational plan for Qibya attack. Chief of Staff during 1956 Suez Crisis operations. Later Defense Minister (1967, 1969-74). Never faced accountability for 1953 operation."
+      },
+      {
+        "name": "David Ben-Gurion",
+        "role": "Prime Minister and Defense Minister (1953)",
+        "birth_death": "1886-1973",
+        "responsibility": "Authorized Operation Shoshana and reprisal policy. After massacre, falsely claimed attack carried out by Israeli civilians, not military. Later privately acknowledged military responsibility. Stated: 'It doesn't make any real difference what will be said about Qibya around the world.'"
+      },
+      {
+        "name": "Pinhas Lavon",
+        "role": "Acting Defense Minister (1953)",
+        "birth_death": "1904-1976",
+        "responsibility": "Temporary Defense Minister while Ben-Gurion on leave. Approved Operation Shoshana. Foreign Minister Moshe Sharett opposed operation but Lavon proceeded with approval of Ben-Gurion."
+      }
+    ]
+  },
   "executiveSummary": {
     "title": "Executive Summary",
     "icon": "📋",
@@ -130,8 +160,8 @@
         "description": "Grenade attack kills Israeli woman Suzanne Kinyas and her two children in Yehud. Israel attributes attack to infiltrators from Qibya.",
         "sourceLinks": [
           {
-            "name": "Wikipedia - Qibya Massacre",
-            "url": "https://en.wikipedia.org/wiki/Qibya_massacre"
+            "name": "UN Security Council Records",
+            "url": "https://www.un.org/unispal/document/auto-insert-177183/"
           }
         ]
       },
@@ -210,35 +240,35 @@
         "title": "House-to-House Killings",
         "description": "Soldiers systematically threw grenades through doors and windows, then demolished houses with explosives while civilians remained inside. Bodies found buried in rubble.",
         "sourceLink": "https://www.un.org/unispal/document/auto-insert-177183/",
-        "sourceText": "📄 UN MAC Report →"
+        "sourceText": "📄 UN MAC Report ↗"
       },
       {
         "icon": "👨‍👩‍👧‍👦",
         "title": "Women and Children Targeted",
         "description": "Of 69 killed, two-thirds were women and children. Families trapped in homes as explosives detonated.",
         "sourceLink": "https://history.state.gov/historicaldocuments/frus1952-54v09p1/d689",
-        "sourceText": "📄 US State Dept →"
+        "sourceText": "📄 US State Dept ↗"
       },
       {
-        "icon": "🏚️",
+        "icon": "🏛️",
         "title": "Deliberate Civilian Infrastructure Destruction",
         "description": "School and mosque systematically demolished. 45 houses destroyed with explosives—approximately 22% of village housing stock.",
         "sourceLink": null,
         "sourceText": null
       },
       {
-        "icon": "🛍️",
+        "icon": "🛒",
         "title": "Systematic Looting",
         "description": "Shops looted during operation. Unused explosives found dropped by attackers, indicating extensive demolition supplies brought to scene.",
         "sourceLink": "https://history.state.gov/historicaldocuments/frus1952-54v09p1/d689",
-        "sourceText": "📄 US Archives →"
+        "sourceText": "📄 US Archives ↗"
       },
       {
         "icon": "🚧",
         "title": "Prevention of Rescue",
         "description": "Israeli forces shelled neighboring villages Budrus (43 mortar shells) and Shuqba to prevent Jordanian Arab Legion from reaching Qibya to assist civilians.",
         "sourceLink": "https://history.state.gov/historicaldocuments/frus1952-54v09p1/d689",
-        "sourceText": "📄 US State Dept Cable →"
+        "sourceText": "📄 US State Dept Cable ↗"
       }
     ]
   },
@@ -286,7 +316,7 @@
         "role": "Unit 101 Commander (later Israeli PM)",
         "testimony": "Sharon wrote in his memoir that he received orders: 'Qibya was to be an example for everyone.' He described ordering 'maximal killing and damage to property.' In autobiography 'Warrior': 'The orders were utterly clear.'",
         "source": "Sharon, Ariel. 'Warrior: An Autobiography' (1989)",
-        "sourceLink": "https://en.wikipedia.org/wiki/Qibya_massacre"
+        "sourceLink": null
       },
       {
         "initials": "DB",
@@ -294,7 +324,7 @@
         "role": "Israeli Prime Minister",
         "testimony": "Initially claimed attack was carried out by Israeli civilians acting on their own: 'border settlers in Israel...who were tired of the bloodshed.' Later privately acknowledged military operation. Stated: 'It doesn't make any real difference what will be said about Qibya around the world.'",
         "source": "Knesset speech, October 1953; Sharett Diary",
-        "sourceLink": "https://en.wikipedia.org/wiki/Qibya_massacre"
+        "sourceLink": null
       },
       {
         "initials": "VB",
@@ -310,7 +340,7 @@
         "role": "Israeli Foreign Minister",
         "testimony": "In private diary opposed the operation: 'I told Lavon that this will be a grave error...it was never proved that reprisal actions serve their declared purpose.' Later wrote: 'I must underline that when I opposed the action I didn't even remotely suspect such a bloodbath.'",
         "source": "Moshe Sharett Diary, October 14, 1953",
-        "sourceLink": "https://en.wikipedia.org/wiki/Qibya_massacre"
+        "sourceLink": null
       },
       {
         "initials": "JF",
@@ -376,7 +406,7 @@
         "name": "UN Security Council Resolution 101 (1953)",
         "type": "UN Resolution",
         "description": "Expressed 'strongest censure' of attack. Called action inconsistent with UN Charter and armistice obligations.",
-        "link": "https://www.un.org/unispal/",
+        "link": "https://digitallibrary.un.org/record/477845",
         "verified": true
       },
       {
@@ -396,14 +426,6 @@
         "verified": true
       },
       {
-        "icon": "📖",
-        "name": "Wikipedia - Qibya Massacre",
-        "type": "Encyclopedic Overview",
-        "description": "Comprehensive article synthesizing Israeli, Jordanian, UN, and historical sources. Extensive citations to primary documents.",
-        "link": "https://en.wikipedia.org/wiki/Qibya_massacre",
-        "verified": true
-      },
-      {
         "icon": "📚",
         "name": "Benny Morris - 'Righteous Victims' (2001)",
         "type": "Historical Scholarship",
@@ -417,6 +439,22 @@
         "type": "Primary Source - Perpetrator Account",
         "description": "Sharon's memoir includes discussion of Qibya operation, though minimizes civilian casualties. Confirms command responsibility.",
         "link": null,
+        "verified": true
+      },
+      {
+        "icon": "📘",
+        "name": "Avi Shlaim - 'The Iron Wall' (W.W. Norton, 2000)",
+        "type": "Academic History",
+        "description": "Oxford historian's account of Israeli-Arab relations. Discusses Qibya massacre in context of reprisal policy and armistice violations.",
+        "link": null,
+        "verified": true
+      },
+      {
+        "icon": "📰",
+        "name": "New York Times Archive - October-November 1953",
+        "type": "Contemporary Press",
+        "description": "Contemporary reporting on Qibya operations and international responses. Historical news coverage from period.",
+        "link": "https://timesmachine.nytimes.com/",
         "verified": true
       }
     ],

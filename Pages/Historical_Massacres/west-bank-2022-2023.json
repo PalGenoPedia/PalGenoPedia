@@ -1,0 +1,766 @@
+{
+  "id": "hist_017",
+  "event_type": "Military Raids / Systematic Killings",
+  "verification_status": "verified",
+  "metadata": {
+    "pageTitle": "West Bank Raids and Killings (2022-2023) | Historical Documentation",
+    "description": "Israeli forces killed over 500 Palestinians in West Bank during 2022-2023, deadliest period since Second Intifada. UN Commission found unlawful killings; Shireen Abu Akleh murdered.",
+    "keywords": "West Bank raids, Jenin, Nablus, Shireen Abu Akleh, Operation Break the Wave, Lions Den, Jenin Brigades, UN Commission Inquiry",
+    "lastUpdated": "2025-10-18",
+    "author": "aliattia02"
+  },
+  "date": {
+    "start": "2022-01-01",
+    "end": "2023-12-31",
+    "duration_days": 730,
+    "display": "January 2022 - December 2023",
+    "context": "Two-year period of intensified Israeli military operations in West Bank"
+  },
+  "location": {
+    "historical": {
+      "name": "West Bank including East Jerusalem",
+      "admin_context": "Palestinian territories under Israeli military occupation since 1967",
+      "specific_sites": ["Jenin and Jenin Refugee Camp", "Nablus", "Tulkarm", "Huwwara", "Balata Refugee Camp", "Ramallah", "Hebron"]
+    },
+    "current": {
+      "name": "West Bank",
+      "admin_context": "Under Israeli military occupation; Areas A, B, C division under Oslo Accords",
+      "status": "Ongoing occupation; violence escalated significantly"
+    }
+  },
+  "hero": {
+    "category": "🔴 SYSTEMATIC KILLINGS • WEST BANK 2022-2023",
+    "title": "West Bank Raids and Killings",
+    "subtitle": "Deadliest period since Second Intifada: 500+ Palestinians killed including journalist Shireen Abu Akleh",
+    "metaCards": [
+      { "icon": "📅", "label": "Period", "value": "2 years", "detail": "Jan 2022 - Dec 2023" },
+      { "icon": "💀", "label": "Palestinians Killed", "value": "500+", "detail": "78+ children in 2022-23" },
+      { "icon": "🔫", "label": "Pattern", "value": "Near-nightly raids", "detail": "Jenin, Nablus focus" },
+      { "icon": "📰", "label": "Journalist Killed", "value": "Shireen Abu Akleh", "detail": "Shot by Israeli forces" }
+    ]
+  },
+  "quickFacts": {
+    "title": "⚡ Quick Facts",
+    "items": [
+      { "label": "Event Type", "value": "Military Raids / Systematic Killings" },
+      { "label": "Operation Name", "value": "Operation Break the Wave (2022-2023)" },
+      { "label": "Verification", "value": "UN Commission; B'Tselem; HRW; Amnesty" },
+      { "label": "UN Finding", "value": "Unlawful killings; disproportionate force" }
+    ]
+  },
+  "brief_summary": "The period 2022-2023 marked the deadliest years for Palestinians in the occupied West Bank since the Second Intifada (2000-2005). According to UN and human rights organizations, Israeli forces killed over 500 Palestinians during this two-year period, including at least 78 children. The violence occurred primarily through near-nightly military raids into Palestinian cities, particularly Jenin and Nablus, which Israel dubbed 'Operation Break the Wave.' These operations began in March 2022 following attacks by Palestinians inside Israel that killed 19 Israelis. The UN Commission of Inquiry found Israeli forces used 'unnecessary and disproportionate force,' applied combat rules inappropriately to law enforcement situations, and committed unlawful killings. The most high-profile case was the May 11, 2022 killing of Al Jazeera journalist Shireen Abu Akleh—the UN Commission concluded Israeli forces killed her intentionally or recklessly, violating her right to life. In 2022 alone, 220 Palestinians were killed (including 48 children), making it the deadliest year since 2006. The pattern continued in 2023 with 507 Palestinians killed by year's end including 127 children—the deadliest year in recorded history according to Doctors Without Borders. Major incidents included the January 2023 Jenin raid (10 killed), February 2023 Nablus raid (11 killed), and July 2023 Jenin incursion (12 killed with aerial bombardment). The raids were characterized by excessive force, extrajudicial killings, obstruction of medical care, and attacks on clearly marked journalists and paramedics.",
+  "perpetrators": ["Israel Defense Forces", "Israeli Border Police", "Israeli settlers (complicit in attacks)", "Shin Bet (Israeli internal security)", "Special forces units including Duvdevan"],
+  "executiveSummary": {
+    "title": "Executive Summary",
+    "icon": "📋",
+    "alert": {
+      "type": "critical",
+      "icon": "⚠️",
+      "text": "<strong>UN Commission finding:</strong> 'Israel applies the framework governing conduct of hostilities to law enforcement operations in the West Bank, contrary to international law, resulting in civilians being killed and injured.'—October 2023 report"
+    },
+    "paragraphs": [
+      "The escalation began in spring 2022 following a series of attacks by Palestinians inside Israel that killed 19 Israelis between March 22 and May 7. Israel responded by launching 'Operation Break the Wave'—near-nightly military raids into West Bank cities and refugee camps, particularly Jenin and Nablus. These cities had become centers of renewed armed Palestinian resistance with the emergence of groups like the Jenin Brigades (founded September 2021), the Lions' Den in Nablus, and the Balata Brigades. The Israeli operations involved massive deployments of troops, bulldozers destroying infrastructure and roads, use of live ammunition in densely populated areas, and increasingly, aerial bombardment including drone strikes. By the end of 2022, 220 Palestinians had been killed including 48 children—the highest annual toll since the Second Intifada ended in 2005.",
+      "The violence was not limited to armed confrontations. According to Middle East Eye's analysis, the majority of Palestinian casualties in 2022 were likely unarmed at the time of their death. At least 95 Palestinians were shot by Israeli soldiers as bystanders during army raids or while participating in anti-occupation demonstrations. Seven women and girls were killed, including 15-year-old Jana Zakarneh shot twice in the face while playing with her cat on her rooftop, and 15-year-old Fulla al-Masalma killed a day before her birthday. The most internationally significant killing was that of Shireen Abu Akleh, Al Jazeera's veteran Palestinian correspondent, shot in the head on May 11, 2022 while covering a raid in Jenin. Despite wearing a clearly marked PRESS vest and standing with other journalists, Abu Akleh was killed by Israeli fire. The UN Commission of Inquiry investigated and concluded 'on reasonable grounds that Israeli forces used lethal force without justification under international human rights law and, intentionally or recklessly, violated Abu Akleh's right to life.'",
+      "The violence intensified further in 2023. In January, a raid on Jenin killed 10 Palestinians including a 61-year-old woman shot through the neck while watching from her bedroom window. In February, 11 Palestinians were killed in Nablus including civilians shot in the back while fleeing. In July, Israel conducted its largest West Bank operation in 20 years—a 14-hour assault on Jenin refugee camp using drones, helicopter gunships, and hundreds of troops, killing 12 and forcing 500 families to flee. By December 2023, Doctors Without Borders declared it 'the deadliest year for Palestinians in the West Bank in recorded history' with 507 killed including 127 children. The UN Commission found Israeli forces systematically violated international law by applying combat rules to law enforcement situations, using disproportionate force, failing to distinguish between civilians and combatants, obstructing medical care, and conducting what amounted to extrajudicial executions. Meanwhile, settler violence also surged—the UN recorded over 800 settler attacks on Palestinians between October 2022 and May 2024, often occurring with Israeli military acquiescence or participation."
+    ]
+  },
+  "casualties": {
+    "title": "Casualties & Pattern of Violence",
+    "icon": "🚶",
+    "deaths": "500+ Palestinians (2022-2023 combined) including 78+ children; 19 Israelis killed by Palestinians (early 2022)",
+    "injured": "9,000+ Palestinians injured in 2022 alone (UN data); thousands more in 2023",
+    "forced_displacement": "Multiple communities displaced by settler violence; 500 families displaced in Jenin July 2023",
+    "breakdown": [
+      {
+        "type": "killed",
+        "number": "220",
+        "label": "Palestinians Killed in 2022",
+        "detail": "Including 48 children, 7 women/girls. 167 in West Bank/East Jerusalem, 53 in Gaza. Deadliest year since 2006",
+        "sources": [
+          {
+            "name": "Middle East Eye Comprehensive Analysis",
+            "link": "https://www.middleeasteye.net/news/palestine-west-bank-deadliest-year-second-intifada",
+            "icon": "📊"
+          },
+          {
+            "name": "UN Data via Multiple Sources",
+            "link": "https://www.ochaopt.org/",
+            "icon": "🇺🇳"
+          }
+        ]
+      },
+      {
+        "type": "killed",
+        "number": "507",
+        "label": "Palestinians Killed in 2023",
+        "detail": "Including 127 children (Gaza war period Oct-Dec accounts for significant increase). Deadliest year in recorded history",
+        "sources": [
+          {
+            "name": "Doctors Without Borders Statement",
+            "link": "https://www.doctorswithoutborders.org/",
+            "icon": "🏥"
+          },
+          {
+            "name": "Al Jazeera Reporting",
+            "link": "https://www.aljazeera.com/news/2023/11/26/israeli-forces-carry-out-deadly-raids-in-the-west-bank-amid-gaza-truce",
+            "icon": "📰"
+          }
+        ]
+      },
+      {
+        "type": "pattern",
+        "number": "At least 95",
+        "label": "Unarmed Bystanders/Protesters Killed (2022)",
+        "detail": "Shot during raids or demonstrations. Majority of 2022 casualties likely unarmed at time of death",
+        "sources": [
+          {
+            "name": "Middle East Eye Analysis",
+            "link": "https://www.middleeasteye.net/news/palestine-west-bank-deadliest-year-second-intifada",
+            "icon": "📋"
+          }
+        ]
+      },
+      {
+        "type": "killed",
+        "number": "78+ children",
+        "label": "Child Fatalities (2022-2023)",
+        "detail": "48 in 2022, 30+ in 2023 pre-Gaza war. Includes Jana Zakarneh (15), Mahmoud Samoudi (12), Fulla al-Masalma (15)",
+        "sources": [
+          {
+            "name": "MEE & UN Documentation",
+            "link": "https://www.middleeasteye.net/news/palestine-west-bank-deadliest-year-second-intifada",
+            "icon": "👶"
+          }
+        ]
+      },
+      {
+        "type": "killed",
+        "number": "1",
+        "label": "Journalist Killed: Shireen Abu Akleh",
+        "detail": "Al Jazeera correspondent shot May 11, 2022 in Jenin. UN Commission: killed intentionally or recklessly by Israeli forces",
+        "sources": [
+          {
+            "name": "UN Commission Report",
+            "link": "https://www.ohchr.org/en/press-releases/2023/10/civilians-are-primary-victims-increased-violence-israel-and-occupied",
+            "icon": "📰"
+          }
+        ]
+      },
+      {
+        "type": "injured",
+        "number": "9,000+",
+        "label": "Palestinians Injured in 2022",
+        "detail": "Over 9,000 injured by Israeli forces in West Bank during 2022 according to UN",
+        "sources": [
+          {
+            "name": "Al Jazeera citing UN",
+            "link": "https://www.aljazeera.com/news/2023/1/26/why-israeli-raids-killed-many-palestinians-this-year-explainer",
+            "icon": "🏥"
+          }
+        ]
+      },
+      {
+        "type": "pattern",
+        "number": "10 killed",
+        "label": "January 2023 Jenin Raid",
+        "detail": "Jan 26: 10 Palestinians killed including elderly woman shot in neck, 16-year-old crushed by military vehicle",
+        "sources": [
+          {
+            "name": "Detailed Documentation",
+            "link": "https://en.wikipedia.org/wiki/January_2023_Jenin_incursion",
+            "icon": "📄"
+          }
+        ]
+      },
+      {
+        "type": "pattern",
+        "number": "11 killed",
+        "label": "February 2023 Nablus Raid",
+        "detail": "Feb 22: 11 killed, 102 injured (82 by live fire). Video shows two men shot in back while fleeing",
+        "sources": [
+          {
+            "name": "Al Jazeera Investigation",
+            "link": "https://www.aljazeera.com/news/2023/2/22/israeli-forces-kill-palestinians-in-nablus-raid",
+            "icon": "📋"
+          }
+        ]
+      },
+      {
+        "type": "pattern",
+        "number": "12 killed",
+        "label": "July 2023 Jenin Incursion",
+        "detail": "Jul 3-4: Largest West Bank operation in 20 years. Drones, helicopters, 500+ troops. 12 killed, 100 injured, 500 families fled",
+        "sources": [
+          {
+            "name": "Comprehensive Report",
+            "link": "https://en.wikipedia.org/wiki/July_2023_Jenin_incursion",
+            "icon": "📄"
+          }
+        ]
+      },
+      {
+        "type": "killed",
+        "number": "19",
+        "label": "Israelis Killed (Spring 2022)",
+        "detail": "19 Israelis killed in attacks March-May 2022 that triggered Operation Break the Wave. 4 soldiers, 8 settlers targeted in West Bank",
+        "sources": [
+          {
+            "name": "MEE Documentation",
+            "link": "https://www.middleeasteye.net/news/palestine-west-bank-deadliest-year-second-intifada",
+            "icon": "🇮🇱"
+          }
+        ]
+      },
+      {
+        "type": "pattern",
+        "number": "800+",
+        "label": "Settler Attacks on Palestinians",
+        "detail": "UN recorded 800+ settler attacks Oct 2023-May 2024. Often occur during/after IDF raids with military acquiescence",
+        "sources": [
+          {
+            "name": "UN Documentation",
+            "link": "https://en.wikipedia.org/wiki/Israeli_incursions_in_the_West_Bank_during_the_Gaza_war",
+            "icon": "🇺🇳"
+          }
+        ]
+      }
+    ],
+    "alert": {
+      "type": "info",
+      "icon": "ℹ️",
+      "text": "<strong>Sources:</strong> UN OCHA; UN Commission of Inquiry; B'Tselem; Middle East Eye; Al Jazeera; Doctors Without Borders. 2022 figures complete; 2023 significantly impacted by Oct 7 Gaza war escalation."
+    }
+  },
+  "timeline": {
+    "title": "Timeline of Key Events",
+    "icon": "⏱️",
+    "events": [
+      {
+        "time": "March 22-May 7, 2022",
+        "title": "Palestinian attacks inside Israel",
+        "description": "Series of attacks by Palestinians kill 19 Israelis including knife attack in Be'er Sheva (4 killed), shooting in Bnei Brak (5 killed), axe attack in Elad (3 killed), shooting in Tel Aviv (3 killed). Attackers from West Bank or Israel. Triggers Israeli Operation Break the Wave.",
+        "sourceLinks": [
+          {
+            "name": "Context Documentation",
+            "url": "https://en.wikipedia.org/wiki/January_2023_Jenin_incursion"
+          }
+        ]
+      },
+      {
+        "time": "March 2022",
+        "title": "Operation Break the Wave begins",
+        "description": "Israel launches military campaign of near-nightly raids into West Bank cities, particularly Jenin and Nablus. Focus on dismantling armed resistance groups. Massive escalation in use of force, arrests, home demolitions.",
+        "sourceLinks": [
+          {
+            "name": "Al Jazeera Analysis",
+            "url": "https://www.aljazeera.com/news/2023/1/26/why-israeli-raids-killed-many-palestinians-this-year-explainer"
+          }
+        ]
+      },
+      {
+        "time": "11 May 2022",
+        "title": "Shireen Abu Akleh killed",
+        "description": "Al Jazeera's veteran Palestinian correspondent shot in head while covering IDF raid in Jenin. Wearing clearly marked PRESS vest, standing with other journalists. UN Commission later concludes Israeli forces killed her intentionally or recklessly, violating right to life. Her killing sparks international outcry.",
+        "sourceLinks": [
+          {
+            "name": "UN Commission Findings",
+            "url": "https://www.ohchr.org/en/press-releases/2023/10/civilians-are-primary-victims-increased-violence-israel-and-occupied"
+          }
+        ]
+      },
+      {
+        "time": "2022 Overall",
+        "title": "Deadliest year since 2006",
+        "description": "By year's end, 220 Palestinians killed in occupied territories (167 West Bank/E. Jerusalem, 53 Gaza). 48 children among dead. Over 9,000 injured. UN declares deadliest year since Second Intifada. Focus on Jenin (45 killed) and Nablus (45 killed) combined.",
+        "sourceLinks": [
+          {
+            "name": "Middle East Eye Comprehensive Report",
+            "url": "https://www.middleeasteye.net/news/palestine-west-bank-deadliest-year-second-intifada"
+          }
+        ]
+      },
+      {
+        "time": "26 January 2023",
+        "title": "Jenin raid - 10 killed",
+        "description": "Massive Israeli raid on Jenin kills 10 Palestinians. Majida Obaid (61) shot through neck while watching from bedroom window. Wasim Abu Jaes (16) crushed to death by military vehicle. Israeli forces fire on ambulances, shoot tear gas at hospital pediatric ward. UN: 'dangerous trajectory of violence.'",
+        "sourceLinks": [
+          {
+            "name": "Detailed Report",
+            "url": "https://en.wikipedia.org/wiki/January_2023_Jenin_incursion"
+          }
+        ]
+      },
+      {
+        "time": "22 February 2023",
+        "title": "Nablus raid - 11 killed, 102 injured",
+        "description": "Large-scale raid on Nablus kills 11, injures 102 (82 by live fire). Amateur video shows two men shot in back while fleeing. Palestinian Authority suspends security coordination with Israel in response, calling it 'massacre.' By this date, 61 Palestinians killed in 2023—double 2022 rate.",
+        "sourceLinks": [
+          {
+            "name": "Al Jazeera Coverage",
+            "url": "https://www.aljazeera.com/news/2023/2/22/israeli-forces-kill-palestinians-in-nablus-raid"
+          }
+        ]
+      },
+      {
+        "time": "3-4 July 2023",
+        "title": "Jenin incursion - aerial bombardment",
+        "description": "Largest West Bank operation in 20 years. Israel deploys drones, helicopters, 500+ troops in 14-hour assault on Jenin refugee camp. Twelve Palestinians killed, 100 injured, 500 families forced to flee homes. First extensive use of aerial force in West Bank since Second Intifada. IDF soldier also killed by friendly fire.",
+        "sourceLinks": [
+          {
+            "name": "Comprehensive Documentation",
+            "url": "https://en.wikipedia.org/wiki/July_2023_Jenin_incursion"
+          }
+        ]
+      },
+      {
+        "time": "May-June 2023",
+        "title": "Pattern of unlawful killings continues",
+        "description": "UN OCHA documents multiple raids. May 22: Balata camp raid kills 3, video shows one shot in back while fleeing. May 29: Jenin raid kills 1. By May 29, 112 Palestinians killed in 2023—more than double 2022 rate. Medical personnel repeatedly obstructed.",
+        "sourceLinks": [
+          {
+            "name": "UN OCHA Protection Report",
+            "url": "https://www.ochaopt.org/poc/16-29-may-2023"
+          }
+        ]
+      },
+      {
+        "time": "7 October 2023 onwards",
+        "title": "Gaza war triggers massive West Bank escalation",
+        "description": "After Oct 7 Hamas attack, Israeli operations in West Bank intensify dramatically. By Dec 2023: 507 Palestinians killed in 2023 (127 children). First use of airstrikes on mosques (Oct 22). Use of drones becomes routine. Over 10,000 Palestinians arrested. 800+ settler attacks documented. Doctors Without Borders: 'deadliest year in recorded history.'",
+        "sourceLinks": [
+          {
+            "name": "Comprehensive Overview",
+            "url": "https://en.wikipedia.org/wiki/Israeli_incursions_in_the_West_Bank_during_the_Gaza_war"
+          }
+        ]
+      },
+      {
+        "time": "16 October 2023",
+        "title": "UN Commission releases report",
+        "description": "UN Independent Commission of Inquiry issues report (covering May 2021-Aug 2023). Key finding: 'Israel applies framework governing conduct of hostilities to law enforcement operations in West Bank, contrary to international law, resulting in civilians being killed and injured.' Jenin 2023 operations 'appear to have included unnecessary and disproportionate force.'",
+        "sourceLinks": [
+          {
+            "name": "UN Commission Report",
+            "url": "https://www.ohchr.org/en/press-releases/2023/10/civilians-are-primary-victims-increased-violence-israel-and-occupied"
+          }
+        ]
+      },
+      {
+        "time": "January 2024",
+        "title": "Hospital raid - commandos disguised as medical staff",
+        "description": "Israeli commandos disguised as medical workers and Muslim women enter hospital in Jenin, shoot dead three Palestinians inside. UN experts: may amount to war crimes. War crime to impersonate medical personnel and to kill wounded even if militants.",
+        "sourceLinks": [
+          {
+            "name": "Documentation",
+            "url": "https://en.wikipedia.org/wiki/Israeli_incursions_in_the_West_Bank_during_the_Gaza_war"
+          }
+        ]
+      }
+    ]
+  },
+  "warCrimes": {
+    "title": "Documented Violations of International Law",
+    "icon": "⚠️",
+    "alert": {
+      "type": "warning",
+      "icon": "⚠️",
+      "text": "<strong>UN Commission:</strong> 'Israel applies the framework governing conduct of hostilities to law enforcement operations in the West Bank, contrary to international law, resulting in civilians being killed and injured.'—October 2023"
+    },
+    "crimes": [
+      {
+        "icon": "📰",
+        "title": "Unlawful Killing of Journalist Shireen Abu Akleh",
+        "description": "May 11, 2022: Al Jazeera correspondent shot in head while covering Jenin raid. Wearing clearly marked PRESS vest, standing with journalists. UN Commission concluded 'on reasonable grounds that Israeli forces used lethal force without justification under international human rights law and, intentionally or recklessly, violated Abu Akleh's right to life.' Identified Duvdevan Unit as likely responsible. Intentional or reckless killing of clearly marked journalist is war crime.",
+        "sourceLink": "https://www.ohchr.org/en/press-releases/2023/10/civilians-are-primary-victims-increased-violence-israel-and-occupied",
+        "sourceText": "📄 UN Commission Findings ↑"
+      },
+      {
+        "icon": "🎯",
+        "title": "Extrajudicial Executions",
+        "description": "Palestinians accuse Israeli forces of assassination policy targeting armed group leaders. In three incidents in 2022, Israeli forces fatally shot 9 Palestinian fighters while inside vehicles in what Palestinians called 'field executions.' Pattern of targeted killings without arrest attempts. Video from Feb 2023 Nablus shows two men shot in back while fleeing—indicative of willful killing.",
+        "sourceLink": "https://www.middleeasteye.net/news/palestine-west-bank-deadliest-year-second-intifada",
+        "sourceText": "📄 MEE Investigation ↑"
+      },
+      {
+        "icon": "💥",
+        "title": "Unnecessary and Disproportionate Force",
+        "description": "UN Commission concluded several 2023 Jenin operations 'appear to have included use of unnecessary and disproportionate force by Israeli security forces.' Includes use of drones, helicopters, hundreds of troops in densely populated refugee camps. Artillery-like force in law enforcement context violates international human rights law.",
+        "sourceLink": "https://www.ohchr.org/en/press-releases/2023/10/civilians-are-primary-victims-increased-violence-israel-and-occupied",
+        "sourceText": "📄 UN Commission Report ↑"
+      },
+      {
+        "icon": "👶",
+        "title": "Killing of 78+ Children",
+        "description": "At least 78 children killed 2022-2023 including many unarmed bystanders. Jana Zakarneh (15) shot twice in face while playing with cat on rooftop. Mahmoud Samoudi (12) shot during raid. Zaid Ghonaim (15) shot while hiding in parking garage. Wasim Abu Jaes (16) crushed by military vehicle. Willful killing of children violates Fourth Geneva Convention Article 147.",
+        "sourceLink": "https://www.middleeasteye.net/news/palestine-west-bank-deadliest-year-second-intifada",
+        "sourceText": "📄 Multiple Documented Cases ↑"
+      },
+      {
+        "icon": "🚑",
+        "title": "Obstruction of Medical Care",
+        "description": "Systematic pattern of Israeli forces firing on ambulances, preventing medical personnel from reaching wounded, delaying evacuations. Jan 2023 Jenin: ambulances fired upon, tear gas shot at hospital pediatric ward. May 2023: medical sources report forces restricted ambulance movement. Denying medical care to wounded violates Geneva Conventions.",
+        "sourceLink": "https://en.wikipedia.org/wiki/January_2023_Jenin_incursion",
+        "sourceText": "📄 Multiple Incident Reports ↑"
+      },
+      {
+        "icon": "🏥",
+        "title": "Hospital Raid with Perfidy (War Crime)",
+        "description": "January 2024: Israeli commandos disguised as medical staff and Muslim women entered Jenin hospital, shot dead three Palestinians inside. UN experts: may amount to war crimes. Perfidy (feigning protected status to kill) explicitly prohibited under Geneva Conventions Additional Protocol I Article 37. Killing wounded even if militants also violates IHL.",
+        "sourceLink": "https://en.wikipedia.org/wiki/Israeli_incursions_in_the_West_Bank_during_the_Gaza_war",
+        "sourceText": "📄 Documentation ↑"
+      },
+      {
+        "icon": "⚖️",
+        "title": "Misapplication of Legal Framework",
+        "description": "UN Commission finding: Israel applies combat rules (IHL conduct of hostilities) to law enforcement situations in West Bank, contrary to international law. This results in use of lethal force not justified under human rights law governing law enforcement. Systematic policy decision enabling unlawful killings.",
+        "sourceLink": "https://www.ohchr.org/en/press-releases/2023/10/civilians-are-primary-victims-increased-violence-israel-and-occupied",
+        "sourceText": "📄 UN Commission Legal Analysis ↑"
+      },
+      {
+        "icon": "🏚️",
+        "title": "Destruction of Civilian Property",
+        "description": "Systematic use of bulldozers to destroy roads, infrastructure, homes during raids. July 2023 Jenin: massive destruction of refugee camp infrastructure. Pattern of destruction far exceeding military necessity. Extensive destruction not justified by military operations is grave breach under Fourth Geneva Convention Article 147.",
+        "sourceLink": "https://en.wikipedia.org/wiki/July_2023_Jenin_incursion",
+        "sourceText": "📄 Documentation ↑"
+      }
+    ]
+  },
+  "international_law": {
+    "title": "International Law Framework",
+    "icon": "⚖️",
+    "introduction": "West Bank killings occurred under framework of international human rights law (governing law enforcement) and international humanitarian law (governing occupation). UN Commission found systematic violations of both.",
+    "sections": [
+      {
+        "heading": "Misapplication of Legal Framework - Core Violation",
+        "violations": [
+          "<strong>Law Enforcement vs. Conduct of Hostilities:</strong> UN Commission determined Israel unlawfully applies IHL rules on conduct of hostilities to law enforcement in West Bank. Correct framework is international human rights law which strictly limits use of lethal force.",
+          "<strong>Right to Life (ICCPR Article 6):</strong> Lethal force only permissible when 'strictly necessary' to protect against imminent threat to life. UN found Israeli forces killed civilians not posing such threats—violations of right to life.",
+          "<strong>Basic Principles on Use of Force and Firearms (1990):</strong> 'Intentional lethal use of firearms may only be made when strictly unavoidable in order to protect life.' Majority of West Bank killings do not meet this standard.",
+          "<strong>Systematic Policy:</strong> Misapplication of legal framework is policy decision by Israeli government, not error. Enables systematic unlawful killings across entire territory."
+        ]
+      },
+      {
+        "heading": "International Humanitarian Law Violations",
+        "violations": [
+          "<strong>Fourth Geneva Convention Article 27:</strong> Protected persons 'shall be treated humanely...protected against all acts of violence.' Killing of 78+ children, journalists, medical obstruction violate this core protection.",
+          "<strong>Article 147 (Grave Breaches):</strong> 'Wilful killing...wilfully causing great suffering...extensive destruction...not justified by military necessity' are grave breaches. 500+ killings, property destruction meet threshold.",
+          "<strong>Protection of Journalists:</strong> Additional Protocol I Article 79 protects journalists as civilians. Killing of Shireen Abu Akleh—clearly marked press—is grave breach.",
+          "<strong>Perfidy Prohibition:</strong> Additional Protocol I Article 37 prohibits feigning protected status to kill. January 2024 hospital raid with commandos disguised as medical staff constitutes perfidy—war crime."
+        ]
+      },
+      {
+        "heading": "UN Commission Findings (October 2023)",
+        "violations": [
+          "<strong>Shireen Abu Akleh:</strong> Commission found 'on reasonable grounds that Israeli forces used lethal force without justification...and, intentionally or recklessly, violated Abu Akleh's right to life.'",
+          "<strong>Jenin Operations:</strong> Several 2023 operations 'appear to have included unnecessary and disproportionate force.' Use of drones, helicopters in densely populated areas violates proportionality.",
+          "<strong>Pattern of Violations:</strong> 'Israel applies framework governing conduct of hostilities to law enforcement operations in West Bank, contrary to international law, resulting in civilians being killed and injured.'",
+          "<strong>Settler Violence:</strong> Commission documented increase in settler attacks on Palestinians, often with Israeli military acquiescence or participation—State responsibility for violations."
+        ]
+      },
+      {
+        "heading": "Specific Protected Persons Violations",
+        "violations": [
+          "<strong>Children:</strong> Convention on Rights of Child and Fourth Geneva Convention Article 24 provide special protection. Killing 78+ children, many unarmed, violates these protections.",
+          "<strong>Medical Personnel:</strong> Geneva Conventions require protection of medical workers. Firing on ambulances, obstructing care, tear-gassing hospital violate absolute protections.",
+          "<strong>Wounded:</strong> Even wounded combatants protected once hors de combat. January 2024 hospital killings of wounded violate Common Article 3.",
+          "<strong>Women and Families:</strong> Majida Obaid (61) shot in neck watching from window; Fulla al-Masalma (15) killed day before birthday—demonstrate indiscriminate nature of force."
+        ]
+      },
+      {
+        "heading": "Accountability Requirements",
+        "violations": [
+          "<strong>Duty to Investigate:</strong> Geneva Conventions require States investigate grave breaches. Israel has systematically failed to conduct meaningful investigations.",
+          "<strong>Command Responsibility:</strong> Senior military and political officials who knew or should have known of violations and failed to prevent/punish may bear criminal responsibility.",
+          "<strong>ICC Jurisdiction:</strong> International Criminal Court has jurisdiction over situation in Palestine. West Bank killings fall within investigation.",
+          "<strong>State Responsibility:</strong> Israel bears State responsibility for violations by its forces and for settler violence it fails to prevent."
+        ]
+      }
+    ],
+    "alert": {
+      "type": "critical",
+      "icon": "⚖️",
+      "text": "<strong>Impunity:</strong> Despite 500+ Palestinians killed and UN findings of systematic violations, Israel has conducted virtually no meaningful investigations. Pattern of total impunity continues."
+    }
+  },
+  "testimonies": {
+    "title": "Witness Testimonies & Official Accounts",
+    "icon": "👥",
+    "witnesses": [
+      {
+        "initials": "NC",
+        "name": "Navi Pillay",
+        "role": "Chair, UN Commission of Inquiry",
+        "testimony": "In presenting October 2023 report: 'Israel applies the framework governing conduct of hostilities to law enforcement operations in the West Bank, contrary to international law, resulting in civilians being killed and injured. The Commission has documented alarming trends in Israeli security forces' use of force...The operations in Jenin in 2023 appear to have included the use of unnecessary and disproportionate force.'",
+        "source": "UN Commission Press Release, October 16, 2023",
+        "sourceLink": "https://www.ohchr.org/en/press-releases/2023/10/civilians-are-primary-victims-increased-violence-israel-and-occupied"
+      },
+      {
+        "initials": "SZ",
+        "name": "Shatha Zakarneh",
+        "role": "Mother of Jana Zakarneh (15, killed 2023)",
+        "testimony": "Describing daughter's killing: 'Jana was on our roof playing with her cat. She wasn't protesting, she wasn't near any fighting. An Israeli sniper shot her twice in the face. My daughter was just a child playing with her pet. How can they say she was a threat? They killed her for no reason except that she was Palestinian.' Jana died January 2023.",
+        "source": "Family testimony to media and human rights organizations",
+        "sourceLink": "https://www.middleeasteye.net/news/palestine-west-bank-deadliest-year-second-intifada"
+      },
+      {
+        "initials": "AJ",
+        "name": "Al Jazeera (institutional)",
+        "role": "News organization",
+        "testimony": "Statement after Shireen Abu Akleh's killing: 'We hold the Israeli government and the Israeli occupation forces responsible for the killing of Shireen. We call on the international community to condemn and hold the Israeli occupation forces accountable for deliberately targeting and killing our colleague.' Emphasized she was clearly marked as press.",
+        "source": "Al Jazeera Official Statement, May 11, 2022",
+        "sourceLink": "https://www.aljazeera.com/"
+      },
+      {
+        "initials": "AG",
+        "name": "António Guterres",
+        "role": "UN Secretary-General",
+        "testimony": "After January 2023 Jenin raid: 'I am deeply concerned by the dangerous trajectory of the violence in the occupied West Bank...The level of violence is shocking. Israeli security operations and Palestinian attacks are on the increase. I call on all to avoid further escalation.' Later: 'We continue to see a pattern of Israeli forces using lethal force unnecessarily.'",
+        "source": "UN Secretary-General Statements, January-February 2023",
+        "sourceLink": "https://www.un.org/"
+      },
+      {
+        "initials": "MSF",
+        "name": "Doctors Without Borders (Médecins Sans Frontières)",
+        "role": "International medical humanitarian organization",
+        "testimony": "December 2023 statement: 'In 2023, we witnessed the deadliest year for Palestinians in the West Bank in recorded history...The violence has deeply traumatized communities. Our teams treat patients with gunshot wounds almost daily. Israeli forces repeatedly obstruct medical care, fire near ambulances, and create an environment where providing healthcare is increasingly dangerous.'",
+        "source": "MSF Statement, December 2023",
+        "sourceLink": "https://www.doctorswithoutborders.org/"
+      },
+      {
+        "initials": "WO",
+        "name": "Wafa Obaid",
+        "role": "Daughter of Majida Obaid (61, killed Jan 2023)",
+        "testimony": "Describing mother's killing: 'My mother was in her bedroom, looking out the window at what was happening in the street during the raid. An Israeli sniper shot her through the neck. She was 61 years old, not a fighter, not a threat. Just a grandmother watching from her window. They killed her in her own home.' Majida died in January 2023 Jenin raid.",
+        "source": "Family testimony documented in reports",
+        "sourceLink": "https://en.wikipedia.org/wiki/January_2023_Jenin_incursion"
+      },
+      {
+        "initials": "BT",
+        "name": "B'Tselem (Israeli human rights organization)",
+        "role": "Human rights documentation",
+        "testimony": "Statement on 2022 violence: 'The death toll in the West Bank and Gaza Strip is the highest since 2006...Israel's open-fire policy in the West Bank allows security forces to use potentially lethal force even when their lives are not in danger. This policy turns every military activity and every Palestinian demonstration into a life-threatening situation for Palestinians.'",
+        "source": "B'Tselem Annual Assessment, 2022",
+        "sourceLink": "https://www.btselem.org/"
+      },
+      {
+        "initials": "UN",
+        "name": "UN Special Rapporteur on Palestine",
+        "role": "UN human rights expert",
+        "testimony": "After hospital raid January 2024: 'Disguising military forces as medical workers and Muslim women to execute Palestinians inside a hospital may amount to war crimes. Under international humanitarian law, killing the wounded is prohibited. Using perfidy to kill is a war crime. The international community must act.'",
+        "source": "UN Expert Statement, January 2024",
+        "sourceLink": "https://en.wikipedia.org/wiki/Israeli_incursions_in_the_West_Bank_during_the_Gaza_war"
+      },
+      {
+        "initials": "PA",
+        "name": "Palestinian Authority President Mahmoud Abbas",
+        "role": "Palestinian leader",
+        "testimony": "After February 2023 Nablus raid: 'What happened in Nablus is a massacre. We hold the Israeli occupation government fully responsible. We have decided to suspend security coordination with the Israeli side. The Israeli government is responsible for the dangerous escalation and its consequences.'",
+        "source": "PA Official Statement, February 22, 2023",
+        "sourceLink": "https://www.aljazeera.com/news/2023/2/22/israeli-forces-kill-palestinians-in-nablus-raid"
+      }
+    ]
+  },
+  "personalities": {
+    "title": "Key Figures",
+    "icon": "👤",
+    "commanders": [
+      {
+        "name": "Benjamin Netanyahu",
+        "role": "Prime Minister of Israel (2022-present in this period)",
+        "birth_death": "1949-present",
+        "responsibility": "Returned to power Dec 2022 with far-right coalition. Authorized Operation Break the Wave and subsequent escalations. Defended killings as counter-terrorism. Government rejected all international criticism and UN findings."
+      },
+      {
+        "name": "Yoav Gallant",
+        "role": "Defense Minister (2022-2024)",
+        "birth_death": "1958-present",
+        "responsibility": "Oversaw military operations in West Bank during 2022-2023. Authorized major Jenin operations including July 2023 incursion with aerial bombardment. Defended use of force as proportionate."
+      },
+      {
+        "name": "Itamar Ben-Gvir",
+        "role": "National Security Minister (2022-present)",
+        "birth_death": "1976-present",
+        "responsibility": "Far-right minister overseeing police including Border Police conducting raids. Encouraged aggressive tactics. Distributed weapons to settlers. Previously convicted of incitement to racism and supporting terrorism."
+      },
+      {
+        "name": "Herzi Halevi",
+        "role": "IDF Chief of General Staff (2023-present)",
+        "birth_death": "1967-present",
+        "responsibility": "Top military commander from January 2023. Oversaw major Jenin and Nablus operations. Made operational decisions including use of drones, helicopters in West Bank—unprecedented escalation in tactics."
+      },
+      {
+        "name": "Shireen Abu Akleh",
+        "role": "Journalist (victim)",
+        "birth_death": "1971-2022",
+        "responsibility": "Veteran Al Jazeera correspondent covering Israeli-Palestinian conflict for two decades. Killed May 11, 2022 by Israeli forces while wearing clearly marked press vest. Became symbol of targeting of journalists. UN found her killing violated her right to life."
+      },
+      {
+        "name": "Navi Pillay",
+        "role": "Chair, UN Commission of Inquiry",
+        "birth_death": "1941-present",
+        "responsibility": "Former UN High Commissioner for Human Rights. Led UN Commission investigation into violations. October 2023 report documented systematic Israeli violations including unlawful killings, misapplication of legal framework."
+      }
+    ]
+  },
+  "historicalImpact": {
+    "title": "Historical Impact & Legacy",
+    "icon": "🌍",
+    "sections": [
+      {
+        "heading": "Immediate Impact (2022-2023)",
+        "items": [
+          "500+ Palestinians killed—deadliest period since Second Intifada (2000-2005)",
+          "2022: 220 killed (48 children); 2023: 507 killed (127 children)—deadliest year in recorded history",
+          "Shireen Abu Akleh killing (May 2022) sparked international outcry; UN found her killing unlawful",
+          "Emergence of new armed resistance groups: Jenin Brigades, Lions' Den, Balata Brigades",
+          "Operation Break the Wave: near-nightly raids on Jenin, Nablus became routine",
+          "First extensive use of aerial bombardment in West Bank since Second Intifada (July 2023)",
+          "Over 9,000 Palestinians injured in 2022 alone; thousands more in 2023",
+          "800+ settler attacks documented Oct 2023-May 2024, often with military acquiescence"
+        ]
+      },
+      {
+        "heading": "Long-term Consequences (2023-Present)",
+        "items": [
+          "Complete impunity: Zero meaningful Israeli investigations despite UN findings of systematic violations",
+          "UN Commission documented systematic misapplication of legal framework enabling unlawful killings",
+          "Pattern established: Combat tactics (drones, helicopters, massive force) normalized in law enforcement context",
+          "International law credibility damaged: UN findings ignored, no enforcement mechanisms engaged",
+          "Gaza war (Oct 2023-present) further escalated West Bank violence to unprecedented levels",
+          "ICC investigation includes West Bank but no charges filed as of 2025",
+          "Palestinian Authority increasingly delegitimized; security coordination suspended multiple times",
+          "Rise of armed resistance normalized among Palestinian youth; cycle of violence entrenched",
+          "Hospital raid with perfidy (Jan 2024) set dangerous precedent for violations of medical neutrality"
+        ]
+      },
+      {
+        "heading": "Accountability Status",
+        "items": [
+          "✗ No Israeli officials or soldiers prosecuted for any of 500+ killings",
+          "✗ No accountability for Shireen Abu Akleh killing despite UN findings",
+          "✗ No accountability for 78+ children killed",
+          "✗ No accountability for hospital raid with perfidy (war crime)",
+          "✗ No accountability for obstruction of medical care, attacks on ambulances",
+          "✗ Israeli military investigations: standard pattern of closing cases without charges",
+          "✗ No accountability for settler violence despite 800+ attacks documented",
+          "✓ UN Commission comprehensively documented violations (October 2023 report)",
+          "✓ UN found systematic misapplication of legal framework and unlawful killings",
+          "✓ ICC has jurisdiction; investigation ongoing but slow",
+          "✓ International human rights organizations (HRW, Amnesty, B'Tselem, MSF) documented violations",
+          "✓ Shireen Abu Akleh case keeps issue of journalist targeting in international spotlight"
+        ]
+      }
+    ]
+  },
+  "sources": {
+    "title": "Verified Sources & Documentation",
+    "icon": "📚",
+    "introduction": "Primary sources include UN Commission of Inquiry, UN OCHA protection reports, B'Tselem documentation, human rights organizations, and investigative journalism.",
+    "list": [
+      {
+        "icon": "🇺🇳",
+        "name": "UN Commission of Inquiry - Report on Israel and OPT (October 2023)",
+        "type": "Primary UN Investigation",
+        "description": "Report covering May 2021-August 2023. Key finding: Israel misapplies conduct of hostilities framework to law enforcement in West Bank, resulting in unlawful killings. Documented Shireen Abu Akleh killing, Jenin operations, systematic violations.",
+        "link": "https://www.ohchr.org/en/press-releases/2023/10/civilians-are-primary-victims-increased-violence-israel-and-occupied",
+        "verified": true
+      },
+      {
+        "icon": "📰",
+        "name": "Middle East Eye - 2022: Deadliest Year for Palestinians Since Second Intifada",
+        "type": "Investigative Journalism",
+        "description": "Comprehensive analysis of 220 Palestinians killed in 2022. Includes detailed case studies, patterns of violence, profiles of victims. Documents that majority of casualties likely unarmed at time of death.",
+        "link": "https://www.middleeasteye.net/news/palestine-west-bank-deadliest-year-second-intifada",
+        "verified": true
+      },
+      {
+        "icon": "📺",
+        "name": "Al Jazeera - Why Israeli Raids Killed Many Palestinians This Year (Explainer)",
+        "type": "News Analysis",
+        "description": "January 2023 explainer on Operation Break the Wave, casualty figures, patterns of raids. Includes context on armed Palestinian groups, Israeli tactics, international response.",
+        "link": "https://www.aljazeera.com/news/2023/1/26/why-israeli-raids-killed-many-palestinians-this-year-explainer",
+        "verified": true
+      },
+      {
+        "icon": "📋",
+        "name": "UN OCHA - Protection of Civilians Reports",
+        "type": "UN Humanitarian Documentation",
+        "description": "Regular protection reports documenting casualties, incidents, patterns. Example: May 16-29, 2023 report documents raids, settler violence, casualties with specific incident details.",
+        "link": "https://www.ochaopt.org/poc/16-29-may-2023",
+        "verified": true
+      },
+      {
+        "icon": "📄",
+        "name": "January 2023 Jenin Incursion - Detailed Documentation",
+        "type": "Comprehensive Incident Report",
+        "description": "Detailed documentation of January 26, 2023 raid killing 10. Includes timeline, victim profiles (Majida Obaid, Wasim Abu Jaes), tactics used, international response. Sourced to UN, media, human rights organizations.",
+        "link": "https://en.wikipedia.org/wiki/January_2023_Jenin_incursion",
+        "verified": true
+      },
+      {
+        "icon": "📄",
+        "name": "July 2023 Jenin Incursion - Comprehensive Report",
+        "type": "Incident Documentation",
+        "description": "Documentation of largest West Bank operation in 20 years. Details use of drones, helicopters, 500+ troops. Twelve killed, 100 injured, 500 families displaced. Analysis of unprecedented tactics.",
+        "link": "https://en.wikipedia.org/wiki/July_2023_Jenin_incursion",
+        "verified": true
+      },
+      {
+        "icon": "📊",
+        "name": "B'Tselem - West Bank Statistics and Documentation",
+        "type": "Israeli Human Rights Organization",
+        "description": "Comprehensive casualty database, incident reports, legal analysis. Documentation of Israeli policy allowing lethal force even when lives not in danger.",
+        "link": "https://www.btselem.org/",
+        "verified": true
+      },
+      {
+        "icon": "🏥",
+        "name": "Doctors Without Borders - Statements on West Bank Violence",
+        "type": "Medical Humanitarian Organization",
+        "description": "Reports on treating gunshot victims, obstruction of medical care, psychological trauma. December 2023 statement: 'deadliest year in recorded history.' Field observations from medical teams.",
+        "link": "https://www.doctorswithoutborders.org/",
+        "verified": true
+      },
+      {
+        "icon": "📰",
+        "name": "Al Jazeera - Coverage of Major Raids and Incidents",
+        "type": "News Reporting",
+        "description": "Extensive coverage including February 2023 Nablus raid (11 killed), ongoing documentation of casualties, video evidence of violations. Investigation of Shireen Abu Akleh killing.",
+        "link": "https://www.aljazeera.com/",
+        "verified": true
+      },
+      {
+        "icon": "📄",
+        "name": "Israeli Incursions in West Bank During Gaza War - Comprehensive Overview",
+        "type": "Documentation of Post-Oct 7 Escalation",
+        "description": "Details massive escalation post-October 2023. Documents hospital raid with perfidy, use of airstrikes on mosques, 800+ settler attacks, 10,000+ arrests. Comprehensive casualty figures.",
+        "link": "https://en.wikipedia.org/wiki/Israeli_incursions_in_the_West_Bank_during_the_Gaza_war",
+        "verified": true
+      }
+    ],
+    "alert": {
+      "type": "info",
+      "icon": "ℹ️",
+      "text": "<strong>Methodology:</strong> Casualty figures compiled from UN OCHA, Palestinian Health Ministry, B'Tselem, and media reports. UN Commission conducted independent investigation including field visits, interviews, video analysis. October 2023 Gaza war significantly impacted 2023 totals."
+    }
+  },
+  "media": {
+    "images": {
+      "local": [],
+      "remote": []
+    },
+    "documents": {
+      "local": [],
+      "remote": []
+    }
+  },
+  "cta": {
+    "title": "Demand Accountability and End to Occupation",
+    "description": "Support international justice mechanisms and call for end to military occupation enabling systematic violations.",
+    "buttons": [
+      { "text": "📅 View Full Timeline", "link": "../../major-incidents-timeline.html", "type": "primary" },
+      { "text": "🖨️ Print/Save PDF", "link": "#", "type": "secondary", "action": "print" },
+      { "text": "📧 Submit Info", "link": "mailto:palgeno.pedia@gmx.de?subject=West Bank Raids 2022-2023 - Additional Information", "type": "secondary" }
+    ]
+  }
+}

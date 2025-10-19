@@ -1,0 +1,836 @@
+{
+ "id": "hist_015",
+  "event_type": "Mass Killings / Protest Suppression",
+  "verification_status": "verified",
+  "metadata": {
+    "pageTitle": "Great March of Return Killings (30 Mar 2018 - 27 Dec 2019) | Historical Documentation",
+    "description": "Israeli forces killed 223 Palestinians, injured 28,939 during peaceful protests. UN Commission found 187 of 189 killings unlawful; may constitute war crimes or crimes against humanity.",
+    "keywords": "Great March of Return, Gaza 2018, Razan al-Najjar, UN Commission Inquiry, sniper killings, war crimes, protest suppression",
+    "lastUpdated": "2025-10-18",
+    "author": "aliattia02"
+  },
+  "date": {
+    "start": "2018-03-30",
+    "end": "2019-12-27",
+    "duration_days": 638,
+    "display": "30 March 2018 - 27 December 2019",
+    "context": "Weekly protests at Gaza-Israel separation fence demanding right of return"
+  },
+  "location": {
+    "historical": {
+      "name": "Gaza Strip - Separation fence with Israel",
+      "admin_context": "Hamas-governed Gaza Strip under Israeli blockade since 2007",
+      "specific_sites": ["Five designated protest sites along separation fence", "Eastern Gaza City", "Eastern Khan Yunis", "Eastern Rafah", "North Gaza", "Central Gaza"]
+    },
+    "current": {
+      "name": "Gaza Strip",
+      "admin_context": "Under Israeli blockade; governed by Hamas",
+      "status": "Blockade ongoing; protests ended December 2019"
+    }
+  },
+  "hero": {
+    "category": "🔴 MASS KILLINGS • GAZA 2018-2019",
+    "title": "Great March of Return Killings",
+    "subtitle": "Israeli snipers killed 223 Palestinians, injured 28,939 in protests; UN found violations may constitute war crimes",
+    "metaCards": [
+      { "icon": "📅", "label": "Duration", "value": "21 months", "detail": "30 Mar 2018 - 27 Dec 2019" },
+      { "icon": "💀", "label": "Palestinians Killed", "value": "223", "detail": "41 children, 3 medics, 2 journalists" },
+      { "icon": "🏥", "label": "Wounded by Live Fire", "value": "6,106", "detail": "28,939 total injuries" },
+      { "icon": "🦿", "label": "Amputations", "value": "122", "detail": "20 children lost limbs" }
+    ]
+  },
+  "quickFacts": {
+    "title": "⚡ Quick Facts",
+    "items": [
+      { "label": "Event Type", "value": "Protest Suppression / Mass Killings" },
+      { "label": "Perpetrators", "value": "Israel Defense Forces; Israeli Border Police" },
+      { "label": "Verification", "value": "UN Commission of Inquiry; HRW; B'Tselem; Amnesty" },
+      { "label": "UN Finding", "value": "187 of 189 killings unlawful; may be war crimes" }
+    ]
+  },
+  "brief_summary": "The Great March of Return was a series of mass demonstrations held weekly from March 30, 2018 to December 27, 2019, at five designated sites along Gaza's separation fence with Israel. Organized initially by independent activists including journalist Ahmed Abu Artema, the protests demanded Palestinian refugees' right to return to lands they were displaced from in 1948, an end to Israel's land-air-sea blockade of Gaza (in place since 2007), and opposed US recognition of Jerusalem as Israel's capital. The protests were largely peaceful, involving families, tents, speeches, and symbolic activities. Israeli forces responded with massive use of live ammunition. According to the UN Commission of Inquiry, Israeli snipers killed 189 Palestinians and wounded over 6,106 with live fire between March 30 and December 31, 2018 alone (total deaths reached 223 by end of 2019). The Commission found that in all but two cases, the use of lethal force was unlawful—protesters did not pose imminent threat to life. Among the dead were 41 children, three clearly marked paramedics (including Razan al-Najjar), and two clearly marked journalists. The Commission concluded Israeli forces committed violations that may constitute war crimes or crimes against humanity.",
+  "perpetrators": ["Israel Defense Forces", "Israeli Border Police", "Israeli military snipers", "Israeli security forces"],
+  "executiveSummary": {
+    "title": "Executive Summary",
+    "icon": "📋",
+    "alert": {
+      "type": "critical",
+      "icon": "⚠️",
+      "text": "<strong>UN Commission finding:</strong> 'Israeli soldiers killed and gravely injured civilians who were neither participating directly in hostilities nor posing an imminent threat...Some violations may constitute war crimes or crimes against humanity.'—Chair Santiago Canton"
+    },
+    "paragraphs": [
+      "The Great March of Return began on March 30, 2018—Palestinian Land Day and the 42nd anniversary of mass protests against Israeli land confiscation. Organized by independent activists, the protests were conceived as peaceful demonstrations to draw international attention to Gaza's humanitarian crisis, the blockade, and the right of return for Palestinian refugees. Five designated protest sites were established along Gaza's eastern border, several hundred meters from the separation fence. The protests were intended to last from Land Day (March 30) through Nakba Day (May 15), but continued for 21 months until Hamas announced their end on December 27, 2019.",
+      "Israel's response was immediate and lethal. Israeli Defense Forces deployed snipers along the fence with rules of engagement permitting use of live ammunition against protesters. On the opening day, March 30, 2018, Israeli forces killed 18 Palestinians and shot over 700 with live ammunition. The bloodiest day came on May 14, 2018—the day the US Embassy officially opened in Jerusalem—when Israeli forces killed 60 Palestinians and shot over 1,100. By December 31, 2018, Israeli snipers had shot 6,106 Palestinians with live ammunition, killing 183 during official protest days. Thirty-five were children, three were clearly marked paramedics, and two were clearly marked journalists. Another 3,098 Palestinians were injured by bullet fragmentation, rubber-coated metal bullets, or tear gas canisters.",
+      "The UN Commission of Inquiry investigated every killing at the designated demonstration sites on official protest days between March 30 and December 31, 2018. Commissioners reviewed video evidence, medical records, ballistics reports, and conducted extensive interviews. Their finding was damning: with the exception of two incidents, the Commission found reasonable grounds to believe the use of live ammunition was unlawful. The victims 'were neither participating directly in hostilities nor posing an imminent threat' when shot. Commissioner Sara Hossain stated: 'There can be no justification for killing and injuring journalists, medics, and persons who were clearly not posing an imminent threat of death or serious injury.' The Commission concluded the pattern of violations may constitute war crimes or crimes against humanity. Notable victims included 21-year-old paramedic Razan al-Najjar, shot and killed while treating wounded protesters despite wearing a clearly marked white medical vest, and journalist Yaser Murtaja, shot dead while wearing press insignia. By the time protests ended in December 2019, 223 Palestinians had been killed and 28,939 injured. At least 122 Palestinians required limb amputations including 20 children. Israel has conducted no meaningful investigations, with all but a handful of cases closed without indictment."]
+  },
+  "casualties": {
+    "title": "Casualties & Impact",
+    "icon": "🚶",
+    "deaths": "223 Palestinians (189 during 2018; 34 during 2019); Zero Israelis killed",
+    "injured": "28,939 Palestinians total; 6,106 by live ammunition; Zero Israeli injuries reported",
+    "forced_displacement": "No displacement but severe long-term disabilities created",
+    "breakdown": [
+      {
+        "type": "killed",
+        "number": "223",
+        "label": "Palestinians Killed",
+        "detail": "UN Commission: 189 killed March-December 2018; B'Tselem total through 2019: 223 including 41 children, 3 medics, 2 journalists",
+        "sources": [
+          {
+            "name": "UN Commission Report A/HRC/40/74",
+            "link": "https://www.un.org/unispal/document/commission-of-inquiry-on-2018-protests-in-opt-final-report-a-hrc-40-74-advance-unedited/",
+            "icon": "🇺🇳"
+          },
+          {
+            "name": "B'Tselem Comprehensive Statistics",
+            "link": "https://www.btselem.org/gaza_strip/20190330_gaza_march_of_return",
+            "icon": "📊"
+          }
+        ]
+      },
+      {
+        "type": "killed",
+        "number": "41 children",
+        "label": "Child Fatalities",
+        "detail": "Ages 8 to 17. Youngest: Leila al-Ghandour (8 months, tear gas exposure); Oldest child victim: 17 years",
+        "sources": [
+          {
+            "name": "UN Commission Report para. 77-82",
+            "link": "https://www.un.org/unispal/document/commission-of-inquiry-on-2018-protests-in-opt-final-report-a-hrc-40-74-advance-unedited/",
+            "icon": "📄"
+          },
+          {
+            "name": "Defense for Children International - Palestine",
+            "link": "https://www.dci-palestine.org/",
+            "icon": "👶"
+          }
+        ]
+      },
+      {
+        "type": "killed",
+        "number": "3 paramedics",
+        "label": "Medical Personnel Killed",
+        "detail": "Razan al-Najjar (21, female paramedic, June 1, 2018); Musa Jaber Abu Hassanein (36, May 14); Abdullah al-Qutati (20, July 20)",
+        "sources": [
+          {
+            "name": "UN Commission Report para. 83-87",
+            "link": "https://www.un.org/unispal/document/commission-of-inquiry-on-2018-protests-in-opt-final-report-a-hrc-40-74-advance-unedited/",
+            "icon": "🏥"
+          },
+          {
+            "name": "Physicians for Human Rights - Israel",
+            "link": "https://www.phr.org.il/en/",
+            "icon": "⚕️"
+          }
+        ]
+      },
+      {
+        "type": "killed",
+        "number": "2 journalists",
+        "label": "Journalists Killed",
+        "detail": "Yaser Murtaja (30, shot April 6, 2018 wearing PRESS vest); Ahmad Abu Hussein (25, shot April 13, died April 25)",
+        "sources": [
+          {
+            "name": "Committee to Protect Journalists Report",
+            "link": "https://cpj.org/",
+            "icon": "📰"
+          },
+          {
+            "name": "UN Commission Report para. 88-92",
+            "link": "https://www.un.org/unispal/document/commission-of-inquiry-on-2018-protests-in-opt-final-report-a-hrc-40-74-advance-unedited/",
+            "icon": "🇺🇳"
+          }
+        ]
+      },
+      {
+        "type": "injured",
+        "number": "28,939",
+        "label": "Total Palestinians Injured",
+        "detail": "6,106 by live ammunition; 3,098 by bullet fragmentation; rubber bullets, tear gas canisters account for remainder",
+        "sources": [
+          {
+            "name": "UN OCHA Humanitarian Bulletin",
+            "link": "https://www.ochaopt.org/",
+            "icon": "🏥"
+          },
+          {
+            "name": "Palestinian Ministry of Health Gaza",
+            "link": "https://www.moh.gov.ps/",
+            "icon": "📋"
+          }
+        ]
+      },
+      {
+        "type": "pattern",
+        "number": "60 killed",
+        "label": "Deadliest Day - May 14, 2018",
+        "detail": "Day US Embassy opened in Jerusalem. 60 Palestinians killed, over 1,100 shot with live fire. UN called it 'bloodbath.'",
+        "sources": [
+          {
+            "name": "UN Commission Special Section",
+            "link": "https://www.un.org/unispal/document/commission-of-inquiry-on-2018-protests-in-opt-final-report-a-hrc-40-74-advance-unedited/",
+            "icon": "📄"
+          }
+        ]
+      },
+      {
+        "type": "medical",
+        "number": "122 amputations",
+        "label": "Limb Amputations Required",
+        "detail": "At least 122 Palestinians required amputations due to severe lower-limb injuries. 20 were children. Many more at risk.",
+        "sources": [
+          {
+            "name": "WHO Special Report on Limb Injuries",
+            "link": "https://www.who.int/",
+            "icon": "🦿"
+          },
+          {
+            "name": "Medical Aid for Palestinians Assessment",
+            "link": "https://www.map.org.uk/",
+            "icon": "🏥"
+          }
+        ]
+      },
+      {
+        "type": "pattern",
+        "number": "187 of 189",
+        "label": "Unlawful Killings (UN Finding)",
+        "detail": "UN Commission found 'reasonable grounds to believe' 187 of 189 investigated killings were unlawful under international law",
+        "sources": [
+          {
+            "name": "UN Commission Report Executive Summary",
+            "link": "https://www.un.org/unispal/document/commission-of-inquiry-on-2018-protests-in-opt-final-report-a-hrc-40-74-advance-unedited/",
+            "icon": "⚖️"
+          }
+        ]
+      },
+      {
+        "type": "injured",
+        "number": "441 medics",
+        "label": "Medical Personnel Wounded",
+        "detail": "Including 3 killed; targeted despite clear identification with white vests marked with red crescent/cross",
+        "sources": [
+          {
+            "name": "Physicians for Human Rights - Israel",
+            "link": "https://www.phr.org.il/en/",
+            "icon": "🚑"
+          }
+        ]
+      },
+      {
+        "type": "injured",
+        "number": "144 journalists",
+        "label": "Journalists Injured",
+        "detail": "Including 2 killed. Many clearly wearing PRESS identification when shot",
+        "sources": [
+          {
+            "name": "Committee to Protect Journalists",
+            "link": "https://cpj.org/",
+            "icon": "📸"
+          }
+        ]
+      },
+      {
+        "type": "killed",
+        "number": "0",
+        "label": "Israeli Casualties",
+        "detail": "Zero Israeli soldiers or civilians killed or injured by protesters during entire 21-month period",
+        "sources": [
+          {
+            "name": "UN Commission Report",
+            "link": "https://www.un.org/unispal/document/commission-of-inquiry-on-2018-protests-in-opt-final-report-a-hrc-40-74-advance-unedited/",
+            "icon": "🇮🇱"
+          }
+        ]
+      }
+    ],
+    "alert": {
+      "type": "info",
+      "icon": "ℹ️",
+      "text": "<strong>Sources:</strong> UN Commission of Inquiry; B'Tselem; Palestinian Ministry of Health; WHO; UN OCHA; Defense for Children International; Physicians for Human Rights. UN Commission investigated every single killing on official protest days through Dec 31, 2018."
+    }
+  },
+  "timeline": {
+    "title": "Timeline of Events",
+    "icon": "⏱️",
+    "events": [
+      {
+        "time": "January 2018",
+        "title": "Planning and organization",
+        "description": "Independent Palestinian activists including journalist Ahmed Abu Artema organize protests demanding right of return and end to blockade. Protests planned for March 30 (Land Day) through May 15 (Nakba Day). Five designated sites chosen along separation fence.",
+        "sourceLinks": [
+          {
+            "name": "UN Commission Background",
+            "url": "https://www.un.org/unispal/document/commission-of-inquiry-on-2018-protests-in-opt-final-report-a-hrc-40-74-advance-unedited/"
+          }
+        ]
+      },
+      {
+        "time": "30 March 2018",
+        "title": "First protest - Palestinian Land Day",
+        "description": "Approximately 30,000 Palestinians gather at five sites for opening of Great March of Return. Israeli forces kill 18 Palestinians, shoot over 700 with live ammunition on first day. UN High Commissioner for Human Rights expresses 'profound concern' about use of live ammunition.",
+        "sourceLinks": [
+          {
+            "name": "UN Commission Report para. 35-40",
+            "url": "https://www.un.org/unispal/document/commission-of-inquiry-on-2018-protests-in-opt-final-report-a-hrc-40-74-advance-unedited/"
+          },
+          {
+            "name": "B'Tselem Documentation",
+            "url": "https://www.btselem.org/gaza_strip/20190330_gaza_march_of_return"
+          }
+        ]
+      },
+      {
+        "time": "April 2018",
+        "title": "Weekly protests continue; journalists killed",
+        "description": "Protests held every Friday. April 6: Journalist Yaser Murtaja shot and killed while wearing PRESS vest filming protests. April 13: Journalist Ahmad Abu Hussein shot (died April 25). Both clearly marked as press. Over 40 killed in April. Israeli Defense Minister Avigdor Lieberman: 'There are no innocents in Gaza.'",
+        "sourceLinks": [
+          {
+            "name": "Committee to Protect Journalists Investigation",
+            "url": "https://cpj.org/"
+          },
+          {
+            "name": "UN Commission para. 88-92",
+            "url": "https://www.un.org/unispal/document/commission-of-inquiry-on-2018-protests-in-opt-final-report-a-hrc-40-74-advance-unedited/"
+          }
+        ]
+      },
+      {
+        "time": "18 May 2018",
+        "title": "UN Human Rights Council establishes Commission",
+        "description": "Following international outcry over May 14 massacre, UN Human Rights Council passes resolution S-28/1 establishing independent Commission of Inquiry to investigate violations. Israel immediately rejects and refuses cooperation. US votes against resolution.",
+        "sourceLinks": [
+          {
+            "name": "UN HRC Resolution S-28/1",
+            "url": "https://www.ohchr.org/en/hr-bodies/hrc/co-i-gaza-protests/index"
+          }
+        ]
+      },
+      {
+        "time": "14 May 2018",
+        "title": "Deadliest day - 60 killed as US opens Jerusalem embassy",
+        "description": "Day US Embassy officially opened in Jerusalem, over 40,000 protesters gather at fence. Israeli snipers kill 60 Palestinians, shoot over 1,100 with live fire—bloodiest day of protests. 8 of those killed were children. UN Secretary General calls for independent investigation. Israeli PM Netanyahu praises soldiers: 'Every country has the right to defend its borders.'",
+        "sourceLinks": [
+          {
+            "name": "UN Commission Special Section on May 14",
+            "url": "https://www.un.org/unispal/document/commission-of-inquiry-on-2018-protests-in-opt-final-report-a-hrc-40-74-advance-unedited/"
+          },
+          {
+            "name": "Al Jazeera Documentation",
+            "url": "https://www.aljazeera.com/"
+          }
+        ]
+      },
+      {
+        "time": "1 June 2018",
+        "title": "Razan al-Najjar killed",
+        "description": "Razan al-Najjar, 21-year-old female paramedic, shot and killed by Israeli sniper while treating wounded near Khan Yunis. Wearing clearly marked white medical vest with red crescent. Video shows her with hands raised before being shot. Israeli military initially claims she was human shield, later investigation shows no evidence supporting claim.",
+        "sourceLinks": [
+          {
+            "name": "UN Commission Investigation para. 83-87",
+            "url": "https://www.un.org/unispal/document/commission-of-inquiry-on-2018-protests-in-opt-final-report-a-hrc-40-74-advance-unedited/"
+          },
+          {
+            "name": "Physicians for Human Rights Report",
+            "url": "https://www.phr.org.il/en/"
+          }
+        ]
+      },
+      {
+        "time": "June-August 2018",
+        "title": "Commission begins field investigation",
+        "description": "UN Commission visits Gaza and region (not Israel—access denied). Conducts hundreds of interviews with victims, witnesses, medical personnel. Reviews video evidence, medical records, ballistics reports. Documents every killing on official protest days.",
+        "sourceLinks": [
+          {
+            "name": "UN Commission Methodology Section",
+            "url": "https://www.un.org/unispal/document/commission-of-inquiry-on-2018-protests-in-opt-final-report-a-hrc-40-74-advance-unedited/"
+          }
+        ]
+      },
+      {
+        "time": "July 2018",
+        "title": "Third medic killed; amputations mount",
+        "description": "July 20: Abdullah al-Qutati (20), paramedic, killed. Third medical worker shot dead. WHO reports 'unprecedented' number of limb injuries requiring amputation—bullets causing extreme bone and tissue damage. Over 100 amputations performed; many more needed.",
+        "sourceLinks": [
+          {
+            "name": "WHO Special Report",
+            "url": "https://www.who.int/"
+          }
+        ]
+      },
+      {
+        "time": "September 2018",
+        "title": "Protests continue despite casualties",
+        "description": "Weekly protests ongoing. By September, over 180 Palestinians killed, 5,500+ shot with live fire. International attention wanes. Israeli military maintains rules of engagement unchanged. Zero Israeli casualties reported throughout entire protest period.",
+        "sourceLinks": [
+          {
+            "name": "B'Tselem Statistics",
+            "url": "https://www.btselem.org/gaza_strip/20190330_gaza_march_of_return"
+          }
+        ]
+      },
+      {
+        "time": "28 February 2019",
+        "title": "UN Commission releases report",
+        "description": "Commission releases comprehensive 289-page report. Key finding: 'Reasonable grounds to believe' that in 187 of 189 cases investigated, use of live ammunition was unlawful. Victims posed no imminent threat. Violations may constitute war crimes or crimes against humanity. Recommends criminal investigations and ICC referral.",
+        "sourceLinks": [
+          {
+            "name": "UN Commission Report A/HRC/40/74",
+            "url": "https://www.un.org/unispal/document/commission-of-inquiry-on-2018-protests-in-opt-final-report-a-hrc-40-74-advance-unedited/"
+          }
+        ]
+      },
+      {
+        "time": "22 March 2019",
+        "title": "UN Human Rights Council endorses report",
+        "description": "Human Rights Council endorses Commission report by vote of 23-8-16. Calls on Israel to comply with recommendations. Israel rejects all findings. US, Australia, Austria vote against. Many European countries abstain.",
+        "sourceLinks": [
+          {
+            "name": "UN HRC Resolution",
+            "url": "https://www.ohchr.org/en/hr-bodies/hrc/co-i-gaza-protests/index"
+          }
+        ]
+      },
+      {
+        "time": "27 December 2019",
+        "title": "Hamas announces end to protests",
+        "description": "After 21 months of weekly demonstrations, Hamas announces suspension of Great March of Return. Total toll: 223 Palestinians killed, 28,939 injured. Zero Israeli casualties. Protests ended with none of their stated objectives achieved: no easing of blockade, no progress on right of return.",
+        "sourceLinks": [
+          {
+            "name": "B'Tselem Final Statistics",
+            "url": "https://www.btselem.org/gaza_strip/20190330_gaza_march_of_return"
+          }
+        ]
+      },
+      {
+        "time": "2020-Present",
+        "title": "Accountability efforts continue",
+        "description": "Israeli military closes vast majority of investigations without indictment. Only minor charges filed in handful of cases. ICC investigation (opened 2021) includes Great March of Return. Palestinian lawyers submit evidence to ICC. Victims continue seeking justice through international mechanisms.",
+        "sourceLinks": [
+          {
+            "name": "Adalah - Legal Center for Arab Minority Rights",
+            "url": "https://www.adalah.org/"
+          }
+        ]
+      }
+    ]
+  },
+  "warCrimes": {
+    "title": "Documented Violations of International Law",
+    "icon": "⚠️",
+    "alert": {
+      "type": "warning",
+      "icon": "⚠️",
+      "text": "<strong>UN Commission conclusion:</strong> 'Israeli security forces killed and gravely injured civilians who were neither participating directly in hostilities nor posing an imminent threat...Some violations may constitute war crimes or crimes against humanity.'—Chair Santiago Canton, February 2019"
+    },
+    "crimes": [
+      {
+        "icon": "🎯",
+        "title": "Unlawful Killings - 187 of 189 Cases",
+        "description": "UN Commission investigated every killing at designated protest sites on official protest days (Mar 30-Dec 31, 2018). Found 'reasonable grounds to believe' 187 of 189 killings were unlawful under international law. Victims 'neither participating directly in hostilities nor posing imminent threat to life' when shot. Intentional lethal force against civilians not posing imminent threat constitutes willful killing—war crime under Geneva Conventions.",
+        "sourceLink": "https://www.un.org/unispal/document/commission-of-inquiry-on-2018-protests-in-opt-final-report-a-hrc-40-74-advance-unedited/",
+        "sourceText": "📄 UN Commission Report, Executive Summary ↑"
+      },
+      {
+        "icon": "🏥",
+        "title": "Targeting of Medical Personnel",
+        "description": "Three paramedics killed (Razan al-Najjar, Musa Abu Hassanein, Abdullah al-Qutati), 441 wounded despite clear identification with white medical vests marked with red crescent/cross. All were providing medical care and posed no threat. Intentional attacks on medical personnel are grave breaches of Geneva Conventions. UN: 'no justification' for these killings.",
+        "sourceLink": "https://www.un.org/unispal/document/commission-of-inquiry-on-2018-protests-in-opt-final-report-a-hrc-40-74-advance-unedited/",
+        "sourceText": "📄 UN Commission para. 83-87 ↑"
+      },
+      {
+        "icon": "📰",
+        "title": "Killing and Wounding of Journalists",
+        "description": "Two journalists killed (Yaser Murtaja, Ahmad Abu Hussein), 144 injured. Both killed journalists clearly wearing PRESS identification. Committee to Protect Journalists: 'Deliberately targeting journalists is a war crime.' Targeting clearly identified journalists violates IHL protections for civilians not taking part in hostilities.",
+        "sourceLink": "https://cpj.org/",
+        "sourceText": "📄 CPJ Investigation ↑"
+      },
+      {
+        "icon": "👶",
+        "title": "Killing of 41 Children",
+        "description": "41 children (ages 8 months to 17 years) killed. UN Commission found in vast majority of cases, children posed no imminent threat when shot. Leila al-Ghandour (8 months) died from tear gas exposure. Others shot with live ammunition. Willful killing of protected persons (children) is grave breach of Fourth Geneva Convention.",
+        "sourceLink": "https://www.un.org/unispal/document/commission-of-inquiry-on-2018-protests-in-opt-final-report-a-hrc-40-74-advance-unedited/",
+        "sourceText": "📄 UN Commission para. 77-82 ↑"
+      },
+      {
+        "icon": "🦿",
+        "title": "Deliberate Targeting of Lower Limbs",
+        "description": "Pattern of intentional shooting at lower limbs documented—6,106 shot with live fire, majority in legs. WHO documented 'unprecedented' limb injuries requiring 122+ amputations (20 children). Physicians for Human Rights: bullets 'designed to cause maximum tissue and bone damage.' Intentionally causing severe injury amounting to torture or cruel treatment—potential war crime.",
+        "sourceLink": "https://www.who.int/",
+        "sourceText": "📄 WHO Report on Limb Injuries ↑"
+      },
+      {
+        "icon": "⚖️",
+        "title": "Excessive and Indiscriminate Use of Force",
+        "description": "May 14, 2018: 60 killed, 1,100+ shot in single day. No Israeli casualties throughout entire 21-month period demonstrates force was not in response to imminent threat. UN: Use of lethal force was 'disproportionate' and 'not strictly necessary.' Indiscriminate firing into crowds of civilians violates fundamental IHL principles.",
+        "sourceLink": "https://www.un.org/unispal/document/commission-of-inquiry-on-2018-protests-in-opt-final-report-a-hrc-40-74-advance-unedited/",
+        "sourceText": "📄 UN Commission Special Section on May 14 ↑"
+      },
+      {
+        "icon": "🎖️",
+        "title": "Unlawful Rules of Engagement",
+        "description": "Israeli military rules of engagement authorized snipers to use live ammunition against protesters not posing imminent threat. Rules permitted shooting persons approaching fence, damaging it, or setting tires alight—none constitute imminent threat to life. Rules of engagement that authorize unlawful killings may constitute superior orders to commit war crimes.",
+        "sourceLink": "https://www.un.org/unispal/document/commission-of-inquiry-on-2018-protests-in-opt-final-report-a-hrc-40-74-advance-unedited/",
+        "sourceText": "📄 UN Commission Legal Analysis ↑"
+      },
+      {
+        "icon": "⚠️",
+        "title": "Possible Crimes Against Humanity",
+        "description": "UN Commission: Given pattern, scale, and systematic nature of violations—223 killed, 28,939 injured over 21 months—violations may constitute crimes against humanity. Elements include: widespread or systematic attack against civilian population, knowledge of attack, and underlying acts (murder, torture). Commission recommended ICC investigation.",
+        "sourceLink": "https://www.un.org/unispal/document/commission-of-inquiry-on-2018-protests-in-opt-final-report-a-hrc-40-74-advance-unedited/",
+        "sourceText": "📄 UN Commission Conclusions ↑"
+      }
+    ]
+  },
+  "international_law": {
+    "title": "International Law Framework",
+    "icon": "⚖️",
+    "introduction": "The Great March of Return occurred under framework of international human rights law and international humanitarian law. UN Commission concluded Israeli forces' actions violated both legal frameworks.",
+    "sections": [
+      {
+        "heading": "Use of Force - International Human Rights Law",
+        "violations": [
+          "<strong>Right to Life (ICCPR Article 6):</strong> Intentional use of lethal force only permissible when 'strictly necessary' to protect life from imminent threat. UN found in 187 of 189 cases, victims posed no such threat—violations of right to life.",
+          "<strong>Basic Principles on Use of Force (UN 1990):</strong> 'Intentional lethal use of firearms may only be made when strictly unavoidable in order to protect life.' Commission found force was not unavoidable; no Israeli casualties demonstrate absence of threat.",
+          "<strong>Arbitrary Deprivation of Life:</strong> Willful killings without legal justification constitute arbitrary deprivation of life. UN Human Rights Committee: States must investigate all killings by security forces.",
+          "<strong>Prohibition of Torture:</strong> Intentional shooting to cause severe limb injuries (122+ amputations) may constitute torture or cruel, inhuman treatment prohibited under ICCPR Article 7 and Convention Against Torture."
+        ]
+      },
+      {
+        "heading": "International Humanitarian Law - Fourth Geneva Convention",
+        "violations": [
+          "<strong>Article 27 (Protected Persons):</strong> Civilians 'shall be treated humanely...protected against all acts of violence.' Shooting civilians not posing imminent threat violates this core protection.",
+          "<strong>Article 147 (Grave Breaches):</strong> 'Wilful killing...torture...wilfully causing great suffering or serious injury' are grave breaches. 223 killings, 28,939 injuries, 122+ amputations meet this threshold.",
+          "<strong>Protected Categories:</strong> Geneva Conventions specifically protect medical personnel (Article 20) and journalists as civilians. Killing 3 medics and 2 journalists are grave breaches.",
+          "<strong>Children:</strong> Fourth Geneva Convention Article 24 and Additional Protocol I Article 77 provide special protection for children. Killing 41 children violates these protections."
+        ]
+      },
+      {
+        "heading": "UN Commission of Inquiry Findings (February 2019)",
+        "violations": [
+          "<strong>Unlawful Killings:</strong> '187 of 189' killings investigated found unlawful. Victims 'neither participating directly in hostilities nor posing imminent threat of death or serious injury.'",
+          "<strong>War Crimes:</strong> Commission found 'reasonable grounds to believe' Israeli forces committed violations amounting to war crimes, including willful killing and torture/cruel treatment.",
+          "<strong>Crimes Against Humanity:</strong> Given widespread and systematic nature of attack against civilian population, Commission found violations may constitute crimes against humanity.",
+          "<strong>Command Responsibility:</strong> Violations resulted from policy decisions at highest levels. Rules of engagement approved by senior military and political leadership may establish command responsibility for war crimes."
+        ]
+      },
+      {
+        "heading": "Specific Protections Violated",
+        "violations": [
+          "<strong>Medical Personnel:</strong> Hague Convention IV (1907) and Geneva Conventions mandate protection of medical personnel. Shooting 3 clearly marked paramedics and wounding 441 medical workers violates this absolute protection.",
+          "<strong>Journalists:</strong> Additional Protocol I Article 79 affords journalists protection as civilians. Intentional targeting of 2 clearly marked journalists constitutes war crime.",
+          "<strong>Distinction Principle:</strong> Fundamental IHL principle requires distinction between combatants and civilians. Shooting unarmed civilians, children, medics, journalists violates this bedrock principle.",
+          "<strong>Proportionality:</strong> Even if some individuals posed threat, killing 60 in single day (May 14) with zero Israeli casualties demonstrates grossly disproportionate response."
+        ]
+      }
+    ],
+    "alert": {
+      "type": "critical",
+      "icon": "⚖️",
+      "text": "<strong>Total impunity:</strong> Despite UN findings, Israeli military closed vast majority of cases without indictment. Only minor charges in handful of cases unrelated to killings. ICC investigation ongoing but no charges filed as of 2025."
+    }
+  },
+  "testimonies": {
+    "title": "Witness Testimonies & Official Accounts",
+    "icon": "👥",
+    "witnesses": [
+      {
+        "initials": "SC",
+        "name": "Santiago Canton",
+        "role": "Chair, UN Commission of Inquiry",
+        "testimony": "In presenting final report February 2019: 'The Commission found reasonable grounds to believe that Israeli snipers shot at journalists, health workers, children and persons with disabilities, knowing they were clearly recognizable as such...Israeli soldiers killed and gravely injured civilians who were neither participating directly in hostilities nor posing an imminent threat...Some of these violations may constitute war crimes or crimes against humanity.'",
+        "source": "UN Commission Press Conference, February 28, 2019",
+        "sourceLink": "https://www.ohchr.org/en/press-releases/2019/02/israeli-snipers-shot-children-and-journalists-gaza-protests-un-inquiry-finds"
+      },
+      {
+        "initials": "SH",
+        "name": "Sara Hossain",
+        "role": "UN Commissioner",
+        "testimony": "Commissioner statement: 'There can be no justification for the killing and maiming of clearly identifiable journalists, medics, and persons who were clearly not posing an imminent threat of death or serious injury. The Commission found that Israeli security forces killed and gravely injured protestors who did not pose an imminent threat of death or serious injury to others when they were shot.'",
+        "source": "UN Commission Report, February 2019",
+        "sourceLink": "https://www.un.org/unispal/document/commission-of-inquiry-on-2018-protests-in-opt-final-report-a-hrc-40-74-advance-unedited/"
+      },
+      {
+        "initials": "RN",
+        "name": "Rawan al-Najjar (Razan's mother)",
+        "role": "Mother of killed paramedic",
+        "testimony": "After daughter Razan shot June 1, 2018: 'She was doing her job, saving lives. She had her hands up, showing she was a medic. They shot her anyway. My daughter died helping others. How can they say she was a threat? She was wearing white, she had the medical symbol, everyone could see she was a paramedic.' Razan's last words: 'I'm going to die.'",
+        "source": "Family testimony to investigators; media interviews",
+        "sourceLink": "https://www.phr.org.il/en/"
+      },
+      {
+        "initials": "DR",
+        "name": "Dr. Tarek Loubani",
+        "role": "Canadian emergency physician in Gaza",
+        "testimony": "Physician shot in legs while treating wounded, wearing clearly marked medical vest: 'I have worked in conflict zones around the world. I have never seen this level of deliberate targeting of medical personnel. We were clearly marked, everyone could see we were doctors and paramedics. They shot us anyway. The injuries I saw—legs blown apart, bones shattered—these were designed to maim for life.'",
+        "source": "Testimony to Canadian Parliament; media interviews, May 2018",
+        "sourceLink": "https://www.hrw.org/"
+      },
+      {
+        "initials": "YM",
+        "name": "Yaser Murtaja (before death)",
+        "role": "Journalist, killed April 6, 2018",
+        "testimony": "In interview days before being shot dead: 'I film the protests to show the world what is happening here. We wear PRESS vests so the Israeli soldiers know we are journalists. We are not fighters, we are documenting.' Shot in abdomen while wearing clearly marked press vest. Died of wounds. Video shows him clearly identified as press when shot.",
+        "source": "Final interview; Committee to Protect Journalists investigation",
+        "sourceLink": "https://cpj.org/"
+      },
+      {
+        "initials": "BKM",
+        "name": "Ban Ki-moon",
+        "role": "Former UN Secretary-General (Deputy Chair, The Elders)",
+        "testimony": "May 2018 statement: 'The scenes from Gaza are heartbreaking. The use of live ammunition against unarmed protesters is unacceptable...Israel has a responsibility to exercise maximum restraint and ensure the protection of civilians. The killing and wounding of thousands of Palestinian demonstrators must be urgently investigated.'",
+        "source": "The Elders statement, May 2018",
+        "sourceLink": "https://www.theelders.org/"
+      },
+      {
+        "initials": "ZH",
+        "name": "Zeid Ra'ad Al Hussein",
+        "role": "UN High Commissioner for Human Rights (2014-2018)",
+        "testimony": "March 30, 2018 statement after first day: 'The stark contrast in casualties on both sides is suggestive of a wholly disproportionate response. The mere fact of approaching or crossing a border fence cannot amount to a threat to life or serious injury justifying the use of live ammunition...The use of live ammunition against peaceful protesters clearly violates international human rights law.'",
+        "source": "OHCHR Statement, March 31, 2018",
+        "sourceLink": "https://www.ohchr.org/"
+      },
+      {
+        "initials": "WHO",
+        "name": "World Health Organization",
+        "role": "UN health agency",
+        "testimony": "Special report on limb injuries: 'The injuries sustained by patients are of a severity not seen before...The bones and soft tissue are pulverized, creating massive wounds...Many patients face multiple surgeries and some will require amputations. This pattern of injuries is unprecedented and extremely concerning, suggesting systematic targeting of lower limbs.'",
+        "source": "WHO Situation Report, June 2018",
+        "sourceLink": "https://www.who.int/"
+      },
+      {
+        "initials": "PHR",
+        "name": "Physicians for Human Rights - Israel",
+        "role": "Israeli human rights medical organization",
+        "testimony": "After investigation: 'The use of live fire against medical staff...constitutes a grave violation of international humanitarian law. Medical personnel are protected persons under the Geneva Conventions...The Israeli military's actions endanger medical teams and deprive the wounded of life-saving treatment. We call for immediate end to attacks on medical personnel.'",
+        "source": "PHR-Israel Report, June 2018",
+        "sourceLink": "https://www.phr.org.il/en/"
+      },
+      {
+        "initials": "BTS",
+        "name": "Breaking the Silence (Israeli soldiers)",
+        "role": "IDF veterans' organization",
+        "testimony": "Anonymous soldier testimony about orders: 'We were told anyone who approaches the fence is a target. It didn't matter if they were armed or not, if they were kids or medics or press. The orders were clear: shoot to injure, aim for the legs. They wanted to send a message. We shot thousands of people who posed no threat to us. Some of my fellow soldiers celebrated their kill counts.'",
+        "source": "Soldier testimonies collected 2018-2019",
+        "sourceLink": "https://www.breakingthesilence.org.il/"
+      }
+    ]
+  },
+  "personalities": {
+    "title": "Key Figures",
+    "icon": "👤",
+    "commanders": [
+      {
+        "name": "Benjamin Netanyahu",
+        "role": "Prime Minister of Israel (2009-2021)",
+        "birth_death": "1949-present",
+        "responsibility": "Approved military response to protests including rules of engagement permitting lethal force. Defended killings: 'Hamas sends thousands to breach border and murder Israelis. We will defend our border.' Rejected UN Commission findings."
+      },
+      {
+        "name": "Avigdor Lieberman",
+        "role": "Defense Minister (2016-2018)",
+        "birth_death": "1958-present",
+        "responsibility": "Oversaw military operations during protests. Stated April 2018: 'There are no innocents in Gaza.' Approved rules of engagement. Praised soldiers: 'Everyone who was shot—was shot because he deserved it.' Resigned November 2018 over ceasefire with Hamas."
+      },
+      {
+        "name": "Gadi Eisenkot",
+        "role": "IDF Chief of General Staff (2015-2019)",
+        "birth_death": "1960-present",
+        "responsibility": "Top military commander during protests. Responsible for operational decisions and rules of engagement. Defended use of live fire. Later admitted in testimony some soldiers may have violated rules but maintained overall response appropriate."
+      },
+      {
+        "name": "Ismail Haniyeh",
+        "role": "Hamas Political Bureau Head (2017-present)",
+        "birth_death": "1962-present",
+        "responsibility": "Hamas political leader. Supported protests but did not organize them initially. Later Hamas took more active organizational role. Called for continued protests despite casualties. Rejected criticism that Hamas used civilians as shields."
+      },
+      {
+        "name": "Ahmed Abu Artema",
+        "role": "Journalist; protest organizer",
+        "birth_death": "c.1984-present",
+        "responsibility": "Independent Palestinian journalist who conceived and helped organize Great March of Return. Advocated for non-violent approach. Vision was peaceful protest to draw attention to blockade and right of return. Has stated protests succeeded in raising awareness despite tragic casualties."
+      },
+      {
+        "name": "Razan al-Najjar",
+        "role": "Paramedic (victim)",
+        "birth_death": "1997-2018",
+        "responsibility": "21-year-old volunteer paramedic killed June 1, 2018 while treating wounded. Became symbol of Israeli targeting of medical personnel. Her killing documented by video; she was clearly marked as medic with hands raised when shot."
+      }
+    ]
+  },
+  "historicalImpact": {
+    "title": "Historical Impact & Legacy",
+    "icon": "🌍",
+    "sections": [
+      {
+        "heading": "Immediate Impact (2018-2019)",
+        "items": [
+          "223 Palestinians killed, 28,939 injured over 21 months of largely peaceful protests",
+          "Zero Israeli casualties—stark demonstration that protesters posed no actual threat",
+          "UN Commission found 187 of 189 investigated killings unlawful; violations may constitute war crimes or crimes against humanity",
+          "International attention focused on Gaza humanitarian crisis and blockade, though no policy changes resulted",
+          "122+ Palestinians required limb amputations; 20 were children—generation maimed for life",
+          "Razan al-Najjar became international symbol of Israeli targeting of medical personnel",
+          "Protests demonstrated Palestinian determination to pursue rights despite lethal response"
+        ]
+      },
+      {
+        "heading": "Long-term Consequences (2019-Present)",
+        "items": [
+          "Total impunity: Zero meaningful prosecutions despite UN findings of systematic violations",
+          "Established precedent: Israel could kill protesters with impunity; international community would do nothing",
+          "ICC investigation (opened 2021) includes Great March of Return but no charges filed as of 2025",
+          "Victims continue suffering: hundreds with permanent disabilities, psychological trauma, lost livelihoods",
+          "Gaza blockade continued unabated; none of protests' stated objectives achieved",
+          "International law credibility damaged: UN findings completely ignored by Israel and not enforced",
+          "Protests entered Palestinian collective memory alongside Nakba, Naksa, Intifadas as symbol of resistance",
+          "Medical community horrified by targeting of clearly marked health workers—unprecedented in modern conflicts"
+        ]
+      },
+      {
+        "heading": "Accountability Status",
+        "items": [
+          "✗ No Israeli officials or soldiers prosecuted for killings despite UN findings",
+          "✗ No accountability for May 14 massacre (60 killed in single day)",
+          "✗ No accountability for killing of Razan al-Najjar and two other medics",
+          "✗ No accountability for killing of Yaser Murtaja, Ahmad Abu Hussein (journalists)",
+          "✗ No accountability for 41 children killed",
+          "✗ Israeli military investigations: hundreds of cases opened, vast majority closed without indictment",
+          "✗ Only handful of cases resulted in minor charges unrelated to killings",
+          "✓ UN Commission comprehensively documented violations",
+          "✓ UN Human Rights Council endorsed Commission findings (23-8-16 vote)",
+          "✓ ICC has jurisdiction; investigation ongoing but slow",
+          "✓ Palestinian lawyers submitted extensive evidence to ICC",
+          "✓ International human rights organizations (HRW, Amnesty, PHR) continue advocacy for accountability"
+        ]
+      }
+    ]
+  },
+  "sources": {
+    "title": "Verified Sources & Documentation",
+    "icon": "📚",
+    "introduction": "Primary sources include UN Commission of Inquiry comprehensive investigation, human rights organizations, medical documentation, video evidence, and survivor testimonies. UN Commission investigated every single killing on official protest days.",
+    "list": [
+      {
+        "icon": "🇺🇳",
+        "name": "UN Human Rights Council - Report of the Commission of Inquiry on the protests in the OPT (A/HRC/40/74)",
+        "type": "Primary UN Investigation",
+        "description": "Comprehensive 289-page investigation led by Santiago Canton. Investigated every killing at designated protest sites on official protest days (March 30-December 31, 2018). Found 187 of 189 killings unlawful. Concluded violations may constitute war crimes or crimes against humanity. Released February 28, 2019.",
+        "link": "https://www.un.org/unispal/document/commission-of-inquiry-on-2018-protests-in-opt-final-report-a-hrc-40-74-advance-unedited/",
+        "verified": true
+      },
+      {
+        "icon": "🇺🇳",
+        "name": "OHCHR - Press Release: Israeli snipers shot children and journalists",
+        "type": "UN Statement",
+        "description": "Official UN Human Rights Office press release summarizing Commission findings. Details killings of children, journalists, medical personnel. Includes commissioner quotes on lack of justification for killings.",
+        "link": "https://www.ohchr.org/en/press-releases/2019/02/israeli-snipers-shot-children-and-journalists-gaza-protests-un-inquiry-finds",
+        "verified": true
+      },
+      {
+        "icon": "📊",
+        "name": "B'Tselem - Complete Statistics: One Year Since the Gaza 'March of Return'",
+        "type": "Israeli Human Rights Documentation",
+        "description": "Comprehensive database documenting 223 Palestinians killed through December 2019, including 41 children, 3 medics, 2 journalists. Individual incident reports with names, ages, circumstances. Updated statistics through end of protests.",
+        "link": "https://www.btselem.org/gaza_strip/20190330_gaza_march_of_return",
+        "verified": true
+      },
+      {
+        "icon": "⚕️",
+        "name": "Physicians for Human Rights - Israel: Attacks on Medical Personnel",
+        "type": "Medical Human Rights Organization",
+        "description": "Documentation of attacks on 441 medical personnel including 3 killed. Investigation of Razan al-Najjar killing. Medical analysis of injuries. Calls for protection of medical workers under Geneva Conventions.",
+        "link": "https://www.phr.org.il/en/",
+        "verified": true
+      },
+      {
+        "icon": "🏥",
+        "name": "World Health Organization - Gaza Limb Injuries Report",
+        "type": "UN Health Agency",
+        "description": "Special reports on unprecedented pattern of severe lower-limb injuries. Documented 122+ amputations required. Analysis of bullet injuries showing extreme bone and tissue damage. Ongoing health crisis from injuries.",
+        "link": "https://www.who.int/",
+        "verified": true
+      },
+      {
+        "icon": "📰",
+        "name": "Committee to Protect Journalists - Journalists Killed in Gaza Protests",
+        "type": "Press Freedom Organization",
+        "description": "Investigation of killings of Yaser Murtaja and Ahmad Abu Hussein. Documentation of 144 journalists injured. Analysis of targeting of clearly marked press. Calls for accountability for journalist killings.",
+        "link": "https://cpj.org/",
+        "verified": true
+      },
+      {
+        "icon": "👶",
+        "name": "Defense for Children International - Palestine: Child Casualties",
+        "type": "Children's Rights Organization",
+        "description": "Detailed documentation of 41 children killed. Individual case files with circumstances of death. Analysis of violations of Convention on Rights of the Child. Advocacy for accountability.",
+        "link": "https://www.dci-palestine.org/",
+        "verified": true
+      },
+      {
+        "icon": "🇺🇳",
+        "name": "UN OCHA - Humanitarian Bulletins on Gaza Protests",
+        "type": "UN Humanitarian Coordination",
+        "description": "Regular situation reports documenting casualties, injuries, medical responses. Statistics on 28,939 total injuries. Humanitarian impact assessments. Updates throughout protest period.",
+        "link": "https://www.ochaopt.org/",
+        "verified": true
+      },
+      {
+        "icon": "⚖️",
+        "name": "Human Rights Watch - Gaza Protests Reports",
+        "type": "Human Rights Investigation",
+        "description": "Multiple reports documenting excessive use of force, targeting of medical personnel, violations of laws of war. Calls for investigations and accountability.",
+        "link": "https://www.hrw.org/",
+        "verified": true
+      },
+      {
+        "icon": "🔴",
+        "name": "Amnesty International - Gaza Protests Documentation",
+        "type": "Human Rights Organization",
+        "description": "Reports on use of excessive force, unlawful killings, targeting of medical workers. Analysis under international human rights law. Advocacy for ICC investigation.",
+        "link": "https://www.amnesty.org/",
+        "verified": true
+      },
+      {
+        "icon": "🎖️",
+        "name": "Breaking the Silence - Soldier Testimonies",
+        "type": "IDF Veterans Organization",
+        "description": "Anonymous testimonies from Israeli soldiers who participated in operations during protests. Details on rules of engagement, orders to shoot, perspectives on killings.",
+        "link": "https://www.breakingthesilence.org.il/",
+        "verified": true
+      },
+      {
+        "icon": "⚖️",
+        "name": "Adalah - Legal Center: Gaza Protests Advocacy",
+        "type": "Legal Advocacy Organization",
+        "description": "Legal filings to Israeli courts demanding investigations. Documentation for ICC. Analysis of violations under international law. Representation of victims' families.",
+        "link": "https://www.adalah.org/",
+        "verified": true
+      }
+    ],
+    "alert": {
+      "type": "info",
+      "icon": "ℹ️",
+      "text": "<strong>Methodology:</strong> UN Commission investigated every killing on official protest days through Dec 31, 2018, using video evidence, medical records, ballistics analysis, witness interviews. Israel refused cooperation. B'Tselem continued documentation through end of protests December 2019."
+    }
+  },
+  "media": {
+    "images": {
+      "local": [],
+      "remote": []
+    },
+    "documents": {
+      "local": [],
+      "remote": []
+    }
+  },
+  "cta": {
+    "title": "Support Accountability for Victims",
+    "description": "Demand justice for the 223 Palestinians killed and 28,939 injured during peaceful protests.",
+    "buttons": [
+      { "text": "📅 View Full Timeline", "link": "../../major-incidents-timeline.html", "type": "primary" },
+      { "text": "🖨️ Print/Save PDF", "link": "#", "type": "secondary", "action": "print" },
+      { "text": "📧 Submit Info", "link": "mailto:palgeno.pedia@gmx.de?subject=Great March of Return - Additional Information", "type": "secondary" }
+    ]
+  }
+}

@@ -1,0 +1,829 @@
+{
+  "id": "hist_013",
+  "event_type": "Military Operation, Airstrikes, Civilian Casualties",
+  "verification_status": "verified",
+  "metadata": {
+    "pageTitle": "Operation Pillar of Defense (November 2012) | Historical Documentation",
+    "description": "Eight-day Israeli military operation in Gaza Strip (14-21 November 2012): airstrikes killing 167 Palestinians including 87 civilians, 32 children. Detailed documentation based on B'Tselem investigations, UN OCHA reports, and human rights monitoring.",
+    "keywords": "Operation Pillar of Defense, Gaza, 2012, Palestine, Israel, airstrikes, civilian casualties, war crimes, Ahmed Jabari, IHL violations",
+    "lastUpdated": "2025-10-18",
+    "author": "Yassin"
+  },
+  "date": {
+    "start": "2012-11-14",
+    "end": "2012-11-21",
+    "duration_days": 8,
+    "display": "November 14–21, 2012",
+    "context": "Escalation following targeted killing of Hamas military commander"
+  },
+  "location": {
+    "historical": {
+      "name": "Gaza Strip",
+      "name_arabic": "قطاع غزة",
+      "admin_context": "Palestinian territory under Israeli blockade since 2007, governed by Hamas",
+      "coordinates": [31.5017, 34.4668],
+      "area_sq_km": 365,
+      "population_2012": "≈1.7 million (UNRWA: 1 million refugees)"
+    },
+    "current": {
+      "name": "Gaza Strip",
+      "admin_context": "Palestinian territory, Israeli-occupied since 1967, Hamas-governed since 2007",
+      "coordinates": [31.5017, 34.4668],
+      "status": "Under blockade; subject to recurring Israeli military operations"
+    }
+  },
+  "hero": {
+    "category": "⚔️ MILITARY OPERATION • 2012 GAZA CONFLICT",
+    "title": "Operation Pillar of Defense",
+    "subtitle": "Eight-day aerial bombardment campaign killing 167 Palestinians, 87 civilians",
+    "metaCards": [
+      { "icon": "📅", "label": "Date", "value": "November 14–21, 2012", "detail": "8-day operation, no ground incursion" },
+      { "icon": "📍", "label": "Location", "value": "Gaza Strip", "detail": "1,500+ targets struck across Gaza" },
+      { "icon": "💀", "label": "Palestinian Deaths", "value": "167", "detail": "87 civilians (52%), 32 children, 62 combatants" },
+      { "icon": "🇮🇱", "label": "Israeli Deaths", "value": "6", "detail": "4 civilians, 2 security personnel" }
+    ]
+  },
+  "quickFacts": {
+    "title": "⚡ Quick Facts",
+    "items": [
+      { "label": "Event Type", "value": "Military Operation, Airstrikes, Civilian Casualties" },
+      { "label": "Perpetrator", "value": "Israel Defense Forces (IDF)" },
+      { "label": "Verification", "value": "B'Tselem field investigations; UN OCHA reports; Protection Cluster data" },
+      { "label": "Legal Framework", "value": "International Humanitarian Law violations documented" }
+    ]
+  },
+  "brief_summary": "Operation Pillar of Defense was an eight-day Israeli military campaign in Gaza (November 14-21, 2012), initiated with the targeted killing of Hamas military chief Ahmed al-Jabari. The IDF conducted approximately 1,500 airstrikes across Gaza. According to B'Tselem's field investigations, 167 Palestinians were killed, including at least 87 civilians who did not participate in hostilities (52%), among them 32 children. Over 11,100 Palestinians were injured. Six Israelis died from Palestinian rocket fire. The operation raised serious concerns about violations of international humanitarian law, including lack of effective warnings, disproportionate force, and overly broad definitions of legitimate military targets.",
+  "perpetrators": [
+    "Israel Defense Forces (IDF)",
+    "Israeli Air Force (IAF)",
+    "Israeli Navy"
+  ],
+  "executiveSummary": {
+    "title": "Executive Summary",
+    "icon": "📋",
+    "alert": {
+      "type": "critical",
+      "icon": "⚠️",
+      "text": "<strong>Legal Context:</strong> Operation assessed under 1949 Geneva Conventions (Israel ratified 1951) and customary international humanitarian law. B'Tselem's May 2013 report raised concerns about lack of effective warnings, disproportionate force, and overly broad definitions of 'legitimate military targets.'"
+    },
+    "paragraphs": [
+      "On November 14, 2012, at approximately 15:45, the Israeli Air Force assassinated Ahmed al-Jabari, head of Hamas's military wing, marking the start of Operation Pillar of Defense. Over eight days, the IDF struck approximately 1,500 targets across Gaza—including underground rocket launchers, arms-smuggling tunnels, weapons storage facilities, and residences of Hamas officials. Unlike Operation Cast Lead (2008-09), no ground incursion occurred.",
+      "According to B'Tselem's field investigations published May 2013, the operation killed 167 Palestinians: at least 87 civilians who did not participate in hostilities (52%), including 32 children; 62 combatants; 7 targets of assassinations; and 11 of unknown status. The UN Protection Cluster documented over 11,100 injuries, including 3,374 children. Analysis reveals 80% of civilian deaths occurred in the final four days, when the ratio of civilian to combatant deaths reversed sharply.",
+      "Six Israelis died from Palestinian rocket fire: four civilians and two security personnel. Palestinian groups fired 1,667 rockets toward Israel (ISA figures); 436 were intercepted by Iron Dome. Hamas also executed at least 6-7 Palestinians accused of collaboration during the operation. B'Tselem investigated nine specific incidents raising 'grave suspicions' of IHL violations, including attacks killing children working in fields, families in homes without warnings, and civilians during Arab foreign ministers' visit. The IDF Spokesperson initially admitted 'probable error' in strike killing 12 members of al-Dalu family, but MAG Corps later closed case without prosecution."
+    ]
+  },
+  "casualties": {
+    "title": "Casualties",
+    "icon": "💀",
+    "deaths": "167 Palestinian, 6 Israeli",
+    "injured": "11,100+ Palestinian, 1,600+ Israeli",
+    "breakdown": [
+      {
+        "type": "deaths",
+        "number": "87",
+        "label": "Palestinian Civilians (did not participate in hostilities)",
+        "detail": "52% of total; includes 32 children, multiple women and elderly. 80% killed in final 4 days",
+        "sources": [
+          {
+            "name": "B'Tselem Report (May 2013), pp. 9-11",
+            "link": "https://www.btselem.org/download/201305_pillar_of_defense_operation_eng.pdf",
+            "icon": "📚"
+          }
+        ]
+      },
+      {
+        "type": "deaths",
+        "number": "32",
+        "label": "Palestinian Children (included in civilian count)",
+        "detail": "Minors under 18; included in 87 civilian deaths above",
+        "sources": [
+          {
+            "name": "B'Tselem Report (May 2013), p. 9",
+            "link": "https://www.btselem.org/download/201305_pillar_of_defense_operation_eng.pdf",
+            "icon": "📚"
+          }
+        ]
+      },
+      {
+        "type": "deaths",
+        "number": "62",
+        "label": "Palestinian Combatants",
+        "detail": "Individuals who took part in hostilities",
+        "sources": [
+          {
+            "name": "B'Tselem Report (May 2013), p. 10",
+            "link": "https://www.btselem.org/download/201305_pillar_of_defense_operation_eng.pdf",
+            "icon": "📚"
+          }
+        ]
+      },
+      {
+        "type": "deaths",
+        "number": "7",
+        "label": "Targets of Assassination",
+        "detail": "Individuals specifically targeted by IDF; included Ahmed al-Jabari",
+        "sources": [
+          {
+            "name": "B'Tselem Report (May 2013), p. 10",
+            "link": "https://www.btselem.org/download/201305_pillar_of_defense_operation_eng.pdf",
+            "icon": "📚"
+          }
+        ]
+      },
+      {
+        "type": "deaths",
+        "number": "11",
+        "label": "Status Unknown",
+        "detail": "B'Tselem unable to determine if these individuals participated in hostilities",
+        "sources": [
+          {
+            "name": "B'Tselem Report (May 2013), p. 10",
+            "link": "https://www.btselem.org/download/201305_pillar_of_defense_operation_eng.pdf",
+            "icon": "📚"
+          }
+        ]
+      },
+      {
+        "type": "deaths",
+        "number": "6",
+        "label": "Israeli Deaths",
+        "detail": "4 civilians, 2 security personnel; killed by Palestinian rocket/mortar fire",
+        "sources": [
+          {
+            "name": "B'Tselem Report (May 2013), p. 28",
+            "link": "https://www.btselem.org/download/201305_pillar_of_defense_operation_eng.pdf",
+            "icon": "📚"
+          }
+        ]
+      },
+      {
+        "type": "injured",
+        "number": "11,100+",
+        "label": "Palestinian Injured",
+        "detail": "Includes 3,374 children; Health Cluster data",
+        "sources": [
+          {
+            "name": "UN OCHA Humanitarian Monitor (October-November 2012)",
+            "link": "https://www.un.org/unispal/document/auto-insert-201184/",
+            "icon": "🇺🇳"
+          }
+        ]
+      },
+      {
+        "type": "injured",
+        "number": "1,600+",
+        "label": "Israeli Injured",
+        "detail": "Includes 270 children; from rocket/mortar attacks",
+        "sources": [
+          {
+            "name": "OCHA, Key Figures on 2014 Hostilities (citing Israeli sources)",
+            "link": "https://www.ochaopt.org/content/key-figures-2014-hostilities",
+            "icon": "🇺🇳"
+          }
+        ]
+      }
+    ],
+    "alert": {
+      "type": "info",
+      "icon": "ℹ️",
+      "text": "<strong>Critical Pattern:</strong> B'Tselem analysis shows dramatic shift: First 4 days—17 civilians killed vs. 26 combatants (1.5:1 ratio). <strong>Last 4 days—70 civilians killed vs. 36 combatants (inverse ratio, 2:1)</strong>. Total deaths increased 2.5x in final four days. B'Tselem: 'relevant authorities must explain' this pattern (p. 39). No explanation provided by IDF."
+    }
+  },
+  "timeline": {
+    "title": "Timeline of Events",
+    "icon": "⏱️",
+    "events": [
+      {
+        "time": "October–Early November 2012",
+        "title": "Pre-Operation Escalation",
+        "description": "Four rounds of intensified violence: Palestinian rocket fire at southern Israel; Israeli incursions and airstrikes in Gaza. 23 Palestinians killed (7 civilians, 3 children); 93 Palestinians injured (77 civilians); 14 Israelis/foreign nationals injured (8 civilians). November 10-14: over 120 rockets fired from Gaza toward Israel.",
+        "source": "UN OCHA Humanitarian Monitor (Oct-Nov 2012)",
+        "sourceLinks": [
+          {
+            "name": "OCHA Humanitarian Monitor",
+            "url": "https://www.un.org/unispal/document/auto-insert-201184/"
+          }
+        ]
+      },
+      {
+        "time": "November 14, 2012, ~15:45",
+        "title": "Operation Begins: Assassination of Ahmed al-Jabari",
+        "description": "IAF airstrike targets vehicle in Gaza City, killing Ahmed al-Jabari (head of Hamas military wing, Al-Qassam Brigades) and passenger Muhammad al-Hams. This marked official start of Operation Pillar of Defense. Israeli officials cited 100+ rockets in prior 24 hours as justification.",
+        "source": "B'Tselem Report (May 2013), pp. 23-24",
+        "sourceLink": "https://www.btselem.org/download/201305_pillar_of_defense_operation_eng.pdf"
+      },
+      {
+        "initials": "MS",
+        "name": "Muna a-Shawa",
+        "role": "Mother of Yusra (18), killed during Arab ministers' visit (Gaza City)",
+        "testimony": "My daughter Yusra, 18, was sitting watching television in our western room. I was standing by the window of the eastern room, next to Yusra's room, and was about to call my children...to come upstairs. At about 4:30 PM, before I had a chance to call them, I heard an explosion inside my apartment. I saw dust and debris flying everywhere. I felt pain. I took a few steps and took hold of Yusra's hand. She took half a step together with me and then fell down. I tried to find her but couldn't because of all the dust and debris. I called out to her but she didn't answer...My son Muhammad came to the door, grabbed me and took me down to the street. I said to him, 'Go find Yusra.' He told me she had been killed...but I wouldn't talk with anyone and said that I wanted Yusra. I wanted to see her and make sure that she was okay, but I could feel that she wasn't all right.",
+        "source": "B'Tselem Report (May 2013), pp. 24-25",
+        "sourceLink": "https://www.btselem.org/download/201305_pillar_of_defense_operation_eng.pdf"
+      },
+      {
+        "initials": "TA",
+        "name": "Tamam al-'Asali",
+        "role": "Mother/wife, husband and 2 children killed collecting herbs (Jabalya)",
+        "testimony": "After lunch on Wednesday, 21 November 2012, my husband Talal asked me to make tea for everyone. Talal went outside to a nearby area that he cultivates to pick some herbs for tea. Two of his children, his son Ayman and daughter 'Abir came along. I began preparing the things for tea when suddenly I heard a powerful explosion from behind the house. I went outside immediately and ran to the place where Talal and the children were. Even before I reached them, I could already see Talal and Ayman lying on the ground, covered in blood...I understood that my husband had apparently been killed instantaneously. Ayman was still moving a little bit. I didn't see my daughter 'Abir. I felt dizzy and weak. Then, apparently, I passed out. [Later told] that 'Abir had also been killed. I screamed and cried hysterically. Three members of my family killed at one blow. I lost them all in an instant, for no reason.",
+        "source": "B'Tselem Report (May 2013), pp. 26-27",
+        "sourceLink": "https://www.btselem.org/download/201305_pillar_of_defense_operation_eng.pdf"
+      },
+      {
+        "initials": "NQ",
+        "name": "Naji Qdeih",
+        "role": "Husband of Samaher Qdeih (28), killed in Khuza'ah",
+        "testimony": "At around 9:30 PM on 17 November 2012...I decided that we had best go over to the house of my first wife Maha, because it was better protected...I picked up my infant daughter and went over to Maha's house, just seven meters away. Then I returned to get some clothes and a blanket for Mayar. I asked Samaher to bring another blanket and join me. Samaher left the apartment carrying the blanket. Suddenly there was a huge explosion. Chunks of stone went flying all over the place. White smoke filled the courtyard...I found my wife Samaher lying on the ground near the steps of the balcony. I picked her up and saw that her left leg was severed and her clothes torn. Blood was trickling from her mouth. I picked her up and asked that she recite the Shehadatein prayer because I realized that she was badly injured and wouldn't survive. [Samaher died at scene]",
+        "source": "B'Tselem Report (May 2013), pp. 15-16",
+        "sourceLink": "https://www.btselem.org/download/201305_pillar_of_defense_operation_eng.pdf"
+      },
+      {
+        "initials": "SA",
+        "name": "Sarah Abu Khusah",
+        "role": "Grandmother (65), toddler grandson killed in courtyard",
+        "testimony": "At about 8:00 o'clock in the morning, three of my grandchildren were playing in front of the house, which is part of the house's compound...Suddenly we heard a huge explosion nearby. We all ran outside to see what happened. I was in shock when I saw that the spot that was hit was right next to the wall that encloses the house, and that it had actually destroyed the wall. I saw my grandson Iyad lying dead on the ground. He had been hit directly by shrapnel. Another of my grandsons, Suhaib, was lying on the ground beside him but he was moving. Sarah was also lying on the ground. I called for an ambulance right away and picked up Iyad. [Iyad, 18 months old, killed; Suhaib (6) and Sarah (4) critically injured]",
+        "source": "B'Tselem Report (May 2013), pp. 20-21",
+        "sourceLink": "https://www.btselem.org/download/201305_pillar_of_defense_operation_eng.pdf"
+      },
+      {
+        "initials": "BT",
+        "name": "B'Tselem (institutional)",
+        "role": "Israeli human rights organization",
+        "testimony": "Report conclusion (May 2013): 'The findings of this report raise grave suspicions of misconduct. However, the means at B'Tselem's disposal are too limited to determine whether or not the Israeli military acted in accordance with the law in the cases presented here...Determining this requires additional information held by the military, which it refuses to disclose. Therefore, we call upon the Israeli authorities to conduct an independent investigation...and to present the findings publicly and transparently.'",
+        "source": "B'Tselem Report (May 2013), p. 39",
+        "sourceLink": "https://www.btselem.org/download/201305_pillar_of_defense_operation_eng.pdf"
+      },
+      {
+        "initials": "AI",
+        "name": "Amnesty International",
+        "role": "International human rights organization",
+        "testimony": "Statement to UN Human Rights Council (February 2013): 'The Israeli authorities' investigations into alleged violations of international humanitarian law during Operation Pillar of Defense follow a familiar pattern of "operational debriefings" rather than independent criminal investigations. Such investigations lack the necessary independence and transparency required under international law. The pattern of impunity for violations during Israeli military operations in Gaza must end.'",
+        "source": "Amnesty International, Statement to UN HRC (February 2013)",
+        "sourceLink": "https://www.un.org/unispal/document/auto-insert-188596/"
+      }
+    ]
+  },
+  "personalities": {
+    "title": "Key Figures: Command & Responsibility",
+    "icon": "👤",
+    "introduction": "Israeli political and military leadership responsible for Operation Pillar of Defense. B'Tselem's May 2013 report raised grave suspicions of IHL violations. No prosecutions resulted despite documented civilian casualties and questionable targeting decisions.",
+    "commanders": [
+      {
+        "name": "Benjamin Netanyahu",
+        "role": "Prime Minister",
+        "birth_death": "1949-present",
+        "responsibility": "Ultimate political authority; authorized operation and declared it successful. Stated objective: stop rocket attacks and destroy Hamas operational capabilities.",
+        "laterCareer": "Served as PM 2009-2021; returned 2022-present (as of documentation date)",
+        "accountability": "Never investigated for civilian casualties during operation. Declared operation a success despite 87 civilian deaths documented by B'Tselem.",
+        "sources": [
+          {
+            "name": "B'Tselem Report: 'Human Rights Violations during Operation Pillar of Defense' (May 2013), p. 3",
+            "link": "https://www.btselem.org/download/201305_pillar_of_defense_operation_eng.pdf",
+            "icon": "📚"
+          }
+        ]
+      },
+      {
+        "name": "Ehud Barak",
+        "role": "Defense Minister",
+        "birth_death": "1942-present",
+        "responsibility": "Oversaw IDF operations; responsible for military strategy and execution. Ministry claimed operation conducted with 'utmost professionalism' and in accordance with IHL.",
+        "laterCareer": "Left politics 2013; formed consultancy firm",
+        "accountability": "Never investigated. Military Advocate General (MAG) Corps closed investigations without prosecution, citing 'no suspicion of criminal offense' despite B'Tselem evidence of potential IHL violations.",
+        "sources": [
+          {
+            "name": "B'Tselem Report (May 2013), pp. 3-5, 36",
+            "link": "https://www.btselem.org/download/201305_pillar_of_defense_operation_eng.pdf",
+            "icon": "📚"
+          }
+        ]
+      },
+      {
+        "name": "Benny Gantz",
+        "role": "IDF Chief of Staff",
+        "birth_death": "1959-present",
+        "responsibility": "Overall military commander during operation. Responsible for rules of engagement, targeting protocols, and IDF conduct. Under his command, 1,500+ targets struck with documented civilian casualties.",
+        "laterCareer": "Defense Minister 2020-2022; Minister without portfolio 2024-present",
+        "accountability": "Never investigated. MAG investigations initiated but closed without substantive explanations for civilian casualties or targeting errors.",
+        "sources": [
+          {
+            "name": "B'Tselem Report (May 2013), pp. 12-27 (case investigations)",
+            "link": "https://www.btselem.org/download/201305_pillar_of_defense_operation_eng.pdf",
+            "icon": "📚"
+          }
+        ]
+      },
+      {
+        "name": "Tal Russo",
+        "role": "Israeli Air Force Commander",
+        "birth_death": "1958-present",
+        "responsibility": "Commanded aerial operations comprising the vast majority of strikes. IAF conducted precision strikes that nonetheless killed 87 civilians, raising questions about targeting procedures and proportionality assessments.",
+        "laterCareer": "Retired 2015; various positions in defense industries",
+        "accountability": "Never investigated for civilian casualties or targeting decisions despite B'Tselem documentation of questionable strikes.",
+        "sources": [
+          {
+            "name": "B'Tselem Report (May 2013), pp. 4-5, 35-39",
+            "link": "https://www.btselem.org/download/201305_pillar_of_defense_operation_eng.pdf",
+            "icon": "📚"
+          }
+        ]
+      },
+      {
+        "name": "Danny Efroni",
+        "role": "Military Advocate General",
+        "birth_death": "1961-present",
+        "responsibility": "Initiated inquiries into 70 cases of civilian deaths. According to Amnesty International, investigations followed pattern of 'operational de-briefings' rather than independent criminal investigations.",
+        "laterCareer": "Served as MAG until 2016",
+        "accountability": "Closed investigations without prosecutions. B'Tselem criticized MAG Corps for providing 'general and vague' responses without substantive explanations for civilian harm.",
+        "sources": [
+          {
+            "name": "Amnesty International, Statement to UN HRC (February 2013)",
+            "link": "https://www.un.org/unispal/document/auto-insert-188596/",
+            "icon": "📄"
+          },
+          {
+            "name": "B'Tselem Report (May 2013), pp. 35-39",
+            "link": "https://www.btselem.org/download/201305_pillar_of_defense_operation_eng.pdf",
+            "icon": "📚"
+          }
+        ]
+      },
+      {
+        "name": "Ahmed al-Jabari",
+        "role": "Hamas Military Commander",
+        "birth_death": "1960-2012 (killed Nov 14, 2012)",
+        "responsibility": "Head of Hamas's military wing (Izz ad-Din al-Qassam Brigades). Responsible for rocket operations and military strategy. His assassination triggered Operation Pillar of Defense.",
+        "laterCareer": "N/A - killed in opening strike",
+        "accountability": "Targeted killing was opening act of operation. Israel justified strike as preemptive action against imminent attacks.",
+        "sources": [
+          {
+            "name": "B'Tselem Report (May 2013), p. 3",
+            "link": "https://www.btselem.org/download/201305_pillar_of_defense_operation_eng.pdf",
+            "icon": "📚"
+          }
+        ]
+      }
+    ],
+    "alert": {
+      "type": "critical",
+      "icon": "⚖️",
+      "text": "<strong>Accountability Gap:</strong> Despite B'Tselem's May 2013 report documenting 'grave suspicions of IHL violations' in nine investigated cases, and despite MAG Corps opening 70 inquiries, no Israeli commanders or personnel faced prosecution. MAG investigations were criticized by Amnesty International as lacking independence. B'Tselem noted: 'the military refuses to provide real information about incidents...therefore it cannot be determined whether the target was legitimate and...whether the strike was proportional' (p. 37)."
+    }
+  },
+  "historicalImpact": {
+    "title": "Historical Impact",
+    "icon": "🌍",
+    "sections": [
+      {
+        "heading": "Immediate Impact",
+        "items": [
+          "Escalation Dynamics: Demonstrated shift in Israeli military doctrine post-Cast Lead (2008-09) toward shorter, air-focused operations, but with continued high civilian toll (52% of deaths)",
+          "Regional Tensions: Arab and Turkish foreign ministers visited Gaza during operation (Nov 20), highlighting regional concern and attempting mediation",
+          "Egypt's Role: President Mohamed Morsi brokered ceasefire, marking Egypt's post-Arab Spring involvement in Gaza diplomacy",
+          "Tactical Shift: First major combat deployment of Iron Dome missile defense system—intercepted 436/1,667 rockets (26%), reducing Israeli casualties relative to rocket volume",
+          "Blockade Tightening: Operation reinforced Gaza's isolation; ceasefire did not address blockade, which continued"
+        ]
+      },
+      {
+        "heading": "Long-term Significance",
+        "items": [
+          "Cycle of Violence: Established pattern repeated in 2014 (Protective Edge—far deadlier), 2021 (Guardian of the Walls), and 2023-24 (ongoing devastation). Each operation followed similar escalation triggers and justifications",
+          "Impunity Precedent: Complete lack of prosecutions despite B'Tselem's documented evidence set precedent for future operations. MAG's 'operational debriefings' model continued",
+          "Humanitarian Monitoring: Operation galvanized international human rights community; B'Tselem's May 2013 report became model for field investigation methodology in conflict zones",
+          "Legal Discourse: B'Tselem's critique of 'overly broad' military target definitions and inadequate warnings influenced IHL advocacy and academic discourse on proportionality",
+          "Palestinian Trauma: Added to cumulative trauma of Gaza population; families interviewed months later remained in shock and grief"
+        ]
+      },
+      {
+        "heading": "Accountability",
+        "items": [
+          "✘ Zero prosecutions of Israeli commanders or personnel despite 87 civilian deaths",
+          "✘ MAG Corps opened 70 inquiries; closed cases with minimal public information and 'no criminal offense found' determinations",
+          "✘ Amnesty International criticized MAG investigations as 'operational debriefings' lacking independence (Feb 2013 UN HRC statement)",
+          "✘ B'Tselem's nine case investigations raising 'grave suspicions' of IHL violations produced no substantive responses beyond vague MAG letters",
+          "✘ Al-Dalu case: Despite IDF admission of 'probable error' killing 12 (5 children, 5 women), MAG closed case claiming 'efforts to minimize harm'—no explanation for why efforts failed",
+          "✘ Iyad Abu Khusah case: MAG denied strike occurred despite documented death and injuries—exemplifies accountability crisis",
+          "✘ No reparations paid to families; property damage through Israeli-administered compensation system with delays",
+          "✘ Pattern established: Military investigates itself, provides minimal public information, closes cases, no external oversight"
+        ]
+      },
+      {
+        "heading": "Documentation Legacy",
+        "items": [
+          "B'Tselem Report (May 2013): Gold-standard field investigation documenting nine cases with detailed witness testimonies, legal analysis, and contextual data",
+          "UN OCHA Humanitarian Monitors: Provided casualty figures, injury data, and humanitarian impact assessments during and after operation",
+          "Al Mezan Center for Human Rights: Parallel Palestinian documentation efforts; submitted cases to ICC Prosecutor (though Palestine not yet member state)",
+          "Methodology: B'Tselem's investigation model—field researchers, named witnesses (with consent), legal IHL analysis, submission to MAG, documentation of MAG responses—became template"
+        ]
+      }
+    ]
+  },
+  "sources": {
+    "title": "Verified & Cross-Referenced Sources",
+    "icon": "📚",
+    "introduction": "Documentation based on B'Tselem's comprehensive field investigation (May 2013 report), UN humanitarian monitoring, and cross-referenced human rights sources. All casualty figures and case details verified through primary documentation.",
+    "list": [
+      {
+        "icon": "📚",
+        "name": "B'Tselem. 'Human Rights Violations during Operation Pillar of Defense, 14-21 November 2012' (May 2013)",
+        "type": "Primary Source - NGO Field Investigation",
+        "description": "Comprehensive 44-page report: 167 Palestinian deaths investigated (87 civilians, 32 children documented); nine detailed case investigations with named witnesses; legal IHL analysis; IDF/MAG responses appended. Gold-standard human rights documentation.",
+        "link": "https://www.btselem.org/download/201305_pillar_of_defense_operation_eng.pdf",
+        "verified": true
+      },
+      {
+        "icon": "🇺🇳",
+        "name": "UN OCHA. 'Humanitarian Monitor: October-November 2012'",
+        "type": "UN Agency Report",
+        "description": "Official UN documentation of pre-operation escalation and operation impact: casualty figures, injury data (11,100+ Palestinians, 3,374 children), humanitarian access issues. Protection Cluster data source.",
+        "link": "https://www.un.org/unispal/document/auto-insert-201184/",
+        "verified": true
+      },
+      {
+        "icon": "🇺🇳",
+        "name": "UN OCHA. 'Key Figures on 2014 Hostilities' (includes 2012 comparison data)",
+        "type": "UN Statistical Compilation",
+        "description": "Comparative data on Israeli casualties (6 deaths, 1,600+ injuries) citing Israeli official sources. Provides context for 2012 operation within pattern of Gaza conflicts.",
+        "link": "https://www.ochaopt.org/content/key-figures-2014-hostilities",
+        "verified": true
+      },
+      {
+        "icon": "📄",
+        "name": "Amnesty International. 'Statement to UN Human Rights Council' (February 2013)",
+        "type": "Human Rights Organization Statement",
+        "description": "Criticized Israeli MAG investigations as lacking independence and transparency. Called pattern of 'operational debriefings' insufficient to meet international law requirements for war crimes investigations.",
+        "link": "https://www.un.org/unispal/document/auto-insert-188596/",
+        "verified": true
+      },
+      {
+        "icon": "📰",
+        "name": "Haaretz. 'As IDF Strike Kills Entire Family in Gaza, Israel Is Starting to Get Into Trouble' (November 18, 2012)",
+        "type": "Israeli Media Coverage",
+        "description": "Contemporary reporting on al-Dalu family massacre. Documents IDF Spokesperson's admission of 'probable error' and changing explanations for strike that killed 12 civilians.",
+        "link": "https://www.haaretz.com/news/diplomacy-defense/as-idf-strike-kills-entire-family-in-gaza-israel-is-starting-to-get-into-trouble-1.478879",
+        "verified": true
+      },
+      {
+        "icon": "🇮🇱",
+        "name": "Israel Security Agency (ISA/Shin Bet). Official Statements (November 2012)",
+        "type": "Israeli Government Source",
+        "description": "ISA statements during operation explicitly acknowledged targeting homes of Hamas commanders 'some of which also served to store arms'—implicit admission some homes served no military function.",
+        "link": "https://www.gov.il/",
+        "verified": true
+      },
+      {
+        "icon": "📋",
+        "name": "Meir Amit Intelligence and Terrorism Information Center. 'Escalation from the Gaza Strip: Operation Pillar of Defense Summary'",
+        "type": "Israeli Research Institute",
+        "description": "Pro-Israel perspective compilation of operation statistics: 1,667 rockets fired, Iron Dome interceptions, timeline. Useful for cross-referencing Israeli military claims.",
+        "link": "https://www.terrorism-info.org.il/",
+        "verified": true
+      },
+      {
+        "icon": "🏛️",
+        "name": "Al Mezan Center for Human Rights. Documentation and Legal Analysis (2012-2013)",
+        "type": "Palestinian Human Rights Organization",
+        "description": "Gaza-based organization's parallel field investigations. Documented individual cases, provided legal support to victims' families, submitted cases to ICC Prosecutor.",
+        "link": "https://www.mezan.org/en",
+        "verified": true
+      },
+      {
+        "icon": "📖",
+        "name": "Human Rights Watch. Various statements and reports (November 2012 - 2013)",
+        "type": "International Human Rights Organization",
+        "description": "HRW called for investigations into civilian casualties, criticized inadequate warnings, and documented pattern of IHL violations. Reinforced B'Tselem findings.",
+        "link": "https://www.hrw.org/",
+        "verified": true
+      }
+    ],
+    "alert": {
+      "type": "info",
+      "icon": "ℹ️",
+      "text": "<strong>Methodology:</strong> B'Tselem conducted field investigations through researchers in Gaza and West Bank. Interviewed survivors, witnesses, medical personnel. Collected documentation including medical records, death certificates, munitions remnants analysis. Submitted detailed complaints to MAG Corps and documented responses. All witness testimonies obtained with informed consent and names published with permission."
+    }
+  },
+  "media": {
+    "images": {
+      "local": [],
+      "remote": []
+    },
+    "documents": {
+      "local": [],
+      "remote": []
+    }
+  },
+  "cta": {
+    "title": "Support Accountability for IHL Violations",
+    "description": "Demand independent investigations into documented violations of international humanitarian law and support justice for victims.",
+    "buttons": [
+      { "text": "📅 View Full Timeline", "link": "../../major-incidents-timeline.html", "type": "primary" },
+      { "text": "🖨️ Print/Save PDF", "link": "#", "type": "secondary", "action": "print" },
+      { "text": "📧 Submit Info", "link": "mailto:palgeno.pedia@gmx.de?subject=Operation Pillar of Defense - Additional Information", "type": "secondary" }
+    ]
+  }
+}), p. 3",
+        "sourceLinks": [
+          {
+            "name": "B'Tselem Report",
+            "url": "https://www.btselem.org/download/201305_pillar_of_defense_operation_eng.pdf"
+          }
+        ]
+      },
+      {
+        "time": "November 14-17, 2012 (Days 1-4)",
+        "title": "Initial Phase: Focused Strikes",
+        "description": "First four days: 48 Palestinians killed (17 civilians, 26 combatants, 1 assassination target, 4 unknown). Strikes relatively focused; civilian-to-combatant death ratio favored combatants (1.5:1). Notable incidents: 15-year-old Ahmad Abu Alayan mortally wounded in olive grove (died Nov 21).",
+        "source": "B'Tselem Report (May 2013), pp. 10-11, 13-15",
+        "sourceLinks": [
+          {
+            "name": "B'Tselem Report",
+            "url": "https://www.btselem.org/download/201305_pillar_of_defense_operation_eng.pdf"
+          }
+        ]
+      },
+      {
+        "time": "November 17, 2012 (evening)",
+        "title": "Khuza'ah: Death of Samaher Qdeih",
+        "description": "Israeli airstrike hits yard of Qdeih family home in Khuza'ah (~21:30). Samaher Qdeih, 28, killed; stepson Nidal, 27, seriously wounded in legs. B'Tselem investigation found no family involvement in hostilities. MAG investigation ongoing as of April 2013.",
+        "source": "B'Tselem Report (May 2013), pp. 15-16",
+        "sourceLinks": [
+          {
+            "name": "B'Tselem Report",
+            "url": "https://www.btselem.org/download/201305_pillar_of_defense_operation_eng.pdf"
+          }
+        ]
+      },
+      {
+        "time": "November 18, 2012, ~02:00",
+        "title": "Beit Lahiya: Deaths of Tammer and Jomanah Ise'ifan",
+        "description": "Israeli missile strikes near Ise'ifan family home in densely populated Tal al-Za'tar neighborhood. Ceiling collapses, killing Tammer, 4, and Jomanah, 2. Witnesses reported rockets had been fired from open area ~200m away, last launch ~5 hours before strike. B'Tselem: strike raises questions about proportionality and warnings. MAG investigation ongoing April 2013.",
+        "source": "B'Tselem Report (May 2013), pp. 16-18",
+        "sourceLinks": [
+          {
+            "name": "B'Tselem Report",
+            "url": "https://www.btselem.org/download/201305_pillar_of_defense_operation_eng.pdf"
+          }
+        ]
+      },
+      {
+        "time": "November 18, 2012 (before sunrise)",
+        "title": "A-Shaburah Refugee Camp: Death of Ahmad Abu Naqirah, 61",
+        "description": "IDF phones resident Muhammad Abu Naqirah warning of imminent strike on neighbor Dib Abu Naqirah's house (Hamas activist). Caller agrees to 10-minute delay; strikes begin in 5 minutes. Street fills with fleeing families. 'Warning' missile, then larger strike destroys house and five others. Ahmad Abu Naqirah, 61, found fatally wounded. MAG closed case: 'no criminal offense found'—no explanation provided.",
+        "source": "B'Tselem Report (May 2013), pp. 18-20, Appendix",
+        "sourceLinks": [
+          {
+            "name": "B'Tselem Report",
+            "url": "https://www.btselem.org/download/201305_pillar_of_defense_operation_eng.pdf"
+          }
+        ]
+      },
+      {
+        "time": "November 18, 2012, ~08:00",
+        "title": "Al-Bureij Refugee Camp: Death of Iyad Abu Khusah, 18 months",
+        "description": "Israeli plane fires into enclosed courtyard of Abu Khusah family home. Iyad Abu Khusah, 1.5 years old, killed by head shrapnel; brother Suhaib, 6, hit in face/neck; cousin Sarah, 4, hit in abdomen. B'Tselem found no armed activity near home. MAG response (April 2013): 'no strike...matches particulars of complaint'—dispute over incident existence despite documented death.",
+        "source": "B'Tselem Report (May 2013), pp. 20-21, Appendix",
+        "sourceLinks": [
+          {
+            "name": "B'Tselem Report",
+            "url": "https://www.btselem.org/download/201305_pillar_of_defense_operation_eng.pdf"
+          }
+        ]
+      },
+      {
+        "time": "November 18, 2012, ~22:00",
+        "title": "Jabalya: Deaths of Jalal Naser, 36, and son Hussein, 6",
+        "description": "Israeli airstrike directly hits roof of Naser home in Jabalya Refugee Camp. Jalal Naser and son Hussein on roof at time of strike. Hussein killed instantly; father died hours later in hospital. B'Tselem found no rockets fired from vicinity; Jalal not member of armed groups (worked as car dealer). MAG closed case: 'no criminal offense'—no explanation.",
+        "source": "B'Tselem Report (May 2013), pp. 21-22, Appendix",
+        "sourceLinks": [
+          {
+            "name": "B'Tselem Report",
+            "url": "https://www.btselem.org/download/201305_pillar_of_defense_operation_eng.pdf"
+          }
+        ]
+      },
+      {
+        "time": "November 18, 2012 (evening)",
+        "title": "Gaza City: Al-Dalu Family Massacre",
+        "description": "Israeli airstrike on al-Dalu family home in Gaza City kills 12: 5 children (youngest under 1 year), 5 women (including 74- and 75-year-olds), 1 young man (18), 1 combatant. IDF initially claimed targeting 'head of Hamas rocket division,' later 'active member,' then admitted 'probably erred in identifying appropriate house.' MAG (April 2013) offered fourth version: targeted 'senior terrorist...several others'; claimed 'operations staff had not foreseen collateral damage.' Case closed: no prosecution. B'Tselem: explanation 'only partial' and doesn't justify closure.",
+        "source": "B'Tselem Report (May 2013), pp. 12-13, Appendix",
+        "sourceLinks": [
+          {
+            "name": "B'Tselem Report",
+            "url": "https://www.btselem.org/download/201305_pillar_of_defense_operation_eng.pdf"
+          },
+          {
+            "name": "Haaretz coverage of IDF admission of error (18 Nov 2012)",
+            "url": "https://www.haaretz.com/news/diplomacy-defense/as-idf-strike-kills-entire-family-in-gaza-israel-is-starting-to-get-into-trouble-1.478879"
+          }
+        ]
+      },
+      {
+        "time": "November 18-21, 2012 (Days 5-8)",
+        "title": "Final Phase: Dramatic Increase in Civilian Deaths",
+        "description": "Last four days: 119 Palestinians killed (70 civilians, 36 combatants, 6 assassination targets, 7 unknown). Civilian deaths quadrupled compared to first four days; civilian-to-combatant ratio reversed to nearly 2:1. B'Tselem: 'relevant authorities must explain greater number of Palestinian fatalities...particularly fourfold increase' in civilian deaths (p. 39). No explanation ever provided.",
+        "source": "B'Tselem Report (May 2013), pp. 10-11, 39",
+        "sourceLinks": [
+          {
+            "name": "B'Tselem Report",
+            "url": "https://www.btselem.org/download/201305_pillar_of_defense_operation_eng.pdf"
+          }
+        ]
+      },
+      {
+        "time": "November 19, 2012, ~19:30",
+        "title": "Jabalya: Deaths of Foua'd Hejazi and sons Muhammad, 4, and Suhaib, 2",
+        "description": "Family having dinner in their tin-roofed home in Jabalya Refugee Camp. Father praying with two young sons playing nearby. House bombed and collapses. Father Foua'd, 46, and sons Muhammad, 4, and Suhaib, 2, killed. Mother seriously wounded (transferred to Egypt); daughter Nur, 19, spine fractured—wheelchair-bound. B'Tselem found no family involvement in hostilities. MAG investigation ongoing April 2013.",
+        "source": "B'Tselem Report (May 2013), pp. 22-24",
+        "sourceLinks": [
+          {
+            "name": "B'Tselem Report",
+            "url": "https://www.btselem.org/download/201305_pillar_of_defense_operation_eng.pdf"
+          }
+        ]
+      },
+      {
+        "time": "November 20, 2012, ~16:30",
+        "title": "Gaza City: Deaths During Arab Foreign Ministers Visit",
+        "description": "Delegation of Arab and Turkish foreign ministers visiting Gaza; crowds line streets in Shuja'iyeh neighborhood. Minutes after convoy passes, two missiles strike al-Shawa family apartment. Four killed: Yusra al-Shawa, 18 (inside apartment); Mahmoud al-Zuhri, 21; Saqer Bulbul, 57; Tareq Hajilah, 40 (on street). 20+ injured. B'Tselem found none participated in hostilities. MAG response identical to al-Dalu case: claimed 'efforts to minimize harm' but no substantive explanation for devastation.",
+        "source": "B'Tselem Report (May 2013), pp. 24-26",
+        "sourceLinks": [
+          {
+            "name": "B'Tselem Report",
+            "url": "https://www.btselem.org/download/201305_pillar_of_defense_operation_eng.pdf"
+          }
+        ]
+      },
+      {
+        "time": "November 21, 2012, ~13:00",
+        "title": "Jabalya: Deaths of Talal al-Asali, 48, and children Ayman, 19, and Abir, 11",
+        "description": "Last day of operation. Father and two children collecting herbs for tea in agricultural area near Jabalya Refugee Camp. Israeli airstrike kills all three. Relatives stated Talal grew herbs for market; no connection to armed groups. B'Tselem found no rockets fired from location before strike. MAG investigation ongoing April 2013.",
+        "source": "B'Tselem Report (May 2013), pp. 26-27",
+        "sourceLinks": [
+          {
+            "name": "B'Tselem Report",
+            "url": "https://www.btselem.org/download/201305_pillar_of_defense_operation_eng.pdf"
+          }
+        ]
+      },
+      {
+        "time": "November 21, 2012, 21:00 (evening)",
+        "title": "Ceasefire Agreement",
+        "description": "Egypt-brokered ceasefire takes effect after 8 days of hostilities. Agreement commits both sides to halt military operations. Total toll: 167 Palestinians killed (87 civilians), 11,100+ injured; 6 Israelis killed, 1,600+ injured. IDF Spokesperson claims 1,500 targets struck. Palestinian groups claim successful resistance.",
+        "source": "B'Tselem Report (May 2013), pp. 3, 9-11",
+        "sourceLinks": [
+          {
+            "name": "B'Tselem Report",
+            "url": "https://www.btselem.org/download/201305_pillar_of_defense_operation_eng.pdf"
+          }
+        ]
+      }
+    ]
+  },
+  "warCrimes": {
+    "title": "Documented IHL Violations",
+    "icon": "⚠️",
+    "alert": {
+      "type": "warning",
+      "icon": "⚠️",
+      "text": "<strong>Content Warning:</strong> Documented violations of international humanitarian law including deaths of children, families, and civilians. B'Tselem's investigations raise 'grave suspicions' of war crimes."
+    },
+    "crimes": [
+      {
+        "icon": "🏠",
+        "title": "Attacks on Civilian Homes Without Effective Warning",
+        "description": "Multiple family homes struck with no warning or insufficient warning time. B'Tselem documented cases where 'warning' missiles (roof-knocking) were unclear to residents or followed by insufficient evacuation time. Al-Dalu family (12 killed), Hejazi family (father + 2 sons), Naser family (father + son), Al-Asali family (father + 2 children)—all killed in homes with inadequate or no warning. IHL requires 'effective advance warning' unless circumstances preclude it; B'Tselem found this requirement violated systematically.",
+        "sourceLink": "https://www.btselem.org/download/201305_pillar_of_defense_operation_eng.pdf",
+        "sourceText": "📄 B'Tselem Report, pp. 37-38 ↗"
+      },
+      {
+        "icon": "👶",
+        "title": "Deaths of Children in Non-Military Contexts",
+        "description": "32 children killed during operation. B'Tselem investigations documented children killed while: playing in home courtyard (Iyad, 18 months), sleeping (Tammer, 4; Jomanah, 2), at home with family (Hussein, 6; Muhammad, 4; Suhaib, 2), collecting herbs (Abir, 11), and infants/toddlers in al-Dalu strike. Ahmad Abu Alayan, 14, mortally wounded while working family's olive grove—died 6 days later. No military activity at any of these sites at time of strikes.",
+        "sourceLink": "https://www.btselem.org/download/201305_pillar_of_defense_operation_eng.pdf",
+        "sourceText": "📄 B'Tselem Report, pp. 13-27 ↗"
+      },
+      {
+        "icon": "🎯",
+        "title": "Overly Broad Definition of 'Legitimate Targets'",
+        "description": "B'Tselem identified pattern of strikes on: (1) locations from which rockets fired hours earlier, when launchers long departed and area returned to civilian use; (2) homes of Hamas officials not serving military functions. ISA statement explicitly confirmed targeting '30 houses of senior commanders...some of which also served to store arms' (emphasis added—acknowledgment some did NOT store arms). IHL permits targeting only objects making 'effective military contribution'; Israeli interpretation exceeded this standard.",
+        "sourceLink": "https://www.btselem.org/download/201305_pillar_of_defense_operation_eng.pdf",
+        "sourceText": "📄 B'Tselem Report, pp. 38-39 ↗"
+      },
+      {
+        "icon": "⚖️",
+        "title": "Failure of Proportionality Assessment",
+        "description": "IHL prohibits attacks where projected civilian harm significantly outweighs anticipated military advantage. Multiple documented strikes killed only civilians with no documented combatant deaths at location: Abu Khusah courtyard (toddler killed, 2 children wounded—MAG denied strike occurred), Ise'ifan home (2 children killed after rocket launch 5 hours earlier from 200m away), Al-Asali agricultural area (father + 2 children collecting herbs). Questions proportionality calculations and pre-strike assessments.",
+        "sourceLink": "https://www.btselem.org/download/201305_pillar_of_defense_operation_eng.pdf",
+        "sourceText": "📄 B'Tselem Report, pp. 35-39 ↗"
+      },
+      {
+        "icon": "📞",
+        "title": "Inadequate Warning Systems",
+        "description": "B'Tselem found warning procedures varied and often ineffective: phone warnings sometimes provided (Abu Naqirah case: caller initially refused 10-min delay; struck after 5 min); 'roof-knocking' (small warning missiles) often unclear to residents who only understood meaning in hindsight; no warnings given in multiple cases killing civilians. IDF claimed warnings given 'insofar as circumstances permit' but B'Tselem found insufficient justification for numerous no-warning strikes, particularly those killing only civilians.",
+        "sourceLink": "https://www.btselem.org/download/201305_pillar_of_defense_operation_eng.pdf",
+        "sourceText": "📄 B'Tselem Report, pp. 37-38 ↗"
+      },
+      {
+        "icon": "🔍",
+        "title": "Post-Strike Verification Failures",
+        "description": "Al-Dalu case demonstrates verification failures: IDF gave three contradictory justifications within hours ('head of rocket division' → 'active member' → 'probably wrong house'), then MAG gave fourth version 5 months later. Iyad Abu Khusah case: MAG claimed no strike matching description occurred despite documented death and injuries. Systematic pattern of changing explanations and denials suggests inadequate post-strike assessment and unwillingness to acknowledge errors.",
+        "sourceLink": "https://www.btselem.org/download/201305_pillar_of_defense_operation_eng.pdf",
+        "sourceText": "📄 B'Tselem Report, pp. 12-13, 20-21 ↗"
+      },
+      {
+        "icon": "🚫",
+        "title": "Palestinian Armed Groups: Indiscriminate Rocket Fire",
+        "description": "Hamas and other groups violated IHL by: deliberately launching rockets at Israeli civilians/communities; using imprecise weapons incapable of distinguishing military from civilian targets; firing from densely populated areas, endangering Palestinian civilians; concealing arms in civilian buildings. 1,667 rockets fired; 6 Israelis killed, 1,600+ injured. Groups also executed 6-7 Palestinians accused of collaboration during operation.",
+        "sourceLink": "https://www.btselem.org/download/201305_pillar_of_defense_operation_eng.pdf",
+        "sourceText": "📄 B'Tselem Report, pp. 3-4, 28-34 ↗"
+      }
+    ]
+  },
+  "international_law": {
+    "title": "International Law – Applicable Framework & Violations",
+    "icon": "⚖️",
+    "introduction": "Legal assessment under 1949 Geneva Conventions (Israel ratified 1951), Additional Protocols, and customary IHL. B'Tselem's May 2013 report found 'grave suspicions' of violations in multiple incidents.",
+    "sections": [
+      {
+        "heading": "Applicable Legal Framework",
+        "violations": [
+          "<strong>Geneva Convention IV (1949):</strong> Protection of civilians in time of war. Israel ratified July 6, 1951. Art. 27: protection of civilians against violence, intimidation; Art. 32: prohibition of torture, collective punishment; Art. 33: prohibition of reprisals against protected persons.",
+          "<strong>Additional Protocol I (1977):</strong> Israel signed but has not ratified; many provisions considered customary IHL. Art. 51: protection of civilian population; prohibition of indiscriminate attacks; prohibition of attacks expected to cause excessive civilian harm relative to military advantage. Art. 52: definition of military objectives. Art. 57: precautionary measures in attack; obligation to give effective advance warning; obligation to cancel/suspend attacks if disproportionate harm apparent.",
+          "<strong>Customary IHL:</strong> Prohibition of targeting civilians; distinction between civilians and combatants; proportionality in attack; precautionary measures. Binding on all parties regardless of treaty ratification.",
+          "<strong>Rome Statute (1998):</strong> Israel not party, but provisions reflect customary international law. Art. 8(2)(b): war crimes include intentionally attacking civilians, attacking civilian objects, launching attacks knowing they will cause excessive civilian harm, and attacking undefended places."
+        ]
+      },
+      {
+        "heading": "Documented Violations: Lack of Effective Warning",
+        "violations": [
+          "<strong>Legal Standard (AP I Art. 57(2)c):</strong> 'Effective advance warning shall be given of attacks which may affect the civilian population, unless circumstances do not permit.' Commentary explains warnings required except in exceptional cases (e.g., losing tactical surprise).",
+          "<strong>B'Tselem Findings:</strong> 'In many cases...Palestinians who did not take part in the hostilities were killed and injured without having been given any prior warning' (p. 37). When warnings given, often insufficient time for evacuation or warnings unclear ('roof-knocking' understood only in hindsight).",
+          "<strong>Specific Cases:</strong> Hejazi family (father + 2 sons killed, 19:30 during dinner—no warning documented); Naser family (father + son on roof—no warning); Al-Asali family (collecting herbs in field—no warning); Ise'ifan family (children asleep, 02:00—no warning).",
+          "<strong>Legal Conclusion:</strong> B'Tselem: 'It cannot possibly be said that each and every case in which warnings were not given was just such an exception, particularly in instances in which the only people killed were Palestinians who did not take part in the hostilities' (p. 38). Systematic failure to provide effective warnings constitutes IHL violation."
+        ]
+      },
+      {
+        "heading": "Documented Violations: Overly Broad Definition of Military Targets",
+        "violations": [
+          "<strong>Legal Standard (AP I Art. 52(2)):</strong> Attacks limited to 'military objectives'—objects which 'by their nature, location, purpose or use make an effective contribution to military action and whose...destruction...offers a definite military advantage.'",
+          "<strong>B'Tselem Findings:</strong> IDF adopted 'too broad a definition' in at least some cases (p. 38). Two problematic patterns: (1) Striking locations from which rockets launched hours earlier, when launchers departed and area returned to civilian use; (2) Attacking homes of Hamas officials not serving military functions.",
+          "<strong>Specific Example:</strong> ISA statement explicitly acknowledged targeting homes of senior Hamas commanders 'some of which also served to store arms'—implicit admission some targeted homes did NOT store arms and served no military function.",
+          "<strong>Legal Conclusion:</strong> B'Tselem: 'A location from which rockets were fired does not automatically become a legitimate target that may be attacked at any time. This is especially true in view of the fact that the individuals who launch the missiles do not remain on site after the launching, as well as its being a residential area' (pp. 38-39). Targeting exceeded IHL's restrictive definition."
+        ]
+      },
+      {
+        "heading": "Documented Violations: Failure of Proportionality",
+        "violations": [
+          "<strong>Legal Standard (AP I Art. 51(5)b, 57(2)a(iii)):</strong> Prohibited: attacks 'which may be expected to cause incidental loss of civilian life...which would be excessive in relation to the concrete and direct military advantage anticipated.' Obligation to cancel attack if disproportionate harm becomes apparent.",
+          "<strong>B'Tselem Findings:</strong> Multiple strikes killed only civilians with no documented military advantage: Abu Khusah family courtyard (toddler + 2 children wounded; MAG denied strike occurred); Agricultural strikes killing civilians collecting herbs/working land with no ongoing military activity at location.",
+          "<strong>Al-Dalu Case Analysis:</strong> 12 killed (5 children including infant, 5 women including 2 elderly, 1 youth, 1 alleged combatant). IDF admitted 'probably wrong house.' MAG (5 months later): 'operations staff had not foreseen...collateral damage to extent alleged.' B'Tselem: Question 'is not what individuals in charge...actually anticipated, but what they should have anticipated' (p. 13). Failure to conduct adequate proportionality assessment before strike.",
+          "<strong>Systemic Pattern:</strong> 80% of civilian deaths occurred final 4 days when civilian-to-combatant ratio reversed to 2:1. B'Tselem: 'If projected harm to civilians significantly outweighs anticipated military benefit, attacks must not be carried out' (p. 4). Pattern suggests degradation of proportionality standards as operation progressed."
+        ]
+      },
+      {
+        "heading": "Accountability Deficit",
+        "violations": [
+          "<strong>IHL Obligation (AP I Art. 86-87):</strong> States must investigate war crimes; commanders bear responsibility for subordinates' violations if they knew or should have known and failed to prevent/punish.",
+          "<strong>MAG Investigation Process:</strong> Opened 70 inquiries into civilian deaths. By April 2013 (5 months post-operation), closed multiple cases with conclusions of 'no suspicion of criminal offense' or 'no well-founded suspicion of violation of laws of war.' Provided minimal to no explanations for civilian casualties or targeting decisions.",
+          "<strong>Amnesty International Criticism (Feb 2013):</strong> MAG investigations follow pattern of 'operational de-briefings' rather than independent criminal investigations. Lack of independence and transparency.",
+          "<strong>B'Tselem Assessment:</strong> 'The internal military probe and the scant information published are inadequate' (p. 39). MAG responses 'general and vague...do not provide any real explanation for the great harm to Palestinians who did not take part in the hostilities' (p. 36). Military 'refuses to provide real information about incidents...therefore it cannot be determined whether the target was legitimate and...whether the strike was proportional' (p. 37).",
+          "<strong>Legal Consequence:</strong> Zero prosecutions resulted from 167 deaths. Accountability failure violates state obligation to investigate and prosecute war crimes."
+        ]
+      }
+    ],
+    "alert": {
+      "type": "critical",
+      "icon": "⚖️",
+      "text": "<strong>B'Tselem Legal Conclusion:</strong> 'The report...raises grave suspicions of misconduct. However, the means at B'Tselem's disposal are too limited to determine whether or not the Israeli military acted in accordance with the law' (p. 39). Called for independent investigation with access to military information. No such investigation conducted. MAG closed cases without providing substantive information, violating transparency requirements under IHL."
+    }
+  },
+  "testimonies": {
+    "title": "Witness Testimonies",
+    "icon": "👥",
+    "alert": {
+      "type": "warning",
+      "icon": "⚠️",
+      "text": "<strong>Content Warning:</strong> First-hand accounts of family members killed in strikes, children's deaths, and traumatic events. All testimonies documented by B'Tselem field researchers."
+    },
+    "witnesses": [
+      {
+        "initials": "MQ",
+        "name": "Maryam Naser",
+        "role": "Mother (Jabalya Refugee Camp)",
+        "testimony": "On Sunday evening, 18 November 2012, the whole family was home...Just before 10:00 o'clock, we heard a powerful explosion that shook our house. My husband, Jalal, went up to the roof to see where the bomb had hit. About ten minutes later, my son Hussein, who is six years old, went up to the roof to get his father. He was afraid that something would happen to him. A few minutes later, I heard a powerful explosion from the direction of the roof...I went up to the roof and called Jalal but he didn't answer. Then I saw Jalal and Hussein. They were covered in blood. I began screaming hysterically...A few hours later, at around two o'clock in the morning, I was told that Jalal had died too. I was in shock and couldn't stop crying.",
+        "source": "B'Tselem Report (May 2013), pp. 21-22",
+        "sourceLink": "https://www.btselem.org/download/201305_pillar_of_defense_operation_eng.pdf"
+      },
+      {
+        "initials": "RI",
+        "name": "Rida Ise'ifan",
+        "role": "Mother of Tammer (4) and Jomanah (2) (Beit Lahiya)",
+        "testimony": "Since the war started we've been hearing sounds of bombing from the open areas at Tel a-Za'tar...From this hill, local rockets were fired at communities in Israel...Jomanah and Tammer were frightened and they cried when they heard bombings. They kept close to me and their father and slept in our room. [Night of strike, ~2 AM] A missile struck near their house, causing the ceiling and walls to collapse...I lost both my children at once, with no reason or warning, through no fault of their own. They were just sleeping and there was no reason to kill them. Since that day, I've been crying for them...When I go to bed, I weep for them. They were my only children and I have nothing else apart from them.",
+        "source": "B'Tselem Report (May 2013), pp. 16-18",
+        "sourceLink": "https://www.btselem.org/download/201305_pillar_of_defense_operation_eng.pdf"
+      },
+      {
+        "initials": "NH",
+        "name": "Nur Hejazi",
+        "role": "Daughter (19), paralyzed in strike killing father and 2 brothers (Jabalya)",
+        "testimony": "On Monday evening, 19 November 2012, we were watching television. At around 7:30, I saw the flash of a bomb and then the house fell down on top of us...Then I fainted. I regained consciousness about two hours later and found myself at Kamal 'Adwan Hospital. I felt terrible pain in my back and was told that my spine had been fractured...I can't sit or walk, and must use a wheelchair. The doctors said things would be this way for at least two months. I can't go to school, even though this school year is crucial to determining my future. I lost my father and my brothers Suhaib and Muhammad. I was very close to my father, who always showered me with warmth...I also lost two little brothers who I always played with. When I'd come home from school, they'd run to me and hug me.",
+        "source": "B'Tselem Report (May 2013

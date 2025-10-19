@@ -1,0 +1,573 @@
+{
+  "id": "hist_006",
+  "event_type": "Mass Displacement",
+  "verification_status": "verified",
+  "metadata": {
+    "pageTitle": "Six-Day War Mass Displacement (5-10 June 1967) | Historical Documentation",
+    "description": "Israeli occupation of West Bank, Gaza, Golan Heights, Sinai displaced 300,000-400,000 Palestinians. Villages demolished, refugees prevented from return under UN Resolution 242.",
+    "keywords": "Six-Day War, 1967, Naksa, Palestinian displacement, West Bank, Gaza, UN Resolution 242, occupation",
+    "lastUpdated": "2025-10-18",
+    "author": "aliattia02"
+  },
+  "date": {
+    "start": "1967-06-05",
+    "end": "1967-06-10",
+    "duration_days": 6,
+    "display": "5-10 June 1967",
+    "context": "Six-Day War (Israel vs Egypt, Jordan, Syria)"
+  },
+  "location": {
+    "historical": {
+      "name": "West Bank, Gaza Strip, Golan Heights, Sinai Peninsula",
+      "admin_context": "Jordanian West Bank, Egyptian Gaza, Syrian Golan, Egyptian Sinai",
+      "territories_occupied": ["West Bank", "Gaza Strip", "East Jerusalem", "Sinai Peninsula", "Golan Heights"]
+    },
+    "current": {
+      "name": "Occupied Palestinian Territories; Annexed Golan Heights",
+      "admin_context": "West Bank and Gaza under Israeli occupation since 1967; East Jerusalem annexed; Golan annexed 1981",
+      "status": "Ongoing military occupation; UN recognizes territories as occupied"
+    }
+  },
+  "hero": {
+    "category": "📜 HISTORICAL DISPLACEMENT • NAKSA 1967",
+    "title": "Six-Day War Mass Displacement",
+    "subtitle": "Israeli occupation of Palestinian territories resulting in second major exodus (al-Naksa)",
+    "metaCards": [
+      { "icon": "📅", "label": "Date", "value": "5-10 June 1967", "detail": "Six-Day War" },
+      { "icon": "📍", "label": "Territories", "value": "West Bank, Gaza, Golan", "detail": "Plus Sinai Peninsula" },
+      { "icon": "🚶", "label": "Displaced", "value": "300,000-400,000", "detail": "Palestinians + Syrians" },
+      { "icon": "🏘️", "label": "Villages Demolished", "value": "3 West Bank villages", "detail": "Plus depopulation of others" }
+    ]
+  },
+  "quickFacts": {
+    "title": "⚡ Quick Facts",
+    "items": [
+      { "label": "Event Type", "value": "Mass Displacement / Occupation" },
+      { "label": "Perpetrators", "value": "Israel Defense Forces" },
+      { "label": "Verification", "value": "UN; ICRC; UNRWA; US State Department" },
+      { "label": "UN Response", "value": "Security Council Resolution 242" }
+    ]
+  },
+  "brief_summary": "The Six-Day War (5-10 June 1967) resulted in Israeli occupation of the West Bank, Gaza Strip, East Jerusalem, Golan Heights, and Sinai Peninsula. During and immediately after the conflict, an estimated 300,000-400,000 Palestinians were displaced—approximately half were 1948 refugees displaced a second time. Israel demolished three entire villages in the Latrun area and parts of the Moroccan Quarter of Jerusalem's Old City. Displaced persons were largely prevented from returning under Israeli military orders. The war created the modern Israeli occupation of Palestinian territories, ongoing for over 55 years, making it the longest military occupation in modern history.",
+  "perpetrators": ["Israel Defense Forces", "Israeli government policy", "Military administration of occupied territories"],
+  "executiveSummary": {
+    "title": "Executive Summary",
+    "icon": "📋",
+    "alert": {
+      "type": "critical",
+      "icon": "⚠️",
+      "text": "<strong>Historical context:</strong> Palestinians call this al-Naksa ('the Setback'), distinguishing it from al-Nakba (1948). Many displaced were refugees from 1948 being displaced a second time."
+    },
+    "paragraphs": [
+      "The Six-Day War erupted on June 5, 1967 when Israel launched preemptive strikes on Egyptian airfields, followed by ground operations. Within six days, Israel occupied the Egyptian-controlled Gaza Strip and Sinai Peninsula, Jordanian-controlled West Bank and East Jerusalem, and Syrian Golan Heights. The rapid Israeli victory fundamentally transformed the Israeli-Palestinian conflict by bringing all of historic Palestine under Israeli control.",
+      "Mass displacement began immediately. As Israeli forces advanced into the West Bank, panic spread among Palestinians remembering the 1948 Nakba. Estimates of those who fled or were expelled range from 280,000 (Israeli sources) to 400,000+ (Palestinian and UN sources). Approximately 175,000 were refugees from 1948 being displaced a second time. The displacement was not solely a byproduct of combat—Israeli authorities issued military orders preventing return and systematically demolished entire villages.",
+      "Three villages in the Latrun area (Imwas, Yalo, and Beit Nuba) were completely destroyed by Israeli forces, their 10,000 residents expelled. In Jerusalem's Old City, the Moroccan Quarter was bulldozed days after occupation to create a plaza at the Western Wall. UN Security Council Resolution 242 called for 'withdrawal of Israeli armed forces from territories occupied' and for 'achieving a just settlement of the refugee problem,' but Israel has maintained occupation for over 55 years. The 1967 displacement and subsequent occupation created the framework for the current Israeli-Palestinian conflict."
+    ]
+  },
+  "casualties": {
+    "title": "Displacement & Destruction",
+    "icon": "🚶",
+    "deaths": "10,000-15,000 combatants total (all sides); civilian deaths not systematically recorded",
+    "injured": "Thousands (not systematically recorded)",
+    "forced_displacement": "300,000-400,000 Palestinians",
+    "breakdown": [
+      {
+        "type": "displaced",
+        "number": "300,000-400,000",
+        "label": "Palestinians Displaced",
+        "detail": "280,000 (Israeli sources) to 400,000+ (UN/Palestinian sources)",
+        "sources": [
+          {
+            "name": "UNRWA - Registered Refugees from 1967",
+            "link": "https://www.unrwa.org/palestine-refugees",
+            "icon": "🇺🇳"
+          },
+          {
+            "name": "UN Security Council Resolution 242",
+            "link": "https://www.un.org/unispal/",
+            "icon": "📄"
+          }
+        ]
+      },
+      {
+        "type": "displaced",
+        "number": "~175,000",
+        "label": "Second-Time Displaced",
+        "detail": "1948 refugees displaced again from West Bank/Gaza camps",
+        "sources": [
+          {
+            "name": "UNRWA Special Report 1967",
+            "link": "https://www.unrwa.org/",
+            "icon": "🇺🇳"
+          }
+        ]
+      },
+      {
+        "type": "demolished",
+        "number": "3 villages",
+        "label": "Villages Completely Destroyed",
+        "detail": "Imwas, Yalo, Beit Nuba (Latrun area); ~10,000 residents expelled",
+        "sources": [
+          {
+            "name": "Zochrot - Destroyed Villages Documentation",
+            "link": "https://www.zochrot.org/",
+            "icon": "🗺️"
+          }
+        ]
+      },
+      {
+        "type": "annexed",
+        "number": "70,000 km²",
+        "label": "Territory Occupied",
+        "detail": "West Bank (5,655 km²), Gaza (365 km²), Golan (1,800 km²), Sinai (60,000 km²)"
+      }
+    ],
+    "alert": {
+      "type": "info",
+      "icon": "ℹ️",
+      "text": "<strong>Sources:</strong> UNRWA; UN Security Council Official Records; US State Department; Israeli military records; Palestinian documentation; International Committee of the Red Cross."
+    }
+  },
+  "timeline": {
+    "title": "Timeline of Events",
+    "icon": "⏱️",
+    "events": [
+      {
+        "time": "5 June 1967, 7:45 AM",
+        "title": "War begins - Operation Focus",
+        "description": "Israel launches preemptive airstrikes destroying Egyptian air force on ground. Jordan and Syria enter war supporting Egypt. Israeli ground forces enter Sinai and Gaza.",
+        "sourceLinks": [
+          {
+            "name": "UN Security Council Records 1967",
+            "url": "https://www.un.org/unispal/"
+          }
+        ]
+      },
+      {
+        "time": "5-6 June",
+        "title": "West Bank invasion; displacement begins",
+        "description": "Israeli forces cross into Jordanian West Bank. Mass exodus begins as Palestinians flee advancing Israeli army, fearing repeat of 1948. Israeli Radio broadcasts in Arabic encouraging Palestinians to flee.",
+        "sourceLinks": [
+          {
+            "name": "Tom Segev - '1967: Israel, the War, and the Year that Transformed the Middle East'",
+            "url": "https://en.wikipedia.org/wiki/Six-Day_War"
+          }
+        ]
+      },
+      {
+        "time": "7 June",
+        "title": "East Jerusalem occupied",
+        "description": "Israeli paratroopers capture Old City of Jerusalem. Defense Minister Moshe Dayan proclaims: 'We have returned to the holiest of our holy places, never to part from it again.'",
+        "sourceLinks": [
+          {
+            "name": "UN Security Council Records",
+            "url": "https://www.un.org/unispal/"
+          }
+        ]
+      },
+      {
+        "time": "7-8 June",
+        "title": "Latrun villages demolished",
+        "description": "Villages of Imwas, Yalo, and Beit Nuba in Latrun area ordered evacuated. Residents given hours to leave. IDF systematically demolishes all structures with bulldozers and explosives. ~10,000 residents expelled; prevented from return.",
+        "sourceLinks": [
+          {
+            "name": "Zochrot Documentation",
+            "url": "https://www.zochrot.org/"
+          },
+          {
+            "name": "Tom Segev - '1967'",
+            "url": "https://en.wikipedia.org/wiki/Six-Day_War"
+          }
+        ]
+      },
+      {
+        "time": "10-11 June",
+        "title": "Moroccan Quarter demolished",
+        "description": "Israeli authorities bulldoze Moroccan Quarter (Harat al-Maghariba) adjacent to Western Wall in Jerusalem's Old City. 135 houses destroyed, 650 residents expelled with minimal notice to create Western Wall plaza.",
+        "sourceLinks": [
+          {
+            "name": "Wikipedia - Moroccan Quarter",
+            "url": "https://en.wikipedia.org/wiki/Moroccan_Quarter"
+          }
+        ]
+      },
+      {
+        "time": "10 June",
+        "title": "Ceasefire; occupation complete",
+        "description": "War ends after six days. Israel occupies West Bank, Gaza, East Jerusalem, Golan Heights, Sinai Peninsula. Occupation of Palestinian territories continues to present day.",
+        "sourceLinks": [
+          {
+            "name": "UN Security Council Resolutions",
+            "url": "https://www.un.org/unispal/"
+          }
+        ]
+      },
+      {
+        "time": "June-August 1967",
+        "title": "Military orders prevent return",
+        "description": "Israeli military government issues orders preventing displaced Palestinians from returning. Identity card system established; those who left denied reentry. Property declared 'absentee property' subject to confiscation.",
+        "sourceLinks": [
+          {
+            "name": "B'Tselem - Israeli Occupation Documentation",
+            "url": "https://www.btselem.org/"
+          }
+        ]
+      },
+      {
+        "time": "14 June 1967",
+        "title": "UN General Assembly Emergency Session",
+        "description": "Emergency session convened. Multiple resolutions condemn Israeli annexation of Jerusalem and call for allowing refugee return. Israel rejects all resolutions.",
+        "sourceLinks": [
+          {
+            "name": "UN General Assembly Records",
+            "url": "https://www.un.org/unispal/"
+          }
+        ]
+      },
+      {
+        "time": "22 November 1967",
+        "title": "UN Security Council Resolution 242",
+        "description": "Landmark resolution calls for 'withdrawal of Israeli armed forces from territories occupied' and 'just settlement of refugee problem.' Foundation of peace process but remains unimplemented 55+ years later.",
+        "sourceLinks": [
+          {
+            "name": "UN Security Council Resolution 242",
+            "url": "https://www.un.org/unispal/"
+          }
+        ]
+      }
+    ]
+  },
+  "warCrimes": {
+    "title": "Documented Violations",
+    "icon": "⚠️",
+    "alert": {
+      "type": "warning",
+      "icon": "⚠️",
+      "text": "<strong>Note:</strong> Focus on displacement and destruction of civilian property; civilian casualties during combat less systematically documented."
+    },
+    "crimes": [
+      {
+        "icon": "🏚️",
+        "title": "Systematic Village Destruction",
+        "description": "Three entire villages (Imwas, Yalo, Beit Nuba) demolished within days of occupation. Residents given 1-3 hours to evacuate. All homes, mosques, churches, cemeteries systematically destroyed. Total 10,000 residents expelled; area converted to Canada Park. No compensation paid.",
+        "sourceLink": "https://www.zochrot.org/",
+        "sourceText": "📄 Zochrot Documentation →"
+      },
+      {
+        "icon": "🕌",
+        "title": "Moroccan Quarter Demolition",
+        "description": "Historic 770-year-old Jerusalem neighborhood bulldozed 48 hours after occupation. 135 houses, two mosques, zawiya (Islamic school) destroyed. 650 residents given 3 hours to evacuate. Afdal Mosque (12th century) and other heritage sites demolished.",
+        "sourceLink": "https://en.wikipedia.org/wiki/Moroccan_Quarter",
+        "sourceText": "📄 Historical Documentation →"
+      },
+      {
+        "icon": "🚫",
+        "title": "Prevention of Return",
+        "description": "Military orders and identity card system prevented displaced Palestinians from returning home—direct violation of international humanitarian law. Fourth Geneva Convention Article 49: occupying power may not forcibly transfer or deport protected persons.",
+        "sourceLink": "https://www.btselem.org/",
+        "sourceText": "📄 B'Tselem Documentation →"
+      },
+      {
+        "icon": "🏛️",
+        "title": "Illegal Annexation",
+        "description": "East Jerusalem formally annexed June 28, 1967 (not recognized internationally). Golan Heights annexed 1981. UN Security Council declared annexations 'null and void.' Transfer of Israeli civilians into occupied territories violates Geneva Convention Article 49.",
+        "sourceLink": "https://www.un.org/unispal/",
+        "sourceText": "📄 UN Resolutions →"
+      },
+      {
+        "icon": "📋",
+        "title": "Mass Displacement",
+        "description": "300,000-400,000 Palestinians displaced during and immediately after war. Many forced out through psychological warfare (radio broadcasts), prevention of return, house demolitions. Approximately half were second-time refugees (displaced from 1948).",
+        "sourceLink": "https://www.unrwa.org/",
+        "sourceText": "📄 UNRWA Reports →"
+      },
+      {
+        "icon": "⚔️",
+        "title": "Extrajudicial Killings",
+        "description": "Multiple documented cases of POW killings and civilian deaths. Egyptian POWs killed at al-Arish. Systematic documentation prevented by denial of ICRC access during conflict.",
+        "sourceLink": "https://www.icrc.org/",
+        "sourceText": "📄 ICRC Reports →"
+      }
+    ]
+  },
+  "international_law": {
+    "title": "International Law Framework",
+    "icon": "⚖️",
+    "introduction": "The 1967 occupation and displacement occurred under framework of Fourth Geneva Convention (1949), binding on all parties. Israel ratified July 6, 1951.",
+    "sections": [
+      {
+        "heading": "Fourth Geneva Convention (1949) - Violations",
+        "violations": [
+          "<strong>Article 49:</strong> 'Individual or mass forcible transfers...of protected persons from occupied territory...are prohibited regardless of their motive.' Displacement and prevention of return violate this core protection.",
+          "<strong>Article 49(6):</strong> 'The Occupying Power shall not deport or transfer parts of its own civilian population into the territory it occupies.' Israeli settlement enterprise violates this provision (over 700,000 settlers as of 2024).",
+          "<strong>Article 53:</strong> 'Any destruction by the Occupying Power of...property...is prohibited, except where such destruction is rendered absolutely necessary by military operations.' Demolition of Latrun villages and Moroccan Quarter lacked military necessity.",
+          "<strong>Article 147 (Grave Breaches):</strong> Extensive destruction of property not justified by military necessity constitutes grave breach (war crime)."
+        ]
+      },
+      {
+        "heading": "UN Security Council Resolutions",
+        "violations": [
+          "<strong>Resolution 242 (1967):</strong> Called for 'withdrawal of Israeli armed forces from territories occupied' and 'just settlement of refugee problem.' Remains foundation of peace process but unimplemented.",
+          "<strong>Resolution 252 (1968):</strong> Declared Israeli annexation measures in Jerusalem 'invalid.' Called on Israel to rescind all actions to change status of city.",
+          "<strong>Resolution 298 (1971):</strong> Deplored Israeli failure to comply with previous resolutions regarding Jerusalem.",
+          "<strong>Resolution 465 (1980):</strong> Determined that Israeli settlements in occupied territories 'have no legal validity' and constitute 'flagrant violation' of Geneva Convention.",
+          "<strong>Resolution 478 (1980):</strong> Declared Israel's 'Basic Law' declaring Jerusalem its 'eternal capital' null and void."
+        ]
+      },
+      {
+        "heading": "International Court of Justice Advisory Opinion (2004)",
+        "violations": [
+          "<strong>Wall Advisory Opinion:</strong> ICJ ruled Israeli construction of separation barrier in West Bank illegal. Reaffirmed Fourth Geneva Convention applies to occupied Palestinian territories.",
+          "<strong>Settlements:</strong> ICJ confirmed Israeli settlements violate Article 49(6) of Geneva Convention. Called on Israel to cease settlement activity and dismantle existing settlements.",
+          "<strong>Occupation obligations:</strong> ICJ held Israel bound by international humanitarian law and human rights law in occupied territories."
+        ]
+      },
+      {
+        "heading": "Ongoing Occupation - Modern Assessment",
+        "violations": [
+          "<strong>Prolonged occupation:</strong> At 55+ years, Israeli occupation is longest military occupation in modern history. International law views prolonged occupation as raising additional legal concerns.",
+          "<strong>Annexation de facto:</strong> While Israel never formally annexed West Bank, settlement enterprise and administrative integration constitute de facto annexation in violation of international law.",
+          "<strong>Population transfer:</strong> Transfer of over 700,000 Israeli civilians into occupied territory constitutes systematic violation of Geneva Convention Article 49(6)."
+        ]
+      }
+    ],
+    "alert": {
+      "type": "critical",
+      "icon": "⚖️",
+      "text": "<strong>International consensus:</strong> UN Security Council, UN General Assembly, International Court of Justice, International Committee of the Red Cross all affirm Fourth Geneva Convention applies to territories occupied in 1967 and Israeli practices violate international humanitarian law."
+    }
+  },
+  "testimonies": {
+    "title": "Witness Testimonies & Official Accounts",
+    "icon": "👥",
+    "witnesses": [
+      {
+        "initials": "MD",
+        "name": "Moshe Dayan",
+        "role": "Israeli Defense Minister (1967)",
+        "testimony": "After capturing Old City, proclaimed: 'We have returned to the holiest of our holy places, never to part from it again.' Later reflected on displacement: 'We came to this country which was already populated by Arabs, and we are establishing...a Jewish state here.' Regarding Latrun villages: 'We had to destroy three Arab villages in the Latrun area.'",
+        "source": "Various interviews and memoirs; Haaretz 1969",
+        "sourceLink": "https://en.wikipedia.org/wiki/Moshe_Dayan"
+      },
+      {
+        "initials": "AE",
+        "name": "Amos Elon",
+        "role": "Israeli journalist (contemporary observer)",
+        "testimony": "Witnessed destruction of Imwas village June 1967: 'Military bulldozers were finishing their work...not a stone was left standing...the wells were capped with concrete.' Described residents 'trudging down the main highway to Ramallah' with belongings.",
+        "source": "Haaretz, June 1967; later compiled in 'The Israelis' (1971)",
+        "sourceLink": null
+      },
+      {
+        "initials": "HM",
+        "name": "Hussein Musa (Imwas resident)",
+        "role": "Palestinian refugee from destroyed village",
+        "testimony": "Resident of Imwas village: 'The Israeli soldiers came and told us we had three hours to leave...we took what we could carry. When we looked back from the hills, they were destroying everything with bulldozers—our homes, our mosque, our cemetery. Everything.'",
+        "source": "Oral history - Palestinian refugee documentation",
+        "sourceLink": "https://www.zochrot.org/"
+      },
+      {
+        "initials": "TS",
+        "name": "Tom Segev",
+        "role": "Israeli historian",
+        "testimony": "In '1967: Israel, the War, and the Year that Transformed the Middle East': 'Immediately after the war, Israel implemented measures that made refugees' return impossible.' Documented military orders preventing return, identity card confiscations. 'The government's position was that most of the refugees should not be allowed to return.'",
+        "source": "'1967: Israel, the War, and the Year that Transformed the Middle East' (2007)",
+        "sourceLink": null
+      },
+      {
+        "initials": "UN",
+        "name": "UN Secretary-General U Thant",
+        "role": "United Nations head (1961-1971)",
+        "testimony": "Report to Security Council: 'The displacement of the civilian population as a result of the conflict continues to cause great human suffering and poses a serious threat to peace and security.' Called for allowing refugees to return or receive compensation.",
+        "source": "Report to UN Security Council, September 1967",
+        "sourceLink": "https://www.un.org/unispal/"
+      },
+      {
+        "initials": "IC",
+        "name": "International Committee of the Red Cross",
+        "role": "Humanitarian organization",
+        "testimony": "ICRC stated Fourth Geneva Convention applicable to occupied territories. Documented mass displacement, house demolitions, prevention of return. Called on Israel to allow refugees to return and respect civilian protections under international humanitarian law.",
+        "source": "ICRC statements and reports, 1967-1968",
+        "sourceLink": "https://www.icrc.org/"
+      }
+    ]
+  },
+  "personalities": {
+    "title": "Key Figures",
+    "icon": "👤",
+    "commanders": [
+      {
+        "name": "Moshe Dayan",
+        "role": "Defense Minister (1967)",
+        "birth_death": "1915-1981",
+        "responsibility": "Led Israeli military operations during Six-Day War. Made key decisions regarding occupation policies, including demolition of Latrun villages and Moroccan Quarter. Later expressed mixed feelings about occupation's long-term consequences."
+      },
+      {
+        "name": "Yitzhak Rabin",
+        "role": "IDF Chief of Staff (1967)",
+        "birth_death": "1922-1995",
+        "responsibility": "Military commander during Six-Day War. Oversaw operations in West Bank, East Jerusalem. Later as Prime Minister (1974-77, 1992-95) pursued peace negotiations; assassinated by Israeli extremist in 1995."
+      },
+      {
+        "name": "Levi Eshkol",
+        "role": "Prime Minister (1963-1969)",
+        "birth_death": "1895-1969",
+        "responsibility": "Israeli Prime Minister during Six-Day War. Made political decisions regarding occupation and settlement policies. Initially reluctant to occupy West Bank but approved military plans."
+      }
+    ]
+  },
+  "historicalImpact": {
+    "title": "Historical Impact & Legacy",
+    "icon": "🌍",
+    "sections": [
+      {
+        "heading": "Immediate Impact (1967-1973)",
+        "items": [
+          "Creation of modern Israeli occupation of Palestinian territories",
+          "300,000-400,000 Palestinians displaced; approximately 175,000 were 1948 refugees displaced second time",
+          "Israel gained control over all of historic Palestine for first time since 1948",
+          "UN Security Council Resolution 242 became foundation of peace process",
+          "Beginning of Israeli settlement enterprise in occupied territories",
+          "Palestinian national movement shifted focus from refugee return to liberation of occupied territories"
+        ]
+      },
+      {
+        "heading": "Long-term Significance (1973-Present)",
+        "items": [
+          "Occupation continues 55+ years later—longest military occupation in modern history",
+          "Over 700,000 Israeli settlers in West Bank and East Jerusalem (2024)",
+          "Occupation shapes every aspect of Palestinian life: movement, economy, governance, security",
+          "Occupation central to Israeli-Palestinian conflict and broader Middle East instability",
+          "International consensus: occupation illegal; settlements constitute war crimes",
+          "Multiple peace initiatives (Camp David, Oslo, Roadmap) failed to end occupation",
+          "Two-state solution increasingly questioned due to settlement expansion",
+          "October 2023 Hamas attack and subsequent Gaza war partly rooted in unresolved 1967 occupation"
+        ]
+      },
+      {
+        "heading": "Accountability & International Law",
+        "items": [
+          "✗ No Israeli officials prosecuted for displacement or village destruction",
+          "✗ Israel never withdrew from occupied territories despite UN Resolution 242",
+          "✗ Displaced Palestinians never allowed to return; no compensation paid",
+          "✗ Destroyed villages (Latrun) never rebuilt; area converted to Canada Park",
+          "✗ Settlement enterprise expanded massively despite international law violations",
+          "✓ International consensus: occupation illegal and must end",
+          "✓ International Court of Justice (2004): occupation violates international law",
+          "✓ UN Security Council resolutions remain on record condemning violations",
+          "✓ International Criminal Court investigating alleged crimes in occupied territories"
+        ]
+      }
+    ]
+  },
+  "sources": {
+    "title": "Verified Sources & Documentation",
+    "icon": "📚",
+    "introduction": "Primary sources include UN official documents, Israeli government records, Palestinian documentation, international humanitarian law analyses, and historical scholarship.",
+    "list": [
+      {
+        "icon": "🇺🇳",
+        "name": "UN Security Council Resolution 242 (1967)",
+        "type": "Primary UN Document",
+        "description": "Foundation resolution calling for withdrawal from occupied territories and just settlement of refugee problem. Adopted unanimously November 22, 1967.",
+        "link": "https://www.un.org/unispal/",
+        "verified": true
+      },
+      {
+        "icon": "🇺🇳",
+        "name": "UNRWA - Registered Refugees from 1967 War",
+        "type": "UN Agency Documentation",
+        "description": "Official registration and documentation of displaced persons from 1967 conflict. Special reports on displacement patterns and demographics.",
+        "link": "https://www.unrwa.org/palestine-refugees",
+        "verified": true
+      },
+      {
+        "icon": "⚖️",
+        "name": "International Court of Justice - Wall Advisory Opinion (2004)",
+        "type": "International Court Decision",
+        "description": "ICJ advisory opinion on legal consequences of construction of wall in occupied Palestinian territory. Reaffirmed Fourth Geneva Convention applies; settlements illegal.",
+        "link": "https://www.icj-cij.org/",
+        "verified": true
+      },
+      {
+        "icon": "🏥",
+        "name": "International Committee of the Red Cross",
+        "type": "Humanitarian Organization",
+        "description": "ICRC documented displacement, applied Fourth Geneva Convention framework. Maintained consistent position: Convention applies to occupied territories.",
+        "link": "https://www.icrc.org/",
+        "verified": true
+      },
+      {
+        "icon": "🗺️",
+        "name": "Zochrot - Destroyed Villages Documentation",
+        "type": "NGO Research",
+        "description": "Israeli NGO documents demolished Palestinian villages including Latrun area (Imwas, Yalo, Beit Nuba). Maps, photos, testimonies, historical records.",
+        "link": "https://www.zochrot.org/",
+        "verified": true
+      },
+      {
+        "icon": "📖",
+        "name": "Wikipedia - Six-Day War",
+        "type": "Encyclopedic Overview",
+        "description": "Comprehensive article with extensive citations to primary sources. Covers military operations, casualties, displacement, occupation establishment.",
+        "link": "https://en.wikipedia.org/wiki/Six-Day_War",
+        "verified": true
+      },
+      {
+        "icon": "🇮🇱",
+        "name": "B'Tselem - Israeli Occupation Documentation",
+        "type": "Human Rights Organization",
+        "description": "Israeli human rights organization documenting occupation since 1989. Reports on settlements, land confiscation, movement restrictions, military orders.",
+        "link": "https://www.btselem.org/",
+        "verified": true
+      },
+      {
+        "icon": "📚",
+        "name": "Tom Segev - '1967: Israel, the War, and the Year that Transformed the Middle East'",
+        "type": "Historical Scholarship",
+        "description": "Israeli historian's comprehensive account based on Israeli archives, interviews, contemporary documents. Details displacement, village demolitions, policy decisions.",
+        "link": null,
+        "verified": true
+      },
+      {
+        "icon": "📕",
+        "name": "Avi Shlaim - 'The Iron Wall: Israel and the Arab World'",
+        "type": "Academic History",
+        "description": "Oxford historian's analysis of 1967 war and occupation. Based on declassified documents from Israeli, US, UK archives.",
+        "link": null,
+        "verified": true
+      },
+      {
+        "icon": "🇺🇸",
+        "name": "US State Department - Foreign Relations of the United States, 1964-1968",
+        "type": "Declassified Government Documents",
+        "description": "US diplomatic cables and analyses from period. Document displacement, US response to occupation, discussions of refugee return.",
+        "link": "https://history.state.gov/historicaldocuments/frus1964-68v19",
+        "verified": true
+      }
+    ],
+    "alert": {
+      "type": "info",
+      "icon": "ℹ️",
+      "text": "<strong>Methodology:</strong> Displacement figures represent range between Israeli (280,000) and Palestinian/UN (400,000+) sources. Village destruction documented by multiple independent sources including Israeli historians and NGOs."
+    }
+  },
+  "media": {
+    "images": {
+      "local": [],
+      "remote": []
+    },
+    "documents": {
+      "local": [],
+      "remote": []
+    }
+  },
+  "cta": {
+    "title": "Understand Historical Context",
+    "description": "Support documentation of the 1967 displacement and ongoing occupation to promote just resolution.",
+    "buttons": [
+      { "text": "📅 View Full Timeline", "link": "../../major-incidents-timeline.html", "type": "primary" },
+      { "text": "🖨️ Print/Save PDF", "link": "#", "type": "secondary", "action": "print" },
+      { "text": "📧 Submit Info", "link": "mailto:palgeno.pedia@gmx.de?subject=Six-Day War Displacement - Additional Information", "type": "secondary" }
+    ]
+  }
+}

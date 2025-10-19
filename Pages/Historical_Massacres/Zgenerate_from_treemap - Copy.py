@@ -1,0 +1,469 @@
+#!/usr/bin/env python3
+"""
+Generate files and directories from a treemap structure.
+Usage: python generate_from_treemap.py <treemap_file>
+"""
+
+import os
+import sys
+import re
+
+
+def get_html_template():
+    """
+    Return the default HTML template for .html files.
+    """
+    return '''<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Loading...</title>
+    <meta name="description" id="page-description" content="">
+    <meta name="keywords" id="page-keywords" content="">
+    <!-- Styles -->
+    <link rel="stylesheet" href="../../shared-styles.css">
+    <link rel="stylesheet" href="../../unified-crisis-styles.css">
+    <link rel="stylesheet" href="event-documentation-styles.css">
+    <!-- Configuration for translations - add this before loading translation-system.js -->
+    <script>
+        window.translationConfig = {
+            skipAutoLoad: false,
+            debug: true,
+            // Calculate path to root and use both page-specific and common translations
+            customTranslationPath: function(lang) {
+                // Calculate path to root directory
+                const path = window.location.pathname;
+                const parts = path.split('/').filter(p => p.length > 0);
+                const dirDepth = path.endsWith('.html') ? parts.length - 1 : parts.length;
+                const rootPath = dirDepth <= 0 ? './' : Array(dirDepth).fill('..').join('/') + '/';
+                console.log(`🔍 Translation path resolution: Current depth=${dirDepth}, path to root=${rootPath}`);
+                // Use the root path for common translations
+                return rootPath + `translations/${lang}.json`;
+            }
+        };
+    </script>
+    <!-- Translation System Script - LOAD THIS FIRST -->
+    <script src="../../js/translation-system.js"></script>
+    <style>
+        /* Add some fallback style for missing images */
+        .gallery-item img[style*="display: none"] + .gallery-item-overlay {
+            position: static;
+            opacity: 1;
+            background-color: #f8f8f8;
+            color: #333;
+            padding: 1rem;
+            text-align: center;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        /* Add message for missing images */
+        .gallery-item img[style*="display: none"] ~ .gallery-item-overlay::before {
+            content: "📷 Image not available";
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        /* Make document items more resilient */
+        .document-item {
+            min-height: 60px;
+        }
+        /* Better handling for missing images */
+        .gallery-item img {
+            background-color: #f8f8f8;
+            min-height: 100px;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body data-i18n-page-title="deirYassin.pageTitle" data-i18n-meta-desc="deirYassin.metaDescription">
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">
+                <a href="../../index.html" data-i18n="common.siteTitle">Gaza Crisis Documentation</a>
+            </h1>
+            <nav class="nav">
+                <a href="../../war-crimes-stats.html" class="nav-btn" data-i18n="common.nav.warCrimes">⚖️ War Crimes</a>
+                <a href="../../hunger-crisis-stats.html" class="nav-btn" data-i18n="common.nav.hungerCrisis">🍽️ Hunger Crisis</a>
+                <a href="../../major-incidents-timeline.html" class="nav-btn active" data-i18n="common.nav.timeline">📋 Timeline</a>
+            </nav>
+            <!-- Language Selector -->
+            <div id="language-selector" class="language-selector">
+                <!-- Will be populated by translation-system.js -->
+            </div>
+            <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="event-documentation">
+        <!-- Breadcrumb Navigation -->
+        <div class="breadcrumb" id="breadcrumb-container">
+            <a href="../../index.html" data-i18n="deirYassin.breadcrumb.home">🏠 Home</a>
+            <span class="breadcrumb-separator">→</span>
+            <a href="../../major-incidents-timeline.html" data-i18n="deirYassin.breadcrumb.timeline">📋 Timeline</a>
+            <span class="breadcrumb-separator">→</span>
+            <a href="../../major-incidents-timeline.html?mode=historical" data-i18n="deirYassin.breadcrumb.historical">📜 Historical</a>
+            <span class="breadcrumb-separator">→</span>
+            <span data-i18n="deirYassin.breadcrumb.current">Deir Yassin 1948</span>
+        </div>
+
+        <!-- Hero Section -->
+        <div class="event-hero" id="hero-section">
+            <div class="event-category" data-i18n="deirYassin.hero.category">📜 HISTORICAL MASSACRE • NAKBA 1948</div>
+            <h1 class="event-title" data-i18n="deirYassin.hero.title">Deir Yassin Massacre</h1>
+            <p class="event-subtitle" data-i18n="deirYassin.hero.subtitle">Killings of civilians in a West-Jerusalem village during the 1948 war</p>
+            <div class="event-meta-grid">
+                <!-- Meta cards will be populated by JavaScript -->
+            </div>
+        </div>
+
+        <!-- Quick Info -->
+        <div class="quick-info-box" id="quick-info">
+            <div class="quick-info-title" data-i18n="deirYassin.quickFacts.title">⚡ Quick Facts</div>
+            <div class="quick-info-grid">
+                <!-- Quick facts will be populated by JavaScript -->
+            </div>
+        </div>
+
+        <!-- Media Gallery Section -->
+        <div id="media-gallery-section"></div>
+
+        <!-- Executive Summary -->
+        <section class="content-section" id="executive-summary"></section>
+
+        <!-- Casualties Documentation -->
+        <section class="content-section" id="casualties-section"></section>
+
+        <!-- Timeline -->
+        <section class="content-section" id="timeline-section"></section>
+
+        <!-- Documented Atrocities -->
+        <section class="content-section" id="war-crimes-section"></section>
+
+        <!-- International Law -->
+        <section class="content-section" id="international-law-section"></section>
+
+        <!-- Witness Testimonies -->
+        <section class="content-section" id="testimonies-section"></section>
+
+        <!-- Personalities Section (New) -->
+        <!-- Dynamically inserted by JavaScript -->
+
+        <!-- Historical Impact -->
+        <section class="content-section" id="historical-impact-section"></section>
+
+        <!-- Verified Sources -->
+        <section class="content-section" id="sources-section"></section>
+
+        <!-- Call to Action -->
+        <div class="cta-section" id="cta-section"></div>
+    </main>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+        <button class="lightbox-nav lightbox-prev" onclick="changeImage(-1)">&#10094;</button>
+        <div class="lightbox-content">
+            <img id="lightbox-image" class="lightbox-image" src="" alt="">
+            <div id="lightbox-caption" class="lightbox-caption"></div>
+        </div>
+        <button class="lightbox-nav lightbox-next" onclick="changeImage(1)">&#10095;</button>
+    </div>
+
+    <!-- Universal Footer Component -->
+    <div id="footer-placeholder"></div>
+    <!-- Then load footer initializer with adjusted path for subdirectory -->
+    <script src="../../footer-init.js"></script>
+
+    <!-- Main JavaScript -->
+    <script>
+        // =================================================================== 
+        // EVENT DOCUMENTATION PAGE JAVASCRIPT 
+        // Handles JSON data loading and rendering for historical massacres 
+        // Author: aliattia02 
+        // Last Updated: 2025-10-12 18:25:47 UTC 
+        // Version: 2.7 - Updated footer implementation 
+        // =================================================================== 
+        let currentImageIndex = 0;
+        let galleryImages = [];
+
+        // =================================================================== 
+        // LIGHTBOX FUNCTIONS 
+        // =================================================================== 
+        function openLightbox(index) {
+            currentImageIndex = index;
+            const lightbox = document.getElementById('lightbox');
+            document.getElementById('lightbox-image').src = galleryImages[index].src;
+            document.getElementById('lightbox-caption').textContent = galleryImages[index].caption;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        function changeImage(direction) {
+            currentImageIndex += direction;
+            if (currentImageIndex < 0) currentImageIndex = galleryImages.length - 1;
+            else if (currentImageIndex >= galleryImages.length) currentImageIndex = 0;
+            document.getElementById('lightbox-image').src = galleryImages[currentImageIndex].src;
+            document.getElementById('lightbox-caption').textContent = galleryImages[currentImageIndex].caption;
+        }
+
+        // =================================================================== 
+        // PATH RESOLUTION HELPERS 
+        // =================================================================== 
+        // Calculate path to root directory
+        function getPathToRoot() {
+            const path = window.location.pathname;
+            const parts = path.split('/').filter(p => p.length > 0);
+            const dirDepth = path.endsWith('.html') ? parts.length - 1 : parts.length;
+            return dirDepth <= 0 ? './' : Array(dirDepth).fill('..').join('/') + '/';
+        }
+
+        // =================================================================== 
+        // ANIMATIONS 
+        // =================================================================== 
+        function initializeAnimations() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+
+            document.querySelectorAll('.content-section').forEach(section => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(20px)';
+                section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(section);
+            });
+        }
+
+        // =================================================================== 
+        // THEME MANAGEMENT 
+        // =================================================================== 
+        function initializeTheme() {
+            const savedTheme = localStorage.getItem('gaza-docs-theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            updateThemeIcon(savedTheme);
+        }
+
+        function updateThemeIcon(theme) {
+            const themeToggle = document.querySelector('.theme-toggle');
+            if (themeToggle) themeToggle.textContent = theme === 'dark' ? '☀️' : '🌙';
+        }
+
+        // =================================================================== 
+        // EVENT LISTENERS 
+        // =================================================================== 
+        // Theme toggle
+        document.querySelector('.theme-toggle')?.addEventListener('click', function() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('gaza-docs-theme', newTheme);
+            updateThemeIcon(newTheme);
+        });
+
+        // Keyboard navigation for lightbox
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeLightbox();
+            else if (e.key === 'ArrowLeft') changeImage(-1);
+            else if (e.key === 'ArrowRight') changeImage(1);
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // =================================================================== 
+        // INITIALIZATION 
+        // =================================================================== 
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeTheme();
+            initializeAnimations();
+            console.log('✅ Event documentation page initialized');
+        });
+
+        // Language change listener - for custom handling if needed
+        document.addEventListener('languageChanged', function(event) {
+            console.log('🌐 Language changed to:', event.detail.language);
+            // Any custom language change handling can go here
+        });
+
+        // Function to switch media tabs
+        function switchMediaTab(tab) {
+            document.querySelectorAll('.media-tab').forEach(btn => btn.classList.remove('active'));
+            event.target.closest('.media-tab').classList.add('active');
+            document.querySelectorAll('.media-content').forEach(content => content.classList.remove('active'));
+            document.getElementById(`media-${tab}`).classList.add('active');
+        }
+
+        // Helper to get document icons
+        function getDocumentIcon(extension) {
+            const icons = {
+                'PDF': '📕',
+                'DOC': '📘',
+                'DOCX': '📘',
+                'TXT': '📄',
+                'XLS': '📗',
+                'XLSX': '📗',
+                'PPT': '📙',
+                'PPTX': '📙',
+                'ZIP': '📦',
+                'RAR': '📦'
+            };
+            return icons[extension] || '📄';
+        }
+    </script>
+
+    <!-- Event Documentation Translation Script -->
+    <script src="event-documentation-translations.js"></script>
+</body>
+</html>'''
+
+
+def parse_treemap(content):
+    """
+    Parse treemap content and extract directory structure.
+    Returns a list of full paths.
+    """
+    lines = content.strip().split('\n')
+    structure = []
+    current_dir = None
+
+    for line in lines:
+        # Skip empty lines
+        if not line.strip():
+            continue
+
+        # Remove all tree drawing characters and get the actual name
+        cleaned = re.sub(r'^[\s│┃┆├└┌┐┤┴┬┼─━┄┈╌╍╎╏╭╮╯╰╱╲╳▕▏▎▍▌▋▊▉█▓▒░■□▪▫]+', '', line)
+        name = cleaned.strip()
+
+        if not name:
+            continue
+
+        # Check if this line starts at column 0 (no indentation after cleaning tree chars)
+        # A line with no leading spaces in original = top level
+        has_indent = line.startswith(' ') or line.startswith('├') or line.startswith('└') or line.startswith('│')
+
+        # Determine if it's a directory (ends with /)
+        is_dir = name.endswith('/')
+        if is_dir:
+            name = name.rstrip('/')
+
+        # If it's a directory at top level, set it as current directory
+        if is_dir and not has_indent:
+            current_dir = name
+            structure.append((name, True))
+        # If it has indentation and we have a current directory, it belongs inside
+        elif has_indent and current_dir:
+            full_path = os.path.join(current_dir, name)
+            structure.append((full_path, is_dir))
+        # Otherwise it's a top-level file
+        else:
+            structure.append((name, is_dir))
+
+    return structure
+
+
+def create_structure(structure, base_path='.'):
+    """
+    Create directories and files based on parsed structure.
+    """
+    created_dirs = []
+    created_files = []
+    html_template = get_html_template()
+
+    for path, is_dir in structure:
+        full_path = os.path.join(base_path, path)
+
+        if is_dir:
+            os.makedirs(full_path, exist_ok=True)
+            created_dirs.append(full_path)
+            print(f"📁 Created directory: {full_path}")
+        else:
+            # Create parent directory if needed
+            parent = os.path.dirname(full_path)
+            if parent:
+                os.makedirs(parent, exist_ok=True)
+
+            # Create file with appropriate content
+            with open(full_path, 'w', encoding='utf-8') as f:
+                # If it's an HTML file, use the template
+                if full_path.endswith('.html'):
+                    f.write(html_template)
+                    print(f"📄 Created HTML file with template: {full_path}")
+                else:
+                    # Create empty file for non-HTML files
+                    pass
+                    print(f"📄 Created file: {full_path}")
+            created_files.append(full_path)
+
+    return created_dirs, created_files
+
+
+def main():
+    if len(sys.argv) < 2:
+        print("Usage: python generate_from_treemap.py <treemap_file>")
+        print("\nOr pipe treemap content:")
+        print("cat treemap.txt | python generate_from_treemap.py -")
+        print("\nOr paste treemap and press Ctrl+D (Unix) or Ctrl+Z (Windows):")
+        print("python generate_from_treemap.py -")
+        sys.exit(1)
+
+    # Read from file or stdin
+    if sys.argv[1] == '-' or not sys.stdin.isatty():
+        content = sys.stdin.read()
+    else:
+        try:
+            with open(sys.argv[1], 'r', encoding='utf-8') as f:
+                content = f.read()
+        except FileNotFoundError:
+            print(f"Error: File '{sys.argv[1]}' not found")
+            sys.exit(1)
+
+    # Parse and create structure
+    print("Parsing treemap...\n")
+    structure = parse_treemap(content)
+
+    if not structure:
+        print("No valid structure found in treemap")
+        sys.exit(1)
+
+    print(f"Found {len(structure)} items\n")
+
+    # Create files and directories
+    created_dirs, created_files = create_structure(structure)
+
+    print(f"\n✅ Done!")
+    print(f"   Created {len(created_dirs)} directories")
+    print(f"   Created {len(created_files)} files")
+
+
+if __name__ == '__main__':
+    main()

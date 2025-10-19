@@ -1,0 +1,683 @@
+{
+  "id": "hist_008",
+  "event_type": "Mass Casualties / Uprising",
+  "verification_status": "verified",
+  "metadata": {
+    "pageTitle": "First Intifada Mass Casualties (1987-1993) | Historical Documentation",
+    "description": "Palestinian uprising against Israeli occupation lasting from December 1987 to September 1993. Over 1,100 Palestinians killed by Israeli forces, 120,000+ wounded, tens of thousands arrested. Sparked Oslo Accords.",
+    "keywords": "First Intifada, 1987, Palestinian uprising, Oslo Accords, civil disobedience, Israeli occupation, stone throwers",
+    "lastUpdated": "2025-10-18",
+    "author": "aliattia02"
+  },
+  "date": {
+    "start": "1987-12-08",
+    "end": "1993-09-13",
+    "duration_days": 2105,
+    "display": "8 December 1987 - 13 September 1993",
+    "context": "Palestinian uprising against 20-year Israeli occupation"
+  },
+  "location": {
+    "historical": {
+      "name": "West Bank, Gaza Strip, East Jerusalem",
+      "admin_context": "Israeli-occupied Palestinian territories since 1967",
+      "primary_centers": ["Jabalia Refugee Camp", "Gaza City", "Nablus", "Ramallah", "Hebron", "Jerusalem"]
+    },
+    "current": {
+      "name": "Occupied Palestinian Territories",
+      "admin_context": "West Bank under Israeli military occupation; Gaza under blockade since 2007",
+      "status": "Continued occupation; First Intifada led to Oslo Accords and creation of Palestinian Authority"
+    }
+  },
+  "hero": {
+    "category": "📜 HISTORICAL UPRISING • FIRST INTIFADA 1987-1993",
+    "title": "First Intifada Mass Casualties",
+    "subtitle": "Six-year Palestinian uprising against Israeli occupation marked by civil disobedience, stone-throwing, and brutal suppression",
+    "metaCards": [
+      { "icon": "📅", "label": "Duration", "value": "5 years, 9 months", "detail": "Dec 1987 - Sep 1993" },
+      { "icon": "📍", "label": "Location", "value": "West Bank & Gaza", "detail": "All occupied territories" },
+      { "icon": "💀", "label": "Palestinians Killed", "value": "1,087-1,284", "detail": "241-332 were children" },
+      { "icon": "🏥", "label": "Palestinians Injured", "value": "120,000+", "detail": "15,000 seriously wounded" }
+    ]
+  },
+  "quickFacts": {
+    "title": "⚡ Quick Facts",
+    "items": [
+      { "label": "Event Type", "value": "Popular Uprising / Mass Casualties" },
+      { "label": "Trigger", "value": "Traffic accident killing 4 Palestinians" },
+      { "label": "Israeli Response", "value": "Live fire, beatings, mass arrests" },
+      { "label": "Verification", "value": "B'Tselem; UN; Human Rights Watch; ICRC" },
+      { "label": "Outcome", "value": "Oslo Accords (1993)" }
+    ]
+  },
+  "brief_summary": "The First Intifada (Arabic: انتفاضة, 'uprising' or 'shaking off') was a sustained Palestinian popular resistance movement against Israeli military occupation lasting from December 8, 1987 to September 13, 1993. Triggered by a traffic accident in Gaza that killed four Palestinian workers, the uprising rapidly spread throughout the occupied territories. Characterized initially by civil disobedience, strikes, boycotts, and stone-throwing by youth, it was met with severe Israeli military repression. Israeli Defense Minister Yitzhak Rabin's infamous 'force, might, and beatings' policy led to systematic bone-breaking and widespread use of live ammunition against demonstrators. By the uprising's end, Israeli forces had killed 1,087-1,284 Palestinians (including 241-332 children), injured over 120,000, arrested tens of thousands, demolished thousands of homes, and deported hundreds. The Intifada fundamentally transformed the Israeli-Palestinian conflict, leading to international recognition of Palestinian rights and culminating in the 1993 Oslo Accords.",
+  "perpetrators": ["Israel Defense Forces", "Israeli Border Police", "Israeli Civil Administration", "Shin Bet (Israeli Security Service)", "Israeli settler violence"],
+  "executiveSummary": {
+    "title": "Executive Summary",
+    "icon": "📋",
+    "alert": {
+      "type": "critical",
+      "icon": "⚠️",
+      "text": "<strong>Context:</strong> The First Intifada erupted after 20 years of Israeli military occupation (since 1967). Palestinians had endured land confiscation, settlement expansion, home demolitions, and systematic oppression without viable political resolution."
+    },
+    "paragraphs": [
+      "On December 8, 1987, an Israeli army truck collided with civilian vehicles at the Erez checkpoint in Gaza, killing four Palestinian workers from Jabalia refugee camp. Palestinians believed it was deliberate revenge for the stabbing death of an Israeli in Gaza two days earlier. The following day, December 9, massive protests erupted in Jabalia. When 17-year-old Hatem al-Sisi was shot dead by Israeli soldiers, the uprising exploded across Gaza, East Jerusalem, and the West Bank within days. What began as spontaneous protests transformed into organized, sustained civil resistance coordinated by grassroots committees and later by the United National Leadership of the Uprising (UNLU).",
+      "The Intifada was characterized by largely non-violent tactics: general strikes, tax resistance, boycotts of Israeli products, and civil disobedience. Palestinian youth confronted Israeli soldiers with stones and Molotov cocktails. The Israeli response was brutal. Defense Minister Yitzhak Rabin issued orders to use 'force, might, and beatings' and to 'break bones' of demonstrators. Soldiers systematically beat protesters, fired live ammunition at stone-throwers, and used tear gas extensively. In the first year alone, Israeli forces killed at least 300 Palestinians and wounded tens of thousands. By 1990, the death toll exceeded 1,000.",
+      "The uprising exacted an enormous toll: 1,087-1,284 Palestinians killed (including 241-332 children), over 120,000 wounded, approximately 20,000 arrested in the first year alone (with estimates reaching 120,000 total over six years), 2,532 homes demolished, and 481 Palestinians deported. Approximately 160-200 Israelis (soldiers and civilians) were killed during the same period. International condemnation was swift—the UN Security Council condemned Israel's response, and even the Reagan Administration criticized the 'harsh security measures and excessive use of live ammunition.' The Intifada forced recognition of Palestinian national aspirations, led to the Madrid Conference (1991) and secret Oslo negotiations, culminating in the September 1993 Oslo Accords which created the Palestinian Authority and promised future statehood—though these promises remain unfulfilled over 30 years later."
+    ]
+  },
+  "casualties": {
+    "title": "Casualties & Impact",
+    "icon": "💀",
+    "deaths": "1,087-1,284 Palestinians; 160-200 Israelis",
+    "injured": "120,000+ Palestinians injured; 3,100 Israeli soldiers/civilians injured",
+    "forced_displacement": "Thousands displaced through home demolitions",
+    "breakdown": [
+      {
+        "type": "killed",
+        "number": "1,087-1,284",
+        "label": "Palestinians Killed",
+        "detail": "Killed by Israeli forces; range reflects different sources (B'Tselem vs. Palestinian documentation)",
+        "sources": [
+          {
+            "name": "B'Tselem - First Intifada Fatalities",
+            "link": "https://www.btselem.org/statistics/first_intifada_tables",
+            "icon": "🇮🇱"
+          },
+          {
+            "name": "Al Jazeera - Intifada Documentation",
+            "link": "https://www.aljazeera.com/gallery/2023/12/8/history-illustrated-the-first-intifada-against-israel",
+            "icon": "📰"
+          }
+        ]
+      },
+      {
+        "type": "killed",
+        "number": "241-332",
+        "label": "Palestinian Children Killed",
+        "detail": "Minors under 18 killed by Israeli forces",
+        "sources": [
+          {
+            "name": "B'Tselem Documentation",
+            "link": "https://www.btselem.org/",
+            "icon": "📊"
+          }
+        ]
+      },
+      {
+        "type": "killed",
+        "number": "160-200",
+        "label": "Israelis Killed",
+        "detail": "Israeli soldiers and civilians killed by Palestinians during Intifada",
+        "sources": [
+          {
+            "name": "B'Tselem Statistics",
+            "link": "https://www.btselem.org/",
+            "icon": "📊"
+          }
+        ]
+      },
+      {
+        "type": "injured",
+        "number": "120,000+",
+        "label": "Palestinians Wounded",
+        "detail": "Injuries from live fire, beatings, rubber bullets, tear gas. ~15,000 seriously wounded",
+        "sources": [
+          {
+            "name": "Palestine Remix - Intifada Stories",
+            "link": "https://remix.aljazeera.com/aje/PalestineRemix/stories-from-the-intifada.html",
+            "icon": "📄"
+          },
+          {
+            "name": "PBS - Women, War and Peace",
+            "link": "https://www.pbs.org/wnet/women-war-and-peace/uncategorized/what-you-need-to-know-about-the-1987-intifada/",
+            "icon": "📺"
+          }
+        ]
+      },
+      {
+        "type": "arrested",
+        "number": "120,000",
+        "label": "Palestinians Arrested",
+        "detail": "Total arrests over 6 years; ~20,000 in first year alone. Many tortured in detention",
+        "sources": [
+          {
+            "name": "Palestine Remix Documentation",
+            "link": "https://remix.aljazeera.com/aje/PalestineRemix/stories-from-the-intifada.html",
+            "icon": "📄"
+          }
+        ]
+      },
+      {
+        "type": "demolished",
+        "number": "2,532",
+        "label": "Homes Demolished",
+        "detail": "Palestinian homes destroyed as punishment or deterrent by Israeli forces",
+        "sources": [
+          {
+            "name": "B'Tselem Reports",
+            "link": "https://www.btselem.org/",
+            "icon": "🏠"
+          }
+        ]
+      },
+      {
+        "type": "deported",
+        "number": "481",
+        "label": "Palestinians Deported",
+        "detail": "Expelled from occupied territories by Israeli military orders",
+        "sources": [
+          {
+            "name": "UN Security Council Resolutions 607 & 608",
+            "link": "https://www.un.org/unispal/",
+            "icon": "🇺🇳"
+          }
+        ]
+      }
+    ],
+    "alert": {
+      "type": "info",
+      "icon": "ℹ️",
+      "text": "<strong>Sources:</strong> B'Tselem (Israeli human rights organization); United Nations; Human Rights Watch; Palestinian human rights organizations; International Committee of the Red Cross; US State Department reports."
+    }
+  },
+  "timeline": {
+    "title": "Timeline of Events",
+    "icon": "⏱️",
+    "events": [
+      {
+        "time": "8 December 1987",
+        "title": "Trigger: Traffic accident in Gaza",
+        "description": "Israeli army truck collides with civilian vehicles at Erez checkpoint, killing four Palestinian workers from Jabalia refugee camp (Gaza). Palestinians believe it was deliberate revenge for Israeli stabbing two days earlier. Rumors and anger spread rapidly.",
+        "sourceLinks": [
+          {
+            "name": "Al Jazeera - First Intifada History",
+            "url": "https://www.aljazeera.com/gallery/2023/12/8/history-illustrated-the-first-intifada-against-israel"
+          },
+          {
+            "name": "Britannica - Intifada",
+            "url": "https://www.britannica.com/topic/intifada"
+          }
+        ]
+      },
+      {
+        "time": "9 December 1987",
+        "title": "Intifada begins: Jabalia uprising",
+        "description": "Mass protests erupt in Jabalia refugee camp. 17-year-old Hatem al-Sisi shot dead by Israeli soldier after throwing Molotov cocktail at army patrol. His death becomes symbol. Protests spread throughout Gaza Strip within hours.",
+        "sourceLinks": [
+          {
+            "name": "PalQuest - First Intifada 1987-1993",
+            "url": "https://www.palquest.org/en/highlight/29773/first-intifada-1987-1993"
+          }
+        ]
+      },
+      {
+        "time": "10-15 December 1987",
+        "title": "Uprising spreads to West Bank and Jerusalem",
+        "description": "Protests expand to East Jerusalem, Ramallah, Nablus, Hebron, and other West Bank cities and refugee camps. Rock-throwing, tire burning, roadblocks become daily occurrences. Six Palestinians killed, 30 injured in first week.",
+        "sourceLinks": [
+          {
+            "name": "Jewish Virtual Library - First Intifada",
+            "url": "https://www.jewishvirtuallibrary.org/first-intifada"
+          }
+        ]
+      },
+      {
+        "time": "January 1988",
+        "title": "Rabin's 'Iron Fist' policy announced",
+        "description": "Defense Minister Yitzhak Rabin declares policy of 'force, might, and beatings.' Orders soldiers to 'break bones' of stone-throwers. Israeli forces begin systematic beatings with clubs and rifle butts. At least 300 Palestinians killed in first year.",
+        "sourceLinks": [
+          {
+            "name": "PalQuest Documentation",
+            "url": "https://www.palquest.org/en/highlight/29773/first-intifada-1987-1993"
+          }
+        ]
+      },
+      {
+        "time": "January-March 1988",
+        "title": "Formation of United National Leadership (UNLU)",
+        "description": "Underground coordination committee forms comprising PLO factions and local leaders. Begin issuing communiqués (bayanat) directing strikes, boycotts, demonstrations. Organize parallel institutions: popular committees, alternative education, medical relief.",
+        "sourceLinks": [
+          {
+            "name": "PalQuest - First Intifada",
+            "url": "https://www.palquest.org/en/highlight/29773/first-intifada-1987-1993"
+          }
+        ]
+      },
+      {
+        "time": "December 1987 - December 1988",
+        "title": "First year: Peak violence",
+        "description": "First year death toll: at least 300 Palestinians killed, tens of thousands wounded. Over 18,000 arrested. Israeli forces close schools and universities, impose curfews, demolish homes. 3,600+ Molotov cocktail attacks, 100 hand grenade attacks reported.",
+        "sourceLinks": [
+          {
+            "name": "War Wings Daily - First Intifada Analysis",
+            "url": "https://warwingsdaily.com/wars/the-first-intifada-1987-1993/"
+          }
+        ]
+      },
+      {
+        "time": "15 November 1988",
+        "title": "Palestinian Declaration of Independence",
+        "description": "Palestine National Council in Algiers declares Palestinian statehood. PLO recognizes Israel's right to exist, accepts UN Resolutions 242 and 338, adopts two-state solution. Authored by Mahmoud Darwish. Major political shift driven by Intifada momentum.",
+        "sourceLinks": [
+          {
+            "name": "PalQuest - Declaration Context",
+            "url": "https://www.palquest.org/en/highlight/29773/first-intifada-1987-1993"
+          }
+        ]
+      },
+      {
+        "time": "8 October 1990",
+        "title": "Temple Mount Massacre",
+        "description": "Israeli police kill 22 Palestinians at Al-Aqsa Mosque compound in Jerusalem during prayers. Hundreds wounded. Incident marks shift toward more lethal Palestinian tactics. Three Israelis and one IDF soldier stabbed to death in Jerusalem and Gaza two weeks later.",
+        "sourceLinks": [
+          {
+            "name": "Historical Records",
+            "url": "https://www.britannica.com/topic/intifada"
+          }
+        ]
+      },
+      {
+        "time": "1990-1991",
+        "title": "Violence escalates; 'Intrafada' begins",
+        "description": "Palestinian armed attacks increase. Hamas challenges PLO leadership. 'Intrafada': Palestinians kill other Palestinians accused of collaboration with Israel. By 1991, number killed by Palestinian death squads exceeds those killed by Israeli forces in some periods.",
+        "sourceLinks": [
+          {
+            "name": "Jewish Virtual Library Documentation",
+            "url": "https://www.jewishvirtuallibrary.org/first-intifada"
+          }
+        ]
+      },
+      {
+        "time": "30 October 1991",
+        "title": "Madrid Peace Conference",
+        "description": "First direct Israeli-Palestinian negotiations. Palestinians represented by delegation from occupied territories (not PLO formally). Grassroots activists and women leaders prominent in delegation. Conference marks international recognition of Palestinian rights.",
+        "sourceLinks": [
+          {
+            "name": "PBS - Intifada Impact",
+            "url": "https://www.pbs.org/wnet/women-war-and-peace/uncategorized/what-you-need-to-know-about-the-1987-intifada/"
+          }
+        ]
+      },
+      {
+        "time": "1992-1993",
+        "title": "Secret Oslo negotiations",
+        "description": "While Madrid talks stall, secret back-channel negotiations begin in Oslo, Norway between Israel and PLO. Grassroots leaders and women excluded from Oslo process, unlike Madrid. Negotiations produce framework for Palestinian self-government.",
+        "sourceLinks": [
+          {
+            "name": "PBS Documentation",
+            "url": "https://www.pbs.org/wnet/women-war-and-peace/uncategorized/what-you-need-to-know-about-the-1987-intifada/"
+          }
+        ]
+      },
+      {
+        "time": "13 September 1993",
+        "title": "Oslo Accords signed; Intifada ends",
+        "description": "Israel and PLO sign Declaration of Principles on White House lawn. Agreement provides framework for Palestinian self-government, Israeli withdrawal from some territories, creation of Palestinian Authority. Intifada officially ends after nearly six years. Final toll: 1,087-1,284 Palestinians killed, 160-200 Israelis killed.",
+        "sourceLinks": [
+          {
+            "name": "Al Jazeera - Intifada History",
+            "url": "https://www.aljazeera.com/gallery/2023/12/8/history-illustrated-the-first-intifada-against-israel"
+          },
+          {
+            "name": "Britannica - Intifada",
+            "url": "https://www.britannica.com/topic/intifada"
+          }
+        ]
+      }
+    ]
+  },
+  "warCrimes": {
+    "title": "Documented Violations",
+    "icon": "⚠️",
+    "alert": {
+      "type": "warning",
+      "icon": "⚠️",
+      "text": "<strong>International condemnation:</strong> UN Security Council condemned Israeli practices. US government criticized 'excessive use of live ammunition.' Multiple human rights organizations documented systematic violations of international humanitarian law."
+    },
+    "crimes": [
+      {
+        "icon": "🔫",
+        "title": "Excessive Use of Lethal Force",
+        "description": "Israeli forces routinely used live ammunition against stone-throwing demonstrators, killing over 1,000 Palestinians. UN criticized Israel's shoot-to-kill policies. Many victims shot in upper body/head, indicating lethal intent. Use of force disproportionate to threat posed by largely unarmed protesters.",
+        "sourceLink": "https://www.btselem.org/",
+        "sourceText": "📄 B'Tselem Documentation →"
+      },
+      {
+        "icon": "🦴",
+        "title": "Systematic Beatings and Bone-Breaking Policy",
+        "description": "Defense Minister Rabin's explicit orders to 'break bones' of protesters. Soldiers systematically beat Palestinians with clubs and rifle butts. At least 17 Palestinians died from beatings alone. Thousands suffered broken bones, permanent injuries. Policy constituted torture and cruel, inhuman treatment prohibited under international law.",
+        "sourceLink": "https://www.palquest.org/en/highlight/29773/first-intifada-1987-1993",
+        "sourceText": "📄 PalQuest Documentation →"
+      },
+      {
+        "icon": "🏠",
+        "title": "Punitive Home Demolitions",
+        "description": "2,532 Palestinian homes demolished during Intifada as collective punishment—homes of families of suspected attackers or activists demolished without trial. Violates Fourth Geneva Convention Article 33: 'Collective penalties...are prohibited.' Thousands rendered homeless.",
+        "sourceLink": "https://www.btselem.org/",
+        "sourceText": "📄 B'Tselem Reports →"
+      },
+      {
+        "icon": "⛓️",
+        "title": "Mass Arbitrary Detention and Torture",
+        "description": "Approximately 120,000 Palestinians arrested over six years—roughly 20% of adult male population. Many held in administrative detention without charge or trial. Widespread torture documented by human rights organizations. Detention centers described as torture facilities.",
+        "sourceLink": "https://www.btselem.org/",
+        "sourceText": "📄 Human Rights Documentation →"
+      },
+      {
+        "icon": "🚫",
+        "title": "Collective Punishment",
+        "description": "Extended curfews affecting entire towns and refugee camps for weeks. Closures of schools and universities for months/years, denying education to entire generation. Sealing of entire areas. All constitute collective punishment prohibited under Geneva Convention Article 33.",
+        "sourceLink": "https://www.btselem.org/",
+        "sourceText": "📄 B'Tselem Reports →"
+      },
+      {
+        "icon": "✈️",
+        "title": "Illegal Deportations",
+        "description": "481 Palestinians deported from occupied territories to Lebanon and elsewhere—direct violation of Fourth Geneva Convention Article 49: 'Individual or mass forcible transfers...from occupied territory...are prohibited.' UN Security Council Resolutions 607 and 608 condemned deportations.",
+        "sourceLink": "https://www.un.org/unispal/",
+        "sourceText": "📄 UN Resolutions →"
+      },
+      {
+        "icon": "👶",
+        "title": "Killing of Children",
+        "description": "241-332 Palestinian children (minors under 18) killed by Israeli forces during Intifada. Many shot while throwing stones or participating in protests. International outcry over images of soldiers shooting children. Killing of children disproportionate and violated principles of distinction and proportionality.",
+        "sourceLink": "https://www.btselem.org/",
+        "sourceText": "📄 B'Tselem Statistics →"
+      }
+    ]
+  },
+  "international_law": {
+    "title": "International Law Framework",
+    "icon": "⚖️",
+    "introduction": "The First Intifada occurred under framework of Fourth Geneva Convention (1949) governing military occupation. Israel's response violated multiple provisions of international humanitarian law and human rights law.",
+    "sections": [
+      {
+        "heading": "Fourth Geneva Convention - Violations",
+        "violations": [
+          "<strong>Article 33:</strong> 'No protected person may be punished for an offence he or she has not personally committed. Collective penalties...are prohibited.' Home demolitions and collective curfews violated this provision.",
+          "<strong>Article 49:</strong> 'Individual or mass forcible transfers...are prohibited.' 481 deportations directly violated this protection.",
+          "<strong>Article 147 (Grave Breaches):</strong> 'Willful killing...torture or inhuman treatment...extensive destruction...not justified by military necessity' constitute war crimes. Bone-breaking policy and excessive force qualify as grave breaches."
+        ]
+      },
+      {
+        "heading": "International Covenant on Civil and Political Rights",
+        "violations": [
+          "<strong>Article 6 (Right to Life):</strong> Use of lethal force against largely unarmed protesters violated right to life. Force used was not strictly necessary or proportionate.",
+          "<strong>Article 7 (Prohibition of Torture):</strong> Systematic beatings, bone-breaking policy, and torture in detention centers violated absolute prohibition on torture and cruel, inhuman treatment.",
+          "<strong>Article 9 (Liberty and Security):</strong> Mass arbitrary detentions, administrative detention without charge violated right to liberty and protection from arbitrary arrest."
+        ]
+      },
+      {
+        "heading": "UN Security Council Resolutions",
+        "violations": [
+          "<strong>Resolutions 607 (1988) and 608 (1988):</strong> Condemned Israel's deportation of Palestinian civilians. Demanded Israel cease deportations and allow deportees to return. Israel rejected resolutions.",
+          "<strong>Multiple resolutions:</strong> Security Council passed numerous resolutions condemning Israeli practices during Intifada, including excessive use of force, collective punishment, and violations of Palestinian rights."
+        ]
+      },
+      {
+        "heading": "International Criticism and Condemnation",
+        "violations": [
+          "<strong>UN Human Rights Council:</strong> Multiple fact-finding missions documented violations. Special Rapporteur reports detailed systematic abuses.",
+          "<strong>US State Department:</strong> Even US government (Israel's closest ally) condemned 'harsh security measures and excessive use of live ammunition' under Reagan Administration.",
+          "<strong>Amnesty International and Human Rights Watch:</strong> Both organizations issued reports documenting torture, arbitrary detention, excessive force, and other violations.",
+          "<strong>International Committee of the Red Cross:</strong> Repeatedly raised concerns about treatment of detainees and use of force against civilians."
+        ]
+      }
+    ],
+    "alert": {
+      "type": "critical",
+      "icon": "⚖️",
+      "text": "<strong>Legal consensus:</strong> International human rights organizations, UN bodies, and legal experts concluded Israel's response to First Intifada involved systematic violations of international humanitarian law and human rights law."
+    }
+  },
+  "testimonies": {
+    "title": "Witness Testimonies & Official Accounts",
+    "icon": "👥",
+    "witnesses": [
+      {
+        "initials": "YR",
+        "name": "Yitzhak Rabin",
+        "role": "Israeli Defense Minister (1984-1990)",
+        "testimony": "Issued notorious orders to soldiers: 'The first priority is to use force, might, and beatings.' Later told officers: 'Break their bones.' Admitted policy in interview: 'I told the army to go in and use force, to beat up the demonstrators.' Later as Prime Minister (1992-1995), pursued peace negotiations that grew from Intifada.",
+        "source": "Contemporary interviews and military records; documented by Israeli media",
+        "sourceLink": "https://www.palquest.org/en/highlight/29773/first-intifada-1987-1993"
+      },
+      {
+        "initials": "MD",
+        "name": "Mahmoud Darwish",
+        "role": "Palestinian poet; author of Declaration of Independence",
+        "testimony": "Authored 1988 Palestinian Declaration of Independence. Wrote: 'Because of the Intifada and its revolutionary and irreversible impulse, the history of Palestine has therefore arrived at a decisive juncture.' Described Intifada as transformative moment for Palestinian national movement.",
+        "source": "Palestinian Declaration of Independence (1988); interviews",
+        "sourceLink": "https://www.palquest.org/en/highlight/29773/first-intifada-1987-1993"
+      },
+      {
+        "initials": "UT",
+        "name": "United Nations",
+        "role": "UN Security Council and Human Rights Bodies",
+        "testimony": "Security Council condemned Israeli practices multiple times. Resolutions 607 and 608 (1988) condemned deportations. Human Rights investigators documented: 'The Israeli military response has been characterized by excessive and indiscriminate use of force against Palestinian civilians, including children.'",
+        "source": "UN Security Council Resolutions 607, 608; UN Human Rights reports",
+        "sourceLink": "https://www.un.org/unispal/"
+      },
+      {
+        "initials": "AI",
+        "name": "Amnesty International",
+        "role": "International human rights organization",
+        "testimony": "Documented systematic torture in Israeli detention centers. Report stated: 'Palestinians detained during the Intifada have been subjected to torture and ill-treatment systematically and on a wide scale.' Described beatings, stress positions, sleep deprivation, threats as routine.",
+        "source": "Amnesty International reports (1988-1993)",
+        "sourceLink": null
+      },
+      {
+        "initials": "BT",
+        "name": "B'Tselem (Israeli human rights org)",
+        "role": "Israeli human rights organization",
+        "testimony": "Founded during Intifada (1989) to document violations. Comprehensive statistics: 1,087 Palestinians killed (including 241 children), 120,000+ wounded, 2,532 homes demolished, 481 deported. Stated: 'Israeli forces systematically violated international humanitarian law during the Intifada.'",
+        "source": "B'Tselem statistical reports and documentation",
+        "sourceLink": "https://www.btselem.org/"
+      },
+      {
+        "initials": "Anonymous",
+        "name": "Palestinian Youth Activist",
+        "role": "Intifada participant from Ramallah",
+        "testimony": "Interviewed for Al Jazeera documentary: 'We refused to give Israel money to build a more powerful army to oppress Palestinians. The Israeli army besieged our city for 40 days. They raided or demolished homes of those who withheld tax. We saw new types of injuries—first from tear gas and rubber bullets, then from beatings and real bullets.'",
+        "source": "Palestine Remix - Al Jazeera oral histories",
+        "sourceLink": "https://remix.aljazeera.com/aje/PalestineRemix/stories-from-the-intifada.html"
+      },
+      {
+        "initials": "JC",
+        "name": "Jimmy Carter",
+        "role": "Former US President",
+        "testimony": "Reflected on Intifada: 'The Palestinians' nonviolent resistance in the First Intifada was a remarkable demonstration of courage. The violent Israeli response shocked many Americans and changed perceptions of the Israeli-Palestinian conflict.' Noted that Intifada led to international recognition of Palestinian rights.",
+        "source": "Palestine: Peace Not Apartheid (2006)",
+        "sourceLink": null
+      }
+    ]
+  },
+  "personalities": {
+    "title": "Key Figures",
+    "icon": "👤",
+    "commanders": [
+      {
+        "name": "Yitzhak Rabin",
+        "role": "Israeli Defense Minister (1984-1990); Prime Minister (1992-1995)",
+        "birth_death": "1922-1995",
+        "responsibility": "Issued 'iron fist' orders including bone-breaking policy. Later acknowledged brutality excessive. As PM, pursued Oslo peace process that emerged from Intifada. Assassinated by Israeli extremist in 1995."
+      },
+      {
+        "name": "Yasser Arafat",
+        "role": "PLO Chairman",
+        "birth_death": "1929-2004",
+        "responsibility": "Led PLO from exile. Initially caught off-guard by grassroots uprising, later asserted control. Authorized 1988 Declaration of Independence. Led Oslo negotiations resulting in 1993 accords."
+      },
+      {
+        "name": "Hanan Ashrawi",
+        "role": "Palestinian spokeswoman; academic",
+        "birth_death": "1946-present",
+        "responsibility": "Prominent spokesperson for Palestinian cause during Intifada. Articulated Palestinian aspirations to international media. Key figure in Madrid Conference delegation. Later Palestinian legislator."
+      },
+      {
+        "name": "United National Leadership of Uprising (UNLU)",
+        "role": "Underground coordinating committee",
+        "birth_death": "1988-1993",
+        "responsibility": "Coordinated strikes, boycotts, demonstrations through communiqués. Comprised representatives of PLO factions and grassroots leaders. Organized parallel institutions and civil disobedience campaigns."
+      }
+    ]
+  },
+  "historicalImpact": {
+    "title": "Historical Impact & Legacy",
+    "icon": "🌍",
+    "sections": [
+      {
+        "heading": "Immediate Impact (1987-1993)",
+        "items": [
+          "Transformed Israeli-Palestinian conflict from distant issue into immediate crisis visible on global television",
+          "Images of Israeli soldiers beating Palestinian youth with rocks shocked international community",
+          "Forced recognition of Palestinian national aspirations—no longer just 'refugee problem' but political rights issue",
+          "Palestinian women played unprecedented public role in resistance and organizing",
+          "Grassroots organizing created parallel institutions: popular committees, alternative education, medical relief",
+          "1988 Palestinian Declaration of Independence and PLO recognition of Israel",
+          "Madrid Conference (1991): first direct Israeli-Palestinian negotiations",
+          "Oslo Accords (1993): creation of Palestinian Authority and framework for eventual Palestinian state"
+        ]
+      },
+      {
+        "heading": "Long-term Significance (1993-Present)",
+        "items": [
+          "Oslo process ultimately failed—no Palestinian state established after 30+ years",
+          "Palestinian Authority became subcontractor for Israeli occupation rather than pathway to statehood",
+          "Exclusion of grassroots leaders (especially women) from Oslo negotiations weakened Palestinian civil society",
+          "Hamas emerged as major force, challenging PLO/Fatah dominance",
+          "Intifada tactics influenced other resistance movements globally",
+          "Collapse of Oslo process led to Second Intifada (2000-2005), far more violent",
+          "Israeli settlement expansion accelerated after Oslo—now 700,000+ settlers",
+          "Intifada demonstrated that Palestinian resistance could not be suppressed indefinitely",
+          "Established pattern: Palestinian uprising → international attention → negotiations → failure → renewed violence"
+        ]
+      },
+      {
+        "heading": "Accountability & Justice",
+        "items": [
+          "✗ No Israeli officials prosecuted for bone-breaking policy, excessive force, or other violations",
+          "✗ No compensation paid to families of those killed or to those whose homes demolished",
+          "✗ Deported Palestinians never allowed to return",
+          "✗ Israeli policies that triggered Intifada (occupation, settlements, land confiscation) continue unchanged",
+          "✓ B'Tselem and other human rights organizations documented violations comprehensively",
+          "✓ International community recognized Palestinian national rights",
+          "✓ UN resolutions condemned Israeli practices (though not enforced)",
+          "✓ Intifada forced Israel to negotiate, leading to Oslo process",
+          "✗ Oslo promises unfulfilled; occupation continues 30+ years later"
+        ]
+      }
+    ]
+  },
+  "sources": {
+    "title": "Verified Sources & Documentation",
+    "icon": "📚",
+    "introduction": "Primary sources include B'Tselem statistical documentation, UN resolutions and reports, Human Rights Watch investigations, Palestinian oral histories, Israeli military records, and contemporary journalism.",
+    "list": [
+      {
+        "icon": "🇮🇱",
+        "name": "B'Tselem - First Intifada Statistics and Documentation",
+        "type": "Human Rights Organization",
+        "description": "Israeli human rights organization founded during Intifada (1989). Comprehensive statistics on casualties, arrests, home demolitions. Documented systematic violations of international law by Israeli forces.",
+        "link": "https://www.btselem.org/statistics/first_intifada_tables",
+        "verified": true
+      },
+      {
+        "icon": "🇺🇳",
+        "name": "United Nations - Security Council Resolutions 607 & 608",
+        "type": "UN Official Documents",
+        "description": "Security Council resolutions condemning Israeli deportations of Palestinians. Multiple other resolutions addressed Israeli violations during Intifada.",
+        "link": "https://www.un.org/unispal/",
+        "verified": true
+      },
+      {
+        "icon": "📰",
+        "name": "Al Jazeera - First Intifada Historical Documentation",
+        "type": "Multimedia Documentation",
+        "description": "Comprehensive historical documentation including timeline, photographs, and analysis of First Intifada from outbreak through Oslo Accords.",
+        "link": "https://www.aljazeera.com/gallery/2023/12/8/history-illustrated-the-first-intifada-against-israel",
+        "verified": true
+      },
+      {
+        "icon": "📄",
+        "name": "Palestine Remix - Stories from the Intifada",
+        "type": "Oral History Archive",
+        "description": "Al Jazeera oral history project. First-person testimonies from Palestinian participants in First Intifada. Documents experiences of youth, women, activists, and ordinary citizens.",
+        "link": "https://remix.aljazeera.com/aje/PalestineRemix/stories-from-the-intifada.html",
+        "verified": true
+      },
+      {
+        "icon": "📖",
+        "name": "PalQuest - First Intifada 1987-1993",
+        "type": "Palestinian Historical Archive",
+        "description": "Comprehensive Palestinian documentation of First Intifada. Includes political developments, military operations, civilian impact, and path to Oslo Accords.",
+        "link": "https://www.palquest.org/en/highlight/29773/first-intifada-1987-1993",
+        "verified": true
+      },
+      {
+        "icon": "📺",
+        "name": "PBS - What You Need to Know About the 1987 Intifada",
+        "type": "Documentary/Educational Resource",
+        "description": "PBS documentary resource examining First Intifada with focus on women's roles, grassroots organizing, and path from Madrid Conference to Oslo Accords.",
+        "link": "https://www.pbs.org/wnet/women-war-and-peace/uncategorized/what-you-need-to-know-about-the-1987-intifada/",
+        "verified": true
+      },
+      {
+        "icon": "📕",
+        "name": "Britannica - Intifada",
+        "type": "Encyclopedic Reference",
+        "description": "Scholarly overview of First Intifada covering causes, course of events, casualties, and political outcomes. Includes both First and Second Intifadas.",
+        "link": "https://www.britannica.com/topic/intifada",
+        "verified": true
+      },
+      {
+        "icon": "⚔️",
+        "name": "War Wings Daily - First Intifada Analysis",
+        "type": "Military History Analysis",
+        "description": "Detailed military and strategic analysis of First Intifada including tactics, Israeli military response, casualty statistics, and strategic outcomes.",
+        "link": "https://warwingsdaily.com/wars/the-first-intifada-1987-1993/",
+        "verified": true
+      },
+      {
+        "icon": "🏛️",
+        "name": "Human Rights Watch Reports (1988-1993)",
+        "type": "Human Rights Documentation",
+        "description": "Contemporary human rights investigations documenting torture, arbitrary detention, excessive use of force, and other violations during Intifada.",
+        "link": "https://www.hrw.org/",
+        "verified": true
+      },
+      {
+        "icon": "🥀",
+        "name": "Amnesty International - Intifada Reports",
+        "type": "Human Rights Documentation",
+        "description": "Documented systematic torture in Israeli detention centers, excessive use of force, and violations of international humanitarian law during First Intifada.",
+        "link": "https://www.amnesty.org/",
+        "verified": true
+      }
+    ],
+    "alert": {
+      "type": "info",
+      "icon": "ℹ️",
+      "text": "<strong>Methodology:</strong> Casualty figures represent most reliable available data from B'Tselem (Israeli organization) and Palestinian documentation. Range reflects difficulty in comprehensive documentation during six-year uprising across occupied territories."
+    }
+  },
+  "media": {
+    "images": {
+      "local": [],
+      "remote": []
+    },
+    "documents": {
+      "local": [],
+      "remote": []
+    }
+  },
+  "cta": {
+    "title": "Understand the First Intifada",
+    "description": "Study this pivotal uprising that transformed Israeli-Palestinian conflict and led to Oslo peace process.",
+    "buttons": [
+      { "text": "📅 View Full Timeline", "link": "../../major-incidents-timeline.html", "type": "primary" },
+      { "text": "🖨️ Print/Save PDF", "link": "#", "type": "secondary", "action": "print" },
+      { "text": "📧 Submit Info", "link": "mailto:palgeno.pedia@gmx.de?subject=First Intifada - Additional Information", "type": "secondary" }
+    ]
+  }
+}

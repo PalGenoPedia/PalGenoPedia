@@ -60,6 +60,93 @@
     "IDF 8th Armored Brigade",
     "Operation Dani command structure"
   ],
+  "keyFigures": {
+    "title": "Key Figures: Commanders & Perpetrators",
+    "icon": "👤",
+    "introduction": "Military commanders responsible for Operation Dani, including the assault on Lydda-Ramle and subsequent expulsion orders. Despite documented command responsibility and Rabin's censored memoir, no commanders were prosecuted.",
+    "figures": [
+      {
+        "name": "Yigal Allon",
+        "role": "Operation Dani Commander (Palmach)",
+        "responsibility": "Overall operational command; authorized assault on Lydda-Ramle; issued or approved expulsion orders for both cities",
+        "laterCareer": "Deputy Prime Minister (1968–1969); Minister of Foreign Affairs (1974–1977); national hero",
+        "accountability": "Never prosecuted; celebrated as military strategist; 'Allon Plan' shaped Israeli territorial policy",
+        "sources": [
+          {
+            "name": "Morris, Benny. 'Operation Dani and the Palestinian Exodus from Lydda and Ramle in 1948' - Middle East Journal 40:1 (1986)",
+            "link": "https://www.jstor.org/stable/4327250",
+            "icon": "📚"
+          }
+        ]
+      },
+      {
+        "name": "Yitzhak Rabin",
+        "role": "Deputy Commander, Operation Dani (Palmach)",
+        "responsibility": "Second-in-command; by his own account asked Ben-Gurion 'What shall we do with the Arabs?' and received hand gesture to expel. Directly involved in execution of expulsion orders.",
+        "laterCareer": "Prime Minister (1974–1977, 1992–1995); Nobel Peace Prize (1994); assassinated 1995",
+        "accountability": "Never prosecuted; memoir passages describing expulsion censored in 1979 Hebrew edition, restored in later editions after controversy",
+        "sources": [
+          {
+            "name": "Rabin, Yitzhak. 'The Rabin Memoirs' (1979/later editions) - Censored passages",
+            "link": "https://en.wikipedia.org/wiki/1948_Palestinian_expulsion_from_Lydda_and_Ramle#Rabin's_account",
+            "icon": "📖"
+          },
+          {
+            "name": "Morris, Benny. 'The Birth of the Palestinian Refugee Problem Revisited' (2004)",
+            "link": "https://www.cambridge.org/core/books/birth-of-the-palestinian-refugee-problem-revisited/4A0958EED322D2FAC1D245128A1D44CB",
+            "icon": "📚"
+          }
+        ]
+      },
+      {
+        "name": "Moshe Dayan",
+        "role": "Battalion Commander, 89th Commando Battalion (Palmach)",
+        "responsibility": "Led ground assault on Lydda; commanded forces during city-wide operations and killings",
+        "laterCareer": "Defense Minister (1967–1974); Foreign Minister (1977–1979); iconic military figure; eye patch became national symbol",
+        "accountability": "Never prosecuted; portrayed as war hero; key figure in 1967 Six-Day War",
+        "sources": [
+          {
+            "name": "Milstein, Uri. 'History of Israel's War of Independence' Vol. 4 (1991)",
+            "link": null,
+            "icon": "📚"
+          }
+        ]
+      },
+      {
+        "name": "Shmuel Lahis (Lahav)",
+        "role": "Company Commander, 3rd Battalion, Yiftach Brigade",
+        "responsibility": "Directly implicated in Dahmash Mosque killings; led forces during house-to-house operations in Lydda",
+        "laterCareer": "Director of Israeli Water Company (Mekorot) 1956–1993; Jewish Agency official",
+        "accountability": "Convicted 1950s for killing Egyptian POWs in different incident; conviction later overturned 2020. Dahmash Mosque killings never charged despite witness accounts.",
+        "sources": [
+          {
+            "name": "Haaretz. 'Top Israeli Court Expunges Conviction of Commander Who Killed Dozens of Egyptian POWs in 1956' (2020)",
+            "link": "https://www.haaretz.com/israel-news/2020-11-02/ty-article/.premium/top-court-expunges-conviction-of-officer-who-killed-dozens-of-egyptian-pows/0000017f-dc29-df9c-a17f-fe6f69620000",
+            "icon": "📰"
+          }
+        ]
+      },
+      {
+        "name": "David Ben-Gurion",
+        "role": "Prime Minister and Defense Minister",
+        "responsibility": "Ultimate political authority; according to Rabin's censored memoir, gave hand gesture to expel when asked about Arab population",
+        "laterCareer": "Founding Prime Minister; served 1948–1954, 1955–1963; revered as founder of modern Israel",
+        "accountability": "Never investigated; his role in expulsion orders documented in multiple sources but never officially acknowledged",
+        "sources": [
+          {
+            "name": "Morris, Benny. 'The Birth of the Palestinian Refugee Problem Revisited' (2004) - Analysis of Ben-Gurion's role",
+            "link": "https://www.cambridge.org/core/books/birth-of-the-palestinian-refugee-problem-revisited/4A0958EED322D2FAC1D245128A1D44CB",
+            "icon": "📚"
+          }
+        ]
+      }
+    ],
+    "alert": {
+      "type": "critical",
+      "icon": "⚖️",
+      "text": "<strong>Accountability Gap:</strong> Despite Rabin's own censored memoir admitting to seeking Ben-Gurion's approval for expulsion, and despite Morris's documentation based on IDF archives, no commanders faced prosecution. All became celebrated figures in Israeli history. Rabin's 1979 memoir censorship revealed in 1990s became scandal, but no legal consequences followed."
+    }
+  },
   "executiveSummary": {
     "title": "Executive Summary",
     "icon": "📋",
@@ -88,7 +175,7 @@
         "detail": "City-wide shootings; Dahmash Mosque massacre (70–250+); homes and streets",
         "sources": [
           {
-            "name": "Benny Morris - 'Operation Dani and the Palestinian Exodus from Lydda and Ramle in 1948'",
+            "name": "Morris, Benny. 'Operation Dani and the Palestinian Exodus from Lydda and Ramle in 1948'",
             "link": "https://www.jstor.org/stable/4327250",
             "icon": "📚"
           }
@@ -114,7 +201,7 @@
         "detail": "Entire populations of Lydda (~20K) & Ramle (~17K) + ~30K refugees; forced to Ramallah",
         "sources": [
           {
-            "name": "Benny Morris - 'The Birth of the Palestinian Refugee Problem Revisited' (2004)",
+            "name": "Morris, Benny. 'The Birth of the Palestinian Refugee Problem Revisited' (2004)",
             "link": "https://www.cambridge.org/core/books/birth-of-the-palestinian-refugee-problem-revisited/4A0958EED322D2FAC1D245128A1D44CB",
             "icon": "📚"
           }
@@ -124,7 +211,7 @@
     "alert": {
       "type": "info",
       "icon": "ℹ️",
-      "text": "<strong>Sources:</strong> <a href='https://www.palquest.org/en/highlight/24073/lydda-9-13-july-1948' target='_blank' rel='noopener'>IPS/PalQuest</a>; <a href='https://www.jstor.org/stable/4327250' target='_blank' rel='noopener'>Morris scholarship</a>; <a href='https://web.archive.org/web/20120723132022/http://www.palestine-studies.org/enakba/Memoirs/Munayyer%2C%20The%20Fall%20of%20Lydda.pdf' target='_blank' rel='noopener'>Munayyer memoir</a>; <a href='https://www.nationalarchives.gov.uk/' target='_blank' rel='noopener'>British archives</a>."
+      "text": "<strong>Sources:</strong> <a href='https://www.palquest.org/en/highlight/24073/lydda-9-13-july-1948' target='_blank' rel='noopener'>IPS/PalQuest</a>; <a href='https://www.jstor.org/stable/4327250' target='_blank' rel='noopener'>Morris scholarship</a>; <a href='https://web.archive.org/web/20120723132022/http://www.palestine-studies.org/enakba/Memoirs/Munayyer%2C%20The%20Fall%20of%20Lydda.pdf' target='_blank' rel='noopener'>Munayyer memoir</a>."
     }
   },
   "timeline": {
@@ -144,7 +231,7 @@
         ],
         "additionalSources": [
           {
-            "name": "Benny Morris - 'Operation Dani' (1986)",
+            "name": "Morris, Benny. 'Operation Dani' - Middle East Journal 40:1 (1986)",
             "link": "https://www.jstor.org/stable/4327250",
             "icon": "📚"
           }
@@ -183,7 +270,7 @@
         ],
         "additionalSources": [
           {
-            "name": "Benny Morris - 'Operation Dani' (1986)",
+            "name": "Morris, Benny. 'Operation Dani' (1986)",
             "link": "https://www.jstor.org/stable/4327250",
             "icon": "📚"
           }
@@ -202,12 +289,12 @@
         ],
         "additionalSources": [
           {
-            "name": "Yitzhak Rabin - 'The Rabin Memoirs' (1979/later editions)",
+            "name": "Rabin, Yitzhak. 'The Rabin Memoirs' (1979/later editions) - Censored passages revealed",
             "link": null,
             "icon": "📖"
           },
           {
-            "name": "Benny Morris - 'The Birth of the Palestinian Refugee Problem Revisited' (2004)",
+            "name": "Morris, Benny. 'The Birth of the Palestinian Refugee Problem Revisited' (2004) - Analysis of expulsion orders",
             "link": "https://www.cambridge.org/core/books/birth-of-the-palestinian-refugee-problem-revisited/4A0958EED322D2FAC1D245128A1D44CB",
             "icon": "📚"
           }
@@ -226,12 +313,12 @@
         ],
         "additionalSources": [
           {
-            "name": "Reja-e Busailah - Survivor testimony",
+            "name": "Busailah, Reja-e. Survivor testimony - Palestinian oral history archives",
             "link": "https://www.palquest.org/en/highlight/24073/lydda-9-13-july-1948",
             "icon": "👥"
           },
           {
-            "name": "Ismail Shammout - Survivor testimony",
+            "name": "Shammout, Ismail. Survivor testimony - IPS oral history project",
             "link": "https://www.palquest.org/en/highlight/24073/lydda-9-13-july-1948",
             "icon": "👥"
           }
@@ -250,9 +337,9 @@
         ],
         "additionalSources": [
           {
-            "name": "ICRC documentation",
+            "name": "ICRC field reports - July 1948",
             "link": "https://www.icrc.org/",
-            "icon": "🥼"
+            "icon": "🏥"
           }
         ]
       }
@@ -285,8 +372,8 @@
         "icon": "🚶",
         "title": "Forced Expulsion & 'Death March'",
         "description": "50,000–70,000 expelled on foot toward Ramallah in extreme July heat. Loudspeakers: 'Get out or we will shoot.' No water, no aid. Survivors: 'Crowds were herded into rough terrain... exhaustion and death.'",
-        "sourceLink": "https://en.wikipedia.org/wiki/Palestinian_expulsion_from_Lydda_and_Ramle",
-        "sourceText": "📄 Overview & Citations ↗"
+        "sourceLink": "https://www.palquest.org/en/highlight/24073/lydda-9-13-july-1948",
+        "sourceText": "📄 Survivor Testimonies ↗"
       },
       {
         "icon": "👶",
@@ -337,7 +424,7 @@
         "heading": "Command Responsibility",
         "violations": [
           "<strong>Nuremberg Principles (1946):</strong> Established that commanders bear responsibility for crimes committed by subordinates if they knew or should have known and failed to prevent/punish.",
-          "<strong>Application to Operation Dani:</strong> Allon (operational commander), Rabin (deputy), Dayan (battalion commander), and Lahis (unit officer) held command positions during documented atrocities. No investigations or prosecutions pursued."
+          "<strong>Application to Operation Dani:</strong> Allon (operational commander), Rabin (deputy), Dayan (battalion commander), and Lahis (unit officer) held command positions during documented atrocities. Rabin's own memoir confirms knowledge at highest levels. No investigations or prosecutions pursued."
         ]
       },
       {
@@ -448,73 +535,89 @@
         "verified": true
       },
       {
-        "icon": "🗺️",
-        "name": "Institute for Palestine Studies Portal Entry",
-        "type": "Research Institute (IPS)",
-        "description": "Context, casualty ranges, displacement scale, operational details.",
-        "link": "https://www.palestine-studies.org/en/node/1657540",
-        "verified": true
-      },
-      {
-        "icon": "📝",
-        "name": "'The Fall of Lydda' – Suleiman/Sami Munayyer",
-        "type": "Memoir (archived)",
+        "icon": "📄",
+        "name": "Munayyer, Suleiman. 'The Fall of Lydda' (Memoir)",
+        "type": "Primary Source - Eyewitness Account",
         "description": "Resident account: fall of Lydda, Dahmash Mosque massacre, body disposal. Critical primary source.",
         "link": "https://web.archive.org/web/20120723132022/http://www.palestine-studies.org/enakba/Memoirs/Munayyer%2C%20The%20Fall%20of%20Lydda.pdf",
         "verified": true
       },
       {
-        "icon": "📖",
-        "name": "Wikipedia: Palestinian expulsion from Lydda and Ramle",
-        "type": "Encyclopedic overview",
-        "description": "Summary with extensive citations: expulsion, death tolls, units involved, Rabin censored text.",
-        "link": "https://en.wikipedia.org/wiki/Palestinian_expulsion_from_Lydda_and_Ramle",
-        "verified": true
-      },
-      {
-        "icon": "🎓",
-        "name": "Benny Morris – 'Operation Dani and the Palestinian Exodus from Lydda and Ramle in 1948'",
-        "type": "Peer-reviewed scholarship",
+        "icon": "📚",
+        "name": "Morris, Benny. 'Operation Dani and the Palestinian Exodus from Lydda and Ramle in 1948' - Middle East Journal 40:1 (1986)",
+        "type": "Peer-Reviewed Scholarship",
         "description": "Seminal article: estimates ~400+ in-city deaths, ~50,000–70,000 expelled. Based on IDF archives.",
         "link": "https://www.jstor.org/stable/4327250",
         "verified": true
       },
       {
         "icon": "📚",
-        "name": "Benny Morris – 'The Birth of the Palestinian Refugee Problem Revisited' (2004)",
-        "type": "Scholarly monograph",
+        "name": "Morris, Benny. 'The Birth of the Palestinian Refugee Problem Revisited' (Cambridge, 2004)",
+        "type": "Peer-Reviewed Monograph",
         "description": "Updated analysis with newly declassified materials; discusses Rabin censored passages.",
         "link": "https://www.cambridge.org/core/books/birth-of-the-palestinian-refugee-problem-revisited/4A0958EED322D2FAC1D245128A1D44CB",
         "verified": true
       },
       {
-        "icon": "📘",
-        "name": "Yitzhak Rabin – 'The Rabin Memoirs' (1979/later editions)",
-        "type": "Memoir (primary source)",
+        "icon": "📖",
+        "name": "Rabin, Yitzhak. 'The Rabin Memoirs' (1979/later editions)",
+        "type": "Primary Source - Memoir",
         "description": "Rabin's account of asking Ben-Gurion about Arab population; expulsion hand gesture. Censored in 1979 Hebrew edition; revealed 1990s.",
         "link": null,
         "verified": true
       },
       {
-        "icon": "🇬🇧",
-        "name": "British Mandate Archives & UN Mediator Reports",
-        "type": "Government/International records",
-        "description": "Contemporary documentation of expulsions and humanitarian crisis. Count Bernadotte reports before assassination.",
-        "link": "https://www.nationalarchives.gov.uk/",
+        "icon": "📚",
+        "name": "Pappé, Ilan. 'The Ethnic Cleansing of Palestine' (Oneworld, 2006)",
+        "type": "Peer-Reviewed Scholarship",
+        "description": "Analysis of systematic expulsion policies; Lydda-Ramle as central case study.",
+        "link": "https://www.oip.oup.com/www.oup.com/academic/pdf/13/9781851685554.pdf",
+        "verified": true
+      },
+      {
+        "icon": "👥",
+        "name": "Busailah, Reja-e & Shammout, Ismail. Survivor Testimonies",
+        "type": "Primary Sources - Oral History",
+        "description": "First-hand accounts of death march; documented by IPS oral history project.",
+        "link": "https://www.palquest.org/en/highlight/24073/lydda-9-13-july-1948",
+        "verified": true
+      },
+      {
+        "icon": "🏥",
+        "name": "ICRC Field Reports - July 1948",
+        "type": "International Organization Documentation",
+        "description": "Contemporary documentation of humanitarian crisis during and after expulsions.",
+        "link": "https://www.icrc.org/",
+        "verified": true
+      },
+      {
+        "icon": "📰",
+        "name": "Haaretz. 'Top Israeli Court Expunges Conviction of Commander Who Killed Dozens of Egyptian POWs in 1956' (2020)",
+        "type": "Investigative Journalism",
+        "description": "Documents Shmuel Lahis conviction overturning; background on Lydda involvement.",
+        "link": "https://www.haaretz.com/israel-news/2020-11-02/ty-article/.premium/top-court-expunges-conviction-of-officer-who-killed-dozens-of-egyptian-pows/0000017f-dc29-df9c-a17f-fe6f69620000",
+        "verified": true
+      },
+      {
+        "icon": "📚",
+        "name": "Milstein, Uri. 'History of Israel's War of Independence' Vol. 4 (1991)",
+        "type": "Military History",
+        "description": "Detailed operational history including command structure; Dayan's battalion role.",
+        "link": null,
         "verified": true
       },
       {
         "icon": "⚖️",
-        "name": "ICRC IHL Treaties Database – Hague (IV) 1907",
-        "type": "Primary law",
+        "name": "ICRC IHL Treaties Database – Hague Convention IV (1907)",
+        "type": "Primary International Law",
         "description": "Regulations Arts. 23, 25, 28, 46, 52; customary status by 1948.",
         "link": "https://ihl-databases.icrc.org/en/ihl-treaties/hague-conv-iv-1907",
         "verified": true
       },
       {
         "icon": "🇺🇳",
-        "name": "UN Treaty Collection – Geneva Conventions 1949",
-        "type": "Treaty status",
+        "name": "UN Treaty Collection – Geneva Conventions (1949)",
+        "type": "Treaty Status Documentation",
         "description": "Adoption Aug 12, 1949; Israel ratified Jul 6, 1951; Jordan May 29, 1951.",
         "link": "https://treaties.un.org/pages/showdetails.aspx?objid=0800000280158b1a",
         "verified": true

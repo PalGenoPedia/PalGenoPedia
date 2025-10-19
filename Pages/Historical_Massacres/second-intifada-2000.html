@@ -6,12 +6,10 @@
     <title id="page-title">Loading...</title>
     <meta name="description" id="page-description" content="">
     <meta name="keywords" id="page-keywords" content="">
-
     <!-- Styles -->
     <link rel="stylesheet" href="../../shared-styles.css">
     <link rel="stylesheet" href="../../unified-crisis-styles.css">
     <link rel="stylesheet" href="event-documentation-styles.css">
-
     <!-- Configuration for translations - add this before loading translation-system.js -->
     <script>
         window.translationConfig = {
@@ -24,18 +22,14 @@
                 const parts = path.split('/').filter(p => p.length > 0);
                 const dirDepth = path.endsWith('.html') ? parts.length - 1 : parts.length;
                 const rootPath = dirDepth <= 0 ? './' : Array(dirDepth).fill('..').join('/') + '/';
-
                 console.log(`🔍 Translation path resolution: Current depth=${dirDepth}, path to root=${rootPath}`);
-
                 // Use the root path for common translations
                 return rootPath + `translations/${lang}.json`;
             }
         };
     </script>
-
     <!-- Translation System Script - LOAD THIS FIRST -->
     <script src="../../js/translation-system.js"></script>
-
     <style>
         /* Add some fallback style for missing images */
         .gallery-item img[style*="display: none"] + .gallery-item-overlay {
@@ -50,7 +44,6 @@
             flex-direction: column;
             justify-content: center;
         }
-
         /* Add message for missing images */
         .gallery-item img[style*="display: none"] ~ .gallery-item-overlay::before {
             content: "📷 Image not available";
@@ -58,12 +51,10 @@
             margin-bottom: 0.5rem;
             font-weight: bold;
         }
-
         /* Make document items more resilient */
         .document-item {
             min-height: 60px;
         }
-
         /* Better handling for missing images */
         .gallery-item img {
             background-color: #f8f8f8;
@@ -84,12 +75,10 @@
                 <a href="../../hunger-crisis-stats.html" class="nav-btn" data-i18n="common.nav.hungerCrisis">🍽️ Hunger Crisis</a>
                 <a href="../../major-incidents-timeline.html" class="nav-btn active" data-i18n="common.nav.timeline">📋 Timeline</a>
             </nav>
-
             <!-- Language Selector -->
             <div id="language-selector" class="language-selector">
                 <!-- Will be populated by translation-system.js -->
             </div>
-
             <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
         </div>
     </header>
@@ -172,27 +161,24 @@
 
     <!-- Universal Footer Component -->
     <div id="footer-placeholder"></div>
-
     <!-- Then load footer initializer with adjusted path for subdirectory -->
     <script src="../../footer-init.js"></script>
 
     <!-- Main JavaScript -->
     <script>
-        // ===================================================================
-        // EVENT DOCUMENTATION PAGE JAVASCRIPT
-        // Handles JSON data loading and rendering for historical massacres
-        // Author: aliattia02
-        // Last Updated: 2025-10-12 18:25:47 UTC
-        // Version: 2.7 - Updated footer implementation
-        // ===================================================================
-
+        // =================================================================== 
+        // EVENT DOCUMENTATION PAGE JAVASCRIPT 
+        // Handles JSON data loading and rendering for historical massacres 
+        // Author: aliattia02 
+        // Last Updated: 2025-10-12 18:25:47 UTC 
+        // Version: 2.7 - Updated footer implementation 
+        // =================================================================== 
         let currentImageIndex = 0;
         let galleryImages = [];
 
-        // ===================================================================
-        // LIGHTBOX FUNCTIONS
-        // ===================================================================
-
+        // =================================================================== 
+        // LIGHTBOX FUNCTIONS 
+        // =================================================================== 
         function openLightbox(index) {
             currentImageIndex = index;
             const lightbox = document.getElementById('lightbox');
@@ -211,15 +197,13 @@
             currentImageIndex += direction;
             if (currentImageIndex < 0) currentImageIndex = galleryImages.length - 1;
             else if (currentImageIndex >= galleryImages.length) currentImageIndex = 0;
-
             document.getElementById('lightbox-image').src = galleryImages[currentImageIndex].src;
             document.getElementById('lightbox-caption').textContent = galleryImages[currentImageIndex].caption;
         }
 
-        // ===================================================================
-        // PATH RESOLUTION HELPERS
-        // ===================================================================
-
+        // =================================================================== 
+        // PATH RESOLUTION HELPERS 
+        // =================================================================== 
         // Calculate path to root directory
         function getPathToRoot() {
             const path = window.location.pathname;
@@ -228,10 +212,9 @@
             return dirDepth <= 0 ? './' : Array(dirDepth).fill('..').join('/') + '/';
         }
 
-        // ===================================================================
-        // ANIMATIONS
-        // ===================================================================
-
+        // =================================================================== 
+        // ANIMATIONS 
+        // =================================================================== 
         function initializeAnimations() {
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
@@ -240,7 +223,10 @@
                         entry.target.style.transform = 'translateY(0)';
                     }
                 });
-            }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
 
             document.querySelectorAll('.content-section').forEach(section => {
                 section.style.opacity = '0';
@@ -250,10 +236,9 @@
             });
         }
 
-        // ===================================================================
-        // THEME MANAGEMENT
-        // ===================================================================
-
+        // =================================================================== 
+        // THEME MANAGEMENT 
+        // =================================================================== 
         function initializeTheme() {
             const savedTheme = localStorage.getItem('gaza-docs-theme') || 'light';
             document.documentElement.setAttribute('data-theme', savedTheme);
@@ -265,10 +250,9 @@
             if (themeToggle) themeToggle.textContent = theme === 'dark' ? '☀️' : '🌙';
         }
 
-        // ===================================================================
-        // EVENT LISTENERS
-        // ===================================================================
-
+        // =================================================================== 
+        // EVENT LISTENERS 
+        // =================================================================== 
         // Theme toggle
         document.querySelector('.theme-toggle')?.addEventListener('click', function() {
             const currentTheme = document.documentElement.getAttribute('data-theme');
@@ -299,10 +283,9 @@
             });
         });
 
-        // ===================================================================
-        // INITIALIZATION
-        // ===================================================================
-
+        // =================================================================== 
+        // INITIALIZATION 
+        // =================================================================== 
         // Initialize on page load
         document.addEventListener('DOMContentLoaded', function() {
             initializeTheme();
@@ -327,9 +310,16 @@
         // Helper to get document icons
         function getDocumentIcon(extension) {
             const icons = {
-                'PDF': '📕', 'DOC': '📘', 'DOCX': '📘', 'TXT': '📄',
-                'XLS': '📗', 'XLSX': '📗', 'PPT': '📙', 'PPTX': '📙',
-                'ZIP': '📦', 'RAR': '📦'
+                'PDF': '📕',
+                'DOC': '📘',
+                'DOCX': '📘',
+                'TXT': '📄',
+                'XLS': '📗',
+                'XLSX': '📗',
+                'PPT': '📙',
+                'PPTX': '📙',
+                'ZIP': '📦',
+                'RAR': '📦'
             };
             return icons[extension] || '📄';
         }

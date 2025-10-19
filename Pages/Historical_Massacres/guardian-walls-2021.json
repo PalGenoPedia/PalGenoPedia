@@ -1,0 +1,758 @@
+{
+  "id": "hist_016",
+  "event_type": "Military Operation",
+  "verification_status": "verified",
+  "metadata": {
+    "pageTitle": "Operation Guardian of the Walls (10-21 May 2021) | Historical Documentation",
+    "description": "11-day Israeli operation killing 260 Palestinians including 129 civilians and 66 children. Human Rights Watch found apparent war crimes; 4,360 rockets fired from Gaza.",
+    "keywords": "Operation Guardian of the Walls, Gaza 2021, Sheikh Jarrah, Al-Aqsa, war crimes, Human Rights Watch, al-Wahda Street bombing",
+    "lastUpdated": "2025-10-18",
+    "author": "aliattia02"
+  },
+  "date": {
+    "start": "2021-05-10",
+    "end": "2021-05-21",
+    "duration_days": 11,
+    "display": "10-21 May 2021",
+    "context": "11-day Israeli military operation in Gaza Strip"
+  },
+  "location": {
+    "historical": {
+      "name": "Gaza Strip, Israel, East Jerusalem, West Bank",
+      "admin_context": "Hamas-governed Gaza under Israeli blockade; East Jerusalem and West Bank under occupation",
+      "specific_sites": ["Al-Wahda Street (Gaza City)", "Beit Hanoun", "Shati refugee camp", "Sheikh Jarrah (Jerusalem)", "Al-Aqsa Mosque", "Ashkelon", "Lod"]
+    },
+    "current": {
+      "name": "Gaza Strip",
+      "admin_context": "Under Israeli blockade; governed by Hamas",
+      "status": "Blockade ongoing; reconstruction incomplete"
+    }
+  },
+  "hero": {
+    "category": "🔴 MILITARY OPERATION • GAZA 2021",
+    "title": "Operation Guardian of the Walls",
+    "subtitle": "11-day operation amid Sheikh Jarrah crisis: 260 Palestinians killed; HRW found apparent war crimes",
+    "metaCards": [
+      { "icon": "📅", "label": "Duration", "value": "11 days", "detail": "10-21 May 2021" },
+      { "icon": "💀", "label": "Palestinians Killed", "value": "260", "detail": "129 civilians, 66 children" },
+      { "icon": "💀", "label": "Israelis Killed", "value": "13", "detail": "12 civilians, 1 soldier" },
+      { "icon": "🚀", "label": "Rockets Fired", "value": "4,360+", "detail": "From Gaza into Israel" }
+    ]
+  },
+  "quickFacts": {
+    "title": "⚡ Quick Facts",
+    "items": [
+      { "label": "Event Type", "value": "Military Operation / Armed Conflict" },
+      { "label": "Trigger Context", "value": "Sheikh Jarrah evictions; Al-Aqsa violence" },
+      { "label": "Verification", "value": "HRW; B'Tselem; UN OCHA; Amnesty International" },
+      { "label": "HRW Finding", "value": "Apparent war crimes by both sides" }
+    ]
+  },
+  "brief_summary": "Operation Guardian of the Walls was an 11-day military escalation in May 2021 that occurred amid heightened tensions over threatened evictions of Palestinian families in Sheikh Jarrah (East Jerusalem) and violent Israeli police raids on Al-Aqsa Mosque during Ramadan. On May 10, after Hamas issued an ultimatum for Israeli forces to withdraw from Al-Aqsa and Sheikh Jarrah, Hamas and Palestinian Islamic Jihad fired rockets toward Jerusalem. Israel responded with massive airstrikes on Gaza. Over 11 days, Palestinian armed groups fired 4,360 rockets and mortars at Israeli population centers; Israeli forces conducted over 1,500 airstrikes. According to the UN and Human Rights Watch, 260 Palestinians were killed including at least 129 civilians (66 children, 40 women). Israel reported 13 killed (12 civilians, 1 soldier). Human Rights Watch investigated three Israeli strikes killing 62 Palestinian civilians and found 'no evident military targets in the vicinity'—apparent war crimes. Notable incidents include the al-Wahda Street bombing (May 16) that killed 44 civilians when residential buildings collapsed, and the al-Masri family strike (May 10) killing 8 including 6 children. HRW also found Palestinian rocket attacks constituted war crimes due to indiscriminate targeting of civilians. The operation exacerbated Gaza's humanitarian crisis and sparked intercommunal violence within Israel between Jewish and Arab citizens.",
+  "perpetrators": ["Israel Defense Forces", "Israeli Air Force", "Hamas military wing (Izz ad-Din al-Qassam Brigades)", "Palestinian Islamic Jihad"],
+  "executiveSummary": {
+    "title": "Executive Summary",
+    "icon": "📋",
+    "alert": {
+      "type": "critical",
+      "icon": "⚠️",
+      "text": "<strong>Human Rights Watch finding:</strong> 'Israeli forces carried out attacks in Gaza in May that devastated entire families without any apparent military target nearby... Both sides committed apparent war crimes.'—July 2021 report"
+    },
+    "paragraphs": [
+      "The escalation that became Operation Guardian of the Walls was rooted in events in Jerusalem. During Ramadan 2021, Israeli police erected barriers preventing Palestinians from gathering at Damascus Gate—a traditional gathering place—and violently suppressed protests. Simultaneously, Israeli courts moved forward with eviction proceedings against Palestinian families in the Sheikh Jarrah neighborhood of East Jerusalem to make way for Jewish settlers. On May 7, hundreds of Palestinians were injured when Israeli police stormed Al-Aqsa Mosque compound during prayers, firing rubber bullets, stun grenades, and tear gas inside the mosque itself. International condemnation was swift, but on May 10—Lailat al-Qadr, the holiest night of Ramadan—Israeli police again raided Al-Aqsa, injuring over 300 Palestinians. Hamas issued an ultimatum demanding Israeli forces withdraw from Al-Aqsa and Sheikh Jarrah by 6 PM. When Israel refused, Hamas and Palestinian Islamic Jihad fired rockets toward Jerusalem at 6:05 PM, marking the beginning of the conflict.",
+      "Israel's response was immediate and overwhelming. Within hours, Israeli jets struck over 130 targets across Gaza. Over the next 11 days, the IDF conducted more than 1,500 airstrikes while Palestinian armed groups fired 4,360 rockets and mortars into Israel—the Iron Dome intercepted approximately 90% of projectiles headed toward populated areas. The first day saw the al-Masri family strike in Beit Hanoun where a missile killed 8 civilians including 6 children who were packing barley for animal feed. Israel claimed it was a misfired Palestinian rocket, but Human Rights Watch's investigation found evidence of a guided missile and no military target. The deadliest single incident came on May 16 when Israeli forces launched a four-minute assault on al-Wahda Street in central Gaza City, causing three multi-story residential buildings to collapse. Forty-four civilians were killed including 18 children. HRW found the buildings collapsed after missiles struck the road or sidewalk adjacent to them—there were no evident military targets.",
+      "The operation took place against the backdrop of Israel's 14-year blockade of Gaza and its systematic discrimination against Palestinians, which Human Rights Watch had characterized as apartheid just one month earlier in April 2021. The 11-day conflict killed 260 Palestinians (129 civilians according to UN/HRW, though Israel claimed most were militants). Thirteen Israelis died including 12 civilians killed by rockets. Human Rights Watch conducted in-depth investigations of three Israeli strikes that killed 62 Palestinian civilians total, finding 'no evident military targets in the vicinity' of any—constituting apparent war crimes. A third incident HRW investigated was the May 15 bombing of a building in Shati refugee camp that killed 10 people (8 children, 2 women); Israel claimed senior Hamas officials were hiding there, but HRW found no evidence of military targets. The report also documented that Palestinian armed groups committed war crimes through indiscriminate rocket fire at Israeli population centers. The operation ended with an Egyptian-mediated ceasefire on May 21, but neither side achieved strategic objectives, and Gaza's humanitarian crisis deepened significantly."
+    ]
+  },
+  "casualties": {
+    "title": "Casualties & Impact",
+    "icon": "🚶",
+    "deaths": "260 Palestinians (129 civilians, 66 children, 40 women); 13 Israelis (12 civilians, 1 soldier)",
+    "injured": "1,948 Palestinians; Several hundred Israelis",
+    "forced_displacement": "Tens of thousands temporarily displaced in Gaza",
+    "breakdown": [
+      {
+        "type": "killed",
+        "number": "260",
+        "label": "Palestinians Killed",
+        "detail": "UN/HRW: 129 civilians; Gaza Health Ministry: 248 (66 children, 39 women); Israel claims 200 militants killed",
+        "sources": [
+          {
+            "name": "Human Rights Watch Report",
+            "link": "https://www.hrw.org/news/2021/07/27/gaza-apparent-war-crimes-during-may-fighting",
+            "icon": "📄"
+          },
+          {
+            "name": "UN OCHA Statistics",
+            "link": "https://www.ochaopt.org/",
+            "icon": "🇺🇳"
+          }
+        ]
+      },
+      {
+        "type": "killed",
+        "number": "66 children",
+        "label": "Child Fatalities",
+        "detail": "Including 18 children killed in al-Wahda Street collapse; 8 children in Shati camp bombing",
+        "sources": [
+          {
+            "name": "Gaza Health Ministry via UN OCHA",
+            "link": "https://www.ochaopt.org/",
+            "icon": "📊"
+          }
+        ]
+      },
+      {
+        "type": "pattern",
+        "number": "44 civilians",
+        "label": "Al-Wahda Street Massacre - May 16",
+        "detail": "Deadliest single incident: 3 residential buildings collapsed after 4-minute assault; 18 children among dead",
+        "sources": [
+          {
+            "name": "Human Rights Watch Investigation",
+            "link": "https://www.hrw.org/news/2021/07/27/gaza-apparent-war-crimes-during-may-fighting",
+            "icon": "📄"
+          }
+        ]
+      },
+      {
+        "type": "killed",
+        "number": "8 (6 children)",
+        "label": "Al-Masri Family - May 10",
+        "detail": "First major incident: Family packing barley when struck. Israel claimed misfired Palestinian rocket; HRW found guided missile, no military target",
+        "sources": [
+          {
+            "name": "HRW Detailed Investigation",
+            "link": "https://www.hrw.org/news/2021/07/27/gaza-apparent-war-crimes-during-may-fighting",
+            "icon": "📄"
+          }
+        ]
+      },
+      {
+        "type": "killed",
+        "number": "10 (8 children)",
+        "label": "Shati Refugee Camp - May 15",
+        "detail": "Building destroyed killing 8 children, 2 women. Israel: Hamas officials hiding there. HRW: No evidence of military target",
+        "sources": [
+          {
+            "name": "Human Rights Watch Report",
+            "link": "https://www.hrw.org/news/2021/07/27/gaza-apparent-war-crimes-during-may-fighting",
+            "icon": "📄"
+          }
+        ]
+      },
+      {
+        "type": "injured",
+        "number": "1,948",
+        "label": "Palestinians Wounded",
+        "detail": "Gaza Health Ministry figures; many with severe injuries requiring long-term care",
+        "sources": [
+          {
+            "name": "Gaza Health Ministry via Meir Amit Center",
+            "link": "https://www.terrorism-info.org.il/en/escalation-from-the-gaza-strip-operation-guardian-of-the-walls-summary/",
+            "icon": "🏥"
+          }
+        ]
+      },
+      {
+        "type": "killed",
+        "number": "13",
+        "label": "Israelis Killed",
+        "detail": "12 civilians (including child, 2 Thai workers, 2 Israeli Arabs); 1 soldier killed by anti-tank missile",
+        "sources": [
+          {
+            "name": "Israeli Official Sources",
+            "link": "https://www.idf.il/en/mini-sites/wars-and-operations/operation-guardian-of-the-walls/operation-guardian-of-the-walls-1/",
+            "icon": "🇮🇱"
+          }
+        ]
+      },
+      {
+        "type": "injured",
+        "number": "Several hundred",
+        "label": "Israelis Wounded",
+        "detail": "Hundreds injured by rockets, shrapnel, running to shelters; many anxiety attacks",
+        "sources": [
+          {
+            "name": "Meir Amit Intelligence Center",
+            "link": "https://www.terrorism-info.org.il/en/escalation-from-the-gaza-strip-operation-guardian-of-the-walls-summary/",
+            "icon": "🇮🇱"
+          }
+        ]
+      },
+      {
+        "type": "attacks",
+        "number": "1,500+",
+        "label": "Israeli Airstrikes",
+        "detail": "IDF struck over 1,500 targets including residential buildings, alleged tunnels, government facilities",
+        "sources": [
+          {
+            "name": "IDF Official Statements",
+            "link": "https://www.idf.il/en/mini-sites/wars-and-operations/operation-guardian-of-the-walls/operation-guardian-of-the-walls-1/",
+            "icon": "🎯"
+          }
+        ]
+      },
+      {
+        "type": "attacks",
+        "number": "4,360",
+        "label": "Rockets/Mortars Fired from Gaza",
+        "detail": "3,573 fell inside Israel; ~680 misfired and fell in Gaza; Iron Dome intercepted ~90% headed to populated areas",
+        "sources": [
+          {
+            "name": "Meir Amit Intelligence Center Summary",
+            "link": "https://www.terrorism-info.org.il/en/escalation-from-the-gaza-strip-operation-guardian-of-the-walls-summary/",
+            "icon": "🚀"
+          }
+        ]
+      },
+      {
+        "type": "pattern",
+        "number": "~680 rockets",
+        "label": "Misfired Palestinian Rockets",
+        "detail": "Approximately 680 rockets fell short, landing in Gaza and causing Palestinian casualties",
+        "sources": [
+          {
+            "name": "IDF Assessment",
+            "link": "https://www.idf.il/en/mini-sites/wars-and-operations/operation-guardian-of-the-walls/operation-guardian-of-the-walls-1/",
+            "icon": "📊"
+          }
+        ]
+      }
+    ],
+    "alert": {
+      "type": "info",
+      "icon": "ℹ️",
+      "text": "<strong>Sources:</strong> Human Rights Watch; UN OCHA; Gaza Health Ministry; B'Tselem; IDF. Casualty classification disputed—Israel claims most Palestinian deaths were militants; HRW/UN count significantly more civilians."
+    }
+  },
+  "timeline": {
+    "title": "Timeline of Events",
+    "icon": "⏱️",
+    "events": [
+      {
+        "time": "April 2021",
+        "title": "Ramadan tensions escalate",
+        "description": "Israeli police erect barriers at Damascus Gate preventing traditional Ramadan gatherings. Violence erupts as police attack Palestinian worshippers. Far-right Israeli groups march through Jerusalem chanting 'Death to Arabs.' Sheikh Jarrah eviction proceedings advance in Israeli courts.",
+        "sourceLinks": [
+          {
+            "name": "Human Rights Watch Background",
+            "url": "https://www.hrw.org/news/2021/07/27/gaza-apparent-war-crimes-during-may-fighting"
+          }
+        ]
+      },
+      {
+        "time": "7 May 2021",
+        "title": "Israeli police storm Al-Aqsa",
+        "description": "Israeli police raid Al-Aqsa Mosque during evening prayers, firing rubber bullets, stun grenades, and tear gas inside mosque. Hundreds of Palestinians injured. Images of violence during Ramadan spark international condemnation and rage across Palestinian territories.",
+        "sourceLinks": [
+          {
+            "name": "Al Jazeera Documentation",
+            "url": "https://www.aljazeera.com/"
+          }
+        ]
+      },
+      {
+        "time": "10 May 2021, morning",
+        "title": "Second Al-Aqsa raid - Lailat al-Qadr",
+        "description": "On holiest night of Ramadan, Israeli police again storm Al-Aqsa Mosque. Over 300 Palestinians injured. Hamas issues ultimatum: withdraw from Al-Aqsa and Sheikh Jarrah by 6 PM or face consequences.",
+        "sourceLinks": [
+          {
+            "name": "UN Documentation",
+            "url": "https://www.ochaopt.org/"
+          }
+        ]
+      },
+      {
+        "time": "10 May 2021, 6:05 PM",
+        "title": "Hamas fires rockets; operation begins",
+        "description": "After Israel ignores ultimatum, Hamas and PIJ fire rockets toward Jerusalem. Israel launches Operation Guardian of the Walls with massive airstrikes across Gaza. Over 130 targets struck in opening hours.",
+        "sourceLinks": [
+          {
+            "name": "IDF Official Statement",
+            "url": "https://www.idf.il/en/mini-sites/wars-and-operations/operation-guardian-of-the-walls/operation-guardian-of-the-walls-1/"
+          }
+        ]
+      },
+      {
+        "time": "10 May 2021, ~6 PM",
+        "title": "Al-Masri family strike",
+        "description": "Missile strikes near four houses of extended al-Masri family in Beit Hanoun. Eight killed including six children who were packing barley for animal feed. Israel claims misfired Palestinian rocket; HRW investigation finds evidence of guided missile, no military target—apparent war crime.",
+        "sourceLinks": [
+          {
+            "name": "HRW Detailed Investigation",
+            "url": "https://www.hrw.org/news/2021/07/27/gaza-apparent-war-crimes-during-may-fighting"
+          }
+        ]
+      },
+      {
+        "time": "11 May 2021",
+        "title": "Escalation intensifies",
+        "description": "Hamas and PIJ launch hundreds of rockets at Ashdod and Ashkelon, killing 2 Israelis, wounding 90+. A third Israeli woman killed in Rishon LeZion. Israeli airstrikes intensify across Gaza. Both sides commit to sustained operations.",
+        "sourceLinks": [
+          {
+            "name": "Meir Amit Intelligence Summary",
+            "url": "https://www.terrorism-info.org.il/en/escalation-from-the-gaza-strip-operation-guardian-of-the-walls-summary/"
+          }
+        ]
+      },
+      {
+        "time": "12 May 2021",
+        "title": "High-profile targeted killings",
+        "description": "Israel kills Bassem Issa (Gaza Brigade commander), Jomaa Talha, and multiple senior Hamas officials and engineers. Hamas responds with increased rocket barrages. Intercommunal violence erupts in mixed Israeli cities including Lod, Acre, Haifa.",
+        "sourceLinks": [
+          {
+            "name": "Reports via Al Jazeera",
+            "url": "https://www.aljazeera.com/"
+          }
+        ]
+      },
+      {
+        "time": "15 May 2021",
+        "title": "Shati refugee camp bombing",
+        "description": "Israeli airstrike destroys three-story building in Shati camp, killing 10 people: 8 children and 2 women. Israel claims senior Hamas officials hiding in building. HRW investigation finds no evidence of military target at or near site—apparent war crime.",
+        "sourceLinks": [
+          {
+            "name": "Human Rights Watch Report",
+            "url": "https://www.hrw.org/news/2021/07/27/gaza-apparent-war-crimes-during-may-fighting"
+          }
+        ]
+      },
+      {
+        "time": "16 May 2021, 1:00 AM",
+        "title": "Al-Wahda Street massacre",
+        "description": "Deadliest incident: Israeli military launches four-minute assault on central Gaza City's al-Wahda Street. Three multi-story residential buildings collapse after missiles struck road/sidewalk adjacent to buildings. Forty-four civilians killed including 18 children. HRW: no evident military targets—apparent war crime.",
+        "sourceLinks": [
+          {
+            "name": "HRW Investigation",
+            "url": "https://www.hrw.org/news/2021/07/27/gaza-apparent-war-crimes-during-may-fighting"
+          },
+          {
+            "name": "Democracy Now Coverage",
+            "url": "https://www.democracynow.org/2021/7/30/investigation_israel_war_crimes_palestine"
+          }
+        ]
+      },
+      {
+        "time": "14-15 May 2021",
+        "title": "IDF 'ground invasion' false alarm",
+        "description": "IDF announces troops 'on ground and in air' attacking Gaza, misleading international media into reporting ground invasion. IDF later retracts, apologizes for 'internal miscommunication.' Later revealed as deliberate deception to lure Hamas fighters into tunnels for airstrikes.",
+        "sourceLinks": [
+          {
+            "name": "Media Reports",
+            "url": "https://www.aljazeera.com/"
+          }
+        ]
+      },
+      {
+        "time": "17-20 May 2021",
+        "title": "Continued bombardment; diplomacy intensifies",
+        "description": "Heavy exchanges continue. US initially blocks UN Security Council ceasefire statement, later shifts under domestic pressure. Egypt leads mediation efforts. Secretary of State Blinken speaks with Netanyahu multiple times.",
+        "sourceLinks": [
+          {
+            "name": "UN Documentation",
+            "url": "https://www.un.org/unispal/"
+          }
+        ]
+      },
+      {
+        "time": "21 May 2021, 2:00 AM",
+        "title": "Ceasefire takes effect",
+        "description": "After 11 days, Egyptian-mediated unconditional ceasefire begins. Both sides fire until minutes before deadline. Total toll: 260 Palestinians (129 civilians), 13 Israelis. 4,360+ rockets fired from Gaza; 1,500+ Israeli airstrikes. Neither side achieves strategic objectives.",
+        "sourceLinks": [
+          {
+            "name": "Meir Amit Summary",
+            "url": "https://www.terrorism-info.org.il/en/escalation-from-the-gaza-strip-operation-guardian-of-the-walls-summary/"
+          }
+        ]
+      },
+      {
+        "time": "27 July 2021",
+        "title": "Human Rights Watch releases report",
+        "description": "HRW publishes comprehensive investigation finding apparent war crimes by both sides. Investigated three Israeli strikes killing 62 civilians where 'there were no evident military targets in the vicinity.' Also documents Palestinian rocket attacks as war crimes. Calls for ICC investigation.",
+        "sourceLinks": [
+          {
+            "name": "HRW Report",
+            "url": "https://www.hrw.org/news/2021/07/27/gaza-apparent-war-crimes-during-may-fighting"
+          }
+        ]
+      }
+    ]
+  },
+  "warCrimes": {
+    "title": "Documented Violations of International Law",
+    "icon": "⚠️",
+    "alert": {
+      "type": "warning",
+      "icon": "⚠️",
+      "text": "<strong>Human Rights Watch:</strong> 'Israeli forces carried out attacks in Gaza in May that devastated entire families without any apparent military target nearby... Both Israeli forces and Palestinian armed groups committed apparent war crimes.'—July 27, 2021"
+    },
+    "crimes": [
+      {
+        "icon": "🏠",
+        "title": "Al-Wahda Street Attack - 44 Civilians Killed",
+        "description": "May 16, 1 AM: Four-minute assault collapsed three residential buildings in central Gaza City, killing 44 civilians including 18 children. HRW determined buildings collapsed after missiles struck road/sidewalk adjacent to buildings. No evident military targets. HRW: 'Apparent war crime.' Survivor Omar Abu el-Ouf described floor disappearing beneath family as missiles struck.",
+        "sourceLink": "https://www.hrw.org/news/2021/07/27/gaza-apparent-war-crimes-during-may-fighting",
+        "sourceText": "📄 Human Rights Watch Investigation ↗"
+      },
+      {
+        "icon": "👶",
+        "title": "Al-Masri Family Strike - 6 Children Killed",
+        "description": "May 10, 6 PM: Missile killed 8 members of al-Masri family (6 children) who were packing barley in Beit Hanoun. Israel claimed misfired Palestinian rocket from west. HRW analysis of munition remnants, witness accounts found 'evidence indicated weapon was guided missile.' No military target at or near site. Father Youssef al-Masri: 'I saw it with my own eyes...children scattered, ripped to pieces.'",
+        "sourceLink": "https://www.hrw.org/news/2021/07/27/gaza-apparent-war-crimes-during-may-fighting",
+        "sourceText": "📄 HRW Detailed Findings ↗"
+      },
+      {
+        "icon": "🏘️",
+        "title": "Shati Refugee Camp Bombing - 8 Children Killed",
+        "description": "May 15: Israeli airstrike destroyed three-story building in Shati camp killing 10 (8 children, 2 women). Israel claimed senior Hamas officials hiding in building. HRW investigation: building hit by US-made guided missile, 'found no evidence of military target at or near site.' Called for investigation into whether legitimate military target existed.",
+        "sourceLink": "https://www.hrw.org/news/2021/07/27/gaza-apparent-war-crimes-during-may-fighting",
+        "sourceText": "📄 HRW Report ↗"
+      },
+      {
+        "icon": "🚀",
+        "title": "Indiscriminate Rocket Attacks (Palestinian War Crime)",
+        "description": "Hamas and PIJ fired 4,360 unguided rockets and mortars at Israeli population centers over 11 days, killing 12 Israeli civilians. HRW: Rockets indiscriminate, violate prohibition on attacks not directed at specific military objectives. Each rocket launch at civilian areas constitutes war crime. 'Palestinian armed groups committed unlawful attacks.'",
+        "sourceLink": "https://www.hrw.org/news/2021/07/27/gaza-apparent-war-crimes-during-may-fighting",
+        "sourceText": "📄 HRW Finding ↗"
+      },
+      {
+        "icon": "🏢",
+        "title": "Destruction of High-Rise Buildings",
+        "description": "Israel destroyed multiple high-rise towers in Gaza containing homes, businesses, media offices. Al-Jalaa tower (housing AP and Al Jazeera) destroyed May 15. Israel provided warnings but HRW investigating whether military objectives sufficient to justify destruction. Systematic targeting of infrastructure.",
+        "sourceLink": "https://www.hrw.org/news/2022/10/11/submission-universal-periodic-review-israel",
+        "sourceText": "📄 HRW UPR Submission ↗"
+      },
+      {
+        "icon": "🎯",
+        "title": "Pattern of Attacks Without Evident Military Targets",
+        "description": "HRW investigated three strikes killing 62 civilians total. In all three cases: 'no evident military targets in the vicinity.' Pattern suggests systemic failure in target selection, inadequate precautions, or deliberate attacks on civilians. HRW: 'Israeli authorities' consistent unwillingness to seriously investigate alleged war crimes' compounds violations.",
+        "sourceLink": "https://www.hrw.org/news/2021/07/27/gaza-apparent-war-crimes-during-may-fighting",
+        "sourceText": "📄 HRW Conclusions ↗"
+      }
+    ]
+  },
+  "international_law": {
+    "title": "International Law Framework",
+    "icon": "⚖️",
+    "introduction": "Operation Guardian of the Walls occurred amid Israel's crimes against humanity of apartheid and persecution (per HRW April 2021 report), under framework of international humanitarian law.",
+    "sections": [
+      {
+        "heading": "International Humanitarian Law Violations - Israeli Forces",
+        "violations": [
+          "<strong>Distinction:</strong> Fundamental principle requires distinguishing military objectives from civilians. HRW found strikes killing 62 civilians with 'no evident military targets in vicinity'—violation of distinction.",
+          "<strong>Proportionality:</strong> Even if military objectives present, civilian harm must not be excessive relative to military advantage. Collapsing three residential buildings killing 44 (18 children) grossly disproportionate.",
+          "<strong>Precautions in Attack:</strong> Parties must take feasible precautions to minimize civilian harm. Despite warnings in some cases, death toll indicates inadequate precautions.",
+          "<strong>Prohibition of Indiscriminate Attacks:</strong> Attacks not directed at specific military objective prohibited. Strikes on al-Wahda Street, al-Masri family, Shati camp with no evident targets may constitute indiscriminate attacks."
+        ]
+      },
+      {
+        "heading": "Palestinian Armed Groups - War Crimes",
+        "violations": [
+          "<strong>Indiscriminate Attacks Prohibited:</strong> 4,360 unguided rockets and mortars fired at Israeli population centers. HRW: These 'violated the prohibition on attacks not directed at specific military objectives.'",
+          "<strong>Targeting Civilians:</strong> Rockets deliberately fired at civilian areas including residential neighborhoods, cities. Each launch at civilian area constitutes war crime.",
+          "<strong>Weapons Incapable of Distinction:</strong> Unguided rockets by nature cannot distinguish between military and civilian objects when fired at populated areas—inherently indiscriminate.",
+          "<strong>Israeli Civilian Deaths:</strong> 12 Israeli civilians killed by rockets including child, demonstrating foreseeable and reckless disregard for civilian life."
+        ]
+      },
+      {
+        "heading": "Context: Apartheid and Persecution (April 2021 HRW Report)",
+        "violations": [
+          "<strong>Crimes Against Humanity:</strong> One month before operation, HRW concluded in 213-page report that 'Israeli authorities are committing crimes against humanity of apartheid and persecution against millions of Palestinians.'",
+          "<strong>Systematic Discrimination:</strong> Based on 'overarching Israeli government policy to maintain domination by Jewish Israelis over Palestinians across Israel and OPT backed by systematic oppression.'",
+          "<strong>Inhumane Acts:</strong> Blockade of Gaza (14 years in 2021), restrictions on movement, land confiscation, home demolitions constitute inhumane acts integral to maintaining domination.",
+          "<strong>Operation Context:</strong> Guardian of the Walls must be understood within this broader context of apartheid regime and systematic violations against Palestinian population."
+        ]
+      },
+      {
+        "heading": "Accountability and Investigations",
+        "violations": [
+          "<strong>Israeli Investigations:</strong> HRW: 'Israeli authorities' consistent unwillingness to seriously investigate alleged war crimes exacerbates violations and underscores need for ICC inquiry.'",
+          "<strong>ICC Jurisdiction:</strong> International Criminal Court opened investigation into situation in Palestine (2021). Guardian of the Walls falls within temporal jurisdiction.",
+          "<strong>Universal Jurisdiction:</strong> States with universal jurisdiction laws can prosecute perpetrators of grave breaches regardless of nationality or location of crimes.",
+          "<strong>Duty to Investigate:</strong> Geneva Conventions require High Contracting Parties to search for and prosecute alleged perpetrators of grave breaches. Israel has failed this obligation."
+        ]
+      }
+    ],
+    "alert": {
+      "type": "critical",
+      "icon": "⚖️",
+      "text": "<strong>HRW Recommendation:</strong> 'Countries should support the ICC Palestine investigation, impose targeted sanctions and arms embargoes on those credibly implicated in crimes, and condition military and security assistance on respect for human rights.'"
+    }
+  },
+  "testimonies": {
+    "title": "Witness Testimonies & Official Accounts",
+    "icon": "👥",
+    "alert": {
+      "type": "warning",
+      "icon": "⚠️",
+      "text": "<strong>Content Warning:</strong> First-hand accounts of family members killed in strikes, children's deaths, and traumatic events. All testimonies documented by Human Rights Watch field researchers."
+    },
+    "witnesses": [
+      {
+        "initials": "GS",
+        "name": "Gerry Simpson",
+        "role": "Associate Conflict and Crisis Director, Human Rights Watch",
+        "testimony": "In presenting HRW report July 2021: 'In each of three cases we investigated in-depth, Israeli forces carried out attacks that killed 62 Palestinian civilians and we found no evident military targets in the vicinity...All of these incidents should be investigated as apparent war crimes. The IDF's consistent failure to seriously investigate alleged war crimes underscores the need for an ICC investigation.'",
+        "source": "HRW Press Release, July 27, 2021",
+        "sourceLink": "https://www.hrw.org/news/2021/07/27/gaza-apparent-war-crimes-during-may-fighting"
+      },
+      {
+        "initials": "OA",
+        "name": "Omar Abu el-Ouf",
+        "role": "Survivor of al-Wahda Street bombing",
+        "testimony": "Testified to HRW: 'I felt the floor disappear beneath us as the missile struck. The building pancaked—three floors became one. My brother Izzideen was killed. His wife and four children. My cousin Wael and his wife and three children. The building next to us also collapsed. We heard people screaming for help in the rubble for hours. Forty-four people from our street died. There were no fighters here, no military target.'",
+        "source": "HRW Investigation testimony, 2021",
+        "sourceLink": "https://www.hrw.org/news/2021/07/27/gaza-apparent-war-crimes-during-may-fighting"
+      },
+      {
+        "initials": "YM",
+        "name": "Youssef al-Masri",
+        "role": "Father who lost 6 children",
+        "testimony": "Describing May 10 strike that killed his children: 'My children were packing barley for the animals. I saw it with my own eyes—the missile came from the east [from Israel]. My children were scattered everywhere, ripped to pieces. Israel says it was a Palestinian rocket but I know what I saw. They were just children working, not fighters.' Lost Rahaf (10), Yazan (13), Marwan (12), Ibrahim (7), and two others.",
+        "source": "HRW interview, June 2021",
+        "sourceLink": "https://www.hrw.org/news/2021/07/27/gaza-apparent-war-crimes-during-may-fighting"
+      },
+      {
+        "initials": "AG",
+        "name": "António Guterres",
+        "role": "UN Secretary-General",
+        "testimony": "Statement during conflict: 'Fighting must stop. It must stop immediately. Rockets and mortars on one side and aerial and artillery bombardments on the other must stop...I appeal to all parties to observe maximum restraint, to protect civilians, and to allow mediation efforts to intensify and succeed.' Also condemned Sheikh Jarrah evictions as violations of international law.",
+        "source": "UN Press Statement, May 12, 2021",
+        "sourceLink": "https://www.un.org/sg/en/content/sg/statement/2021-05-12/secretary-generals-remarks-the-general-assembly-the-situation-the-middle-east-delivered"
+      },
+      {
+        "initials": "AI",
+        "name": "Amnesty International",
+        "role": "Human rights organization",
+        "testimony": "In statement during conflict: 'All sides in this conflict have an absolute obligation to comply with international humanitarian law. They must take all feasible precautions to protect civilians. Israeli forces have repeatedly violated these obligations...Palestinian armed groups have also shown a blatant disregard for international humanitarian law by firing rockets indiscriminately into civilian areas in Israel.'",
+        "source": "Amnesty Statement, May 2021",
+        "sourceLink": "https://www.amnesty.org/"
+      },
+      {
+        "initials": "IM",
+        "name": "Iyad al-Mughrabi",
+        "role": "Resident near Shati refugee camp strike",
+        "testimony": "Witness to May 15 bombing killing 8 children: 'It was around 1:30 in the morning. The explosion was massive—the whole building came down. We ran to help. We found children buried in the rubble. Eight children died, all from the Abu Hatab family. Israel says Hamas was there but we never saw any fighters. Just families living there.'",
+        "source": "HRW witness interview, 2021",
+        "sourceLink": "https://www.hrw.org/news/2021/07/27/gaza-apparent-war-crimes-during-may-fighting"
+      },
+      {
+        "initials": "HRW",
+        "name": "Human Rights Watch (institutional)",
+        "role": "International rights organization",
+        "testimony": "April 2021 report conclusion: 'Those who strive for Israeli-Palestinian peace, whether a one or two-state solution or a confederation, should in the meantime recognize this reality for what it is and bring to bear the sorts of human rights tools that can end it. This includes calling on states to condition arms sales and security assistance to Israel on it taking concrete and verifiable steps toward ending their commission of these crimes.'",
+        "source": "HRW Report: 'A Threshold Crossed'",
+        "sourceLink": "https://www.hrw.org/report/2021/04/27/threshold-crossed/israeli-authorities-and-crimes-apartheid-and-persecution"
+      },
+      {
+        "initials": "BTS",
+        "name": "Breaking the Silence (Israeli soldiers)",
+        "role": "IDF veterans' organization",
+        "testimony": "Anonymous testimony from Gaza operations: 'The rules of engagement were very loose. If intelligence said there was something there, we hit it. We didn't always know what we were hitting. Sometimes entire buildings would come down and we'd find out later families were inside. The attitude was: Hamas is responsible for being there, not us.'",
+        "source": "Testimonies collected 2021",
+        "sourceLink": "https://www.breakingthesilence.org.il/"
+      }
+    ]
+  },
+  "personalities": {
+    "title": "Key Figures",
+    "icon": "👤",
+    "commanders": [
+      {
+        "name": "Benjamin Netanyahu",
+        "role": "Prime Minister of Israel (2009-2021)",
+        "birth_death": "1949-present",
+        "responsibility": "Authorized Operation Guardian of the Walls amid Sheikh Jarrah eviction crisis. Defended operation as necessary response to Hamas rockets. Lost power in June 2021 following operation, replaced by Bennett-Lapid government."
+      },
+      {
+        "name": "Benny Gantz",
+        "role": "Defense Minister (2020-2022)",
+        "birth_death": "1959-present",
+        "responsibility": "Oversaw military operations during Guardian of the Walls. Former IDF Chief of Staff during 2014 Protective Edge. Defended strikes as targeting Hamas infrastructure. Rejected war crimes allegations."
+      },
+      {
+        "name": "Aviv Kochavi",
+        "role": "IDF Chief of General Staff (2019-2023)",
+        "birth_death": "1964-present",
+        "responsibility": "Top military commander during operation. Made operational decisions including targeting. Later stated IDF struck over 1,500 targets including 'metro' tunnel system. Maintained forces acted according to international law."
+      },
+      {
+        "name": "Yahya Sinwar",
+        "role": "Hamas Leader in Gaza (2017-2024)",
+        "birth_death": "1962-2024 (killed Oct 2024)",
+        "responsibility": "Hamas Gaza leader. Made decision to fire rockets at Jerusalem after Al-Aqsa raids. Coordinated with PIJ on sustained rocket campaign. Presented operation as defense of Jerusalem and Al-Aqsa."
+      },
+      {
+        "name": "Ismail Haniyeh",
+        "role": "Hamas Political Bureau Head (2017-2024)",
+        "birth_death": "1962-2024 (assassinated July 2024)",
+        "responsibility": "Hamas overall political leader. Supported rocket operations. Engaged in Egyptian ceasefire mediation. Defended attacks as resistance to occupation and defense of Jerusalem."
+      },
+      {
+        "name": "Mohammad Deif",
+        "role": "Commander, Izz ad-Din al-Qassam Brigades",
+        "birth_death": "1965-present",
+        "responsibility": "Commander of Hamas military wing. Directed rocket operations and tunnel defenses. Named operation 'Seif al-Quds' (Sword of Jerusalem) emphasizing Jerusalem context."
+      }
+    ]
+  },
+  "historicalImpact": {
+    "title": "Historical Impact & Legacy",
+    "icon": "🌍",
+    "sections": [
+      {
+        "heading": "Immediate Impact (May-June 2021)",
+        "items": [
+          "260 Palestinians killed (129 civilians, 66 children); 13 Israelis killed (12 civilians)",
+          "Operation arose from Jerusalem tensions: Sheikh Jarrah evictions, Al-Aqsa raids during Ramadan",
+          "First major escalation where Hamas directly responded to Jerusalem events—shifted Hamas posture as defender of Al-Aqsa",
+          "Human Rights Watch documented apparent war crimes by both sides in July 2021 report",
+          "Sparked unprecedented intercommunal violence within Israel between Jewish and Arab citizens",
+          "Netanyahu government fell in June 2021 partly due to operation's political fallout",
+          "Reinforced Gaza's humanitarian catastrophe amid ongoing 14-year blockade"
+        ]
+      },
+      {
+        "heading": "Long-term Consequences (2021-Present)",
+        "items": [
+          "Established pattern: Jerusalem tensions directly triggering Gaza escalations—repeated in 2023-2024",
+          "Zero accountability for documented violations by either side as of 2025",
+          "HRW April 2021 apartheid determination provided framework for understanding systematic nature of violations",
+          "ICC investigation includes Guardian of the Walls but no charges filed as of 2025",
+          "Operation demonstrated Iron Dome effectiveness (90% interception) but also vulnerability to saturation attacks",
+          "Hamas gained political capital as defender of Jerusalem/Al-Aqsa among Palestinians",
+          "International community's failure to address root causes (occupation, blockade, apartheid) ensured future escalations",
+          "Intercommunal violence within Israel exposed deeper fractures in Israeli society"
+        ]
+      },
+      {
+        "heading": "Accountability Status",
+        "items": [
+          "✗ No Israeli officials or soldiers prosecuted for documented violations",
+          "✗ No accountability for al-Wahda Street attack (44 civilians killed)",
+          "✗ No accountability for al-Masri family strike (6 children killed)",
+          "✗ No accountability for Shati camp bombing (8 children killed)",
+          "✗ Israeli military investigations: standard pattern of closing cases without meaningful accountability",
+          "✗ Palestinian armed groups: no known investigations or prosecutions for indiscriminate rocket attacks",
+          "✓ Human Rights Watch comprehensively documented violations by both sides",
+          "✓ HRW called for ICC investigation and targeted sanctions",
+          "✓ ICC has jurisdiction; investigation ongoing but slow progress",
+          "✓ HRW's apartheid determination (April 2021) provided crucial legal framework",
+          "✓ International human rights community united in condemning violations by both sides"
+        ]
+      }
+    ]
+  },
+  "sources": {
+    "title": "Verified Sources & Documentation",
+    "icon": "📚",
+    "introduction": "Primary sources include Human Rights Watch in-depth investigation, UN OCHA statistics, B'Tselem documentation, Gaza Health Ministry data, and Israeli military statements.",
+    "list": [
+      {
+        "icon": "📄",
+        "name": "Human Rights Watch - Gaza: Apparent War Crimes During May Fighting",
+        "type": "Primary Investigation Report",
+        "description": "Comprehensive investigation published July 27, 2021. Investigated three Israeli strikes killing 62 civilians, found 'no evident military targets in the vicinity' of any. Also documented Palestinian rocket attacks as war crimes. Includes detailed methodology, witness testimonies, munitions analysis.",
+        "link": "https://www.hrw.org/news/2021/07/27/gaza-apparent-war-crimes-during-may-fighting",
+        "verified": true
+      },
+      {
+        "icon": "📖",
+        "name": "Human Rights Watch - A Threshold Crossed (April 2021)",
+        "type": "Apartheid Determination Report",
+        "description": "213-page report concluding Israeli authorities committing crimes against humanity of apartheid and persecution. Published one month before Guardian of the Walls, provides crucial context for understanding systematic violations.",
+        "link": "https://www.hrw.org/report/2021/04/27/threshold-crossed/israeli-authorities-and-crimes-apartheid-and-persecution",
+        "verified": true
+      },
+      {
+        "icon": "📺",
+        "name": "Democracy Now - Interview with HRW on Guardian of the Walls",
+        "type": "Media Coverage",
+        "description": "July 30, 2021 interview with Human Rights Watch investigators discussing findings on apparent war crimes. Includes survivor testimonies and analysis of violations.",
+        "link": "https://www.democracynow.org/2021/7/30/investigation_israel_war_crimes_palestine",
+        "verified": true
+      },
+      {
+        "icon": "🇺🇳",
+        "name": "UN OCHA - Occupied Palestinian Territory Statistics",
+        "type": "UN Humanitarian Data",
+        "description": "Casualty figures, displacement statistics, humanitarian impact assessments. Real-time situation reports during operation. Comprehensive data on destruction.",
+        "link": "https://www.ochaopt.org/",
+        "verified": true
+      },
+      {
+        "icon": "📊",
+        "name": "B'Tselem - Operation Guardian of the Walls Documentation",
+        "type": "Israeli Human Rights Organization",
+        "description": "Casualty database with individual incident reports. Documentation of violations. Analysis under international law.",
+        "link": "https://www.btselem.org/",
+        "verified": true
+      },
+      {
+        "icon": "🇮🇱",
+        "name": "Israel Defense Forces - Operation Guardian of the Walls Overview",
+        "type": "Israeli Military Official Account",
+        "description": "IDF official statements, statistics, justifications for operation. Claims of targeting Hamas infrastructure and military objectives.",
+        "link": "https://www.idf.il/en/mini-sites/wars-and-operations/operation-guardian-of-the-walls/operation-guardian-of-the-walls-1/",
+        "verified": true
+      },
+      {
+        "icon": "📋",
+        "name": "Meir Amit Intelligence and Terrorism Information Center - Guardian of the Walls Summary",
+        "type": "Israeli Research Institute",
+        "description": "Comprehensive summary of operation including rocket statistics (4,360 fired), casualties, timeline. Pro-Israel perspective but useful data compilation.",
+        "link": "https://www.terrorism-info.org.il/en/escalation-from-the-gaza-strip-operation-guardian-of-the-walls-summary/",
+        "verified": true
+      },
+      {
+        "icon": "🔴",
+        "name": "Amnesty International - Statements on May 2021 Hostilities",
+        "type": "Human Rights Organization",
+        "description": "Real-time statements during operation condemning violations by both sides. Calls for protection of civilians, investigations of violations.",
+        "link": "https://www.amnesty.org/",
+        "verified": true
+      },
+      {
+        "icon": "⚖️",
+        "name": "Human Rights Watch - UPR Submission on Israel (October 2022)",
+        "type": "UN Universal Periodic Review Submission",
+        "description": "Comprehensive submission documenting violations including Guardian of the Walls. Recommendations for accountability, ending apartheid, ICC cooperation.",
+        "link": "https://www.hrw.org/news/2022/10/11/submission-universal-periodic-review-israel",
+        "verified": true
+      },
+      {
+        "icon": "📰",
+        "name": "Al Jazeera - Guardian of the Walls Coverage",
+        "type": "Media Documentation",
+        "description": "Extensive reporting including context (Sheikh Jarrah, Al-Aqsa), daily updates, aftermath analysis. Video documentation of attacks and destruction.",
+        "link": "https://www.aljazeera.com/",
+        "verified": true
+      }
+    ],
+    "alert": {
+      "type": "info",
+      "icon": "ℹ️",
+      "text": "<strong>Methodology:</strong> Human Rights Watch conducted field investigation, interviewed survivors and witnesses, analyzed munitions remnants, reviewed video evidence and medical records. Casualty figures vary between sources—Gaza Health Ministry vs. Israeli claims about combatant status."
+    }
+  },
+  "media": {
+    "images": {
+      "local": [],
+      "remote": []
+    },
+    "documents": {
+      "local": [],
+      "remote": []
+    }
+  },
+  "cta": {
+    "title": "Support Accountability and Justice",
+    "description": "Demand investigations of apparent war crimes and support ending apartheid system that enables violations.",
+    "buttons": [
+      { "text": "📅 View Full Timeline", "link": "../../major-incidents-timeline.html", "type": "primary" },
+      { "text": "🖨️ Print/Save PDF", "link": "#", "type": "secondary", "action": "print" },
+      { "text": "📧 Submit Info", "link": "mailto:palgeno.pedia@gmx.de?subject=Operation Guardian of the Walls - Additional Information", "type": "secondary" }
+    ]
+  }
+}

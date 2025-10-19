@@ -1,0 +1,741 @@
+{
+  "id": "hist_012",
+  "event_type": "Military Operation",
+  "verification_status": "verified",
+  "metadata": {
+    "pageTitle": "Operation Cast Lead (27 Dec 2008 - 18 Jan 2009) | Historical Documentation",
+    "description": "Israeli military offensive on Gaza killing 1,383-1,419 Palestinians, majority civilians including 333 children. UN Goldstone Report found evidence of war crimes by both sides.",
+    "keywords": "Operation Cast Lead, Gaza War 2008-2009, Goldstone Report, war crimes, white phosphorus, Samouni family, civilian casualties",
+    "lastUpdated": "2025-10-18",
+    "author": "aliattia02"
+  },
+  "date": {
+    "start": "2008-12-27",
+    "end": "2009-01-18",
+    "duration_days": 22,
+    "display": "27 December 2008 - 18 January 2009",
+    "context": "22-day Israeli military operation in Gaza Strip"
+  },
+  "location": {
+    "historical": {
+      "name": "Gaza Strip",
+      "admin_context": "Hamas-governed Gaza Strip under Israeli blockade since 2007",
+      "specific_sites": ["Gaza City", "Zaytoun neighborhood", "Beit Lahiya", "Beit Hanoun", "Khan Yunis", "Rafah"]
+    },
+    "current": {
+      "name": "Gaza Strip",
+      "admin_context": "Under Israeli blockade and occupation; governed by Hamas",
+      "status": "Ongoing blockade since 2007; reconstruction incomplete"
+    }
+  },
+  "hero": {
+    "category": "🔴 MILITARY OPERATION • GAZA 2008-2009",
+    "title": "Operation Cast Lead",
+    "subtitle": "22-day Israeli offensive resulting in 1,400+ Palestinian deaths; UN investigation found war crimes",
+    "metaCards": [
+      { "icon": "📅", "label": "Duration", "value": "22 days", "detail": "27 Dec 2008 - 18 Jan 2009" },
+      { "icon": "💀", "label": "Palestinians Killed", "value": "1,383-1,419", "detail": "Including 333 children" },
+      { "icon": "🏥", "label": "Wounded", "value": "5,300+", "detail": "30% with long-term disabilities" },
+      { "icon": "🏠", "label": "Homes Destroyed", "value": "3,540 units", "detail": "2,870 severely damaged" }
+    ]
+  },
+  "quickFacts": {
+    "title": "⚡ Quick Facts",
+    "items": [
+      { "label": "Event Type", "value": "Military Operation / Armed Conflict" },
+      { "label": "Perpetrators", "value": "Israel Defense Forces" },
+      { "label": "Verification", "value": "UN Goldstone Report; HRW; Amnesty International; B'Tselem" },
+      { "label": "UN Response", "value": "Fact-Finding Mission; accusations of war crimes" }
+    ]
+  },
+  "brief_summary": "Operation Cast Lead was a 22-day Israeli military offensive on the Gaza Strip from 27 December 2008 to 18 January 2009. The operation began with massive aerial bombardment followed by ground invasion. Between 1,383 and 1,419 Palestinians were killed, including 333 children and 114 women, with over 5,300 wounded. The UN Fact-Finding Mission led by Justice Richard Goldstone concluded there was evidence of war crimes and possible crimes against humanity committed by Israeli forces, including deliberate attacks on civilians, use of white phosphorus in populated areas, and systematic destruction of civilian infrastructure. The report also accused Palestinian armed groups of war crimes for indiscriminate rocket attacks. Israeli operations included the Samouni family massacre (21 civilians killed), Al-Daya family strike (22 killed), and 'white flag' killings. The operation destroyed 3,540 homes completely and severely damaged 2,870 more, leaving over 20,000 people homeless.",
+  "perpetrators": ["Israel Defense Forces", "Israeli Air Force", "Israeli government", "Ground forces and naval units"],
+  "executiveSummary": {
+    "title": "Executive Summary",
+    "icon": "📋",
+    "alert": {
+      "type": "critical",
+      "icon": "⚠️",
+      "text": "<strong>UN Investigation:</strong> The Goldstone Report (September 2009) found evidence indicating serious violations of international humanitarian law by Israeli forces, including deliberate disproportionate attacks designed to punish civilian population."
+    },
+    "paragraphs": [
+      "Operation Cast Lead began at 11:30 AM on December 27, 2008, when Israeli F-16 fighter jets and Apache helicopters simultaneously struck over 100 pre-planned targets across Gaza within 220 seconds. The opening attacks hit police stations—including during a graduation ceremony for new officers, killing 99 police personnel—government buildings, and Hamas infrastructure. By the end of the first day, at least 230 Palestinians were killed. The surprise timing maximized casualties among security personnel and created widespread panic among Gaza's 1.5 million residents.",
+      "The aerial bombardment continued for seven days before Israeli ground forces invaded Gaza from the north and east on January 3, 2009. The navy simultaneously shelled from offshore. Over 22 days, Israeli forces conducted what the UN investigation described as 'a deliberately disproportionate attack designed to punish, humiliate and terrorize a civilian population.' The operation involved widespread destruction of civilian infrastructure including hospitals, schools, mosques, United Nations facilities, water installations, and sewage treatment plants.",
+      "Multiple incidents documented by the UN mission and human rights organizations revealed patterns of violations: the Samouni family massacre where soldiers forced approximately 100 civilians into a building then shelled it, killing 21; the Al-Daya family airstrike killing 22 civilians; several cases where soldiers shot civilians carrying white flags; and extensive use of white phosphorus munitions in densely populated areas. The Palestinian Centre for Human Rights documented 1,419 Palestinian deaths including 1,167 civilians, while B'Tselem reported 1,385 killed including 762 noncombatants and 318 minors. Thirteen Israelis were also killed, including three civilians. The operation ended with separate unilateral ceasefires on January 18, 2009, two days before Barack Obama's inauguration as US President."
+    ]
+  },
+  "casualties": {
+    "title": "Casualties & Destruction",
+    "icon": "🚶",
+    "deaths": "1,383-1,419 Palestinians; 13 Israelis (10 soldiers, 3 civilians)",
+    "injured": "5,300+ Palestinians; 518 Israelis",
+    "forced_displacement": "20,000+ Palestinians made homeless",
+    "breakdown": [
+      {
+        "type": "killed",
+        "number": "1,383-1,419",
+        "label": "Palestinians Killed",
+        "detail": "PCHR: 1,419 (1,167 civilians); B'Tselem: 1,385 (762 noncombatants); UN OCHA: 1,383 (773 civilians)",
+        "sources": [
+          {
+            "name": "Palestinian Centre for Human Rights Report",
+            "link": "https://www.pchrgaza.org/",
+            "icon": "📄"
+          },
+          {
+            "name": "B'Tselem Statistics",
+            "link": "https://www.btselem.org/",
+            "icon": "📊"
+          },
+          {
+            "name": "UN OCHA Humanitarian Report",
+            "link": "https://www.ochaopt.org/",
+            "icon": "🇺🇳"
+          }
+        ]
+      },
+      {
+        "type": "killed",
+        "number": "333 children",
+        "label": "Child Fatalities",
+        "detail": "UN OCHA documented 333 children killed; 114 women killed",
+        "sources": [
+          {
+            "name": "UN OCHA Report - Cast Lead Anniversary",
+            "link": "https://www.ochaopt.org/content/eight-years-after-2008-2009-cast-lead-hostilities-gaza-lack-accountability-persists",
+            "icon": "🇺🇳"
+          }
+        ]
+      },
+      {
+        "type": "injured",
+        "number": "5,300+",
+        "label": "Palestinians Wounded",
+        "detail": "Over 5,300 injured; approximately 30% suffered long-term impairment or permanent disability",
+        "sources": [
+          {
+            "name": "UN OCHA & Palestinian Centre for Human Rights",
+            "link": "https://www.ochaopt.org/",
+            "icon": "🏥"
+          }
+        ]
+      },
+      {
+        "type": "destroyed",
+        "number": "3,540 units",
+        "label": "Homes Completely Destroyed",
+        "detail": "Additional 2,870 homes sustained severe damage; over 20,000 people made homeless",
+        "sources": [
+          {
+            "name": "UN Statistics",
+            "link": "https://www.un.org/unispal/",
+            "icon": "🏠"
+          }
+        ]
+      },
+      {
+        "type": "destroyed",
+        "number": "268 businesses",
+        "label": "Private Businesses Destroyed",
+        "detail": "432 additional businesses damaged; $139 million+ in economic losses",
+        "sources": [
+          {
+            "name": "Private Sector Coordination Council Assessment",
+            "link": "https://imeu.org/",
+            "icon": "💼"
+          }
+        ]
+      },
+      {
+        "type": "killed",
+        "number": "13 Israelis",
+        "label": "Israeli Fatalities",
+        "detail": "10 soldiers (4 by friendly fire); 3 civilians killed by rocket fire",
+        "sources": [
+          {
+            "name": "Israeli Official Sources",
+            "link": "https://www.idf.il/",
+            "icon": "🇮🇱"
+          }
+        ]
+      }
+    ],
+    "alert": {
+      "type": "info",
+      "icon": "ℹ️",
+      "text": "<strong>Sources:</strong> UN OCHA; Palestinian Centre for Human Rights; B'Tselem; UN Goldstone Report; Amnesty International; Human Rights Watch. Casualty figures vary slightly between sources due to different methodologies."
+    }
+  },
+  "timeline": {
+    "title": "Timeline of Events",
+    "icon": "⏱️",
+    "events": [
+      {
+        "time": "4 November 2008",
+        "title": "Israeli raid breaks ceasefire",
+        "description": "Israel launches cross-border raid (Operation Double Challenge) into Gaza to destroy tunnel. Multiple sources report this broke the six-month ceasefire. Hamas responds with rocket fire, ending truce.",
+        "sourceLinks": [
+          {
+            "name": "UN Documentation",
+            "url": "https://www.un.org/unispal/"
+          }
+        ]
+      },
+      {
+        "time": "November-December 2008",
+        "title": "Escalating violence",
+        "description": "Increasing rocket fire from Gaza and Israeli strikes. Over 100 rockets fired in 24 hours before operation begins. Multiple escalations and failed ceasefire attempts.",
+        "sourceLinks": [
+          {
+            "name": "UN OCHA Monthly Reports",
+            "url": "https://www.ochaopt.org/"
+          }
+        ]
+      },
+      {
+        "time": "27 Dec 2008, 11:30 AM",
+        "title": "Operation begins - massive airstrikes",
+        "description": "Israeli F-16s and Apache helicopters strike 100+ targets in 220 seconds with 95% success rate. Police headquarters hit during graduation ceremony; 99 police officers and 9 civilians killed. By end of first day, 230 Palestinians dead.",
+        "sourceLinks": [
+          {
+            "name": "UN Goldstone Report, para. 28-35",
+            "url": "https://www.ohchr.org/en/hr-bodies/hrc/special-sessions/session9/fact-finding-mission"
+          }
+        ]
+      },
+      {
+        "time": "27 Dec 2008 - 3 Jan 2009",
+        "title": "Week of aerial bombardment",
+        "description": "Continuous airstrikes hit government buildings, police stations, mosques, homes, infrastructure. Israeli navy shells from offshore. White phosphorus used in populated areas. Hundreds killed, including many civilians.",
+        "sourceLinks": [
+          {
+            "name": "Amnesty International Report 'Operation Cast Lead'",
+            "url": "https://www.amnesty.org/en/wp-content/uploads/2021/06/mde150152009en.pdf"
+          }
+        ]
+      },
+      {
+        "time": "3 January 2009",
+        "title": "Ground invasion begins",
+        "description": "Israeli ground forces invade Gaza from north and east. Tanks and infantry enter Beit Lahiya and Beit Hanoun. Gaza effectively bisected. Tens of thousands flee their homes. Fighting intensifies dramatically.",
+        "sourceLinks": [
+          {
+            "name": "UN OCHA Situation Reports",
+            "url": "https://www.ochaopt.org/"
+          }
+        ]
+      },
+      {
+        "time": "4 January 2009",
+        "title": "Samouni family massacre begins",
+        "description": "Israeli soldiers order approximately 100 members of Samouni family into single building in Zaytoun area of Gaza City. Family held in building for 24 hours before shelling on January 5 kills 21 civilians.",
+        "sourceLinks": [
+          {
+            "name": "UN Goldstone Report, para. 726-756",
+            "url": "https://www.ohchr.org/en/hr-bodies/hrc/special-sessions/session9/fact-finding-mission"
+          },
+          {
+            "name": "Human Rights Watch Investigation",
+            "url": "https://www.hrw.org/"
+          }
+        ]
+      },
+      {
+        "time": "5 January 2009",
+        "title": "Samouni massacre - shelling",
+        "description": "Israeli forces shell building where Samouni family held. 21 family members killed, all civilians. Survivors trapped with dead for days. Red Cross denied access. Later described as one of most infamous incidents of war.",
+        "sourceLinks": [
+          {
+            "name": "ICRC Statement",
+            "url": "https://www.icrc.org/"
+          },
+          {
+            "name": "UN Goldstone Report",
+            "url": "https://www.ohchr.org/en/hr-bodies/hrc/special-sessions/session9/fact-finding-mission"
+          }
+        ]
+      },
+      {
+        "time": "6 January 2009",
+        "title": "Al-Daya family massacre",
+        "description": "Israeli F-16 fires missile at home of Al-Daya family in Zaytoun neighborhood. 22 family members killed, mostly women and children. Israeli military later admitted house struck by mistake—located next to weapons cache (intended target).",
+        "sourceLinks": [
+          {
+            "name": "UN OCHA Report",
+            "url": "https://www.ochaopt.org/content/eight-years-after-2008-2009-cast-lead-hostilities-gaza-lack-accountability-persists"
+          }
+        ]
+      },
+      {
+        "time": "7 January 2009",
+        "title": "'White flag' killings documented",
+        "description": "Multiple incidents where Israeli soldiers killed Palestinians fleeing while carrying white flags indicating civilian status. Majda and Rayya Hajjaj (aged 37 and 65) shot while fleeing with white flag. UN mission documented 7 such incidents.",
+        "sourceLinks": [
+          {
+            "name": "HRW Report 'White Flag Deaths'",
+            "url": "https://www.hrw.org/report/2009/08/13/white-flag-deaths/killings-palestinian-civilians-during-operation-cast-lead"
+          }
+        ]
+      },
+      {
+        "time": "15 January 2009",
+        "title": "UNRWA compound attacked",
+        "description": "UN Relief and Works Agency compound in Gaza City shelled with high explosive and white phosphorus. 600-700 civilians sheltering there. Huge fuel depot on site. Israeli forces continued attack for hours despite being alerted to risks.",
+        "sourceLinks": [
+          {
+            "name": "UN Goldstone Report, para. 39",
+            "url": "https://www.ohchr.org/en/hr-bodies/hrc/special-sessions/session9/fact-finding-mission"
+          }
+        ]
+      },
+      {
+        "time": "15 January 2009",
+        "title": "Al-Quds Hospital attacked",
+        "description": "Israeli forces directly and intentionally attacked al-Quds hospital in Gaza City and adjacent ambulance depot. White phosphorus used. Pattern of attacks on medical facilities documented throughout operation.",
+        "sourceLinks": [
+          {
+            "name": "UN Goldstone Report, para. 39",
+            "url": "https://www.ohchr.org/en/hr-bodies/hrc/special-sessions/session9/fact-finding-mission"
+          },
+          {
+            "name": "Amnesty International Documentation",
+            "url": "https://www.amnesty.org/"
+          }
+        ]
+      },
+      {
+        "time": "18 January 2009",
+        "title": "Ceasefire declared",
+        "description": "Under enormous international pressure and two days before Obama inauguration, Israel declares unilateral ceasefire and withdraws forces. Palestinian armed groups follow with separate ceasefire. No formal agreement reached.",
+        "sourceLinks": [
+          {
+            "name": "UN Security Council Records",
+            "url": "https://www.un.org/unispal/"
+          }
+        ]
+      },
+      {
+        "time": "3 April 2009",
+        "title": "UN Fact-Finding Mission established",
+        "description": "Following international outrage, UN Human Rights Council establishes Fact-Finding Mission led by Justice Richard Goldstone to investigate possible violations of international law by all parties during conflict.",
+        "sourceLinks": [
+          {
+            "name": "UN Human Rights Council Resolution",
+            "url": "https://www.ohchr.org/en/hr-bodies/hrc/special-sessions/session9/fact-finding-mission"
+          }
+        ]
+      },
+      {
+        "time": "1-5 June 2009",
+        "title": "UN Mission visits Gaza",
+        "description": "Goldstone Mission conducts first field visit to Gaza. Holds meetings, interviews victims and witnesses, visits incident sites. Israel refuses cooperation and denies access to Israel and West Bank.",
+        "sourceLinks": [
+          {
+            "name": "OHCHR Mission Documentation",
+            "url": "https://www.ohchr.org/en/hr-bodies/hrc/special-sessions/session9/fact-finding-mission"
+          }
+        ]
+      },
+      {
+        "time": "15 September 2009",
+        "title": "Goldstone Report released",
+        "description": "UN mission releases 575-page report documenting alleged war crimes by Israeli military and Palestinian armed groups. Report finds evidence of deliberately disproportionate attacks on civilians, concludes actions may amount to crimes against humanity.",
+        "sourceLinks": [
+          {
+            "name": "UN Goldstone Report (Full Text)",
+            "url": "https://www.ohchr.org/en/hr-bodies/hrc/special-sessions/session9/fact-finding-mission"
+          }
+        ]
+      },
+      {
+        "time": "16 October 2009",
+        "title": "UN Human Rights Council endorses report",
+        "description": "Human Rights Council endorses Goldstone Report by vote of 25 to 6, with 11 abstentions. Recommends referral to Security Council and potentially International Criminal Court if parties don't investigate.",
+        "sourceLinks": [
+          {
+            "name": "UN HRC Resolution",
+            "url": "https://www.un.org/unispal/"
+          }
+        ]
+      }
+    ]
+  },
+  "warCrimes": {
+    "title": "Documented Violations of International Law",
+    "icon": "⚠️",
+    "alert": {
+      "type": "warning",
+      "icon": "⚠️",
+      "text": "<strong>UN Goldstone Report:</strong> Found evidence indicating serious violations of international humanitarian law and human rights law. Concluded Israeli forces committed actions amounting to war crimes and possibly crimes against humanity."
+    },
+    "crimes": [
+      {
+        "icon": "👨‍👩‍👧‍👦",
+        "title": "Samouni Family Massacre",
+        "description": "Israeli soldiers forced approximately 100 members of Samouni family into single building in Zaytoun area, held them 24 hours, then shelled building on January 5, 2009, killing 21 civilians. Survivors trapped with dead for days; ambulances prevented from accessing area. UN mission found this violated laws of war and right to life.",
+        "sourceLink": "https://www.ohchr.org/en/hr-bodies/hrc/special-sessions/session9/fact-finding-mission",
+        "sourceText": "📄 UN Goldstone Report, para. 726-756 ↑"
+      },
+      {
+        "icon": "🏠",
+        "title": "Al-Daya Family Airstrike",
+        "description": "F-16 missile strike on Al-Daya family home killed 22 civilians, mostly women and children. Israeli military later admitted house struck by mistake. UN mission found 'substantial failure of due diligence' constituting violation of right to life under International Covenant on Civil and Political Rights.",
+        "sourceLink": "https://www.ochaopt.org/content/eight-years-after-2008-2009-cast-lead-hostilities-gaza-lack-accountability-persists",
+        "sourceText": "📄 UN OCHA Documentation ↑"
+      },
+      {
+        "icon": "🏳️",
+        "title": "White Flag Killings",
+        "description": "Israeli soldiers killed at least 11 Palestinian civilians who were fleeing while carrying white flags to indicate civilian status. Documented cases include killing of two women (Majda and Rayya Hajjaj, aged 37 and 65). All incidents occurred in areas under Israeli control with no active fighting.",
+        "sourceLink": "https://www.hrw.org/report/2009/08/13/white-flag-deaths/killings-palestinian-civilians-during-operation-cast-lead",
+        "sourceText": "📄 Human Rights Watch Report ↑"
+      },
+      {
+        "icon": "☢️",
+        "title": "White Phosphorus in Populated Areas",
+        "description": "Israeli forces used white phosphorus—an incendiary substance illegal when used in populated areas—in attacks on two hospitals (Al-Quds, Al-Wafa), UN compound in Gaza City, and densely populated residential areas. Caused numerous civilian casualties and burns.",
+        "sourceLink": "https://www.amnesty.org/en/wp-content/uploads/2021/06/mde150152009en.pdf",
+        "sourceText": "📄 Amnesty International Report ↑"
+      },
+      {
+        "icon": "🏥",
+        "title": "Attacks on Medical and UN Facilities",
+        "description": "Direct attacks on protected sites including al-Quds hospital, al-Wafa hospital, UNRWA compound sheltering 600-700 civilians, and UN-run schools. Attacks continued despite clear marking of facilities and notification to Israeli forces of civilian presence.",
+        "sourceLink": "https://www.ohchr.org/en/hr-bodies/hrc/special-sessions/session9/fact-finding-mission",
+        "sourceText": "📄 UN Goldstone Report, para. 39 ↑"
+      },
+      {
+        "icon": "🏭",
+        "title": "Destruction of Civilian Infrastructure",
+        "description": "Systematic destruction of industrial infrastructure, flour mills, water installations, sewage treatment plants with no military justification. El-Bader flour mill—only functioning mill in Gaza—destroyed despite being clearly civilian. 268 businesses completely destroyed.",
+        "sourceLink": "https://www.ohchr.org/en/hr-bodies/hrc/special-sessions/session9/fact-finding-mission",
+        "sourceText": "📄 UN Goldstone Report, para. 50 ↑"
+      },
+      {
+        "icon": "🎯",
+        "title": "Deliberately Disproportionate Force",
+        "description": "UN mission concluded: 'The operations were carefully planned in all their phases. The Mission finds that the incidents and patterns of events... indicate deliberate targeting of civilians.' Goldstone Report described it as 'deliberately disproportionate attack designed to punish, humiliate and terrorize civilian population.'",
+        "sourceLink": "https://www.ohchr.org/en/hr-bodies/hrc/special-sessions/session9/fact-finding-mission",
+        "sourceText": "📄 UN Goldstone Report, Executive Summary ↑"
+      },
+      {
+        "icon": "🚀",
+        "title": "Palestinian Rocket Attacks (War Crime)",
+        "description": "Palestinian armed groups fired over 900 rockets and mortars into Israel during operation, killing 3 Israeli civilians. Goldstone Report concluded these were indiscriminate attacks against civilian population constituting war crimes and possibly crimes against humanity.",
+        "sourceLink": "https://www.ohchr.org/en/hr-bodies/hrc/special-sessions/session9/fact-finding-mission",
+        "sourceText": "📄 UN Goldstone Report ↑"
+      }
+    ]
+  },
+  "international_law": {
+    "title": "International Law Framework",
+    "icon": "⚖️",
+    "introduction": "Operation Cast Lead occurred under framework of Fourth Geneva Convention (1949) and customary international humanitarian law. UN Fact-Finding Mission investigated violations by all parties.",
+    "sections": [
+      {
+        "heading": "Fourth Geneva Convention Violations - Israeli Forces",
+        "violations": [
+          "<strong>Article 27 (Protected Persons):</strong> 'Protected persons...shall be treated humanely...protected against all acts of violence.' Samouni massacre, white flag killings, and other deliberate attacks on civilians violated this core protection.",
+          "<strong>Article 33 (Collective Punishments):</strong> 'Collective penalties...are prohibited.' UN mission found operation designed to 'punish, humiliate and terrorize' Gaza's civilian population—textbook collective punishment.",
+          "<strong>Article 53 (Destruction of Property):</strong> 'Any destruction...of property...prohibited, except where such destruction is rendered absolutely necessary by military operations.' Destruction of flour mills, water systems, 3,540+ homes lacked military necessity.",
+          "<strong>Article 147 (Grave Breaches):</strong> 'Wilful killing...wilfully causing great suffering...extensive destruction...not justified by military necessity' constitute grave breaches (war crimes). Multiple documented incidents meet this threshold."
+        ]
+      },
+      {
+        "heading": "Customary International Humanitarian Law Violations",
+        "violations": [
+          "<strong>Distinction:</strong> Parties must distinguish between civilians and combatants. Attacks on Samouni family, Al-Daya family, white flag carriers violated fundamental principle of distinction.",
+          "<strong>Proportionality:</strong> Attacks must not cause excessive civilian harm relative to military advantage. UN mission found 'deliberately disproportionate force' throughout operation.",
+          "<strong>Precautions in Attack:</strong> Parties must take feasible precautions to minimize civilian harm. Attacks on UNRWA compound, hospitals, continued after notification violated precautionary requirements.",
+          "<strong>Protected Objects:</strong> Medical facilities, UN facilities, civilian objects protected. Direct attacks on Al-Quds hospital, UNRWA compound violated protected status."
+        ]
+      },
+      {
+        "heading": "UN Goldstone Report Findings (September 2009)",
+        "violations": [
+          "<strong>War Crimes:</strong> Report found evidence Israeli forces committed actions amounting to war crimes, including wilful killing, torture, inhumane treatment, extensive destruction of property not justified by military necessity.",
+          "<strong>Crimes Against Humanity:</strong> Report concluded Israeli actions may amount to crimes against humanity—'deliberately disproportionate attack designed to punish, humiliate and terrorize civilian population.'",
+          "<strong>Palestinian War Crimes:</strong> Report also found Palestinian armed groups committed war crimes through indiscriminate rocket attacks on Israeli civilians.",
+          "<strong>Accountability:</strong> Recommended both parties conduct good faith investigations within 6 months; if not, Security Council should refer situation to International Criminal Court."
+        ]
+      },
+      {
+        "heading": "Human Rights Law Violations",
+        "violations": [
+          "<strong>Right to Life (ICCPR Article 6):</strong> Deliberate killings of civilians violated right to life. Al-Daya case specifically found to violate Article 6 of International Covenant on Civil and Political Rights.",
+          "<strong>Right to Adequate Housing:</strong> Destruction of 3,540 homes, leaving 20,000+ homeless, violated right to adequate housing under International Covenant on Economic, Social and Cultural Rights.",
+          "<strong>Right to Health:</strong> Attacks on hospitals, medical facilities, destruction of health infrastructure violated right to health.",
+          "<strong>Rights of the Child:</strong> 333 children killed; attacks on schools; targeting of civilian areas with high child populations violated Convention on Rights of the Child."
+        ]
+      }
+    ],
+    "alert": {
+      "type": "critical",
+      "icon": "⚖️",
+      "text": "<strong>Accountability gap:</strong> Despite UN findings of war crimes, only 4 Israeli cases resulted in conviction (from 510 complaints filed). Zero prosecutions for Samouni massacre, Al-Daya strike, or white flag killings. No Palestinian investigations of rocket attacks reported."
+    }
+  },
+  "testimonies": {
+    "title": "Witness Testimonies & Official Accounts",
+    "icon": "👥",
+    "witnesses": [
+      {
+        "initials": "RG",
+        "name": "Justice Richard Goldstone",
+        "role": "Head of UN Fact-Finding Mission",
+        "testimony": "In presenting report to UN: 'The Mission found that the operations were carefully planned in all their phases...We came to the conclusion that what occurred in just over three weeks at the end of 2008 and the beginning of 2009 was a deliberately disproportionate attack designed to punish, humiliate and terrorize a civilian population.' September 2009.",
+        "source": "UN Goldstone Report Press Conference, 15 September 2009",
+        "sourceLink": "https://www.ohchr.org/en/hr-bodies/hrc/special-sessions/session9/fact-finding-mission"
+      },
+      {
+        "initials": "AS",
+        "name": "Ateya al-Samouni",
+        "role": "Survivor of Samouni family massacre",
+        "testimony": "Testified to UN mission: 'The soldiers came and ordered all of us into one house...around 100 people, mostly women and children. They kept us there all day and night. The next morning they started shelling the house. My mother was killed instantly. My sister was hit. Children were screaming. We were trapped with the dead and dying for three days before ambulances could reach us.' Lost 21 family members.",
+        "source": "UN Goldstone Report testimony, June 2009",
+        "sourceLink": "https://www.ohchr.org/en/hr-bodies/hrc/special-sessions/session9/fact-finding-mission"
+      },
+      {
+        "initials": "KE",
+        "name": "Dr. Khalid Eshkuntana",
+        "role": "Palestinian physician, Gaza",
+        "testimony": "Testified about treating white phosphorus injuries: 'We saw burns we had never seen before. The phosphorus continues to burn even inside the body. We had no experience treating such weapons. Many patients died from these burns. The smell was terrible—you could tell when a white phosphorus victim arrived.'",
+        "source": "Amnesty International interviews, January 2009",
+        "sourceLink": "https://www.amnesty.org/"
+      },
+      {
+        "initials": "JD",
+        "name": "John Dugard",
+        "role": "Former UN Special Rapporteur for Palestine",
+        "testimony": "In statement to UN: 'Israel's actions in Gaza constitute a gross and systematic violation of the Fourth Geneva Convention. The attack was not simply an act of war, but a sustained and brutal assault on a civilian population that had been living under siege for 18 months.'",
+        "source": "UN Human Rights Council statement, March 2009",
+        "sourceLink": "https://www.un.org/unispal/"
+      },
+      {
+        "initials": "BS",
+        "name": "Breaking the Silence (Israeli soldiers' testimonies)",
+        "role": "Organization of IDF veterans",
+        "testimony": "Anonymous soldier testimony: 'The commanders made it clear: our lives come first, and then moral considerations. We were told that if we see any person, even if they seem innocent, if we feel threatened, we shoot...The destruction was unimaginable. We destroyed so many houses that served no military purpose.' Published in 'Operation Cast Lead' report.",
+        "source": "Breaking the Silence testimonies, July 2009",
+        "sourceLink": "https://www.breakingthesilence.org.il/"
+      },
+      {
+        "initials": "ICRC",
+        "name": "International Committee of the Red Cross",
+        "role": "Humanitarian organization",
+        "testimony": "ICRC issued rare public criticism: 'The Israeli military failed to meet its obligation under international humanitarian law to care for and evacuate the wounded...The ICRC views the delay in allowing rescue services access as unacceptable.' Regarding Samouni family incident where wounded left with dead for days.",
+        "source": "ICRC Press Release, 8 January 2009",
+        "sourceLink": "https://www.icrc.org/en/doc/resources/documents/news-release/2009-and-earlier/palestine-news-070109.htm"
+      },
+      {
+        "initials": "AI",
+        "name": "Amnesty International",
+        "role": "Human rights organization",
+        "testimony": "In detailed report: 'Israeli forces carried out direct attacks against civilians and civilian objects in Gaza, and attacks which were disproportionate or indiscriminate, failing to distinguish between legitimate military targets and civilian objects...Many of the attacks involved the use of white phosphorus and other weapons supplied by the USA.'",
+        "source": "Amnesty Report 'Operation Cast Lead: 22 days of death and destruction', July 2009",
+        "sourceLink": "https://www.amnesty.org/en/wp-content/uploads/2021/06/mde150152009en.pdf"
+      },
+      {
+        "initials": "HRW",
+        "name": "Human Rights Watch",
+        "role": "International rights organization",
+        "testimony": "Documented white flag killings: 'In seven cases documented by Human Rights Watch, Israeli forces in Gaza attacked groups of people who were trying to convey their civilian status by waving white flags...The attacks killed 11 civilians.' Report titled 'White Flag Deaths.'",
+        "source": "HRW Report, August 2009",
+        "sourceLink": "https://www.hrw.org/report/2009/08/13/white-flag-deaths/killings-palestinian-civilians-during-operation-cast-lead"
+      }
+    ]
+  },
+  "personalities": {
+    "title": "Key Figures",
+    "icon": "👤",
+    "commanders": [
+      {
+        "name": "Ehud Olmert",
+        "role": "Prime Minister of Israel (2006-2009)",
+        "birth_death": "1945-present",
+        "responsibility": "Authorized Operation Cast Lead and made key policy decisions during offensive. Later stated operation was necessary but expressed regret over civilian casualties. In 2015 convicted of corruption in unrelated case."
+      },
+      {
+        "name": "Ehud Barak",
+        "role": "Defense Minister (2007-2013)",
+        "birth_death": "1942-present",
+        "responsibility": "Oversaw planning and execution of military operations. Defended operation as proportionate response to rocket fire. Stated goal was 'to bring about a fundamental improvement in the security situation.'"
+      },
+      {
+        "name": "Gabi Ashkenazi",
+        "role": "IDF Chief of General Staff (2007-2011)",
+        "birth_death": "1954-present",
+        "responsibility": "Top military commander during operation. Responsible for operational planning and execution. Maintained operation was conducted according to international law and that military investigated allegations."
+      },
+      {
+        "name": "Ismail Haniyeh",
+        "role": "Hamas Prime Minister in Gaza (2007-2017)",
+        "birth_death": "1962-present",
+        "responsibility": "Hamas political leader during operation. Continued to authorize rocket attacks into Israel. Rejected ceasefire offers during operation. Currently heads Hamas Political Bureau (2017-present)."
+      },
+      {
+        "name": "Justice Richard Goldstone",
+        "role": "Head of UN Fact-Finding Mission",
+        "birth_death": "1938-present",
+        "responsibility": "Led UN investigation into Operation Cast Lead. Former Constitutional Court Justice of South Africa and Chief Prosecutor for International Criminal Tribunals. Report bearing his name documented war crimes by both sides."
+      }
+    ]
+  },
+  "historicalImpact": {
+    "title": "Historical Impact & Legacy",
+    "icon": "🌍",
+    "sections": [
+      {
+        "heading": "Immediate Impact (2009-2011)",
+        "items": [
+          "1,383-1,419 Palestinians killed, including 333 children; 13 Israelis killed (10 soldiers, 3 civilians)",
+          "Over 5,300 Palestinians wounded; approximately 30% with permanent disabilities",
+          "3,540 homes completely destroyed; 2,870 severely damaged; 20,000+ people homeless",
+          "UN Goldstone Report (September 2009) found evidence of war crimes and possible crimes against humanity by both sides",
+          "International calls for accountability; UN Human Rights Council endorsed report (25-6-11 vote)",
+          "Deepened international criticism of Israeli military operations and blockade of Gaza",
+          "Widespread psychological trauma among Gaza population, particularly children"
+        ]
+      },
+      {
+        "heading": "Long-term Consequences (2011-Present)",
+        "items": [
+          "Established pattern of Israeli military operations in Gaza repeated in 2012, 2014, 2021, 2023-2024",
+          "Near-total impunity: only 4 Israeli convictions from 510 complaints filed over Cast Lead incidents",
+          "Gaza reconstruction severely hampered by ongoing blockade; many areas never fully rebuilt",
+          "International law largely unenforced; ICC investigation ongoing but no prosecutions of Cast Lead crimes",
+          "Goldstone himself partially retracted findings in 2011 Washington Post op-ed (other mission members rejected retraction)",
+          "Operation became template for 'mowing the grass' doctrine—periodic military operations to 'degrade' capabilities",
+          "Humanitarian crisis in Gaza deepened; blockade continued and intensified",
+          "International humanitarian law increasingly disregarded in subsequent conflicts"
+        ]
+      },
+      {
+        "heading": "Accountability Status",
+        "items": [
+          "✗ No Israeli senior officials held accountable for operation planning or execution",
+          "✗ No prosecutions for Samouni massacre (21 civilians killed)",
+          "✗ No prosecutions for Al-Daya family strike (22 civilians killed)",
+          "✗ No prosecutions for white flag killings (11 civilians killed)",
+          "✗ No prosecutions for attacks on hospitals, UN facilities, or use of white phosphorus in populated areas",
+          "✗ Israeli military investigations: 510 complaints filed, 152 investigated, 4 convictions (minor offenses)",
+          "✗ Palestinian armed groups: no known investigations or prosecutions for indiscriminate rocket attacks",
+          "✓ UN Goldstone Report documented violations by both sides",
+          "✓ International Court of Justice has jurisdiction (Palestine accepted jurisdiction 2015)",
+          "✓ ICC opened investigation into situation in Palestine (2021) but no Cast Lead charges yet filed"
+        ]
+      }
+    ]
+  },
+  "sources": {
+    "title": "Verified Sources & Documentation",
+    "icon": "📚",
+    "introduction": "Primary sources include UN official investigations, human rights organization reports, Israeli military statements, Palestinian documentation, medical records, and survivor testimonies.",
+    "list": [
+      {
+        "icon": "🇺🇳",
+        "name": "UN Human Rights Council - Report of the UN Fact-Finding Mission on the Gaza Conflict (Goldstone Report)",
+        "type": "Primary UN Investigation",
+        "description": "575-page comprehensive investigation documenting violations by both sides. Found evidence of war crimes and possible crimes against humanity. Released September 15, 2009. Paragraphs 726-756 document Samouni massacre; para. 39 documents attacks on protected sites.",
+        "link": "https://www.ohchr.org/en/hr-bodies/hrc/special-sessions/session9/fact-finding-mission",
+        "verified": true
+      },
+      {
+        "icon": "🇺🇳",
+        "name": "UN OCHA - Cast Lead Anniversary Report",
+        "type": "UN Humanitarian Agency",
+        "description": "UN Office for Coordination of Humanitarian Affairs detailed casualty figures, destruction statistics, and ongoing humanitarian impacts. Published eight-year anniversary report documenting lack of accountability.",
+        "link": "https://www.ochaopt.org/content/eight-years-after-2008-2009-cast-lead-hostilities-gaza-lack-accountability-persists",
+        "verified": true
+      },
+      {
+        "icon": "⚖️",
+        "name": "Human Rights Watch - White Flag Deaths",
+        "type": "Human Rights Investigation",
+        "description": "Detailed August 2009 report documenting 7 incidents where Israeli forces killed 11 Palestinian civilians carrying white flags. Includes case studies of Hajjaj family killings and others.",
+        "link": "https://www.hrw.org/report/2009/08/13/white-flag-deaths/killings-palestinian-civilians-during-operation-cast-lead",
+        "verified": true
+      },
+      {
+        "icon": "🔴",
+        "name": "Amnesty International - Operation Cast Lead: 22 Days of Death and Destruction",
+        "type": "Human Rights Documentation",
+        "description": "Comprehensive July 2009 report documenting war crimes including use of white phosphorus, attacks on medical facilities, destruction of civilian infrastructure. 117 pages with extensive evidence.",
+        "link": "https://www.amnesty.org/en/wp-content/uploads/2021/06/mde150152009en.pdf",
+        "verified": true
+      },
+      {
+        "icon": "🩺",
+        "name": "International Committee of the Red Cross - Statements and Reports",
+        "type": "Humanitarian Organization",
+        "description": "ICRC issued rare public criticism of Israeli failure to allow access to wounded, particularly in Samouni case. Press release January 8, 2009 detailed violations of IHL.",
+        "link": "https://www.icrc.org/en/doc/resources/documents/news-release/2009-and-earlier/palestine-news-070109.htm",
+        "verified": true
+      },
+      {
+        "icon": "📊",
+        "name": "Palestinian Centre for Human Rights - Cast Lead Statistics",
+        "type": "Documentation Organization",
+        "description": "Detailed casualty database documenting 1,419 Palestinian deaths including 1,167 civilians. Comprehensive incident-by-incident documentation with names, ages, circumstances.",
+        "link": "https://www.pchrgaza.org/",
+        "verified": true
+      },
+      {
+        "icon": "🇮🇱",
+        "name": "B'Tselem - Operation Cast Lead Statistics",
+        "type": "Israeli Human Rights Organization",
+        "description": "Israeli NGO documented 1,385 Palestinians killed including 762 noncombatants and 318 minors. Detailed database with verification methodology.",
+        "link": "https://www.btselem.org/",
+        "verified": true
+      },
+      {
+        "icon": "🎖️",
+        "name": "Breaking the Silence - Soldiers' Testimonies from Cast Lead",
+        "type": "IDF Veterans' Organization",
+        "description": "July 2009 report with anonymous testimonies from 26 Israeli soldiers who participated in operation. Documented rules of engagement, destruction patterns, and command decisions.",
+        "link": "https://www.breakingthesilence.org.il/",
+        "verified": true
+      },
+      {
+        "icon": "🏥",
+        "name": "World Health Organization - Health Cluster Gaza Emergency Reports",
+        "type": "UN Health Agency",
+        "description": "Real-time situation reports during operation documenting attacks on health facilities, casualty figures, medical supply shortages, and health system damage.",
+        "link": "https://www.who.int/",
+        "verified": true
+      },
+      {
+        "icon": "🇺🇳",
+        "name": "UNRWA - Crisis Reports and Damage Assessments",
+        "type": "UN Agency",
+        "description": "Documentation of attack on UNRWA compound January 15, 2009, including white phosphorus use. Damage assessments of schools and facilities. Shelter reports for displaced persons.",
+        "link": "https://www.unrwa.org/",
+        "verified": true
+      }
+    ],
+    "alert": {
+      "type": "info",
+      "icon": "ℹ️",
+      "text": "<strong>Methodology:</strong> Casualty figures vary between sources due to different classification methodologies (combatant vs. civilian). UN and human rights organizations cross-referenced multiple sources. Israeli military conducted internal investigations but classified most findings."
+    }
+  },
+  "media": {
+    "images": {
+      "local": [],
+      "remote": []
+    },
+    "documents": {
+      "local": [],
+      "remote": []
+    }
+  },
+  "cta": {
+    "title": "Support Accountability",
+    "description": "Demand justice for victims of Operation Cast Lead and all conflicts through international law mechanisms.",
+    "buttons": [
+      { "text": "📅 View Full Timeline", "link": "../../major-incidents-timeline.html", "type": "primary" },
+      { "text": "🖨️ Print/Save PDF", "link": "#", "type": "secondary", "action": "print" },
+      { "text": "📧 Submit Info", "link": "mailto:palgeno.pedia@gmx.de?subject=Operation Cast Lead - Additional Information", "type": "secondary" }
+    ]
+  }
+}

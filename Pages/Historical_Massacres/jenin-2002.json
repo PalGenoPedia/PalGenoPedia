@@ -1,0 +1,740 @@
+{
+  "id": "hist_011",
+  "event_type": "Military Operation / Urban Warfare",
+  "verification_status": "verified",
+  "metadata": {
+    "pageTitle": "Jenin Refugee Camp Incursion (3-11 April 2002) | Historical Documentation",
+    "description": "Israeli military operation in Jenin refugee camp during Operation Defensive Shield. 52 Palestinians killed (22 civilians), 23 Israeli soldiers killed. Over 140 buildings demolished, many with people inside. Human Rights Watch documented war crimes.",
+    "keywords": "Jenin, Operation Defensive Shield, 2002, Second Intifada, war crimes, bulldozer, refugee camp, Human Rights Watch",
+    "lastUpdated": "2025-10-18",
+    "author": "aliattia02"
+  },
+  "date": {
+    "start": "2002-04-03",
+    "end": "2002-04-11",
+    "duration_days": 9,
+    "display": "3-11 April 2002",
+    "context": "Part of Operation Defensive Shield; response to Passover massacre (27 March 2002)"
+  },
+  "location": {
+    "historical": {
+      "name": "Jenin Refugee Camp, Jenin, West Bank",
+      "admin_context": "Palestinian Authority Area A (full Palestinian control until reoccupation)",
+      "camp_details": "Established 1953; 14,000 residents; 373 dunums (1 sq km); refugees from 1948"
+    },
+    "current": {
+      "name": "Jenin Refugee Camp, West Bank",
+      "admin_context": "Under Israeli military occupation; PA has limited security control",
+      "status": "Camp rebuilt but remains flashpoint; frequent Israeli military raids; site of ongoing violence"
+    }
+  },
+  "hero": {
+    "category": "📜 MILITARY OPERATION • JENIN SIEGE 2002",
+    "title": "Jenin Refugee Camp Incursion",
+    "subtitle": "Nine-day Israeli military operation involving house-to-house fighting and mass demolitions",
+    "metaCards": [
+      { "icon": "📅", "label": "Date", "value": "3-11 April 2002", "detail": "9 days of battle" },
+      { "icon": "📍", "label": "Location", "value": "Jenin Refugee Camp", "detail": "1 sq km, 14,000 residents" },
+      { "icon": "💀", "label": "Palestinians Killed", "value": "52", "detail": "22 civilians, 27 combatants" },
+      { "icon": "☠️", "label": "Israeli Soldiers Killed", "value": "23", "detail": "13 in single ambush" }
+    ]
+  },
+  "quickFacts": {
+    "title": "⚡ Quick Facts",
+    "items": [
+      { "label": "Event Type", "value": "Military Operation / Urban Combat" },
+      { "label": "Israeli Operation", "value": "Part of Operation Defensive Shield" },
+      { "label": "Trigger", "value": "Passover massacre (30 killed)" },
+      { "label": "Buildings Demolished", "value": "140+" },
+      { "label": "Verification", "value": "Human Rights Watch; UN; Amnesty" },
+      { "label": "War Crimes Finding", "value": "HRW: 'Prima facie war crimes'" }
+    ]
+  },
+  "brief_summary": "On April 3, 2002, as part of Operation Defensive Shield—Israel's massive response to the Passover massacre—the Israel Defense Forces launched a major military operation in Jenin refugee camp, home to 14,000 Palestinians. Israel identified the camp as a base for Palestinian militants responsible for multiple suicide bombings. An estimated 80-100 armed Palestinians fortified the camp with explosives and booby traps. Over nine days of intense house-to-house fighting, 52 Palestinians were killed (22 civilians including children and elderly, 27 combatants) and 23 Israeli soldiers died (13 in a single ambush on April 9). After suffering heavy casualties, Israel deployed massive armored D-9 bulldozers that demolished over 140 buildings—many with people still inside. The IDF blocked medical access for 11 days, shot at ambulances, killed a nurse treating wounded, and prevented humanitarian aid. Human Rights Watch spent three weeks investigating and concluded Israeli forces 'committed serious violations of international humanitarian law, some amounting prima facie to war crimes.' Israel blocked a UN fact-finding mission. The operation became emblematic of the Second Intifada's brutality and the use of disproportionate force in densely populated areas.",
+  "perpetrators": ["Israel Defense Forces", "Israeli government (Operation Defensive Shield policy)", "Specific IDF units involved in demolitions and civilian killings"],
+  "executiveSummary": {
+    "title": "Executive Summary",
+    "icon": "📋",
+    "alert": {
+      "type": "critical",
+      "icon": "⚠️",
+      "text": "<strong>Context:</strong> Jenin operation occurred during peak of Second Intifada suicide bombing campaign. Passover massacre (March 27) killed 30 Israelis, triggering Operation Defensive Shield. Jenin camp identified as launching point for attacks. Palestinian militants heavily fortified camp with explosives."
+    },
+    "paragraphs": [
+      "Jenin refugee camp was established in 1953 to house Palestinians displaced during the 1948 Nakba, primarily from Haifa and surrounding villages. By 2002, approximately 14,000 refugees lived in the densely packed camp covering just one square kilometer. Under the Oslo Accords, Jenin came under full Palestinian Authority control in 1995 (Area A). However, the camp became a stronghold for Palestinian militant groups during the Second Intifada. According to both Israeli and Palestinian sources, an estimated 80-100 armed fighters from Hamas, Islamic Jihad, Al-Aqsa Martyrs' Brigades, and Tanzim operated from the camp. Israel claimed 28 suicide attacks between October 2000 and April 2002 were planned and launched from Jenin. After the devastating Passover massacre at Park Hotel in Netanya killed 30 Israeli civilians on March 27, 2002, the Israeli government launched Operation Defensive Shield—the largest military operation in the West Bank since 1967. Jenin refugee camp was identified as a primary target.",
+      "On April 3, 2002, approximately 200 Israeli tanks surrounded Jenin refugee camp. Apache helicopters and F-16 fighter jets provided air support. The IDF's stated objective was to 'destroy the operational infrastructure of militant organizations' and capture or kill those responsible for suicide bombings. Palestinian militants had anticipated the assault and extensively prepared the camp's defense: they planted dozens of explosive charges in water pipes, kitchen cabinets, doorways, and streets; created booby traps throughout the camp; fortified positions in buildings; and prepared ambush sites. The IDF began house-to-house searches, advancing slowly through narrow alleys. On April 9, the sixth day of the operation, 13 Israeli soldiers were killed in a devastating ambush—Palestinian fighters lured an IDF unit into a narrow alley and detonated massive explosives, collapsing buildings on the soldiers. This was the deadliest single incident for the IDF during the entire Second Intifada. Following this catastrophic loss, Israeli military tactics changed dramatically.",
+      "After the April 9 ambush, the IDF deployed massive American-made Caterpillar D-9 armored bulldozers—60-ton machines with armor plating that could demolish multi-story buildings in minutes. Rather than continuing dangerous house-to-house combat, bulldozers began systematically demolishing buildings to create wide paths for tanks and to eliminate potential ambush sites. Human Rights Watch investigators documented that bulldozers demolished over 140 buildings, destroying approximately 10% of the entire camp's structures. Many buildings were demolished with families still trapped inside—some residents were crushed to death, others buried alive in rubble. The IDF enforced total siege: no one allowed in or out; medical access blocked for 11 days (April 4-15); ambulances fired upon; water and electricity cut off; food prevented from entering. Farwa Jammal, a 27-year-old uniformed nurse, was shot dead by IDF fire while treating a wounded civilian. At least two injured civilians died because Israeli soldiers prevented ambulances from reaching them for over 36 hours. When Human Rights Watch investigators finally gained access on April 19, they found scenes of massive destruction: entire neighborhoods reduced to rubble, bodies still buried under collapsed buildings, and evidence of willful killings. Their 52-page report concluded: 'Israeli forces committed serious violations of international humanitarian law, some amounting prima facie to war crimes.' The UN attempted to launch an investigation, but Israel blocked the fact-finding mission. Final toll: 52 Palestinians killed (22 civilians—including a 14-year-old boy, wheelchair-bound elderly man, and women), 23 Israeli soldiers killed, over 140 buildings demolished, 4,000 people rendered homeless."
+    ]
+  },
+  "casualties": {
+    "title": "Casualties & Destruction",
+    "icon": "💀",
+    "deaths": "52 Palestinians (22 civilians, 27 combatants, 3 unclear); 23 Israeli soldiers",
+    "injured": "Hundreds of Palestinians wounded; unknown number of Israeli soldiers wounded",
+    "forced_displacement": "4,000 Palestinians rendered homeless",
+    "breakdown": [
+      {
+        "type": "killed",
+        "number": "52",
+        "label": "Palestinians Killed",
+        "detail": "22 civilians (including children, elderly, disabled); 27 combatants; 3 unclear status",
+        "sources": [
+          {
+            "name": "Human Rights Watch - Jenin Report",
+            "link": "https://www.hrw.org/report/2002/05/02/jenin/idf-military-operations",
+            "icon": "📄"
+          }
+        ]
+      },
+      {
+        "type": "killed",
+        "number": "22",
+        "label": "Palestinian Civilians Killed",
+        "detail": "Includes 14-year-old Muhammad Hawashin; 57-year-old wheelchair-bound Kamal Zghair; elderly women",
+        "sources": [
+          {
+            "name": "Human Rights Watch Documentation",
+            "link": "https://www.hrw.org/reports/2002/israel3/israel0502-05.htm",
+            "icon": "📊"
+          }
+        ]
+      },
+      {
+        "type": "killed",
+        "number": "23",
+        "label": "Israeli Soldiers Killed",
+        "detail": "Including 13 killed in single ambush on April 9 when building collapsed on them",
+        "sources": [
+          {
+            "name": "Israeli Military Records",
+            "link": "https://www.inss.org.il/wp-content/uploads/sites/2/systemfiles/(FILE)1190277272.pdf",
+            "icon": "🇮🇱"
+          }
+        ]
+      },
+      {
+        "type": "demolished",
+        "number": "140+",
+        "label": "Buildings Demolished",
+        "detail": "Approximately 10% of entire refugee camp destroyed by D-9 bulldozers; many demolished with people inside",
+        "sources": [
+          {
+            "name": "Human Rights Watch Report",
+            "link": "https://www.hrw.org/report/2002/05/02/jenin/idf-military-operations",
+            "icon": "🏠"
+          }
+        ]
+      },
+      {
+        "type": "displaced",
+        "number": "4,000",
+        "label": "Palestinians Left Homeless",
+        "detail": "Families whose homes demolished during operation; many forced to live in tents or with relatives",
+        "sources": [
+          {
+            "name": "UNRWA Reports",
+            "link": "https://www.unrwa.org/",
+            "icon": "🇺🇳"
+          }
+        ]
+      },
+      {
+        "type": "injured",
+        "number": "Hundreds",
+        "label": "Palestinians Wounded",
+        "detail": "Many unable to receive medical treatment due to 11-day blockade of ambulances",
+        "sources": [
+          {
+            "name": "Palestinian Red Crescent Society",
+            "link": "https://www.palestinercs.org/",
+            "icon": "🏥"
+          }
+        ]
+      }
+    ],
+    "alert": {
+      "type": "info",
+      "icon": "ℹ️",
+      "text": "<strong>Sources:</strong> Human Rights Watch conducted three-week investigation with over 100 witness interviews. Report cross-checked Palestinian, Israeli, and international sources. HRW explicitly states 'no evidence of massacre of hundreds' but documented serious war crimes."
+    }
+  },
+  "timeline": {
+    "title": "Timeline of Events",
+    "icon": "⏱️",
+    "events": [
+      {
+        "time": "27 March 2002",
+        "title": "Passover massacre triggers Operation Defensive Shield",
+        "description": "Hamas suicide bomber attacks Passover seder at Park Hotel in Netanya, killing 30 Israelis, wounding 140. Deadliest single attack of Second Intifada. Israeli government authorizes Operation Defensive Shield—massive military operation throughout West Bank to 'defeat Palestinian terror infrastructure.'",
+        "sourceLinks": [
+          {
+            "name": "Human Rights Watch Context",
+            "url": "https://www.hrw.org/report/2002/05/02/jenin/idf-military-operations"
+          }
+        ]
+      },
+      {
+        "time": "29 March - 2 April 2002",
+        "title": "Operation Defensive Shield begins; other cities attacked first",
+        "description": "IDF launches Operation Defensive Shield on March 29 with incursion into Ramallah, seizing Arafat's compound. Operations follow in Tulkarm (April 1), Qalqilya (April 1), Bethlehem (April 2). By April 3, six major West Bank cities under Israeli military occupation.",
+        "sourceLinks": [
+          {
+            "name": "UN Secretary-General Report",
+            "url": "https://www.un.org/unispal/document/auto-insert-187399/"
+          }
+        ]
+      },
+      {
+        "time": "3 April 2002, dawn",
+        "title": "Jenin operation begins: 200 tanks surround camp",
+        "description": "IDF launches major operation in Jenin refugee camp with approximately 200 tanks, Apache helicopters, F-16 jets. Camp home to 14,000 civilians; estimated 80-100 armed Palestinian fighters present. Israel declares area closed military zone. Cuts electricity and water to camp.",
+        "sourceLinks": [
+          {
+            "name": "Human Rights Watch - Battle Background",
+            "url": "https://www.hrw.org/report/2002/05/02/jenin/idf-military-operations"
+          }
+        ]
+      },
+      {
+        "time": "3-4 April 2002",
+        "title": "House-to-house combat begins; medical access blocked",
+        "description": "IDF begins slow advance through camp using infantry for house-to-house searches. Palestinian fighters engage in fierce resistance using booby traps, explosives, ambushes. IDF blocks ambulances and medical personnel from entering camp. Siege of camp begins—no one allowed in or out for 11 days.",
+        "sourceLinks": [
+          {
+            "name": "HRW - Medical Access Violations",
+            "url": "https://www.hrw.org/report/2002/05/02/jenin/idf-military-operations"
+          }
+        ]
+      },
+      {
+        "time": "6 April 2002",
+        "title": "Civilians killed fleeing burning home",
+        "description": "Tank shell and two helicopter-fired TOW anti-tank missiles hit house of Kamal Tawalba (father of 14 children). No fighters present in home. When Tawalba and family try to flee burning house, IDF soldiers fire on them. Example of indiscriminate force documented by Human Rights Watch.",
+        "sourceLinks": [
+          {
+            "name": "HRW - Civilian Casualties",
+            "url": "https://www.hrw.org/news/2002/05/02/israel/occupied-territories-jenin-war-crimes-investigation-needed"
+          }
+        ]
+      },
+      {
+        "time": "9 April 2002",
+        "title": "Devastating ambush: 13 Israeli soldiers killed",
+        "description": "Palestinian fighters lure IDF unit into narrow alley in Hawashin neighborhood. Massive explosives detonated, collapsing buildings on soldiers. 13 Israeli soldiers killed—deadliest single incident for IDF during entire Second Intifada. Israeli military tactics change dramatically after this catastrophic loss.",
+        "sourceLinks": [
+          {
+            "name": "Israeli Institute Analysis",
+            "url": "https://www.inss.org.il/wp-content/uploads/sites/2/systemfiles/(FILE)1190277272.pdf"
+          }
+        ]
+      },
+      {
+        "time": "10 April 2002",
+        "title": "Mass demolitions begin; wheelchair-bound man killed",
+        "description": "After April 9 ambush, IDF deploys massive D-9 armored bulldozers. Begin systematic demolition of buildings to create wide paths and eliminate ambush sites. Kamal Zghair (57, wheelchair-bound) shot and run over by IDF tanks as he wheels himself home carrying white flag. Mass destruction accelerates.",
+        "sourceLinks": [
+          {
+            "name": "HRW - Unlawful Killings",
+            "url": "https://www.hrw.org/reports/2002/israel3/israel0502-05.htm"
+          },
+          {
+            "name": "Middle East Monitor",
+            "url": "https://www.middleeastmonitor.com/20200414-we-must-never-forget-israels-massacre-in-jenin/"
+          }
+        ]
+      },
+      {
+        "time": "10-11 April 2002",
+        "title": "Bulldozers demolish 140+ buildings; many with people inside",
+        "description": "D-9 bulldozers demolish over 140 buildings in Jenin camp—approximately 10% of entire camp. Eyewitnesses report buildings demolished with families still trapped inside. Some buried alive under rubble. Residents describe hearing people screaming as bulldozers destroyed their homes. IDF prevents rescue attempts.",
+        "sourceLinks": [
+          {
+            "name": "Human Rights Watch Report",
+            "url": "https://www.hrw.org/report/2002/05/02/jenin/idf-military-operations"
+          }
+        ]
+      },
+      {
+        "time": "During siege (dates unclear)",
+        "title": "Nurse killed treating wounded; woman dies after 36-hour delay",
+        "description": "Farwa Jammal (27), uniformed nurse, shot dead by IDF fire while treating injured civilian. Mariam Wishahi (58) injured by shrapnel in her home 'just a few hundred meters from hospital'—IDF repeatedly prevents ambulances from reaching her for 36 hours. She dies without medical treatment.",
+        "sourceLinks": [
+          {
+            "name": "HRW - Medical Personnel Attacks",
+            "url": "https://www.hrw.org/news/2002/05/02/israel/occupied-territories-jenin-war-crimes-investigation-needed"
+          }
+        ]
+      },
+      {
+        "time": "11 April 2002",
+        "title": "Active combat ends; total siege continues",
+        "description": "Major fighting ends after 9 days. But IDF maintains absolute siege of camp, preventing anyone from entering—including humanitarian workers, journalists, UN observers. Siege continues for days while Israel attempts to control narrative and prevent documentation of destruction.",
+        "sourceLinks": [
+          {
+            "name": "HRW Investigation",
+            "url": "https://www.hrw.org/report/2002/05/02/jenin/idf-military-operations"
+          }
+        ]
+      },
+      {
+        "time": "15 April 2002",
+        "title": "Medical access finally allowed after 11-day blockade",
+        "description": "After 11 days (April 4-15), IDF finally allows limited ambulance access to Jenin camp. During blockade, injured combatants and civilians had no access to emergency medical treatment. Sick unable to get care. Direct attacks on medical personnel and denial of medical care constitute serious war crimes.",
+        "sourceLinks": [
+          {
+            "name": "HRW Report",
+            "url": "https://www.hrw.org/report/2002/05/02/jenin/idf-military-operations"
+          }
+        ]
+      },
+      {
+        "time": "18 April 2002",
+        "title": "UN Security Council Resolution 1405: fact-finding mission",
+        "description": "Security Council calls for UN fact-finding mission to investigate Jenin. UN Secretary-General Kofi Annan assembles team. Israel initially agrees then blocks mission through procedural objections. After weeks of obstruction, mission disbanded without ever visiting Jenin. Investigation never occurs.",
+        "sourceLinks": [
+          {
+            "name": "UN SG Report on Blocked Investigation",
+            "url": "https://www.un.org/unispal/document/auto-insert-187399/"
+          }
+        ]
+      },
+      {
+        "time": "19-28 April 2002",
+        "title": "Human Rights Watch investigators access camp",
+        "description": "Human Rights Watch team of three researchers spends 9 days in Jenin (April 19-28) interviewing over 100 camp residents. Gather detailed victim and witness accounts. Cross-check testimonies. Document extensive destruction. Collect evidence of war crimes. Produce comprehensive 52-page report.",
+        "sourceLinks": [
+          {
+            "name": "HRW - Jenin Investigation Methodology",
+            "url": "https://www.hrw.org/report/2002/05/02/jenin/idf-military-operations"
+          }
+        ]
+      },
+      {
+        "time": "2 May 2002",
+        "title": "Human Rights Watch report released",
+        "description": "HRW releases comprehensive report: 'During their incursion into the Jenin refugee camp, Israeli forces committed serious violations of international humanitarian law, some amounting prima facie to war crimes.' Report documents 52 Palestinians killed (22 civilians), indiscriminate force, use of human shields, attacks on medical personnel.",
+        "sourceLinks": [
+          {
+            "name": "HRW - Jenin Report Release",
+            "url": "https://www.hrw.org/news/2002/05/02/israel/occupied-territories-jenin-war-crimes-investigation-needed"
+          }
+        ]
+      },
+      {
+        "time": "1 August 2002",
+        "title": "UN releases limited report; HRW criticizes",
+        "description": "After Israel blocks fact-finding mission, UN compiles report without first-hand information. Human Rights Watch criticizes: 'watered-down account... doesn't move us forward in terms of establishing the truth.' UN report makes few conclusions about violations or accountability despite serious crimes documented by others.",
+        "sourceLinks": [
+          {
+            "name": "HRW - UN Report Criticism",
+            "url": "https://www.hrw.org/news/2002/08/01/un-jenin-report"
+          }
+        ]
+      }
+    ]
+  },
+  "warCrimes": {
+    "title": "Documented Violations (Prima Facie War Crimes)",
+    "icon": "⚠️",
+    "alert": {
+      "type": "warning",
+      "icon": "⚠️",
+      "text": "<strong>Human Rights Watch conclusion:</strong> 'Israeli forces committed serious violations of international humanitarian law, some amounting prima facie to war crimes.' Palestinian fighters also violated laws of war by using booby traps endangering civilians and operating from residential areas."
+    },
+    "crimes": [
+      {
+        "icon": "🏚️",
+        "title": "Mass Demolitions with People Inside (War Crime)",
+        "description": "D-9 bulldozers demolished 140+ buildings, many with families trapped inside. Eyewitnesses reported hearing people screaming as bulldozers destroyed homes. Some residents crushed to death, others buried alive under rubble. Extensive destruction not justified by military necessity constitutes war crime under Geneva Convention Article 147.",
+        "sourceLink": "https://www.hrw.org/report/2002/05/02/jenin/idf-military-operations",
+        "sourceText": "📄 Human Rights Watch Report →"
+      },
+      {
+        "icon": "🚫",
+        "title": "Willful Killings of Civilians",
+        "description": "14-year-old Muhammad Hawashin shot twice in face and killed while walking with women and children toward hospital (April 3). Kamal Zghair (57, wheelchair-bound) shot and run over by tanks while carrying white flag (April 10). 60-year-old woman killed by helicopter missile in apartment with no armed Palestinians present. HRW documented multiple 'willful or unlawful' civilian killings.",
+        "sourceLink": "https://www.hrw.org/reports/2002/israel3/israel0502-05.htm",
+        "sourceText": "📄 HRW - Civilian Casualties →"
+      },
+      {
+        "icon": "🚑",
+        "title": "Attacks on Medical Personnel and Denial of Medical Care",
+        "description": "IDF blocked ambulances for 11 days (April 4-15). Repeatedly fired on Red Crescent ambulances. Killed uniformed nurse Farwa Jammal (27) treating wounded. Mariam Wishahi (58) died after 36-hour delay when soldiers prevented ambulance access though she was 'just a few hundred meters from hospital.' Direct attacks on medical personnel and denial of medical care are war crimes.",
+        "sourceLink": "https://www.hrw.org/news/2002/05/02/israel/occupied-territories-jenin-war-crimes-investigation-needed",
+        "sourceText": "📄 HRW Documentation →"
+      },
+      {
+        "icon": "🛡️",
+        "title": "Use of Palestinian Civilians as Human Shields",
+        "description": "HRW documented IDF using Palestinian civilians as 'human shields'—forcing civilians to enter buildings ahead of soldiers, using civilian homes as military positions while confining inhabitants to rooms, forcing civilians to perform military tasks. Using protected persons to shield military operations violates Geneva Convention Article 28.",
+        "sourceLink": "https://www.hrw.org/report/2002/05/02/jenin/idf-military-operations",
+        "sourceText": "📄 Human Rights Watch Report →"
+      },
+      {
+        "icon": "💣",
+        "title": "Indiscriminate and Disproportionate Use of Force",
+        "description": "US-supplied helicopters fired anti-tank missiles into camp 'making insufficient efforts to identify legitimate military targets and avoid hitting civilian houses.' Struck many houses inhabited only by civilians where no fighters present. Tank shells and helicopter missiles hit home of Kamal Tawalba (father of 14) with no fighters present; soldiers then fired on family fleeing burning home. Indiscriminate force violated laws of war.",
+        "sourceLink": "https://www.hrw.org/news/2002/05/02/israel/occupied-territories-jenin-war-crimes-investigation-needed",
+        "sourceText": "📄 HRW Investigation →"
+      },
+      {
+        "icon": "⚖️",
+        "title": "Blocking of Independent Investigation",
+        "description": "After UN Security Council Resolution 1405 called for fact-finding mission, Israel initially agreed then systematically blocked investigation through procedural objections. Mission disbanded without visiting Jenin. Obstruction of war crimes investigation suggests consciousness of guilt. Prevented accountability and established culture of impunity.",
+        "sourceLink": "https://www.un.org/unispal/document/auto-insert-187399/",
+        "sourceText": "📄 UN Report on Blocked Mission →"
+      },
+      {
+        "icon": "💥",
+        "title": "Palestinian Violations: Booby Traps Endangering Civilians",
+        "description": "Palestinian fighters planted extensive explosive devices throughout camp in water pipes, kitchen cabinets, doorways—devices that endangered civilian residents as well as Israeli soldiers. Operating from densely populated civilian areas and using booby traps that fail to distinguish between combatants and civilians violated international humanitarian law.",
+        "sourceLink": "https://www.inss.org.il/wp-content/uploads/sites/2/systemfiles/(FILE)1190277272.pdf",
+        "sourceText": "📄 Israeli Documentation →"
+      }
+    ]
+  },
+  "international_law": {
+    "title": "International Law Framework",
+    "icon": "⚖️",
+    "introduction": "Human Rights Watch concluded Israeli forces violated multiple provisions of international humanitarian law during Jenin operation, with some violations constituting war crimes. Palestinian fighters also violated laws of war.",
+    "sections": [
+      {
+        "heading": "Geneva Conventions - Israeli Violations",
+        "violations": [
+          "<strong>Article 27 (Protection of Civilians):</strong> 'Protected persons...shall be protected especially against all acts of violence.' Willful killings of civilians (14-year-old, wheelchair-bound elderly man, elderly woman) violated fundamental protection.",
+          "<strong>Article 28 (Human Shields):</strong> 'The presence of a protected person may not be used to render certain points or areas immune from military operations.' IDF use of Palestinians as human shields violated absolute prohibition.",
+          "<strong>Article 147 (Grave Breaches/War Crimes):</strong> 'Willful killing...causing great suffering...extensive destruction...not justified by military necessity' constitute grave breaches. Demolition of 140+ buildings, many with people inside, meets definition of war crime."
+        ]
+      },
+      {
+        "heading": "Additional Protocol I - Principle of Distinction",
+        "violations": [
+          "<strong>Article 48 (Basic Rule):</strong> Parties must 'distinguish between civilian population and combatants.' Helicopter strikes on houses with only civilians and no fighters present violated principle of distinction.",
+          "<strong>Article 51 (Protection of Civilian Population):</strong> 'Indiscriminate attacks are prohibited.' Sustained missile fire from helicopters hitting civilian houses documented by HRW constituted indiscriminate attacks.",
+          "<strong>Article 57 (Precautions in Attack):</strong> 'Constant care shall be taken to spare civilian population.' Demolishing buildings without verifying if civilians inside violated duty to take precautions."
+        ]
+      },
+      {
+        "heading": "Medical Personnel and Humanitarian Access",
+        "violations": [
+          "<strong>Geneva Convention I, Article 19:</strong> Medical establishments and mobile medical units may not be attacked. Firing on ambulances violated this protection.",
+          "<strong>Additional Protocol I, Article 15:</strong> Medical personnel 'shall be respected and protected.' Killing of uniformed nurse Farwa Jammal while treating wounded was war crime.",
+          "<strong>Common Article 3:</strong> Wounded and sick 'shall be collected and cared for.' Blocking ambulance access for 11 days, causing deaths of injured civilians, violated fundamental humanitarian obligation."
+        ]
+      },
+      {
+        "heading": "Occupation Obligations",
+        "violations": [
+          "<strong>Fourth Geneva Convention, Article 55-56:</strong> Occupying power must ensure 'food and medical supplies' and 'medical and hospital establishments and services.' Cutting water, electricity, and blocking medical access violated these duties.",
+          "<strong>Hague Regulations, Article 43:</strong> Occupying power must 'ensure public order and safety.' Total siege preventing humanitarian access violated this obligation.",
+          "<strong>Article 53:</strong> Destruction of property prohibited 'except where such destruction is rendered absolutely necessary by military operations.' Mass demolitions exceeded military necessity."
+        ]
+      },
+      {
+        "heading": "Palestinian Violations of International Humanitarian Law",
+        "violations": [
+          "<strong>Principle of Distinction:</strong> Palestinian fighters operated from densely populated residential areas, making it difficult to distinguish between military objectives and civilian property. Violated duty to separate military operations from civilians.",
+          "<strong>Indiscriminate Weapons:</strong> Extensive use of booby traps and explosive devices in civilian homes—devices that cannot distinguish between combatants and civilians—violated prohibition on indiscriminate weapons.",
+          "<strong>Feigning Protected Status:</strong> Some reports (contested) of Palestinian fighters wearing civilian clothes or using ambulances violated prohibitions on perfidy, though evidence was limited."
+        ]
+      }
+    ],
+    "alert": {
+      "type": "critical",
+      "icon": "⚖️",
+      "text": "<strong>Accountability failure:</strong> Despite Human Rights Watch finding of 'prima facie war crimes,' no Israeli soldiers or commanders prosecuted. Israel blocked UN investigation. No Palestinian fighters held accountable under international law. Impunity on both sides continues."
+    }
+  },
+  "testimonies": {
+    "title": "Witness Testimonies & Documentation",
+    "icon": "👥",
+    "witnesses": [
+      {
+        "initials": "AM",
+        "name": "Afaf Mohammed",
+        "role": "Resident of Jenin camp; mother",
+        "testimony": "Testified to Human Rights Watch: 'The bulldozers came to our street on April 10. They started demolishing houses one by one. We could hear our neighbors screaming inside their homes as the bulldozers destroyed them. The soldiers wouldn't let us go help them. We heard the screams and then silence. I saw bodies pulled from the rubble days later.'",
+        "source": "Human Rights Watch - Jenin Report (May 2002)",
+        "sourceLink": "https://www.hrw.org/report/2002/05/02/jenin/idf-military-operations"
+      },
+      {
+        "initials": "FH",
+        "name": "Fayez Hawashin",
+        "role": "Father of 14-year-old Muhammad Hawashin (killed)",
+        "testimony": "His son Muhammad shot dead on April 3 while walking with group of women and children toward hospital. Fayez testified: 'My son was with women and children. They were going to the hospital area. Israeli soldiers shot him twice in the face. He was 14 years old. There were no fighters with them. Just civilians trying to find safety.'",
+        "source": "Human Rights Watch investigation; direct testimony",
+        "sourceLink": "https://www.hrw.org/reports/2002/israel3/israel0502-05.htm"
+      },
+      {
+        "initials": "JZ",
+        "name": "Jamal Zghair",
+        "role": "Son of Kamal Zghair (wheelchair-bound man killed)",
+        "testimony": "Testified about his father's death on April 10: 'My father was 57 years old and in a wheelchair. He was trying to get home. He was carrying a white flag. Israeli tanks shot him and then ran over him with the tank. We found his body crushed. There were no fighters near him. He was just an old disabled man trying to get home.'",
+        "source": "Human Rights Watch documentation; Middle East Monitor",
+        "sourceLink": "https://www.middleeastmonitor.com/20200414-we-must-never-forget-israels-massacre-in-jenin/"
+      },
+      {
+        "initials": "Dr. AS",
+        "name": "Dr. Abu Salouh",
+        "role": "Physician at Jenin Hospital",
+        "testimony": "Testified to blocking of medical access: 'For 11 days we couldn't reach the wounded. Ambulances were fired upon. We had injured people inside the camp who needed urgent medical care. The Israelis wouldn't let us in. Some people died because they couldn't get medical treatment. This is a war crime—to prevent doctors from treating the wounded.'",
+        "source": "Palestinian Red Crescent testimony",
+        "sourceLink": null
+      },
+      {
+        "initials": "HRW",
+        "name": "Human Rights Watch Investigators",
+        "role": "International human rights organization",
+        "testimony": "After 9-day investigation with over 100 witness interviews: 'Israeli forces committed serious violations of international humanitarian law, some amounting prima facie to war crimes... The IDF used armored bulldozers to demolish buildings, in some cases with civilians inside... We documented direct attacks on medical personnel and prolonged denial of medical access.'",
+        "source": "Human Rights Watch - Jenin: IDF Military Operations (May 2, 2002)",
+        "sourceLink": "https://www.hrw.org/news/2002/05/02/israel/occupied-territories-jenin-war-crimes-investigation-needed"
+      },
+      {
+        "initials": "KA",
+        "name": "Kofi Annan",
+        "role": "UN Secretary-General",
+        "testimony": "After Israel blocked UN fact-finding mission: 'I deeply regret that it has not proved possible to dispatch the team to the region... Without the full cooperation of the Government of Israel, the team cannot do its job.' UN investigation never occurred due to Israeli obstruction.",
+        "source": "UN Secretary-General statement on blocked investigation",
+        "sourceLink": "https://www.un.org/unispal/document/auto-insert-187399/"
+      },
+      {
+        "initials": "AS",
+        "name": "Ariel Sharon",
+        "role": "Israeli Prime Minister",
+        "testimony": "Defended operation: 'This was a nest of terrorism. It was an operation that had to be carried out.' Denied war crimes: 'The Israeli army is the most moral army in the world.' When asked about civilian casualties, stated: 'War is war.' Blocked UN investigation.",
+        "source": "Contemporary interviews and statements",
+        "sourceLink": null
+      },
+      {
+        "initials": "IS",
+        "name": "Israeli Soldier (anonymous)",
+        "role": "IDF soldier who participated in Jenin operation",
+        "testimony": "Testimony to Breaking the Silence (years later): 'We were told not to risk soldiers' lives. So we used the bulldozers. We knew people were in some of the buildings. But the orders were to demolish. The officers said it was better to demolish buildings than risk soldiers in house-to-house fighting. I still hear the screams.'",
+        "source": "Breaking the Silence testimonies",
+        "sourceLink": "https://www.breakingthesilence.org.il/"
+      },
+      {
+        "initials": "AI",
+        "name": "Amnesty International",
+        "role": "International human rights organization",
+        "testimony": "Report on Jenin (November 2002): 'Amnesty International is gravely concerned that some of the killings of Palestinians by the IDF in Jenin may have amounted to unlawful killings... The Israeli authorities have consistently failed to conduct thorough, independent and impartial investigations into alleged human rights violations.'",
+        "source": "Amnesty International - Israel and the Occupied Territories: Shielded from Scrutiny",
+        "sourceLink": "https://www.amnesty.org/"
+      }
+    ]
+  },
+  "personalities": {
+    "title": "Key Figures",
+    "icon": "👤",
+    "commanders": [
+      {
+        "name": "Ariel Sharon",
+        "role": "Israeli Prime Minister",
+        "birth_death": "1928-2014",
+        "responsibility": "Authorized Operation Defensive Shield and Jenin operation. Made political decision to launch massive military response to suicide bombings. Blocked UN fact-finding mission. Defended operation as military necessity."
+      },
+      {
+        "name": "Shaul Mofaz",
+        "role": "IDF Chief of Staff",
+        "birth_death": "1948-present",
+        "responsibility": "Military commander overseeing Operation Defensive Shield. Made tactical decisions about Jenin operation. Defended use of D-9 bulldozers as protecting soldiers' lives. No accountability for potential war crimes."
+      },
+      {
+        "name": "Eyal Shlein",
+        "role": "Commander, Jenin operation",
+        "birth_death": "Unknown",
+        "responsibility": "Brigadier-General who commanded Jenin camp operation. Made tactical decisions including deployment of bulldozers after April 9 ambush. Defended actions as military necessity."
+      },
+      {
+        "name": "Kofi Annan",
+        "role": "UN Secretary-General",
+        "birth_death": "1938-2018",
+        "responsibility": "Attempted to launch UN fact-finding mission per Security Council Resolution 1405. Mission blocked by Israel. Released limited report without first-hand investigation, criticized by human rights organizations."
+      },
+      {
+        "name": "Peter Bouckaert",
+        "role": "Human Rights Watch Emergencies Director",
+        "birth_death": "1968-present",
+        "responsibility": "Led HRW investigation team in Jenin. Conducted interviews, gathered evidence, documented violations. Co-authored comprehensive report concluding 'prima facie war crimes' occurred."
+      }
+    ]
+  },
+  "historicalImpact": {
+    "title": "Historical Impact & Legacy",
+    "icon": "🌍",
+    "sections": [
+      {
+        "heading": "Immediate Impact (April-May 2002)",
+        "items": [
+          "52 Palestinians killed (22 civilians including children); 23 Israeli soldiers killed",
+          "Over 140 buildings demolished—approximately 10% of entire refugee camp destroyed",
+          "4,000 Palestinians rendered homeless; camp infrastructure devastated",
+          "International outcry and accusations of 'massacre' (later found exaggerated, but serious violations occurred)",
+          "Israel blocked UN fact-finding mission, preventing independent investigation",
+          "Human Rights Watch documented 'prima facie war crimes' but no prosecutions followed",
+          "Palestinian narratives of Jenin as heroic resistance vs. Israeli narratives of defeating terror infrastructure",
+          "Deepened Israeli-Palestinian mutual hatred and trauma during Second Intifada"
+        ]
+      },
+      {
+        "heading": "Media and Narrative Wars",
+        "items": [
+          "Initial Palestinian claims of 'massacre' with hundreds killed—later proven false (52 killed, not hundreds)",
+          "Israeli government accused of cover-up by blocking UN investigation despite absence of massacre",
+          "Both sides engaged in propaganda: Palestinians exaggerated casualties; Israel downplayed violations",
+          "Human Rights Watch report provided most credible account but received less attention than early sensational claims",
+          "Jenin became symbol used by both sides: Palestinian victimhood vs. Israeli fighting terrorism",
+          "Documentary film 'Jenin, Jenin' (2002) by Mohammed Bakri banned in Israel, became rallying point"
+        ]
+      },
+      {
+        "heading": "Long-term Legacy (2002-Present)",
+        "items": [
+          "Jenin camp rebuilt with international assistance but remains flashpoint for Israeli-Palestinian violence",
+          "Frequent Israeli military raids into Jenin continue—camp scene of regular clashes",
+          "July 2023: Major Israeli operation in Jenin again, 12 Palestinians killed in two-day operation",
+          "September 2023: Israeli drone strike in Jenin kills 3, marking escalation in tactics",
+          "Jenin 2002 established precedent for use of massive military force in densely populated areas",
+          "D-9 bulldozers became iconic weapon of occupation—later used extensively in Gaza wars",
+          "Culture of impunity established: despite war crimes findings, no accountability for either side",
+          "Blocking of UN investigation set precedent Israel follows repeatedly",
+          "Jenin operation demonstrated Israeli willingness to accept high civilian toll to minimize soldier casualties"
+        ]
+      },
+      {
+        "heading": "Accountability & Justice",
+        "items": [
+          "✗ No Israeli soldiers or commanders prosecuted despite HRW finding of war crimes",
+          "✗ No compensation paid to families of civilians killed unlawfully",
+          "✗ No compensation for 4,000 people whose homes demolished",
+          "✗ UN fact-finding mission blocked; no independent international investigation occurred",
+          "✗ Israeli internal investigations (if any) never made public; no accountability",
+          "✗ Palestinian fighters who used booby traps endangering civilians never held accountable",
+          "✓ Human Rights Watch conducted thorough investigation and documented violations",
+          "✓ Amnesty International and other organizations documented abuses",
+          "✗ International Criminal Court had no jurisdiction at time (Palestine not yet member)",
+          "✗ Culture of impunity continues: Israeli operations with civilian casualties occur regularly without accountability"
+        ]
+      }
+    ]
+  },
+  "sources": {
+    "title": "Verified Sources & Documentation",
+    "icon": "📚",
+    "introduction": "Primary documentation comes from Human Rights Watch's comprehensive three-week investigation, UN reports, Israeli military records, Palestinian eyewitness testimony, and medical documentation.",
+    "list": [
+      {
+        "icon": "📄",
+        "name": "Human Rights Watch - Jenin: IDF Military Operations (May 2, 2002)",
+        "type": "Primary Investigation / War Crimes Documentation",
+        "description": "52-page comprehensive report based on 9-day field investigation (April 19-28) with over 100 witness interviews. Documents 52 Palestinians killed (22 civilians), indiscriminate force, attacks on medical personnel, use of human shields. Concludes: 'serious violations...some amounting prima facie to war crimes.'",
+        "link": "https://www.hrw.org/report/2002/05/02/jenin/idf-military-operations",
+        "verified": true
+      },
+      {
+        "icon": "📊",
+        "name": "Human Rights Watch - Civilian Casualties Documentation",
+        "type": "Detailed Casualty Analysis",
+        "description": "Specific documentation of unlawful civilian killings including 14-year-old Muhammad Hawashin, 57-year-old wheelchair-bound Kamal Zghair, and others. Names, dates, circumstances of deaths.",
+        "link": "https://www.hrw.org/reports/2002/israel3/israel0502-05.htm",
+        "verified": true
+      },
+      {
+        "icon": "⚖️",
+        "name": "Human Rights Watch - War Crimes Investigation Needed",
+        "type": "Legal Analysis / Call for Accountability",
+        "description": "HRW statement calling for independent investigation of war crimes in Jenin. Details denial of medical care, attacks on medical personnel, indiscriminate force, destruction of civilian property.",
+        "link": "https://www.hrw.org/news/2002/05/02/israel/occupied-territories-jenin-war-crimes-investigation-needed",
+        "verified": true
+      },
+      {
+        "icon": "🇺🇳",
+        "name": "UN Secretary-General Report on Blocked Investigation",
+        "type": "Official UN Document",
+        "description": "Kofi Annan's report on Israel's blocking of UN fact-finding mission authorized by Security Council Resolution 1405. Documents Israeli obstruction preventing independent investigation.",
+        "link": "https://www.un.org/unispal/document/auto-insert-187399/",
+        "verified": true
+      },
+      {
+        "icon": "📰",
+        "name": "Middle East Monitor - Jenin Massacre Remembrance",
+        "type": "Documentation / Survivor Accounts",
+        "description": "Documentation of Jenin operation including survivor testimonies, particularly story of Kamal Zghair (wheelchair-bound man killed by Israeli forces).",
+        "link": "https://www.middleeastmonitor.com/20200414-we-must-never-forget-israels-massacre-in-jenin/",
+        "verified": true
+      },
+      {
+        "icon": "🎖️",
+        "name": "Israeli Institute for National Security Studies - Jenin Analysis",
+        "type": "Israeli Military Analysis",
+        "description": "Israeli military and strategic analysis of Jenin operation. Documents April 9 ambush killing 13 Israeli soldiers, Palestinian tactics, IDF response. Israeli perspective on operation.",
+        "link": "https://www.inss.org.il/wp-content/uploads/sites/2/systemfiles/(FILE)1190277272.pdf",
+        "verified": true
+      },
+      {
+        "icon": "🕊️",
+        "name": "Amnesty International - Shielded from Scrutiny (November 2002)",
+        "type": "Human Rights Documentation",
+        "description": "Amnesty report on Israel's failure to investigate potential unlawful killings in Jenin. Documents lack of accountability and pattern of impunity.",
+        "link": "https://www.amnesty.org/",
+        "verified": true
+      },
+      {
+        "icon": "🎖️",
+        "name": "Breaking the Silence - IDF Soldier Testimonies",
+        "type": "Israeli Veterans Organization",
+        "description": "Anonymous testimonies from Israeli soldiers who participated in Jenin operation, documenting orders to demolish buildings without checking for civilians, excessive force, moral concerns.",
+        "link": "https://www.breakingthesilence.org.il/",
+        "verified": true
+      },
+      {
+        "icon": "🏥",
+        "name": "Palestinian Red Crescent Society - Medical Access Documentation",
+        "type": "Medical/Humanitarian Organization",
+        "description": "Documentation of 11-day blockade of medical access (April 4-15), attacks on ambulances, death of nurse Farwa Jammal, deaths of patients denied medical care.",
+        "link": "https://www.palestinercs.org/",
+        "verified": true
+      },
+      {
+        "icon": "🇺🇳",
+        "name": "UNRWA - Humanitarian Impact Assessment",
+        "type": "UN Agency",
+        "description": "Documentation of destruction of refugee camp infrastructure, 4,000 people rendered homeless, humanitarian needs in aftermath of operation.",
+        "link": "https://www.unrwa.org/",
+        "verified": true
+      },
+      {
+        "icon": "📺",
+        "name": "Human Rights Watch - UN Jenin Report Criticism",
+        "type": "Critical Analysis",
+        "description": "HRW criticism of UN's 'watered-down' report after fact-finding mission blocked. Analysis of how Israeli obstruction prevented accountability.",
+        "link": "https://www.hrw.org/news/2002/08/01/un-jenin-report",
+        "verified": true
+      }
+    ],
+    "alert": {
+      "type": "info",
+      "icon": "ℹ️",
+      "text": "<strong>Methodology:</strong> Human Rights Watch conducted most comprehensive investigation with direct field research, cross-checking testimonies, documenting individual cases. Their conclusion of 'prima facie war crimes' represents most authoritative finding. Initial Palestinian claims of 'massacre' with hundreds killed were false; actual death toll 52 Palestinians, but serious violations did occur."
+    }
+  },
+  "media": {
+    "images": {
+      "local": [],
+      "remote": []
+    },
+    "documents": {
+      "local": [],
+      "remote": []
+    }
+  },
+  "cta": {
+    "title": "Remember Jenin 2002",
+    "description": "Study this nine-day battle that exposed the human cost of urban warfare and the failure of international accountability.",
+    "buttons": [
+      { "text": "📅 View Full Timeline", "link": "../../major-incidents-timeline.html", "type": "primary" },
+      { "text": "🖨️ Print/Save PDF", "link": "#", "type": "secondary", "action": "print" },
+      { "text": "📧 Submit Info", "link": "mailto:palgeno.pedia@gmx.de?subject=Jenin 2002 - Additional Information", "type": "secondary" }
+    ]
+  }
+}
