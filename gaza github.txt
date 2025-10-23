@@ -1,0 +1,40 @@
+python -m http.server 8000
+
+2
+cd gendata
+python web_interface.py  
+
+
+3
+git add .
+git commit -m "update"
+git pull origin main  
+git push origin main
+
+
+
+
+cd backend
+python -m venv venv        
+.\venv\Scripts\Activate.ps1
+python main.py
+
+cd frontend/src
+npm start
+
+
+patient1 
+aaaaaa
+
+
+
+√ Something is already running on port 3000.
+Get-Process -Id (Get-NetTCPConnection -LocalPort 3000).OwningProcess | Stop-Process -Force
+
+or
+netstat -ano | findstr :3000
+
+taskkill /PID XXXXX /F
+
+
+

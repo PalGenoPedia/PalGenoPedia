@@ -1,0 +1,156 @@
+# Gaza Crisis Data Extractor Configuration
+
+extraction:
+  # Delay between requests in seconds (be respectful to servers)
+  delay_between_requests: 2
+
+  # Request timeout in seconds
+  timeout: 30
+
+  # Maximum number of retries for failed requests
+  max_retries: 3
+
+  # User agent string for requests
+  user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+
+output:
+  # Default CSV filename for daily reports
+  csv_filename: "gaza_crisis_data.csv"
+
+  # Enable automatic backups
+  backup_enabled: true
+
+  # CSV encoding
+  encoding: "utf-8"
+
+  # Include timestamp in filenames
+  timestamp_filenames: true
+
+logging:
+  # Logging level (DEBUG, INFO, WARNING, ERROR, CRITICAL)
+  level: "INFO"
+
+  # Log filename
+  filename: "extraction.log"
+
+  # Maximum log file size in MB
+  max_file_size: 10
+
+  # Number of backup log files to keep
+  backup_count: 5
+
+web_interface:
+  # Flask app settings
+  host: "0.0.0.0"
+  port: 5000
+  debug: false
+
+  # Maximum number of URLs to process in one batch
+  max_batch_size: 50
+
+data_sources:
+  # Supported news sources and their configurations
+  aljazeera:
+    base_url: "https://www.aljazeera.com"
+    selectors:
+      title: "h1"
+      date: "time"
+      content: 'div[data-component="ArticleBody"]'
+      location: "span.location"
+
+  bbc:
+    base_url: "https://www.bbc.com"
+    selectors:
+      title: "h1"
+      date: "time"
+      content: "div.story-body"
+      location: "span.location"
+
+classification:
+  # Keywords for incident type classification
+  incident_types:
+    casualties:
+      - "killed"
+      - "dead"
+      - "death"
+      - "casualties"
+      - "bombing"
+      - "strike"
+      - "attack"
+
+    hunger:
+      - "starvation"
+      - "malnutrition"
+      - "hunger"
+      - "food"
+      - "famine"
+
+    water:
+      - "water"
+      - "thirst"
+      - "dehydration"
+
+    aid:
+      - "aid"
+      - "humanitarian"
+      - "relief"
+      - "supplies"
+
+    infrastructure:
+      - "hospital"
+      - "school"
+      - "building"
+      - "destroyed"
+      - "damage"
+
+  # Keywords for tag extraction
+  tags:
+    children:
+      - "child"
+      - "children"
+      - "kid"
+      - "baby"
+      - "infant"
+
+    journalist:
+      - "journalist"
+      - "reporter"
+      - "media"
+      - "press"
+
+    medical:
+      - "doctor"
+      - "nurse"
+      - "medical"
+      - "health"
+      - "hospital"
+
+    civilian:
+      - "civilian"
+      - "resident"
+      - "family"
+
+    airstrike:
+      - "airstrike"
+      - "bombing"
+      - "bomb"
+      - "missile"
+
+locations:
+  # Gaza locations for extraction
+  gaza_locations:
+    - "Gaza City"
+    - "Gaza"
+    - "Rafah"
+    - "Khan Younis"
+    - "Deir al-Balah"
+    - "Beit Hanoun"
+    - "Beit Lahia"
+    - "Jabalia"
+    - "Shejaiya"
+    - "Zeitoun"
+    - "Al-Maghazi"
+    - "Al-Bureij"
+    - "Nuseirat"
+    - "Al-Zahra"
+    - "Tal al-Hawa"

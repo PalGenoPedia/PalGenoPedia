@@ -1,0 +1,7 @@
+id,category,statistic,value,unit,date,description,reference_id,critical_level,extracted_by,extraction_session
+1,extracted_stat,total_deaths,2,people,2025-08-17,minutes 44 seconds play-arrow02:44Gaza journalist reports on Israeli attack that killed Al Jazeera colleaguesBy Al Jazeera StaffPublished On 10 Aug 20,ref_auto_aljazeera_0817_1,critical,aliattia02,20250817_220701
+2,extracted_stat,general_statistic,4,metric_tonnes,2025-08-17,"itemslist 1 of 4Trump pledges to move homeless people in Washington, DC ‘far’ from the citylist 2 of 4Israel kills four Al Jazeera journalists includi",ref_auto_aljazeera_0817_1,medium,aliattia02,20250817_220701
+3,extracted_stat,total_deaths,3,people,2025-08-17,of 4Gaza journalist reports on Israeli attack that killed Al Jazeera colleagueslist 4 of 4Israel kills four Al Jazeera journalists including Anas al-S,ref_auto_aljazeera_0817_1,critical,aliattia02,20250817_220701
+4,extracted_stat,total_deaths,10,people,2025-08-17,ournalist reports on Israeli attack that killed Al Jazeera colleaguesBy Al Jazeera StaffPublished On,ref_auto_aljazeera_0817_1,critical,aliattia02,20250817_220701
+5,extracted_stat,total_deaths,28,people,2025-08-17,"ists including Anas al-Sharif in Gazaend of listShortly before being killed, al-Sharif, a well-known",ref_auto_aljazeera_0817_1,critical,aliattia02,20250817_220701
+6,extracted_stat,total_deaths,200,people,2025-08-17,The Israeli military has killed more than,ref_auto_aljazeera_0817_1,critical,aliattia02,20250817_220701
