@@ -1,0 +1,792 @@
+/* ============================================================
+   record-page.css
+   Supplement for the generated record pages.
+
+   The heavy lifting is done by Pages/War_Crimes_Stats/shared.css,
+   which the generated pages load first - hero, sticky stats strip,
+   two-column detail body, sidebar boxes, incident cards and their
+   attack-type colour coding all come from there, so these pages
+   cannot drift from the interactive view.
+
+   Only what shared.css does not provide lives here:
+     * .page-subheader   (defined inline on the hub page, not in the
+                          shared stylesheet)
+     * <details> styling for the full-account disclosure
+     * static language links styled as .lang-btn
+     * the section index card grid
+
+   Nothing here requires JavaScript.
+   ============================================================ */
+
+body { margin: 0; }
+
+/* ── dark theme ──────────────────────────────────────────────────
+   shared.css declares its light tokens in :root but has no dark block -
+   on the hub those come from partials/common-styles.html, injected with
+   the footer. These pages do not load the footer, so nothing defined the
+   dark values and shared.css's own [data-theme="dark"] rules resolved
+   against undefined variables.
+
+   That mattered rather than being cosmetic: record-page.js reads a stored
+   theme and sets data-theme="dark", so a reader who picked dark anywhere
+   else on the site arrived here to a half-dark page. The tokens are
+   declared here, mirroring the footer partial's values, plus the ones
+   shared.css uses that the partial does not define. */
+[data-theme="dark"] {
+    --primary-color: #ff6b6b;
+    --accent-color: #ff6b35;
+    --bg-primary: #14171a;
+    --bg-secondary: #1f242c;
+    --bg-tertiary: #2a3039;
+    --surface-color: #1b1f24;
+    --surface-elevated: #232830;
+    --card-bg: #1b1f24;
+    --text-primary: #e8eaed;
+    --text-secondary: #a9b1bb;
+    --text-muted: #7d8590;
+    --border-color: #2c323a;
+    --border-light: #262b33;
+}
+
+/* shared.css hard-codes body{background:#f8fafc}, so the page ground has to
+   be reclaimed explicitly or the dark tokens sit on a light backdrop. */
+[data-theme="dark"] body { background: #101317; color: var(--text-primary); }
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        --primary-color: #ff6b6b;
+        --accent-color: #ff6b35;
+        --bg-primary: #14171a;
+        --bg-secondary: #1f242c;
+        --bg-tertiary: #2a3039;
+        --surface-color: #1b1f24;
+        --surface-elevated: #232830;
+        --card-bg: #1b1f24;
+        --text-primary: #e8eaed;
+        --text-secondary: #a9b1bb;
+        --text-muted: #7d8590;
+        --border-color: #2c323a;
+        --border-light: #262b33;
+    }
+    :root:not([data-theme="light"]) body { background: #101317; color: var(--text-primary); }
+}
+
+/* Surfaces shared.css paints white with a literal rather than a token. */
+[data-theme="dark"] .detail-inc-card,
+[data-theme="dark"] .sidebar-box,
+[data-theme="dark"] .detail-stats-strip,
+[data-theme="dark"] .empty-detail,
+[data-theme="dark"] .card { background: var(--surface-color); }
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .detail-inc-card,
+    :root:not([data-theme="light"]) .sidebar-box,
+    :root:not([data-theme="light"]) .detail-stats-strip,
+    :root:not([data-theme="light"]) .empty-detail,
+    :root:not([data-theme="light"]) .card { background: var(--surface-color); }
+}
+
+/* ── sticky stacking ────────────────────────────────────────────
+   shared.css makes BOTH .header and .detail-stats-strip sticky at
+   top:0, with z-index 100 and 40. The strip therefore pins itself
+   directly underneath the header and is never seen.
+
+   The strip is offset below the header instead. That needs a known
+   header height, and CSS cannot read one - so the header is given a
+   fixed height here rather than being left to grow when the nav
+   wraps. The nav scrolls sideways instead of wrapping (and shared.css
+   hides it outright below 640px), which keeps the height constant at
+   every width and the offset honest. */
+:root { --rp-header-h: 70px; }
+
+.header {
+    height: var(--rp-header-h);
+    display: flex;
+    align-items: center;
+}
+.header > .container { width: 100%; }
+
+/* The record title, back link and tabs stay with the reader - that is the
+   navigation for the page, and the incident lists are long. */
+.page-subheader {
+    position: sticky;
+    top: var(--rp-header-h);
+    z-index: 90;
+    background: var(--surface-color, #fff);
+}
+
+/* ...which means the stats strip stops being sticky. shared.css pins it for
+   the hub, but three stacked bars came to 316px - 42% of a 760px window, and
+   more than half a phone screen - before a single incident was visible. The
+   same four figures are in the hero facts column immediately above, so
+   nothing is lost by letting this one scroll away. */
+.detail-stats-strip {
+    position: static;
+}
+
+/* ── header row layout ──────────────────────────────────────────
+   js/header-component.js injects these rules at runtime rather than
+   keeping them in shared.css. These pages build the header as static
+   markup, so the layout has to be declared here or the logo, nav and
+   language switcher stack instead of sitting on one row.
+   Kept in sync with the block in header-component.js. */
+.header,
+.header .container,
+.header .nav,
+.header .header-controls { direction: ltr; }
+
+.header .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+.header .nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+    flex: 1 1 auto;
+    justify-content: center;
+    min-width: 0;
+}
+.header .nav .nav-btn,
+.header .nav .join-us-btn { white-space: nowrap; flex-shrink: 0; }
+.header .header-controls {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+}
+
+/* Nav scrolls sideways rather than wrapping to a second row, so the header
+   keeps the fixed height the sticky offset above depends on. Below 640px
+   shared.css collapses the nav entirely and only the logo and language
+   switcher remain. */
+.header .nav {
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+.header .nav::-webkit-scrollbar { display: none; }
+
+@media (max-width: 700px) {
+    .header .container { justify-content: space-between; gap: 0.5rem; }
+    .header .nav { justify-content: flex-start; }
+}
+
+/* ── page sub-header (mirrors the inline block on the hub page) ── */
+.page-subheader {
+    background: var(--surface-color, #ffffff);
+    border-bottom: 1px solid var(--border-color, #e2e8f0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .06);
+    padding: 0.85rem 0 0.6rem;
+}
+.page-subheader-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.55rem;
+}
+.page-subheader-title h1 {
+    margin: 0;
+    font-size: 1.2rem;
+    line-height: 1.25;
+    color: var(--text-primary);
+}
+.page-subheader-title .header-subtitle {
+    margin: 0.15rem 0 0;
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+}
+
+.page-subheader .btn-back-warcimes {
+    display: inline-block;
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    border-radius: 8px;
+    padding: 0.4rem 0.9rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+}
+.page-subheader .btn-back-warcimes:hover {
+    background: var(--bg-secondary, #f1f5f9);
+    color: var(--text-primary);
+    border-color: var(--text-secondary);
+}
+
+/* Tabs are real links here, not buttons - they navigate rather than
+   toggle, so they work with scripting disabled. */
+.page-subheader .nav-tabs { display: flex; flex-direction: column; gap: 0.4rem; }
+.page-subheader .nav-row-primary { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.page-subheader .nav-row-secondary { display: flex; gap: 0.4rem; flex-wrap: wrap; align-items: center; }
+.page-subheader .nav-row-secondary::before {
+    content: 'MORE:';
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--text-secondary);
+    opacity: 0.7;
+}
+
+/* One row on desktop. The sub-header is pinned for the whole page, so the
+   second tab row was costing ~40px of every screen. Above 780px there is
+   room for all six tabs on one line, and the "MORE:" label stops earning
+   its place once nothing is hidden behind it. */
+@media (min-width: 781px) {
+    .page-subheader .nav-tabs { flex-direction: row; align-items: center; gap: 0.5rem; }
+    .page-subheader .nav-row-secondary::before { content: none; }
+    .page-subheader .nav-row-secondary { gap: 0.5rem; }
+    .page-subheader .nav-row-primary { flex-wrap: nowrap; }
+}
+.page-subheader .tab-btn {
+    display: inline-block;
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    border-radius: 7px;
+    padding: 0.3rem 0.7rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+.page-subheader .tab-btn:hover {
+    background: var(--bg-secondary, #f1f5f9);
+    color: var(--text-primary);
+    border-color: var(--text-secondary);
+}
+.page-subheader .tab-btn.tab-primary {
+    padding: 0.5rem 1.1rem;
+    font-size: 0.875rem;
+    border-radius: 8px;
+    border-width: 1.5px;
+    color: var(--text-primary);
+}
+.page-subheader .tab-btn.active,
+.page-subheader .tab-btn.tab-primary.active {
+    background: var(--primary-red, #dc2626);
+    border-color: var(--primary-red, #dc2626);
+    color: #fff;
+}
+
+/* ── language switcher: anchors wearing .lang-btn ── */
+.header .language-selector { display: flex; gap: 0.3rem; }
+.header .lang-btn { text-decoration: none; display: inline-flex; align-items: baseline; gap: 0.3rem; }
+.header .lang-btn .lang-name { opacity: 0.75; font-weight: 500; }
+
+/* Codes only on narrow screens. With the full names the selector is 166px,
+   which together with the wordmark pushed the header past a 330px viewport
+   and gave the whole page a horizontal scrollbar. EN / DE / AR carry the
+   same meaning; the names stay in the accessible label. */
+@media (max-width: 460px) {
+    .header .lang-btn .lang-name { display: none; }
+    .header .lang-btn { padding: 0.28rem 0.45rem; }
+    .header .logo { font-size: 1.1rem; }
+}
+
+/* ── hero extras shared.css does not define ── */
+.detail-hero-badge.dhb-post {
+    background: rgba(124, 58, 237, .2);
+    color: #c4b5fd;
+    border: 1px solid rgba(124, 58, 237, .35);
+}
+.detail-hero { margin: 0; padding: 2rem 2rem 0; }
+.detail-inc-result { font-weight: 700; margin-bottom: 0.5rem; color: var(--text-primary); line-height: 1.4; }
+.detail-inc-desc { color: var(--text-secondary); font-size: 0.92rem; margin: 0 0 0.7rem; }
+.detail-inc-cas { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.6rem; }
+.cas-chip {
+    font-size: 0.76rem; font-weight: 700;
+    padding: 0.2rem 0.55rem; border-radius: 5px;
+    background: #fef2f2; color: #dc2626;
+}
+.cas-chip.injured { background: #fff7ed; color: #ea580c; }
+.cas-chip.hw { background: #eff6ff; color: #0284c7; }
+.detail-inc-src { font-size: 0.82rem; color: var(--text-secondary); }
+.inc-src-link {
+    display: inline-block; margin-inline-end: 0.5rem;
+    color: var(--primary-red, #dc2626); text-decoration: none;
+}
+.inc-src-link:hover { text-decoration: underline; }
+/* Cited but not a URL - a name or outlet noted in the source without a link.
+   Shown as plain attributed text, never as an href, so it isn't mistaken for
+   a working link. */
+.inc-src-text {
+    display: inline-block; margin-inline-end: 0.5rem;
+    color: var(--text-secondary); font-style: italic;
+}
+
+/* ── full account: native disclosure, no script ── */
+.inc-more { margin-top: 0.75rem; border-top: 1px solid var(--border-color, #e2e8f0); padding-top: 0.7rem; }
+.inc-more > summary {
+    cursor: pointer; list-style: none;
+    font-size: 0.82rem; font-weight: 700;
+    color: var(--primary-red, #dc2626);
+}
+.inc-more > summary::-webkit-details-marker { display: none; }
+.inc-more > summary::before { content: '\25B8'; display: inline-block; margin-inline-end: 0.4rem; }
+.inc-more[open] > summary::before { content: '\25BE'; }
+.inc-more > p { margin: 0.6rem 0 0; font-size: 0.9rem; line-height: 1.6; color: var(--text-secondary); }
+
+/* ── incident filter (added by record-page.js when scripting is on) ──
+   Its own class rather than .tab-btn: that one is styled for the dark hero
+   header (color: rgba(255,255,255,.6)), so reusing it here put white text on
+   the white incident panel and the buttons vanished.
+   The left border carries the same attack-type colour as the cards it filters. */
+.inc-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 1.1rem;
+}
+.inc-filter-btn {
+    font: inherit;
+    font-size: 0.76rem;
+    font-weight: 600;
+    line-height: 1.2;
+    padding: 0.34rem 0.7rem;
+    border-radius: 6px;
+    cursor: pointer;
+    background: var(--bg-secondary, #f1f5f9);
+    color: var(--text-secondary, #475569);
+    border: 1px solid var(--border-color, #e2e8f0);
+    border-inline-start-width: 3px;
+    border-inline-start-color: var(--border-color, #cbd5e1);
+    transition: background .15s, color .15s, border-color .15s;
+}
+.inc-filter-btn:hover {
+    background: var(--surface-color, #fff);
+    color: var(--text-primary, #0f172a);
+    border-color: var(--text-secondary, #94a3b8);
+}
+.inc-filter-btn.is-active {
+    background: var(--primary-red, #dc2626);
+    border-color: var(--primary-red, #dc2626);
+    color: #fff;
+}
+
+/* accent per attack class, matching .detail-inc-card */
+.inc-filter-btn.type-airstrike    { border-inline-start-color: #dc2626; }
+.inc-filter-btn.type-direct       { border-inline-start-color: #b91c1c; }
+.inc-filter-btn.type-siege        { border-inline-start-color: #ea580c; }
+.inc-filter-btn.type-invasion     { border-inline-start-color: #7c3aed; }
+.inc-filter-btn.type-indirect     { border-inline-start-color: #d97706; }
+.inc-filter-btn.type-access       { border-inline-start-color: #0284c7; }
+.inc-filter-btn.type-unidentified { border-inline-start-color: #64748b; }
+
+[data-theme="dark"] .inc-filter-btn {
+    background: rgba(255, 255, 255, .06);
+    color: var(--text-secondary, #cbd5e1);
+    border-color: rgba(255, 255, 255, .15);
+}
+[data-theme="dark"] .inc-filter-btn:hover {
+    background: rgba(255, 255, 255, .12);
+    color: #fff;
+}
+
+/* Sidebar breakdown bars, coloured to match the cards and the filter */
+.type-bar-fill.tf-airstrike    { background: #dc2626; }
+.type-bar-fill.tf-direct       { background: #b91c1c; }
+.type-bar-fill.tf-siege        { background: #ea580c; }
+.type-bar-fill.tf-invasion     { background: #7c3aed; }
+.type-bar-fill.tf-indirect     { background: #d97706; }
+.type-bar-fill.tf-access       { background: #0284c7; }
+.type-bar-fill.tf-unidentified { background: #64748b; }
+
+/* ── data tables (overview "most targeted", statistics) ──────────
+   shared.css has no table styling, so these are defined here. Unlike the
+   sidebar's key/value .info-row, these are real multi-column data tables:
+   every column shares the width and the header row is sticky within the
+   scroll container. */
+.rp-table-wrap {
+    overflow-x: auto;
+    border: 1px solid var(--border-color, #e2e8f0);
+    border-radius: 10px;
+    background: var(--surface-color, #fff);
+    margin-bottom: 1.75rem;
+}
+.rp-table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 0.9rem;
+}
+.rp-table th,
+.rp-table td {
+    text-align: start;
+    padding: 0.6rem 0.95rem;
+    border-bottom: 1px solid var(--border-color, #e2e8f0);
+    white-space: nowrap;
+}
+.rp-table thead th {
+    position: sticky;
+    top: 0;
+    background: var(--bg-secondary, #f8fafc);
+    color: var(--text-secondary, #64748b);
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    z-index: 1;
+}
+/* numeric columns line up and read as quantities */
+.rp-table td + td { font-variant-numeric: tabular-nums; }
+.rp-table tbody tr:last-child th,
+.rp-table tbody tr:last-child td { border-bottom: none; }
+.rp-table tbody tr:hover { background: var(--bg-secondary, #f8fafc); }
+.rp-table a { color: var(--primary-red, #dc2626); text-decoration: none; }
+.rp-table a:hover { text-decoration: underline; }
+
+.rp-lede {
+    max-width: 70ch;
+    color: var(--text-secondary, #64748b);
+    margin: 0 0 1.5rem;
+    line-height: 1.65;
+}
+
+/* ── charts ──────────────────────────────────────────────────────
+   Inline SVG written at build time, not Chart.js: these pages carry no
+   runtime JavaScript, and a build-time chart is crawlable, needs no CDN
+   and cannot fail to draw. Colours live here so both themes work and the
+   bars match the attack-type coding used everywhere else. */
+.rp-chart {
+    margin: 0 0 2rem;
+    padding: 1rem 1.1rem 0.6rem;
+    border: 1px solid var(--border-color, #e2e8f0);
+    border-radius: 10px;
+    background: var(--surface-color, #fff);
+}
+.rp-chart svg { width: 100%; height: auto; display: block; overflow: visible; }
+.rp-chart figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    color: var(--text-secondary, #64748b);
+}
+
+/* gridlines and axis text */
+.rp-chart .cg { stroke: var(--border-color, #e2e8f0); stroke-width: 1; }
+.rp-chart .cy,
+.rp-chart .cx,
+.rp-chart .cl,
+.rp-chart .cv {
+    fill: var(--text-secondary, #64748b);
+    font-size: 11px;
+    font-family: inherit;
+}
+.rp-chart .cy { text-anchor: end; }
+.rp-chart .cx { text-anchor: middle; }
+.rp-chart .cv { font-weight: 700; fill: var(--text-primary, #0f172a); }
+
+/* bars - default, then per attack class */
+.rp-chart .cb { fill: var(--primary-red, #dc2626); }
+.rp-chart .cb.tf-airstrike    { fill: #dc2626; }
+.rp-chart .cb.tf-direct       { fill: #b91c1c; }
+.rp-chart .cb.tf-siege        { fill: #ea580c; }
+.rp-chart .cb.tf-invasion     { fill: #7c3aed; }
+.rp-chart .cb.tf-indirect     { fill: #d97706; }
+.rp-chart .cb.tf-access       { fill: #0284c7; }
+.rp-chart .cb.tf-unidentified { fill: #64748b; }
+
+/* Arabic reads right to left, but a time axis still runs left to right -
+   flipping it would put the earliest month on the right and misread the
+   trend. The chart keeps LTR; its caption follows the page direction. */
+body[dir="rtl"] .rp-chart svg { direction: ltr; }
+
+/* ── incident dialog (:target, no JavaScript) ────────────────────
+   The card links to #incident-…, this shows the panel while it is the
+   document target, and the scrim and close button are links back to
+   #incidents. Consequences worth having: every incident gets a real
+   shareable URL, the Back button closes the dialog, and it all works
+   with scripting disabled.
+
+   What it is NOT: a true modal. Without script there is no focus trap
+   and no Escape key, so it is marked role="dialog" but deliberately not
+   aria-modal - claiming that would misdescribe it to a screen reader.
+   Content behind it stays reachable, which for a document like this is
+   an acceptable trade. */
+.inc-open {
+    display: inline-block;
+    margin-top: 0.7rem;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--primary-red, #dc2626);
+    text-decoration: none;
+}
+.inc-open:hover { text-decoration: underline; }
+
+/* ── whole card opens the incident ───────────────────────────────
+   The card cannot simply be wrapped in an <a>: it already contains
+   source links, and nested anchors are invalid HTML. Instead the
+   existing link is stretched over the card with a transparent
+   ::after - one real link, valid markup, still keyboard-reachable
+   and still announced once by a screen reader.
+
+   Two kinds of card:
+     facility page   .inc-open stretches, opening the :target dialog
+     register/timeline (.is-link)  the facility link stretches
+
+   The source links are lifted above the overlay so they stay
+   clickable. Trade-off worth knowing: an overlay like this makes
+   text selection inside the card awkward, which is why the source
+   links and the modal itself sit above it rather than under. */
+.detail-inc-card { position: relative; }
+.detail-inc-card:hover { cursor: pointer; }
+
+.detail-inc-card .inc-open::after,
+.detail-inc-card.is-link .detail-inc-result > a::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+/* anything that must remain independently clickable sits above the overlay */
+.detail-inc-card .detail-inc-src a,
+.detail-inc-card .inc-attack-badge,
+.detail-inc-card .inc-id-chip { position: relative; z-index: 2; }
+
+/* the register/timeline card's own link needs no separate affordance once the
+   whole card is clickable */
+.detail-inc-card.is-link .detail-inc-result > a { text-decoration: none; color: inherit; }
+.detail-inc-card.is-link:hover .detail-inc-result > a { color: var(--primary-red, #dc2626); }
+
+/* a visible focus ring on the card when the stretched link is focused,
+   since the link itself has no box of its own to outline */
+.detail-inc-card:focus-within { outline: 2px solid var(--primary-red, #dc2626); outline-offset: 2px; }
+.detail-inc-card .inc-open:focus-visible,
+.detail-inc-card.is-link .detail-inc-result > a:focus-visible { outline: none; }
+
+.inc-modal { display: none; }
+.inc-modal:target {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    overflow-y: auto;
+    padding: 4vh 1rem;
+}
+.inc-modal-scrim {
+    position: fixed;
+    inset: 0;
+    background: rgba(8, 11, 15, 0.72);
+    display: block;
+}
+.inc-modal-panel {
+    position: relative;
+    max-width: 46rem;
+    margin: 0 auto;
+    background: var(--surface-color, #fff);
+    color: var(--text-primary, #0f172a);
+    border-radius: 14px;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, .35);
+    overflow: hidden;
+}
+.inc-modal-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.85rem 1.1rem;
+    border-bottom: 1px solid var(--border-color, #e2e8f0);
+    background: var(--bg-secondary, #f8fafc);
+    position: sticky;
+    top: 0;
+}
+.inc-modal-meta { display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center; }
+.inc-modal-close {
+    flex-shrink: 0;
+    width: 2rem; height: 2rem;
+    display: grid; place-items: center;
+    border-radius: 50%;
+    font-size: 1.3rem; line-height: 1;
+    text-decoration: none;
+    color: var(--text-secondary, #64748b);
+    background: var(--surface-color, #fff);
+    border: 1px solid var(--border-color, #e2e8f0);
+}
+.inc-modal-close:hover { background: var(--primary-red, #dc2626); border-color: var(--primary-red, #dc2626); color: #fff; }
+
+.inc-modal-body { padding: 1.25rem 1.4rem 1.5rem; }
+.inc-modal-title { margin: 0 0 0.4rem; font-size: 1.2rem; line-height: 1.3; font-weight: 800; }
+.inc-modal-where { margin: 0 0 1rem; color: var(--text-secondary, #64748b); font-size: 0.9rem; }
+.inc-modal-img { width: 100%; height: auto; border-radius: 8px; margin-bottom: 1.1rem; display: block; }
+.inc-modal-h {
+    margin: 1.2rem 0 0.4rem;
+    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase;
+    color: var(--text-secondary, #64748b);
+}
+.inc-modal-body p { margin: 0 0 0.7rem; line-height: 1.65; color: var(--text-primary, #0f172a); }
+.inc-modal-cas { display: flex; flex-wrap: wrap; gap: 1.4rem; margin: 0.5rem 0 0.2rem; }
+.inc-modal-cas .v { display: block; font-size: 1.5rem; font-weight: 800; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.inc-modal-cas .v.killed, .inc-modal-cas .v.injured { color: var(--primary-red, #dc2626); }
+.inc-modal-cas .v.hw { color: var(--accent-blue, #0284c7); }
+.inc-modal-cas .l { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-secondary, #64748b); }
+.inc-modal-links { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+.inc-modal-links a {
+    font-size: 0.82rem;
+    padding: 0.28rem 0.6rem;
+    border-radius: 6px;
+    border: 1px solid var(--border-color, #e2e8f0);
+    color: var(--primary-red, #dc2626);
+    text-decoration: none;
+    word-break: break-word;
+}
+.inc-modal-links a:hover { background: var(--bg-secondary, #f8fafc); }
+.inc-modal-links .inc-src-text {
+    font-size: 0.82rem;
+    padding: 0.28rem 0.6rem;
+    border-radius: 6px;
+    border: 1px dashed var(--border-color, #e2e8f0);
+    color: var(--text-secondary, #64748b);
+    font-style: italic;
+}
+.inc-modal-prov { margin-top: 1.2rem; font-size: 0.78rem; color: var(--text-muted, #94a3b8); }
+
+.inc-modal-nav {
+    display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+    padding: 0.8rem 1.1rem;
+    border-top: 1px solid var(--border-color, #e2e8f0);
+    background: var(--bg-secondary, #f8fafc);
+}
+.inc-modal-nav a {
+    font-size: 0.85rem; font-weight: 700;
+    color: var(--primary-red, #dc2626);
+    text-decoration: none;
+}
+.inc-modal-nav a:hover { text-decoration: underline; }
+.inc-modal-pos { font-size: 0.78rem; color: var(--text-secondary, #64748b); font-variant-numeric: tabular-nums; }
+
+@media (max-width: 560px) {
+    .inc-modal:target { padding: 0; }
+    .inc-modal-panel { border-radius: 0; min-height: 100%; }
+}
+
+/* ── section index cards ── */
+.rec-card { display: block; text-decoration: none; color: inherit; }
+.rec-card .card-title { margin: 0; font-size: 1.02rem; }
+.rec-card .card-sub { font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.2rem; }
+.rec-card.is-stub { opacity: 0.72; }
+
+/* ── stats strip: one row, always ─────────────────────────────────
+   It used to wrap to 2x2 below 900px, which doubled its height exactly
+   where there is least room. The four figures now stay on one line at
+   every width and scale down instead, so the strip is a fixed, shallow
+   band - cheap enough to sit in the sticky stack if wanted. */
+.detail-stats-strip-inner {
+    display: flex;
+    flex-wrap: nowrap;
+}
+.dss-item {
+    flex: 1 1 0;
+    min-width: 0;
+    padding: clamp(0.4rem, 1.1vw, 0.75rem) clamp(0.3rem, 1vw, 1rem);
+    text-align: center;
+}
+.dss-num {
+    font-size: clamp(1.05rem, 3vw, 1.5rem);
+    line-height: 1.15;
+    font-variant-numeric: tabular-nums;
+}
+.dss-label {
+    /* Floor at 10px. Letting this scale freely with the viewport put the
+       labels at 8.6px on a 630px screen - it fitted, but was not readable.
+       Below that width the longest label ("health workers killed") takes a
+       second line instead, which costs ~12px and stays legible. */
+    font-size: clamp(0.625rem, 1.35vw, 0.7rem);
+    line-height: 1.25;
+    display: block;
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+@media (max-width: 900px) {
+    .detail-body { grid-template-columns: 1fr !important; }
+    .detail-hero { padding: 1.5rem 1.25rem 0; }
+}
+
+/* Trim the sticky sub-header on small screens. It is pinned for the whole
+   page, so every pixel it takes is a pixel of the incident list the reader
+   never sees. The subtitle goes first: the type and location it repeats are
+   both in the hero directly above and in the sidebar below. */
+@media (max-width: 640px) {
+    .page-subheader { padding: 0.6rem 0 0.45rem; }
+    .page-subheader-top { margin-bottom: 0.4rem; }
+    .page-subheader-title h1 { font-size: 1.05rem; }
+    .page-subheader-title .header-subtitle { display: none; }
+    .page-subheader .nav-tabs { gap: 0.3rem; }
+    .page-subheader .tab-btn { padding: 0.26rem 0.55rem; font-size: 0.7rem; }
+    .page-subheader .tab-btn.tab-primary { padding: 0.36rem 0.8rem; font-size: 0.78rem; }
+    .page-subheader .btn-back-warcimes { padding: 0.3rem 0.65rem; font-size: 0.75rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+}
+
+/* ── record-card badge ────────────────────────────────────────────
+   .detail-hero-badge is built for the dark hero: pale text on a
+   translucent ground. On a white card it is unreadable. This is the same
+   shape in card colours, and it inverts with the theme rather than
+   assuming one. */
+.rec-badge {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    padding: 0.22rem 0.55rem;
+    border-radius: 5px;
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    background: rgba(220, 38, 38, 0.08);
+    color: #b91c1c;
+    border: 1px solid rgba(220, 38, 38, 0.22);
+}
+[data-theme="dark"] .rec-badge {
+    background: rgba(248, 113, 113, 0.14);
+    color: #fca5a5;
+    border-color: rgba(248, 113, 113, 0.3);
+}
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .rec-badge {
+        background: rgba(248, 113, 113, 0.14);
+        color: #fca5a5;
+        border-color: rgba(248, 113, 113, 0.3);
+    }
+}
+
+/* the card's summary excerpt - clamped so cards keep a common height */
+.rec-card .card-excerpt {
+    font-size: 0.85rem;
+    line-height: 1.55;
+    color: var(--text-secondary);
+    margin-top: 0.6rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* ── prose tables ─────────────────────────────────────────────────
+   .rp-table sets white-space: nowrap on every cell, which is right for the
+   statistics tables it was written for - short numeric columns that must not
+   wrap mid-figure. The historical event pages put paragraphs and full source
+   citations in the same table, and nowrap pushed those to 1,198px inside a
+   1,085px viewport, scrolling the whole document sideways.
+
+   This variant lets the text wrap and gives the label column a fixed share so
+   the two columns do not fight over the line. */
+.rp-table--prose { table-layout: fixed; }
+.rp-table--prose th,
+.rp-table--prose td {
+    white-space: normal;
+    overflow-wrap: anywhere;
+    vertical-align: top;
+}
+.rp-table--prose th { width: 28%; font-weight: 600; }
+
+/* the citation trailing a prose cell */
+.rp-src { color: var(--text-secondary, #64748b); font-size: 0.85em; }
+.rp-src a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }

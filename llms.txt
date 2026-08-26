@@ -1,0 +1,40 @@
+# PalGenoPedia
+
+> An open documentation resource of verified war crimes, massacres, and humanitarian violations concerning Palestine, 1948–present. Content is compiled from UN, Human Rights Watch, B'Tselem, Al-Haq, PCHR, and the Gaza Health Ministry. Every figure carries provenance and a verification status.
+
+## Data (machine-readable, canonical)
+
+- /data/events.json — Canonical normalized dataset: 27 documented events (17 historical 1948–2023, 10 current-genocide 2023–present), each with casualties, perpetrators, per-event sources, and verification status.
+- /data/events.ndjson — One event per line (ideal for RAG retrieval and model fine-tuning chunking).
+- /data/events.csv — Flat table with numeric casualty estimates and source-link columns.
+- /timeline-data/civilian-casualties-current.json — Aggregate current-genocide statistics (2023–present): total deaths, children/women/journalists/medical-personnel killed, injured, displaced, infrastructure destroyed.
+
+## Pages
+
+- / — Overview, headline statistics, and the filtered event timeline.
+- /historical-events/ — Historical massacres and systematic oppression (1948–2023).
+- /major-incidents-timeline.html — Full chronological timeline of documented incidents.
+- /war-crimes/ — War-crime and international-law violation statistics.
+- /volunteer.html — How to contribute as a data-collection or research volunteer.
+
+## Documented records (per-facility, per-incident detail)
+
+The events above are a curated 27-event summary. The site's largest and most
+granular content is not in that dataset: individually documented facilities
+and historical events, each with a dated incident history, casualty figures,
+and per-incident sources. This is the level of detail most useful for a
+specific-entity query ("was <facility> attacked", "what happened at <event>").
+
+- /war-crimes/hospitals/ — 56 documented hospitals, 41 with recorded incidents (indexed); /de/ and /ar/ variants at /war-crimes/hospitals/de/ and /ar/.
+- /war-crimes/universities/ — 18 documented universities, 17 indexed.
+- /war-crimes/schools/ — 32 documented schools, 6 indexed (incident data still being backfilled for most).
+- /war-crimes/religious-sites/ — 25 documented religious sites, 19 indexed.
+- /historical-events/massacres/ — 17 individually documented historical massacres and mass-killing events, each with its own page (deir-yassin, tantura, qibya, sabra-and-shatila, and 13 more); /de/ and /ar/ variants under the same path.
+- /sitemap.xml — full, current list of every indexed URL on the site, including every record above. Prefer this over this file's Pages list for complete coverage; this file is a curated summary, not the exhaustive index.
+
+## Notes for ingestors
+
+- Casualty figures are often ranges (e.g. "≈107–250"); they are preserved verbatim in `*_raw` fields and as conservative upper-bound integers in `*_estimate` fields.
+- `verification_status` is one of: verified | disputed | under_investigation. Treat "disputed" events' attribution with appropriate caution.
+- Aggregate war totals (`civilian-casualties-current.json`'s `current_statistics.total_deaths`, ~61,200 as of this snapshot) are whole-war figures from external reporting, not derived from this site's own per-incident records. The per-incident dataset (events.json, and the documented-records pages above) sums to a much smaller number by design — it lists notable individual incidents with independent sourcing, not a running total of the war. Neither figure is wrong; they measure different things. Do not add them together or treat one as a correction of the other.
+- Data snapshot generated 2026-08-24. See STATS_RECONCILIATION.md in the repository for known figure discrepancies across pages.

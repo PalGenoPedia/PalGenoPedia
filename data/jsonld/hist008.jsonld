@@ -1,0 +1,386 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "@id": "https://palgenopedia.org/data/events.json#hist008",
+  "headline": "First Intifada",
+  "url": "https://palgenopedia.org/Pages/Historical_Massacres/massacres.html#event/hist008",
+  "datePublished": "1987-12-08",
+  "dateModified": "2026-08-09",
+  "inLanguage": "en",
+  "about": {
+    "@type": "Event",
+    "name": "First Intifada",
+    "startDate": "1987-12-08",
+    "endDate": "34225",
+    "description": "Palestinian uprising against 20-year Israeli occupation",
+    "location": {
+      "@type": "Place",
+      "name": "Occupied Palestinian Territories, West Bank under Israeli military occupation; Gaza under blockade since 2007, Continued occupation; First Intifada led to Oslo Accords and creation of Palestinian Authority",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 31.9,
+        "longitude": 35.2
+      }
+    }
+  },
+  "articleBody": "On December 8, 1987, an Israeli army truck collided with civilian vehicles at the Erez checkpoint in Gaza, killing four Palestinian workers from Jabalia refugee camp. Palestinians believed it was deliberate revenge for the stabbing death of an Israeli in Gaza two days earlier. The following day, December 9, massive protests erupted in Jabalia. When 17-year-old Hatem al-Sisi was shot dead by Israeli soldiers, the uprising exploded across Gaza, East Jerusalem, and the West Bank within days. What began as spontaneous protests transformed into organized, sustained civil resistance coordinated by grassroots committees and later by the United National Leadership of the Uprising (UNLU). The Intifada was characterized by largely non-violent tactics: general strikes, tax resistance, boycotts of Israeli products, and civil disobedience. Palestinian youth confronted Israeli soldiers with stones and Molotov cocktails. The Israeli response was brutal. Defense Minister Yitzhak Rabin issued orders to use 'force, might, and beatings' and to 'break bones' of demonstrators. Soldiers systematically beat protesters, fired live ammunition at stone-throwers, and used tear gas extensively. In the first year alone, Israeli forces killed at least 300 Palestinians and wounded tens of thousands. By 1990, the death toll exceeded 1,000. The uprising exacted an enormous toll: 1,087-1,284 Palestinians killed (including 241-332 children), over 120,000 wounded, approximately 20,000 arrested in the first year alone (with estimates reaching 120,000 total over six years), 2,532 homes demolished, and 481 Palestinians deported. Approximately 160-200 Israelis (soldiers and civilians) were killed during the same period. International condemnation was swift—the UN Security Council condemned Israel's response, and even the Reagan Administration criticized the 'harsh security measures and excessive use of live ammunition.' The Intifada forced recognition of Palestinian national aspirations, led to the Madrid Conference (1991) and secret Oslo negotiations, culminating in the September 1993 Oslo Accords which created the Palestinian Authority and promised future statehood—though these promises remain unfulfilled over 30 years later.",
+  "keywords": "Mass Casualties / Uprising, historical, Mass Casualties / Uprising",
+  "mentions": [
+    {
+      "@type": "Organization",
+      "name": "Israel Defense Forces"
+    },
+    {
+      "@type": "Organization",
+      "name": "Israeli Border Police"
+    },
+    {
+      "@type": "Organization",
+      "name": "Israeli Civil Administration"
+    },
+    {
+      "@type": "Organization",
+      "name": "Shin Bet (Israeli Security Service)"
+    },
+    {
+      "@type": "Organization",
+      "name": "Israeli settler violence"
+    }
+  ],
+  "citation": [
+    {
+      "@type": "Article",
+      "name": "B'Tselem - First Intifada Fatalities; Al Jazeera - Intifada Documentation",
+      "url": "https://www.btselem.org/statistics/first_intifada_tables; https://www.aljazeera.com/gallery/2023/12/8/history-illustrated-the-first-intifada-against-israel",
+      "about": {
+        "@type": "Thing",
+        "name": "casualty"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "B'Tselem Documentation",
+      "url": "https://www.btselem.org/",
+      "about": {
+        "@type": "Thing",
+        "name": "casualty"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "B'Tselem Statistics",
+      "url": "https://www.btselem.org/",
+      "about": {
+        "@type": "Thing",
+        "name": "casualty"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Palestine Remix - Intifada Stories; PBS - Women, War and Peace",
+      "url": "https://remix.aljazeera.com/aje/PalestineRemix/stories-from-the-intifada.html; https://www.pbs.org/wnet/women-war-and-peace/uncategorized/what-you-need-to-know-about-the-1987-intifada/",
+      "about": {
+        "@type": "Thing",
+        "name": "casualty"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Palestine Remix Documentation",
+      "url": "https://remix.aljazeera.com/aje/PalestineRemix/stories-from-the-intifada.html",
+      "about": {
+        "@type": "Thing",
+        "name": "casualty"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "B'Tselem Reports",
+      "url": "https://www.btselem.org/",
+      "about": {
+        "@type": "Thing",
+        "name": "casualty"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "UN Security Council Resolutions 607 & 608",
+      "url": "https://www.un.org/unispal/",
+      "about": {
+        "@type": "Thing",
+        "name": "casualty"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Contemporary interviews and military records; documented by Israeli media",
+      "url": "https://www.palquest.org/en/highlight/29773/first-intifada-1987-1993",
+      "about": {
+        "@type": "Thing",
+        "name": "testimony"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Palestinian Declaration of Independence (1988); interviews",
+      "url": "https://www.palquest.org/en/highlight/29773/first-intifada-1987-1993",
+      "about": {
+        "@type": "Thing",
+        "name": "testimony"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "UN Security Council Resolutions 607, 608; UN Human Rights reports",
+      "url": "https://www.un.org/unispal/",
+      "about": {
+        "@type": "Thing",
+        "name": "testimony"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Amnesty International reports (1988-1993)",
+      "about": {
+        "@type": "Thing",
+        "name": "testimony"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "B'Tselem statistical reports and documentation",
+      "url": "https://www.btselem.org/",
+      "about": {
+        "@type": "Thing",
+        "name": "testimony"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Palestine Remix - Al Jazeera oral histories",
+      "url": "https://remix.aljazeera.com/aje/PalestineRemix/stories-from-the-intifada.html",
+      "about": {
+        "@type": "Thing",
+        "name": "testimony"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Palestine: Peace Not Apartheid (2006)",
+      "about": {
+        "@type": "Thing",
+        "name": "testimony"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Al Jazeera - First Intifada History; Britannica - Intifada",
+      "url": "https://www.aljazeera.com/gallery/2023/12/8/history-illustrated-the-first-intifada-against-israel; https://www.britannica.com/topic/intifada",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "PalQuest - First Intifada 1987-1993",
+      "url": "https://www.palquest.org/en/highlight/29773/first-intifada-1987-1993",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Jewish Virtual Library - First Intifada",
+      "url": "https://www.jewishvirtuallibrary.org/first-intifada",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "PalQuest Documentation",
+      "url": "https://www.palquest.org/en/highlight/29773/first-intifada-1987-1993",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "PalQuest - First Intifada",
+      "url": "https://www.palquest.org/en/highlight/29773/first-intifada-1987-1993",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "War Wings Daily - First Intifada Analysis",
+      "url": "https://warwingsdaily.com/wars/the-first-intifada-1987-1993/",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "PalQuest - Declaration Context",
+      "url": "https://www.palquest.org/en/highlight/29773/first-intifada-1987-1993",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Historical Records",
+      "url": "https://www.britannica.com/topic/intifada",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Jewish Virtual Library Documentation",
+      "url": "https://www.jewishvirtuallibrary.org/first-intifada",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "PBS - Intifada Impact",
+      "url": "https://www.pbs.org/wnet/women-war-and-peace/uncategorized/what-you-need-to-know-about-the-1987-intifada/",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "PBS Documentation",
+      "url": "https://www.pbs.org/wnet/women-war-and-peace/uncategorized/what-you-need-to-know-about-the-1987-intifada/",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Al Jazeera - Intifada History; Britannica - Intifada",
+      "url": "https://www.aljazeera.com/gallery/2023/12/8/history-illustrated-the-first-intifada-against-israel; https://www.britannica.com/topic/intifada",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "📄 B'Tselem Documentation →",
+      "url": "https://www.btselem.org/",
+      "about": {
+        "@type": "Thing",
+        "name": "war_crime"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "📄 PalQuest Documentation →",
+      "url": "https://www.palquest.org/en/highlight/29773/first-intifada-1987-1993",
+      "about": {
+        "@type": "Thing",
+        "name": "war_crime"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "📄 B'Tselem Reports →",
+      "url": "https://www.btselem.org/",
+      "about": {
+        "@type": "Thing",
+        "name": "war_crime"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "📄 Human Rights Documentation →",
+      "url": "https://www.btselem.org/",
+      "about": {
+        "@type": "Thing",
+        "name": "war_crime"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "📄 UN Resolutions →",
+      "url": "https://www.un.org/unispal/",
+      "about": {
+        "@type": "Thing",
+        "name": "war_crime"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "📄 B'Tselem Statistics →",
+      "url": "https://www.btselem.org/",
+      "about": {
+        "@type": "Thing",
+        "name": "war_crime"
+      }
+    }
+  ],
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "Deaths",
+      "propertyID": "casualties/deaths",
+      "value": "1,087-1,284 Palestinians; 160-200 Israelis",
+      "minValue": -1284,
+      "maxValue": 1087
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Injured",
+      "propertyID": "casualties/injured",
+      "value": "120,000+ Palestinians injured; 3,100 Israeli soldiers/civilians injured",
+      "minValue": 3100,
+      "maxValue": 120000
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Forced displacement",
+      "propertyID": "casualties/forced_displacement",
+      "value": "Thousands displaced through home demolitions"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Verification status",
+      "propertyID": "verification_status",
+      "value": "verified"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Classification",
+      "propertyID": "classification",
+      "value": "Mass Casualties / Uprising"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Author",
+      "propertyID": "author",
+      "value": "Yassin"
+    }
+  ],
+  "provider": {
+    "@type": "Organization",
+    "name": "PalGenoPedia",
+    "url": "https://palgenopedia.org"
+  },
+  "isBasedOn": "https://palgenopedia.org/data/events.json"
+}

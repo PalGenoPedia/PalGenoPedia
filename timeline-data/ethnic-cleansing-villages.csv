@@ -1,0 +1,419 @@
+id,village_name,period,date,district,population,current_status,displacement_method,coordinates_lat,coordinates_lng,additional_notes
+1,Abil AL Qamh,1948-1949,1948-05-10,Safad,450,destroyed,fear_of_attack,33.0833,35.5667,Fear and capitulation
+2,Zuq Al Fauqani,1948-1949,1948-05-21,Safad,1000,destroyed,military_assault,33.1667,35.5333,Whispering campaign and military assault
+3,Sanbariya,1948-1949,1948-05-01,Safad,350,destroyed,unknown,33.0500,35.5500,Date uncertain
+4,Shauqa Al Tahta,1948-1949,1948-05-14,Safad,200,destroyed,fear_of_attack,33.0667,35.5833,Fear of attack
+5,Khisas,1948-1949,1948-05-25,Safad,530,destroyed,forced_expulsion,33.2333,35.6167,Multiple methods over time
+6,Hunin,1948-1949,1948-05-03,Safad,1700,destroyed,forced_expulsion,33.2333,35.6000,Fear and expulsion
+7,Mansura,1948-1949,1948-05-25,Acre,850,destroyed,whispering_campaign,33.0833,35.4667,Whispering campaign
+8,Lazzaza,1948-1949,1948-05-21,Safad,230,destroyed,whispering_campaign,33.1000,35.5500,Whispering campaign
+9,Zuq Al Tahtanii,1948-1949,1948-05-11,Safad,1050,destroyed,fear_of_attack,33.1500,35.5500,Capitulation
+10,Khalisa,1948-1949,1948-05-11,Safad,1840,destroyed,whispering_campaign,33.2167,35.5833,Capitulation and whispering
+11,Madahil,1948-1949,1948-04-30,Safad,280,destroyed,fear_of_attack,33.0333,35.5667,Fear of attack
+12,Qeitiya,1948-1949,1948-05-19,Safad,940,destroyed,forced_expulsion,33.1833,35.5667,Whispering and expulsion
+13,Abisiyya,1948-1949,1948-05-25,Safad,830,destroyed,fear_of_attack,33.0833,35.5333,Capitulation
+14,Dawwara,1948-1949,1948-05-25,Safad,700,destroyed,whispering_campaign,33.1333,35.5667,Whispering campaign
+15,Salihiya,1948-1949,1948-05-25,Safad,1420,destroyed,fear_of_attack,33.0667,35.6000,Fear and whispering
+16,Muftakhira,1948-1949,1948-05-16,Safad,360,destroyed,fear_of_attack,33.0500,35.5833,Fear of attack
+17,Zawiya,1948-1949,1948-05-24,Safad,760,destroyed,military_assault,33.1167,35.5833,Military assault and expulsion
+18,Buweiziya,1948-1949,1948-05-11,Safad,510,destroyed,fear_of_attack,33.1667,35.5667,Capitulation
+19,Na'ima,1948-1949,1948-05-14,Safad,1420,destroyed,fear_of_attack,33.1000,35.5333,Capitulation
+20,Hamra,1948-1949,1948-05-01,Tiberias,730,destroyed,military_assault,32.8333,35.5333,Fear and military assault
+21,Ghuraba,1948-1949,1948-05-28,Safad,250,destroyed,fear_of_attack,33.0667,35.5500,Fear of attack
+22,Khirbet Khiyam Al Walid,1948-1949,1948-05-01,Safad,280,destroyed,fear_of_attack,32.9667,35.5333,Influenced by neighbors
+23,Jahula,1948-1949,1948-05-15,Safad,1030,destroyed,unknown,33.0333,35.6333,Date uncertain
+24,Qadas,1948-1949,1948-05-28,Safad,240,destroyed,fear_of_attack,33.1167,35.6167,Capitulation
+25,Malikiya,1948-1949,1948-05-28,Safad,360,destroyed,military_assault,33.2833,35.6333,Military assault and expulsion
+26,Nabi Yusha,1948-1949,1948-05-16,Safad,70,destroyed,military_assault,33.2500,35.6167,Military assault and expulsion
+27,Beisamun,1948-1949,1948-05-25,Safad,510,destroyed,whispering_campaign,33.0500,35.5000,Whispering campaign
+28,Mallaha,1948-1949,1948-05-25,Safad,890,destroyed,whispering_campaign,33.1500,35.5833,Whispering campaign
+29,Darbashiya,1948-1949,1948-05-15,Safad,310,destroyed,unknown,33.2167,35.6500,Date uncertain
+30,Ulmaniya,1948-1949,1948-04-20,Safad,820,destroyed,military_assault,33.0167,35.5167,Military assault and expulsion
+31,Arab Zubeih,1948-1949,1948-04-20,Safad,275,destroyed,fear_of_attack,33.0000,35.5000,Fear of attack
+32,Deishum,1948-1949,1948-10-30,Safad,590,destroyed,military_assault,33.2333,35.5667,Military assault and expulsion
+33,Alma,1948-1949,1948-10-30,Safad,950,destroyed,military_assault,33.2500,35.5333,Military assault and expulsion
+34,Saliha,1948-1949,1948-10-30,Safad,1070,destroyed,military_assault,33.2667,35.5500,Military assault and expulsion
+35,Fara,1948-1949,1948-10-30,Safad,670,destroyed,military_assault,33.2000,35.5167,Military assault and expulsion
+36,Husseiniya,1948-1949,1948-04-21,Safad,170,destroyed,fear_of_attack,33.0667,35.6167,Capitulation
+37,Tuleil,1948-1949,1948-04-15,Safad,60,destroyed,unknown,33.0333,35.5333,Date uncertain
+38,Kafr Bir'im,1948-1949,1948-11-15,Acre,710,destroyed,forced_expulsion,33.1333,35.4167,Late expulsion
+39,Ras Al Ahmar,1948-1949,1948-10-30,Safad,645,destroyed,military_assault,33.2167,35.5333,Military assault
+40,Dallata,1948-1949,1948-05-15,Safad,360,destroyed,unknown,33.0833,35.5833,Unknown method and date
+41,Marus,1948-1949,1948-05-26,Safad,80,destroyed,fear_of_attack,33.1500,35.5333,Capitulation
+42,Kirad Al Ghannama,1948-1949,1948-04-22,Tiberias,360,destroyed,fear_of_attack,32.8833,35.5667,Capitulation
+43,Kirad Al Baqqara,1948-1949,1948-04-22,Tiberias,350,destroyed,fear_of_attack,32.8667,35.5500,Capitulation
+44,Teitaba,1948-1949,1948-05-15,Safad,530,destroyed,unknown,33.1667,35.5333,Date uncertain
+45,Safsaf,1948-1949,1948-10-29,Safad,910,destroyed,massacre,33.2667,35.5167,Military assault and massacre
+46,Qaddita,1948-1949,1948-05-11,Safad,240,destroyed,fear_of_attack,33.1333,35.5500,Capitulation
+47,Ammuqa,1948-1949,1948-05-24,Safad,140,destroyed,military_assault,33.1833,35.5333,Military assault
+48,Qabba'a,1948-1949,1948-05-26,Safad,210,destroyed,military_assault,33.2000,35.5667,Military assault
+49,Weiziya,1948-1949,1948-05-15,Safad,170,destroyed,unknown,33.0667,35.5333,Date uncertain
+50,Mughr Al Kheit,1948-1949,1948-05-02,Safad,490,destroyed,military_assault,33.0500,35.5167,Military assault
+51,Fir'im,1948-1949,1948-05-26,Safad,740,destroyed,military_assault,33.2167,35.5833,Military assault
+52,Ja'una,1948-1949,1948-05-09,Safad,1150,destroyed,fear_of_attack,33.1000,35.5667,Capitulation
+53,Ein Al Zeitun,1948-1949,1948-05-02,Safad,820,destroyed,military_assault,32.9833,35.4833,Military assault
+54,Biriya,1948-1949,1948-05-02,Safad,240,destroyed,military_assault,32.9667,35.4667,Military assault
+55,Arab Safad,1948-1949,1948-05-11,Safad,9500,destroyed,military_assault,32.9667,35.4833,Military assault on city
+56,Meirun,1948-1949,1948-05-10,Safad,290,destroyed,fear_of_attack,33.0167,35.4667,Capitulation
+57,Sammu'i,1948-1949,1948-05-12,Safad,310,destroyed,fear_of_attack,33.0333,35.5000,Capitulation
+58,Dhahiriya Tahta,1948-1949,1948-05-10,Safad,350,destroyed,fear_of_attack,33.0500,35.4833,Capitulation
+59,Mansurat Al Kheit,1948-1949,1948-01-18,Safad,260,destroyed,military_assault,33.0667,35.5167,Military assault
+60,Sa'sa,1948-1949,1948-10-30,Safad,1130,destroyed,military_assault,33.2500,35.5667,Military assault and expulsion
+61,Ghabbatiya,1948-1949,1948-10-30,Acre,690,destroyed,military_assault,33.0667,35.4500,Date uncertain
+62,Sabalan,1948-1949,1948-10-30,Acre,70,destroyed,military_assault,33.0500,35.4667,Date uncertain
+63,Deir Al Qasi,1948-1949,1948-10-30,Acre,2100,destroyed,military_assault,33.0833,35.3833,Military assault
+64,Suhmata,1948-1949,1948-10-30,Acre,1130,destroyed,military_assault,33.0500,35.3667,Military assault
+65,Mansura,1948-1949,1948-11-15,Acre,90,destroyed,forced_expulsion,33.1000,35.4333,Late expulsion
+66,Tarbikha,1948-1949,1948-11-15,Acre,900,destroyed,forced_expulsion,33.0833,35.3500,Late expulsion
+67,Suruh,1948-1949,1948-11-15,Acre,420,destroyed,forced_expulsion,33.0667,35.3833,Late expulsion
+68,Nabi Rubin,1948-1949,1948-11-15,Acre,310,destroyed,forced_expulsion,33.1167,35.4167,Late expulsion
+69,Iqrit,1948-1949,1948-11-15,Acre,490,destroyed,forced_expulsion,33.0333,35.4000,Late expulsion
+70,Farradiya,1948-1949,1948-02-15,Safad,670,destroyed,forced_expulsion,33.0167,35.4333,Late expulsion
+71,Kafr I'nan,1948-1949,1948-02-15,Safad,1370,destroyed,forced_expulsion,33.0500,35.4500,Late expulsion
+72,Shuna,1948-1949,1948-05-15,Safad,170,destroyed,unknown,33.0833,35.6000,Unknown date
+73,Yaquq,1948-1949,1948-05-15,Safad,210,destroyed,unknown,32.9833,35.5333,Date uncertain
+74,Qudeiriya,1948-1949,1948-05-04,Tiberias,330,destroyed,military_assault,32.8000,35.5167,Military assault and expulsion
+75,Arab AL Suyyad,1948-1949,1948-05-04,Tiberias,290,destroyed,military_assault,32.7833,35.5000,Military assault and expulsion
+76,Zanghariya,1948-1949,1948-05-04,Safad,840,destroyed,military_assault,32.9500,35.5167,Military assault and expulsion
+77,Arab Al Shamalina,1948-1949,1948-05-04,Tiberias,650,destroyed,military_assault,32.8500,35.5667,Military assault and expulsion
+78,Bassa,1948-1949,1948-05-14,Acre,2950,destroyed,military_assault,33.0667,35.2000,Military assault and expulsion
+79,Zib,1948-1949,1948-05-14,Acre,1910,destroyed,military_assault,33.0833,35.1000,Military assault
+80,Tell,1948-1949,1948-05-21,Acre,400,destroyed,military_assault,33.0333,35.3167,Military assault
+81,Kabri,1948-1949,1948-05-21,Acre,1520,destroyed,military_assault,33.0167,35.1833,Fear and military assault
+82,Nahr,1948-1949,1948-05-21,Acre,610,destroyed,military_assault,33.0167,35.3333,Military assault
+83,Umm Al Faraj,1948-1949,1948-05-21,Acre,800,destroyed,military_assault,33.0500,35.3500,Military assault
+84,Ghabasiya,1948-1949,1948-05-15,Acre,690,destroyed,forced_expulsion,33.0167,35.2833,Expulsion
+85,Amqa,1948-1949,1948-07-10,Acre,1240,destroyed,military_assault,32.9500,35.2167,Military assault
+86,Kuweikat,1948-1949,1948-07-10,Acre,1050,destroyed,military_assault,32.9667,35.2333,Military assault
+87,Sumeiriya,1948-1949,1948-05-14,Acre,760,destroyed,military_assault,32.9333,35.1333,Military assault
+88,Manshiya,1948-1949,1948-05-14,Acre,810,destroyed,military_assault,32.9167,35.0833,Military assault near Acre
+89,Birwa,1948-1949,1948-07-11,Acre,1460,destroyed,military_assault,32.9500,35.3000,Military assault
+90,Damun,1948-1949,1948-07-15,Acre,1310,destroyed,military_assault,32.8833,35.2667,Military assault
+91,Ruweis,1948-1949,1948-07-15,Acre,330,destroyed,military_assault,32.8667,35.2833,Military assault
+92,Majdal,1948-1949,1948-04-22,Tiberias,320,destroyed,military_assault,32.7833,35.5333,Military assault and capitulation
+93,Ghuweir Abu Shusha,1948-1949,1948-04-21,Tiberias,1240,destroyed,military_assault,32.7667,35.5167,Military assault and capitulation
+94,Hittin,1948-1949,1948-07-16,Tiberias,1190,destroyed,military_assault,32.8000,35.4333,Fear and military assault
+95,Nimrin,1948-1949,1948-07-16,Tiberias,320,destroyed,military_assault,32.7833,35.4500,Fear and military assault
+96,Lubya,1948-1949,1948-07-16,Tiberias,2350,destroyed,military_assault,32.8167,35.4167,Fear and military assault
+97,Khirbet Nasir Al Din,1948-1949,1948-04-12,Tiberias,90,destroyed,military_assault,32.7667,35.4333,Military assault and capitulation
+98,Arab Tiberias,1948-1949,1948-04-18,Tiberias,5310,destroyed,military_assault,32.7922,35.5311,Military assault on city
+99,Manara,1948-1949,1948-03-15,Safad,490,destroyed,military_assault,33.2167,35.6667,Military assault
+100,Shajara,1948-1949,1948-05-06,Tiberias,770,destroyed,military_assault,32.7333,35.4833,Military assault
+101,Kafr Sabt,1948-1949,1948-04-22,Tiberias,480,destroyed,fear_of_attack,32.7500,35.4667,Capitulation
+102,Samra,1948-1949,1948-04-21,Tiberias,290,destroyed,fear_of_attack,32.7333,35.5667,Capitulation
+103,Samakh,1948-1949,1948-04-28,Tiberias,3460,destroyed,military_assault,32.7050,35.5758,Military assault
+104,Ubeidiya,1948-1949,1948-03-05,Tiberias,870,destroyed,fear_of_attack,32.7167,35.5333,Fear of attack
+105,Ma'dhar,1948-1949,1948-04-06,Tiberias,480,destroyed,fear_of_attack,32.7833,35.4833,Abandonment
+106,Hadatha,1948-1949,1948-06-15,Tiberias,520,destroyed,fear_of_attack,32.8500,35.4667,Abandonment
+107,Ulam,1948-1949,1948-06-14,Tiberias,720,destroyed,fear_of_attack,32.8333,35.4833,Abandonment
+108,Sirin,1948-1949,1948-06-04,Tiberias,810,destroyed,fear_of_attack,32.6667,35.4167,Abandonment
+109,Tira,1948-1949,1948-04-15,Haifa,5270,destroyed,whispering_campaign,32.7833,35.0167,Whispering campaign
+110,Indur,1948-1949,1948-05-24,Nazareth,620,destroyed,military_assault,32.6167,35.3333,Capitulation and military assault
+111,Danna,1948-1949,1948-05-28,Nazareth,190,destroyed,forced_expulsion,32.6833,35.3833,Expulsion
+112,Bira,1948-1949,1948-05-16,Nazareth,260,destroyed,fear_of_attack,32.6500,35.3000,Capitulation
+113,Yubla,1948-1949,1948-05-16,Nazareth,210,destroyed,fear_of_attack,32.6333,35.2833,Capitulation
+114,Jabbul,1948-1949,1948-05-18,Nazareth,250,destroyed,fear_of_attack,32.6667,35.3167,Capitulation and fear
+115,Kaukab Al Hawa,1948-1949,1948-05-16,Nazareth,300,destroyed,military_assault,32.7000,35.4000,Military assault
+116,Arab Al Subeih,1948-1949,1948-04-19,Tiberias,220,destroyed,fear_of_attack,32.7500,35.5333,Capitulation
+117,Murassas,1948-1949,1948-05-16,Nazareth,460,destroyed,fear_of_attack,32.6833,35.3167,Capitulation
+118,Kafra,1948-1949,1948-05-16,Nazareth,430,destroyed,fear_of_attack,32.6667,35.3500,Capitulation
+119,Hamidiya,1948-1949,1948-05-12,Beisan,220,destroyed,fear_of_attack,32.5000,35.4833,Capitulation
+120,Quimiya,1948-1949,1948-03-26,Nazareth,440,destroyed,fear_of_attack,32.6500,35.2667,Fear of attack
+121,Zir'in,1948-1949,1948-05-28,Nazareth,1420,destroyed,military_assault,32.5667,35.3333,Military assault
+122,Mazar,1948-1949,1948-05-30,Beisan,270,destroyed,military_assault,32.4833,35.4667,Military assault
+123,Nuris,1948-1949,1948-05-29,Beisan,570,destroyed,military_assault,32.5167,35.4333,Military assault and fear
+124,Khirbet Al Jaufa,1948-1949,1948-05-12,Beisan,140,destroyed,fear_of_attack,32.4667,35.5000,Capitulation
+125,Tall Al Shauk,1948-1949,1948-05-12,Beisan,120,destroyed,fear_of_attack,32.4500,35.5167,Capitulation
+126,Beisan,1948-1949,1948-05-15,Beisan,5180,destroyed,military_assault,32.5000,35.5000,Military assault and expulsion on city
+127,Ashrafiya,1948-1949,1948-05-12,Beisan,230,destroyed,fear_of_attack,32.5167,35.5333,Capitulation
+128,Farwana,1948-1949,1948-05-11,Beisan,330,destroyed,military_assault,32.4833,35.5500,Military assault
+129,Samiriya,1948-1949,1948-05-27,Beisan,250,destroyed,military_assault,32.4667,35.4833,Military assault
+130,Arida,1948-1949,1948-05-20,Beisan,150,destroyed,fear_of_attack,32.4333,35.5333,Capitulation
+131,Arab Al Khuneizir,1948-1949,1948-05-20,Beisan,320,destroyed,fear_of_attack,32.4167,35.5500,Capitulation
+132,Arab Al Safa,1948-1949,1948-05-20,Beisan,360,destroyed,fear_of_attack,32.4500,35.5667,Capitulation
+133,Arab Al Zarra'a,1948-1949,1948-05-20,Beisan,250,destroyed,fear_of_attack,32.4333,35.5833,Capitulation
+134,Arab Al Ghazawiya,1948-1949,1948-05-20,Beisan,500,destroyed,fear_of_attack,32.4667,35.6000,Capitulation
+135,Arab Al Bawati,1948-1949,1948-05-20,Beisan,1240,destroyed,fear_of_attack,32.5333,35.5667,Capitulation
+136,Arab Al Bashatiwa,1948-1949,1948-05-16,Beisan,180,destroyed,fear_of_attack,32.5500,35.5500,Capitulation
+137,Mujeidil,1948-1949,1948-07-15,Nazareth,1900,destroyed,military_assault,32.6667,35.2333,Military assault
+138,Ma'lul,1948-1949,1948-07-15,Nazareth,770,destroyed,military_assault,32.7167,35.2667,Military assault
+139,Saffuriya,1948-1949,1948-07-16,Nazareth,4330,destroyed,military_assault,32.7500,35.2833,Military assault and expulsion
+140,Beit Lahm,1948-1949,1948-04-15,Haifa,350,destroyed,military_assault,32.7500,35.1167,Military assault
+141,Waldheim,1948-1949,1948-04-15,Haifa,150,destroyed,military_assault,32.7333,35.1333,Military assault
+142,Khirbet Ras Ali,1948-1949,1948-04-15,Haifa,90,destroyed,unknown,32.7167,35.1500,Unknown
+143,Yajur,1948-1949,1948-04-25,Haifa,610,destroyed,military_assault,32.6833,35.0667,Military assault and capitulation
+144,Balad Al Sheikh,1948-1949,1948-04-25,Haifa,4120,destroyed,military_assault,32.8000,35.0833,Military assault and capitulation
+145,Arab Al Ghawarina,1948-1949,1948-04-15,Haifa,1240,destroyed,military_assault,32.7667,35.0333,Whispering and military assault
+146,Wadi'Ara,1948-1949,1948-02-27,Haifa,230,destroyed,fear_of_attack,32.6500,35.1833,Fear of attack
+147,Lajjun,1948-1949,1948-05-30,Jenin,1103,destroyed,military_assault,32.5667,35.1833,Military assault
+148,Mansi,1948-1949,1948-04-12,Haifa,810,destroyed,military_assault,32.7833,35.1000,Military assault
+149,Naghnaghiya,1948-1949,1948-04-12,Haifa,1470,destroyed,military_assault,32.7667,35.1167,Military assault
+150,Ghubayya Al Fauqa,1948-1949,1948-04-08,Haifa,990,destroyed,military_assault,32.6333,35.0167,Military assault
+151,Ghubayya Al Tahta,1948-1949,1948-04-08,Haifa,1030,destroyed,military_assault,32.6167,35.0333,Military assault
+152,Abu Shusha,1948-1949,1948-04-09,Haifa,620,destroyed,military_assault,32.5833,35.0500,Military assault
+153,Abu Zureiq,1948-1949,1948-04-12,Haifa,550,destroyed,military_assault,32.5667,35.0667,Military assault and expulsion
+154,Qira Wa Qamun,1948-1949,1948-03-15,Haifa,260,destroyed,whispering_campaign,32.5500,35.0833,Whispering campaign
+155,Kafrin,1948-1949,1948-04-12,Haifa,430,destroyed,military_assault,32.6000,35.1000,Military assault
+156,Buteimat,1948-1949,1948-05-15,Haifa,110,destroyed,fear_of_attack,32.7333,35.2000,Fear of attack
+157,Umm Al Shauf,1948-1949,1948-05-12,Haifa,480,destroyed,military_assault,32.6333,35.1333,Military assault
+158,Khubbeiza,1948-1949,1948-05-12,Haifa,290,destroyed,military_assault,32.6167,35.1500,Military assault
+159,Sabbarin,1948-1949,1948-05-12,Haifa,1700,destroyed,military_assault,32.6000,35.1667,Military assault
+160,Sindayana,1948-1949,1948-05-12,Haifa,210,destroyed,military_assault,32.5833,35.1833,Military assault
+161,Bureika,1948-1949,1948-05-05,Haifa,290,destroyed,fear_of_attack,32.5667,35.2000,Capitulation
+162,Damoyat Al Ruha,1948-1949,1948-03-15,Haifa,340,destroyed,military_assault,32.6500,35.2167,Whispering and military assault
+163,Rihaniya,1948-1949,1948-05-15,Haifa,390,destroyed,unknown,32.7000,35.1667,Unknown
+164,Umm Al Zinat,1948-1949,1948-05-15,Haifa,1470,destroyed,fear_of_attack,32.7167,35.1833,Fear of attack
+165,Khirbat Qumbaza,1948-1949,1948-05-15,Haifa,200,destroyed,unknown,32.6833,35.2000,Date uncertain
+166,Ein Ghazal,1948-1949,1948-07-24,Haifa,2170,destroyed,military_assault,32.6333,34.9500,Military assault
+167,Ijzim,1948-1949,1948-07-24,Haifa,2970,destroyed,military_assault,32.5667,34.9333,Military assault
+168,Jab'a,1948-1949,1948-07-24,Haifa,2150,destroyed,military_assault,32.5500,34.9500,Military assault
+169,Mazar,1948-1949,1948-07-15,Haifa,270,destroyed,military_assault,32.6667,35.0500,Military assault
+170,Ein Haud,1948-1949,1948-07-15,Haifa,650,destroyed,military_assault,32.6833,35.0333,Military assault
+171,Qannir,1948-1949,1948-04-25,Haifa,1200,destroyed,fear_of_attack,32.5333,35.0167,Capitulation and fear
+172,Arab Haifa,1948-1949,1948-04-21,Haifa,71000,destroyed,military_assault,32.8192,34.9992,Military assault and abandonment on city
+173,Tira,1948-1949,1948-07-16,Haifa,5270,destroyed,military_assault,32.5167,34.9500,Military assault
+174,Sarafand,1948-1949,1948-07-16,Haifa,290,destroyed,military_assault,32.5000,34.9667,Military assault and capitulation
+175,Kaft Lam,1948-1949,1948-07-16,Haifa,340,destroyed,military_assault,32.5833,34.9167,Military assault and capitulation
+176,Tantura,1948-1949,1948-05-21,Haifa,1490,destroyed,massacre,32.5167,34.9167,Expulsion after massacre
+177,Qisarya,1948-1949,1948-02-15,Haifa,960,destroyed,forced_expulsion,32.5050,34.9150,Expulsion
+178,Khirbet Al Sarkas,1948-1949,1948-04-15,Haifa,130,destroyed,forced_expulsion,32.4667,34.9333,Expulsion
+179,Dumeira,1948-1949,1948-04-01,Haifa,340,destroyed,forced_expulsion,32.4500,34.9500,Expulsion
+180,Arab Al Fuqara,1948-1949,1948-04-10,Haifa,1230,destroyed,forced_expulsion,32.4333,34.9667,Expulsion
+181,Arab Al Nufeiat,1948-1949,1948-04-10,Haifa,820,destroyed,forced_expulsion,32.4167,34.9833,Expulsion
+182,Wadi Al Hawarith,1948-1949,1948-03-15,Tulkarm,1780,destroyed,military_assault,32.3833,35.0000,Military assault and fear
+183,Raml Zeita,1948-1949,1948-04-15,Tulkarm,190,destroyed,unknown,32.3667,35.0167,Unknown
+184,Khirbet Manshiya,1948-1949,1948-04-15,Tulkarm,260,destroyed,fear_of_attack,32.3500,35.0333,Fear of attack
+185,Khirbet Zalafa,1948-1949,1948-04-15,Tulkarm,210,destroyed,fear_of_attack,32.3333,35.0500,Fear of attack
+186,Wadi Qabbani,1948-1949,1948-04-15,Tulkarm,120,destroyed,unknown,32.3167,35.0667,Unknown
+187,Qaqun,1948-1949,1948-06-05,Tulkarm,1970,destroyed,military_assault,32.3000,35.0833,Military assault
+188,Umm Khalid,1948-1949,1948-04-15,Tulkarm,970,destroyed,unknown,32.2833,34.9000,Unknown
+189,Khirbet Beit Lid,1948-1949,1948-04-05,Tulkarm,190,destroyed,fear_of_attack,32.2667,35.0167,Fear of attack
+190,Birket Ramadan,1948-1949,1948-04-15,Tulkarm,290,destroyed,unknown,32.2500,35.0333,Unknown
+191,Miska,1948-1949,1948-04-15,Tulkarm,880,destroyed,forced_expulsion,32.2333,34.9500,Expulsion
+192,Tabsar,1948-1949,1948-04-03,Tulkarm,760,destroyed,forced_expulsion,32.2167,35.0500,Fear and expulsion
+193,Kafr Saba,1948-1949,1948-05-15,Tulkarm,1270,destroyed,military_assault,32.1833,34.9167,Military assault
+194,Biyar Adas,1948-1949,1948-04-12,Tulkarm,300,destroyed,military_assault,32.1667,34.9333,Military assault
+195,Haram,1948-1949,1948-02-03,Jaffa,520,destroyed,fear_of_attack,32.1500,34.8167,Fear of attack
+196,Jalil,1948-1949,1948-03-15,Jaffa,1030,destroyed,fear_of_attack,32.1333,34.8333,Fear of attack
+197,Arab Abu Kischk,1948-1949,1948-03-30,Jaffa,1900,destroyed,fear_of_attack,32.1167,34.8500,Fear and capitulation
+198,Arab Al Sawalima,1948-1949,1948-03-30,Jaffa,800,destroyed,fear_of_attack,32.1000,34.8667,Fear and capitulation
+199,Mirr,1948-1949,1948-03-01,Jaffa,170,destroyed,fear_of_attack,32.0833,34.8833,Fear of attack
+200,Cheikh Muwannis,1948-1949,1948-03-30,Jaffa,1930,destroyed,military_assault,32.1083,34.8042,Military assault and fear
+201,Ras Al Ein,1948-1949,1948-07-13,Ramle,620,destroyed,military_assault,32.0833,34.9333,Military assault
+202,Majdal Yaba,1948-1949,1948-07-13,Ramle,1520,destroyed,military_assault,32.0667,34.9500,Military assault
+203,Fajja,1948-1949,1948-05-15,Jaffa,1200,destroyed,whispering_campaign,32.0500,34.9167,Whispering campaign
+204,Jammasin,1948-1949,1948-03-17,Jaffa,1510,destroyed,fear_of_attack,32.0333,34.8500,Fear of attack
+205,Mas'udiya,1948-1949,1947-12-25,Jaffa,850,destroyed,fear_of_attack,32.0167,34.8667,Fear of attack
+206,Sarona,1948-1949,1948-04-15,Jaffa,270,destroyed,unknown,32.0750,34.7917,Unknown
+207,Jaffa,1948-1949,1948-05-01,Jaffa,70000,destroyed,military_assault,32.0542,34.7617,Military assault on city
+208,Salama,1948-1949,1948-04-25,Jaffa,6670,destroyed,military_assault,32.0583,34.8083,Military assault
+209,Kheiriya,1948-1949,1948-04-25,Jaffa,1420,destroyed,military_assault,32.0417,34.8250,Military assault
+210,Muzeiri'a,1948-1949,1948-04-15,Jaffa,1160,destroyed,unknown,32.0250,34.8417,Unknown
+211,Qula,1948-1949,1948-07-10,Ramle,1010,destroyed,military_assault,32.0083,34.9583,Military assault
+212,Rantiya,1948-1949,1948-04-28,Ramle,590,destroyed,military_assault,31.9917,34.9750,Military assault
+213,Yahudiya,1948-1949,1948-05-04,Jaffa,5650,destroyed,military_assault,32.1000,34.8917,Military assault
+214,Saqiya,1948-1949,1948-04-25,Jaffa,1100,destroyed,military_assault,32.0833,34.9083,Military assault
+215,Yazur,1948-1949,1948-05-01,Jaffa,4030,destroyed,military_assault,32.0333,34.8333,Capitulation and military assault
+216,Tira,1948-1949,1948-07-10,Ramle,5270,destroyed,military_assault,31.9750,34.9417,Military assault
+217,Wilhelma,1948-1949,1948-07-10,Ramle,890,destroyed,military_assault,31.9583,34.9583,Military assault
+218,Kafr Ana,1948-1949,1948-04-25,Jaffa,2800,destroyed,military_assault,32.0500,34.9250,Military assault
+219,Beit Dajan,1948-1949,1948-04-25,Jaffa,3840,destroyed,fear_of_attack,32.0667,34.9417,Capitulation
+220,Safiriya,1948-1949,1948-04-15,Ramle,3070,destroyed,unknown,31.9417,34.9750,Unknown
+221,Deir Tarif,1948-1949,1948-07-10,Ramle,1750,destroyed,military_assault,31.9250,34.9917,Military assault
+222,Beit Nabala,1948-1949,1948-05-13,Ramle,2310,destroyed,fear_of_attack,31.9083,35.0083,Abandonment
+223,Jindas,1948-1949,1948-07-10,Ramle,1420,destroyed,unknown,31.8917,35.0250,Unknown
+224,Haditha,1948-1949,1948-07-12,Ramle,760,destroyed,military_assault,31.8750,35.0417,Military assault
+225,Sarafand Al Amar,1948-1949,1948-04-15,Ramle,1950,destroyed,unknown,31.8583,35.0583,Unknown
+226,Lydda,1948-1949,1948-07-11,Ramle,18250,destroyed,forced_expulsion,31.9522,34.8886,Expulsion and military assault on city
+227,Ramle,1948-1949,1948-07-12,Ramle,15160,destroyed,forced_expulsion,31.9294,34.8667,Expulsion and military assault on city
+228,Deir Abu Salama,1948-1949,1948-07-13,Ramle,60,destroyed,military_assault,31.9083,34.9000,Military assault
+229,Khirbet AL Dhuheiriya,1948-1949,1948-07-10,Ramle,100,destroyed,military_assault,31.8917,34.9167,Military assault
+230,Jimzu,1948-1949,1948-07-10,Ramle,1510,destroyed,military_assault,31.8750,34.9333,Military assault
+231,Khirbet Zakariya,1948-1949,1948-07-12,Ramle,200,destroyed,military_assault,31.8583,34.9500,Military assault and capitulation
+232,Daniyal,1948-1949,1948-07-10,Ramle,410,destroyed,military_assault,31.8417,34.9667,Military assault
+233,Abu Al Fadl,1948-1949,1948-05-09,Ramle,510,destroyed,fear_of_attack,31.8250,34.9833,Capitulation
+234,Sarafand AL Kharab,1948-1949,1948-04-20,Ramle,290,destroyed,fear_of_attack,31.8083,35.0000,Fear of attack
+235,Shilta,1948-1949,1948-07-15,Ramle,100,destroyed,military_assault,31.7917,35.0167,Military assault
+236,Burj,1948-1949,1948-07-15,Ramle,480,destroyed,military_assault,31.7750,35.0333,Military assault
+237,Bir Ma'in,1948-1949,1948-07-15,Ramle,510,destroyed,military_assault,31.7583,35.0500,Military assault
+238,Beit Shanna,1948-1949,1948-07-15,Ramle,210,destroyed,military_assault,31.7417,35.0667,Military assault
+239,Salbit,1948-1949,1948-07-15,Ramle,510,destroyed,military_assault,31.7250,35.0833,Military assault
+240,Qubab,1948-1949,1948-05-15,Ramle,1980,destroyed,military_assault,31.7083,35.1000,Military assault
+241,Barfiliya,1948-1949,1948-07-14,Ramle,730,destroyed,military_assault,31.6917,35.1167,Military assault
+242,Kharruba,1948-1949,1948-07-12,Ramle,170,destroyed,military_assault,31.6750,35.1333,Military assault
+243,Khirbet Al Kunaisiya,1948-1949,1948-07-10,Ramle,40,destroyed,military_assault,31.6583,35.1500,Military assault
+244,Innaba,1948-1949,1948-07-10,Ramle,1420,destroyed,military_assault,31.6417,35.1667,Military assault
+245,Barriya,1948-1949,1948-07-10,Ramle,510,destroyed,military_assault,31.6250,35.1833,Military assault
+246,Abu Shusha,1948-1949,1948-05-14,Ramle,870,destroyed,military_assault,31.8333,34.9167,Military assault near Ramle
+247,Na'ana,1948-1949,1948-05-14,Ramle,1470,destroyed,fear_of_attack,31.8167,34.9333,Fear of attack
+248,Bir Salim,1948-1949,1948-05-09,Ramle,210,destroyed,military_assault,31.8000,34.9500,Military assault
+249,Wadi Hunein,1948-1949,1948-04-17,Ramle,1620,destroyed,fear_of_attack,31.7833,34.9667,Capitulation
+250,Zarnuqa,1948-1949,1948-05-27,Ramle,2380,destroyed,forced_expulsion,31.7667,34.9833,Expulsion
+251,Qubeiba,1948-1949,1948-05-27,Ramle,1720,destroyed,forced_expulsion,31.7500,35.0000,Expulsion
+252,Aqir,1948-1949,1948-05-15,Ramle,2430,destroyed,military_assault,31.8167,34.8500,Military assault
+253,Nabi Rubin,1948-1949,1948-06-01,Ramle,1420,destroyed,forced_expulsion,31.7333,34.8167,Expulsion
+254,Arab Sukrir,1948-1949,1948-05-25,Ramle,390,destroyed,military_assault,31.7167,34.8333,Military assault
+255,Yibna,1948-1949,1948-06-04,Ramle,5420,destroyed,military_assault,31.8667,34.7500,Military assault and expulsion
+256,Mighrar,1948-1949,1948-05-18,Gaza,540,destroyed,military_assault,31.5833,34.5667,Military assault
+257,Bash-Shit,1948-1949,1948-05-13,Gaza,620,destroyed,military_assault,31.5667,34.5833,Military assault
+258,Qatra,1948-1949,1948-05-15,Gaza,1210,destroyed,military_assault,31.5500,34.6000,Military assault and expulsion
+259,Seidun,1948-1949,1948-05-15,Gaza,210,destroyed,unknown,31.5333,34.6167,Unknown
+260,Mansura,1948-1949,1948-04-20,Gaza,90,destroyed,military_assault,31.5167,34.6333,Military assault
+261,Khulda,1948-1949,1948-04-06,Ramle,280,destroyed,military_assault,31.8000,34.8833,Military assault
+262,Shashma,1948-1949,1948-05-14,Gaza,280,destroyed,fear_of_attack,31.7833,34.7000,Capitulation
+263,Mukheizin,1948-1949,1948-04-20,Gaza,200,destroyed,military_assault,31.7667,34.7167,Military assault
+264,Sajad,1948-1949,1948-05-15,Gaza,470,destroyed,unknown,31.7500,34.7333,Unknown
+265,Qazaza,1948-1949,1948-07-09,Hebron,940,destroyed,fear_of_attack,31.7333,34.7500,Capitulation
+266,Jilya,1948-1949,1948-07-09,Ramle,330,destroyed,fear_of_attack,31.7167,34.7667,Capitulation
+267,Kheima,1948-1949,1948-05-15,Gaza,190,destroyed,unknown,31.7000,34.7833,Unknown
+268,Huraniya,1948-1949,1948-05-15,Gaza,310,destroyed,unknown,31.6833,34.8000,Unknown
+269,Tina,1948-1949,1948-07-08,Gaza,750,destroyed,military_assault,31.6667,34.8167,Military assault
+270,Idhnibba,1948-1949,1948-07-09,Hebron,490,destroyed,fear_of_attack,31.6500,34.8333,Capitulation
+271,Mughallis,1948-1949,1948-07-09,Hebron,540,destroyed,fear_of_attack,31.6333,34.8500,Capitulation
+272,Bureij,1948-1949,1948-05-15,Gaza,510,destroyed,unknown,31.6167,34.8667,Unknown
+273,Masmiya Al Kabira,1948-1949,1948-07-08,Gaza,2410,destroyed,military_assault,31.6000,34.8833,Military assault
+274,Masmiya Al Saghira,1948-1949,1948-07-08,Gaza,530,destroyed,military_assault,31.5833,34.9000,Military assault
+275,Qastina,1948-1949,1948-07-09,Gaza,890,destroyed,military_assault,31.5667,34.9167,Military assault and capitulation
+276,Tall AL Turmus,1948-1949,1948-07-15,Gaza,760,destroyed,fear_of_attack,31.5500,34.9333,Fear of attack
+277,Yasur,1948-1949,1948-06-11,Gaza,1070,destroyed,military_assault,31.5333,34.9500,Military assault
+278,Batani Al Sharqi,1948-1949,1948-05-13,Gaza,650,destroyed,military_assault,31.5167,34.9667,Military assault
+279,Batani AL Gharbi,1948-1949,1948-05-13,Gaza,980,destroyed,military_assault,31.5000,34.9833,Military assault
+280,Barqa,1948-1949,1948-05-13,Gaza,1180,destroyed,military_assault,31.4833,35.0000,Military assault
+281,Isdud,1948-1949,1948-10-28,Gaza,4620,destroyed,military_assault,31.8025,34.6503,Military assault and expulsion
+282,Beit Datas,1948-1949,1948-05-11,Gaza,2750,destroyed,military_assault,31.7333,34.5667,Military assault
+283,Sawafir AL Shamaliyya,1948-1949,1948-05-18,Gaza,1030,destroyed,fear_of_attack,31.7167,34.5833,Fear of attack
+284,Sawafir Al Gharbiyya,1948-1949,1948-05-18,Gaza,1030,destroyed,fear_of_attack,31.7000,34.6000,Fear of attack
+285,Sawafir Al Sharqiyya,1948-1949,1948-05-18,Gaza,960,destroyed,fear_of_attack,31.6833,34.6167,Fear of attack
+286,Hamam,1948-1949,1948-11-04,Gaza,5010,destroyed,military_assault,31.6667,34.6333,Military assault
+287,Julis,1948-1949,1948-06-11,Gaza,1030,destroyed,military_assault,31.6500,34.6500,Military assault
+288,Ibdis,1948-1949,1948-07-08,Gaza,540,destroyed,military_assault,31.6333,34.6667,Military assault
+289,Jaladiya,1948-1949,1948-05-15,Gaza,360,destroyed,unknown,31.6167,34.6833,Unknown
+290,Bi'lin,1948-1949,1948-05-15,Gaza,180,destroyed,unknown,31.6000,34.7000,Unknown
+291,Barqusiya,1948-1949,1948-05-15,Gaza,510,destroyed,unknown,31.5833,34.7167,Unknown
+292,Tel AL Safi,1948-1949,1948-07-09,Hebron,1290,destroyed,military_assault,31.7000,34.8500,Military assault
+293,Deir Al Dubban,1948-1949,1948-10-23,Hebron,730,destroyed,military_assault,31.6833,34.9833,Military assault
+294,Ajjur,1948-1949,1948-07-23,Hebron,3730,destroyed,military_assault,31.6667,35.0000,Military assault
+295,Zakariya,1950-1966,1950-06-01,Hebron,1180,destroyed,forced_expulsion,31.6500,35.0167,Late expulsion
+296,Ra'na,1948-1949,1948-10-22,Hebron,190,destroyed,military_assault,31.6333,35.0333,Military assault
+297,Zikrin,1948-1949,1948-10-22,Hebron,960,destroyed,military_assault,31.6167,35.0500,Military assault
+298,Summeil,1948-1949,1948-07-15,Hebron,950,destroyed,military_assault,31.6000,35.0667,Military assault
+299,Zeita,1948-1949,1948-07-17,Hebron,330,destroyed,military_assault,31.5833,35.0833,Military assault
+300,Juseir,1948-1949,1948-07-17,Hebron,1180,destroyed,military_assault,31.5667,35.1000,Military assault
+301,Hatta,1948-1949,1948-07-17,Hebron,970,destroyed,military_assault,31.5500,35.1167,Military assault
+302,Katariya,1948-1949,1948-07-17,Hebron,170,destroyed,military_assault,31.5333,35.1333,Military assault
+303,Beit'Affa,1948-1949,1948-05-15,Gaza,700,destroyed,unknown,31.7167,34.7833,Unknown
+304,Kaukaba,1948-1949,1948-05-12,Gaza,680,destroyed,fear_of_attack,31.7000,34.8000,Capitulation
+305,Beit Tima,1948-1949,1948-10-18,Gaza,1060,destroyed,military_assault,31.6833,34.8167,Military assault
+306,Majdal,1948-1949,1948-11-04,Gaza,9910,destroyed,military_assault,31.6667,34.5667,Military assault and remained then expelled
+307,Jura,1948-1949,1948-11-04,Gaza,2420,destroyed,military_assault,31.6500,34.5833,Military assault
+308,Khirbat Khisas,1948-1949,1948-11-04,Gaza,530,destroyed,military_assault,31.6333,34.6000,Military assault
+309,Ni'ilya,1948-1949,1948-11-04,Gaza,1310,destroyed,military_assault,31.6167,34.6167,Military assault
+310,Barbara,1948-1949,1948-11-04,Gaza,2410,destroyed,military_assault,31.6000,34.6333,Military assault
+311,Jiyya,1948-1949,1948-11-04,Gaza,1230,destroyed,military_assault,31.5833,34.6500,Military assault
+312,Beit Jirja,1948-1949,1948-05-15,Gaza,940,destroyed,unknown,31.5667,34.6667,Unknown
+313,Deir Suneid,1948-1949,1948-05-15,Gaza,730,destroyed,unknown,31.5500,34.6833,Unknown
+314,Dimra,1948-1949,1948-11-15,Gaza,520,destroyed,fear_of_attack,31.5333,34.7000,Fear of attack
+315,Najd,1948-1949,1948-05-12,Gaza,620,destroyed,forced_expulsion,31.5167,34.7167,Expulsion
+316,Sumsum,1948-1949,1948-05-12,Gaza,950,destroyed,forced_expulsion,31.5000,34.7333,Expulsion
+317,Huleiqat,1948-1949,1948-05-12,Gaza,420,destroyed,fear_of_attack,31.4833,34.7500,Capitulation
+318,Burayr,1948-1949,1948-05-12,Gaza,2740,destroyed,military_assault,31.4667,34.7667,Military assault
+319,Faluja,1948-1949,1949-02-15,Gaza,4670,destroyed,forced_expulsion,31.6333,34.6833,Late expulsion
+320,Iraq AL Manshiya,1948-1949,1949-02-15,Gaza,2010,destroyed,forced_expulsion,31.6167,34.7000,Late expulsion
+321,Kidna,1948-1949,1948-10-22,Hebron,450,destroyed,military_assault,31.6667,34.9333,Military assault
+322,Beit Jibrin,1948-1949,1948-10-29,Hebron,2430,destroyed,military_assault,31.6083,34.8967,Military assault
+323,Qubeiba,1948-1949,1948-10-28,Hebron,1720,destroyed,military_assault,31.5917,34.9133,Military assault
+324,Dawayima,1948-1949,1948-10-29,Hebron,3710,destroyed,massacre,31.5750,34.9300,Military assault and massacre
+325,Deir Nakh-khas,1948-1949,1948-10-29,Hebron,590,destroyed,military_assault,31.5583,34.9467,Military assault
+326,Khirbet Umm Burj,1948-1949,1948-05-15,Hebron,250,destroyed,unknown,31.5417,34.9633,Unknown
+327,Deir Muheisin,1948-1949,1948-04-06,Jerusalem,460,destroyed,military_assault,31.8333,35.0500,Military assault
+328,Beit Jiz,1948-1949,1948-04-20,Jerusalem,550,destroyed,military_assault,31.8167,35.0333,Military assault
+329,Beit Susin,1948-1949,1948-04-20,Jerusalem,210,destroyed,military_assault,31.8000,35.0167,Military assault
+330,Islin,1948-1949,1948-07-18,Jerusalem,260,destroyed,military_assault,31.7833,35.0000,Military assault
+331,Ishwa,1948-1949,1948-07-18,Jerusalem,620,destroyed,military_assault,31.7667,34.9833,Military assault
+332,Sar'a,1948-1949,1948-07-18,Jerusalem,560,destroyed,military_assault,31.7500,34.9667,Military assault
+333,Deir Rafat,1948-1949,1948-07-18,Jerusalem,430,destroyed,military_assault,31.7333,34.9500,Military assault
+334,Artuf,1948-1949,1948-07-18,Jerusalem,350,destroyed,military_assault,31.7167,34.9333,Military assault
+335,Deiraban,1948-1949,1948-10-19,Hebron,2100,destroyed,military_assault,31.7000,35.0833,Military assault
+336,Beit Mahsir,1948-1949,1948-05-10,Jerusalem,2400,destroyed,military_assault,31.7833,35.1167,Military assault
+337,Deir Aiyib,1948-1949,1948-04-15,Jerusalem,320,destroyed,military_assault,31.7667,35.1333,Military assault
+338,Kasla,1948-1949,1948-07-17,Jerusalem,280,destroyed,military_assault,31.7500,35.1500,Military assault
+339,Deir AL Hawa,1948-1949,1948-10-19,Hebron,600,destroyed,military_assault,31.7333,35.1667,Military assault
+340,Sufla,1948-1949,1948-10-19,Hebron,60,destroyed,military_assault,31.7167,35.1833,Military assault
+341,Jarash,1948-1949,1948-10-21,Hebron,190,destroyed,military_assault,31.7000,35.2000,Military assault
+342,Beit Nattif,1948-1949,1948-10-21,Hebron,2494,destroyed,military_assault,31.6833,35.1167,Military assault
+343,Beit Itab,1948-1949,1948-10-21,Hebron,540,destroyed,military_assault,31.6667,35.1333,Military assault
+344,Beit Umm AL Meis,1948-1949,1948-10-21,Hebron,70,destroyed,military_assault,31.6500,35.1500,Military assault
+345,Saris,1948-1949,1948-04-16,Jerusalem,560,destroyed,military_assault,31.7833,35.0667,Military assault
+346,Allar,1948-1949,1948-10-22,Hebron,440,destroyed,military_assault,31.7667,35.0833,Military assault
+347,Ras Abu Ammar,1948-1949,1948-10-21,Hebron,620,destroyed,military_assault,31.7500,35.1000,Late expulsion
+348,Qabu,1948-1949,1948-10-22,Hebron,260,destroyed,military_assault,31.7333,35.1167,Military assault
+349,Walaja,1948-1949,1948-10-21,Hebron,1650,destroyed,military_assault,31.7167,35.1333,Military assault
+350,Khirbet Al Umir,1948-1949,1948-10-21,Hebron,270,destroyed,military_assault,31.7000,35.1500,Military assault
+351,Deir AL Sheick,1948-1949,1948-10-21,Jerusalem,220,destroyed,military_assault,31.7333,35.2000,Military assault
+352,Aqqur,1948-1949,1948-07-13,Jerusalem,40,destroyed,military_assault,31.7167,35.2167,Military assault
+353,Suba,1948-1949,1948-07-13,Jerusalem,620,destroyed,military_assault,31.7000,35.2333,Military assault
+354,Sataf,1948-1949,1948-07-13,Jerusalem,540,destroyed,military_assault,31.6833,35.2500,Military assault
+355,Jura,1948-1949,1948-05-15,Jerusalem,420,destroyed,unknown,31.6667,35.2667,Unknown
+356,Qastal,1948-1949,1948-04-03,Jerusalem,90,destroyed,military_assault,31.8044,35.1078,Military assault
+357,Beit Naqquba,1948-1949,1948-04-15,Jerusalem,240,destroyed,military_assault,31.8500,35.1333,Military assault
+358,Beit Thul,1948-1949,1948-05-15,Jerusalem,350,destroyed,unknown,31.8333,35.1500,Unknown
+359,Qaluniya,1948-1949,1948-04-15,Jerusalem,910,destroyed,military_assault,31.8167,35.1667,Military assault
+360,Ein Karim,1948-1949,1948-04-10,Jerusalem,3180,destroyed,fear_of_attack,31.7656,35.1589,Capitulation
+361,Maliha,1948-1949,1948-04-21,Jerusalem,1940,destroyed,fear_of_attack,31.7500,35.1750,Capitulation
+362,Deir Yassin,1948-1949,1948-04-09,Jerusalem,600,destroyed,massacre,31.7857,35.1547,Military assault and expulsion - Massacre
+363,Lifta,1948-1949,1948-01-15,Jerusalem,2550,destroyed,military_assault,31.7944,35.1872,Military assault
+364,Jammama,1948-1949,1948-05-22,Gaza,150,destroyed,military_assault,31.5833,34.5833,Military assault
+365,Arab Al Jurabat,1948-1949,1948-05-15,Beersheba,290,destroyed,unknown,31.2500,34.8333,Unknown
+366,Huj,1948-1949,1948-05-31,Beersheba,810,destroyed,forced_expulsion,31.4833,34.6833,Expulsion
+367,Muharraqa,1948-1949,1948-05-25,Gaza,480,destroyed,military_assault,31.5000,34.6667,Military assault
+368,Koufakha,1948-1949,1948-05-25,Gaza,500,destroyed,military_assault,31.5167,34.6833,Military assault
+369,Beersheba,1948-1949,1948-10-21,Beersheba,6490,destroyed,military_assault,31.2518,34.7913,Military assault and expulsion on city
+370,Nuqeib,1948-1949,1948-05-14,Beersheba,520,destroyed,forced_expulsion,31.2000,34.8167,Expulsion
+371,Khirbat Sarona,1948-1949,1948-05-15,Beersheba,150,destroyed,unknown,31.2333,34.8500,Unknown
+372,Arab Al Mawasi,1948-1949,1948-11-02,Gaza,560,destroyed,forced_expulsion,31.3667,34.3000,Expulsion
+373,Arab Al Samakiya,1948-1949,1948-05-15,Beersheba,650,destroyed,unknown,31.3500,34.5833,Unknown
+374,Bayarrat Hannun,1948-1949,1948-04-15,Haifa,190,destroyed,forced_expulsion,32.5333,34.9667,Fear and expulsion
+375,Arab Al Bara,1948-1949,1948-04-15,Haifa,280,destroyed,forced_expulsion,32.5167,34.9833,Fear and expulsion
+376,Hirbiya,1948-1949,1948-10-15,Gaza,2240,destroyed,military_assault,31.5500,34.5500,Military assault and expulsion
+377,Shu'ut,1948-1949,1948-08-15,Beersheba,300,destroyed,military_assault,31.1667,34.7500,Fear and military assault
+378,Arab Al Sakhina,1948-1949,1948-05-15,Beersheba,530,destroyed,unknown,31.1500,34.7833,Unknown
+379,Khan Al Duweir,1948-1949,1948-05-15,Hebron,320,destroyed,unknown,31.6500,34.9667,Unknown
+380,Iraq Suweidan,1948-1949,1948-07-08,Gaza,660,destroyed,military_assault,31.5333,34.7333,Military assault
+381,Wa'arat Al Sarris,1948-1949,1948-05-15,Gaza,180,destroyed,unknown,31.5167,34.7500,Unknown
+382,Hawsha,1948-1949,1948-11-15,Hebron,200,destroyed,military_assault,31.6333,35.0167,Military assault
+383,Khirbet Kasayir,1948-1949,1948-11-15,Hebron,530,destroyed,military_assault,31.6167,35.0333,Military assault
+384,Khirbet Al Damun,1948-1949,1948-04-15,Acre,340,destroyed,military_assault,32.9333,35.3167,Fear and military assault
+385,Khirbet Lid Al Awadin,1948-1949,1948-05-15,Acre,640,destroyed,unknown,32.9167,35.3333,Unknown
+386,Ein Al Mansi,1948-1949,1948-04-15,Nazareth,90,destroyed,military_assault,32.6333,35.3667,Military assault
+387,Atlit,1948-1949,1948-05-15,Haifa,150,destroyed,unknown,32.6917,34.9383,Unknown
+388,Majdal Yaba,1948-1949,1948-07-10,Ramle,1520,destroyed,military_assault,32.0833,34.9500,Military assault
+389,Arab Abu Rizik,1948-1949,1948-03-15,Jaffa,1420,destroyed,fear_of_attack,32.0667,34.8833,Fear of attack
+390,Manshiya,1948-1949,1948-05-15,Jaffa,260,destroyed,unknown,32.0500,34.9000,Unknown
+391,Harrawi,1948-1949,1948-05-15,Beisan,80,destroyed,unknown,32.4833,35.5833,Unknown
+392,Arab Al Suyyad,1948-1949,1948-05-15,Tiberias,100,destroyed,unknown,32.7667,35.5500,Unknown
+393,Imwas,1967,1967-06-07,Ramallah,2200,destroyed,forced_expulsion,31.8397,34.9894,Expulsion after Six-Day War
+394,Yalu,1967,1967-06-07,Ramallah,1644,destroyed,forced_expulsion,31.8456,34.9728,Expulsion after Six-Day War
+395,Beit Nuba,1967,1967-06-08,Ramallah,1350,destroyed,forced_expulsion,31.8525,34.9562,Expulsion after Six-Day War
+396,Latroun,1967,1967-06-07,Ramallah,293,destroyed,forced_expulsion,31.8361,34.9850,Expulsion after Six-Day War
+397,Beit Awwa,1967,1967-06-10,Hebron,1200,destroyed,forced_expulsion,31.4667,35.0333,Expulsion after Six-Day War
+398,Beit Mirsim,1967,1967-06-10,Hebron,340,destroyed,forced_expulsion,31.4833,35.0500,Expulsion after Six-Day War
+399,Quneitra,1967,1967-06-10,Golan Heights,20000,destroyed,forced_expulsion,33.1258,35.8236,Syrian city - Complete destruction after occupation
+400,Sufsafa,1967,1967-06-11,Golan Heights,800,destroyed,forced_expulsion,33.2167,35.7833,Golan Heights village
+401,Ain Fit,1967,1967-06-11,Golan Heights,650,destroyed,forced_expulsion,33.1833,35.7667,Golan Heights village
+402,Khisfin,1967,1967-06-11,Golan Heights,920,destroyed,forced_expulsion,33.2500,35.8167,Golan Heights village
+403,Fiq,1967,1967-06-11,Golan Heights,1400,destroyed,forced_expulsion,32.7667,35.6833,Golan Heights village
+404,Rafid,1967-2023,1974-06-01,Golan Heights,850,partially_destroyed,administrative_demolition,32.7500,35.7167,Ongoing displacement pressures
+405,Mughr al-Khayt,1967-2023,1986-03-15,Safad,200,destroyed,administrative_demolition,33.0333,35.5500,Post-1967 demolition
+406,Ein Hod,1967-2023,1988-05-20,Haifa,650,unrecognized,administrative_demolition,32.6833,35.0333,Unrecognized village - ongoing displacement
+407,Al-Araqib,1967-2023,2010-07-27,Beersheba,300,demolished_multiple,administrative_demolition,31.2167,34.9833,Demolished over 200 times since 2010
+408,Umm al-Hiran,1967-2023,2017-01-18,Beersheba,700,demolished,administrative_demolition,31.2833,35.0167,Demolition and forced displacement
+409,Susiya,1967-2023,2015-08-03,Hebron,340,under_threat,administrative_demolition,31.4167,35.1333,Ongoing demolition threats
+410,Khan al-Ahmar,2023-present,2023-ongoing,Jerusalem,180,under_threat,administrative_demolition,31.7833,35.3167,Current displacement threat
+411,Masafer Yatta,2023-present,2023-ongoing,Hebron,1300,under_threat,administrative_demolition,31.4000,35.2000,Multiple communities under threat
+412,Silwan,2023-present,2023-ongoing,Jerusalem,33000,partial_displacement,administrative_demolition,31.7708,35.2358,Ongoing forced displacement in East Jerusalem
+413,Sheikh Jarrah,2023-present,2023-ongoing,Jerusalem,3000,partial_displacement,administrative_demolition,31.7906,35.2281,Ongoing forced displacement in East Jerusalem
+414,Al-Walaja,2023-present,2023-ongoing,Bethlehem,2200,under_threat,administrative_demolition,31.7167,35.1500,Wall construction and land confiscation
+415,Jabal al-Baba,2023-present,2023-ongoing,Jerusalem,400,demolished,administrative_demolition,31.7500,35.2833,Bedouin community demolished
+416,Ras Jrabah,2023-present,2023-ongoing,Nablus,180,under_threat,administrative_demolition,32.1833,35.3167,Demolition threats
+417,Al-Samu,2023-present,2023-ongoing,Hebron,450,partial_displacement,military_assault,31.3833,35.0667,Raids and home demolitions
+418,Beita,2023-present,2023-ongoing,Nablus,12000,under_threat,military_assault,32.1500,35.3000,Ongoing military raids and settler attacks

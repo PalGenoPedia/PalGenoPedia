@@ -1,0 +1,549 @@
+{
+  "generated": "2026-08-25",
+  "count": 54,
+  "pages": [
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/deir-yassin/",
+      "path": "/historical-events/massacres/deir-yassin/",
+      "lang": "en",
+      "section": "massacres",
+      "id": "hist001",
+      "slug": "deir-yassin",
+      "details": 39,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/de/deir-yassin/",
+      "path": "/historical-events/massacres/de/deir-yassin/",
+      "lang": "de",
+      "section": "massacres",
+      "id": "hist001",
+      "slug": "deir-yassin",
+      "details": 39,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/ar/deir-yassin/",
+      "path": "/historical-events/massacres/ar/deir-yassin/",
+      "lang": "ar",
+      "section": "massacres",
+      "id": "hist001",
+      "slug": "deir-yassin",
+      "details": 39,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/tantura/",
+      "path": "/historical-events/massacres/tantura/",
+      "lang": "en",
+      "section": "massacres",
+      "id": "hist002",
+      "slug": "tantura",
+      "details": 63,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/de/tantura/",
+      "path": "/historical-events/massacres/de/tantura/",
+      "lang": "de",
+      "section": "massacres",
+      "id": "hist002",
+      "slug": "tantura",
+      "details": 63,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/ar/tantura/",
+      "path": "/historical-events/massacres/ar/tantura/",
+      "lang": "ar",
+      "section": "massacres",
+      "id": "hist002",
+      "slug": "tantura",
+      "details": 63,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/lydda-and-ramle/",
+      "path": "/historical-events/massacres/lydda-and-ramle/",
+      "lang": "en",
+      "section": "massacres",
+      "id": "hist003",
+      "slug": "lydda-and-ramle",
+      "details": 55,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/de/lydda-and-ramle/",
+      "path": "/historical-events/massacres/de/lydda-and-ramle/",
+      "lang": "de",
+      "section": "massacres",
+      "id": "hist003",
+      "slug": "lydda-and-ramle",
+      "details": 55,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/ar/lydda-and-ramle/",
+      "path": "/historical-events/massacres/ar/lydda-and-ramle/",
+      "lang": "ar",
+      "section": "massacres",
+      "id": "hist003",
+      "slug": "lydda-and-ramle",
+      "details": 55,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/qibya/",
+      "path": "/historical-events/massacres/qibya/",
+      "lang": "en",
+      "section": "massacres",
+      "id": "hist004",
+      "slug": "qibya",
+      "details": 49,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/de/qibya/",
+      "path": "/historical-events/massacres/de/qibya/",
+      "lang": "de",
+      "section": "massacres",
+      "id": "hist004",
+      "slug": "qibya",
+      "details": 49,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/ar/qibya/",
+      "path": "/historical-events/massacres/ar/qibya/",
+      "lang": "ar",
+      "section": "massacres",
+      "id": "hist004",
+      "slug": "qibya",
+      "details": 49,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/khan-yunis-massacre/",
+      "path": "/historical-events/massacres/khan-yunis-massacre/",
+      "lang": "en",
+      "section": "massacres",
+      "id": "hist005",
+      "slug": "khan-yunis-massacre",
+      "details": 55,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/de/khan-yunis-massacre/",
+      "path": "/historical-events/massacres/de/khan-yunis-massacre/",
+      "lang": "de",
+      "section": "massacres",
+      "id": "hist005",
+      "slug": "khan-yunis-massacre",
+      "details": 55,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/ar/khan-yunis-massacre/",
+      "path": "/historical-events/massacres/ar/khan-yunis-massacre/",
+      "lang": "ar",
+      "section": "massacres",
+      "id": "hist005",
+      "slug": "khan-yunis-massacre",
+      "details": 55,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/six-day-war-al-naksa/",
+      "path": "/historical-events/massacres/six-day-war-al-naksa/",
+      "lang": "en",
+      "section": "massacres",
+      "id": "hist006",
+      "slug": "six-day-war-al-naksa",
+      "details": 70,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/de/six-day-war-al-naksa/",
+      "path": "/historical-events/massacres/de/six-day-war-al-naksa/",
+      "lang": "de",
+      "section": "massacres",
+      "id": "hist006",
+      "slug": "six-day-war-al-naksa",
+      "details": 70,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/ar/six-day-war-al-naksa/",
+      "path": "/historical-events/massacres/ar/six-day-war-al-naksa/",
+      "lang": "ar",
+      "section": "massacres",
+      "id": "hist006",
+      "slug": "six-day-war-al-naksa",
+      "details": 70,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/sabra-and-shatila/",
+      "path": "/historical-events/massacres/sabra-and-shatila/",
+      "lang": "en",
+      "section": "massacres",
+      "id": "hist007",
+      "slug": "sabra-and-shatila",
+      "details": 74,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/de/sabra-and-shatila/",
+      "path": "/historical-events/massacres/de/sabra-and-shatila/",
+      "lang": "de",
+      "section": "massacres",
+      "id": "hist007",
+      "slug": "sabra-and-shatila",
+      "details": 74,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/ar/sabra-and-shatila/",
+      "path": "/historical-events/massacres/ar/sabra-and-shatila/",
+      "lang": "ar",
+      "section": "massacres",
+      "id": "hist007",
+      "slug": "sabra-and-shatila",
+      "details": 74,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/first-intifada/",
+      "path": "/historical-events/massacres/first-intifada/",
+      "lang": "en",
+      "section": "massacres",
+      "id": "hist008",
+      "slug": "first-intifada",
+      "details": 80,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/de/first-intifada/",
+      "path": "/historical-events/massacres/de/first-intifada/",
+      "lang": "de",
+      "section": "massacres",
+      "id": "hist008",
+      "slug": "first-intifada",
+      "details": 80,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/ar/first-intifada/",
+      "path": "/historical-events/massacres/ar/first-intifada/",
+      "lang": "ar",
+      "section": "massacres",
+      "id": "hist008",
+      "slug": "first-intifada",
+      "details": 80,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/cave-of-the-patriarchs-massacre/",
+      "path": "/historical-events/massacres/cave-of-the-patriarchs-massacre/",
+      "lang": "en",
+      "section": "massacres",
+      "id": "hist009",
+      "slug": "cave-of-the-patriarchs-massacre",
+      "details": 93,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/de/cave-of-the-patriarchs-massacre/",
+      "path": "/historical-events/massacres/de/cave-of-the-patriarchs-massacre/",
+      "lang": "de",
+      "section": "massacres",
+      "id": "hist009",
+      "slug": "cave-of-the-patriarchs-massacre",
+      "details": 93,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/ar/cave-of-the-patriarchs-massacre/",
+      "path": "/historical-events/massacres/ar/cave-of-the-patriarchs-massacre/",
+      "lang": "ar",
+      "section": "massacres",
+      "id": "hist009",
+      "slug": "cave-of-the-patriarchs-massacre",
+      "details": 93,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/second-intifada/",
+      "path": "/historical-events/massacres/second-intifada/",
+      "lang": "en",
+      "section": "massacres",
+      "id": "hist010",
+      "slug": "second-intifada",
+      "details": 93,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/de/second-intifada/",
+      "path": "/historical-events/massacres/de/second-intifada/",
+      "lang": "de",
+      "section": "massacres",
+      "id": "hist010",
+      "slug": "second-intifada",
+      "details": 93,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/ar/second-intifada/",
+      "path": "/historical-events/massacres/ar/second-intifada/",
+      "lang": "ar",
+      "section": "massacres",
+      "id": "hist010",
+      "slug": "second-intifada",
+      "details": 93,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/battle-of-jenin/",
+      "path": "/historical-events/massacres/battle-of-jenin/",
+      "lang": "en",
+      "section": "massacres",
+      "id": "hist011",
+      "slug": "battle-of-jenin",
+      "details": 96,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/de/battle-of-jenin/",
+      "path": "/historical-events/massacres/de/battle-of-jenin/",
+      "lang": "de",
+      "section": "massacres",
+      "id": "hist011",
+      "slug": "battle-of-jenin",
+      "details": 96,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/ar/battle-of-jenin/",
+      "path": "/historical-events/massacres/ar/battle-of-jenin/",
+      "lang": "ar",
+      "section": "massacres",
+      "id": "hist011",
+      "slug": "battle-of-jenin",
+      "details": 96,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/operation-cast-lead/",
+      "path": "/historical-events/massacres/operation-cast-lead/",
+      "lang": "en",
+      "section": "massacres",
+      "id": "hist012",
+      "slug": "operation-cast-lead",
+      "details": 82,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/de/operation-cast-lead/",
+      "path": "/historical-events/massacres/de/operation-cast-lead/",
+      "lang": "de",
+      "section": "massacres",
+      "id": "hist012",
+      "slug": "operation-cast-lead",
+      "details": 82,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/ar/operation-cast-lead/",
+      "path": "/historical-events/massacres/ar/operation-cast-lead/",
+      "lang": "ar",
+      "section": "massacres",
+      "id": "hist012",
+      "slug": "operation-cast-lead",
+      "details": 82,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/operation-pillar-of-defense/",
+      "path": "/historical-events/massacres/operation-pillar-of-defense/",
+      "lang": "en",
+      "section": "massacres",
+      "id": "hist013",
+      "slug": "operation-pillar-of-defense",
+      "details": 57,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/de/operation-pillar-of-defense/",
+      "path": "/historical-events/massacres/de/operation-pillar-of-defense/",
+      "lang": "de",
+      "section": "massacres",
+      "id": "hist013",
+      "slug": "operation-pillar-of-defense",
+      "details": 57,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/ar/operation-pillar-of-defense/",
+      "path": "/historical-events/massacres/ar/operation-pillar-of-defense/",
+      "lang": "ar",
+      "section": "massacres",
+      "id": "hist013",
+      "slug": "operation-pillar-of-defense",
+      "details": 57,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/operation-protective-edge/",
+      "path": "/historical-events/massacres/operation-protective-edge/",
+      "lang": "en",
+      "section": "massacres",
+      "id": "hist014",
+      "slug": "operation-protective-edge",
+      "details": 101,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/de/operation-protective-edge/",
+      "path": "/historical-events/massacres/de/operation-protective-edge/",
+      "lang": "de",
+      "section": "massacres",
+      "id": "hist014",
+      "slug": "operation-protective-edge",
+      "details": 101,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/ar/operation-protective-edge/",
+      "path": "/historical-events/massacres/ar/operation-protective-edge/",
+      "lang": "ar",
+      "section": "massacres",
+      "id": "hist014",
+      "slug": "operation-protective-edge",
+      "details": 101,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/great-march-of-return/",
+      "path": "/historical-events/massacres/great-march-of-return/",
+      "lang": "en",
+      "section": "massacres",
+      "id": "hist015",
+      "slug": "great-march-of-return",
+      "details": 95,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/de/great-march-of-return/",
+      "path": "/historical-events/massacres/de/great-march-of-return/",
+      "lang": "de",
+      "section": "massacres",
+      "id": "hist015",
+      "slug": "great-march-of-return",
+      "details": 95,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/ar/great-march-of-return/",
+      "path": "/historical-events/massacres/ar/great-march-of-return/",
+      "lang": "ar",
+      "section": "massacres",
+      "id": "hist015",
+      "slug": "great-march-of-return",
+      "details": 95,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/operation-guardian-of-the-walls/",
+      "path": "/historical-events/massacres/operation-guardian-of-the-walls/",
+      "lang": "en",
+      "section": "massacres",
+      "id": "hist016",
+      "slug": "operation-guardian-of-the-walls",
+      "details": 90,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/de/operation-guardian-of-the-walls/",
+      "path": "/historical-events/massacres/de/operation-guardian-of-the-walls/",
+      "lang": "de",
+      "section": "massacres",
+      "id": "hist016",
+      "slug": "operation-guardian-of-the-walls",
+      "details": 90,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/ar/operation-guardian-of-the-walls/",
+      "path": "/historical-events/massacres/ar/operation-guardian-of-the-walls/",
+      "lang": "ar",
+      "section": "massacres",
+      "id": "hist016",
+      "slug": "operation-guardian-of-the-walls",
+      "details": 90,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/west-bank-raids-20222023/",
+      "path": "/historical-events/massacres/west-bank-raids-20222023/",
+      "lang": "en",
+      "section": "massacres",
+      "id": "hist017",
+      "slug": "west-bank-raids-20222023",
+      "details": 98,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/de/west-bank-raids-20222023/",
+      "path": "/historical-events/massacres/de/west-bank-raids-20222023/",
+      "lang": "de",
+      "section": "massacres",
+      "id": "hist017",
+      "slug": "west-bank-raids-20222023",
+      "details": 98,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/ar/west-bank-raids-20222023/",
+      "path": "/historical-events/massacres/ar/west-bank-raids-20222023/",
+      "lang": "ar",
+      "section": "massacres",
+      "id": "hist017",
+      "slug": "west-bank-raids-20222023",
+      "details": 98,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/",
+      "path": "/historical-events/massacres/",
+      "lang": "en",
+      "section": "massacres",
+      "id": "",
+      "slug": "",
+      "details": 0,
+      "indexable": true,
+      "kind": "index"
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/de/",
+      "path": "/historical-events/massacres/de/",
+      "lang": "de",
+      "section": "massacres",
+      "id": "",
+      "slug": "",
+      "details": 0,
+      "indexable": true,
+      "kind": "index"
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/ar/",
+      "path": "/historical-events/massacres/ar/",
+      "lang": "ar",
+      "section": "massacres",
+      "id": "",
+      "slug": "",
+      "details": 0,
+      "indexable": true,
+      "kind": "index"
+    }
+  ]
+}

@@ -1,0 +1,2024 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historical Events — Palestinian Documentation</title>
+    <meta name="description" content="Comprehensive documentation of 75 years of systematic violations of international law affecting the Palestinian people, 1948–2023.">
+
+    <!-- Shared design system — must come first, identical to war-crimes-stats.html -->
+    <link rel="stylesheet" href="/Styles/unified-crisis-styles.css" />
+
+    <style>
+        /* ================================================================
+           HISTORICAL EVENTS PAGE — page-specific overrides only
+           Everything else comes from unified-crisis-styles.css
+           ================================================================ */
+
+        /* Amber/sepia accent — distinguishes pre-Oct 7 historical data from
+           the red genocide-era accent used by war-crimes-stats.html          */
+        :root {
+            --hist-color:        #7c5c2e;
+            --hist-color-light:  #a07840;
+            --hist-color-muted:  #c4a265;
+            --hist-color-bg:     rgba(124, 92, 46, 0.08);
+            --hist-color-border: rgba(124, 92, 46, 0.25);
+            --hist-color-glow:   rgba(124, 92, 46, 0.15);
+            --critical-color:    #7c5c2e;   /* override red → amber on this page */
+        }
+
+        [data-theme="dark"] {
+            --hist-color:        #c4a265;
+            --hist-color-light:  #d4b27a;
+            --hist-color-muted:  #a07840;
+            --hist-color-bg:     rgba(196, 162, 101, 0.10);
+            --hist-color-border: rgba(196, 162, 101, 0.25);
+            --hist-color-glow:   rgba(196, 162, 101, 0.15);
+            --critical-color:    #c4a265;
+        }
+
+        /* Page header — centred, same structure as .war-crimes-header */
+        .historical-header {
+            text-align: center;
+            padding: 0.6rem 0 0.5rem;
+        }
+
+        .historical-header h1,
+        .historical-header h2 {
+            color: var(--hist-color);
+        }
+
+        /* Pill badge in the header row */
+        .last-updated {
+            font-weight: 600;
+            color: white;
+            background: var(--hist-color);
+            padding: 0.4rem 1rem;
+            border-radius: 25px;
+            display: inline-block;
+            border: 2px solid var(--hist-color-border);
+            font-size: 0.8rem;
+        }
+
+        .header-meta-row {
+            justify-content: center;
+            margin-bottom: 0.25rem;
+        }
+
+        /* Override join-us-btn colour to amber on this page */
+        .join-us-btn {
+            background: linear-gradient(135deg, var(--hist-color), var(--hist-color-light)) !important;
+        }
+        .join-us-btn:hover {
+            box-shadow: 0 8px 20px var(--hist-color-glow) !important;
+        }
+
+        /* View section animation */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+        .view-section { animation-name: fadeInUp; animation-duration: 0.6s; }
+
+        /* ── Emergency/coverage banner ── */
+        .historical-banner {
+            background: linear-gradient(135deg, var(--hist-color), var(--hist-color-light));
+            color: white;
+            border-radius: 16px;
+            padding: 1.5rem 2rem;
+            margin: 1.5rem 0 2rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 1.25rem;
+            box-shadow: 0 4px 20px var(--hist-color-glow);
+            position: relative;
+            overflow: hidden;
+        }
+        .historical-banner::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(45deg, transparent 49%, rgba(255,255,255,0.06) 50%, transparent 51%);
+            pointer-events: none;
+        }
+        .banner-icon { font-size: 2.5rem; flex-shrink: 0; }
+        .banner-body { flex: 1; }
+        .banner-title {
+            font-size: 1rem;
+            font-weight: 800;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: 0.3rem;
+        }
+        .banner-subtitle {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .banner-details {
+            font-size: 0.85rem;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+        .banner-share-btn {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: 2px solid rgba(255,255,255,0.35);
+            padding: 0.6rem 1.25rem;
+            border-radius: 25px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: var(--transition-base);
+            white-space: nowrap;
+            align-self: center;
+            flex-shrink: 0;
+            font-family: var(--font-family-base);
+        }
+        .banner-share-btn:hover {
+            background: rgba(255,255,255,0.35);
+            transform: translateY(-2px);
+        }
+
+        /* ── Stats grid — 4 columns desktop, amber severity variants ── */
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.25rem;
+            margin-bottom: 1.25rem;
+        }
+
+        /* Override stat-card critical/warning colours to amber palette */
+        .stat-card {
+            background: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 0.4rem;
+            transition: var(--transition-base);
+            cursor: default;
+            text-decoration: none;
+            color: var(--text-primary);
+        }
+        .stat-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px var(--hist-color-glow);
+            border-color: var(--hist-color);
+        }
+        .stat-card.critical {
+            border-left: 4px solid var(--hist-color);
+            background: linear-gradient(135deg, var(--surface-color), var(--hist-color-bg));
+        }
+        .stat-card.warning {
+            border-left: 4px solid var(--hist-color-muted);
+            background: linear-gradient(135deg, var(--surface-color), rgba(196, 162, 101, 0.06));
+        }
+        .stat-card .stat-icon { font-size: 2rem; margin-bottom: 0.25rem; }
+        .stat-card .stat-number {
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--hist-color);
+            line-height: 1;
+        }
+        .stat-card .stat-label {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            line-height: 1.3;
+        }
+        .stat-card .stat-subtitle {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            line-height: 1.3;
+        }
+        .stat-card .stat-source {
+            font-size: 0.68rem;
+            color: var(--text-muted);
+            font-style: italic;
+            margin-top: 0.25rem;
+        }
+
+        /* Clickable stat card — wrap in <a> */
+        a.stat-link {
+            text-decoration: none;
+            display: block;
+        }
+        a.stat-link .stat-card:hover {
+            cursor: pointer;
+        }
+
+        /* stat-card used directly as <a> element */
+        a.stat-card {
+            text-decoration: none;
+            display: flex;
+        }
+        a.stat-card.stat-card--link {
+            cursor: pointer;
+        }
+        a.stat-card.stat-card--link:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 30px var(--hist-color-glow);
+            border-color: var(--hist-color);
+        }
+        .stat-card-cta {
+            margin-top: 0.5rem;
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--hist-color);
+            letter-spacing: 0.03em;
+            opacity: 0;
+            transform: translateY(4px);
+            transition: opacity 0.2s ease, transform 0.2s ease;
+        }
+        a.stat-card.stat-card--link:hover .stat-card-cta {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ── Section titles ── */
+        .section-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--hist-color);
+            margin-bottom: 1.25rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--hist-color-border);
+        }
+
+        /* ── Systematic pattern crisis layers ── */
+        .crisis-layers-section {
+            margin: 3rem 0;
+        }
+        .crisis-layers-section h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+        }
+        .crisis-layers-grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+        .crisis-layer {
+            background: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 1.75rem;
+            transition: var(--transition-base);
+            border-top: 3px solid var(--hist-color);
+        }
+        .crisis-layer:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px var(--hist-color-glow);
+        }
+        .layer-icon {
+            font-size: 2rem;
+            margin-bottom: 0.75rem;
+        }
+        .crisis-layer h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--hist-color);
+            margin-bottom: 0.5rem;
+        }
+        .crisis-layer p {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* ── Legal framework overview ── */
+        .legal-framework-overview {
+            margin: 3rem 0;
+        }
+        .legal-framework-overview h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+        }
+        .framework-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 1.25rem;
+        }
+        .framework-card {
+            background: var(--surface-color);
+            border: 1px solid var(--hist-color-border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            border-left: 4px solid var(--hist-color);
+            transition: var(--transition-base);
+        }
+        .framework-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px var(--hist-color-glow);
+        }
+        .framework-card h4 {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--hist-color);
+            margin-bottom: 0.6rem;
+        }
+        .framework-card p {
+            font-size: 0.83rem;
+            color: var(--text-secondary);
+            line-height: 1.55;
+            margin-bottom: 0.75rem;
+        }
+        .violation-count {
+            display: inline-block;
+            background: var(--hist-color-bg);
+            color: var(--hist-color);
+            border: 1px solid var(--hist-color-border);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        /* ── Categories tab ── */
+        .hist-categories { margin: 2.5rem 0; }
+
+        .category-section {
+            margin-bottom: 3rem;
+        }
+        .category-section h3 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--hist-color);
+            margin-bottom: 1.25rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--hist-color-border);
+        }
+        .violation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 1.25rem;
+        }
+        .violation-item {
+            background: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: var(--transition-base);
+            border-left: 3px solid var(--hist-color-border);
+            opacity: 0;
+            transform: translateY(15px);
+        }
+        .violation-item.animate-in {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+        .violation-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px var(--hist-color-glow);
+            border-left-color: var(--hist-color);
+        }
+        .violation-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+        }
+        .violation-header h4 {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            flex: 1;
+        }
+        .violation-header .violation-count {
+            flex-shrink: 0;
+        }
+        .violation-item p {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 0.75rem;
+        }
+        .legal-reference {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            background: var(--bg-secondary);
+            border-radius: 6px;
+            padding: 0.5rem 0.75rem;
+            line-height: 1.4;
+        }
+        .legal-reference strong {
+            color: var(--hist-color);
+        }
+
+        /* ── Legal Framework tab (timeline) ── */
+        .legal-actions-section { margin: 2rem 0; }
+        .legal-actions-section h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            color: var(--text-primary);
+        }
+        .legal-timeline {
+            position: relative;
+            padding-left: 2.5rem;
+        }
+        .legal-timeline::before {
+            content: '';
+            position: absolute;
+            left: 0.9rem;
+            top: 0.5rem;
+            bottom: 0.5rem;
+            width: 2px;
+            background: linear-gradient(180deg, var(--hist-color), var(--hist-color-muted), transparent);
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+            opacity: 0;
+            transform: translateY(15px);
+        }
+        .timeline-item.animate-in {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+        .timeline-marker {
+            position: absolute;
+            left: -2.05rem;
+            top: 0.35rem;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--hist-color-muted);
+            border: 2px solid var(--surface-color);
+            box-shadow: 0 0 0 2px var(--hist-color-border);
+        }
+        .timeline-item.active .timeline-marker {
+            background: var(--hist-color);
+            box-shadow: 0 0 0 3px var(--hist-color-border), 0 0 12px var(--hist-color-glow);
+        }
+        .timeline-content {
+            background: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.25rem 1.5rem;
+            transition: var(--transition-base);
+        }
+        .timeline-content:hover {
+            box-shadow: 0 4px 15px var(--hist-color-glow);
+            border-color: var(--hist-color-border);
+        }
+        .timeline-date {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--hist-color);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            margin-bottom: 0.35rem;
+        }
+        .timeline-content h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+        .timeline-content p {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 0.6rem;
+        }
+        .timeline-status {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+        }
+        .timeline-status.ongoing   { background: rgba(124,92,46,0.12); color: var(--hist-color); border: 1px solid var(--hist-color-border); }
+        .timeline-status.completed { background: rgba(39,174,96,0.12);  color: #27ae60;          border: 1px solid rgba(39,174,96,0.3); }
+        .timeline-status.pending   { background: rgba(52,152,219,0.12); color: #3498db;          border: 1px solid rgba(52,152,219,0.3); }
+
+        /* Legal resources at bottom of legal tab */
+        .legal-resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 1rem;
+            margin-top: 2.5rem;
+        }
+        .legal-resource-card {
+            background: var(--surface-color);
+            border: 1px solid var(--hist-color-border);
+            border-radius: 10px;
+            padding: 1.25rem;
+            text-decoration: none;
+            color: var(--text-primary);
+            transition: var(--transition-base);
+            display: flex;
+            gap: 0.75rem;
+            align-items: flex-start;
+        }
+        .legal-resource-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px var(--hist-color-glow);
+            border-color: var(--hist-color);
+        }
+        .legal-resource-card .link-icon { font-size: 1.5rem; flex-shrink: 0; }
+        .legal-resource-card .link-title { font-size: 0.88rem; font-weight: 700; margin-bottom: 0.25rem; }
+        .legal-resource-card .link-description { font-size: 0.75rem; color: var(--text-muted); line-height: 1.4; }
+
+        /* ── Resources tab ── */
+        .resources-section { margin: 2rem 0; }
+        .resources-section h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            color: var(--text-primary);
+        }
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        .resource-category {
+            background: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            opacity: 0;
+            transform: translateY(15px);
+        }
+        .resource-category.animate-in {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+        .resource-category h4 {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--hist-color);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--hist-color-border);
+        }
+        .resource-links { display: flex; flex-direction: column; gap: 0.6rem; }
+        .resource-link {
+            display: flex;
+            gap: 0.65rem;
+            align-items: flex-start;
+            padding: 0.6rem 0.75rem;
+            border-radius: 8px;
+            text-decoration: none;
+            color: var(--text-primary);
+            transition: var(--transition-base);
+            background: var(--bg-secondary);
+        }
+        .resource-link:hover {
+            background: var(--hist-color-bg);
+            transform: translateX(4px);
+        }
+        .resource-link .link-icon { font-size: 1rem; flex-shrink: 0; margin-top: 0.1rem; }
+        .resource-link .link-title { font-size: 0.83rem; font-weight: 600; margin-bottom: 0.15rem; }
+        .resource-link .link-description { font-size: 0.73rem; color: var(--text-muted); line-height: 1.35; }
+        .resource-link .link-content { flex: 1; }
+
+        /* ── Action section ── */
+        .action-section { margin: 3rem 0; }
+        .action-section h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+        .action-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 1.25rem;
+        }
+        .action-item {
+            background: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: var(--transition-base);
+        }
+        .action-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px var(--hist-color-glow);
+        }
+        .action-icon { font-size: 2rem; display: block; margin-bottom: 0.75rem; }
+        .action-item h4 {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+        .action-item p {
+            font-size: 0.83rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+        .action-btn {
+            background: linear-gradient(135deg, var(--hist-color), var(--hist-color-light));
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition-base);
+            text-decoration: none;
+            display: inline-block;
+            font-size: 0.85rem;
+            font-family: var(--font-family-base);
+        }
+        .action-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px var(--hist-color-glow);
+        }
+
+        /* ── Historical Massacres navigation card ── */
+        .massacres-nav-section { margin: 2.5rem 0; }
+        .massacres-nav-section .section-title { margin-bottom: 1.25rem; }
+
+        .massacre-nav-card {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            background: var(--surface-color);
+            border: 1px solid var(--hist-color-border);
+            border-left: 5px solid var(--hist-color);
+            border-radius: 16px;
+            padding: 2rem 2.25rem;
+            text-decoration: none;
+            color: var(--text-primary);
+            transition: var(--transition-base);
+            position: relative;
+            overflow: hidden;
+        }
+        .massacre-nav-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, var(--hist-color-bg), transparent 60%);
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .massacre-nav-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 35px var(--hist-color-glow);
+            border-color: var(--hist-color);
+        }
+        .massacre-nav-card:hover::before { opacity: 1; }
+
+        .mnc-icon {
+            font-size: 3.5rem;
+            flex-shrink: 0;
+            line-height: 1;
+        }
+        .mnc-body { flex: 1; }
+        .mnc-label {
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.07em;
+            color: var(--hist-color-muted);
+            margin-bottom: 0.3rem;
+        }
+        .mnc-title {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--hist-color);
+            margin-bottom: 0.45rem;
+            line-height: 1.25;
+        }
+        .mnc-description {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 0.85rem;
+        }
+        .mnc-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        .mnc-tag {
+            display: inline-block;
+            background: var(--hist-color-bg);
+            color: var(--hist-color);
+            border: 1px solid var(--hist-color-border);
+            padding: 0.2rem 0.7rem;
+            border-radius: 20px;
+            font-size: 0.73rem;
+            font-weight: 600;
+        }
+        .mnc-cta {
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .mnc-btn {
+            background: linear-gradient(135deg, var(--hist-color), var(--hist-color-light));
+            color: white;
+            border: none;
+            padding: 0.75rem 1.75rem;
+            border-radius: 25px;
+            font-weight: 700;
+            font-size: 0.88rem;
+            cursor: pointer;
+            transition: var(--transition-base);
+            white-space: nowrap;
+            font-family: var(--font-family-base);
+            pointer-events: none;   /* parent <a> handles click */
+        }
+        .massacre-nav-card:hover .mnc-btn {
+            box-shadow: 0 6px 18px var(--hist-color-glow);
+            transform: translateY(-1px);
+        }
+        .mnc-count {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .massacre-nav-card { flex-direction: column; align-items: flex-start; gap: 1.25rem; padding: 1.5rem; }
+            .mnc-cta { align-items: flex-start; }
+        }
+
+        /* ── Responsive overrides ── */
+        @media (max-width: 1200px) { .stats-row { grid-template-columns: repeat(3, 1fr); } }
+        @media (max-width: 900px)  {
+            .stats-row { grid-template-columns: repeat(2, 1fr); }
+            .crisis-layers-grid-3 { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 768px)  {
+            .stats-row { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+            .crisis-layers-grid-3 { grid-template-columns: 1fr; }
+            .historical-banner { flex-direction: column; gap: 1rem; }
+        }
+        @media (max-width: 480px)  {
+            .stats-row { grid-template-columns: repeat(2, 1fr); }
+            .violation-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+<!-- SEO_START - generated by tools/seo_inject.py - do not edit by hand -->
+    <link rel="canonical" href="https://palgenopedia.org/historical-events/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="PalGenoPedia">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="Historical Events — Palestinian Documentation">
+    <meta property="og:description" content="Comprehensive documentation of 75 years of systematic violations of international law affecting the Palestinian people, 1948–2023.">
+    <meta property="og:url" content="https://palgenopedia.org/historical-events/">
+    <meta property="og:image" content="https://palgenopedia.org/images/og-card.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="PalGenoPedia - documented war crimes, massacres and humanitarian violations concerning Palestine, 1948 to present">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Historical Events — Palestinian Documentation">
+    <meta name="twitter:description" content="Comprehensive documentation of 75 years of systematic violations of international law affecting the Palestinian people, 1948–2023.">
+    <meta name="twitter:image" content="https://palgenopedia.org/images/og-card.png">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="alternate" type="application/atom+xml" title="PalGenoPedia - documented events" href="../feed.xml">
+    <link rel="alternate" type="application/rss+xml" title="PalGenoPedia - documented events" href="../feed.rss">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "@id": "https://palgenopedia.org/historical-events/#page",
+  "url": "https://palgenopedia.org/historical-events/",
+  "name": "Historical Events — Palestinian Documentation",
+  "description": "Comprehensive documentation of 75 years of systematic violations of international law affecting the Palestinian people, 1948–2023.",
+  "inLanguage": "en",
+  "isPartOf": {
+    "@id": "https://palgenopedia.org/#website"
+  },
+  "publisher": {
+    "@id": "https://palgenopedia.org/#org"
+  }
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://palgenopedia.org/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Historical Events",
+      "item": "https://palgenopedia.org/historical-events/"
+    }
+  ]
+}
+    </script>
+    <!-- SEO_END -->
+</head>
+<!--
+    data-i18n-page-title → TranslationSystem sets document.title
+    data-i18n-meta-desc  → TranslationSystem sets <meta name="description"> content
+-->
+<body
+    data-i18n-page-title="historicalEvents.pageTitle"
+    data-i18n-meta-desc="historicalEvents.metaDescription"
+>
+
+    <!-- Header (rendered by header-component.js) -->
+    <div id="header-placeholder"></div>
+
+    <main class="main">
+
+        <!-- ══════════════════════════════════════════════════════
+             PAGE HEADER
+             ══════════════════════════════════════════════════════ -->
+        <section class="historical-header">
+            <div class="container">
+                <h1 data-i18n="historicalEvents.header.title">📜 Historical Events &amp; Systematic Oppression</h1>
+                <div class="header-meta-row" style="display:flex; gap:0.75rem; align-items:center; justify-content:center; margin-top:0.5rem; margin-bottom:0.25rem; flex-wrap:wrap;">
+                    <div class="last-updated">
+                        <span data-i18n="historicalEvents.header.coverage">Coverage: 1948 – October 6, 2023</span>
+                    </div>
+                    <a href="/volunteer.html" class="join-us-btn"
+                       style="background:linear-gradient(135deg,#7c5c2e,#a07840);color:white;text-decoration:none;padding:0.5rem 1.25rem;border-radius:25px;font-weight:700;font-size:0.85rem;border:2px solid rgba(255,255,255,0.25);"
+                       data-i18n="historicalEvents.header.joinUsBtn">🤝 Join Us — Become a Volunteer</a>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ══════════════════════════════════════════════════════
+             OVERVIEW TAB
+             ══════════════════════════════════════════════════════ -->
+        <section class="view-section active" id="overviewView">
+            <div class="container">
+
+                <!-- Coverage banner -->
+                <div class="historical-banner">
+                    <div class="banner-icon">📜</div>
+                    <div class="banner-body">
+                        <div class="banner-title" data-i18n="historicalEvents.banner.title">SEVEN DECADES OF DOCUMENTED VIOLATIONS:</div>
+                        <div class="banner-subtitle" data-i18n="historicalEvents.banner.subtitle">Systematic violations of international law since 1948</div>
+                        <div class="banner-details" data-i18n="historicalEvents.banner.details">
+                            750,000+ displaced in the Nakba &nbsp;·&nbsp; 70+ documented massacres &nbsp;·&nbsp;
+                            700,000+ settlers in occupied territory &nbsp;·&nbsp; 7,000+ political prisoners &nbsp;·&nbsp;
+                            55,000+ homes demolished since 1967
+                        </div>
+                    </div>
+                    <button class="banner-share-btn" onclick="shareHistoricalData()"
+                        data-i18n="historicalEvents.banner.shareBtn">📤 Share</button>
+                </div>
+
+                <!-- Row 1 of stats: 4 cards -->
+                <div class="stats-section" style="margin-bottom:2.5rem;">
+                    <h3 class="section-title" data-i18n="historicalEvents.sections.displacement">🏘️ Displacement &amp; Ethnic Cleansing</h3>
+                    <div class="stats-row">
+
+                        <a href="/historical-events/ethnic-cleansing/" class="stat-card critical stat-card--link" title="View Nakba villages map">
+                            <div class="stat-icon">🏚️</div>
+                            <div class="stat-number">750,000+</div>
+                            <div class="stat-label" data-i18n="historicalEvents.statCards.nakbaDisplaced.label">Palestinians Displaced — Nakba 1948</div>
+                            <div class="stat-subtitle" data-i18n="historicalEvents.statCards.nakbaDisplaced.subtitle">530+ villages destroyed or depopulated</div>
+                            <div class="stat-source">UN Conciliation Commission · 1950</div>
+                            <div class="stat-card-cta">View Villages Map →</div>
+                        </a>
+
+                        <a href="/historical-events/massacres/" class="stat-card critical stat-card--link" title="View full massacres archive">
+                            <div class="stat-icon">⚔️</div>
+                            <div class="stat-number">70+</div>
+                            <div class="stat-label" data-i18n="historicalEvents.statCards.massacres.label">Documented Massacre Events (1948–2023)</div>
+                            <div class="stat-subtitle" data-i18n="historicalEvents.statCards.massacres.subtitle">Across 75 years of occupation and conflict</div>
+                            <div class="stat-source">B'Tselem · Al-Haq · UN OCHA</div>
+                            <div class="stat-card-cta">View Archive →</div>
+                        </a>
+
+                        <div class="stat-card warning">
+                            <div class="stat-icon">🏗️</div>
+                            <div class="stat-number">55,000+</div>
+                            <div class="stat-label" data-i18n="historicalEvents.statCards.homeDemolitions.label">Palestinian Homes Demolished (1967–2023)</div>
+                            <div class="stat-subtitle" data-i18n="historicalEvents.statCards.homeDemolitions.subtitle">Average 1,000+ demolitions/year at peak</div>
+                            <div class="stat-source">ICAHD · UN OCHA</div>
+                        </div>
+
+                        <div class="stat-card warning">
+                            <div class="stat-icon">🌍</div>
+                            <div class="stat-number">700,000+</div>
+                            <div class="stat-label" data-i18n="historicalEvents.statCards.settlers.label">Israeli Settlers in Occupied West Bank</div>
+                            <div class="stat-subtitle" data-i18n="historicalEvents.statCards.settlers.subtitle">150+ illegal outposts; 60% of WB under Area C</div>
+                            <div class="stat-source">UN OCHA · 2023</div>
+                        </div>
+
+                    </div>
+
+                    <!-- Row 2 of stats: 4 cards -->
+                    <div class="stats-row">
+
+                        <div class="stat-card warning">
+                            <div class="stat-icon">🔒</div>
+                            <div class="stat-number">7,000+</div>
+                            <div class="stat-label" data-i18n="historicalEvents.statCards.prisoners.label">Palestinians Currently Detained</div>
+                            <div class="stat-subtitle" data-i18n="historicalEvents.statCards.prisoners.subtitle">Incl. 160+ children; 1,300+ under admin. detention</div>
+                            <div class="stat-source">Addameer · 2023</div>
+                        </div>
+
+                        <div class="stat-card warning">
+                            <div class="stat-icon">📅</div>
+                            <div class="stat-number">16+</div>
+                            <div class="stat-label" data-i18n="historicalEvents.statCards.blockadeYears.label">Years of Gaza Blockade (2007–2023)</div>
+                            <div class="stat-subtitle" data-i18n="historicalEvents.statCards.blockadeYears.subtitle">45%+ unemployment; 80% aid-dependent</div>
+                            <div class="stat-source">World Bank · UNCTAD · 2023</div>
+                        </div>
+
+                        <div class="stat-card warning">
+                            <div class="stat-icon">🔥</div>
+                            <div class="stat-number">1,200+</div>
+                            <div class="stat-label" data-i18n="historicalEvents.statCards.settlerAttacks.label">Documented Settler Attacks in 2023</div>
+                            <div class="stat-subtitle" data-i18n="historicalEvents.statCards.settlerAttacks.subtitle">Record high before October 7, 2023</div>
+                            <div class="stat-source">OCHA Protection of Civilians Report</div>
+                        </div>
+
+                        <div class="stat-card critical">
+                            <div class="stat-icon">💀</div>
+                            <div class="stat-number">10,000+</div>
+                            <div class="stat-label" data-i18n="historicalEvents.statCards.civilianKilled.label">Palestinians Killed by Israeli Forces (2000–2023)</div>
+                            <div class="stat-subtitle" data-i18n="historicalEvents.statCards.civilianKilled.subtitle">Incl. 3,600+ children</div>
+                            <div class="stat-source">B'Tselem · OCHA</div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Systematic Pattern section -->
+                <div class="crisis-layers-section">
+                    <h3 data-i18n="historicalEvents.sections.systematicPattern">⚖️ Systematic Pattern of Violations (1948–2023)</h3>
+                    <div class="crisis-layers-grid-3">
+
+                        <div class="crisis-layer">
+                            <div class="layer-icon">🏘️</div>
+                            <h4 data-i18n="historicalEvents.crisisLayers.ethnicCleansing.title">Ethnic Cleansing &amp; Forced Displacement</h4>
+                            <p data-i18n="historicalEvents.crisisLayers.ethnicCleansing.body">Systematic dispossession of the indigenous Palestinian population across three generations — from the Nakba (1948) and Naksa (1967) to ongoing forced evictions in Sheikh Jarrah, Silwan, and across Area C through home demolitions, settlement expansion, and reclassification of Palestinian land as Israeli state land.</p>
+                        </div>
+
+                        <div class="crisis-layer">
+                            <div class="layer-icon">⚖️</div>
+                            <h4 data-i18n="historicalEvents.crisisLayers.apartheid.title">Apartheid &amp; Legal Discrimination</h4>
+                            <p data-i18n="historicalEvents.crisisLayers.apartheid.body">Over 65 Israeli laws that discriminate against Palestinian citizens and residents, documented by Human Rights Watch and Amnesty International in landmark 2021–2022 reports. Separate and unequal legal systems operate in the same territory: Israeli civil law for settlers, harsher military law for Palestinians. UN special rapporteurs and major human rights organisations have applied the definition of apartheid under the 1973 Apartheid Convention.</p>
+                        </div>
+
+                        <div class="crisis-layer">
+                            <div class="layer-icon">🔒</div>
+                            <h4 data-i18n="historicalEvents.crisisLayers.collectivePunishment.title">Collective Punishment &amp; Siege</h4>
+                            <p data-i18n="historicalEvents.crisisLayers.collectivePunishment.body">The Gaza blockade since 2007 constitutes collective punishment under Article 33 of the Fourth Geneva Convention — punishing 2.3 million civilians for the political choices of their leadership. Combined with West Bank permit systems, movement restrictions, checkpoints, and economic isolation, UN Special Rapporteur Francesca Albanese concluded in 2024 this amounts to a structure of apartheid and genocide.</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Legal Framework Overview (overview tab) -->
+                <div class="legal-framework-overview">
+                    <h3 data-i18n="historicalEvents.sections.legalFramework">International Legal Framework — Key Instruments</h3>
+                    <div class="framework-grid">
+
+                        <div class="framework-card">
+                            <h4 data-i18n="historicalEvents.legalFrameworkCards.unResolutions.title">📜 UN Resolutions</h4>
+                            <p data-i18n="historicalEvents.legalFrameworkCards.unResolutions.body">700+ UN resolutions affirming Palestinian rights, including UNSC Resolution 242 (1967) demanding Israeli withdrawal and UNSC Resolution 2334 (2016) declaring all settlements a flagrant violation of international law.</p>
+                            <div class="violation-count" data-i18n="historicalEvents.legalFrameworkCards.unResolutions.count">700+ Resolutions — Never Enforced</div>
+                        </div>
+
+                        <div class="framework-card">
+                            <h4 data-i18n="historicalEvents.legalFrameworkCards.fourthGenevaConvention.title">🔴 Fourth Geneva Convention</h4>
+                            <p data-i18n="historicalEvents.legalFrameworkCards.fourthGenevaConvention.body">Applies to all occupied Palestinian territory since 1967. Prohibits transfer of occupying power's civilian population into occupied territory (settlements), collective punishment, and destruction of civilian property. Israel's persistent non-compliance spans 57+ years.</p>
+                            <div class="violation-count" data-i18n="historicalEvents.legalFrameworkCards.fourthGenevaConvention.count">50+ Documented Violation Categories</div>
+                        </div>
+
+                        <div class="framework-card">
+                            <h4 data-i18n="historicalEvents.legalFrameworkCards.romeStatute.title">⚖️ ICC &amp; Rome Statute</h4>
+                            <p data-i18n="historicalEvents.legalFrameworkCards.romeStatute.body">Palestine acceded to the Rome Statute in 2015. ICC Prosecutor opened a formal investigation in 2021 covering crimes since June 2014. In 2024, the ICC issued arrest warrants for Israeli officials for war crimes and crimes against humanity.</p>
+                            <div class="violation-count" data-i18n="historicalEvents.legalFrameworkCards.romeStatute.count">Active ICC Investigation &amp; Arrest Warrants</div>
+                        </div>
+
+                        <div class="framework-card">
+                            <h4 data-i18n="historicalEvents.legalFrameworkCards.icj.title">🌍 ICJ Advisory Opinion 2004</h4>
+                            <p data-i18n="historicalEvents.legalFrameworkCards.icj.body">The International Court of Justice ruled the construction of the separation wall inside occupied Palestinian territory illegal under international law and called for its dismantlement. Israel refused compliance. The ICJ is now hearing a genocide case brought by South Africa (2024).</p>
+                            <div class="violation-count" data-i18n="historicalEvents.legalFrameworkCards.icj.count">ICJ Ruling — Ignored</div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- ── Historical Massacres Archive Card ── -->
+                <div class="massacres-nav-section">
+                    <h3 class="section-title" data-i18n="historicalEvents.sections.massacresArchive">⚔️ Historical Massacres — Full Archive</h3>
+                    <a href="/historical-events/massacres/" class="massacre-nav-card">
+                        <div class="mnc-icon">🗂️</div>
+                        <div class="mnc-body">
+                            <div class="mnc-label" data-i18n="historicalEvents.massacresCard.label">Detailed Documentation</div>
+                            <div class="mnc-title" data-i18n="historicalEvents.massacresCard.title">Historical Massacres Archive (1948–2023)</div>
+                            <div class="mnc-description" data-i18n="historicalEvents.massacresCard.description">
+                                Full case-by-case documentation of 70+ documented massacre events spanning 75 years — from Deir Yassin (1948) and Khan Yunis (1956) through Sabra &amp; Shatila (1982), Jenin (2002), and Gaza military operations. Each entry includes verified casualty figures, primary sources, legal analysis, and survivor testimonies.
+                            </div>
+                            <div class="mnc-tags">
+                                <span class="mnc-tag">📅 1948–2023</span>
+                                <span class="mnc-tag">⚔️ 70+ Incidents</span>
+                                <span class="mnc-tag">📑 Primary Sources</span>
+                                <span class="mnc-tag">⚖️ Legal Analysis</span>
+                                <span class="mnc-tag">🌐 UN · B'Tselem · HRW</span>
+                            </div>
+                        </div>
+                        <div class="mnc-cta">
+                            <div class="mnc-btn" data-i18n="historicalEvents.massacresCard.btn">View Full Archive →</div>
+                            <div class="mnc-count" data-i18n="historicalEvents.massacresCard.count">70+ documented events</div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- ── Nakba Villages Map ── -->
+                <div class="massacres-nav-section">
+                    <h3 class="section-title" data-i18n="historicalEvents.sections.villagesMap">🗺️ Nakba Villages — Interactive Map</h3>
+                    <a href="/historical-events/ethnic-cleansing/" class="massacre-nav-card">
+                        <div class="mnc-icon">🗺️</div>
+                        <div class="mnc-body">
+                            <div class="mnc-label" data-i18n="historicalEvents.villagesMapCard.label">Geographic Documentation</div>
+                            <div class="mnc-title" data-i18n="historicalEvents.villagesMapCard.title">Depopulated Palestinian Villages (1948)</div>
+                            <div class="mnc-description" data-i18n="historicalEvents.villagesMapCard.description">
+                                An interactive map of Palestinian villages destroyed or depopulated during the Nakba, plotted from the ethnic-cleansing village dataset. Each marker carries the village name, district, date of depopulation, and what stands on the site today.
+                            </div>
+                            <div class="mnc-tags">
+                                <span class="mnc-tag">📅 1948</span>
+                                <span class="mnc-tag">🏚️ 418 Villages</span>
+                                <span class="mnc-tag">🗺️ Mapped</span>
+                            </div>
+                        </div>
+                        <div class="mnc-cta">
+                            <div class="mnc-btn" data-i18n="historicalEvents.villagesMapCard.btn">Open Map →</div>
+                            <div class="mnc-count" data-i18n="historicalEvents.villagesMapCard.count">418 villages plotted</div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- ── Quotes Archive ── -->
+                <div class="massacres-nav-section">
+                    <h3 class="section-title" data-i18n="historicalEvents.sections.quotesArchive">💬 Quotes Archive</h3>
+                    <a href="/historical-events/testimonies/" class="massacre-nav-card">
+                        <div class="mnc-icon">💬</div>
+                        <div class="mnc-body">
+                            <div class="mnc-label" data-i18n="historicalEvents.quotesCard.label">Primary Statements</div>
+                            <div class="mnc-title" data-i18n="historicalEvents.quotesCard.title">Documented Quotes &amp; Official Statements</div>
+                            <div class="mnc-description" data-i18n="historicalEvents.quotesCard.description">
+                                Recorded statements from political and military figures, and from UN and human-rights officials, collected with their date, speaker, and source so each can be traced back to the original record.
+                            </div>
+                            <div class="mnc-tags">
+                                <span class="mnc-tag">🗣️ Attributed</span>
+                                <span class="mnc-tag">📑 Sourced</span>
+                                <span class="mnc-tag">📅 Dated</span>
+                            </div>
+                        </div>
+                        <div class="mnc-cta">
+                            <div class="mnc-btn" data-i18n="historicalEvents.quotesCard.btn">View Archive →</div>
+                            <div class="mnc-count" data-i18n="historicalEvents.quotesCard.count">Primary-source quotes</div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+             ══════════════════════════════════════════════════════ -->
+        <section class="view-section" id="violationsView">
+            <div class="container">
+                <div class="hist-categories">
+
+                    <!-- ── 1. Massacres ── -->
+                    <div class="category-section" id="cat-massacres">
+                        <h3 data-i18n="historicalEvents.violations.categories.massacres">⚔️ Documented Massacres (1948–2023)</h3>
+                        <div class="violation-grid">
+
+                            <div class="violation-item">
+                                <div class="violation-header">
+                                    <h4 data-i18n="historicalEvents.violations.items.deirYassin.title">Deir Yassin Massacre (1948)</h4>
+                                    <span class="violation-count">107+ civilians</span>
+                                </div>
+                                <p data-i18n="historicalEvents.violations.items.deirYassin.body">On 9 April 1948, Irgun and Lehi paramilitary forces attacked the Palestinian village of Deir Yassin near Jerusalem, killing over 107 civilians including women and children. Documented by the International Red Cross and Israeli New Historians. The massacre triggered mass flight during the Nakba.</p>
+                                <div class="legal-reference">
+                                    <strong data-i18n="historicalEvents.violations.legalBasis">Legal Basis:</strong>
+                                    <span>Laws and Customs of War (1907 Hague Regulations) · Customary prohibition on killing civilians</span>
+                                </div>
+                            </div>
+
+                            <div class="violation-item">
+                                <div class="violation-header">
+                                    <h4 data-i18n="historicalEvents.violations.items.kafrQasim.title">Kafr Qasim Massacre (1956)</h4>
+                                    <span class="violation-count">49 killed</span>
+                                </div>
+                                <p data-i18n="historicalEvents.violations.items.kafrQasim.body">On 29 October 1956, Israeli border police shot dead 49 Palestinian citizens of Israel — returning farm workers — at the entrance to Kafr Qasim village for violating a curfew they were unaware of. The Israeli government later acknowledged the massacre; perpetrators received light sentences and were subsequently pardoned.</p>
+                                <div class="legal-reference">
+                                    <strong data-i18n="historicalEvents.violations.legalBasis">Legal Basis:</strong>
+                                    <span>Geneva Convention IV, Art. 27 · Prohibition on unlawful killing of civilians under occupation</span>
+                                </div>
+                            </div>
+
+                            <div class="violation-item">
+                                <div class="violation-header">
+                                    <h4 data-i18n="historicalEvents.violations.items.sabraShatila.title">Sabra &amp; Shatila (1982)</h4>
+                                    <span class="violation-count">800–3,500 killed</span>
+                                </div>
+                                <p data-i18n="historicalEvents.violations.items.sabraShatila.body">Between 16–18 September 1982, Lebanese Phalangist militias entered Palestinian refugee camps in Beirut and massacred between 800 and 3,500 Palestinian and Lebanese Shia civilians while Israeli forces controlled the perimeter. Israel's own Kahan Commission found Defence Minister Ariel Sharon bore personal indirect responsibility.</p>
+                                <div class="legal-reference">
+                                    <strong data-i18n="historicalEvents.violations.legalBasis">Legal Basis:</strong>
+                                    <span>Geneva Convention IV, Art. 29 (responsibility for protected persons) · Rome Statute, Art. 8 (war crimes)</span>
+                                </div>
+                            </div>
+
+                            <div class="violation-item">
+                                <div class="violation-header">
+                                    <h4 data-i18n="historicalEvents.violations.items.jenin.title">Jenin Refugee Camp (2002)</h4>
+                                    <span class="violation-count">52 killed; camp destroyed</span>
+                                </div>
+                                <p data-i18n="historicalEvents.violations.items.jenin.body">During Operation Defensive Shield (April 2002), Israeli forces conducted large-scale military operations in Jenin refugee camp, killing 52 Palestinians and demolishing approximately 800 homes — leaving 4,000 people homeless. A UN fact-finding mission was denied access by Israel. Human rights organisations documented unlawful killings and destruction of civilian property.</p>
+                                <div class="legal-reference">
+                                    <strong data-i18n="historicalEvents.violations.legalBasis">Legal Basis:</strong>
+                                    <span>Geneva Convention IV, Art. 53 (destruction of property) · Additional Protocol I, Art. 51–52</span>
+                                </div>
+                            </div>
+
+                            <div class="violation-item">
+                                <div class="violation-header">
+                                    <h4 data-i18n="historicalEvents.violations.items.greatMarch.title">Great March of Return (2018–2019)</h4>
+                                    <span class="violation-count">214 killed · 36,100 injured</span>
+                                </div>
+                                <p data-i18n="historicalEvents.violations.items.greatMarch.body">During weekly demonstrations at the Gaza perimeter fence from March 2018 to December 2019, Israeli forces killed 214 Palestinians — including journalists, paramedics, and children — and injured over 36,100. A UN Independent Commission of Inquiry found reasonable grounds to conclude Israeli forces committed war crimes and crimes against humanity.</p>
+                                <div class="legal-reference">
+                                    <strong data-i18n="historicalEvents.violations.legalBasis">Legal Basis:</strong>
+                                    <span>Rome Statute, Art. 8(2)(b)(i) (attacking civilians) · ICCPR, Art. 6 (right to life)</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- ── 2. Nakba & Displacement ── -->
+                    <div class="category-section" id="cat-nakba">
+                        <h3 data-i18n="historicalEvents.violations.categories.nakba">🏘️ Nakba &amp; Ongoing Displacement</h3>
+                        <div class="violation-grid">
+
+                            <div class="violation-item">
+                                <div class="violation-header">
+                                    <h4 data-i18n="historicalEvents.violations.items.nakba1948.title">The Nakba (1948)</h4>
+                                    <span class="violation-count">750,000+ displaced</span>
+                                </div>
+                                <p data-i18n="historicalEvents.violations.items.nakba1948.body">During the 1948 Arab-Israeli War, over 750,000 Palestinians were expelled or fled — roughly half of the Palestinian Arab population. Some 530+ villages were depopulated or destroyed. 78% of historic Palestine became the State of Israel. UN General Assembly Resolution 194 affirmed the right of refugees to return — a right never implemented by Israel.</p>
+                                <div class="legal-reference">
+                                    <strong data-i18n="historicalEvents.violations.legalBasis">Legal Basis:</strong>
+                                    <span>UNGA Resolution 194 (1948) · Customary IHL prohibition on forced displacement</span>
+                                </div>
+                            </div>
+
+                            <div class="violation-item">
+                                <div class="violation-header">
+                                    <h4 data-i18n="historicalEvents.violations.items.naksa1967.title">The Naksa (1967)</h4>
+                                    <span class="violation-count">300,000+ newly displaced</span>
+                                </div>
+                                <p data-i18n="historicalEvents.violations.items.naksa1967.body">During the June 1967 Six-Day War, an additional 300,000+ Palestinians were displaced. Israel assumed military occupation of the West Bank, Gaza Strip, Sinai, and Golan Heights — occupations governed by international humanitarian law that Israel has systematically violated. UNSC Resolution 242 called for Israeli withdrawal; Israel has never fully complied.</p>
+                                <div class="legal-reference">
+                                    <strong data-i18n="historicalEvents.violations.legalBasis">Legal Basis:</strong>
+                                    <span>UNSC Resolution 242 (1967) · Geneva Convention IV — applies to all occupied territory</span>
+                                </div>
+                            </div>
+
+                            <div class="violation-item">
+                                <div class="violation-header">
+                                    <h4 data-i18n="historicalEvents.violations.items.homeDemolitions.title">Home Demolitions as Policy (1967–2023)</h4>
+                                    <span class="violation-count">55,000+ structures</span>
+                                </div>
+                                <p data-i18n="historicalEvents.violations.items.homeDemolitions.body">Israel has demolished over 55,000 Palestinian structures in occupied territories since 1967, using military orders, administrative permit denials (Palestinians refused permits at a 98% rate in Area C), and punitive demolitions of family homes — the latter a form of collective punishment prohibited under Article 33 of Geneva Convention IV.</p>
+                                <div class="legal-reference">
+                                    <strong data-i18n="historicalEvents.violations.legalBasis">Legal Basis:</strong>
+                                    <span>Geneva Convention IV, Art. 53 · Art. 33 (collective punishment) · ICCPR, Art. 17</span>
+                                </div>
+                            </div>
+
+                            <div class="violation-item">
+                                <div class="violation-header">
+                                    <h4 data-i18n="historicalEvents.violations.items.forcedEvictions.title">Forced Evictions — East Jerusalem (2000–2023)</h4>
+                                    <span class="violation-count">Ongoing</span>
+                                </div>
+                                <p data-i18n="historicalEvents.violations.items.forcedEvictions.body">Systematic forced evictions in Sheikh Jarrah, Silwan, and Wadi Hilweh — based on 1950s Israeli absentee property laws that apply only to Palestinians, not Jewish Israeli citizens. Israeli Supreme Court rulings have enabled dispossession while creating a two-tiered legal system in East Jerusalem, which Israel unilaterally annexed in violation of international law.</p>
+                                <div class="legal-reference">
+                                    <strong data-i18n="historicalEvents.violations.legalBasis">Legal Basis:</strong>
+                                    <span>Geneva Convention IV, Art. 49 · ICESCR, Art. 11 (right to adequate housing)</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- ── 3. Land Seizure & Settlements ── -->
+                    <div class="category-section" id="cat-settlements">
+                        <h3 data-i18n="historicalEvents.violations.categories.settlements">🌍 Land Seizure &amp; Illegal Settlements</h3>
+                        <div class="violation-grid">
+
+                            <div class="violation-item">
+                                <div class="violation-header">
+                                    <h4 data-i18n="historicalEvents.violations.items.settlementGrowth.title">Settlement Growth (1967–2023)</h4>
+                                    <span class="violation-count">From 0 → 700,000+ settlers</span>
+                                </div>
+                                <p data-i18n="historicalEvents.violations.items.settlementGrowth.body">Israel has transferred over 700,000 of its citizens into occupied Palestinian territory in violation of Article 49(6) of Geneva Convention IV. UNSC Resolution 2334 (2016) — adopted unanimously — declared all Israeli settlements in occupied Palestinian territory a flagrant violation of international law and called on all states not to recognise them.</p>
+                                <div class="legal-reference">
+                                    <strong data-i18n="historicalEvents.violations.legalBasis">Legal Basis:</strong>
+                                    <span>Geneva Convention IV, Art. 49(6) · UNSC Resolution 2334 (2016) · Rome Statute, Art. 8(2)(b)(viii)</span>
+                                </div>
+                            </div>
+
+                            <div class="violation-item">
+                                <div class="violation-header">
+                                    <h4 data-i18n="historicalEvents.violations.items.areaC.title">Area C Control &amp; Development Ban</h4>
+                                    <span class="violation-count">60% of West Bank</span>
+                                </div>
+                                <p data-i18n="historicalEvents.violations.items.areaC.body">Israel controls 60% of the West Bank (Area C) under the Oslo Accords, blocking Palestinian construction, economic development, and access to natural resources. Palestinians are denied building permits at a 98% rate in Area C while Israeli settlement construction continues unimpeded. This systematic discrimination creates conditions of forced displacement through bureaucratic means.</p>
+                                <div class="legal-reference">
+                                    <strong data-i18n="historicalEvents.violations.legalBasis">Legal Basis:</strong>
+                                    <span>ICESCR, Art. 1 (right to self-determination and natural resources) · Geneva Convention IV, Art. 55</span>
+                                </div>
+                            </div>
+
+                            <div class="violation-item">
+                                <div class="violation-header">
+                                    <h4 data-i18n="historicalEvents.violations.items.annexationWall.title">Annexation Wall</h4>
+                                    <span class="violation-count">700 km; 85% inside WB</span>
+                                </div>
+                                <p data-i18n="historicalEvents.violations.items.annexationWall.body">The separation barrier — 700 km long, 85% constructed inside the West Bank rather than along the Green Line — was declared illegal by the ICJ in its 2004 Advisory Opinion. The Court found it violates Palestinian rights to self-determination, freedom of movement, rights to work, health, education, and adequate standard of living. Israel refused to comply with the ruling.</p>
+                                <div class="legal-reference">
+                                    <strong data-i18n="historicalEvents.violations.legalBasis">Legal Basis:</strong>
+                                    <span>ICJ Advisory Opinion (2004) · UNGA Resolution ES-10/15 · Multiple IHRL instruments</span>
+                                </div>
+                            </div>
+
+                            <div class="violation-item">
+                                <div class="violation-header">
+                                    <h4 data-i18n="historicalEvents.violations.items.landConfiscation.title">Land Confiscation Methods</h4>
+                                    <span class="violation-count">2.4M+ dunams confiscated</span>
+                                </div>
+                                <p data-i18n="historicalEvents.violations.items.landConfiscation.body">Military orders, "state land" declarations, bypass roads, and nature reserve designations are used systematically to confiscate Palestinian land. Over 2.4 million dunams confiscated since 1967. These mechanisms are applied exclusively in ways that benefit Israeli settlers while blocking Palestinian development, constituting a pattern of discriminatory dispossession.</p>
+                                <div class="legal-reference">
+                                    <strong data-i18n="historicalEvents.violations.legalBasis">Legal Basis:</strong>
+                                    <span>Hague Regulations (1907), Art. 46 (private property) · Geneva Convention IV, Art. 53</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- ── 4. Settler Violence ── -->
+                    <div class="category-section" id="cat-settler-violence">
+                        <h3 data-i18n="historicalEvents.violations.categories.settlerViolence">🔥 Settler Violence</h3>
+                        <div class="violation-grid">
+
+                            <div class="violation-item">
+                                <div class="violation-header">
+                                    <h4 data-i18n="historicalEvents.violations.items.settlerEscalation.title">Escalating Settler Attacks (2022–2023)</h4>
+                                    <span class="violation-count">1,204 incidents in 2023</span>
+                                </div>
+                                <p data-i18n="historicalEvents.violations.items.settlerEscalation.body">OCHA recorded 1,204 settler attacks causing Palestinian casualties or property damage in 2023 — a record high before October 7. Attacks include arson, vandalism, agricultural destruction, and physical assault. The trend escalated sharply following the formation of Israel's most right-wing government in December 2022, which included settler leaders as ministers.</p>
+                                <div class="legal-reference">
+                                    <strong data-i18n="historicalEvents.violations.legalBasis">Legal Basis:</strong>
+                                    <span>Geneva Convention IV, Art. 27 · Obligation of the occupying power to protect the civilian population from violence</span>
+                                </div>
+                            </div>
+
+                            <div class="violation-item">
+                                <div class="violation-header">
+                                    <h4 data-i18n="historicalEvents.violations.items.huwara.title">Huwara Pogrom (February 2023)</h4>
+                                    <span class="violation-count">Hundreds of attacks · 1 killed</span>
+                                </div>
+                                <p data-i18n="historicalEvents.violations.items.huwara.body">On 26 February 2023, settlers carried out a coordinated rampage through the Palestinian town of Huwara, burning homes, vehicles, and Palestinian-owned businesses for hours while Israeli military forces stood by and did not intervene. Israeli Finance Minister Bezalel Smotrich subsequently called for Huwara to be "wiped out." The event was internationally condemned as a pogrom.</p>
+                                <div class="legal-reference">
+                                    <strong data-i18n="historicalEvents.violations.legalBasis">Legal Basis:</strong>
+                                    <span>Geneva Convention IV, Art. 29 — occupying power responsible for acts of its nationals in occupied territory</span>
+                                </div>
+                            </div>
+
+                            <div class="violation-item">
+                                <div class="violation-header">
+                                    <h4 data-i18n="historicalEvents.violations.items.settlerImpunity.title">Systematic Impunity</h4>
+                                    <span class="violation-count">92% of cases closed</span>
+                                </div>
+                                <p data-i18n="historicalEvents.violations.items.settlerImpunity.body">According to Israeli human rights organisation Yesh Din, 92% of Israeli Police investigations into settler violence against Palestinians are closed without indictment. Settlers operate under Israeli civil law while Palestinians in the same territory are subject to harsher Israeli military law — a dual legal system that Israeli and international human rights organisations have described as constitutive of apartheid.</p>
+                                <div class="legal-reference">
+                                    <strong data-i18n="historicalEvents.violations.legalBasis">Legal Basis:</strong>
+                                    <span>ICCPR, Art. 2 (non-discrimination) · Apartheid Convention (1973) · Rome Statute, Art. 7(2)(h)</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- ── 5. Political Prisoners ── -->
+                    <div class="category-section" id="cat-prisoners">
+                        <h3 data-i18n="historicalEvents.violations.categories.prisoners">🔒 Political Prisoners &amp; Administrative Detention</h3>
+                        <div class="violation-grid">
+
+                            <div class="violation-item">
+                                <div class="violation-header">
+                                    <h4 data-i18n="historicalEvents.violations.items.detentionScale.title">Scale of Detention</h4>
+                                    <span class="violation-count">7,000+ Palestinians</span>
+                                </div>
+                                <p data-i18n="historicalEvents.violations.items.detentionScale.body">As of 2023, over 7,000 Palestinians are held in Israeli prisons (Addameer). This includes over 160 children, over 200 women, and over 1,300 individuals held under administrative detention — detained without charge, without trial, and without access to the evidence against them, under military orders that can be renewed indefinitely.</p>
+                                <div class="legal-reference">
+                                    <strong data-i18n="historicalEvents.violations.legalBasis">Legal Basis:</strong>
+                                    <span>ICCPR, Art. 9 (liberty and security) · Geneva Convention IV, Art. 78 (internment conditions)</span>
+                                </div>
+                            </div>
+
+                            <div class="violation-item">
+                                <div class="violation-header">
+                                    <h4 data-i18n="historicalEvents.violations.items.adminDetention.title">Administrative Detention</h4>
+                                    <span class="violation-count">1,300+ without charge or trial</span>
+                                </div>
+                                <p data-i18n="historicalEvents.violations.items.adminDetention.body">Administrative detention — detention without charge, trial, or access to the evidence used to justify it — has been used by Israel for over 55 years of occupation under Military Order 1651. Orders are renewable every six months without limit; some Palestinians have been held for years without ever facing charges. UN human rights bodies, including the Human Rights Committee, have repeatedly called for its abolition.</p>
+                                <div class="legal-reference">
+                                    <strong data-i18n="historicalEvents.violations.legalBasis">Legal Basis:</strong>
+                                    <span>ICCPR, Art. 9(1) · Geneva Convention IV, Art. 78 · UN Body of Principles for Protection of Detained Persons</span>
+                                </div>
+                            </div>
+
+                            <div class="violation-item">
+                                <div class="violation-header">
+                                    <h4 data-i18n="historicalEvents.violations.items.torture.title">Torture &amp; Ill-Treatment in Detention</h4>
+                                    <span class="violation-count">Systematic — documented</span>
+                                </div>
+                                <p data-i18n="historicalEvents.violations.items.torture.body">The Public Committee Against Torture in Israel (PCATI) documents systematic use of stress positions, sleep deprivation, sensory isolation, and hooding during interrogation. Israel's Supreme Court permits "moderate physical pressure" in security cases. The UN Committee Against Torture has repeatedly found Israel in violation of the Convention Against Torture and called for an end to these practices.</p>
+                                <div class="legal-reference">
+                                    <strong data-i18n="historicalEvents.violations.legalBasis">Legal Basis:</strong>
+                                    <span>UN Convention Against Torture, Art. 1, 16 · Geneva Convention III &amp; IV · ICCPR, Art. 7</span>
+                                </div>
+                            </div>
+
+                            <div class="violation-item">
+                                <div class="violation-header">
+                                    <h4 data-i18n="historicalEvents.violations.items.childDetention.title">Child Detention</h4>
+                                    <span class="violation-count">500–700 children/year</span>
+                                </div>
+                                <p data-i18n="historicalEvents.violations.items.childDetention.body">Israel is the only country in the world that systematically prosecutes children in military courts. Between 500 and 700 Palestinian children are detained each year. Defence for Children International – Palestine documents night arrests, denial of access to parents and lawyers during interrogation, and coercion into confessions — in violation of the UN Convention on the Rights of the Child.</p>
+                                <div class="legal-reference">
+                                    <strong data-i18n="historicalEvents.violations.legalBasis">Legal Basis:</strong>
+                                    <span>UN Convention on the Rights of the Child, Art. 37, 40 · Geneva Convention IV, Art. 76</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- ── 6. Infrastructure Destruction ── -->
+                    <div class="category-section" id="cat-infrastructure">
+                        <h3 data-i18n="historicalEvents.violations.categories.infrastructure">🏗️ Infrastructure &amp; Property Destruction</h3>
+                        <div class="violation-grid">
+
+                            <div class="violation-item">
+                                <div class="violation-header">
+                                    <h4 data-i18n="historicalEvents.violations.items.punitivedemolitions.title">Punitive Home Demolitions</h4>
+                                    <span class="violation-count">500+ since 2014 resumption</span>
+                                </div>
+                                <p data-i18n="historicalEvents.violations.items.punitivedemolitions.body">Israel demolishes family homes of Palestinians accused (not convicted) of attacks on Israelis as a deterrent — a practice explicitly prohibited as collective punishment under Article 33 of Geneva Convention IV. B'Tselem has documented over 500 punitive demolitions since Israel resumed the practice in 2014, rendering hundreds of family members homeless for acts they did not commit.</p>
+                                <div class="legal-reference">
+                                    <strong data-i18n="historicalEvents.violations.legalBasis">Legal Basis:</strong>
+                                    <span>Geneva Convention IV, Art. 33 (collective punishment) · Art. 53 (destruction of property)</span>
+                                </div>
+                            </div>
+
+                            <div class="violation-item">
+                                <div class="violation-header">
+                                    <h4 data-i18n="historicalEvents.violations.items.agricultureDestruction.title">Agricultural Destruction</h4>
+                                    <span class="violation-count">500,000+ olive trees uprooted</span>
+                                </div>
+                                <p data-i18n="historicalEvents.violations.items.agricultureDestruction.body">Since 1967, Israeli settlers and IDF forces have uprooted over 500,000 Palestinian olive trees — a primary source of Palestinian agricultural livelihood (OCHA). Harvest interference, movement restrictions during harvest season, and military-declared closed areas affect over 80,000 farming families. Olive tree destruction is often accompanied by settler takeover of the cleared land.</p>
+                                <div class="legal-reference">
+                                    <strong data-i18n="historicalEvents.violations.legalBasis">Legal Basis:</strong>
+                                    <span>Hague Regulations (1907), Art. 55 · Geneva Convention IV, Art. 53 · ICESCR, Art. 11</span>
+                                </div>
+                            </div>
+
+                            <div class="violation-item">
+                                <div class="violation-header">
+                                    <h4 data-i18n="historicalEvents.violations.items.waterControl.title">Water Infrastructure Control</h4>
+                                    <span class="violation-count">25 litres/person/day</span>
+                                </div>
+                                <p data-i18n="historicalEvents.violations.items.waterControl.body">Israel controls 87% of West Bank water resources through the Joint Water Committee, which gives Israel effective veto over Palestinian water projects. Palestinians receive an average of 25 litres per person per day — well below the WHO minimum of 50 litres. Israeli settlers in the same territory consume 300+ litres per person per day. Water cisterns and pipelines serving Palestinian communities are periodically vandalised by settlers.</p>
+                                <div class="legal-reference">
+                                    <strong data-i18n="historicalEvents.violations.legalBasis">Legal Basis:</strong>
+                                    <span>Geneva Convention IV, Art. 55 · ICESCR, General Comment 15 (right to water)</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- ── 7. Economic Pressure ── -->
+                    <div class="category-section" id="cat-economic">
+                        <h3 data-i18n="historicalEvents.violations.categories.economic">💼 Economic Warfare &amp; Collective Punishment</h3>
+                        <div class="violation-grid">
+
+                            <div class="violation-item">
+                                <div class="violation-header">
+                                    <h4 data-i18n="historicalEvents.violations.items.gazaBlockade.title">Gaza Blockade (2007–2023)</h4>
+                                    <span class="violation-count">16+ years · 2.3M people</span>
+                                </div>
+                                <p data-i18n="historicalEvents.violations.items.gazaBlockade.body">Since 2007, Israel has maintained a comprehensive air, sea, and land blockade on Gaza — controlling who and what enters and exits. The UN, World Bank, and UNCTAD classify this as collective punishment under Article 33 of Geneva Convention IV, imposed on 2.3 million civilians for the political choices of their leaders. The blockade has been described by former British Prime Minister David Cameron as turning Gaza into "a prison camp."</p>
+                                <div class="legal-reference">
+                                    <strong data-i18n="historicalEvents.violations.legalBasis">Legal Basis:</strong>
+                                    <span>Geneva Convention IV, Art. 33 · Additional Protocol I, Art. 54, 70 · ICESCR, Art. 11</span>
+                                </div>
+                            </div>
+
+                            <div class="violation-item">
+                                <div class="violation-header">
+                                    <h4 data-i18n="historicalEvents.violations.items.gazaEconomy.title">Gaza Economic Collapse</h4>
+                                    <span class="violation-count">45%+ unemployment · 60% poverty</span>
+                                </div>
+                                <p data-i18n="historicalEvents.violations.items.gazaEconomy.body">Gaza's GDP per capita in 2023 remains below its 1994 Oslo Accord baseline. Unemployment stands at over 45%; youth unemployment exceeds 60%; over 60% of the population lives in poverty; and 80% depend on humanitarian aid (UNCTAD 2023). UNCTAD estimates Gaza's economy would be 2–3 times larger without the blockade. The economic strangulation is a deliberate policy, not a byproduct of conflict.</p>
+                                <div class="legal-reference">
+                                    <strong data-i18n="historicalEvents.violations.legalBasis">Legal Basis:</strong>
+                                    <span>ICESCR, Art. 6 (right to work) · Art. 11 (right to adequate standard of living) · UNCTAD Reports</span>
+                                </div>
+                            </div>
+
+                            <div class="violation-item">
+                                <div class="violation-header">
+                                    <h4 data-i18n="historicalEvents.violations.items.permitSystem.title">West Bank Permit System</h4>
+                                    <span class="violation-count">Structural economic barrier</span>
+                                </div>
+                                <p data-i18n="historicalEvents.violations.items.permitSystem.body">Palestinians must obtain Israeli military permits to access their own land in Area C, enter Jerusalem (with the permit denial rate exceeding 90% for many categories), move between parts of the West Bank, and work inside Israel. Permits are used as political pressure instruments — revoked en masse following incidents — and create a permission-based system of movement unique to the Palestinian population, not applicable to Israeli settlers in the same territory.</p>
+                                <div class="legal-reference">
+                                    <strong data-i18n="historicalEvents.violations.legalBasis">Legal Basis:</strong>
+                                    <span>ICCPR, Art. 12 (freedom of movement) · ICESCR, Art. 6 · Apartheid Convention (1973)</span>
+                                </div>
+                            </div>
+
+                            <div class="violation-item">
+                                <div class="violation-header">
+                                    <h4 data-i18n="historicalEvents.violations.items.tradeRestrictions.title">Trade Restrictions &amp; Export Denial</h4>
+                                    <span class="violation-count">GDP impact: −2× to −3×</span>
+                                </div>
+                                <p data-i18n="historicalEvents.violations.items.tradeRestrictions.body">Palestinian exports must pass through Israeli-controlled crossings, subject to arbitrary delays, restrictions, and seizure. Palestinian agricultural products lose significant market value due to delays. Until recent EU court rulings, Palestinian products from settlements were mislabelled as "Made in Israel" — while genuinely Palestinian goods faced additional scrutiny. UNCTAD estimates the Palestinian economy would be two to three times larger without trade and movement restrictions.</p>
+                                <div class="legal-reference">
+                                    <strong data-i18n="historicalEvents.violations.legalBasis">Legal Basis:</strong>
+                                    <span>ICESCR, Art. 1(2) — right of peoples to freely dispose of their natural wealth and resources</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- ── 8. Civilian Killings (pre-Oct 7) ── -->
+                    <div class="category-section" id="cat-civilian-killings">
+                        <h3 data-i18n="historicalEvents.violations.categories.civilianKillings">💀 Civilian Killings (2000–2023)</h3>
+                        <div class="violation-grid">
+
+                            <div class="violation-item">
+                                <div class="violation-header">
+                                    <h4 data-i18n="historicalEvents.violations.items.secondIntifada.title">Second Intifada (2000–2005)</h4>
+                                    <span class="violation-count">3,179 Palestinians killed</span>
+                                </div>
+                                <p data-i18n="historicalEvents.violations.items.secondIntifada.body">Between 2000 and 2005, Israeli security forces and settlers killed 3,179 Palestinians — compared with 1,010 Israelis killed in the same period (B'Tselem). Palestinian casualties included hundreds of children and bystanders killed at checkpoints. Major incidents include the re-occupation of Palestinian cities (2002) and prolonged siege of the Church of the Nativity in Bethlehem.</p>
+                                <div class="legal-reference">
+                                    <strong data-i18n="historicalEvents.violations.legalBasis">Legal Basis:</strong>
+                                    <span>Geneva Convention IV · Additional Protocol I, Art. 51 (protection of civilians)</span>
+                                </div>
+                            </div>
+
+                            <div class="violation-item">
+                                <div class="violation-header">
+                                    <h4 data-i18n="historicalEvents.violations.items.gazaOperations.title">Gaza Military Operations (2008–2021)</h4>
+                                    <span class="violation-count">~4,800 killed · 30,000+ injured</span>
+                                </div>
+                                <p data-i18n="historicalEvents.violations.items.gazaOperations.body">Four major Israeli military operations in Gaza between 2008 and 2021: Operation Cast Lead (2008–09), Operation Pillar of Defence (2012), Operation Protective Edge (2014), and Operation Guardian of the Walls (2021). Cumulative Palestinian casualties exceed 4,800 killed and 30,000+ injured. UN independent investigations found evidence of war crimes in all four operations, including attacks on civilians, use of white phosphorus, and attacks on UNRWA facilities.</p>
+                                <div class="legal-reference">
+                                    <strong data-i18n="historicalEvents.violations.legalBasis">Legal Basis:</strong>
+                                    <span>Rome Statute, Art. 8 · Additional Protocol I, Art. 51, 52 · Geneva Convention IV</span>
+                                </div>
+                            </div>
+
+                            <div class="violation-item">
+                                <div class="violation-header">
+                                    <h4 data-i18n="historicalEvents.violations.items.westBank2022.title">West Bank Escalation (2022–2023)</h4>
+                                    <span class="violation-count">465+ killed in 21 months</span>
+                                </div>
+                                <p data-i18n="historicalEvents.violations.items.westBank2022.body">247 Palestinians were killed in the West Bank in 2022, and 218 more in the first nine months of 2023 — the highest rates since 2006 (B'Tselem). This included large-scale military incursions into Jenin, Nablus, and Tulkarm refugee camps, use of drones and military-grade weapons in civilian areas, and a pattern of killing that UN experts described as executions in some cases.</p>
+                                <div class="legal-reference">
+                                    <strong data-i18n="historicalEvents.violations.legalBasis">Legal Basis:</strong>
+                                    <span>ICCPR, Art. 6 (right to life) · Geneva Convention IV · Rome Statute, Art. 8</span>
+                                </div>
+                            </div>
+
+                            <div class="violation-item">
+                                <div class="violation-header">
+                                    <h4 data-i18n="historicalEvents.violations.items.journalistKillings.title">Targeted Killing of Journalists</h4>
+                                    <span class="violation-count">Incl. Shireen Abu Akleh (2022)</span>
+                                </div>
+                                <p data-i18n="historicalEvents.violations.items.journalistKillings.body">Veteran Al Jazeera journalist Shireen Abu Akleh was shot and killed by Israeli forces while covering an Israeli military raid in Jenin refugee camp on 11 May 2022. She was wearing a clearly marked press vest. UN, US, and multiple independent investigations concluded she was killed by Israeli fire. No soldier was charged. Her killing was part of a broader pattern: B'Tselem documents dozens of journalists injured or killed by Israeli forces while reporting in occupied territories.</p>
+                                <div class="legal-reference">
+                                    <strong data-i18n="historicalEvents.violations.legalBasis">Legal Basis:</strong>
+                                    <span>Additional Protocol I, Art. 79 (protection of journalists) · Geneva Convention IV, Art. 27</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ══════════════════════════════════════════════════════
+             LEGAL FRAMEWORK TAB
+             ══════════════════════════════════════════════════════ -->
+        <section class="view-section" id="legalView">
+            <div class="container">
+                <div class="legal-actions-section">
+
+                    <h3 data-i18n="historicalEvents.legalTimeline.sectionTitle">⚖️ International Legal Response — Historical Timeline</h3>
+
+                    <div class="legal-timeline">
+
+                        <div class="timeline-item active">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">1947–1948</div>
+                                <h4 data-i18n="historicalEvents.legalTimeline.events.partition.title">UN Partition Plan &amp; UNGA Resolution 194</h4>
+                                <p data-i18n="historicalEvents.legalTimeline.events.partition.body">The UN Partition Plan (Resolution 181, November 1947) proposed dividing Mandatory Palestine. Following the 1948 war, UNGA Resolution 194 (December 1948) affirmed the right of Palestinian refugees to return to their homes or receive compensation — a right endorsed repeatedly by the UN General Assembly and never implemented by Israel.</p>
+                                <span class="timeline-status ongoing" data-i18n="historicalEvents.legalTimeline.status.neverImplemented">Never Implemented</span>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item active">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">1949</div>
+                                <h4 data-i18n="historicalEvents.legalTimeline.events.genevaConventions.title">Fourth Geneva Convention Adopted</h4>
+                                <p data-i18n="historicalEvents.legalTimeline.events.genevaConventions.body">The Fourth Geneva Convention on the Protection of Civilian Persons in Time of War was adopted following World War II to prevent the repetition of Nazi-era atrocities. It applies to all territory under Israeli occupation since 1967. Key prohibitions include settlements (Art. 49), collective punishment (Art. 33), and destruction of civilian property (Art. 53). Israel has systematically violated all three categories.</p>
+                                <span class="timeline-status ongoing" data-i18n="historicalEvents.legalTimeline.status.systematicallyViolated">Systematically Violated</span>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item active">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">1966</div>
+                                <h4 data-i18n="historicalEvents.legalTimeline.events.iccpr.title">ICCPR &amp; ICESCR — International Human Rights Covenants</h4>
+                                <p data-i18n="historicalEvents.legalTimeline.events.iccpr.body">The International Covenant on Civil and Political Rights (ICCPR) and the International Covenant on Economic, Social and Cultural Rights (ICESCR) were adopted in 1966. Israel ratified both in 1991 but claims they do not apply to the occupied territories — a position rejected by UN treaty bodies and the ICJ. Multiple UN Human Rights Committee reviews have found Israel in violation of the ICCPR regarding its treatment of Palestinians.</p>
+                                <span class="timeline-status ongoing" data-i18n="historicalEvents.legalTimeline.status.breachesDocumented">Breaches Documented</span>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item active">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">1967</div>
+                                <h4 data-i18n="historicalEvents.legalTimeline.events.resolution242.title">UNSC Resolution 242 — Withdrawal Demanded</h4>
+                                <p data-i18n="historicalEvents.legalTimeline.events.resolution242.body">Following Israel's occupation of the West Bank, Gaza Strip, Sinai, and Golan Heights in June 1967, the UN Security Council unanimously adopted Resolution 242 — emphasising "the inadmissibility of the acquisition of territory by war" and calling for Israeli withdrawal from occupied territories. Israel has never fully complied. The resolution remains the foundational legal basis for a two-state solution.</p>
+                                <span class="timeline-status ongoing" data-i18n="historicalEvents.legalTimeline.status.neverComplied">Never Complied With</span>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">1973</div>
+                                <h4 data-i18n="historicalEvents.legalTimeline.events.apartheidConvention.title">International Convention on the Suppression and Punishment of the Crime of Apartheid</h4>
+                                <p data-i18n="historicalEvents.legalTimeline.events.apartheidConvention.body">The Apartheid Convention (1973) defines apartheid as a crime against humanity and provides its legal definition. Following landmark 2021–2022 reports by Human Rights Watch and Amnesty International — and a 2022 report by the UN Special Rapporteur — multiple international human rights bodies have concluded that Israel's system of control over Palestinians meets the legal threshold of apartheid as defined in the Convention.</p>
+                                <span class="timeline-status ongoing" data-i18n="historicalEvents.legalTimeline.status.apartheidFinding">Apartheid Threshold Met</span>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item active">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">2004</div>
+                                <h4 data-i18n="historicalEvents.legalTimeline.events.icjWall.title">ICJ Advisory Opinion — Separation Wall Illegal</h4>
+                                <p data-i18n="historicalEvents.legalTimeline.events.icjWall.body">The International Court of Justice issued an advisory opinion in July 2004, ruling that the construction of the Israeli separation wall in occupied Palestinian territory (85% of which lies inside the West Bank) is contrary to international law. The Court called for Israel to dismantle the relevant sections and provide reparations. Israel refused to comply. UNGA Resolution ES-10/15 endorsed the opinion; the United States and Israel rejected it.</p>
+                                <span class="timeline-status ongoing" data-i18n="historicalEvents.legalTimeline.status.ignored">Ruling Ignored by Israel</span>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">2016</div>
+                                <h4 data-i18n="historicalEvents.legalTimeline.events.resolution2334.title">UNSC Resolution 2334 — Settlements Condemned</h4>
+                                <p data-i18n="historicalEvents.legalTimeline.events.resolution2334.body">Adopted unanimously by the UN Security Council on 23 December 2016 (the United States abstained rather than vetoing), Resolution 2334 declared that Israel's establishment of settlements in Palestinian territory occupied since 1967 "has no legal validity and constitutes a flagrant violation under international law," calling on all states to distinguish between Israeli territory and occupied Palestinian territory. Settlement construction has accelerated since.</p>
+                                <span class="timeline-status ongoing" data-i18n="historicalEvents.legalTimeline.status.defied">Defied — Settlements Expanded</span>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item active">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">2021–2022</div>
+                                <h4 data-i18n="historicalEvents.legalTimeline.events.apartheidReports.title">HRW &amp; Amnesty Apartheid Reports</h4>
+                                <p data-i18n="historicalEvents.legalTimeline.events.apartheidReports.body">Human Rights Watch (April 2021) and Amnesty International (February 2022) independently released comprehensive reports — each over 200 pages — concluding that Israel is committing the crime of apartheid against Palestinians. Both organisations applied the legal definition from the Apartheid Convention and Rome Statute, finding a system of domination, dispossession, and segregation imposed on Palestinians in Israel, the occupied territories, and Gaza.</p>
+                                <span class="timeline-status completed" data-i18n="historicalEvents.legalTimeline.status.published">Published — Major Findings</span>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item active">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">2024</div>
+                                <h4 data-i18n="historicalEvents.legalTimeline.events.icjGenocide.title">ICJ — Genocide Case (South Africa v. Israel)</h4>
+                                <p data-i18n="historicalEvents.legalTimeline.events.icjGenocide.body">South Africa filed a case at the International Court of Justice in December 2023 alleging that Israel is committing genocide against Palestinians in Gaza. In January 2024, the ICJ issued provisional measures finding a plausible case for genocide and ordering Israel to take all measures to prevent genocidal acts. Full proceedings are ongoing. Separately, the ICC issued arrest warrants for Israeli Prime Minister Netanyahu and former Defence Minister Gallant in November 2024 for war crimes and crimes against humanity.</p>
+                                <span class="timeline-status pending" data-i18n="historicalEvents.legalTimeline.status.activeProceedings">Active — ICJ &amp; ICC Proceedings</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Key Legal Documents -->
+                    <h3 style="margin-top:3rem; font-size:1.1rem; font-weight:700; margin-bottom:1.25rem;"
+                        data-i18n="historicalEvents.legalTimeline.keyDocumentsTitle">📚 Key Legal Documents</h3>
+                    <div class="legal-resources-grid">
+
+                        <a href="https://www.icj-cij.org/case/131" class="legal-resource-card" target="_blank" rel="noopener">
+                            <div class="link-icon">🏛️</div>
+                            <div>
+                                <div class="link-title">ICJ Advisory Opinion 2004 — The Wall</div>
+                                <div class="link-description">Full text of the ICJ ruling on the separation barrier in occupied Palestinian territory</div>
+                            </div>
+                        </a>
+
+                        <a href="https://www.icc-cpi.int/situations/palestine" class="legal-resource-card" target="_blank" rel="noopener">
+                            <div class="link-icon">⚖️</div>
+                            <div>
+                                <div class="link-title">ICC Situation in Palestine</div>
+                                <div class="link-description">International Criminal Court investigation documents, arrest warrants, and case filings</div>
+                            </div>
+                        </a>
+
+                        <a href="https://undocs.org/S/RES/2334(2016)" class="legal-resource-card" target="_blank" rel="noopener">
+                            <div class="link-icon">📜</div>
+                            <div>
+                                <div class="link-title">UNSC Resolution 2334 (2016)</div>
+                                <div class="link-description">Security Council resolution declaring settlements a flagrant violation of international law</div>
+                            </div>
+                        </a>
+
+                        <a href="https://www.amnesty.org/en/documents/mde15/5141/2022/en/" class="legal-resource-card" target="_blank" rel="noopener">
+                            <div class="link-icon">🔍</div>
+                            <div>
+                                <div class="link-title">Amnesty International — Apartheid Report 2022</div>
+                                <div class="link-description">Full 280-page report on Israel's system of apartheid against Palestinians</div>
+                            </div>
+                        </a>
+
+                        <a href="https://www.hrw.org/report/2021/04/27/threshold-crossed/israeli-authorities-and-crimes-apartheid-and-persecution" class="legal-resource-card" target="_blank" rel="noopener">
+                            <div class="link-icon">🔍</div>
+                            <div>
+                                <div class="link-title">Human Rights Watch — "A Threshold Crossed" 2021</div>
+                                <div class="link-description">HRW's 213-page analysis of Israeli apartheid crimes against Palestinians</div>
+                            </div>
+                        </a>
+
+                        <a href="https://www.icj-cij.org/case/192" class="legal-resource-card" target="_blank" rel="noopener">
+                            <div class="link-icon">🏛️</div>
+                            <div>
+                                <div class="link-title">ICJ — South Africa v. Israel (Genocide Case)</div>
+                                <div class="link-description">Provisional measures, orders, and ongoing proceedings at the International Court of Justice</div>
+                            </div>
+                        </a>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ══════════════════════════════════════════════════════
+             RESOURCES TAB
+             ══════════════════════════════════════════════════════ -->
+        <section class="view-section" id="resourcesView">
+            <div class="container">
+                <div class="resources-section">
+
+                    <h3 data-i18n="historicalEvents.resources.sectionTitle">📚 Sources &amp; Documentation</h3>
+
+                    <div class="resources-grid">
+
+                        <!-- UN & Intergovernmental -->
+                        <div class="resource-category">
+                            <h4 data-i18n="historicalEvents.resources.categories.un.title">🏛️ UN &amp; Intergovernmental</h4>
+                            <div class="resource-links">
+                                <a href="https://www.ochaopt.org" class="resource-link" target="_blank" rel="noopener">
+                                    <span class="link-icon">📊</span>
+                                    <div class="link-content">
+                                        <div class="link-title">OCHA — Protection of Civilians</div>
+                                        <div class="link-description">Weekly reports on settler violence, home demolitions, and civilian casualties in occupied territory</div>
+                                    </div>
+                                </a>
+                                <a href="https://www.unrwa.org" class="resource-link" target="_blank" rel="noopener">
+                                    <span class="link-icon">🏕️</span>
+                                    <div class="link-content">
+                                        <div class="link-title">UNRWA — Palestinian Refugee Data</div>
+                                        <div class="link-description">Refugee registration, Nakba documentation, and humanitarian situation reports</div>
+                                    </div>
+                                </a>
+                                <a href="https://www.ohchr.org/en/special-procedures/sr-palestine" class="resource-link" target="_blank" rel="noopener">
+                                    <span class="link-icon">🔍</span>
+                                    <div class="link-content">
+                                        <div class="link-title">UN Special Rapporteur on Palestine</div>
+                                        <div class="link-description">Annual reports on human rights situation including occupation, apartheid, and legal analysis</div>
+                                    </div>
+                                </a>
+                                <a href="https://unctad.org/topic/developing-regions/occupied-palestinian-territory" class="resource-link" target="_blank" rel="noopener">
+                                    <span class="link-icon">💼</span>
+                                    <div class="link-content">
+                                        <div class="link-title">UNCTAD — Palestinian Economy Reports</div>
+                                        <div class="link-description">Economic impact of occupation, blockade, and trade restrictions</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Human Rights Organisations -->
+                        <div class="resource-category">
+                            <h4 data-i18n="historicalEvents.resources.categories.humanRights.title">⚖️ Human Rights Organisations</h4>
+                            <div class="resource-links">
+                                <a href="https://www.btselem.org" class="resource-link" target="_blank" rel="noopener">
+                                    <span class="link-icon">📋</span>
+                                    <div class="link-content">
+                                        <div class="link-title">B'Tselem (Israeli)</div>
+                                        <div class="link-description">Comprehensive data on killings, demolitions, settler violence, and occupation policies</div>
+                                    </div>
+                                </a>
+                                <a href="https://www.addameer.org" class="resource-link" target="_blank" rel="noopener">
+                                    <span class="link-icon">🔒</span>
+                                    <div class="link-content">
+                                        <div class="link-title">Addameer — Prisoner Support</div>
+                                        <div class="link-description">Political prisoner statistics, administrative detention data, torture documentation</div>
+                                    </div>
+                                </a>
+                                <a href="https://www.alhaq.org" class="resource-link" target="_blank" rel="noopener">
+                                    <span class="link-icon">📜</span>
+                                    <div class="link-content">
+                                        <div class="link-title">Al-Haq — Palestinian Human Rights</div>
+                                        <div class="link-description">Field documentation of violations since 1979; legal analysis of IHL breaches</div>
+                                    </div>
+                                </a>
+                                <a href="https://www.hrw.org/middle-east/n-africa/israel/palestine" class="resource-link" target="_blank" rel="noopener">
+                                    <span class="link-icon">🔍</span>
+                                    <div class="link-content">
+                                        <div class="link-title">Human Rights Watch</div>
+                                        <div class="link-description">Apartheid report (2021), Gaza operations reports, settler violence investigations</div>
+                                    </div>
+                                </a>
+                                <a href="https://www.amnesty.org/en/location/middle-east-and-north-africa/israel-and-occupied-palestinian-territories/" class="resource-link" target="_blank" rel="noopener">
+                                    <span class="link-icon">🕊️</span>
+                                    <div class="link-content">
+                                        <div class="link-title">Amnesty International</div>
+                                        <div class="link-description">Apartheid report (2022), occupation investigations, prisoner rights</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Legal & Court Documents -->
+                        <div class="resource-category">
+                            <h4 data-i18n="historicalEvents.resources.categories.legal.title">🏛️ Legal &amp; Court Documents</h4>
+                            <div class="resource-links">
+                                <a href="https://www.icc-cpi.int/situations/palestine" class="resource-link" target="_blank" rel="noopener">
+                                    <span class="link-icon">⚖️</span>
+                                    <div class="link-content">
+                                        <div class="link-title">ICC — Palestine Investigation</div>
+                                        <div class="link-description">Official case documents, arrest warrants, and OTP reports for the Palestine situation</div>
+                                    </div>
+                                </a>
+                                <a href="https://www.icj-cij.org/case/192" class="resource-link" target="_blank" rel="noopener">
+                                    <span class="link-icon">🏛️</span>
+                                    <div class="link-content">
+                                        <div class="link-title">ICJ — South Africa v. Israel</div>
+                                        <div class="link-description">All filings, provisional measures, and orders in the genocide case</div>
+                                    </div>
+                                </a>
+                                <a href="https://www.stoptorture.org.il/en/" class="resource-link" target="_blank" rel="noopener">
+                                    <span class="link-icon">📋</span>
+                                    <div class="link-content">
+                                        <div class="link-title">PCATI — Torture Documentation</div>
+                                        <div class="link-description">Reports on torture and ill-treatment of Palestinian detainees in Israeli custody</div>
+                                    </div>
+                                </a>
+                                <a href="https://yesh-din.org/en/" class="resource-link" target="_blank" rel="noopener">
+                                    <span class="link-icon">📊</span>
+                                    <div class="link-content">
+                                        <div class="link-title">Yesh Din — Settler Violence Prosecution Data</div>
+                                        <div class="link-description">Statistics on investigation and prosecution rates for settler violence against Palestinians</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Academic & Research -->
+                        <div class="resource-category">
+                            <h4 data-i18n="historicalEvents.resources.categories.academic.title">📚 Academic &amp; Research</h4>
+                            <div class="resource-links">
+                                <a href="https://icahd.org" class="resource-link" target="_blank" rel="noopener">
+                                    <span class="link-icon">🏗️</span>
+                                    <div class="link-content">
+                                        <div class="link-title">ICAHD — Home Demolition Data</div>
+                                        <div class="link-description">Israeli Committee Against Home Demolitions — comprehensive demolition statistics and field reports</div>
+                                    </div>
+                                </a>
+                                <a href="https://www.badil.org" class="resource-link" target="_blank" rel="noopener">
+                                    <span class="link-icon">🏚️</span>
+                                    <div class="link-content">
+                                        <div class="link-title">BADIL — Palestinian Residency &amp; Refugee Rights</div>
+                                        <div class="link-description">Forced displacement documentation, refugee law analysis, and housing rights</div>
+                                    </div>
+                                </a>
+                                <a href="https://www.palestinestudies.org" class="resource-link" target="_blank" rel="noopener">
+                                    <span class="link-icon">📖</span>
+                                    <div class="link-content">
+                                        <div class="link-title">Institute for Palestine Studies</div>
+                                        <div class="link-description">Historical archives, document collections, and the Journal of Palestine Studies</div>
+                                    </div>
+                                </a>
+                                <a href="https://www.dci-palestine.org" class="resource-link" target="_blank" rel="noopener">
+                                    <span class="link-icon">👶</span>
+                                    <div class="link-content">
+                                        <div class="link-title">Defence for Children International — Palestine</div>
+                                        <div class="link-description">Child detention statistics, military court data, and children's rights documentation</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Actions -->
+                    <div class="action-section">
+                        <h3 data-i18n="historicalEvents.actions.sectionTitle">🚨 Take Action</h3>
+                        <div class="action-grid">
+
+                            <div class="action-item">
+                                <span class="action-icon">📚</span>
+                                <h4 data-i18n="historicalEvents.actions.items.educate.title">Educate &amp; Inform</h4>
+                                <p data-i18n="historicalEvents.actions.items.educate.body">Share verified historical documentation with colleagues, educators, and community members to counter misinformation and build informed public discourse.</p>
+                                <button class="action-btn" onclick="shareHistoricalData()"
+                                    data-i18n="historicalEvents.actions.items.educate.btn">Share This Page</button>
+                            </div>
+
+                            <div class="action-item">
+                                <span class="action-icon">⚖️</span>
+                                <h4 data-i18n="historicalEvents.actions.items.supportLegal.title">Support Legal Accountability</h4>
+                                <p data-i18n="historicalEvents.actions.items.supportLegal.body">Support international legal proceedings at the ICC and ICJ to ensure accountability for decades of documented violations of international law.</p>
+                                <button class="action-btn" onclick="window.open('https://www.icc-cpi.int','_blank')"
+                                    data-i18n="historicalEvents.actions.items.supportLegal.btn">ICC Website</button>
+                            </div>
+
+                            <div class="action-item">
+                                <span class="action-icon">📞</span>
+                                <h4 data-i18n="historicalEvents.actions.items.advocate.title">Demand Policy Change</h4>
+                                <p data-i18n="historicalEvents.actions.items.advocate.body">Contact elected representatives and demand policy responses to decades of documented violations — including sanctions on settlement goods and accountability for war crimes.</p>
+                                <button class="action-btn" onclick="window.open('https://www.house.gov/representatives/find-your-representative','_blank')"
+                                    data-i18n="historicalEvents.actions.items.advocate.btn">Contact Representatives</button>
+                            </div>
+
+                            <div class="action-item">
+                                <span class="action-icon">🤝</span>
+                                <h4 data-i18n="historicalEvents.actions.items.volunteer.title">Join PalGenoPedia</h4>
+                                <p data-i18n="historicalEvents.actions.items.volunteer.body">Help document and verify historical evidence. Researchers, translators, and data contributors needed to expand this record of 75 years of violations.</p>
+                                <button class="action-btn" onclick="window.location.href='volunteer.html'"
+                                    data-i18n="historicalEvents.actions.items.volunteer.btn">Become a Volunteer</button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ── Footer & Scripts ────────────────────────────────────────────── -->
+    <div id="footer-placeholder"></div>
+    <script src="/js/footer-init.js?v=6"></script>
+
+    <!-- Header component — must load before translation-system so #language-selector exists -->
+    <script>window.headerConfig = { mode: 'main', activePage: 'historical', subNav: 'stat-page' };</script>
+    <script src="/js/config.js?v=1"></script>
+    <script src="/js/header-component.js?v=3"></script>
+
+    <!-- Translation system — populates #language-selector injected by header-component.js -->
+    <script src="/js/translation-system.js?v=4"></script>
+
+    <script>
+        /**
+         * Sync rendered header height so the sticky .sub-header sits flush below it.
+         * Copied verbatim from war-crimes-stats.html.
+         */
+        (function syncHeaderHeight() {
+            function update() {
+                const header = document.querySelector('.header');
+                if (header) {
+                    document.documentElement.style.setProperty(
+                        '--header-height',
+                        header.getBoundingClientRect().height + 'px'
+                    );
+                }
+            }
+            update();
+            window.addEventListener('load', update);
+            window.addEventListener('resize', update);
+        })();
+
+        // ── Tab switching ──────────────────────────────────────────────────────
+        function showView(viewName) {
+            document.querySelectorAll('.view-section').forEach(s => s.classList.remove('active'));
+            document.querySelectorAll('[data-view]').forEach(b => b.classList.remove('active'));
+            const section = document.getElementById(viewName + 'View');
+            if (section) section.classList.add('active');
+            document.querySelectorAll(`[data-view="${viewName}"]`).forEach(b => b.classList.add('active'));
+            // Scroll to top of main content
+            document.querySelector('.main')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        // Wire sub-nav buttons injected by header-component.js
+        // header-component fires after DOMContentLoaded, so we use a short poll
+        (function wireDataViewButtons() {
+            function attach() {
+                const btns = document.querySelectorAll('[data-view]');
+                if (!btns.length) { setTimeout(attach, 60); return; }
+                btns.forEach(btn => {
+                    btn.addEventListener('click', () => showView(btn.dataset.view));
+                });
+            }
+            attach();
+        })();
+
+        // ── IntersectionObserver — animate items into view ──────────────────────
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver(
+                entries => entries.forEach(e => {
+                    if (e.isIntersecting) e.target.classList.add('animate-in');
+                }),
+                { threshold: 0.08, rootMargin: '0px 0px -40px 0px' }
+            );
+            document.querySelectorAll(
+                '.violation-item, .framework-card, .resource-category, .timeline-item, .crisis-layer, .stat-card, .legal-resource-card'
+            ).forEach(el => observer.observe(el));
+        });
+
+        // ── Share function ──────────────────────────────────────────────────────
+        function shareHistoricalData() {
+            const text = 'Comprehensive documentation of 75 years of systematic violations against the Palestinian people (1948–2023). Sources: UN, B\'Tselem, Amnesty International, Human Rights Watch, Addameer.';
+            const title = '📜 Palestinian Historical Documentation — PalGenoPedia';
+            const url = window.location.href;
+            if (navigator.share) {
+                navigator.share({ title, text, url });
+                return;
+            }
+            const full = text + '\n' + url;
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(full).then(() => {
+                    alert('Link and summary copied to clipboard!');
+                });
+            } else {
+                const ta = document.createElement('textarea');
+                ta.value = full;
+                document.body.appendChild(ta);
+                ta.select();
+                document.execCommand('copy');
+                document.body.removeChild(ta);
+                alert('Link copied!');
+            }
+        }
+
+        // ── Language change: no JS-generated dynamic content on this page,
+        //    but hook provided for future use (mirrors war-crimes-stats.html pattern)
+        document.addEventListener('languageChanged', () => {
+            // All translatable content uses data-i18n attributes; TranslationSystem
+            // handles re-render automatically. No manual re-population needed.
+        });
+    </script>
+
+</body>
+</html>

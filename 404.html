@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found — PalGenoPedia</title>
+    <meta name="description" content="The page you requested is not on PalGenoPedia. Jump to the war crimes statistics, the historical massacres archive, or the full incident timeline.">
+    <!-- A 404 must never be indexed, and must never be treated as a canonical
+         destination for the URL that produced it. -->
+    <meta name="robots" content="noindex, follow">
+
+    <!--
+      GitHub Pages serves this file for ANY missing path, at any depth. The
+      browser still resolves relative URLs against the *requested* path, so
+      every link and asset reference below is root-absolute (/...) on purpose.
+      A relative href here would 404 a second time.
+    -->
+    <link rel="stylesheet" href="/Styles/shared-styles.css">
+    <style>
+        .nf-wrap {
+            max-width: 62rem;
+            margin: 0 auto;
+            padding: 4rem 1.25rem 5rem;
+        }
+        .nf-code {
+            font-size: 0.78rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--text-muted, #868e96);
+            margin: 0 0 0.85rem;
+        }
+        .nf-wrap h1 {
+            margin: 0 0 0.9rem;
+            font-size: clamp(1.6rem, 4vw, 2.4rem);
+            line-height: 1.18;
+            color: var(--text-primary, #212529);
+        }
+        .nf-lead {
+            margin: 0 0 1.1rem;
+            max-width: 60ch;
+            font-size: 1.02rem;
+            line-height: 1.65;
+            color: var(--text-secondary, #6c757d);
+        }
+        .nf-note {
+            max-width: 60ch;
+            margin: 0 0 2.25rem;
+            padding: 0.9rem 1.1rem;
+            border-left: 3px solid var(--accent-color, #ff6b35);
+            background: var(--bg-secondary, #f8f9fa);
+            font-size: 0.94rem;
+            line-height: 1.6;
+            color: var(--text-secondary, #6c757d);
+        }
+        .nf-note a { color: var(--accent-color, #ff6b35); }
+        .nf-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+            gap: 0.85rem;
+            margin-bottom: 2.5rem;
+        }
+        .nf-card {
+            display: block;
+            padding: 1.1rem 1.2rem;
+            border: 1px solid var(--border-color, #dee2e6);
+            border-radius: 8px;
+            text-decoration: none;
+            background: var(--surface-color, #fff);
+            transition: border-color .15s ease, transform .15s ease;
+        }
+        .nf-card:hover, .nf-card:focus-visible {
+            border-color: var(--accent-color, #ff6b35);
+            transform: translateY(-2px);
+        }
+        .nf-card b {
+            display: block;
+            margin-bottom: 0.25rem;
+            color: var(--text-primary, #212529);
+            font-size: 1rem;
+        }
+        .nf-card span {
+            color: var(--text-secondary, #6c757d);
+            font-size: 0.88rem;
+            line-height: 1.5;
+        }
+        .nf-data {
+            font-size: 0.9rem;
+            color: var(--text-secondary, #6c757d);
+            border-top: 1px solid var(--border-color, #dee2e6);
+            padding-top: 1.25rem;
+        }
+        .nf-data a { color: var(--accent-color, #ff6b35); }
+        @media (prefers-reduced-motion: reduce) {
+            .nf-card { transition: none; }
+            .nf-card:hover { transform: none; }
+        }
+    </style>
+</head>
+<body>
+    <main class="nf-wrap">
+        <p class="nf-code">Error 404</p>
+        <h1>That page isn’t here</h1>
+        <p class="nf-lead">
+            The address you followed doesn’t match anything on PalGenoPedia. It may have
+            been retired, or the link may be mistyped. Nothing has been removed from the
+            archive — the documentation below is complete and current.
+        </p>
+
+        <div class="nf-note">
+            <strong>Looking for a specific massacre?</strong> Each of the 17 documented
+            historical events now has its own page — for example
+            <a href="/historical-events/massacres/deir-yassin/">Deir Yassin</a>.
+        </div>
+
+        <div class="nf-grid">
+            <a class="nf-card" href="/">
+                <b>Home</b>
+                <span>Headline figures and the filtered event timeline.</span>
+            </a>
+            <a class="nf-card" href="/historical-events/massacres/">
+                <b>Historical Massacres Archive</b>
+                <span>Documented events, 1948–2023, with sources and legal analysis.</span>
+            </a>
+            <a class="nf-card" href="/war-crimes/">
+                <b>War Crimes Statistics</b>
+                <span>Casualties, medical facilities, schools, universities, religious sites.</span>
+            </a>
+            <a class="nf-card" href="/hunger-crisis-stats.html">
+                <b>Hunger Crisis Statistics</b>
+                <span>Starvation deaths, malnutrition, and food-security violations.</span>
+            </a>
+            <a class="nf-card" href="/major-incidents-timeline.html">
+                <b>Full Incident Timeline</b>
+                <span>Every documented event, 1948 to the present, in one chronology.</span>
+            </a>
+            <a class="nf-card" href="/historical-events/ethnic-cleansing/">
+                <b>Ethnic Cleansing Documentation</b>
+                <span>418 depopulated villages, with an interactive map.</span>
+            </a>
+        </div>
+
+        <p class="nf-data">
+            Building something with this data? The full dataset is published in
+            machine-readable form: <a href="/data/events.json">events.json</a>,
+            <a href="/data/events.csv">events.csv</a>,
+            <a href="/data/events.ndjson">events.ndjson</a>, plus
+            <a href="/llms.txt">llms.txt</a> and an
+            <a href="/feed.xml">Atom feed</a>. See also the
+            <a href="/sitemap.xml">sitemap</a>.
+        </p>
+    </main>
+</body>
+</html>

@@ -1,0 +1,166 @@
+{
+  "cases": [
+    {
+      "id": "444918528",
+      "name": "Liyan Mohammed Abdullah Al-Majdalawi",
+      "arabicName": "ليان محمد عبدالله المجدلاوي",
+      "age": "2 years old",
+      "date": "November 2023",
+      "location": "Gaza",
+      "categories": ["documented-shootings", "media-coverage"],
+      "tags": ["BBC Investigation", "International Coverage", "Witness Accounts"],
+              "summary": "Shot and killed in Gaza in November 2023, in an area where the IDF was operating. The BBC World Service pieced together her story as part of an investigation into children shot during the war.",
+      "source": "BBC World Service Investigation",
+      "hasPhoto": false,
+      "timeline": [
+        {
+          "date": "November 2023",
+          "event": "Liyan Mohammed Abdullah Al-Majdalawi shot in area of IDF operations"
+        },
+        {
+          "date": "Investigation Period",
+          "event": "BBC World Service investigates and pieces together the circumstances"
+        },
+        {
+          "date": "IDF Response",
+          "event": "IDF states details recorded and will be examined by competent authorities"
+        }
+      ],
+      "witnesses": [
+        "Part of BBC investigation gathering accounts from eyewitnesses and human rights organizations",
+        "One of 95 cases where children were shot in head or chest during the conflict"
+      ],
+      "mediaLinks": [
+        {
+          "source": "BBC World Service",
+          "title": "Two girls shot in Gaza - BBC pieces together what happened",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "id": "440604932",
+      "name": "Mira Said Nouri Tanbora",
+      "arabicName": "ميرا سعيد نوري طنبوره",
+      "age": "6 years old",
+      "date": "November 2023",
+      "location": "Gaza",
+      "categories": ["documented-shootings", "media-coverage"],
+      "tags": ["BBC Investigation", "International Coverage", "Witness Accounts"],
+      "summary": "Six-year-old girl killed in Gaza in November 2023, in an area where the IDF was operating. Part of BBC's comprehensive investigation into over 160 cases of children shot during the conflict.",
+      "source": "BBC World Service Investigation",
+      "hasPhoto": false,
+      "timeline": [
+        {
+          "date": "November 2023",
+          "event": "Mira Said Nouri Tanbora shot in area of IDF operations"
+        },
+        {
+          "date": "Investigation Period",
+          "event": "BBC World Service investigates as part of broader study"
+        },
+        {
+          "date": "Findings",
+          "event": "Case included in report of 160+ children shot during conflict"
+        }
+      ],
+      "witnesses": [
+        "Eyewitness testimony obtained via human rights organizations and medics",
+        "Part of comprehensive BBC investigation into child casualties"
+      ],
+      "mediaLinks": [
+        {
+          "source": "BBC World Service",
+          "title": "Investigation into children shot in Gaza conflict",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "id": "439124942",
+      "name": "Hind Rami Iyad Rajab",
+      "arabicName": "هند رامي اياد رجب",
+      "age": "6 years old",
+      "date": "January 2024",
+      "location": "Gaza City",
+      "categories": ["rescue-attempts", "media-coverage", "family-cases"],
+      "tags": ["UN Investigation", "Global Coverage", "Recorded Call"],
+      "summary": "Six-year-old trapped in car with dead family members, made desperate calls for help. UN experts called her killing a war crime. Her story became a symbol of children's suffering in Gaza.",
+      "source": "UN Human Rights Experts",
+      "hasPhoto": true,
+      "timeline": [
+        {
+          "date": "January 29, 2024",
+          "event": "Hind trapped in car with dead family members, calls for help"
+        },
+        {
+          "date": "January 29, 2024",
+          "event": "Ambulance dispatched to rescue Hind after her desperate phone calls"
+        },
+        {
+          "date": "February 10, 2024",
+          "event": "Bodies of Hind and ambulance crew found"
+        },
+        {
+          "date": "July 2024",
+          "event": "UN experts declare killing a war crime"
+        }
+      ],
+      "witnesses": [
+        "Recorded phone calls with Hind pleading for help",
+        "Family members testified about the incident",
+        "Red Crescent ambulance crew testimony"
+      ],
+      "mediaLinks": [
+        {
+          "source": "UN Human Rights",
+          "title": "Gaza: Killing of Hind Rajab and her family is a war crime",
+          "url": "https://www.ohchr.org/en/press-releases/2024/07/gaza-killing-hind-rajab-and-her-family-war-crime-too-many-warn-experts"
+        },
+        {
+          "source": "International Media",
+          "title": "The story of Hind Rajab became global news",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "id": "example-family",
+      "name": "Al-Tanani Family Children",
+      "age": "Various ages",
+      "date": "October 2023",
+      "location": "Northern Gaza",
+      "categories": ["family-cases", "media-coverage"],
+      "tags": ["Entire Family", "Survivor Accounts"],
+      "summary": "Multiple children from the same family killed in a single incident. Represents the broader pattern of entire families being wiped out during the conflict.",
+      "source": "Human Rights Organizations",
+      "hasPhoto": false,
+      "timeline": [
+        {
+          "date": "October 2023",
+          "event": "Al-Tanani family home targeted"
+        },
+        {
+          "date": "Immediate aftermath",
+          "event": "Rescue efforts and documentation by local organizations"
+        },
+        {
+          "date": "Documentation",
+          "event": "Case recorded by human rights organizations"
+        }
+      ],
+      "witnesses": [
+        "Neighbors and rescue workers provided testimony",
+        "Human rights organizations documented the case",
+        "Part of broader pattern of family annihilation"
+      ],
+      "mediaLinks": [
+        {
+          "source": "Human Rights Organizations",
+          "title": "Documentation of family casualties",
+          "url": "#"
+        }
+      ]
+    }
+  ]
+}

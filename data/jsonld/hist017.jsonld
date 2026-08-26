@@ -1,0 +1,340 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "@id": "https://palgenopedia.org/data/events.json#hist017",
+  "headline": "West Bank Raids 2022–2023",
+  "url": "https://palgenopedia.org/Pages/Historical_Massacres/massacres.html#event/hist017",
+  "datePublished": "2022-01-01",
+  "dateModified": "2026-08-09",
+  "inLanguage": "en",
+  "about": {
+    "@type": "Event",
+    "name": "West Bank Raids 2022–2023",
+    "startDate": "2022-01-01",
+    "endDate": "45291",
+    "description": "Two-year period of intensified Israeli military operations in West Bank",
+    "location": {
+      "@type": "Place",
+      "name": "West Bank, Under Israeli military occupation; Areas A, B, C division under Oslo Accords; Ongoing occupation; violence escalated significantly"
+    }
+  },
+  "articleBody": "The escalation began in spring 2022 following a series of attacks by Palestinians inside Israel that killed 19 Israelis between March 22 and May 7. Israel responded by launching 'Operation Break the Wave'—near-nightly military raids into West Bank cities and refugee camps, particularly Jenin and Nablus. These cities had become centers of renewed armed Palestinian resistance with the emergence of groups like the Jenin Brigades (founded September 2021), the Lions' Den in Nablus, and the Balata Brigades. The Israeli operations involved massive deployments of troops, bulldozers destroying infrastructure and roads, use of live ammunition in densely populated areas, and increasingly, aerial bombardment including drone strikes. By the end of 2022, 220 Palestinians had been killed including 48 children—the highest annual toll since the Second Intifada ended in 2005. The violence was not limited to armed confrontations. According to Middle East Eye's analysis, the majority of Palestinian casualties in 2022 were likely unarmed at the time of their death. At least 95 Palestinians were shot by Israeli soldiers as bystanders during army raids or while participating in anti-occupation demonstrations. Seven women and girls were killed, including 15-year-old Jana Zakarneh shot twice in the face while playing with her cat on her rooftop, and 15-year-old Fulla al-Masalma killed a day before her birthday. The most internationally significant killing was that of Shireen Abu Akleh, Al Jazeera's veteran Palestinian correspondent, shot in the head on May 11, 2022 while covering a raid in Jenin. Despite wearing a clearly marked PRESS vest and standing with other journalists, Abu Akleh was killed by Israeli fire. The UN Commission of Inquiry investigated and concluded 'on reasonable grounds that Israeli forces used lethal force without justification under international human rights law and, intentionally or recklessly, violated Abu Akleh's right to life.' The violence intensified further in 2023. In January, a raid on Jenin killed 10 Palestinians including a 61-year-old woman shot through the neck while watching from her bedroom window. In February, 11 Palestinians were killed in Nablus including civilians shot in the back while fleeing. In July, Israel conducted its largest West Bank operation in 20 years—a 14-hour assault on Jenin refugee camp using drones, helicopter gunships, and hundreds of troops, killing 12 and forcing 500 families to flee. By December 2023, Doctors Without Borders declared it 'the deadliest year for Palestinians in the West Bank in recorded history' with 507 killed including 127 children. The UN Commission found Israeli forces systematically violated international law by applying combat rules to law enforcement situations, using disproportionate force, failing to distinguish between civilians and combatants, obstructing medical care, and conducting what amounted to extrajudicial executions. Meanwhile, settler violence also surged—the UN recorded over 800 settler attacks on Palestinians between October 2022 and May 2024, often occurring with Israeli military acquiescence or participation.",
+  "keywords": "Military Raids / Systematic Killings, historical, Unlawful killings; disproportionate force",
+  "mentions": [
+    {
+      "@type": "Organization",
+      "name": "Israel Defense Forces"
+    },
+    {
+      "@type": "Organization",
+      "name": "Israeli Border Police"
+    },
+    {
+      "@type": "Organization",
+      "name": "Israeli settlers (complicit in attacks)"
+    },
+    {
+      "@type": "Organization",
+      "name": "Shin Bet (Israeli internal security)"
+    },
+    {
+      "@type": "Organization",
+      "name": "Special forces units including Duvdevan"
+    }
+  ],
+  "citation": [
+    {
+      "@type": "Article",
+      "name": "Middle East Eye Comprehensive Analysis",
+      "url": "https://www.middleeasteye.net/news/palestine-west-bank-deadliest-year-second-intifada",
+      "about": {
+        "@type": "Thing",
+        "name": "casualty"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Doctors Without Borders Statement",
+      "url": "https://www.doctorswithoutborders.org/",
+      "about": {
+        "@type": "Thing",
+        "name": "casualty"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Middle East Eye Analysis",
+      "url": "https://www.middleeasteye.net/news/palestine-west-bank-deadliest-year-second-intifada",
+      "about": {
+        "@type": "Thing",
+        "name": "casualty"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "MEE & UN Documentation",
+      "url": "https://www.middleeasteye.net/news/palestine-west-bank-deadliest-year-second-intifada",
+      "about": {
+        "@type": "Thing",
+        "name": "casualty"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "UN Commission Report",
+      "url": "https://www.ohchr.org/en/press-releases/2023/10/civilians-are-primary-victims-increased-violence-israel-and-occupied",
+      "about": {
+        "@type": "Thing",
+        "name": "casualty"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Al Jazeera citing UN",
+      "url": "https://www.aljazeera.com/news/2023/1/26/why-israeli-raids-killed-many-palestinians-this-year-explainer",
+      "about": {
+        "@type": "Thing",
+        "name": "casualty"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Detailed Documentation",
+      "url": "https://en.wikipedia.org/wiki/January_2023_Jenin_incursion",
+      "about": {
+        "@type": "Thing",
+        "name": "casualty"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Al Jazeera Investigation",
+      "url": "https://www.aljazeera.com/news/2023/2/22/israeli-forces-kill-palestinians-in-nablus-raid",
+      "about": {
+        "@type": "Thing",
+        "name": "casualty"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Comprehensive Report",
+      "url": "https://en.wikipedia.org/wiki/July_2023_Jenin_incursion",
+      "about": {
+        "@type": "Thing",
+        "name": "casualty"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "MEE Documentation",
+      "url": "https://www.middleeasteye.net/news/palestine-west-bank-deadliest-year-second-intifada",
+      "about": {
+        "@type": "Thing",
+        "name": "casualty"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "UN Documentation",
+      "url": "https://en.wikipedia.org/wiki/Israeli_incursions_in_the_West_Bank_during_the_Gaza_war",
+      "about": {
+        "@type": "Thing",
+        "name": "casualty"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "UN Commission Press Release, October 16, 2023",
+      "url": "https://www.ohchr.org/en/press-releases/2023/10/civilians-are-primary-victims-increased-violence-israel-and-occupied",
+      "about": {
+        "@type": "Thing",
+        "name": "testimony"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Family testimony to media and human rights organizations",
+      "url": "https://www.middleeasteye.net/news/palestine-west-bank-deadliest-year-second-intifada",
+      "about": {
+        "@type": "Thing",
+        "name": "testimony"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Al Jazeera Official Statement, May 11, 2022",
+      "url": "https://www.aljazeera.com/",
+      "about": {
+        "@type": "Thing",
+        "name": "testimony"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "UN Secretary-General Statements, January-February 2023",
+      "url": "https://www.un.org/",
+      "about": {
+        "@type": "Thing",
+        "name": "testimony"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "MSF Statement, December 2023",
+      "url": "https://www.doctorswithoutborders.org/",
+      "about": {
+        "@type": "Thing",
+        "name": "testimony"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Family testimony documented in reports",
+      "url": "https://en.wikipedia.org/wiki/January_2023_Jenin_incursion",
+      "about": {
+        "@type": "Thing",
+        "name": "testimony"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "B'Tselem Annual Assessment, 2022",
+      "url": "https://www.btselem.org/",
+      "about": {
+        "@type": "Thing",
+        "name": "testimony"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "UN Expert Statement, January 2024",
+      "url": "https://en.wikipedia.org/wiki/Israeli_incursions_in_the_West_Bank_during_the_Gaza_war",
+      "about": {
+        "@type": "Thing",
+        "name": "testimony"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "PA Official Statement, February 22, 2023",
+      "url": "https://www.aljazeera.com/news/2023/2/22/israeli-forces-kill-palestinians-in-nablus-raid",
+      "about": {
+        "@type": "Thing",
+        "name": "testimony"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "📄 UN Commission Findings ↑",
+      "url": "https://www.ohchr.org/en/press-releases/2023/10/civilians-are-primary-victims-increased-violence-israel-and-occupied",
+      "about": {
+        "@type": "Thing",
+        "name": "war_crime"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "📄 MEE Investigation ↑",
+      "url": "https://www.middleeasteye.net/news/palestine-west-bank-deadliest-year-second-intifada",
+      "about": {
+        "@type": "Thing",
+        "name": "war_crime"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "📄 UN Commission Report ↑",
+      "url": "https://www.ohchr.org/en/press-releases/2023/10/civilians-are-primary-victims-increased-violence-israel-and-occupied",
+      "about": {
+        "@type": "Thing",
+        "name": "war_crime"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "📄 Multiple Documented Cases ↑",
+      "url": "https://www.middleeasteye.net/news/palestine-west-bank-deadliest-year-second-intifada",
+      "about": {
+        "@type": "Thing",
+        "name": "war_crime"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "📄 Multiple Incident Reports ↑",
+      "url": "https://en.wikipedia.org/wiki/January_2023_Jenin_incursion",
+      "about": {
+        "@type": "Thing",
+        "name": "war_crime"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "📄 Documentation ↑",
+      "url": "https://en.wikipedia.org/wiki/Israeli_incursions_in_the_West_Bank_during_the_Gaza_war",
+      "about": {
+        "@type": "Thing",
+        "name": "war_crime"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "📄 UN Commission Legal Analysis ↑",
+      "url": "https://www.ohchr.org/en/press-releases/2023/10/civilians-are-primary-victims-increased-violence-israel-and-occupied",
+      "about": {
+        "@type": "Thing",
+        "name": "war_crime"
+      }
+    }
+  ],
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "Deaths",
+      "propertyID": "casualties/deaths",
+      "value": "500+ Palestinians (2022-2023 combined) including 78+ children; 19 Israelis killed by Palestinians (early 2022)",
+      "minValue": -2023,
+      "maxValue": 2022
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Injured",
+      "propertyID": "casualties/injured",
+      "value": "9,000+ Palestinians injured in 2022 alone (UN data); thousands more in 2023",
+      "minValue": 2022,
+      "maxValue": 9000
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Forced displacement",
+      "propertyID": "casualties/forced_displacement",
+      "value": "Multiple communities displaced by settler violence; 500 families displaced in Jenin July 2023",
+      "minValue": 500,
+      "maxValue": 2023
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Verification status",
+      "propertyID": "verification_status",
+      "value": "verified"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Classification",
+      "propertyID": "classification",
+      "value": "Unlawful killings; disproportionate force"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Author",
+      "propertyID": "author",
+      "value": "aliattia02"
+    }
+  ],
+  "provider": {
+    "@type": "Organization",
+    "name": "PalGenoPedia",
+    "url": "https://palgenopedia.org"
+  },
+  "isBasedOn": "https://palgenopedia.org/data/events.json"
+}

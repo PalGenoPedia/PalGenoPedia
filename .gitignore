@@ -1,0 +1,19 @@
+__pycache__/
+*.pyc
+*.pyo
+
+# IDE metadata (personal, not project content)
+.idea/
+
+# OS cruft
+.DS_Store
+Thumbs.db
+
+# Stopped project - kept locally for reference, not tracked
+/draft/
+
+# Stale duplicate drafts of deir-yassin-1948
+/Pages/Historical_Massacres/history/
+
+# Personal scratch notes
+/gaza github.txt

@@ -1,0 +1,1348 @@
+{
+  "common": {
+    "siteTitle": "Gaza Crisis Documentation",
+    "nav": {
+      "warCrimes": "⚖️ War Crimes",
+      "hungerCrisis": "🍽️ Hunger Crisis",
+      "historical": "📜 History",
+      "timeline": "📋 Timeline",
+      "extractTool": "🔍 Extract Incidents",
+      "joinUs": "🤝 Join Us",
+      "backToMain": "← Back to Main",
+      "overview": "Overview",
+      "categories": "Categories",
+      "legal": "Legal Framework",
+      "resources": "Resources"
+    },
+    "footer": {
+      "copyright": "© 2024 Gaza Crisis Documentation Platform. All rights reserved.",
+      "mainSections": "🏠 Main Sections",
+      "dashboard": "🏠 Crisis Dashboard",
+      "warCrimes": "⚖️ War Crimes Documentation",
+      "hungerCrisis": "🍽️ Hunger Crisis Analysis",
+      "timeline": "📋 Major Incidents Timeline",
+      "warCrimesStats": "⚖️ War Crimes Stats",
+      "childrenKilled": "👶 Children Killed",
+      "journalistsKilled": "📰 Journalists Killed",
+      "medicalPersonnel": "🏥 Medical Personnel Killed",
+      "totalDeaths": "💀 Total Deaths",
+      "medicalPersonnelDetained": "🚑 Medical Personnel Detained",
+      "hospitalsAttacked": "🏥 Hospitals Attacked",
+      "waterInfrastructure": "💧 Water Infrastructure",
+      "housingDestroyed": "🏠 Housing Destroyed",
+      "hungerCrisisStats": "🍽️ Hunger Crisis Stats",
+      "totalStarvationDeaths": "💀 Total Deaths Due to Starvation",
+      "childrenStarvation": "👶 Children Died from Starvation",
+      "starvationRate": "📊 Population Starvation Rate",
+      "displacedPeople": "🏠 Displaced People",
+      "calorieDeficit": "🥖 Daily Calorie Deficit",
+      "aidBlocked": "🚫 Aid Requests Denied",
+      "bakeriesDestroyed": "🏭 Bakeries Destroyed",
+      "agricultureDestroyed": "🌾 Agricultural Land Destroyed",
+      "platformInfo": "📚 Platform Info",
+      "about": "ℹ️ About This Documentation",
+      "methodology": "🔬 Data Methodology",
+      "sources": "📰 Sources & Verification",
+      "legal": "⚖️ Legal Framework",
+      "contact": "📧 Contact & Reports",
+      "api": "🔌 Data API Access",
+      "download": "📥 Download Reports",
+      "share": "📤 Share & Embed",
+      "verifiedData": "🔍 All data verified through multiple sources",
+      "legalAccountability": "⚖️ Preserved for legal accountability"
+    },
+    "share": {
+      "title": "Share This Documentation",
+      "description": "Help spread awareness about this crisis by sharing this page on social media",
+      "loading": "Loading share buttons...",
+      "copyLink": "Copy Link",
+      "twitter": "Twitter/X",
+      "facebook": "Facebook",
+      "linkedin": "LinkedIn",
+      "whatsapp": "WhatsApp",
+      "telegram": "Telegram",
+      "reddit": "Reddit",
+      "email": "Email"
+    },
+    "buttons": {
+      "viewDetails": "View Details",
+      "viewAll": "View All",
+      "readMore": "Read More",
+      "clearFilters": "Clear Filters",
+      "close": "×",
+      "reload": "🔄 Reload",
+      "reloadPage": "🔄 Reload Page"
+    },
+    "stats": {
+      "childrenKilled": "Children Killed",
+      "journalistsKilled": "Journalists Killed",
+      "medicalStaffKilled": "Medical Staff Killed",
+      "totalDeaths": "Total Deaths",
+      "injured": "Injured",
+      "deaths": "Deaths",
+      "children": "Children",
+      "journalists": "Journalists",
+      "medicalStaff": "Medical Staff",
+      "displaced": "Displaced",
+      "totalAffected": "Total Affected",
+      "incidentsPlural": "incidents documented",
+      "incidentsSingular": "incident documented",
+      "lastUpdated": "Last updated:",
+      "source": "Source"
+    },
+    "incident": {
+      "date": "Date",
+      "time": "Time",
+      "location": "Location",
+      "type": "Type",
+      "overallImpact": "📊 Overall Impact Summary:",
+      "totalAffected": "Total Affected",
+      "critical": "Critical Condition",
+      "hospitalized": "Hospitalized",
+      "deaths": "deaths",
+      "affected": "affected",
+      "impactAssessing": "Impact being assessed",
+      "detailedDocumentation": "📋 Detailed Documentation",
+      "individualDocumentation": "📋 Individual Documentation (${count} cases):",
+      "documentedVictims": "Documented victims:",
+      "nameProtected": "Name protected",
+      "nameProtectedPrivacy": "👤 Name Protected for Privacy",
+      "verified": "✓ Verified",
+      "verifiedMultiple": "✅ This incident has been verified through multiple sources",
+      "pending": "⏳ Pending",
+      "pendingVerification": "⏳ This incident is pending verification",
+      "documentedCasesPlural": "documented cases",
+      "documentedCasesSingular": "documented case",
+      "andMoreVictims": " and ${count} more",
+      "age": "Age",
+      "cause": "💔 Cause",
+      "medicalFacility": "🏥 Medical Facility",
+      "reference": "🆔 Reference",
+      "sources": "📰 Sources",
+      "noSources": "No sources available",
+      "privacyNotes": "🔒 Privacy & Documentation Notes",
+      "privacyStatus": "Privacy Status",
+      "documentationPurpose": "Documentation Purpose",
+      "photoUnavailable": "📷 Photo unavailable",
+      "loading": "📷 Loading...",
+      "photoProtected": "🔒 Photo protected",
+      "unknownTime": "Unknown"
+    },
+    "timeline": {
+      "loading": "Timeline Loading...",
+      "pleaseWait": "Please wait while the timeline loads.",
+      "dataAvailable": "Data available"
+    },
+    "filters": {
+      "noResults": "No results found. Please try different filters."
+    }
+  },
+  "index": {
+    "pageTitle": "Gaza Crisis Documentation",
+    "metaDescription": "Comprehensive documentation of war crimes, hunger crisis, and humanitarian violations in Gaza",
+    "intro": {
+      "title": "Documented war crimes, massacres and humanitarian violations in Palestine",
+      "body": "An open archive spanning 1948 to the present. Every figure carries provenance and a verification status, and the underlying data is published in machine-readable form."
+    },
+    "apiStatus": {
+      "loading": "Loading...",
+      "live": "Live Data",
+      "fallback": "Cached Data"
+    },
+    "dataStatus": {
+      "loading": "📊 Loading crisis data from Tech for Palestine API v3..."
+    },
+    "warCrimes": {
+      "title": "⚖️ War Crimes & International Law Violations",
+      "description": "Comprehensive documentation of systematic violations including attacks on civilians, medical facilities, and protected sites.",
+      "viewStats": "View Full Statistics →"
+    },
+    "hungerCrisis": {
+      "title": "📜 Historical Events & Systematic Oppression",
+      "description": "Seven decades of documented violations of international law — from the 1948 Nakba to ongoing displacement, massacres, and home demolitions.",
+      "viewStats": "View Historical Events →",
+      "starvationDeaths": "Displaced in the Nakba (1948)",
+      "famineConditions": "Documented Massacres (1948–2023)",
+      "totalAffected": "Homes Demolished (1967–2023)"
+    },
+    "majorIncidents": {
+      "title": "📋 Major Incidents Timeline",
+      "description": "Chronological documentation of verified incidents, massacres, and key escalation points from October 2023 onwards.",
+      "viewTimeline": "View Full Timeline →",
+      "incidentsDocumented": "Incidents Documented",
+      "multiSourceVerified": "Multi-Source Verified"
+    },
+    "joinUs": {
+      "badge": "🤝 Volunteer With Us",
+      "title": "Help Document a Crisis the World Must Not Forget",
+      "description": "We are looking for Data Collection Officers and Social Media &amp; Graphics Officers to join the team. Remote, flexible, open to all.",
+      "cta": "🤝 Join Us →"
+    },
+    "timeline": {
+      "title": "📋 Complete Historical Timeline (1948-Present)",
+      "description": "Interactive documentation from the 1948 Nakba through current genocide. Verified sources from UN, Human Rights Watch, and international organizations.",
+      "viewTimeline": "View Detailed Timeline →",
+      "totalEvents": "Total Events",
+      "verifiedCases": "Verified Cases",
+      "totalDeaths": "Total Deaths"
+    },
+    "timelineSection": {
+      "title": "📊 Complete Historical Timeline (1948-Present)",
+      "subtitle": "27 major documented massacres and war crimes from the Nakba to current genocide",
+      "sources": "🔍 Sources: UN, Human Rights Watch, B'Tselem, Al-Haq, PCHR"
+    },
+    "stats": {
+      "totalEvents": "Total Events",
+      "documentedIncidents": "Documented Incidents",
+      "totalDeaths": "Total Deaths",
+      "verifiedCasualties": "Verified Casualties",
+      "injured": "Injured",
+      "documentedInjuries": "Documented Injuries",
+      "displaced": "Displaced",
+      "forcedDisplacement": "Forced Displacement",
+      "scopeNote": "Totals sum the documented individual incidents shown below, filtered by the period selected above — not an independent whole-war casualty count. Updated 2026-08-24. See the <a href=\"/methodology.html\">methodology page</a> for sourcing."
+    },
+    "comparison": {
+      "header": "📊 Historical vs Current Comparison",
+      "historicalTitle": "📜 Historical Period (1948-2023)",
+      "currentTitle": "🚨 Current Genocide (Oct 2023-Present)",
+      "duration": "Duration:",
+      "majorEvents": "Major Events:",
+      "totalDeaths": "Total Deaths:",
+      "avgDeathsYear": "Avg Deaths/Year:",
+      "avgDeathsDay": "Avg Deaths/Day:"
+    },
+    "legend": {
+      "title": "📌 Event Types",
+      "massacres": "Massacres",
+      "militaryOperations": "Military Operations",
+      "forcedDisplacement": "Forced Displacement",
+      "hospitalAttacks": "Hospital Attacks",
+      "starvationWarfare": "Starvation Warfare",
+      "protestSuppression": "Protest Suppression"
+    },
+    "filters": {
+      "dateRange": "📅 Date Range",
+      "allDates": "All Dates (1948-Present)",
+      "nakba": "Nakba (1948)",
+      "firstIntifada": "First Intifada (1987-1993)",
+      "secondIntifada": "Second Intifada (2000-2005)",
+      "gazaOperations": "Gaza Operations (2008-2021)",
+      "currentGenocide": "Current Genocide (2023-Present)",
+      "eventType": "🏷️ Event Type",
+      "allTypes": "All Types",
+      "massacres": "Massacres",
+      "militaryOperations": "Military Operations",
+      "forcedDisplacement": "Forced Displacement",
+      "hospitalAttacks": "Hospital Attacks",
+      "protectedSiteAttacks": "Protected Site Attacks",
+      "starvationWarfare": "Starvation Warfare",
+      "protestSuppression": "Protest Suppression",
+      "search": "🔍 Search",
+      "searchPlaceholder": "Search events, locations...",
+      "verification": "✅ Verification",
+      "allStatuses": "All Statuses",
+      "verified": "Verified",
+      "disputed": "Disputed",
+      "underInvestigation": "Under Investigation",
+      "casualtyScale": "📊 Casualty Scale",
+      "allScales": "All Scales",
+      "lowCasualties": "1-50 casualties",
+      "mediumCasualties": "51-500 casualties",
+      "highCasualties": "501-2000 casualties",
+      "massiveCasualties": "2000+ casualties",
+      "clearAll": "🔄 Clear All Filters"
+    },
+    "timelineStatus": {
+      "loading": "📊 Loading timeline data..."
+    },
+    "timelineLoading": {
+      "message": "Loading Complete Historical Timeline...",
+      "detail": "Fetching data from 1948 to present..."
+    },
+    "modal": {
+      "title": "Event Details",
+      "basicInfo": "📋 Basic Information",
+      "date": "📅 Date:",
+      "location": "📍 Location:",
+      "eventType": "🏷️ Event Type:",
+      "verification": "✅ Verification:",
+      "summary": "📄 Summary",
+      "casualties": "💥 Casualties & Impact",
+      "warCrimes": "⚖️ War Crimes Documented",
+      "sources": "📰 Verified Sources",
+      "viewFull": "📖 View Full Documentation →"
+    }
+  },
+  "timeline": {
+    "pageTitle": "Major Incidents Timeline - Gaza Crisis Documentation",
+    "metaDescription": "Comprehensive timeline of historical massacres (1948-2023) and current genocide (2023-present) in Gaza and Palestine",
+    "header": {
+      "title": "📋 Historical & Current Timeline",
+      "description": "Comprehensive documentation from 1948 Nakba through current genocide. Interactive timeline with verified sources from UN, Human Rights Watch, and other international organizations."
+    },
+    "nav": {
+      "timelineView": "📅 Timeline",
+      "mapView": "🗺️ Map",
+      "listView": "📋 List"
+    },
+    "stats": {
+      "totalEvents": "Total Events",
+      "totalDeaths": "Total Deaths",
+      "lastUpdate": "Last Updated",
+      "massacres": "Massacres",
+      "documentedEvents": "Documented Events",
+      "deaths": "Total Deaths",
+      "verifiedCasualties": "Verified Casualties",
+      "injured": "Injured",
+      "documentedInjuries": "Documented Injuries",
+      "displaced": "Displaced",
+      "forcedDisplacement": "Forced Displacement",
+      "scopeNote": "Totals sum the documented individual incidents shown below, filtered by the period selected above — not an independent whole-war casualty count. Updated 2026-08-24. See the <a href=\"/methodology.html\">methodology page</a> for sourcing."
+    },
+    "modeSelector": {
+      "title": "📊 Select Timeline Period",
+      "sources": "🔍 Sources: UN, Human Rights Watch"
+    },
+    "modes": {
+      "historical": {
+        "title": "Historical Massacres",
+        "period": "1948 - October 6, 2023",
+        "events": "Events:",
+        "deaths": "Deaths:"
+      },
+      "current": {
+        "title": "Current Genocide",
+        "period": "October 7, 2023 - Present",
+        "events": "Events:",
+        "deaths": "Deaths:"
+      },
+      "both": {
+        "title": "Complete Timeline",
+        "period": "1948 - Present",
+        "events": "Total Events:",
+        "deaths": "Total Deaths:"
+      }
+    },
+    "comparison": {
+      "title": "📊 Historical vs Current Comparison",
+      "historical": {
+        "title": "📜 Historical Period (1948-2023)",
+        "duration": "Duration:",
+        "durationValue": "75 years",
+        "events": "Major Events:",
+        "deaths": "Total Deaths:",
+        "avgDeaths": "Avg Deaths/Year:"
+      },
+      "current": {
+        "title": "🚨 Current Genocide (Oct 2023-Present)",
+        "duration": "Duration:",
+        "events": "Major Events:",
+        "deaths": "Total Deaths:",
+        "avgDeaths": "Avg Deaths/Day:"
+      }
+    },
+    "legend": {
+      "title": "📌 Event Types",
+      "massacres": "Massacres",
+      "militaryOperations": "Military Operations",
+      "forcedDisplacement": "Forced Displacement",
+      "hospitalAttacks": "Hospital Attacks",
+      "starvationWarfare": "Starvation Warfare",
+      "protestSuppression": "Protest Suppression"
+    },
+    "filters": {
+      "dateRange": "📅 Date Range",
+      "allDates": "All Dates",
+      "nakba": "Nakba (1948)",
+      "firstIntifada": "First Intifada (1987-1993)",
+      "secondIntifada": "Second Intifada (2000-2005)",
+      "gazaOperations": "Gaza Operations (2008-2021)",
+      "currentGenocide": "Current Genocide (2023-Present)",
+      "eventType": "🏷️ Event Type",
+      "allTypes": "All Types",
+      "massacres": "Massacres",
+      "militaryOperations": "Military Operations",
+      "forcedDisplacement": "Forced Displacement",
+      "hospitalAttacks": "Hospital Attacks",
+      "protectedSiteAttacks": "Protected Site Attacks",
+      "starvationWarfare": "Starvation Warfare",
+      "protestSuppression": "Protest Suppression",
+      "search": "🔍 Search",
+      "searchPlaceholder": "Search events, locations...",
+      "verification": "✅ Verification",
+      "allStatuses": "All Statuses",
+      "verified": "Verified",
+      "disputed": "Disputed",
+      "underInvestigation": "Under Investigation",
+      "casualtyScale": "📊 Casualty Scale",
+      "allScales": "All Scales",
+      "lowCasualties": "1-50 casualties",
+      "mediumCasualties": "51-500 casualties",
+      "highCasualties": "501-2000 casualties",
+      "massiveCasualties": "2000+ casualties",
+      "clearAll": "🔄 Clear All Filters"
+    },
+    "loading": {
+      "status": "📊 Loading timeline data...",
+      "message": "Loading Historical Timeline...",
+      "detail": "Fetching massacres data from 1948-2023..."
+    },
+    "map": {
+      "legendTitle": "Incident Types",
+      "massacres": "Massacres",
+      "militaryOperations": "Military Operations",
+      "forcedDisplacement": "Forced Displacement",
+      "hospitalAttacks": "Hospital Attacks",
+      "starvationWarfare": "Starvation Warfare"
+    },
+    "list": {
+      "title": "Event Documentation",
+      "sortBy": "Sort by:",
+      "sortDateDesc": "Date (Newest First)",
+      "sortDateAsc": "Date (Oldest First)",
+      "sortDeathsDesc": "Deaths (Highest First)",
+      "sortType": "Event Type",
+      "sortLocation": "Location",
+      "loading": "Loading events...",
+      "noResults": "No events found",
+      "adjustFilters": "Try adjusting your filters or search criteria.",
+      "clearAllFilters": "Clear All Filters"
+    },
+    "modal": {
+      "title": "Event Details",
+      "basicInfo": "📋 Basic Information",
+      "date": "📅 Date:",
+      "location": "📍 Location:",
+      "eventType": "🏷️ Event Type:",
+      "verification": "✅ Verification:",
+      "summary": "📄 Summary",
+      "casualties": "💥 Casualties & Impact",
+      "warCrimes": "⚖️ War Crimes Documented",
+      "sources": "📰 Verified Sources",
+      "viewFullDoc": "📖 View Full Documentation →"
+    }
+  },
+  "deirYassin": {
+    "pageTitle": "Deir Yassin Massacre (9 April 1948) | Historical Documentation",
+    "breadcrumb": {
+      "home": "🏠 Home",
+      "timeline": "📋 Timeline",
+      "historical": "📜 Historical",
+      "current": "Deir Yassin 1948"
+    },
+    "hero": {
+      "category": "📜 HISTORICAL MASSACRE • NAKBA 1948",
+      "title": "Deir Yassin Massacre",
+      "subtitle": "Killings of civilians in a West-Jerusalem village during the 1948 war"
+    },
+    "quickFacts": {
+      "title": "⚡ Quick Facts",
+      "eventType": "Event Type",
+      "perpetrators": "Perpetrators",
+      "verification": "Verification",
+      "classification": "Classification"
+    }
+  },
+  "warCrimes": {
+    "pageTitle": "War Crimes Statistics - Gaza Crisis Documentation",
+    "metaDescription": "Comprehensive documentation of war crimes and violations of international humanitarian law in Gaza",
+    "header": {
+      "title": "⚖️ War Crimes & International Law Violations",
+      "joinUsBtn": "🤝 Join Us — Become a Volunteer",
+      "debugBtn": "Debug",
+      "debugTitle": "Debug Information:",
+      "debugLoadingText": "Loading debug info...",
+      "debugLabels": {
+        "apiStatus": "API Status",
+        "lastApiCall": "Last API Call",
+        "apiDataAvailable": "API Data Available",
+        "gazaData": "Gaza Data",
+        "browserCors": "Browser CORS",
+        "apiEndpoint": "API Endpoint"
+      }
+    },
+    "apiStatus": {
+      "loading": "Loading API v3...",
+      "live": "Live Data",
+      "liveProxy": "Live Data (${proxyName})",
+      "fallback": "Cached Data",
+      "error": "Error - Using Cache"
+    },
+    "emergency": {
+      "title": "INTERNATIONAL LAW CRISIS:",
+      "subtitle": "Systematic violations of Geneva Conventions",
+      "detailsFallback": "Multiple systematic violations of international humanitarian law documented",
+      "detailsTemplate": "${totalKilled} total killed • ${childrenKilled} children killed • ${journalistsKilled} journalists targeted • ${medicalKilled} medical workers killed"
+    },
+    "loading": {
+      "message": "Loading latest data from Tech for Palestine API v3...",
+      "tryingProxy": "Trying ${proxyName}..."
+    },
+    "error": {
+      "loadFailed": "⚠️ Unable to load live data. Displaying cached information.",
+      "retryBtn": "🔄 Retry Loading Live Data"
+    },
+    "lastUpdated": {
+      "live": "Last updated: ${date} (Live Data)",
+      "cached": "Last updated: ${date} UTC (Cached Data)"
+    },
+    "sections": {
+      "humanCasualties": "💀 Human Casualties",
+      "medicalEducationReligious": "🏥 Medical, Education & Religious Facilities",
+      "destroyedInfrastructure": "🏗️ Destroyed Infrastructure",
+      "displacementCollectivePunishment": "🏠 Displacement & Collective Punishment",
+      "systematicPattern": "⚖️ Systematic Pattern of International Law Violations",
+      "legalFramework": "International Legal Framework Violations"
+    },
+    "statCards": {
+      "casualties": {
+        "childrenKilled": {
+          "label": "Children Killed",
+          "subtitle": "Direct targeting of civilians"
+        },
+        "journalistsKilled": {
+          "label": "Journalists Killed",
+          "subtitle": "Targeted attacks on media"
+        },
+        "medicalPersonnelKilled": {
+          "label": "Medical Personnel Killed",
+          "subtitle": "Attacks on healthcare workers"
+        },
+        "totalDeaths": {
+          "label": "Total Deaths",
+          "subtitle": "Indiscriminate attacks"
+        }
+      },
+      "infrastructure": {
+        "residentialDestroyed": {
+          "label": "Residential Units Destroyed",
+          "subtitle": "Systematic destruction"
+        },
+        "industrialFacilities": {
+          "label": "Industrial Facilities",
+          "subtitle": "Economic infrastructure"
+        },
+        "ambulancesTargeted": {
+          "label": "Ambulances Targeted",
+          "subtitle": "Emergency services"
+        },
+        "infrastructureDamage": {
+          "label": "Infrastructure Damage",
+          "subtitle": "Critical services"
+        }
+      },
+      "facilities": {
+        "hospitalsOutOfService": {
+          "label": "Hospitals Out of Service",
+          "subtitle": "Medical facilities targeted"
+        },
+        "schoolsDamaged": {
+          "label": "Schools Damaged/Destroyed",
+          "subtitle": "Educational infrastructure"
+        },
+        "universitiesDamaged": {
+          "label": "Universities Damaged",
+          "subtitle": "Higher education targeted"
+        },
+        "religiousSitesDamaged": {
+          "label": "Religious Sites Damaged",
+          "subtitle": "Cultural & heritage destruction"
+        }
+      },
+      "displacement": {
+        "internallyDisplaced": {
+          "label": "Internally Displaced",
+          "subtitle": "Mass population transfer"
+        },
+        "waterWellsDestroyed": {
+          "label": "Water Wells Destroyed",
+          "subtitle": "Water infrastructure"
+        },
+        "waterTanksDestroyed": {
+          "label": "Water Tanks Destroyed",
+          "subtitle": "Water storage"
+        },
+        "daysUnderSiege": {
+          "label": "Days Under Siege",
+          "subtitle": "Collective punishment"
+        }
+      }
+    },
+    "crisisLayers": {
+      "targetingCivilians": {
+        "title": "Targeting Civilians & Witnesses",
+        "body": "Systematic attacks on civilian populations, residential areas, and gatherings — combined with deliberate targeting of journalists and media workers to suppress documentation. Both practices violate the fundamental principle of distinction and press protections under international humanitarian law."
+      },
+      "protectedSites": {
+        "title": "Protected Sites Attacked",
+        "body": "Systematic destruction of hospitals, schools, religious sites, and UN facilities. Clear violations of Geneva Conventions protecting medical and educational facilities from targeting during armed conflict."
+      },
+      "collectivePunishment": {
+        "title": "Collective Punishment",
+        "body": "Complete siege affecting the entire population of 2.3 million, cutting water, electricity, food, and medical supplies. Mass forced displacement constituting crimes against humanity under the Rome Statute."
+      }
+    },
+    "legalFrameworkCards": {
+      "genevaConventions": {
+        "title": "🔴 Geneva Conventions",
+        "body": "Grave breaches including willful killing of civilians, extensive destruction of property, deportation of civilian population, and attacks on protected persons.",
+        "count": "50+ Documented Violations"
+      },
+      "romeStatute": {
+        "title": "🔴 Rome Statute (ICC)",
+        "body": "War crimes and crimes against humanity including murder, persecution, forcible transfer, and other inhumane acts causing great suffering.",
+        "count": "25+ Applicable Charges"
+      },
+      "additionalProtocols": {
+        "title": "🔴 Additional Protocols",
+        "body": "Violations of Additional Protocols I & II regarding protection of civilian population, medical personnel, and humanitarian aid during armed conflict.",
+        "count": "30+ Protocol Breaches"
+      },
+      "genocideConvention": {
+        "title": "🔴 Genocide Convention",
+        "body": "Acts committed with intent to destroy Palestinian population including killing, causing serious harm, and deliberately inflicting conditions of life to bring about destruction.",
+        "count": "Under ICJ Investigation"
+      }
+    },
+    "violations": {
+      "legalBasis": "Legal Basis:",
+      "categories": {
+        "crimesAgainstCivilians": "🎯 Crimes Against Civilian Population",
+        "attacksOnProtectedSites": "🏥 Attacks on Protected Sites",
+        "targetingProtectedPersons": "👥 Targeting of Protected Persons"
+      },
+      "items": {
+        "indiscriminateAttacks": {
+          "title": "Indiscriminate Attacks on Civilians",
+          "count": "1,000+ incidents",
+          "body": "Systematic targeting of residential areas, markets, and civilian gatherings in violation of the principle of distinction. Over 40,000 civilians killed including 15,000 children.",
+          "legal": "Geneva Convention IV, Art. 27; Additional Protocol I, Art. 51; Rome Statute, Art. 8(2)(b)(i)"
+        },
+        "collectivePunishment": {
+          "title": "Collective Punishment",
+          "count": "Systematic",
+          "body": "Complete siege including cutting water, electricity, food, and medical supplies to entire civilian population of 2.3 million people for over 300 days.",
+          "legal": "Geneva Convention IV, Art. 33; Additional Protocol I, Art. 54"
+        },
+        "forcedDisplacement": {
+          "title": "Forced Displacement",
+          "count": "1.9M+ people",
+          "body": "Forcible transfer of civilian population through military operations, destruction of homes, and orders to evacuate under threat of attack.",
+          "legal": "Geneva Convention IV, Art. 49; Rome Statute, Art. 8(2)(a)(vii)"
+        },
+        "starvationAsWeapon": {
+          "title": "Use of Starvation as Weapon",
+          "count": "Ongoing",
+          "body": "Deliberate deprivation of food, water, and humanitarian aid to civilian population, creating famine conditions affecting 2.3 million people.",
+          "legal": "Additional Protocol I, Art. 54; Rome Statute, Art. 8(2)(b)(xxv)"
+        },
+        "medicalFacilities": {
+          "title": "Medical Facilities & Personnel",
+          "count": "120+ hospitals",
+          "body": "Direct attacks on hospitals, clinics, ambulances, and medical personnel. 500+ medical workers killed, 250+ detained in clear violation of medical neutrality.",
+          "legal": "Geneva Convention I, Art. 19; Additional Protocol I, Art. 12; Rome Statute, Art. 8(2)(b)(ix)"
+        },
+        "educationalInstitutions": {
+          "title": "Educational Institutions",
+          "count": "300+ schools",
+          "body": "Systematic destruction of schools, universities, and educational infrastructure, depriving children of their right to education.",
+          "legal": "Additional Protocol I, Art. 52; Rome Statute, Art. 8(2)(b)(ix)"
+        },
+        "religiousCulturalSites": {
+          "title": "Religious & Cultural Sites",
+          "count": "200+ sites",
+          "body": "Attacks on mosques, churches, cultural centers, and historical sites, constituting destruction of cultural heritage.",
+          "legal": "Hague Convention 1954; Additional Protocol I, Art. 53; Rome Statute, Art. 8(2)(b)(ix)"
+        },
+        "unHumanitarianFacilities": {
+          "title": "UN & Humanitarian Facilities",
+          "count": "150+ facilities",
+          "body": "Attacks on UN schools, UNRWA facilities, and humanitarian distribution centers, violating neutrality of humanitarian operations.",
+          "legal": "UN Charter; Additional Protocol I, Art. 56; Rome Statute, Art. 8(2)(b)(iii)"
+        },
+        "children": {
+          "title": "Children",
+          "count": "15,000+ killed",
+          "body": "Disproportionate killing of children constituting the largest child casualty rate in any modern conflict. Attacks on schools and playgrounds in direct violation of child protection laws.",
+          "legal": "Convention on Rights of the Child; Additional Protocol I, Art. 77; Rome Statute, Art. 8(2)(b)(xxvi)"
+        },
+        "journalists": {
+          "title": "Journalists & Media Workers",
+          "count": "140+ killed",
+          "body": "Deliberate targeting of journalists, media facilities, and suppression of information. Highest journalist death toll in any conflict.",
+          "legal": "Additional Protocol I, Art. 79; Geneva Convention IV, Art. 27; Rome Statute, Art. 8(2)(b)(i)"
+        },
+        "medicalPersonnel": {
+          "title": "Medical Personnel",
+          "count": "500+ killed, 250+ detained",
+          "body": "Killing, detention, and torture of doctors, nurses, and medical staff. Systematic attacks on those providing medical care.",
+          "legal": "Geneva Convention I, Art. 24; Additional Protocol I, Art. 15; Rome Statute, Art. 8(2)(b)(ix)"
+        },
+        "women": {
+          "title": "Women",
+          "count": "11,000+ killed",
+          "body": "Disproportionate impact on women including pregnant women, mothers, and elderly women. Attacks on maternity wards and women's facilities.",
+          "legal": "Geneva Convention IV, Art. 27; Additional Protocol I, Art. 76; Rome Statute, Art. 8(2)(b)(xxii)"
+        }
+      }
+    },
+    "legalTimeline": {
+      "sectionTitle": "⚖️ International Legal Response",
+      "status": {
+        "ongoing": "Ongoing",
+        "ongoingViolations": "Ongoing Violations",
+        "activeInvestigation": "Active Investigation",
+        "published": "Published",
+        "underReview": "Under Review"
+      },
+      "events": {
+        "crisisBegins": {
+          "date": "October 2023",
+          "title": "Crisis Begins - Mass Violations",
+          "body": "Systematic attacks on Gaza begin with immediate violations of international humanitarian law, including targeting of civilians and siege warfare."
+        },
+        "icjCase": {
+          "date": "January 2024",
+          "title": "South Africa vs Israel - ICJ Case",
+          "body": "South Africa filed a case at the International Court of Justice alleging genocide against Palestinians in Gaza, citing systematic violations."
+        },
+        "iccInvestigation": {
+          "date": "March 2024",
+          "title": "ICC Investigation Accelerated",
+          "body": "International Criminal Court investigating war crimes and crimes against humanity in Palestine, examining evidence of systematic violations."
+        },
+        "unRapporteur": {
+          "date": "May 2024",
+          "title": "UN Special Rapporteur Report",
+          "body": "Special Rapporteur on Palestine documented systematic violations of international law and called for immediate accountability measures."
+        },
+        "iccWarrants": {
+          "date": "July 2024",
+          "title": "ICC Arrest Warrants Consideration",
+          "body": "International Criminal Court considering arrest warrants for war crimes and crimes against humanity based on documented evidence."
+        }
+      }
+    },
+    "resources": {
+      "sectionTitle": "📚 Legal Resources & Documentation",
+      "categories": {
+        "legalFramework": {
+          "title": "⚖️ International Legal Framework",
+          "links": {
+            "genevaConventions": {
+              "title": "Geneva Conventions",
+              "description": "The four treaties and their additional protocols governing humanitarian law"
+            },
+            "romeStatute": {
+              "title": "Rome Statute",
+              "description": "Founding treaty of International Criminal Court defining war crimes"
+            },
+            "customaryIHL": {
+              "title": "Customary International Humanitarian Law",
+              "description": "ICRC database of customary rules of international humanitarian law"
+            }
+          }
+        },
+        "officialDocumentation": {
+          "title": "🏛️ Official Documentation",
+          "links": {
+            "unHumanRights": {
+              "title": "UN Human Rights Office Reports",
+              "description": "Official UN documentation of human rights violations"
+            },
+            "iccPalestine": {
+              "title": "ICC Palestine Investigation",
+              "description": "International Criminal Court investigation documents"
+            },
+            "icjCase": {
+              "title": "ICJ South Africa v. Israel Case",
+              "description": "International Court of Justice genocide case documents"
+            }
+          }
+        },
+        "evidenceMonitoring": {
+          "title": "🔬 Evidence & Monitoring",
+          "links": {
+            "hrw": {
+              "title": "Human Rights Watch",
+              "description": "Documentation of war crimes and human rights violations"
+            },
+            "amnesty": {
+              "title": "Amnesty International",
+              "description": "Human rights violations and legal analysis"
+            },
+            "forensicArchitecture": {
+              "title": "Forensic Architecture",
+              "description": "Spatial and media investigations of human rights violations"
+            }
+          }
+        },
+        "academicAnalysis": {
+          "title": "📚 Academic & Legal Analysis",
+          "links": {
+            "oxford": {
+              "title": "Oxford Public International Law",
+              "description": "Academic legal analysis and commentary"
+            },
+            "iclq": {
+              "title": "International Law Quarterly",
+              "description": "Peer-reviewed international law research"
+            },
+            "ejilTalk": {
+              "title": "EJIL Talk",
+              "description": "European Journal of International Law blog and analysis"
+            }
+          }
+        }
+      }
+    },
+    "actions": {
+      "sectionTitle": "🚨 Take Urgent Action",
+      "items": {
+        "demandAccountability": {
+          "title": "Demand Accountability",
+          "body": "Contact representatives demanding immediate action to hold perpetrators accountable for war crimes and violations of international law.",
+          "btn": "Contact Representatives"
+        },
+        "supportLegalAction": {
+          "title": "Support Legal Action",
+          "body": "Support international legal proceedings at ICC and ICJ to ensure justice for war crimes and crimes against humanity.",
+          "btn": "Support ICC Action"
+        },
+        "raiseAwareness": {
+          "title": "Raise Awareness",
+          "body": "Share documentation of war crimes and demand media coverage of systematic violations of international law.",
+          "btn": "Share This Data"
+        },
+        "documentEvidence": {
+          "title": "Document Evidence",
+          "body": "Help document and report additional evidence of international law violations for legal accountability.",
+          "btn": "Submit Evidence"
+        }
+      }
+    },
+    "share": {
+      "text": "🚨 INTERNATIONAL LAW CRISIS: Systematic violations of Geneva Conventions in Gaza. Live data from verified sources.",
+      "shareTitle": "Gaza War Crimes Documentation",
+      "copiedAlert": "Copied to clipboard!"
+    }
+  },
+  "hungerCrisis": {
+    "pageTitle": "Hunger Crisis Statistics - Gaza Crisis Documentation",
+    "metaDescription": "Comprehensive documentation of hunger crisis, malnutrition, and food-related violations in Gaza",
+    "header": {
+      "title": "🍽️ Hunger Crisis & Food Security Violations",
+      "severityLabel": "CATASTROPHIC FOOD CRISIS",
+      "ipcPhase": "IPC Phase 5 — Famine Conditions"
+    },
+    "emergency": {
+      "title": "HUMANITARIAN EMERGENCY:",
+      "details": "Complete siege blocks donations • War destroys livelihoods • Systematic starvation",
+      "statSuffix": "million people facing acute food insecurity"
+    },
+    "loading": {
+      "starvationCasualties": "Loading starvation casualties data..."
+    },
+    "error": {
+      "loadFailed": "Error loading hunger crisis data. Please check data files and try again."
+    },
+    "sections": {
+      "starvationCasualties": "💀 Starvation & Malnutrition Casualties",
+      "foodSecurity": "📈 Food Security & Population Impact",
+      "siegeInfrastructure": "🚧 Siege & Food Infrastructure Destruction"
+    },
+    "statCards": {
+      "totalStarvationDeaths": {
+        "label": "Total Deaths Due to Starvation",
+        "subtitle": "Confirmed starvation deaths"
+      },
+      "childrenStarvationDeaths": {
+        "label": "Children Died from Starvation",
+        "subtitlePrefix": "Out of",
+        "subtitleSuffix": "children affected"
+      },
+      "womenElderly": {
+        "label": "Women & Elderly Affected",
+        "subtitle": "Vulnerable populations at risk"
+      },
+      "starvationRate": {
+        "label": "Population Starvation Rate",
+        "subtitle": "Going days without eating"
+      },
+      "displacedPeople": {
+        "label": "Displaced People",
+        "subtitle": "Lost homes, jobs, food access"
+      },
+      "unemployment": {
+        "label": "Unemployment Rate",
+        "subtitle": "No income to buy food"
+      },
+      "calorieDeficit": {
+        "label": "Daily Calorie Deficit",
+        "subtitle": "Below minimum survival needs"
+      },
+      "aidDenied": {
+        "label": "Aid Requests Denied",
+        "subtitle": "Systematic aid blockade"
+      },
+      "donationsBlocked": {
+        "label": "International Donations Blocked",
+        "subtitle": "Siege prevents aid delivery"
+      },
+      "foodTrucks": {
+        "label": "Food Trucks Daily",
+        "subtitle": "Was 500+ before siege"
+      },
+      "bakeriesDestroyed": {
+        "label": "Bakeries Destroyed",
+        "subtitle": "Food infrastructure targeted"
+      },
+      "agricultureDestroyed": {
+        "label": "Agricultural Land Destroyed",
+        "subtitle": "Food production capacity eliminated"
+      }
+    },
+    "crisisLayers": {
+      "sectionTitle": "🔄 The Complete Siege: Multiple Layers of Starvation",
+      "physicalBlockade": {
+        "title": "Physical Blockade",
+        "body": "Complete siege blocks international donations and humanitarian aid. Only 12 food trucks enter daily (was 500+ before siege). 97% of international donations cannot reach the population."
+      },
+      "economicWarfare": {
+        "title": "Economic Warfare & Vulnerable Groups",
+        "body": "War creates 80% unemployment and displaces 1.9M people, stripping families of income and food access. Orphaned children, pregnant women, the elderly, and disabled are left entirely without support."
+      },
+      "infrastructureDestruction": {
+        "title": "Infrastructure Destruction",
+        "body": "78 bakeries destroyed, 45 markets targeted, 65% of farmland eliminated. Even if money and aid were available, food production and distribution systems are destroyed."
+      }
+    },
+    "legalFrameworkCards": {
+      "sectionTitle": "International Legal Framework Violations",
+      "starvationAsWeapon": {
+        "title": "🔴 Starvation as Weapon of War",
+        "body": "Rome Statute, Article 8(2)(b)(xxv) — \"Intentionally using starvation of civilians as a method of warfare by depriving them of objects indispensable to their survival\"",
+        "count": "War Crime"
+      },
+      "collectivePunishment": {
+        "title": "🔴 Collective Punishment",
+        "body": "Geneva Convention IV, Article 33 — \"No protected person may be punished for an offence he or she has not personally committed. Collective penalties are prohibited.\"",
+        "count": "Geneva Convention Violation"
+      },
+      "rightToFood": {
+        "title": "🔴 Right to Adequate Food",
+        "body": "International Covenant on Economic, Social and Cultural Rights, Article 11 — \"Right of everyone to an adequate standard of living, including adequate food\"",
+        "count": "Human Rights Violation"
+      },
+      "rightsOfChild": {
+        "title": "🔴 Rights of the Child",
+        "body": "Convention on the Rights of the Child, Article 27 — \"Right to a standard of living adequate for the child's physical, mental, spiritual, moral and social development\"",
+        "count": "Children's Rights Violation"
+      }
+    },
+    "violations": {
+      "legalBasis": "Legal Basis:",
+      "deathsSuffix": "deaths",
+      "childrenSuffix": "children",
+      "categories": {
+        "directStarvation": "🍽️ Direct Starvation & Malnutrition"
+      },
+      "items": {
+        "confirmedDeaths": {
+          "title": "Confirmed Deaths from Starvation",
+          "body": "Total population deaths directly attributed to starvation, malnutrition, and related causes. Documented through medical records and death certificates."
+        },
+        "childrenDeaths": {
+          "title": "Children Deaths from Starvation",
+          "body": "Children under 18 who died from starvation, severe malnutrition, and related complications. Each case represents a preventable tragedy."
+        }
+      }
+    },
+    "legalTimeline": {
+      "sectionTitle": "⚖️ International Legal Response",
+      "status": {
+        "ongoingViolation": "Ongoing Violation"
+      },
+      "events": {
+        "completeSiege": {
+          "date": "October 2023",
+          "title": "Complete Siege Declared",
+          "body": "All food, water, fuel, and electricity cut off. \"Complete siege\" officially announced affecting 2.3 million people, triggering immediate legal concerns."
+        }
+      }
+    },
+    "resources": {
+      "sectionTitle": "📚 Documentation & Resources",
+      "categories": {
+        "unOrganizations": {
+          "title": "🏛️ UN & International Organizations",
+          "links": {
+            "wfp": {
+              "title": "World Food Programme - Palestine",
+              "description": "Official WFP reports on food security and malnutrition in Gaza"
+            }
+          }
+        }
+      }
+    },
+    "actions": {
+      "sectionTitle": "🚨 Take Urgent Action",
+      "items": {
+        "emergencyAdvocacy": {
+          "title": "Emergency Advocacy",
+          "body": "Contact representatives demanding immediate humanitarian aid access and end to food blockade.",
+          "btn": "Contact Representatives"
+        }
+      }
+    }
+  },
+  "historicalEvents": {
+    "pageTitle": "Historical Events — Palestinian Documentation",
+    "metaDescription": "Comprehensive documentation of 75 years of systematic violations of international law affecting the Palestinian people, 1948–2023.",
+    "header": {
+      "title": "📜 Historical Events & Systematic Oppression",
+      "coverage": "Coverage: 1948 – October 6, 2023",
+      "joinUsBtn": "🤝 Join Us — Become a Volunteer"
+    },
+    "banner": {
+      "title": "SEVEN DECADES OF DOCUMENTED VIOLATIONS:",
+      "subtitle": "Systematic violations of international law since 1948",
+      "details": "750,000+ displaced in the Nakba · 70+ documented massacres · 700,000+ settlers in occupied territory · 7,000+ political prisoners · 55,000+ homes demolished since 1967",
+      "shareBtn": "📤 Share"
+    },
+    "sections": {
+      "displacement": "🏘️ Displacement & Ethnic Cleansing",
+      "systematicPattern": "⚖️ Systematic Pattern of Violations (1948–2023)",
+      "legalFramework": "International Legal Framework — Key Instruments",
+      "massacresArchive": "⚔️ Historical Massacres — Full Archive",
+      "villagesMap": "🗺️ Nakba Villages — Interactive Map",
+      "quotesArchive": "💬 Quotes Archive"
+    },
+    "statCards": {
+      "nakbaDisplaced": {
+        "label": "Palestinians Displaced — Nakba 1948",
+        "subtitle": "530+ villages destroyed or depopulated"
+      },
+      "massacres": {
+        "label": "Documented Massacre Events (1948–2023)",
+        "subtitle": "Across 75 years of occupation and conflict"
+      },
+      "homeDemolitions": {
+        "label": "Palestinian Homes Demolished (1967–2023)",
+        "subtitle": "Average 1,000+ demolitions/year at peak"
+      },
+      "settlers": {
+        "label": "Israeli Settlers in Occupied West Bank",
+        "subtitle": "150+ illegal outposts; 60% of WB under Area C"
+      },
+      "prisoners": {
+        "label": "Palestinians Currently Detained",
+        "subtitle": "Incl. 160+ children; 1,300+ under admin. detention"
+      },
+      "blockadeYears": {
+        "label": "Years of Gaza Blockade (2007–2023)",
+        "subtitle": "45%+ unemployment; 80% aid-dependent"
+      },
+      "settlerAttacks": {
+        "label": "Documented Settler Attacks in 2023",
+        "subtitle": "Record high before October 7, 2023"
+      },
+      "civilianKilled": {
+        "label": "Palestinians Killed by Israeli Forces (2000–2023)",
+        "subtitle": "Incl. 3,600+ children"
+      }
+    },
+    "crisisLayers": {
+      "ethnicCleansing": {
+        "title": "Ethnic Cleansing & Forced Displacement",
+        "body": "Systematic dispossession of the indigenous Palestinian population across three generations — from the Nakba (1948) and Naksa (1967) to ongoing forced evictions in Sheikh Jarrah, Silwan, and across Area C through home demolitions, settlement expansion, and reclassification of Palestinian land as Israeli state land."
+      },
+      "apartheid": {
+        "title": "Apartheid & Legal Discrimination",
+        "body": "Over 65 Israeli laws that discriminate against Palestinian citizens and residents, documented by Human Rights Watch and Amnesty International in landmark 2021–2022 reports. Separate and unequal legal systems operate in the same territory: Israeli civil law for settlers, harsher military law for Palestinians. UN special rapporteurs and major human rights organisations have applied the definition of apartheid under the 1973 Apartheid Convention."
+      },
+      "collectivePunishment": {
+        "title": "Collective Punishment & Siege",
+        "body": "The Gaza blockade since 2007 constitutes collective punishment under Article 33 of the Fourth Geneva Convention — punishing 2.3 million civilians for the political choices of their leadership. Combined with West Bank permit systems, movement restrictions, checkpoints, and economic isolation, UN Special Rapporteur Francesca Albanese concluded in 2024 this amounts to a structure of apartheid and genocide."
+      }
+    },
+    "legalFrameworkCards": {
+      "unResolutions": {
+        "title": "📜 UN Resolutions",
+        "body": "700+ UN resolutions affirming Palestinian rights, including UNSC Resolution 242 (1967) demanding Israeli withdrawal and UNSC Resolution 2334 (2016) declaring all settlements a flagrant violation of international law.",
+        "count": "700+ Resolutions — Never Enforced"
+      },
+      "fourthGenevaConvention": {
+        "title": "🔴 Fourth Geneva Convention",
+        "body": "Applies to all occupied Palestinian territory since 1967. Prohibits transfer of occupying power's civilian population into occupied territory (settlements), collective punishment, and destruction of civilian property. Israel's persistent non-compliance spans 57+ years.",
+        "count": "50+ Documented Violation Categories"
+      },
+      "romeStatute": {
+        "title": "⚖️ ICC & Rome Statute",
+        "body": "Palestine acceded to the Rome Statute in 2015. ICC Prosecutor opened a formal investigation in 2021 covering crimes since June 2014. In 2024, the ICC issued arrest warrants for Israeli officials for war crimes and crimes against humanity.",
+        "count": "Active ICC Investigation & Arrest Warrants"
+      },
+      "icj": {
+        "title": "🌍 ICJ Advisory Opinion 2004",
+        "body": "The International Court of Justice ruled the construction of the separation wall inside occupied Palestinian territory illegal under international law and called for its dismantlement. Israel refused compliance. The ICJ is now hearing a genocide case brought by South Africa (2024).",
+        "count": "ICJ Ruling — Ignored"
+      }
+    },
+    "massacresCard": {
+      "label": "Detailed Documentation",
+      "title": "Historical Massacres Archive (1948–2023)",
+      "description": "Full case-by-case documentation of 70+ documented massacre events spanning 75 years — from Deir Yassin (1948) and Khan Yunis (1956) through Sabra & Shatila (1982), Jenin (2002), and Gaza military operations. Each entry includes verified casualty figures, primary sources, legal analysis, and survivor testimonies.",
+      "btn": "View Full Archive →",
+      "count": "70+ documented events"
+    },
+    "villagesMapCard": {
+      "label": "Geographic Documentation",
+      "title": "Depopulated Palestinian Villages (1948)",
+      "description": "An interactive map of Palestinian villages destroyed or depopulated during the Nakba, plotted from the ethnic-cleansing village dataset. Each marker carries the village name, district, date of depopulation, and what stands on the site today.",
+      "btn": "Open Map →",
+      "count": "418 villages plotted"
+    },
+    "quotesCard": {
+      "label": "Primary Statements",
+      "title": "Documented Quotes & Official Statements",
+      "description": "Recorded statements from political and military figures, and from UN and human-rights officials, collected with their date, speaker, and source so each can be traced back to the original record.",
+      "btn": "View Archive →",
+      "count": "Primary-source quotes"
+    },
+    "violations": {
+      "legalBasis": "Legal Basis:",
+      "categories": {
+        "massacres": "⚔️ Documented Massacres (1948–2023)",
+        "nakba": "🏘️ Nakba & Ongoing Displacement",
+        "settlements": "🌍 Land Seizure & Illegal Settlements",
+        "settlerViolence": "🔥 Settler Violence",
+        "prisoners": "🔒 Political Prisoners & Administrative Detention",
+        "infrastructure": "🏗️ Infrastructure & Property Destruction",
+        "economic": "💼 Economic Warfare & Collective Punishment",
+        "civilianKillings": "💀 Civilian Killings (2000–2023)"
+      },
+      "items": {
+        "deirYassin": {
+          "title": "Deir Yassin Massacre (1948)",
+          "body": "On 9 April 1948, Irgun and Lehi paramilitary forces attacked the Palestinian village of Deir Yassin near Jerusalem, killing over 107 civilians including women and children. Documented by the International Red Cross and Israeli New Historians. The massacre triggered mass flight during the Nakba."
+        },
+        "kafrQasim": {
+          "title": "Kafr Qasim Massacre (1956)",
+          "body": "On 29 October 1956, Israeli border police shot dead 49 Palestinian citizens of Israel — returning farm workers — at the entrance to Kafr Qasim village for violating a curfew they were unaware of. The Israeli government later acknowledged the massacre; perpetrators received light sentences and were subsequently pardoned."
+        },
+        "sabraShatila": {
+          "title": "Sabra & Shatila (1982)",
+          "body": "Between 16–18 September 1982, Lebanese Phalangist militias entered Palestinian refugee camps in Beirut and massacred between 800 and 3,500 Palestinian and Lebanese Shia civilians while Israeli forces controlled the perimeter. Israel's own Kahan Commission found Defence Minister Ariel Sharon bore personal indirect responsibility."
+        },
+        "jenin": {
+          "title": "Jenin Refugee Camp (2002)",
+          "body": "During Operation Defensive Shield (April 2002), Israeli forces conducted large-scale military operations in Jenin refugee camp, killing 52 Palestinians and demolishing approximately 800 homes — leaving 4,000 people homeless. A UN fact-finding mission was denied access by Israel. Human rights organisations documented unlawful killings and destruction of civilian property."
+        },
+        "greatMarch": {
+          "title": "Great March of Return (2018–2019)",
+          "body": "During weekly demonstrations at the Gaza perimeter fence from March 2018 to December 2019, Israeli forces killed 214 Palestinians — including journalists, paramedics, and children — and injured over 36,100. A UN Independent Commission of Inquiry found reasonable grounds to conclude Israeli forces committed war crimes and crimes against humanity."
+        },
+        "nakba1948": {
+          "title": "The Nakba (1948)",
+          "body": "During the 1948 Arab-Israeli War, over 750,000 Palestinians were expelled or fled — roughly half of the Palestinian Arab population. Some 530+ villages were depopulated or destroyed. 78% of historic Palestine became the State of Israel. UN General Assembly Resolution 194 affirmed the right of refugees to return — a right never implemented by Israel."
+        },
+        "naksa1967": {
+          "title": "The Naksa (1967)",
+          "body": "During the June 1967 Six-Day War, an additional 300,000+ Palestinians were displaced. Israel assumed military occupation of the West Bank, Gaza Strip, Sinai, and Golan Heights — occupations governed by international humanitarian law that Israel has systematically violated. UNSC Resolution 242 called for Israeli withdrawal; Israel has never fully complied."
+        },
+        "homeDemolitions": {
+          "title": "Home Demolitions as Policy (1967–2023)",
+          "body": "Israel has demolished over 55,000 Palestinian structures in occupied territories since 1967, using military orders, administrative permit denials (Palestinians refused permits at a 98% rate in Area C), and punitive demolitions of family homes — the latter a form of collective punishment prohibited under Article 33 of Geneva Convention IV."
+        },
+        "forcedEvictions": {
+          "title": "Forced Evictions — East Jerusalem (2000–2023)",
+          "body": "Systematic forced evictions in Sheikh Jarrah, Silwan, and Wadi Hilweh — based on 1950s Israeli absentee property laws that apply only to Palestinians, not Jewish Israeli citizens. Israeli Supreme Court rulings have enabled dispossession while creating a two-tiered legal system in East Jerusalem, which Israel unilaterally annexed in violation of international law."
+        },
+        "settlementGrowth": {
+          "title": "Settlement Growth (1967–2023)",
+          "body": "Israel has transferred over 700,000 of its citizens into occupied Palestinian territory in violation of Article 49(6) of Geneva Convention IV. UNSC Resolution 2334 (2016) — adopted unanimously — declared all Israeli settlements in occupied Palestinian territory a flagrant violation of international law and called on all states not to recognise them."
+        },
+        "areaC": {
+          "title": "Area C Control & Development Ban",
+          "body": "Israel controls 60% of the West Bank (Area C) under the Oslo Accords, blocking Palestinian construction, economic development, and access to natural resources. Palestinians are denied building permits at a 98% rate in Area C while Israeli settlement construction continues unimpeded. This systematic discrimination creates conditions of forced displacement through bureaucratic means."
+        },
+        "annexationWall": {
+          "title": "Annexation Wall",
+          "body": "The separation barrier — 700 km long, 85% constructed inside the West Bank rather than along the Green Line — was declared illegal by the ICJ in its 2004 Advisory Opinion. The Court found it violates Palestinian rights to self-determination, freedom of movement, rights to work, health, education, and adequate standard of living. Israel refused to comply with the ruling."
+        },
+        "landConfiscation": {
+          "title": "Land Confiscation Methods",
+          "body": "Military orders, “state land” declarations, bypass roads, and nature reserve designations are used systematically to confiscate Palestinian land. Over 2.4 million dunams confiscated since 1967. These mechanisms are applied exclusively in ways that benefit Israeli settlers while blocking Palestinian development, constituting a pattern of discriminatory dispossession."
+        },
+        "settlerEscalation": {
+          "title": "Escalating Settler Attacks (2022–2023)",
+          "body": "OCHA recorded 1,204 settler attacks causing Palestinian casualties or property damage in 2023 — a record high before October 7. Attacks include arson, vandalism, agricultural destruction, and physical assault. The trend escalated sharply following the formation of Israel's most right-wing government in December 2022, which included settler leaders as ministers."
+        },
+        "huwara": {
+          "title": "Huwara Pogrom (February 2023)",
+          "body": "On 26 February 2023, settlers carried out a coordinated rampage through the Palestinian town of Huwara, burning homes, vehicles, and Palestinian-owned businesses for hours while Israeli military forces stood by and did not intervene. Israeli Finance Minister Bezalel Smotrich subsequently called for Huwara to be “wiped out.” The event was internationally condemned as a pogrom."
+        },
+        "settlerImpunity": {
+          "title": "Systematic Impunity",
+          "body": "According to Israeli human rights organisation Yesh Din, 92% of Israeli Police investigations into settler violence against Palestinians are closed without indictment. Settlers operate under Israeli civil law while Palestinians in the same territory are subject to harsher Israeli military law — a dual legal system that Israeli and international human rights organisations have described as constitutive of apartheid."
+        },
+        "detentionScale": {
+          "title": "Scale of Detention",
+          "body": "As of 2023, over 7,000 Palestinians are held in Israeli prisons (Addameer). This includes over 160 children, over 200 women, and over 1,300 individuals held under administrative detention — detained without charge, without trial, and without access to the evidence against them, under military orders that can be renewed indefinitely."
+        },
+        "adminDetention": {
+          "title": "Administrative Detention",
+          "body": "Administrative detention — detention without charge, trial, or access to the evidence used to justify it — has been used by Israel for over 55 years of occupation under Military Order 1651. Orders are renewable every six months without limit; some Palestinians have been held for years without ever facing charges. UN human rights bodies, including the Human Rights Committee, have repeatedly called for its abolition."
+        },
+        "torture": {
+          "title": "Torture & Ill-Treatment in Detention",
+          "body": "The Public Committee Against Torture in Israel (PCATI) documents systematic use of stress positions, sleep deprivation, sensory isolation, and hooding during interrogation. Israel's Supreme Court permits “moderate physical pressure” in security cases. The UN Committee Against Torture has repeatedly found Israel in violation of the Convention Against Torture and called for an end to these practices."
+        },
+        "childDetention": {
+          "title": "Child Detention",
+          "body": "Israel is the only country in the world that systematically prosecutes children in military courts. Between 500 and 700 Palestinian children are detained each year. Defence for Children International – Palestine documents night arrests, denial of access to parents and lawyers during interrogation, and coercion into confessions — in violation of the UN Convention on the Rights of the Child."
+        },
+        "punitivedemolitions": {
+          "title": "Punitive Home Demolitions",
+          "body": "Israel demolishes family homes of Palestinians accused (not convicted) of attacks on Israelis as a deterrent — a practice explicitly prohibited as collective punishment under Article 33 of Geneva Convention IV. B'Tselem has documented over 500 punitive demolitions since Israel resumed the practice in 2014, rendering hundreds of family members homeless for acts they did not commit."
+        },
+        "agricultureDestruction": {
+          "title": "Agricultural Destruction",
+          "body": "Since 1967, Israeli settlers and IDF forces have uprooted over 500,000 Palestinian olive trees — a primary source of Palestinian agricultural livelihood (OCHA). Harvest interference, movement restrictions during harvest season, and military-declared closed areas affect over 80,000 farming families. Olive tree destruction is often accompanied by settler takeover of the cleared land."
+        },
+        "waterControl": {
+          "title": "Water Infrastructure Control",
+          "body": "Israel controls 87% of West Bank water resources through the Joint Water Committee, which gives Israel effective veto over Palestinian water projects. Palestinians receive an average of 25 litres per person per day — well below the WHO minimum of 50 litres. Israeli settlers in the same territory consume 300+ litres per person per day. Water cisterns and pipelines serving Palestinian communities are periodically vandalised by settlers."
+        },
+        "gazaBlockade": {
+          "title": "Gaza Blockade (2007–2023)",
+          "body": "Since 2007, Israel has maintained a comprehensive air, sea, and land blockade on Gaza — controlling who and what enters and exits. The UN, World Bank, and UNCTAD classify this as collective punishment under Article 33 of Geneva Convention IV, imposed on 2.3 million civilians for the political choices of their leaders. The blockade has been described by former British Prime Minister David Cameron as turning Gaza into “a prison camp.”"
+        },
+        "gazaEconomy": {
+          "title": "Gaza Economic Collapse",
+          "body": "Gaza's GDP per capita in 2023 remains below its 1994 Oslo Accord baseline. Unemployment stands at over 45%; youth unemployment exceeds 60%; over 60% of the population lives in poverty; and 80% depend on humanitarian aid (UNCTAD 2023). UNCTAD estimates Gaza's economy would be 2–3 times larger without the blockade. The economic strangulation is a deliberate policy, not a byproduct of conflict."
+        },
+        "permitSystem": {
+          "title": "West Bank Permit System",
+          "body": "Palestinians must obtain Israeli military permits to access their own land in Area C, enter Jerusalem (with the permit denial rate exceeding 90% for many categories), move between parts of the West Bank, and work inside Israel. Permits are used as political pressure instruments — revoked en masse following incidents — and create a permission-based system of movement unique to the Palestinian population, not applicable to Israeli settlers in the same territory."
+        },
+        "tradeRestrictions": {
+          "title": "Trade Restrictions & Export Denial",
+          "body": "Palestinian exports must pass through Israeli-controlled crossings, subject to arbitrary delays, restrictions, and seizure. Palestinian agricultural products lose significant market value due to delays. Until recent EU court rulings, Palestinian products from settlements were mislabelled as “Made in Israel” — while genuinely Palestinian goods faced additional scrutiny. UNCTAD estimates the Palestinian economy would be two to three times larger without trade and movement restrictions."
+        },
+        "secondIntifada": {
+          "title": "Second Intifada (2000–2005)",
+          "body": "Between 2000 and 2005, Israeli security forces and settlers killed 3,179 Palestinians — compared with 1,010 Israelis killed in the same period (B'Tselem). Palestinian casualties included hundreds of children and bystanders killed at checkpoints. Major incidents include the re-occupation of Palestinian cities (2002) and prolonged siege of the Church of the Nativity in Bethlehem."
+        },
+        "gazaOperations": {
+          "title": "Gaza Military Operations (2008–2021)",
+          "body": "Four major Israeli military operations in Gaza between 2008 and 2021: Operation Cast Lead (2008–09), Operation Pillar of Defence (2012), Operation Protective Edge (2014), and Operation Guardian of the Walls (2021). Cumulative Palestinian casualties exceed 4,800 killed and 30,000+ injured. UN independent investigations found evidence of war crimes in all four operations, including attacks on civilians, use of white phosphorus, and attacks on UNRWA facilities."
+        },
+        "westBank2022": {
+          "title": "West Bank Escalation (2022–2023)",
+          "body": "247 Palestinians were killed in the West Bank in 2022, and 218 more in the first nine months of 2023 — the highest rates since 2006 (B'Tselem). This included large-scale military incursions into Jenin, Nablus, and Tulkarm refugee camps, use of drones and military-grade weapons in civilian areas, and a pattern of killing that UN experts described as executions in some cases."
+        },
+        "journalistKillings": {
+          "title": "Targeted Killing of Journalists",
+          "body": "Veteran Al Jazeera journalist Shireen Abu Akleh was shot and killed by Israeli forces while covering an Israeli military raid in Jenin refugee camp on 11 May 2022. She was wearing a clearly marked press vest. UN, US, and multiple independent investigations concluded she was killed by Israeli fire. No soldier was charged. Her killing was part of a broader pattern: B'Tselem documents dozens of journalists injured or killed by Israeli forces while reporting in occupied territories."
+        }
+      }
+    },
+    "legalTimeline": {
+      "sectionTitle": "⚖️ International Legal Response — Historical Timeline",
+      "keyDocumentsTitle": "📚 Key Legal Documents",
+      "status": {
+        "neverImplemented": "Never Implemented",
+        "systematicallyViolated": "Systematically Violated",
+        "breachesDocumented": "Breaches Documented",
+        "neverComplied": "Never Complied With",
+        "apartheidFinding": "Apartheid Threshold Met",
+        "ignored": "Ruling Ignored by Israel",
+        "defied": "Defied — Settlements Expanded",
+        "published": "Published — Major Findings",
+        "activeProceedings": "Active — ICJ & ICC Proceedings"
+      },
+      "events": {
+        "partition": {
+          "title": "UN Partition Plan & UNGA Resolution 194",
+          "body": "The UN Partition Plan (Resolution 181, November 1947) proposed dividing Mandatory Palestine. Following the 1948 war, UNGA Resolution 194 (December 1948) affirmed the right of Palestinian refugees to return to their homes or receive compensation — a right endorsed repeatedly by the UN General Assembly and never implemented by Israel."
+        },
+        "genevaConventions": {
+          "title": "Fourth Geneva Convention Adopted",
+          "body": "The Fourth Geneva Convention on the Protection of Civilian Persons in Time of War was adopted following World War II to prevent the repetition of Nazi-era atrocities. It applies to all territory under Israeli occupation since 1967. Key prohibitions include settlements (Art. 49), collective punishment (Art. 33), and destruction of civilian property (Art. 53). Israel has systematically violated all three categories."
+        },
+        "iccpr": {
+          "title": "ICCPR & ICESCR — International Human Rights Covenants",
+          "body": "The International Covenant on Civil and Political Rights (ICCPR) and the International Covenant on Economic, Social and Cultural Rights (ICESCR) were adopted in 1966. Israel ratified both in 1991 but claims they do not apply to the occupied territories — a position rejected by UN treaty bodies and the ICJ. Multiple UN Human Rights Committee reviews have found Israel in violation of the ICCPR regarding its treatment of Palestinians."
+        },
+        "resolution242": {
+          "title": "UNSC Resolution 242 — Withdrawal Demanded",
+          "body": "Following Israel's occupation of the West Bank, Gaza Strip, Sinai, and Golan Heights in June 1967, the UN Security Council unanimously adopted Resolution 242 — emphasising “the inadmissibility of the acquisition of territory by war” and calling for Israeli withdrawal from occupied territories. Israel has never fully complied. The resolution remains the foundational legal basis for a two-state solution."
+        },
+        "apartheidConvention": {
+          "title": "International Convention on the Suppression and Punishment of the Crime of Apartheid",
+          "body": "The Apartheid Convention (1973) defines apartheid as a crime against humanity and provides its legal definition. Following landmark 2021–2022 reports by Human Rights Watch and Amnesty International — and a 2022 report by the UN Special Rapporteur — multiple international human rights bodies have concluded that Israel's system of control over Palestinians meets the legal threshold of apartheid as defined in the Convention."
+        },
+        "icjWall": {
+          "title": "ICJ Advisory Opinion — Separation Wall Illegal",
+          "body": "The International Court of Justice issued an advisory opinion in July 2004, ruling that the construction of the Israeli separation wall in occupied Palestinian territory (85% of which lies inside the West Bank) is contrary to international law. The Court called for Israel to dismantle the relevant sections and provide reparations. Israel refused to comply. UNGA Resolution ES-10/15 endorsed the opinion; the United States and Israel rejected it."
+        },
+        "resolution2334": {
+          "title": "UNSC Resolution 2334 — Settlements Condemned",
+          "body": "Adopted unanimously by the UN Security Council on 23 December 2016 (the United States abstained rather than vetoing), Resolution 2334 declared that Israel's establishment of settlements in Palestinian territory occupied since 1967 “has no legal validity and constitutes a flagrant violation under international law,” calling on all states to distinguish between Israeli territory and occupied Palestinian territory. Settlement construction has accelerated since."
+        },
+        "apartheidReports": {
+          "title": "HRW & Amnesty Apartheid Reports",
+          "body": "Human Rights Watch (April 2021) and Amnesty International (February 2022) independently released comprehensive reports — each over 200 pages — concluding that Israel is committing the crime of apartheid against Palestinians. Both organisations applied the legal definition from the Apartheid Convention and Rome Statute, finding a system of domination, dispossession, and segregation imposed on Palestinians in Israel, the occupied territories, and Gaza."
+        },
+        "icjGenocide": {
+          "title": "ICJ — Genocide Case (South Africa v. Israel)",
+          "body": "South Africa filed a case at the International Court of Justice in December 2023 alleging that Israel is committing genocide against Palestinians in Gaza. In January 2024, the ICJ issued provisional measures finding a plausible case for genocide and ordering Israel to take all measures to prevent genocidal acts. Full proceedings are ongoing. Separately, the ICC issued arrest warrants for Israeli Prime Minister Netanyahu and former Defence Minister Gallant in November 2024 for war crimes and crimes against humanity."
+        }
+      }
+    },
+    "resources": {
+      "sectionTitle": "📚 Sources & Documentation",
+      "categories": {
+        "un": {
+          "title": "🏛️ UN & Intergovernmental"
+        },
+        "humanRights": {
+          "title": "⚖️ Human Rights Organisations"
+        },
+        "legal": {
+          "title": "🏛️ Legal & Court Documents"
+        },
+        "academic": {
+          "title": "📚 Academic & Research"
+        }
+      }
+    },
+    "actions": {
+      "sectionTitle": "🚨 Take Action",
+      "items": {
+        "educate": {
+          "title": "Educate & Inform",
+          "body": "Share verified historical documentation with colleagues, educators, and community members to counter misinformation and build informed public discourse.",
+          "btn": "Share This Page"
+        },
+        "supportLegal": {
+          "title": "Support Legal Accountability",
+          "body": "Support international legal proceedings at the ICC and ICJ to ensure accountability for decades of documented violations of international law.",
+          "btn": "ICC Website"
+        },
+        "advocate": {
+          "title": "Demand Policy Change",
+          "body": "Contact elected representatives and demand policy responses to decades of documented violations — including sanctions on settlement goods and accountability for war crimes.",
+          "btn": "Contact Representatives"
+        },
+        "volunteer": {
+          "title": "Join PalGenoPedia",
+          "body": "Help document and verify historical evidence. Researchers, translators, and data contributors needed to expand this record of 75 years of violations.",
+          "btn": "Become a Volunteer"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,300 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "@id": "https://palgenopedia.org/data/events.json#hist009",
+  "headline": "Cave of the Patriarchs Massacre",
+  "url": "https://palgenopedia.org/Pages/Historical_Massacres/massacres.html#event/hist009",
+  "datePublished": "1994-02-25",
+  "dateModified": "2026-08-09",
+  "inLanguage": "en",
+  "about": {
+    "@type": "Event",
+    "name": "Cave of the Patriarchs Massacre",
+    "startDate": "1994-02-25",
+    "endDate": "34411",
+    "description": "Ramadan 1994, following Oslo Accords (September 1993)",
+    "location": {
+      "@type": "Place",
+      "name": "Hebron Old City, West Bank, H2 area under full Israeli military control since 1997 Hebron Protocol; Ibrahimi Mosque divided 60% for Jews, 40% for Muslims since massacre; Old City strangled by checkpoints, closures, settler violence",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 31.5266,
+        "longitude": 35.0948
+      }
+    }
+  },
+  "articleBody": "Baruch Goldstein was born Benjamin Carl Goldstein in Brooklyn, New York in 1956 to an Orthodox Jewish family. In the 1970s, he became a charter member of the Jewish Defense League (JDL), a militant organization founded by Rabbi Meir Kahane. After graduating from Yeshiva University's Albert Einstein College of Medicine, Goldstein emigrated to Israel in 1983. He served as a physician in the Israel Defense Forces and later settled in Kiryat Arba, an extremist settlement adjacent to Hebron. Goldstein was an active member of Kach, Kahane's ultranationalist party, and was third on its list for the 1984 Knesset elections. Israeli press reported that Goldstein refused to treat Arabs, even Arab soldiers serving in the IDF, believing it violated Jewish religious law to treat non-Jews. He compared Israel's democracy to Nazism and wore a yellow star marked 'JUDE' in protest. In the weeks before the massacre, Goldstein made ominous statements and was involved in violent incidents at the mosque, including pouring acid on carpets. Palestinian authorities wrote to Prime Minister Rabin warning about Goldstein's dangerous behavior, but no action was taken. On the morning of February 25, 1994, the 15th day of Ramadan, worshippers noticed the unusual absence of Israeli soldiers from their normal positions around the Ibrahimi Mosque despite tensions the previous evening. At approximately 5:30 AM, as Imam Khalil Muhsen Jabari led hundreds in Fajr (dawn) prayer, Goldstein entered the Isaac Hall—the main prayer area—dressed in his IDF reserve uniform and carrying a Galil assault rifle and pistol. He positioned himself behind a pillar at the rear of the hall. When worshippers prostrated (sujood position), Goldstein opened fire. He reloaded multiple times, methodically shooting prostrate worshippers who were trapped and defenseless. Survivors report the shooting continued for ten minutes. Some eyewitnesses claim they saw additional gunmen, though Israeli investigations denied this. When worshippers finally overcame Goldstein, they beat him to death. By then, 29 Palestinians lay dead—including children as young as 11—and 125 were wounded. The horror did not end with the shooting. Israeli soldiers present at the mosque closed the gates, trapping survivors inside with the dead and wounded, and preventing medical help from entering. When the gates finally opened, Israeli forces fired on protesters outside, killing more Palestinians. Over the next three weeks, as news of the massacre spread, Palestinians rioted throughout Hebron and the West Bank. Israeli forces killed at least 25 more Palestinians during these protests, including at victims' funerals. The total death toll reached 50-60. Israel's response was to punish the victims: a six-month closure of Hebron; formation of the one-sided Shamgar Commission whose recommendations all favored settlers; partition of the Ibrahimi Mosque giving 60% to Jews (who comprised 0.003% of Hebron's population); closure of 520 businesses and 1,800 shops in the Old City; sealing of Shuhada Street (the main commercial artery); and a network of military checkpoints suffocating Palestinian life. The massacre achieved Goldstein's goal: it did not stop Oslo, but it transformed Hebron into a strangled city, its Old City a ghost town, its Palestinian population subjected to daily humiliation while a few hundred extremist settlers lived under heavy military protection.",
+  "keywords": "Massacre / Mass Shooting, historical, War Crime; Crimes Against Humanity; State Responsibility (UNSC Res 904)",
+  "mentions": [
+    {
+      "@type": "Organization",
+      "name": "Baruch Goldstein (direct perpetrator)"
+    },
+    {
+      "@type": "Organization",
+      "name": "Kach movement (ideological support)"
+    },
+    {
+      "@type": "Organization",
+      "name": "Israeli military (facilitation through absence/inaction)"
+    },
+    {
+      "@type": "Organization",
+      "name": "Israeli government (collective punishment of victims after massacre)"
+    }
+  ],
+  "citation": [
+    {
+      "@type": "Article",
+      "name": "Institute for Palestine Studies",
+      "url": "https://www.palestine-studies.org/en/node/1652605",
+      "about": {
+        "@type": "Thing",
+        "name": "casualty"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Al Jazeera - Massacre Remembrance",
+      "url": "https://www.aljazeera.com/news/2016/2/26/remembering-the-ibrahimi-mosque-massacre",
+      "about": {
+        "@type": "Thing",
+        "name": "casualty"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Hebron Rehabilitation Committee",
+      "url": "https://www.hebronrc.ps/en/node/27",
+      "about": {
+        "@type": "Thing",
+        "name": "casualty"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "WAFA News Agency",
+      "url": "https://english.wafa.ps/Pages/Details/128189",
+      "about": {
+        "@type": "Thing",
+        "name": "casualty"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Middle East Monitor Documentation",
+      "url": "https://www.middleeastmonitor.com/20210227-the-massacre-of-ibrahimi-mosque/",
+      "about": {
+        "@type": "Thing",
+        "name": "casualty"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Middle East Monitor",
+      "url": "https://www.middleeastmonitor.com/20210227-the-massacre-of-ibrahimi-mosque/",
+      "about": {
+        "@type": "Thing",
+        "name": "casualty"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Al Jazeera interview (2016)",
+      "url": "https://www.aljazeera.com/news/2016/2/26/remembering-the-ibrahimi-mosque-massacre",
+      "about": {
+        "@type": "Thing",
+        "name": "testimony"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Victim documentation",
+      "url": "https://www.hebronrc.ps/en/node/27",
+      "about": {
+        "@type": "Thing",
+        "name": "testimony"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Anadolu Agency interview (2021)",
+      "url": "https://www.aa.com.tr/en/middle-east/palestine-27-years-since-ibrahimi-mosque-massacre/2156877",
+      "about": {
+        "@type": "Thing",
+        "name": "testimony"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Court testimony and interviews",
+      "about": {
+        "@type": "Thing",
+        "name": "testimony"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "UN Security Council Resolution 904",
+      "url": "https://www.middleeastmonitor.com/20210227-the-massacre-of-ibrahimi-mosque/",
+      "about": {
+        "@type": "Thing",
+        "name": "testimony"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Public statement, March 1994",
+      "about": {
+        "@type": "Thing",
+        "name": "testimony"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Shamgar Commission testimony (leaked excerpts)",
+      "about": {
+        "@type": "Thing",
+        "name": "testimony"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Kach publications and statements (1994)",
+      "url": "https://jacobin.com/2023/02/ibrahimi-mosque-massacre-anniversary-kahanism-hebron-itamar-ben-gvir-israel-far-right",
+      "about": {
+        "@type": "Thing",
+        "name": "testimony"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Historical Documentation",
+      "url": "https://www.aljazeera.com/news/2016/2/26/remembering-the-ibrahimi-mosque-massacre",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Al Jazeera - Survivor Testimonies",
+      "url": "https://www.aljazeera.com/news/2016/2/26/remembering-the-ibrahimi-mosque-massacre",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Anadolu Agency - Eyewitness Accounts",
+      "url": "https://www.aa.com.tr/en/middle-east/palestine-27-years-since-ibrahimi-mosque-massacre/2156877",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "WAFA Documentation",
+      "url": "https://english.wafa.ps/Pages/Details/128189",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Jacobin Investigation",
+      "url": "https://jacobin.com/2023/02/ibrahimi-mosque-massacre-anniversary-kahanism-hebron-itamar-ben-gvir-israel-far-right",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Al Jazeera Analysis",
+      "url": "https://www.aljazeera.com/news/2016/2/26/remembering-the-ibrahimi-mosque-massacre",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Eyewitness Documentation",
+      "url": "https://www.aljazeera.com/news/2016/2/26/remembering-the-ibrahimi-mosque-massacre",
+      "about": {
+        "@type": "Thing",
+        "name": "war_crime"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Documentation",
+      "url": "https://www.middleeastmonitor.com/20210227-the-massacre-of-ibrahimi-mosque/",
+      "about": {
+        "@type": "Thing",
+        "name": "war_crime"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Economic Impact Documentation",
+      "url": "https://www.middleeastmonitor.com/20210227-the-massacre-of-ibrahimi-mosque/",
+      "about": {
+        "@type": "Thing",
+        "name": "war_crime"
+      }
+    }
+  ],
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "Deaths",
+      "propertyID": "casualties/deaths",
+      "value": "50-60 Palestinians total (29 in mosque shooting + 25+ killed by Israeli forces during protests)",
+      "minValue": -60,
+      "maxValue": 50
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Injured",
+      "propertyID": "casualties/injured",
+      "value": "125+ in mosque; hundreds more during protests",
+      "minValue": 125,
+      "maxValue": 125
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Forced displacement",
+      "propertyID": "casualties/forced_displacement",
+      "value": "Mass exodus from Hebron Old City due to closures and restrictions"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Verification status",
+      "propertyID": "verification_status",
+      "value": "verified"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Classification",
+      "propertyID": "classification",
+      "value": "War Crime; Crimes Against Humanity; State Responsibility (UNSC Res 904)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Author",
+      "propertyID": "author",
+      "value": "aliattia02"
+    }
+  ],
+  "provider": {
+    "@type": "Organization",
+    "name": "PalGenoPedia",
+    "url": "https://palgenopedia.org"
+  },
+  "isBasedOn": "https://palgenopedia.org/data/events.json"
+}

@@ -1,0 +1,88 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "@id": "https://palgenopedia.org/data/events.json#curr_002",
+  "headline": "Jabalia Refugee Camp Bombardment (First Strike)",
+  "url": "https://palgenopedia.org/major-incidents-timeline.html",
+  "datePublished": "2023-10-31",
+  "dateModified": "2026-08-09",
+  "inLanguage": "en",
+  "about": {
+    "@type": "Event",
+    "name": "Jabalia Refugee Camp Bombardment (First Strike)",
+    "startDate": "2023-10-31",
+    "location": {
+      "@type": "Place",
+      "name": "Jabalia Refugee Camp, North Gaza",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 31.5333,
+        "longitude": 34.4833
+      }
+    }
+  },
+  "articleBody": "Massive airstrike on densely populated Jabalia refugee camp. Entire residential blocks destroyed. Israel admitted targeting Hamas commander.",
+  "keywords": "refugee_camp_attack, current",
+  "mentions": [
+    {
+      "@type": "Organization",
+      "name": "IDF"
+    }
+  ],
+  "citation": [
+    {
+      "@type": "Article",
+      "name": "UN OCHA"
+    },
+    {
+      "@type": "Article",
+      "name": "Human Rights Watch"
+    },
+    {
+      "@type": "Article",
+      "name": "Gaza Civil Defense"
+    },
+    {
+      "@type": "Article",
+      "name": "Multiple news agencies"
+    }
+  ],
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "Deaths",
+      "propertyID": "casualties/deaths",
+      "value": "195",
+      "minValue": 195,
+      "maxValue": 195
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Injured",
+      "propertyID": "casualties/injured",
+      "value": "777",
+      "minValue": 777,
+      "maxValue": 777
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Forced displacement",
+      "propertyID": "casualties/forced_displacement",
+      "value": "0",
+      "minValue": 0,
+      "maxValue": 0
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Verification status",
+      "propertyID": "verification_status",
+      "value": "verified"
+    }
+  ],
+  "provider": {
+    "@type": "Organization",
+    "name": "PalGenoPedia",
+    "url": "https://palgenopedia.org"
+  },
+  "isBasedOn": "https://palgenopedia.org/data/events.json"
+}

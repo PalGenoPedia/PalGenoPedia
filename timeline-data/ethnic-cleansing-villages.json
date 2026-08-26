@@ -1,0 +1,6484 @@
+{
+  "metadata": {
+    "total_villages": 418,
+    "total_displaced": 651734,
+    "last_updated": "2025-11-23",
+    "data_sources": [
+      "Benny Morris - The Birth of the Palestinian Refugee Problem",
+      "Israeli Military Archives (declassified)",
+      "UN Documentation",
+      "B'Tselem - Israeli Information Center for Human Rights",
+      "Human Rights Watch",
+      "Zochrot - Historical Documentation"
+    ],
+    "period_breakdown": {
+      "1967": {
+        "villages": 11,
+        "population": 30797,
+        "description": "Six-Day War - Villages destroyed in West Bank and Golan Heights"
+      },
+      "1948-1949": {
+        "villages": 391,
+        "population": 564007,
+        "description": "Nakba Period - Systematic ethnic cleansing during 1948 war"
+      },
+      "1950-1966": {
+        "villages": 1,
+        "population": 1180,
+        "description": "Post-Nakba - Continued displacement under military rule"
+      },
+      "1967-2023": {
+        "villages": 6,
+        "population": 3040,
+        "description": "Occupation Era - Ongoing demolitions and displacements"
+      },
+      "2023-present": {
+        "villages": 9,
+        "population": 52710,
+        "description": "Current Period - Active displacement threats and demolitions"
+      }
+    }
+  },
+  "displacement_methods": {
+    "massacre": {
+      "label": "Massacre",
+      "description": "Direct killing of civilians to force displacement",
+      "count": 4,
+      "icon": "⚠️",
+      "color": "#dc3545"
+    },
+    "military_assault": {
+      "label": "Military Assault",
+      "description": "Armed military operations causing displacement",
+      "count": 217,
+      "icon": "🎯",
+      "color": "#fd7e14"
+    },
+    "forced_expulsion": {
+      "label": "Forced Expulsion",
+      "description": "Direct orders forcing residents to leave",
+      "count": 46,
+      "icon": "👋",
+      "color": "#6f42c1"
+    },
+    "fear_of_attack": {
+      "label": "Fear of Attack",
+      "description": "Displacement due to fear of military action",
+      "count": 83,
+      "icon": "😰",
+      "color": "#ffc107"
+    },
+    "whispering_campaign": {
+      "label": "Whispering Campaign",
+      "description": "Psychological warfare to encourage departure",
+      "count": 9,
+      "icon": "💭",
+      "color": "#20c997"
+    },
+    "administrative_demolition": {
+      "label": "Administrative Demolition",
+      "description": "House demolitions under administrative orders",
+      "count": 13,
+      "icon": "🏗️",
+      "color": "#e83e8c"
+    },
+    "unknown": {
+      "label": "Method Unknown",
+      "description": "Displacement method not documented",
+      "count": 46,
+      "icon": "❓",
+      "color": "#6c757d"
+    }
+  },
+  "districts": [
+    {
+      "name": "Safad",
+      "villages": 62,
+      "population": 45630
+    },
+    {
+      "name": "Gaza",
+      "villages": 56,
+      "population": 70490
+    },
+    {
+      "name": "Haifa",
+      "villages": 46,
+      "population": 116250
+    },
+    {
+      "name": "Ramle",
+      "villages": 45,
+      "population": 84370
+    },
+    {
+      "name": "Hebron",
+      "villages": 40,
+      "population": 36774
+    },
+    {
+      "name": "Jerusalem",
+      "villages": 29,
+      "population": 55280
+    },
+    {
+      "name": "Acre",
+      "villages": 27,
+      "population": 24580
+    },
+    {
+      "name": "Tiberias",
+      "villages": 24,
+      "population": 22250
+    },
+    {
+      "name": "Jaffa",
+      "villages": 21,
+      "population": 108530
+    },
+    {
+      "name": "Beisan",
+      "villages": 17,
+      "population": 10390
+    },
+    {
+      "name": "Nazareth",
+      "villages": 14,
+      "population": 11670
+    },
+    {
+      "name": "Tulkarm",
+      "villages": 13,
+      "population": 9190
+    },
+    {
+      "name": "Beersheba",
+      "villages": 10,
+      "population": 10740
+    },
+    {
+      "name": "Golan Heights",
+      "villages": 6,
+      "population": 24620
+    },
+    {
+      "name": "Ramallah",
+      "villages": 4,
+      "population": 5487
+    },
+    {
+      "name": "Nablus",
+      "villages": 2,
+      "population": 12180
+    },
+    {
+      "name": "Jenin",
+      "villages": 1,
+      "population": 1103
+    },
+    {
+      "name": "Bethlehem",
+      "villages": 1,
+      "population": 2200
+    }
+  ],
+  "status_types": {
+    "destroyed": {
+      "label": "Completely Destroyed",
+      "description": "No structures remain - village erased",
+      "icon": "💥"
+    },
+    "partially_destroyed": {
+      "label": "Partially Destroyed",
+      "description": "Some structures demolished",
+      "icon": "🏚️"
+    },
+    "unrecognized": {
+      "label": "Unrecognized",
+      "description": "Exists but not recognized by Israeli government",
+      "icon": "👁️"
+    },
+    "under_threat": {
+      "label": "Under Threat",
+      "description": "Currently facing demolition or displacement threats",
+      "icon": "⚠️"
+    },
+    "demolished_multiple": {
+      "label": "Repeatedly Demolished",
+      "description": "Demolished and rebuilt multiple times",
+      "icon": "🔄"
+    }
+  },
+  "villages": [
+    {
+      "id": 1,
+      "name": "Abil AL Qamh",
+      "period": "1948-1949",
+      "date": "1948-05-10",
+      "district": "Safad",
+      "population": 450,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        33.0833,
+        35.5667
+      ],
+      "additional_notes": "Fear and capitulation"
+    },
+    {
+      "id": 2,
+      "name": "Zuq Al Fauqani",
+      "period": "1948-1949",
+      "date": "1948-05-21",
+      "district": "Safad",
+      "population": 1000,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        33.1667,
+        35.5333
+      ],
+      "additional_notes": "Whispering campaign and military assault"
+    },
+    {
+      "id": 3,
+      "name": "Sanbariya",
+      "period": "1948-1949",
+      "date": "1948-05-01",
+      "district": "Safad",
+      "population": 350,
+      "current_status": "destroyed",
+      "displacement_method": "unknown",
+      "coordinates": [
+        33.05,
+        35.55
+      ],
+      "additional_notes": "Date uncertain"
+    },
+    {
+      "id": 4,
+      "name": "Shauqa Al Tahta",
+      "period": "1948-1949",
+      "date": "1948-05-14",
+      "district": "Safad",
+      "population": 200,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        33.0667,
+        35.5833
+      ],
+      "additional_notes": "Fear of attack"
+    },
+    {
+      "id": 5,
+      "name": "Khisas",
+      "period": "1948-1949",
+      "date": "1948-05-25",
+      "district": "Safad",
+      "population": 530,
+      "current_status": "destroyed",
+      "displacement_method": "forced_expulsion",
+      "coordinates": [
+        33.2333,
+        35.6167
+      ],
+      "additional_notes": "Multiple methods over time"
+    },
+    {
+      "id": 6,
+      "name": "Hunin",
+      "period": "1948-1949",
+      "date": "1948-05-03",
+      "district": "Safad",
+      "population": 1700,
+      "current_status": "destroyed",
+      "displacement_method": "forced_expulsion",
+      "coordinates": [
+        33.2333,
+        35.6
+      ],
+      "additional_notes": "Fear and expulsion"
+    },
+    {
+      "id": 7,
+      "name": "Mansura",
+      "period": "1948-1949",
+      "date": "1948-05-25",
+      "district": "Acre",
+      "population": 850,
+      "current_status": "destroyed",
+      "displacement_method": "whispering_campaign",
+      "coordinates": [
+        33.0833,
+        35.4667
+      ],
+      "additional_notes": "Whispering campaign"
+    },
+    {
+      "id": 8,
+      "name": "Lazzaza",
+      "period": "1948-1949",
+      "date": "1948-05-21",
+      "district": "Safad",
+      "population": 230,
+      "current_status": "destroyed",
+      "displacement_method": "whispering_campaign",
+      "coordinates": [
+        33.1,
+        35.55
+      ],
+      "additional_notes": "Whispering campaign"
+    },
+    {
+      "id": 9,
+      "name": "Zuq Al Tahtanii",
+      "period": "1948-1949",
+      "date": "1948-05-11",
+      "district": "Safad",
+      "population": 1050,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        33.15,
+        35.55
+      ],
+      "additional_notes": "Capitulation"
+    },
+    {
+      "id": 10,
+      "name": "Khalisa",
+      "period": "1948-1949",
+      "date": "1948-05-11",
+      "district": "Safad",
+      "population": 1840,
+      "current_status": "destroyed",
+      "displacement_method": "whispering_campaign",
+      "coordinates": [
+        33.2167,
+        35.5833
+      ],
+      "additional_notes": "Capitulation and whispering"
+    },
+    {
+      "id": 11,
+      "name": "Madahil",
+      "period": "1948-1949",
+      "date": "1948-04-30",
+      "district": "Safad",
+      "population": 280,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        33.0333,
+        35.5667
+      ],
+      "additional_notes": "Fear of attack"
+    },
+    {
+      "id": 12,
+      "name": "Qeitiya",
+      "period": "1948-1949",
+      "date": "1948-05-19",
+      "district": "Safad",
+      "population": 940,
+      "current_status": "destroyed",
+      "displacement_method": "forced_expulsion",
+      "coordinates": [
+        33.1833,
+        35.5667
+      ],
+      "additional_notes": "Whispering and expulsion"
+    },
+    {
+      "id": 13,
+      "name": "Abisiyya",
+      "period": "1948-1949",
+      "date": "1948-05-25",
+      "district": "Safad",
+      "population": 830,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        33.0833,
+        35.5333
+      ],
+      "additional_notes": "Capitulation"
+    },
+    {
+      "id": 14,
+      "name": "Dawwara",
+      "period": "1948-1949",
+      "date": "1948-05-25",
+      "district": "Safad",
+      "population": 700,
+      "current_status": "destroyed",
+      "displacement_method": "whispering_campaign",
+      "coordinates": [
+        33.1333,
+        35.5667
+      ],
+      "additional_notes": "Whispering campaign"
+    },
+    {
+      "id": 15,
+      "name": "Salihiya",
+      "period": "1948-1949",
+      "date": "1948-05-25",
+      "district": "Safad",
+      "population": 1420,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        33.0667,
+        35.6
+      ],
+      "additional_notes": "Fear and whispering"
+    },
+    {
+      "id": 16,
+      "name": "Muftakhira",
+      "period": "1948-1949",
+      "date": "1948-05-16",
+      "district": "Safad",
+      "population": 360,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        33.05,
+        35.5833
+      ],
+      "additional_notes": "Fear of attack"
+    },
+    {
+      "id": 17,
+      "name": "Zawiya",
+      "period": "1948-1949",
+      "date": "1948-05-24",
+      "district": "Safad",
+      "population": 760,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        33.1167,
+        35.5833
+      ],
+      "additional_notes": "Military assault and expulsion"
+    },
+    {
+      "id": 18,
+      "name": "Buweiziya",
+      "period": "1948-1949",
+      "date": "1948-05-11",
+      "district": "Safad",
+      "population": 510,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        33.1667,
+        35.5667
+      ],
+      "additional_notes": "Capitulation"
+    },
+    {
+      "id": 19,
+      "name": "Na'ima",
+      "period": "1948-1949",
+      "date": "1948-05-14",
+      "district": "Safad",
+      "population": 1420,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        33.1,
+        35.5333
+      ],
+      "additional_notes": "Capitulation"
+    },
+    {
+      "id": 20,
+      "name": "Hamra",
+      "period": "1948-1949",
+      "date": "1948-05-01",
+      "district": "Tiberias",
+      "population": 730,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.8333,
+        35.5333
+      ],
+      "additional_notes": "Fear and military assault"
+    },
+    {
+      "id": 21,
+      "name": "Ghuraba",
+      "period": "1948-1949",
+      "date": "1948-05-28",
+      "district": "Safad",
+      "population": 250,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        33.0667,
+        35.55
+      ],
+      "additional_notes": "Fear of attack"
+    },
+    {
+      "id": 22,
+      "name": "Khirbet Khiyam Al Walid",
+      "period": "1948-1949",
+      "date": "1948-05-01",
+      "district": "Safad",
+      "population": 280,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        32.9667,
+        35.5333
+      ],
+      "additional_notes": "Influenced by neighbors"
+    },
+    {
+      "id": 23,
+      "name": "Jahula",
+      "period": "1948-1949",
+      "date": "1948-05-15",
+      "district": "Safad",
+      "population": 1030,
+      "current_status": "destroyed",
+      "displacement_method": "unknown",
+      "coordinates": [
+        33.0333,
+        35.6333
+      ],
+      "additional_notes": "Date uncertain"
+    },
+    {
+      "id": 24,
+      "name": "Qadas",
+      "period": "1948-1949",
+      "date": "1948-05-28",
+      "district": "Safad",
+      "population": 240,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        33.1167,
+        35.6167
+      ],
+      "additional_notes": "Capitulation"
+    },
+    {
+      "id": 25,
+      "name": "Malikiya",
+      "period": "1948-1949",
+      "date": "1948-05-28",
+      "district": "Safad",
+      "population": 360,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        33.2833,
+        35.6333
+      ],
+      "additional_notes": "Military assault and expulsion"
+    },
+    {
+      "id": 26,
+      "name": "Nabi Yusha",
+      "period": "1948-1949",
+      "date": "1948-05-16",
+      "district": "Safad",
+      "population": 70,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        33.25,
+        35.6167
+      ],
+      "additional_notes": "Military assault and expulsion"
+    },
+    {
+      "id": 27,
+      "name": "Beisamun",
+      "period": "1948-1949",
+      "date": "1948-05-25",
+      "district": "Safad",
+      "population": 510,
+      "current_status": "destroyed",
+      "displacement_method": "whispering_campaign",
+      "coordinates": [
+        33.05,
+        35.5
+      ],
+      "additional_notes": "Whispering campaign"
+    },
+    {
+      "id": 28,
+      "name": "Mallaha",
+      "period": "1948-1949",
+      "date": "1948-05-25",
+      "district": "Safad",
+      "population": 890,
+      "current_status": "destroyed",
+      "displacement_method": "whispering_campaign",
+      "coordinates": [
+        33.15,
+        35.5833
+      ],
+      "additional_notes": "Whispering campaign"
+    },
+    {
+      "id": 29,
+      "name": "Darbashiya",
+      "period": "1948-1949",
+      "date": "1948-05-15",
+      "district": "Safad",
+      "population": 310,
+      "current_status": "destroyed",
+      "displacement_method": "unknown",
+      "coordinates": [
+        33.2167,
+        35.65
+      ],
+      "additional_notes": "Date uncertain"
+    },
+    {
+      "id": 30,
+      "name": "Ulmaniya",
+      "period": "1948-1949",
+      "date": "1948-04-20",
+      "district": "Safad",
+      "population": 820,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        33.0167,
+        35.5167
+      ],
+      "additional_notes": "Military assault and expulsion"
+    },
+    {
+      "id": 31,
+      "name": "Arab Zubeih",
+      "period": "1948-1949",
+      "date": "1948-04-20",
+      "district": "Safad",
+      "population": 275,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        33,
+        35.5
+      ],
+      "additional_notes": "Fear of attack"
+    },
+    {
+      "id": 32,
+      "name": "Deishum",
+      "period": "1948-1949",
+      "date": "1948-10-30",
+      "district": "Safad",
+      "population": 590,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        33.2333,
+        35.5667
+      ],
+      "additional_notes": "Military assault and expulsion"
+    },
+    {
+      "id": 33,
+      "name": "Alma",
+      "period": "1948-1949",
+      "date": "1948-10-30",
+      "district": "Safad",
+      "population": 950,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        33.25,
+        35.5333
+      ],
+      "additional_notes": "Military assault and expulsion"
+    },
+    {
+      "id": 34,
+      "name": "Saliha",
+      "period": "1948-1949",
+      "date": "1948-10-30",
+      "district": "Safad",
+      "population": 1070,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        33.2667,
+        35.55
+      ],
+      "additional_notes": "Military assault and expulsion"
+    },
+    {
+      "id": 35,
+      "name": "Fara",
+      "period": "1948-1949",
+      "date": "1948-10-30",
+      "district": "Safad",
+      "population": 670,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        33.2,
+        35.5167
+      ],
+      "additional_notes": "Military assault and expulsion"
+    },
+    {
+      "id": 36,
+      "name": "Husseiniya",
+      "period": "1948-1949",
+      "date": "1948-04-21",
+      "district": "Safad",
+      "population": 170,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        33.0667,
+        35.6167
+      ],
+      "additional_notes": "Capitulation"
+    },
+    {
+      "id": 37,
+      "name": "Tuleil",
+      "period": "1948-1949",
+      "date": "1948-04-15",
+      "district": "Safad",
+      "population": 60,
+      "current_status": "destroyed",
+      "displacement_method": "unknown",
+      "coordinates": [
+        33.0333,
+        35.5333
+      ],
+      "additional_notes": "Date uncertain"
+    },
+    {
+      "id": 38,
+      "name": "Kafr Bir'im",
+      "period": "1948-1949",
+      "date": "1948-11-15",
+      "district": "Acre",
+      "population": 710,
+      "current_status": "destroyed",
+      "displacement_method": "forced_expulsion",
+      "coordinates": [
+        33.1333,
+        35.4167
+      ],
+      "additional_notes": "Late expulsion"
+    },
+    {
+      "id": 39,
+      "name": "Ras Al Ahmar",
+      "period": "1948-1949",
+      "date": "1948-10-30",
+      "district": "Safad",
+      "population": 645,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        33.2167,
+        35.5333
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 40,
+      "name": "Dallata",
+      "period": "1948-1949",
+      "date": "1948-05-15",
+      "district": "Safad",
+      "population": 360,
+      "current_status": "destroyed",
+      "displacement_method": "unknown",
+      "coordinates": [
+        33.0833,
+        35.5833
+      ],
+      "additional_notes": "Unknown method and date"
+    },
+    {
+      "id": 41,
+      "name": "Marus",
+      "period": "1948-1949",
+      "date": "1948-05-26",
+      "district": "Safad",
+      "population": 80,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        33.15,
+        35.5333
+      ],
+      "additional_notes": "Capitulation"
+    },
+    {
+      "id": 42,
+      "name": "Kirad Al Ghannama",
+      "period": "1948-1949",
+      "date": "1948-04-22",
+      "district": "Tiberias",
+      "population": 360,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        32.8833,
+        35.5667
+      ],
+      "additional_notes": "Capitulation"
+    },
+    {
+      "id": 43,
+      "name": "Kirad Al Baqqara",
+      "period": "1948-1949",
+      "date": "1948-04-22",
+      "district": "Tiberias",
+      "population": 350,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        32.8667,
+        35.55
+      ],
+      "additional_notes": "Capitulation"
+    },
+    {
+      "id": 44,
+      "name": "Teitaba",
+      "period": "1948-1949",
+      "date": "1948-05-15",
+      "district": "Safad",
+      "population": 530,
+      "current_status": "destroyed",
+      "displacement_method": "unknown",
+      "coordinates": [
+        33.1667,
+        35.5333
+      ],
+      "additional_notes": "Date uncertain"
+    },
+    {
+      "id": 45,
+      "name": "Safsaf",
+      "period": "1948-1949",
+      "date": "1948-10-29",
+      "district": "Safad",
+      "population": 910,
+      "current_status": "destroyed",
+      "displacement_method": "massacre",
+      "coordinates": [
+        33.2667,
+        35.5167
+      ],
+      "additional_notes": "Military assault and massacre"
+    },
+    {
+      "id": 46,
+      "name": "Qaddita",
+      "period": "1948-1949",
+      "date": "1948-05-11",
+      "district": "Safad",
+      "population": 240,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        33.1333,
+        35.55
+      ],
+      "additional_notes": "Capitulation"
+    },
+    {
+      "id": 47,
+      "name": "Ammuqa",
+      "period": "1948-1949",
+      "date": "1948-05-24",
+      "district": "Safad",
+      "population": 140,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        33.1833,
+        35.5333
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 48,
+      "name": "Qabba'a",
+      "period": "1948-1949",
+      "date": "1948-05-26",
+      "district": "Safad",
+      "population": 210,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        33.2,
+        35.5667
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 49,
+      "name": "Weiziya",
+      "period": "1948-1949",
+      "date": "1948-05-15",
+      "district": "Safad",
+      "population": 170,
+      "current_status": "destroyed",
+      "displacement_method": "unknown",
+      "coordinates": [
+        33.0667,
+        35.5333
+      ],
+      "additional_notes": "Date uncertain"
+    },
+    {
+      "id": 50,
+      "name": "Mughr Al Kheit",
+      "period": "1948-1949",
+      "date": "1948-05-02",
+      "district": "Safad",
+      "population": 490,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        33.05,
+        35.5167
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 51,
+      "name": "Fir'im",
+      "period": "1948-1949",
+      "date": "1948-05-26",
+      "district": "Safad",
+      "population": 740,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        33.2167,
+        35.5833
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 52,
+      "name": "Ja'una",
+      "period": "1948-1949",
+      "date": "1948-05-09",
+      "district": "Safad",
+      "population": 1150,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        33.1,
+        35.5667
+      ],
+      "additional_notes": "Capitulation"
+    },
+    {
+      "id": 53,
+      "name": "Ein Al Zeitun",
+      "period": "1948-1949",
+      "date": "1948-05-02",
+      "district": "Safad",
+      "population": 820,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.9833,
+        35.4833
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 54,
+      "name": "Biriya",
+      "period": "1948-1949",
+      "date": "1948-05-02",
+      "district": "Safad",
+      "population": 240,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.9667,
+        35.4667
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 55,
+      "name": "Arab Safad",
+      "period": "1948-1949",
+      "date": "1948-05-11",
+      "district": "Safad",
+      "population": 9500,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.9667,
+        35.4833
+      ],
+      "additional_notes": "Military assault on city"
+    },
+    {
+      "id": 56,
+      "name": "Meirun",
+      "period": "1948-1949",
+      "date": "1948-05-10",
+      "district": "Safad",
+      "population": 290,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        33.0167,
+        35.4667
+      ],
+      "additional_notes": "Capitulation"
+    },
+    {
+      "id": 57,
+      "name": "Sammu'i",
+      "period": "1948-1949",
+      "date": "1948-05-12",
+      "district": "Safad",
+      "population": 310,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        33.0333,
+        35.5
+      ],
+      "additional_notes": "Capitulation"
+    },
+    {
+      "id": 58,
+      "name": "Dhahiriya Tahta",
+      "period": "1948-1949",
+      "date": "1948-05-10",
+      "district": "Safad",
+      "population": 350,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        33.05,
+        35.4833
+      ],
+      "additional_notes": "Capitulation"
+    },
+    {
+      "id": 59,
+      "name": "Mansurat Al Kheit",
+      "period": "1948-1949",
+      "date": "1948-01-18",
+      "district": "Safad",
+      "population": 260,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        33.0667,
+        35.5167
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 60,
+      "name": "Sa'sa",
+      "period": "1948-1949",
+      "date": "1948-10-30",
+      "district": "Safad",
+      "population": 1130,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        33.25,
+        35.5667
+      ],
+      "additional_notes": "Military assault and expulsion"
+    },
+    {
+      "id": 61,
+      "name": "Ghabbatiya",
+      "period": "1948-1949",
+      "date": "1948-10-30",
+      "district": "Acre",
+      "population": 690,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        33.0667,
+        35.45
+      ],
+      "additional_notes": "Date uncertain"
+    },
+    {
+      "id": 62,
+      "name": "Sabalan",
+      "period": "1948-1949",
+      "date": "1948-10-30",
+      "district": "Acre",
+      "population": 70,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        33.05,
+        35.4667
+      ],
+      "additional_notes": "Date uncertain"
+    },
+    {
+      "id": 63,
+      "name": "Deir Al Qasi",
+      "period": "1948-1949",
+      "date": "1948-10-30",
+      "district": "Acre",
+      "population": 2100,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        33.0833,
+        35.3833
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 64,
+      "name": "Suhmata",
+      "period": "1948-1949",
+      "date": "1948-10-30",
+      "district": "Acre",
+      "population": 1130,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        33.05,
+        35.3667
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 65,
+      "name": "Mansura",
+      "period": "1948-1949",
+      "date": "1948-11-15",
+      "district": "Acre",
+      "population": 90,
+      "current_status": "destroyed",
+      "displacement_method": "forced_expulsion",
+      "coordinates": [
+        33.1,
+        35.4333
+      ],
+      "additional_notes": "Late expulsion"
+    },
+    {
+      "id": 66,
+      "name": "Tarbikha",
+      "period": "1948-1949",
+      "date": "1948-11-15",
+      "district": "Acre",
+      "population": 900,
+      "current_status": "destroyed",
+      "displacement_method": "forced_expulsion",
+      "coordinates": [
+        33.0833,
+        35.35
+      ],
+      "additional_notes": "Late expulsion"
+    },
+    {
+      "id": 67,
+      "name": "Suruh",
+      "period": "1948-1949",
+      "date": "1948-11-15",
+      "district": "Acre",
+      "population": 420,
+      "current_status": "destroyed",
+      "displacement_method": "forced_expulsion",
+      "coordinates": [
+        33.0667,
+        35.3833
+      ],
+      "additional_notes": "Late expulsion"
+    },
+    {
+      "id": 68,
+      "name": "Nabi Rubin",
+      "period": "1948-1949",
+      "date": "1948-11-15",
+      "district": "Acre",
+      "population": 310,
+      "current_status": "destroyed",
+      "displacement_method": "forced_expulsion",
+      "coordinates": [
+        33.1167,
+        35.4167
+      ],
+      "additional_notes": "Late expulsion"
+    },
+    {
+      "id": 69,
+      "name": "Iqrit",
+      "period": "1948-1949",
+      "date": "1948-11-15",
+      "district": "Acre",
+      "population": 490,
+      "current_status": "destroyed",
+      "displacement_method": "forced_expulsion",
+      "coordinates": [
+        33.0333,
+        35.4
+      ],
+      "additional_notes": "Late expulsion"
+    },
+    {
+      "id": 70,
+      "name": "Farradiya",
+      "period": "1948-1949",
+      "date": "1948-02-15",
+      "district": "Safad",
+      "population": 670,
+      "current_status": "destroyed",
+      "displacement_method": "forced_expulsion",
+      "coordinates": [
+        33.0167,
+        35.4333
+      ],
+      "additional_notes": "Late expulsion"
+    },
+    {
+      "id": 71,
+      "name": "Kafr I'nan",
+      "period": "1948-1949",
+      "date": "1948-02-15",
+      "district": "Safad",
+      "population": 1370,
+      "current_status": "destroyed",
+      "displacement_method": "forced_expulsion",
+      "coordinates": [
+        33.05,
+        35.45
+      ],
+      "additional_notes": "Late expulsion"
+    },
+    {
+      "id": 72,
+      "name": "Shuna",
+      "period": "1948-1949",
+      "date": "1948-05-15",
+      "district": "Safad",
+      "population": 170,
+      "current_status": "destroyed",
+      "displacement_method": "unknown",
+      "coordinates": [
+        33.0833,
+        35.6
+      ],
+      "additional_notes": "Unknown date"
+    },
+    {
+      "id": 73,
+      "name": "Yaquq",
+      "period": "1948-1949",
+      "date": "1948-05-15",
+      "district": "Safad",
+      "population": 210,
+      "current_status": "destroyed",
+      "displacement_method": "unknown",
+      "coordinates": [
+        32.9833,
+        35.5333
+      ],
+      "additional_notes": "Date uncertain"
+    },
+    {
+      "id": 74,
+      "name": "Qudeiriya",
+      "period": "1948-1949",
+      "date": "1948-05-04",
+      "district": "Tiberias",
+      "population": 330,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.8,
+        35.5167
+      ],
+      "additional_notes": "Military assault and expulsion"
+    },
+    {
+      "id": 75,
+      "name": "Arab AL Suyyad",
+      "period": "1948-1949",
+      "date": "1948-05-04",
+      "district": "Tiberias",
+      "population": 290,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.7833,
+        35.5
+      ],
+      "additional_notes": "Military assault and expulsion"
+    },
+    {
+      "id": 76,
+      "name": "Zanghariya",
+      "period": "1948-1949",
+      "date": "1948-05-04",
+      "district": "Safad",
+      "population": 840,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.95,
+        35.5167
+      ],
+      "additional_notes": "Military assault and expulsion"
+    },
+    {
+      "id": 77,
+      "name": "Arab Al Shamalina",
+      "period": "1948-1949",
+      "date": "1948-05-04",
+      "district": "Tiberias",
+      "population": 650,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.85,
+        35.5667
+      ],
+      "additional_notes": "Military assault and expulsion"
+    },
+    {
+      "id": 78,
+      "name": "Bassa",
+      "period": "1948-1949",
+      "date": "1948-05-14",
+      "district": "Acre",
+      "population": 2950,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        33.0667,
+        35.2
+      ],
+      "additional_notes": "Military assault and expulsion"
+    },
+    {
+      "id": 79,
+      "name": "Zib",
+      "period": "1948-1949",
+      "date": "1948-05-14",
+      "district": "Acre",
+      "population": 1910,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        33.0833,
+        35.1
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 80,
+      "name": "Tell",
+      "period": "1948-1949",
+      "date": "1948-05-21",
+      "district": "Acre",
+      "population": 400,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        33.0333,
+        35.3167
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 81,
+      "name": "Kabri",
+      "period": "1948-1949",
+      "date": "1948-05-21",
+      "district": "Acre",
+      "population": 1520,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        33.0167,
+        35.1833
+      ],
+      "additional_notes": "Fear and military assault"
+    },
+    {
+      "id": 82,
+      "name": "Nahr",
+      "period": "1948-1949",
+      "date": "1948-05-21",
+      "district": "Acre",
+      "population": 610,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        33.0167,
+        35.3333
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 83,
+      "name": "Umm Al Faraj",
+      "period": "1948-1949",
+      "date": "1948-05-21",
+      "district": "Acre",
+      "population": 800,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        33.05,
+        35.35
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 84,
+      "name": "Ghabasiya",
+      "period": "1948-1949",
+      "date": "1948-05-15",
+      "district": "Acre",
+      "population": 690,
+      "current_status": "destroyed",
+      "displacement_method": "forced_expulsion",
+      "coordinates": [
+        33.0167,
+        35.2833
+      ],
+      "additional_notes": "Expulsion"
+    },
+    {
+      "id": 85,
+      "name": "Amqa",
+      "period": "1948-1949",
+      "date": "1948-07-10",
+      "district": "Acre",
+      "population": 1240,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.95,
+        35.2167
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 86,
+      "name": "Kuweikat",
+      "period": "1948-1949",
+      "date": "1948-07-10",
+      "district": "Acre",
+      "population": 1050,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.9667,
+        35.2333
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 87,
+      "name": "Sumeiriya",
+      "period": "1948-1949",
+      "date": "1948-05-14",
+      "district": "Acre",
+      "population": 760,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.9333,
+        35.1333
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 88,
+      "name": "Manshiya",
+      "period": "1948-1949",
+      "date": "1948-05-14",
+      "district": "Acre",
+      "population": 810,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.9167,
+        35.0833
+      ],
+      "additional_notes": "Military assault near Acre"
+    },
+    {
+      "id": 89,
+      "name": "Birwa",
+      "period": "1948-1949",
+      "date": "1948-07-11",
+      "district": "Acre",
+      "population": 1460,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.95,
+        35.3
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 90,
+      "name": "Damun",
+      "period": "1948-1949",
+      "date": "1948-07-15",
+      "district": "Acre",
+      "population": 1310,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.8833,
+        35.2667
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 91,
+      "name": "Ruweis",
+      "period": "1948-1949",
+      "date": "1948-07-15",
+      "district": "Acre",
+      "population": 330,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.8667,
+        35.2833
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 92,
+      "name": "Majdal",
+      "period": "1948-1949",
+      "date": "1948-04-22",
+      "district": "Tiberias",
+      "population": 320,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.7833,
+        35.5333
+      ],
+      "additional_notes": "Military assault and capitulation"
+    },
+    {
+      "id": 93,
+      "name": "Ghuweir Abu Shusha",
+      "period": "1948-1949",
+      "date": "1948-04-21",
+      "district": "Tiberias",
+      "population": 1240,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.7667,
+        35.5167
+      ],
+      "additional_notes": "Military assault and capitulation"
+    },
+    {
+      "id": 94,
+      "name": "Hittin",
+      "period": "1948-1949",
+      "date": "1948-07-16",
+      "district": "Tiberias",
+      "population": 1190,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.8,
+        35.4333
+      ],
+      "additional_notes": "Fear and military assault"
+    },
+    {
+      "id": 95,
+      "name": "Nimrin",
+      "period": "1948-1949",
+      "date": "1948-07-16",
+      "district": "Tiberias",
+      "population": 320,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.7833,
+        35.45
+      ],
+      "additional_notes": "Fear and military assault"
+    },
+    {
+      "id": 96,
+      "name": "Lubya",
+      "period": "1948-1949",
+      "date": "1948-07-16",
+      "district": "Tiberias",
+      "population": 2350,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.8167,
+        35.4167
+      ],
+      "additional_notes": "Fear and military assault"
+    },
+    {
+      "id": 97,
+      "name": "Khirbet Nasir Al Din",
+      "period": "1948-1949",
+      "date": "1948-04-12",
+      "district": "Tiberias",
+      "population": 90,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.7667,
+        35.4333
+      ],
+      "additional_notes": "Military assault and capitulation"
+    },
+    {
+      "id": 98,
+      "name": "Arab Tiberias",
+      "period": "1948-1949",
+      "date": "1948-04-18",
+      "district": "Tiberias",
+      "population": 5310,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.7922,
+        35.5311
+      ],
+      "additional_notes": "Military assault on city"
+    },
+    {
+      "id": 99,
+      "name": "Manara",
+      "period": "1948-1949",
+      "date": "1948-03-15",
+      "district": "Safad",
+      "population": 490,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        33.2167,
+        35.6667
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 100,
+      "name": "Shajara",
+      "period": "1948-1949",
+      "date": "1948-05-06",
+      "district": "Tiberias",
+      "population": 770,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.7333,
+        35.4833
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 101,
+      "name": "Kafr Sabt",
+      "period": "1948-1949",
+      "date": "1948-04-22",
+      "district": "Tiberias",
+      "population": 480,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        32.75,
+        35.4667
+      ],
+      "additional_notes": "Capitulation"
+    },
+    {
+      "id": 102,
+      "name": "Samra",
+      "period": "1948-1949",
+      "date": "1948-04-21",
+      "district": "Tiberias",
+      "population": 290,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        32.7333,
+        35.5667
+      ],
+      "additional_notes": "Capitulation"
+    },
+    {
+      "id": 103,
+      "name": "Samakh",
+      "period": "1948-1949",
+      "date": "1948-04-28",
+      "district": "Tiberias",
+      "population": 3460,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.705,
+        35.5758
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 104,
+      "name": "Ubeidiya",
+      "period": "1948-1949",
+      "date": "1948-03-05",
+      "district": "Tiberias",
+      "population": 870,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        32.7167,
+        35.5333
+      ],
+      "additional_notes": "Fear of attack"
+    },
+    {
+      "id": 105,
+      "name": "Ma'dhar",
+      "period": "1948-1949",
+      "date": "1948-04-06",
+      "district": "Tiberias",
+      "population": 480,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        32.7833,
+        35.4833
+      ],
+      "additional_notes": "Abandonment"
+    },
+    {
+      "id": 106,
+      "name": "Hadatha",
+      "period": "1948-1949",
+      "date": "1948-06-15",
+      "district": "Tiberias",
+      "population": 520,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        32.85,
+        35.4667
+      ],
+      "additional_notes": "Abandonment"
+    },
+    {
+      "id": 107,
+      "name": "Ulam",
+      "period": "1948-1949",
+      "date": "1948-06-14",
+      "district": "Tiberias",
+      "population": 720,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        32.8333,
+        35.4833
+      ],
+      "additional_notes": "Abandonment"
+    },
+    {
+      "id": 108,
+      "name": "Sirin",
+      "period": "1948-1949",
+      "date": "1948-06-04",
+      "district": "Tiberias",
+      "population": 810,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        32.6667,
+        35.4167
+      ],
+      "additional_notes": "Abandonment"
+    },
+    {
+      "id": 109,
+      "name": "Tira",
+      "period": "1948-1949",
+      "date": "1948-04-15",
+      "district": "Haifa",
+      "population": 5270,
+      "current_status": "destroyed",
+      "displacement_method": "whispering_campaign",
+      "coordinates": [
+        32.7833,
+        35.0167
+      ],
+      "additional_notes": "Whispering campaign"
+    },
+    {
+      "id": 110,
+      "name": "Indur",
+      "period": "1948-1949",
+      "date": "1948-05-24",
+      "district": "Nazareth",
+      "population": 620,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.6167,
+        35.3333
+      ],
+      "additional_notes": "Capitulation and military assault"
+    },
+    {
+      "id": 111,
+      "name": "Danna",
+      "period": "1948-1949",
+      "date": "1948-05-28",
+      "district": "Nazareth",
+      "population": 190,
+      "current_status": "destroyed",
+      "displacement_method": "forced_expulsion",
+      "coordinates": [
+        32.6833,
+        35.3833
+      ],
+      "additional_notes": "Expulsion"
+    },
+    {
+      "id": 112,
+      "name": "Bira",
+      "period": "1948-1949",
+      "date": "1948-05-16",
+      "district": "Nazareth",
+      "population": 260,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        32.65,
+        35.3
+      ],
+      "additional_notes": "Capitulation"
+    },
+    {
+      "id": 113,
+      "name": "Yubla",
+      "period": "1948-1949",
+      "date": "1948-05-16",
+      "district": "Nazareth",
+      "population": 210,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        32.6333,
+        35.2833
+      ],
+      "additional_notes": "Capitulation"
+    },
+    {
+      "id": 114,
+      "name": "Jabbul",
+      "period": "1948-1949",
+      "date": "1948-05-18",
+      "district": "Nazareth",
+      "population": 250,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        32.6667,
+        35.3167
+      ],
+      "additional_notes": "Capitulation and fear"
+    },
+    {
+      "id": 115,
+      "name": "Kaukab Al Hawa",
+      "period": "1948-1949",
+      "date": "1948-05-16",
+      "district": "Nazareth",
+      "population": 300,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.7,
+        35.4
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 116,
+      "name": "Arab Al Subeih",
+      "period": "1948-1949",
+      "date": "1948-04-19",
+      "district": "Tiberias",
+      "population": 220,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        32.75,
+        35.5333
+      ],
+      "additional_notes": "Capitulation"
+    },
+    {
+      "id": 117,
+      "name": "Murassas",
+      "period": "1948-1949",
+      "date": "1948-05-16",
+      "district": "Nazareth",
+      "population": 460,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        32.6833,
+        35.3167
+      ],
+      "additional_notes": "Capitulation"
+    },
+    {
+      "id": 118,
+      "name": "Kafra",
+      "period": "1948-1949",
+      "date": "1948-05-16",
+      "district": "Nazareth",
+      "population": 430,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        32.6667,
+        35.35
+      ],
+      "additional_notes": "Capitulation"
+    },
+    {
+      "id": 119,
+      "name": "Hamidiya",
+      "period": "1948-1949",
+      "date": "1948-05-12",
+      "district": "Beisan",
+      "population": 220,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        32.5,
+        35.4833
+      ],
+      "additional_notes": "Capitulation"
+    },
+    {
+      "id": 120,
+      "name": "Quimiya",
+      "period": "1948-1949",
+      "date": "1948-03-26",
+      "district": "Nazareth",
+      "population": 440,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        32.65,
+        35.2667
+      ],
+      "additional_notes": "Fear of attack"
+    },
+    {
+      "id": 121,
+      "name": "Zir'in",
+      "period": "1948-1949",
+      "date": "1948-05-28",
+      "district": "Nazareth",
+      "population": 1420,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.5667,
+        35.3333
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 122,
+      "name": "Mazar",
+      "period": "1948-1949",
+      "date": "1948-05-30",
+      "district": "Beisan",
+      "population": 270,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.4833,
+        35.4667
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 123,
+      "name": "Nuris",
+      "period": "1948-1949",
+      "date": "1948-05-29",
+      "district": "Beisan",
+      "population": 570,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.5167,
+        35.4333
+      ],
+      "additional_notes": "Military assault and fear"
+    },
+    {
+      "id": 124,
+      "name": "Khirbet Al Jaufa",
+      "period": "1948-1949",
+      "date": "1948-05-12",
+      "district": "Beisan",
+      "population": 140,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        32.4667,
+        35.5
+      ],
+      "additional_notes": "Capitulation"
+    },
+    {
+      "id": 125,
+      "name": "Tall Al Shauk",
+      "period": "1948-1949",
+      "date": "1948-05-12",
+      "district": "Beisan",
+      "population": 120,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        32.45,
+        35.5167
+      ],
+      "additional_notes": "Capitulation"
+    },
+    {
+      "id": 126,
+      "name": "Beisan",
+      "period": "1948-1949",
+      "date": "1948-05-15",
+      "district": "Beisan",
+      "population": 5180,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.5,
+        35.5
+      ],
+      "additional_notes": "Military assault and expulsion on city"
+    },
+    {
+      "id": 127,
+      "name": "Ashrafiya",
+      "period": "1948-1949",
+      "date": "1948-05-12",
+      "district": "Beisan",
+      "population": 230,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        32.5167,
+        35.5333
+      ],
+      "additional_notes": "Capitulation"
+    },
+    {
+      "id": 128,
+      "name": "Farwana",
+      "period": "1948-1949",
+      "date": "1948-05-11",
+      "district": "Beisan",
+      "population": 330,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.4833,
+        35.55
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 129,
+      "name": "Samiriya",
+      "period": "1948-1949",
+      "date": "1948-05-27",
+      "district": "Beisan",
+      "population": 250,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.4667,
+        35.4833
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 130,
+      "name": "Arida",
+      "period": "1948-1949",
+      "date": "1948-05-20",
+      "district": "Beisan",
+      "population": 150,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        32.4333,
+        35.5333
+      ],
+      "additional_notes": "Capitulation"
+    },
+    {
+      "id": 131,
+      "name": "Arab Al Khuneizir",
+      "period": "1948-1949",
+      "date": "1948-05-20",
+      "district": "Beisan",
+      "population": 320,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        32.4167,
+        35.55
+      ],
+      "additional_notes": "Capitulation"
+    },
+    {
+      "id": 132,
+      "name": "Arab Al Safa",
+      "period": "1948-1949",
+      "date": "1948-05-20",
+      "district": "Beisan",
+      "population": 360,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        32.45,
+        35.5667
+      ],
+      "additional_notes": "Capitulation"
+    },
+    {
+      "id": 133,
+      "name": "Arab Al Zarra'a",
+      "period": "1948-1949",
+      "date": "1948-05-20",
+      "district": "Beisan",
+      "population": 250,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        32.4333,
+        35.5833
+      ],
+      "additional_notes": "Capitulation"
+    },
+    {
+      "id": 134,
+      "name": "Arab Al Ghazawiya",
+      "period": "1948-1949",
+      "date": "1948-05-20",
+      "district": "Beisan",
+      "population": 500,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        32.4667,
+        35.6
+      ],
+      "additional_notes": "Capitulation"
+    },
+    {
+      "id": 135,
+      "name": "Arab Al Bawati",
+      "period": "1948-1949",
+      "date": "1948-05-20",
+      "district": "Beisan",
+      "population": 1240,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        32.5333,
+        35.5667
+      ],
+      "additional_notes": "Capitulation"
+    },
+    {
+      "id": 136,
+      "name": "Arab Al Bashatiwa",
+      "period": "1948-1949",
+      "date": "1948-05-16",
+      "district": "Beisan",
+      "population": 180,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        32.55,
+        35.55
+      ],
+      "additional_notes": "Capitulation"
+    },
+    {
+      "id": 137,
+      "name": "Mujeidil",
+      "period": "1948-1949",
+      "date": "1948-07-15",
+      "district": "Nazareth",
+      "population": 1900,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.6667,
+        35.2333
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 138,
+      "name": "Ma'lul",
+      "period": "1948-1949",
+      "date": "1948-07-15",
+      "district": "Nazareth",
+      "population": 770,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.7167,
+        35.2667
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 139,
+      "name": "Saffuriya",
+      "period": "1948-1949",
+      "date": "1948-07-16",
+      "district": "Nazareth",
+      "population": 4330,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.75,
+        35.2833
+      ],
+      "additional_notes": "Military assault and expulsion"
+    },
+    {
+      "id": 140,
+      "name": "Beit Lahm",
+      "period": "1948-1949",
+      "date": "1948-04-15",
+      "district": "Haifa",
+      "population": 350,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.75,
+        35.1167
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 141,
+      "name": "Waldheim",
+      "period": "1948-1949",
+      "date": "1948-04-15",
+      "district": "Haifa",
+      "population": 150,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.7333,
+        35.1333
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 142,
+      "name": "Khirbet Ras Ali",
+      "period": "1948-1949",
+      "date": "1948-04-15",
+      "district": "Haifa",
+      "population": 90,
+      "current_status": "destroyed",
+      "displacement_method": "unknown",
+      "coordinates": [
+        32.7167,
+        35.15
+      ],
+      "additional_notes": "Unknown"
+    },
+    {
+      "id": 143,
+      "name": "Yajur",
+      "period": "1948-1949",
+      "date": "1948-04-25",
+      "district": "Haifa",
+      "population": 610,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.6833,
+        35.0667
+      ],
+      "additional_notes": "Military assault and capitulation"
+    },
+    {
+      "id": 144,
+      "name": "Balad Al Sheikh",
+      "period": "1948-1949",
+      "date": "1948-04-25",
+      "district": "Haifa",
+      "population": 4120,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.8,
+        35.0833
+      ],
+      "additional_notes": "Military assault and capitulation"
+    },
+    {
+      "id": 145,
+      "name": "Arab Al Ghawarina",
+      "period": "1948-1949",
+      "date": "1948-04-15",
+      "district": "Haifa",
+      "population": 1240,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.7667,
+        35.0333
+      ],
+      "additional_notes": "Whispering and military assault"
+    },
+    {
+      "id": 146,
+      "name": "Wadi'Ara",
+      "period": "1948-1949",
+      "date": "1948-02-27",
+      "district": "Haifa",
+      "population": 230,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        32.65,
+        35.1833
+      ],
+      "additional_notes": "Fear of attack"
+    },
+    {
+      "id": 147,
+      "name": "Lajjun",
+      "period": "1948-1949",
+      "date": "1948-05-30",
+      "district": "Jenin",
+      "population": 1103,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.5667,
+        35.1833
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 148,
+      "name": "Mansi",
+      "period": "1948-1949",
+      "date": "1948-04-12",
+      "district": "Haifa",
+      "population": 810,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.7833,
+        35.1
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 149,
+      "name": "Naghnaghiya",
+      "period": "1948-1949",
+      "date": "1948-04-12",
+      "district": "Haifa",
+      "population": 1470,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.7667,
+        35.1167
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 150,
+      "name": "Ghubayya Al Fauqa",
+      "period": "1948-1949",
+      "date": "1948-04-08",
+      "district": "Haifa",
+      "population": 990,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.6333,
+        35.0167
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 151,
+      "name": "Ghubayya Al Tahta",
+      "period": "1948-1949",
+      "date": "1948-04-08",
+      "district": "Haifa",
+      "population": 1030,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.6167,
+        35.0333
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 152,
+      "name": "Abu Shusha",
+      "period": "1948-1949",
+      "date": "1948-04-09",
+      "district": "Haifa",
+      "population": 620,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.5833,
+        35.05
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 153,
+      "name": "Abu Zureiq",
+      "period": "1948-1949",
+      "date": "1948-04-12",
+      "district": "Haifa",
+      "population": 550,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.5667,
+        35.0667
+      ],
+      "additional_notes": "Military assault and expulsion"
+    },
+    {
+      "id": 154,
+      "name": "Qira Wa Qamun",
+      "period": "1948-1949",
+      "date": "1948-03-15",
+      "district": "Haifa",
+      "population": 260,
+      "current_status": "destroyed",
+      "displacement_method": "whispering_campaign",
+      "coordinates": [
+        32.55,
+        35.0833
+      ],
+      "additional_notes": "Whispering campaign"
+    },
+    {
+      "id": 155,
+      "name": "Kafrin",
+      "period": "1948-1949",
+      "date": "1948-04-12",
+      "district": "Haifa",
+      "population": 430,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.6,
+        35.1
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 156,
+      "name": "Buteimat",
+      "period": "1948-1949",
+      "date": "1948-05-15",
+      "district": "Haifa",
+      "population": 110,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        32.7333,
+        35.2
+      ],
+      "additional_notes": "Fear of attack"
+    },
+    {
+      "id": 157,
+      "name": "Umm Al Shauf",
+      "period": "1948-1949",
+      "date": "1948-05-12",
+      "district": "Haifa",
+      "population": 480,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.6333,
+        35.1333
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 158,
+      "name": "Khubbeiza",
+      "period": "1948-1949",
+      "date": "1948-05-12",
+      "district": "Haifa",
+      "population": 290,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.6167,
+        35.15
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 159,
+      "name": "Sabbarin",
+      "period": "1948-1949",
+      "date": "1948-05-12",
+      "district": "Haifa",
+      "population": 1700,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.6,
+        35.1667
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 160,
+      "name": "Sindayana",
+      "period": "1948-1949",
+      "date": "1948-05-12",
+      "district": "Haifa",
+      "population": 210,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.5833,
+        35.1833
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 161,
+      "name": "Bureika",
+      "period": "1948-1949",
+      "date": "1948-05-05",
+      "district": "Haifa",
+      "population": 290,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        32.5667,
+        35.2
+      ],
+      "additional_notes": "Capitulation"
+    },
+    {
+      "id": 162,
+      "name": "Damoyat Al Ruha",
+      "period": "1948-1949",
+      "date": "1948-03-15",
+      "district": "Haifa",
+      "population": 340,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.65,
+        35.2167
+      ],
+      "additional_notes": "Whispering and military assault"
+    },
+    {
+      "id": 163,
+      "name": "Rihaniya",
+      "period": "1948-1949",
+      "date": "1948-05-15",
+      "district": "Haifa",
+      "population": 390,
+      "current_status": "destroyed",
+      "displacement_method": "unknown",
+      "coordinates": [
+        32.7,
+        35.1667
+      ],
+      "additional_notes": "Unknown"
+    },
+    {
+      "id": 164,
+      "name": "Umm Al Zinat",
+      "period": "1948-1949",
+      "date": "1948-05-15",
+      "district": "Haifa",
+      "population": 1470,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        32.7167,
+        35.1833
+      ],
+      "additional_notes": "Fear of attack"
+    },
+    {
+      "id": 165,
+      "name": "Khirbat Qumbaza",
+      "period": "1948-1949",
+      "date": "1948-05-15",
+      "district": "Haifa",
+      "population": 200,
+      "current_status": "destroyed",
+      "displacement_method": "unknown",
+      "coordinates": [
+        32.6833,
+        35.2
+      ],
+      "additional_notes": "Date uncertain"
+    },
+    {
+      "id": 166,
+      "name": "Ein Ghazal",
+      "period": "1948-1949",
+      "date": "1948-07-24",
+      "district": "Haifa",
+      "population": 2170,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.6333,
+        34.95
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 167,
+      "name": "Ijzim",
+      "period": "1948-1949",
+      "date": "1948-07-24",
+      "district": "Haifa",
+      "population": 2970,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.5667,
+        34.9333
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 168,
+      "name": "Jab'a",
+      "period": "1948-1949",
+      "date": "1948-07-24",
+      "district": "Haifa",
+      "population": 2150,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.55,
+        34.95
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 169,
+      "name": "Mazar",
+      "period": "1948-1949",
+      "date": "1948-07-15",
+      "district": "Haifa",
+      "population": 270,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.6667,
+        35.05
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 170,
+      "name": "Ein Haud",
+      "period": "1948-1949",
+      "date": "1948-07-15",
+      "district": "Haifa",
+      "population": 650,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.6833,
+        35.0333
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 171,
+      "name": "Qannir",
+      "period": "1948-1949",
+      "date": "1948-04-25",
+      "district": "Haifa",
+      "population": 1200,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        32.5333,
+        35.0167
+      ],
+      "additional_notes": "Capitulation and fear"
+    },
+    {
+      "id": 172,
+      "name": "Arab Haifa",
+      "period": "1948-1949",
+      "date": "1948-04-21",
+      "district": "Haifa",
+      "population": 71000,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.8192,
+        34.9992
+      ],
+      "additional_notes": "Military assault and abandonment on city"
+    },
+    {
+      "id": 173,
+      "name": "Tira",
+      "period": "1948-1949",
+      "date": "1948-07-16",
+      "district": "Haifa",
+      "population": 5270,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.5167,
+        34.95
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 174,
+      "name": "Sarafand",
+      "period": "1948-1949",
+      "date": "1948-07-16",
+      "district": "Haifa",
+      "population": 290,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.5,
+        34.9667
+      ],
+      "additional_notes": "Military assault and capitulation"
+    },
+    {
+      "id": 175,
+      "name": "Kaft Lam",
+      "period": "1948-1949",
+      "date": "1948-07-16",
+      "district": "Haifa",
+      "population": 340,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.5833,
+        34.9167
+      ],
+      "additional_notes": "Military assault and capitulation"
+    },
+    {
+      "id": 176,
+      "name": "Tantura",
+      "period": "1948-1949",
+      "date": "1948-05-21",
+      "district": "Haifa",
+      "population": 1490,
+      "current_status": "destroyed",
+      "displacement_method": "massacre",
+      "coordinates": [
+        32.5167,
+        34.9167
+      ],
+      "additional_notes": "Expulsion after massacre"
+    },
+    {
+      "id": 177,
+      "name": "Qisarya",
+      "period": "1948-1949",
+      "date": "1948-02-15",
+      "district": "Haifa",
+      "population": 960,
+      "current_status": "destroyed",
+      "displacement_method": "forced_expulsion",
+      "coordinates": [
+        32.505,
+        34.915
+      ],
+      "additional_notes": "Expulsion"
+    },
+    {
+      "id": 178,
+      "name": "Khirbet Al Sarkas",
+      "period": "1948-1949",
+      "date": "1948-04-15",
+      "district": "Haifa",
+      "population": 130,
+      "current_status": "destroyed",
+      "displacement_method": "forced_expulsion",
+      "coordinates": [
+        32.4667,
+        34.9333
+      ],
+      "additional_notes": "Expulsion"
+    },
+    {
+      "id": 179,
+      "name": "Dumeira",
+      "period": "1948-1949",
+      "date": "1948-04-01",
+      "district": "Haifa",
+      "population": 340,
+      "current_status": "destroyed",
+      "displacement_method": "forced_expulsion",
+      "coordinates": [
+        32.45,
+        34.95
+      ],
+      "additional_notes": "Expulsion"
+    },
+    {
+      "id": 180,
+      "name": "Arab Al Fuqara",
+      "period": "1948-1949",
+      "date": "1948-04-10",
+      "district": "Haifa",
+      "population": 1230,
+      "current_status": "destroyed",
+      "displacement_method": "forced_expulsion",
+      "coordinates": [
+        32.4333,
+        34.9667
+      ],
+      "additional_notes": "Expulsion"
+    },
+    {
+      "id": 181,
+      "name": "Arab Al Nufeiat",
+      "period": "1948-1949",
+      "date": "1948-04-10",
+      "district": "Haifa",
+      "population": 820,
+      "current_status": "destroyed",
+      "displacement_method": "forced_expulsion",
+      "coordinates": [
+        32.4167,
+        34.9833
+      ],
+      "additional_notes": "Expulsion"
+    },
+    {
+      "id": 182,
+      "name": "Wadi Al Hawarith",
+      "period": "1948-1949",
+      "date": "1948-03-15",
+      "district": "Tulkarm",
+      "population": 1780,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.3833,
+        35
+      ],
+      "additional_notes": "Military assault and fear"
+    },
+    {
+      "id": 183,
+      "name": "Raml Zeita",
+      "period": "1948-1949",
+      "date": "1948-04-15",
+      "district": "Tulkarm",
+      "population": 190,
+      "current_status": "destroyed",
+      "displacement_method": "unknown",
+      "coordinates": [
+        32.3667,
+        35.0167
+      ],
+      "additional_notes": "Unknown"
+    },
+    {
+      "id": 184,
+      "name": "Khirbet Manshiya",
+      "period": "1948-1949",
+      "date": "1948-04-15",
+      "district": "Tulkarm",
+      "population": 260,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        32.35,
+        35.0333
+      ],
+      "additional_notes": "Fear of attack"
+    },
+    {
+      "id": 185,
+      "name": "Khirbet Zalafa",
+      "period": "1948-1949",
+      "date": "1948-04-15",
+      "district": "Tulkarm",
+      "population": 210,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        32.3333,
+        35.05
+      ],
+      "additional_notes": "Fear of attack"
+    },
+    {
+      "id": 186,
+      "name": "Wadi Qabbani",
+      "period": "1948-1949",
+      "date": "1948-04-15",
+      "district": "Tulkarm",
+      "population": 120,
+      "current_status": "destroyed",
+      "displacement_method": "unknown",
+      "coordinates": [
+        32.3167,
+        35.0667
+      ],
+      "additional_notes": "Unknown"
+    },
+    {
+      "id": 187,
+      "name": "Qaqun",
+      "period": "1948-1949",
+      "date": "1948-06-05",
+      "district": "Tulkarm",
+      "population": 1970,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.3,
+        35.0833
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 188,
+      "name": "Umm Khalid",
+      "period": "1948-1949",
+      "date": "1948-04-15",
+      "district": "Tulkarm",
+      "population": 970,
+      "current_status": "destroyed",
+      "displacement_method": "unknown",
+      "coordinates": [
+        32.2833,
+        34.9
+      ],
+      "additional_notes": "Unknown"
+    },
+    {
+      "id": 189,
+      "name": "Khirbet Beit Lid",
+      "period": "1948-1949",
+      "date": "1948-04-05",
+      "district": "Tulkarm",
+      "population": 190,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        32.2667,
+        35.0167
+      ],
+      "additional_notes": "Fear of attack"
+    },
+    {
+      "id": 190,
+      "name": "Birket Ramadan",
+      "period": "1948-1949",
+      "date": "1948-04-15",
+      "district": "Tulkarm",
+      "population": 290,
+      "current_status": "destroyed",
+      "displacement_method": "unknown",
+      "coordinates": [
+        32.25,
+        35.0333
+      ],
+      "additional_notes": "Unknown"
+    },
+    {
+      "id": 191,
+      "name": "Miska",
+      "period": "1948-1949",
+      "date": "1948-04-15",
+      "district": "Tulkarm",
+      "population": 880,
+      "current_status": "destroyed",
+      "displacement_method": "forced_expulsion",
+      "coordinates": [
+        32.2333,
+        34.95
+      ],
+      "additional_notes": "Expulsion"
+    },
+    {
+      "id": 192,
+      "name": "Tabsar",
+      "period": "1948-1949",
+      "date": "1948-04-03",
+      "district": "Tulkarm",
+      "population": 760,
+      "current_status": "destroyed",
+      "displacement_method": "forced_expulsion",
+      "coordinates": [
+        32.2167,
+        35.05
+      ],
+      "additional_notes": "Fear and expulsion"
+    },
+    {
+      "id": 193,
+      "name": "Kafr Saba",
+      "period": "1948-1949",
+      "date": "1948-05-15",
+      "district": "Tulkarm",
+      "population": 1270,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.1833,
+        34.9167
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 194,
+      "name": "Biyar Adas",
+      "period": "1948-1949",
+      "date": "1948-04-12",
+      "district": "Tulkarm",
+      "population": 300,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.1667,
+        34.9333
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 195,
+      "name": "Haram",
+      "period": "1948-1949",
+      "date": "1948-02-03",
+      "district": "Jaffa",
+      "population": 520,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        32.15,
+        34.8167
+      ],
+      "additional_notes": "Fear of attack"
+    },
+    {
+      "id": 196,
+      "name": "Jalil",
+      "period": "1948-1949",
+      "date": "1948-03-15",
+      "district": "Jaffa",
+      "population": 1030,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        32.1333,
+        34.8333
+      ],
+      "additional_notes": "Fear of attack"
+    },
+    {
+      "id": 197,
+      "name": "Arab Abu Kischk",
+      "period": "1948-1949",
+      "date": "1948-03-30",
+      "district": "Jaffa",
+      "population": 1900,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        32.1167,
+        34.85
+      ],
+      "additional_notes": "Fear and capitulation"
+    },
+    {
+      "id": 198,
+      "name": "Arab Al Sawalima",
+      "period": "1948-1949",
+      "date": "1948-03-30",
+      "district": "Jaffa",
+      "population": 800,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        32.1,
+        34.8667
+      ],
+      "additional_notes": "Fear and capitulation"
+    },
+    {
+      "id": 199,
+      "name": "Mirr",
+      "period": "1948-1949",
+      "date": "1948-03-01",
+      "district": "Jaffa",
+      "population": 170,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        32.0833,
+        34.8833
+      ],
+      "additional_notes": "Fear of attack"
+    },
+    {
+      "id": 200,
+      "name": "Cheikh Muwannis",
+      "period": "1948-1949",
+      "date": "1948-03-30",
+      "district": "Jaffa",
+      "population": 1930,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.1083,
+        34.8042
+      ],
+      "additional_notes": "Military assault and fear"
+    },
+    {
+      "id": 201,
+      "name": "Ras Al Ein",
+      "period": "1948-1949",
+      "date": "1948-07-13",
+      "district": "Ramle",
+      "population": 620,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.0833,
+        34.9333
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 202,
+      "name": "Majdal Yaba",
+      "period": "1948-1949",
+      "date": "1948-07-13",
+      "district": "Ramle",
+      "population": 1520,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.0667,
+        34.95
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 203,
+      "name": "Fajja",
+      "period": "1948-1949",
+      "date": "1948-05-15",
+      "district": "Jaffa",
+      "population": 1200,
+      "current_status": "destroyed",
+      "displacement_method": "whispering_campaign",
+      "coordinates": [
+        32.05,
+        34.9167
+      ],
+      "additional_notes": "Whispering campaign"
+    },
+    {
+      "id": 204,
+      "name": "Jammasin",
+      "period": "1948-1949",
+      "date": "1948-03-17",
+      "district": "Jaffa",
+      "population": 1510,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        32.0333,
+        34.85
+      ],
+      "additional_notes": "Fear of attack"
+    },
+    {
+      "id": 205,
+      "name": "Mas'udiya",
+      "period": "1948-1949",
+      "date": "1947-12-25",
+      "district": "Jaffa",
+      "population": 850,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        32.0167,
+        34.8667
+      ],
+      "additional_notes": "Fear of attack"
+    },
+    {
+      "id": 206,
+      "name": "Sarona",
+      "period": "1948-1949",
+      "date": "1948-04-15",
+      "district": "Jaffa",
+      "population": 270,
+      "current_status": "destroyed",
+      "displacement_method": "unknown",
+      "coordinates": [
+        32.075,
+        34.7917
+      ],
+      "additional_notes": "Unknown"
+    },
+    {
+      "id": 207,
+      "name": "Jaffa",
+      "period": "1948-1949",
+      "date": "1948-05-01",
+      "district": "Jaffa",
+      "population": 70000,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.0542,
+        34.7617
+      ],
+      "additional_notes": "Military assault on city"
+    },
+    {
+      "id": 208,
+      "name": "Salama",
+      "period": "1948-1949",
+      "date": "1948-04-25",
+      "district": "Jaffa",
+      "population": 6670,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.0583,
+        34.8083
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 209,
+      "name": "Kheiriya",
+      "period": "1948-1949",
+      "date": "1948-04-25",
+      "district": "Jaffa",
+      "population": 1420,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.0417,
+        34.825
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 210,
+      "name": "Muzeiri'a",
+      "period": "1948-1949",
+      "date": "1948-04-15",
+      "district": "Jaffa",
+      "population": 1160,
+      "current_status": "destroyed",
+      "displacement_method": "unknown",
+      "coordinates": [
+        32.025,
+        34.8417
+      ],
+      "additional_notes": "Unknown"
+    },
+    {
+      "id": 211,
+      "name": "Qula",
+      "period": "1948-1949",
+      "date": "1948-07-10",
+      "district": "Ramle",
+      "population": 1010,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.0083,
+        34.9583
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 212,
+      "name": "Rantiya",
+      "period": "1948-1949",
+      "date": "1948-04-28",
+      "district": "Ramle",
+      "population": 590,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.9917,
+        34.975
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 213,
+      "name": "Yahudiya",
+      "period": "1948-1949",
+      "date": "1948-05-04",
+      "district": "Jaffa",
+      "population": 5650,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.1,
+        34.8917
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 214,
+      "name": "Saqiya",
+      "period": "1948-1949",
+      "date": "1948-04-25",
+      "district": "Jaffa",
+      "population": 1100,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.0833,
+        34.9083
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 215,
+      "name": "Yazur",
+      "period": "1948-1949",
+      "date": "1948-05-01",
+      "district": "Jaffa",
+      "population": 4030,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.0333,
+        34.8333
+      ],
+      "additional_notes": "Capitulation and military assault"
+    },
+    {
+      "id": 216,
+      "name": "Tira",
+      "period": "1948-1949",
+      "date": "1948-07-10",
+      "district": "Ramle",
+      "population": 5270,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.975,
+        34.9417
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 217,
+      "name": "Wilhelma",
+      "period": "1948-1949",
+      "date": "1948-07-10",
+      "district": "Ramle",
+      "population": 890,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.9583,
+        34.9583
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 218,
+      "name": "Kafr Ana",
+      "period": "1948-1949",
+      "date": "1948-04-25",
+      "district": "Jaffa",
+      "population": 2800,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.05,
+        34.925
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 219,
+      "name": "Beit Dajan",
+      "period": "1948-1949",
+      "date": "1948-04-25",
+      "district": "Jaffa",
+      "population": 3840,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        32.0667,
+        34.9417
+      ],
+      "additional_notes": "Capitulation"
+    },
+    {
+      "id": 220,
+      "name": "Safiriya",
+      "period": "1948-1949",
+      "date": "1948-04-15",
+      "district": "Ramle",
+      "population": 3070,
+      "current_status": "destroyed",
+      "displacement_method": "unknown",
+      "coordinates": [
+        31.9417,
+        34.975
+      ],
+      "additional_notes": "Unknown"
+    },
+    {
+      "id": 221,
+      "name": "Deir Tarif",
+      "period": "1948-1949",
+      "date": "1948-07-10",
+      "district": "Ramle",
+      "population": 1750,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.925,
+        34.9917
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 222,
+      "name": "Beit Nabala",
+      "period": "1948-1949",
+      "date": "1948-05-13",
+      "district": "Ramle",
+      "population": 2310,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        31.9083,
+        35.0083
+      ],
+      "additional_notes": "Abandonment"
+    },
+    {
+      "id": 223,
+      "name": "Jindas",
+      "period": "1948-1949",
+      "date": "1948-07-10",
+      "district": "Ramle",
+      "population": 1420,
+      "current_status": "destroyed",
+      "displacement_method": "unknown",
+      "coordinates": [
+        31.8917,
+        35.025
+      ],
+      "additional_notes": "Unknown"
+    },
+    {
+      "id": 224,
+      "name": "Haditha",
+      "period": "1948-1949",
+      "date": "1948-07-12",
+      "district": "Ramle",
+      "population": 760,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.875,
+        35.0417
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 225,
+      "name": "Sarafand Al Amar",
+      "period": "1948-1949",
+      "date": "1948-04-15",
+      "district": "Ramle",
+      "population": 1950,
+      "current_status": "destroyed",
+      "displacement_method": "unknown",
+      "coordinates": [
+        31.8583,
+        35.0583
+      ],
+      "additional_notes": "Unknown"
+    },
+    {
+      "id": 226,
+      "name": "Lydda",
+      "period": "1948-1949",
+      "date": "1948-07-11",
+      "district": "Ramle",
+      "population": 18250,
+      "current_status": "destroyed",
+      "displacement_method": "forced_expulsion",
+      "coordinates": [
+        31.9522,
+        34.8886
+      ],
+      "additional_notes": "Expulsion and military assault on city"
+    },
+    {
+      "id": 227,
+      "name": "Ramle",
+      "period": "1948-1949",
+      "date": "1948-07-12",
+      "district": "Ramle",
+      "population": 15160,
+      "current_status": "destroyed",
+      "displacement_method": "forced_expulsion",
+      "coordinates": [
+        31.9294,
+        34.8667
+      ],
+      "additional_notes": "Expulsion and military assault on city"
+    },
+    {
+      "id": 228,
+      "name": "Deir Abu Salama",
+      "period": "1948-1949",
+      "date": "1948-07-13",
+      "district": "Ramle",
+      "population": 60,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.9083,
+        34.9
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 229,
+      "name": "Khirbet AL Dhuheiriya",
+      "period": "1948-1949",
+      "date": "1948-07-10",
+      "district": "Ramle",
+      "population": 100,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.8917,
+        34.9167
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 230,
+      "name": "Jimzu",
+      "period": "1948-1949",
+      "date": "1948-07-10",
+      "district": "Ramle",
+      "population": 1510,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.875,
+        34.9333
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 231,
+      "name": "Khirbet Zakariya",
+      "period": "1948-1949",
+      "date": "1948-07-12",
+      "district": "Ramle",
+      "population": 200,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.8583,
+        34.95
+      ],
+      "additional_notes": "Military assault and capitulation"
+    },
+    {
+      "id": 232,
+      "name": "Daniyal",
+      "period": "1948-1949",
+      "date": "1948-07-10",
+      "district": "Ramle",
+      "population": 410,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.8417,
+        34.9667
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 233,
+      "name": "Abu Al Fadl",
+      "period": "1948-1949",
+      "date": "1948-05-09",
+      "district": "Ramle",
+      "population": 510,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        31.825,
+        34.9833
+      ],
+      "additional_notes": "Capitulation"
+    },
+    {
+      "id": 234,
+      "name": "Sarafand AL Kharab",
+      "period": "1948-1949",
+      "date": "1948-04-20",
+      "district": "Ramle",
+      "population": 290,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        31.8083,
+        35
+      ],
+      "additional_notes": "Fear of attack"
+    },
+    {
+      "id": 235,
+      "name": "Shilta",
+      "period": "1948-1949",
+      "date": "1948-07-15",
+      "district": "Ramle",
+      "population": 100,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.7917,
+        35.0167
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 236,
+      "name": "Burj",
+      "period": "1948-1949",
+      "date": "1948-07-15",
+      "district": "Ramle",
+      "population": 480,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.775,
+        35.0333
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 237,
+      "name": "Bir Ma'in",
+      "period": "1948-1949",
+      "date": "1948-07-15",
+      "district": "Ramle",
+      "population": 510,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.7583,
+        35.05
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 238,
+      "name": "Beit Shanna",
+      "period": "1948-1949",
+      "date": "1948-07-15",
+      "district": "Ramle",
+      "population": 210,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.7417,
+        35.0667
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 239,
+      "name": "Salbit",
+      "period": "1948-1949",
+      "date": "1948-07-15",
+      "district": "Ramle",
+      "population": 510,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.725,
+        35.0833
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 240,
+      "name": "Qubab",
+      "period": "1948-1949",
+      "date": "1948-05-15",
+      "district": "Ramle",
+      "population": 1980,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.7083,
+        35.1
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 241,
+      "name": "Barfiliya",
+      "period": "1948-1949",
+      "date": "1948-07-14",
+      "district": "Ramle",
+      "population": 730,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.6917,
+        35.1167
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 242,
+      "name": "Kharruba",
+      "period": "1948-1949",
+      "date": "1948-07-12",
+      "district": "Ramle",
+      "population": 170,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.675,
+        35.1333
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 243,
+      "name": "Khirbet Al Kunaisiya",
+      "period": "1948-1949",
+      "date": "1948-07-10",
+      "district": "Ramle",
+      "population": 40,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.6583,
+        35.15
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 244,
+      "name": "Innaba",
+      "period": "1948-1949",
+      "date": "1948-07-10",
+      "district": "Ramle",
+      "population": 1420,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.6417,
+        35.1667
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 245,
+      "name": "Barriya",
+      "period": "1948-1949",
+      "date": "1948-07-10",
+      "district": "Ramle",
+      "population": 510,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.625,
+        35.1833
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 246,
+      "name": "Abu Shusha",
+      "period": "1948-1949",
+      "date": "1948-05-14",
+      "district": "Ramle",
+      "population": 870,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.8333,
+        34.9167
+      ],
+      "additional_notes": "Military assault near Ramle"
+    },
+    {
+      "id": 247,
+      "name": "Na'ana",
+      "period": "1948-1949",
+      "date": "1948-05-14",
+      "district": "Ramle",
+      "population": 1470,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        31.8167,
+        34.9333
+      ],
+      "additional_notes": "Fear of attack"
+    },
+    {
+      "id": 248,
+      "name": "Bir Salim",
+      "period": "1948-1949",
+      "date": "1948-05-09",
+      "district": "Ramle",
+      "population": 210,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.8,
+        34.95
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 249,
+      "name": "Wadi Hunein",
+      "period": "1948-1949",
+      "date": "1948-04-17",
+      "district": "Ramle",
+      "population": 1620,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        31.7833,
+        34.9667
+      ],
+      "additional_notes": "Capitulation"
+    },
+    {
+      "id": 250,
+      "name": "Zarnuqa",
+      "period": "1948-1949",
+      "date": "1948-05-27",
+      "district": "Ramle",
+      "population": 2380,
+      "current_status": "destroyed",
+      "displacement_method": "forced_expulsion",
+      "coordinates": [
+        31.7667,
+        34.9833
+      ],
+      "additional_notes": "Expulsion"
+    },
+    {
+      "id": 251,
+      "name": "Qubeiba",
+      "period": "1948-1949",
+      "date": "1948-05-27",
+      "district": "Ramle",
+      "population": 1720,
+      "current_status": "destroyed",
+      "displacement_method": "forced_expulsion",
+      "coordinates": [
+        31.75,
+        35
+      ],
+      "additional_notes": "Expulsion"
+    },
+    {
+      "id": 252,
+      "name": "Aqir",
+      "period": "1948-1949",
+      "date": "1948-05-15",
+      "district": "Ramle",
+      "population": 2430,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.8167,
+        34.85
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 253,
+      "name": "Nabi Rubin",
+      "period": "1948-1949",
+      "date": "1948-06-01",
+      "district": "Ramle",
+      "population": 1420,
+      "current_status": "destroyed",
+      "displacement_method": "forced_expulsion",
+      "coordinates": [
+        31.7333,
+        34.8167
+      ],
+      "additional_notes": "Expulsion"
+    },
+    {
+      "id": 254,
+      "name": "Arab Sukrir",
+      "period": "1948-1949",
+      "date": "1948-05-25",
+      "district": "Ramle",
+      "population": 390,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.7167,
+        34.8333
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 255,
+      "name": "Yibna",
+      "period": "1948-1949",
+      "date": "1948-06-04",
+      "district": "Ramle",
+      "population": 5420,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.8667,
+        34.75
+      ],
+      "additional_notes": "Military assault and expulsion"
+    },
+    {
+      "id": 256,
+      "name": "Mighrar",
+      "period": "1948-1949",
+      "date": "1948-05-18",
+      "district": "Gaza",
+      "population": 540,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.5833,
+        34.5667
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 257,
+      "name": "Bash-Shit",
+      "period": "1948-1949",
+      "date": "1948-05-13",
+      "district": "Gaza",
+      "population": 620,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.5667,
+        34.5833
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 258,
+      "name": "Qatra",
+      "period": "1948-1949",
+      "date": "1948-05-15",
+      "district": "Gaza",
+      "population": 1210,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.55,
+        34.6
+      ],
+      "additional_notes": "Military assault and expulsion"
+    },
+    {
+      "id": 259,
+      "name": "Seidun",
+      "period": "1948-1949",
+      "date": "1948-05-15",
+      "district": "Gaza",
+      "population": 210,
+      "current_status": "destroyed",
+      "displacement_method": "unknown",
+      "coordinates": [
+        31.5333,
+        34.6167
+      ],
+      "additional_notes": "Unknown"
+    },
+    {
+      "id": 260,
+      "name": "Mansura",
+      "period": "1948-1949",
+      "date": "1948-04-20",
+      "district": "Gaza",
+      "population": 90,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.5167,
+        34.6333
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 261,
+      "name": "Khulda",
+      "period": "1948-1949",
+      "date": "1948-04-06",
+      "district": "Ramle",
+      "population": 280,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.8,
+        34.8833
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 262,
+      "name": "Shashma",
+      "period": "1948-1949",
+      "date": "1948-05-14",
+      "district": "Gaza",
+      "population": 280,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        31.7833,
+        34.7
+      ],
+      "additional_notes": "Capitulation"
+    },
+    {
+      "id": 263,
+      "name": "Mukheizin",
+      "period": "1948-1949",
+      "date": "1948-04-20",
+      "district": "Gaza",
+      "population": 200,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.7667,
+        34.7167
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 264,
+      "name": "Sajad",
+      "period": "1948-1949",
+      "date": "1948-05-15",
+      "district": "Gaza",
+      "population": 470,
+      "current_status": "destroyed",
+      "displacement_method": "unknown",
+      "coordinates": [
+        31.75,
+        34.7333
+      ],
+      "additional_notes": "Unknown"
+    },
+    {
+      "id": 265,
+      "name": "Qazaza",
+      "period": "1948-1949",
+      "date": "1948-07-09",
+      "district": "Hebron",
+      "population": 940,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        31.7333,
+        34.75
+      ],
+      "additional_notes": "Capitulation"
+    },
+    {
+      "id": 266,
+      "name": "Jilya",
+      "period": "1948-1949",
+      "date": "1948-07-09",
+      "district": "Ramle",
+      "population": 330,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        31.7167,
+        34.7667
+      ],
+      "additional_notes": "Capitulation"
+    },
+    {
+      "id": 267,
+      "name": "Kheima",
+      "period": "1948-1949",
+      "date": "1948-05-15",
+      "district": "Gaza",
+      "population": 190,
+      "current_status": "destroyed",
+      "displacement_method": "unknown",
+      "coordinates": [
+        31.7,
+        34.7833
+      ],
+      "additional_notes": "Unknown"
+    },
+    {
+      "id": 268,
+      "name": "Huraniya",
+      "period": "1948-1949",
+      "date": "1948-05-15",
+      "district": "Gaza",
+      "population": 310,
+      "current_status": "destroyed",
+      "displacement_method": "unknown",
+      "coordinates": [
+        31.6833,
+        34.8
+      ],
+      "additional_notes": "Unknown"
+    },
+    {
+      "id": 269,
+      "name": "Tina",
+      "period": "1948-1949",
+      "date": "1948-07-08",
+      "district": "Gaza",
+      "population": 750,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.6667,
+        34.8167
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 270,
+      "name": "Idhnibba",
+      "period": "1948-1949",
+      "date": "1948-07-09",
+      "district": "Hebron",
+      "population": 490,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        31.65,
+        34.8333
+      ],
+      "additional_notes": "Capitulation"
+    },
+    {
+      "id": 271,
+      "name": "Mughallis",
+      "period": "1948-1949",
+      "date": "1948-07-09",
+      "district": "Hebron",
+      "population": 540,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        31.6333,
+        34.85
+      ],
+      "additional_notes": "Capitulation"
+    },
+    {
+      "id": 272,
+      "name": "Bureij",
+      "period": "1948-1949",
+      "date": "1948-05-15",
+      "district": "Gaza",
+      "population": 510,
+      "current_status": "destroyed",
+      "displacement_method": "unknown",
+      "coordinates": [
+        31.6167,
+        34.8667
+      ],
+      "additional_notes": "Unknown"
+    },
+    {
+      "id": 273,
+      "name": "Masmiya Al Kabira",
+      "period": "1948-1949",
+      "date": "1948-07-08",
+      "district": "Gaza",
+      "population": 2410,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.6,
+        34.8833
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 274,
+      "name": "Masmiya Al Saghira",
+      "period": "1948-1949",
+      "date": "1948-07-08",
+      "district": "Gaza",
+      "population": 530,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.5833,
+        34.9
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 275,
+      "name": "Qastina",
+      "period": "1948-1949",
+      "date": "1948-07-09",
+      "district": "Gaza",
+      "population": 890,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.5667,
+        34.9167
+      ],
+      "additional_notes": "Military assault and capitulation"
+    },
+    {
+      "id": 276,
+      "name": "Tall AL Turmus",
+      "period": "1948-1949",
+      "date": "1948-07-15",
+      "district": "Gaza",
+      "population": 760,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        31.55,
+        34.9333
+      ],
+      "additional_notes": "Fear of attack"
+    },
+    {
+      "id": 277,
+      "name": "Yasur",
+      "period": "1948-1949",
+      "date": "1948-06-11",
+      "district": "Gaza",
+      "population": 1070,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.5333,
+        34.95
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 278,
+      "name": "Batani Al Sharqi",
+      "period": "1948-1949",
+      "date": "1948-05-13",
+      "district": "Gaza",
+      "population": 650,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.5167,
+        34.9667
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 279,
+      "name": "Batani AL Gharbi",
+      "period": "1948-1949",
+      "date": "1948-05-13",
+      "district": "Gaza",
+      "population": 980,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.5,
+        34.9833
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 280,
+      "name": "Barqa",
+      "period": "1948-1949",
+      "date": "1948-05-13",
+      "district": "Gaza",
+      "population": 1180,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.4833,
+        35
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 281,
+      "name": "Isdud",
+      "period": "1948-1949",
+      "date": "1948-10-28",
+      "district": "Gaza",
+      "population": 4620,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.8025,
+        34.6503
+      ],
+      "additional_notes": "Military assault and expulsion"
+    },
+    {
+      "id": 282,
+      "name": "Beit Datas",
+      "period": "1948-1949",
+      "date": "1948-05-11",
+      "district": "Gaza",
+      "population": 2750,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.7333,
+        34.5667
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 283,
+      "name": "Sawafir AL Shamaliyya",
+      "period": "1948-1949",
+      "date": "1948-05-18",
+      "district": "Gaza",
+      "population": 1030,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        31.7167,
+        34.5833
+      ],
+      "additional_notes": "Fear of attack"
+    },
+    {
+      "id": 284,
+      "name": "Sawafir Al Gharbiyya",
+      "period": "1948-1949",
+      "date": "1948-05-18",
+      "district": "Gaza",
+      "population": 1030,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        31.7,
+        34.6
+      ],
+      "additional_notes": "Fear of attack"
+    },
+    {
+      "id": 285,
+      "name": "Sawafir Al Sharqiyya",
+      "period": "1948-1949",
+      "date": "1948-05-18",
+      "district": "Gaza",
+      "population": 960,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        31.6833,
+        34.6167
+      ],
+      "additional_notes": "Fear of attack"
+    },
+    {
+      "id": 286,
+      "name": "Hamam",
+      "period": "1948-1949",
+      "date": "1948-11-04",
+      "district": "Gaza",
+      "population": 5010,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.6667,
+        34.6333
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 287,
+      "name": "Julis",
+      "period": "1948-1949",
+      "date": "1948-06-11",
+      "district": "Gaza",
+      "population": 1030,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.65,
+        34.65
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 288,
+      "name": "Ibdis",
+      "period": "1948-1949",
+      "date": "1948-07-08",
+      "district": "Gaza",
+      "population": 540,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.6333,
+        34.6667
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 289,
+      "name": "Jaladiya",
+      "period": "1948-1949",
+      "date": "1948-05-15",
+      "district": "Gaza",
+      "population": 360,
+      "current_status": "destroyed",
+      "displacement_method": "unknown",
+      "coordinates": [
+        31.6167,
+        34.6833
+      ],
+      "additional_notes": "Unknown"
+    },
+    {
+      "id": 290,
+      "name": "Bi'lin",
+      "period": "1948-1949",
+      "date": "1948-05-15",
+      "district": "Gaza",
+      "population": 180,
+      "current_status": "destroyed",
+      "displacement_method": "unknown",
+      "coordinates": [
+        31.6,
+        34.7
+      ],
+      "additional_notes": "Unknown"
+    },
+    {
+      "id": 291,
+      "name": "Barqusiya",
+      "period": "1948-1949",
+      "date": "1948-05-15",
+      "district": "Gaza",
+      "population": 510,
+      "current_status": "destroyed",
+      "displacement_method": "unknown",
+      "coordinates": [
+        31.5833,
+        34.7167
+      ],
+      "additional_notes": "Unknown"
+    },
+    {
+      "id": 292,
+      "name": "Tel AL Safi",
+      "period": "1948-1949",
+      "date": "1948-07-09",
+      "district": "Hebron",
+      "population": 1290,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.7,
+        34.85
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 293,
+      "name": "Deir Al Dubban",
+      "period": "1948-1949",
+      "date": "1948-10-23",
+      "district": "Hebron",
+      "population": 730,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.6833,
+        34.9833
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 294,
+      "name": "Ajjur",
+      "period": "1948-1949",
+      "date": "1948-07-23",
+      "district": "Hebron",
+      "population": 3730,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.6667,
+        35
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 295,
+      "name": "Zakariya",
+      "period": "1950-1966",
+      "date": "1950-06-01",
+      "district": "Hebron",
+      "population": 1180,
+      "current_status": "destroyed",
+      "displacement_method": "forced_expulsion",
+      "coordinates": [
+        31.65,
+        35.0167
+      ],
+      "additional_notes": "Late expulsion"
+    },
+    {
+      "id": 296,
+      "name": "Ra'na",
+      "period": "1948-1949",
+      "date": "1948-10-22",
+      "district": "Hebron",
+      "population": 190,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.6333,
+        35.0333
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 297,
+      "name": "Zikrin",
+      "period": "1948-1949",
+      "date": "1948-10-22",
+      "district": "Hebron",
+      "population": 960,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.6167,
+        35.05
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 298,
+      "name": "Summeil",
+      "period": "1948-1949",
+      "date": "1948-07-15",
+      "district": "Hebron",
+      "population": 950,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.6,
+        35.0667
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 299,
+      "name": "Zeita",
+      "period": "1948-1949",
+      "date": "1948-07-17",
+      "district": "Hebron",
+      "population": 330,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.5833,
+        35.0833
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 300,
+      "name": "Juseir",
+      "period": "1948-1949",
+      "date": "1948-07-17",
+      "district": "Hebron",
+      "population": 1180,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.5667,
+        35.1
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 301,
+      "name": "Hatta",
+      "period": "1948-1949",
+      "date": "1948-07-17",
+      "district": "Hebron",
+      "population": 970,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.55,
+        35.1167
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 302,
+      "name": "Katariya",
+      "period": "1948-1949",
+      "date": "1948-07-17",
+      "district": "Hebron",
+      "population": 170,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.5333,
+        35.1333
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 303,
+      "name": "Beit'Affa",
+      "period": "1948-1949",
+      "date": "1948-05-15",
+      "district": "Gaza",
+      "population": 700,
+      "current_status": "destroyed",
+      "displacement_method": "unknown",
+      "coordinates": [
+        31.7167,
+        34.7833
+      ],
+      "additional_notes": "Unknown"
+    },
+    {
+      "id": 304,
+      "name": "Kaukaba",
+      "period": "1948-1949",
+      "date": "1948-05-12",
+      "district": "Gaza",
+      "population": 680,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        31.7,
+        34.8
+      ],
+      "additional_notes": "Capitulation"
+    },
+    {
+      "id": 305,
+      "name": "Beit Tima",
+      "period": "1948-1949",
+      "date": "1948-10-18",
+      "district": "Gaza",
+      "population": 1060,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.6833,
+        34.8167
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 306,
+      "name": "Majdal",
+      "period": "1948-1949",
+      "date": "1948-11-04",
+      "district": "Gaza",
+      "population": 9910,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.6667,
+        34.5667
+      ],
+      "additional_notes": "Military assault and remained then expelled"
+    },
+    {
+      "id": 307,
+      "name": "Jura",
+      "period": "1948-1949",
+      "date": "1948-11-04",
+      "district": "Gaza",
+      "population": 2420,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.65,
+        34.5833
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 308,
+      "name": "Khirbat Khisas",
+      "period": "1948-1949",
+      "date": "1948-11-04",
+      "district": "Gaza",
+      "population": 530,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.6333,
+        34.6
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 309,
+      "name": "Ni'ilya",
+      "period": "1948-1949",
+      "date": "1948-11-04",
+      "district": "Gaza",
+      "population": 1310,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.6167,
+        34.6167
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 310,
+      "name": "Barbara",
+      "period": "1948-1949",
+      "date": "1948-11-04",
+      "district": "Gaza",
+      "population": 2410,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.6,
+        34.6333
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 311,
+      "name": "Jiyya",
+      "period": "1948-1949",
+      "date": "1948-11-04",
+      "district": "Gaza",
+      "population": 1230,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.5833,
+        34.65
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 312,
+      "name": "Beit Jirja",
+      "period": "1948-1949",
+      "date": "1948-05-15",
+      "district": "Gaza",
+      "population": 940,
+      "current_status": "destroyed",
+      "displacement_method": "unknown",
+      "coordinates": [
+        31.5667,
+        34.6667
+      ],
+      "additional_notes": "Unknown"
+    },
+    {
+      "id": 313,
+      "name": "Deir Suneid",
+      "period": "1948-1949",
+      "date": "1948-05-15",
+      "district": "Gaza",
+      "population": 730,
+      "current_status": "destroyed",
+      "displacement_method": "unknown",
+      "coordinates": [
+        31.55,
+        34.6833
+      ],
+      "additional_notes": "Unknown"
+    },
+    {
+      "id": 314,
+      "name": "Dimra",
+      "period": "1948-1949",
+      "date": "1948-11-15",
+      "district": "Gaza",
+      "population": 520,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        31.5333,
+        34.7
+      ],
+      "additional_notes": "Fear of attack"
+    },
+    {
+      "id": 315,
+      "name": "Najd",
+      "period": "1948-1949",
+      "date": "1948-05-12",
+      "district": "Gaza",
+      "population": 620,
+      "current_status": "destroyed",
+      "displacement_method": "forced_expulsion",
+      "coordinates": [
+        31.5167,
+        34.7167
+      ],
+      "additional_notes": "Expulsion"
+    },
+    {
+      "id": 316,
+      "name": "Sumsum",
+      "period": "1948-1949",
+      "date": "1948-05-12",
+      "district": "Gaza",
+      "population": 950,
+      "current_status": "destroyed",
+      "displacement_method": "forced_expulsion",
+      "coordinates": [
+        31.5,
+        34.7333
+      ],
+      "additional_notes": "Expulsion"
+    },
+    {
+      "id": 317,
+      "name": "Huleiqat",
+      "period": "1948-1949",
+      "date": "1948-05-12",
+      "district": "Gaza",
+      "population": 420,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        31.4833,
+        34.75
+      ],
+      "additional_notes": "Capitulation"
+    },
+    {
+      "id": 318,
+      "name": "Burayr",
+      "period": "1948-1949",
+      "date": "1948-05-12",
+      "district": "Gaza",
+      "population": 2740,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.4667,
+        34.7667
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 319,
+      "name": "Faluja",
+      "period": "1948-1949",
+      "date": "1949-02-15",
+      "district": "Gaza",
+      "population": 4670,
+      "current_status": "destroyed",
+      "displacement_method": "forced_expulsion",
+      "coordinates": [
+        31.6333,
+        34.6833
+      ],
+      "additional_notes": "Late expulsion"
+    },
+    {
+      "id": 320,
+      "name": "Iraq AL Manshiya",
+      "period": "1948-1949",
+      "date": "1949-02-15",
+      "district": "Gaza",
+      "population": 2010,
+      "current_status": "destroyed",
+      "displacement_method": "forced_expulsion",
+      "coordinates": [
+        31.6167,
+        34.7
+      ],
+      "additional_notes": "Late expulsion"
+    },
+    {
+      "id": 321,
+      "name": "Kidna",
+      "period": "1948-1949",
+      "date": "1948-10-22",
+      "district": "Hebron",
+      "population": 450,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.6667,
+        34.9333
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 322,
+      "name": "Beit Jibrin",
+      "period": "1948-1949",
+      "date": "1948-10-29",
+      "district": "Hebron",
+      "population": 2430,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.6083,
+        34.8967
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 323,
+      "name": "Qubeiba",
+      "period": "1948-1949",
+      "date": "1948-10-28",
+      "district": "Hebron",
+      "population": 1720,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.5917,
+        34.9133
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 324,
+      "name": "Dawayima",
+      "period": "1948-1949",
+      "date": "1948-10-29",
+      "district": "Hebron",
+      "population": 3710,
+      "current_status": "destroyed",
+      "displacement_method": "massacre",
+      "coordinates": [
+        31.575,
+        34.93
+      ],
+      "additional_notes": "Military assault and massacre"
+    },
+    {
+      "id": 325,
+      "name": "Deir Nakh-khas",
+      "period": "1948-1949",
+      "date": "1948-10-29",
+      "district": "Hebron",
+      "population": 590,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.5583,
+        34.9467
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 326,
+      "name": "Khirbet Umm Burj",
+      "period": "1948-1949",
+      "date": "1948-05-15",
+      "district": "Hebron",
+      "population": 250,
+      "current_status": "destroyed",
+      "displacement_method": "unknown",
+      "coordinates": [
+        31.5417,
+        34.9633
+      ],
+      "additional_notes": "Unknown"
+    },
+    {
+      "id": 327,
+      "name": "Deir Muheisin",
+      "period": "1948-1949",
+      "date": "1948-04-06",
+      "district": "Jerusalem",
+      "population": 460,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.8333,
+        35.05
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 328,
+      "name": "Beit Jiz",
+      "period": "1948-1949",
+      "date": "1948-04-20",
+      "district": "Jerusalem",
+      "population": 550,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.8167,
+        35.0333
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 329,
+      "name": "Beit Susin",
+      "period": "1948-1949",
+      "date": "1948-04-20",
+      "district": "Jerusalem",
+      "population": 210,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.8,
+        35.0167
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 330,
+      "name": "Islin",
+      "period": "1948-1949",
+      "date": "1948-07-18",
+      "district": "Jerusalem",
+      "population": 260,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.7833,
+        35
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 331,
+      "name": "Ishwa",
+      "period": "1948-1949",
+      "date": "1948-07-18",
+      "district": "Jerusalem",
+      "population": 620,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.7667,
+        34.9833
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 332,
+      "name": "Sar'a",
+      "period": "1948-1949",
+      "date": "1948-07-18",
+      "district": "Jerusalem",
+      "population": 560,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.75,
+        34.9667
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 333,
+      "name": "Deir Rafat",
+      "period": "1948-1949",
+      "date": "1948-07-18",
+      "district": "Jerusalem",
+      "population": 430,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.7333,
+        34.95
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 334,
+      "name": "Artuf",
+      "period": "1948-1949",
+      "date": "1948-07-18",
+      "district": "Jerusalem",
+      "population": 350,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.7167,
+        34.9333
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 335,
+      "name": "Deiraban",
+      "period": "1948-1949",
+      "date": "1948-10-19",
+      "district": "Hebron",
+      "population": 2100,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.7,
+        35.0833
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 336,
+      "name": "Beit Mahsir",
+      "period": "1948-1949",
+      "date": "1948-05-10",
+      "district": "Jerusalem",
+      "population": 2400,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.7833,
+        35.1167
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 337,
+      "name": "Deir Aiyib",
+      "period": "1948-1949",
+      "date": "1948-04-15",
+      "district": "Jerusalem",
+      "population": 320,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.7667,
+        35.1333
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 338,
+      "name": "Kasla",
+      "period": "1948-1949",
+      "date": "1948-07-17",
+      "district": "Jerusalem",
+      "population": 280,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.75,
+        35.15
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 339,
+      "name": "Deir AL Hawa",
+      "period": "1948-1949",
+      "date": "1948-10-19",
+      "district": "Hebron",
+      "population": 600,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.7333,
+        35.1667
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 340,
+      "name": "Sufla",
+      "period": "1948-1949",
+      "date": "1948-10-19",
+      "district": "Hebron",
+      "population": 60,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.7167,
+        35.1833
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 341,
+      "name": "Jarash",
+      "period": "1948-1949",
+      "date": "1948-10-21",
+      "district": "Hebron",
+      "population": 190,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.7,
+        35.2
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 342,
+      "name": "Beit Nattif",
+      "period": "1948-1949",
+      "date": "1948-10-21",
+      "district": "Hebron",
+      "population": 2494,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.6833,
+        35.1167
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 343,
+      "name": "Beit Itab",
+      "period": "1948-1949",
+      "date": "1948-10-21",
+      "district": "Hebron",
+      "population": 540,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.6667,
+        35.1333
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 344,
+      "name": "Beit Umm AL Meis",
+      "period": "1948-1949",
+      "date": "1948-10-21",
+      "district": "Hebron",
+      "population": 70,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.65,
+        35.15
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 345,
+      "name": "Saris",
+      "period": "1948-1949",
+      "date": "1948-04-16",
+      "district": "Jerusalem",
+      "population": 560,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.7833,
+        35.0667
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 346,
+      "name": "Allar",
+      "period": "1948-1949",
+      "date": "1948-10-22",
+      "district": "Hebron",
+      "population": 440,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.7667,
+        35.0833
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 347,
+      "name": "Ras Abu Ammar",
+      "period": "1948-1949",
+      "date": "1948-10-21",
+      "district": "Hebron",
+      "population": 620,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.75,
+        35.1
+      ],
+      "additional_notes": "Late expulsion"
+    },
+    {
+      "id": 348,
+      "name": "Qabu",
+      "period": "1948-1949",
+      "date": "1948-10-22",
+      "district": "Hebron",
+      "population": 260,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.7333,
+        35.1167
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 349,
+      "name": "Walaja",
+      "period": "1948-1949",
+      "date": "1948-10-21",
+      "district": "Hebron",
+      "population": 1650,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.7167,
+        35.1333
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 350,
+      "name": "Khirbet Al Umir",
+      "period": "1948-1949",
+      "date": "1948-10-21",
+      "district": "Hebron",
+      "population": 270,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.7,
+        35.15
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 351,
+      "name": "Deir AL Sheick",
+      "period": "1948-1949",
+      "date": "1948-10-21",
+      "district": "Jerusalem",
+      "population": 220,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.7333,
+        35.2
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 352,
+      "name": "Aqqur",
+      "period": "1948-1949",
+      "date": "1948-07-13",
+      "district": "Jerusalem",
+      "population": 40,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.7167,
+        35.2167
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 353,
+      "name": "Suba",
+      "period": "1948-1949",
+      "date": "1948-07-13",
+      "district": "Jerusalem",
+      "population": 620,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.7,
+        35.2333
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 354,
+      "name": "Sataf",
+      "period": "1948-1949",
+      "date": "1948-07-13",
+      "district": "Jerusalem",
+      "population": 540,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.6833,
+        35.25
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 355,
+      "name": "Jura",
+      "period": "1948-1949",
+      "date": "1948-05-15",
+      "district": "Jerusalem",
+      "population": 420,
+      "current_status": "destroyed",
+      "displacement_method": "unknown",
+      "coordinates": [
+        31.6667,
+        35.2667
+      ],
+      "additional_notes": "Unknown"
+    },
+    {
+      "id": 356,
+      "name": "Qastal",
+      "period": "1948-1949",
+      "date": "1948-04-03",
+      "district": "Jerusalem",
+      "population": 90,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.8044,
+        35.1078
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 357,
+      "name": "Beit Naqquba",
+      "period": "1948-1949",
+      "date": "1948-04-15",
+      "district": "Jerusalem",
+      "population": 240,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.85,
+        35.1333
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 358,
+      "name": "Beit Thul",
+      "period": "1948-1949",
+      "date": "1948-05-15",
+      "district": "Jerusalem",
+      "population": 350,
+      "current_status": "destroyed",
+      "displacement_method": "unknown",
+      "coordinates": [
+        31.8333,
+        35.15
+      ],
+      "additional_notes": "Unknown"
+    },
+    {
+      "id": 359,
+      "name": "Qaluniya",
+      "period": "1948-1949",
+      "date": "1948-04-15",
+      "district": "Jerusalem",
+      "population": 910,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.8167,
+        35.1667
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 360,
+      "name": "Ein Karim",
+      "period": "1948-1949",
+      "date": "1948-04-10",
+      "district": "Jerusalem",
+      "population": 3180,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        31.7656,
+        35.1589
+      ],
+      "additional_notes": "Capitulation"
+    },
+    {
+      "id": 361,
+      "name": "Maliha",
+      "period": "1948-1949",
+      "date": "1948-04-21",
+      "district": "Jerusalem",
+      "population": 1940,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        31.75,
+        35.175
+      ],
+      "additional_notes": "Capitulation"
+    },
+    {
+      "id": 362,
+      "name": "Deir Yassin",
+      "period": "1948-1949",
+      "date": "1948-04-09",
+      "district": "Jerusalem",
+      "population": 600,
+      "current_status": "destroyed",
+      "displacement_method": "massacre",
+      "coordinates": [
+        31.7857,
+        35.1547
+      ],
+      "additional_notes": "Military assault and expulsion - Massacre"
+    },
+    {
+      "id": 363,
+      "name": "Lifta",
+      "period": "1948-1949",
+      "date": "1948-01-15",
+      "district": "Jerusalem",
+      "population": 2550,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.7944,
+        35.1872
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 364,
+      "name": "Jammama",
+      "period": "1948-1949",
+      "date": "1948-05-22",
+      "district": "Gaza",
+      "population": 150,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.5833,
+        34.5833
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 365,
+      "name": "Arab Al Jurabat",
+      "period": "1948-1949",
+      "date": "1948-05-15",
+      "district": "Beersheba",
+      "population": 290,
+      "current_status": "destroyed",
+      "displacement_method": "unknown",
+      "coordinates": [
+        31.25,
+        34.8333
+      ],
+      "additional_notes": "Unknown"
+    },
+    {
+      "id": 366,
+      "name": "Huj",
+      "period": "1948-1949",
+      "date": "1948-05-31",
+      "district": "Beersheba",
+      "population": 810,
+      "current_status": "destroyed",
+      "displacement_method": "forced_expulsion",
+      "coordinates": [
+        31.4833,
+        34.6833
+      ],
+      "additional_notes": "Expulsion"
+    },
+    {
+      "id": 367,
+      "name": "Muharraqa",
+      "period": "1948-1949",
+      "date": "1948-05-25",
+      "district": "Gaza",
+      "population": 480,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.5,
+        34.6667
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 368,
+      "name": "Koufakha",
+      "period": "1948-1949",
+      "date": "1948-05-25",
+      "district": "Gaza",
+      "population": 500,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.5167,
+        34.6833
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 369,
+      "name": "Beersheba",
+      "period": "1948-1949",
+      "date": "1948-10-21",
+      "district": "Beersheba",
+      "population": 6490,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.2518,
+        34.7913
+      ],
+      "additional_notes": "Military assault and expulsion on city"
+    },
+    {
+      "id": 370,
+      "name": "Nuqeib",
+      "period": "1948-1949",
+      "date": "1948-05-14",
+      "district": "Beersheba",
+      "population": 520,
+      "current_status": "destroyed",
+      "displacement_method": "forced_expulsion",
+      "coordinates": [
+        31.2,
+        34.8167
+      ],
+      "additional_notes": "Expulsion"
+    },
+    {
+      "id": 371,
+      "name": "Khirbat Sarona",
+      "period": "1948-1949",
+      "date": "1948-05-15",
+      "district": "Beersheba",
+      "population": 150,
+      "current_status": "destroyed",
+      "displacement_method": "unknown",
+      "coordinates": [
+        31.2333,
+        34.85
+      ],
+      "additional_notes": "Unknown"
+    },
+    {
+      "id": 372,
+      "name": "Arab Al Mawasi",
+      "period": "1948-1949",
+      "date": "1948-11-02",
+      "district": "Gaza",
+      "population": 560,
+      "current_status": "destroyed",
+      "displacement_method": "forced_expulsion",
+      "coordinates": [
+        31.3667,
+        34.3
+      ],
+      "additional_notes": "Expulsion"
+    },
+    {
+      "id": 373,
+      "name": "Arab Al Samakiya",
+      "period": "1948-1949",
+      "date": "1948-05-15",
+      "district": "Beersheba",
+      "population": 650,
+      "current_status": "destroyed",
+      "displacement_method": "unknown",
+      "coordinates": [
+        31.35,
+        34.5833
+      ],
+      "additional_notes": "Unknown"
+    },
+    {
+      "id": 374,
+      "name": "Bayarrat Hannun",
+      "period": "1948-1949",
+      "date": "1948-04-15",
+      "district": "Haifa",
+      "population": 190,
+      "current_status": "destroyed",
+      "displacement_method": "forced_expulsion",
+      "coordinates": [
+        32.5333,
+        34.9667
+      ],
+      "additional_notes": "Fear and expulsion"
+    },
+    {
+      "id": 375,
+      "name": "Arab Al Bara",
+      "period": "1948-1949",
+      "date": "1948-04-15",
+      "district": "Haifa",
+      "population": 280,
+      "current_status": "destroyed",
+      "displacement_method": "forced_expulsion",
+      "coordinates": [
+        32.5167,
+        34.9833
+      ],
+      "additional_notes": "Fear and expulsion"
+    },
+    {
+      "id": 376,
+      "name": "Hirbiya",
+      "period": "1948-1949",
+      "date": "1948-10-15",
+      "district": "Gaza",
+      "population": 2240,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.55,
+        34.55
+      ],
+      "additional_notes": "Military assault and expulsion"
+    },
+    {
+      "id": 377,
+      "name": "Shu'ut",
+      "period": "1948-1949",
+      "date": "1948-08-15",
+      "district": "Beersheba",
+      "population": 300,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.1667,
+        34.75
+      ],
+      "additional_notes": "Fear and military assault"
+    },
+    {
+      "id": 378,
+      "name": "Arab Al Sakhina",
+      "period": "1948-1949",
+      "date": "1948-05-15",
+      "district": "Beersheba",
+      "population": 530,
+      "current_status": "destroyed",
+      "displacement_method": "unknown",
+      "coordinates": [
+        31.15,
+        34.7833
+      ],
+      "additional_notes": "Unknown"
+    },
+    {
+      "id": 379,
+      "name": "Khan Al Duweir",
+      "period": "1948-1949",
+      "date": "1948-05-15",
+      "district": "Hebron",
+      "population": 320,
+      "current_status": "destroyed",
+      "displacement_method": "unknown",
+      "coordinates": [
+        31.65,
+        34.9667
+      ],
+      "additional_notes": "Unknown"
+    },
+    {
+      "id": 380,
+      "name": "Iraq Suweidan",
+      "period": "1948-1949",
+      "date": "1948-07-08",
+      "district": "Gaza",
+      "population": 660,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.5333,
+        34.7333
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 381,
+      "name": "Wa'arat Al Sarris",
+      "period": "1948-1949",
+      "date": "1948-05-15",
+      "district": "Gaza",
+      "population": 180,
+      "current_status": "destroyed",
+      "displacement_method": "unknown",
+      "coordinates": [
+        31.5167,
+        34.75
+      ],
+      "additional_notes": "Unknown"
+    },
+    {
+      "id": 382,
+      "name": "Hawsha",
+      "period": "1948-1949",
+      "date": "1948-11-15",
+      "district": "Hebron",
+      "population": 200,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.6333,
+        35.0167
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 383,
+      "name": "Khirbet Kasayir",
+      "period": "1948-1949",
+      "date": "1948-11-15",
+      "district": "Hebron",
+      "population": 530,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.6167,
+        35.0333
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 384,
+      "name": "Khirbet Al Damun",
+      "period": "1948-1949",
+      "date": "1948-04-15",
+      "district": "Acre",
+      "population": 340,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.9333,
+        35.3167
+      ],
+      "additional_notes": "Fear and military assault"
+    },
+    {
+      "id": 385,
+      "name": "Khirbet Lid Al Awadin",
+      "period": "1948-1949",
+      "date": "1948-05-15",
+      "district": "Acre",
+      "population": 640,
+      "current_status": "destroyed",
+      "displacement_method": "unknown",
+      "coordinates": [
+        32.9167,
+        35.3333
+      ],
+      "additional_notes": "Unknown"
+    },
+    {
+      "id": 386,
+      "name": "Ein Al Mansi",
+      "period": "1948-1949",
+      "date": "1948-04-15",
+      "district": "Nazareth",
+      "population": 90,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.6333,
+        35.3667
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 387,
+      "name": "Atlit",
+      "period": "1948-1949",
+      "date": "1948-05-15",
+      "district": "Haifa",
+      "population": 150,
+      "current_status": "destroyed",
+      "displacement_method": "unknown",
+      "coordinates": [
+        32.6917,
+        34.9383
+      ],
+      "additional_notes": "Unknown"
+    },
+    {
+      "id": 388,
+      "name": "Majdal Yaba",
+      "period": "1948-1949",
+      "date": "1948-07-10",
+      "district": "Ramle",
+      "population": 1520,
+      "current_status": "destroyed",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.0833,
+        34.95
+      ],
+      "additional_notes": "Military assault"
+    },
+    {
+      "id": 389,
+      "name": "Arab Abu Rizik",
+      "period": "1948-1949",
+      "date": "1948-03-15",
+      "district": "Jaffa",
+      "population": 1420,
+      "current_status": "destroyed",
+      "displacement_method": "fear_of_attack",
+      "coordinates": [
+        32.0667,
+        34.8833
+      ],
+      "additional_notes": "Fear of attack"
+    },
+    {
+      "id": 390,
+      "name": "Manshiya",
+      "period": "1948-1949",
+      "date": "1948-05-15",
+      "district": "Jaffa",
+      "population": 260,
+      "current_status": "destroyed",
+      "displacement_method": "unknown",
+      "coordinates": [
+        32.05,
+        34.9
+      ],
+      "additional_notes": "Unknown"
+    },
+    {
+      "id": 391,
+      "name": "Harrawi",
+      "period": "1948-1949",
+      "date": "1948-05-15",
+      "district": "Beisan",
+      "population": 80,
+      "current_status": "destroyed",
+      "displacement_method": "unknown",
+      "coordinates": [
+        32.4833,
+        35.5833
+      ],
+      "additional_notes": "Unknown"
+    },
+    {
+      "id": 392,
+      "name": "Arab Al Suyyad",
+      "period": "1948-1949",
+      "date": "1948-05-15",
+      "district": "Tiberias",
+      "population": 100,
+      "current_status": "destroyed",
+      "displacement_method": "unknown",
+      "coordinates": [
+        32.7667,
+        35.55
+      ],
+      "additional_notes": "Unknown"
+    },
+    {
+      "id": 393,
+      "name": "Imwas",
+      "period": "1967",
+      "date": "1967-06-07",
+      "district": "Ramallah",
+      "population": 2200,
+      "current_status": "destroyed",
+      "displacement_method": "forced_expulsion",
+      "coordinates": [
+        31.8397,
+        34.9894
+      ],
+      "additional_notes": "Expulsion after Six-Day War"
+    },
+    {
+      "id": 394,
+      "name": "Yalu",
+      "period": "1967",
+      "date": "1967-06-07",
+      "district": "Ramallah",
+      "population": 1644,
+      "current_status": "destroyed",
+      "displacement_method": "forced_expulsion",
+      "coordinates": [
+        31.8456,
+        34.9728
+      ],
+      "additional_notes": "Expulsion after Six-Day War"
+    },
+    {
+      "id": 395,
+      "name": "Beit Nuba",
+      "period": "1967",
+      "date": "1967-06-08",
+      "district": "Ramallah",
+      "population": 1350,
+      "current_status": "destroyed",
+      "displacement_method": "forced_expulsion",
+      "coordinates": [
+        31.8525,
+        34.9562
+      ],
+      "additional_notes": "Expulsion after Six-Day War"
+    },
+    {
+      "id": 396,
+      "name": "Latroun",
+      "period": "1967",
+      "date": "1967-06-07",
+      "district": "Ramallah",
+      "population": 293,
+      "current_status": "destroyed",
+      "displacement_method": "forced_expulsion",
+      "coordinates": [
+        31.8361,
+        34.985
+      ],
+      "additional_notes": "Expulsion after Six-Day War"
+    },
+    {
+      "id": 397,
+      "name": "Beit Awwa",
+      "period": "1967",
+      "date": "1967-06-10",
+      "district": "Hebron",
+      "population": 1200,
+      "current_status": "destroyed",
+      "displacement_method": "forced_expulsion",
+      "coordinates": [
+        31.4667,
+        35.0333
+      ],
+      "additional_notes": "Expulsion after Six-Day War"
+    },
+    {
+      "id": 398,
+      "name": "Beit Mirsim",
+      "period": "1967",
+      "date": "1967-06-10",
+      "district": "Hebron",
+      "population": 340,
+      "current_status": "destroyed",
+      "displacement_method": "forced_expulsion",
+      "coordinates": [
+        31.4833,
+        35.05
+      ],
+      "additional_notes": "Expulsion after Six-Day War"
+    },
+    {
+      "id": 399,
+      "name": "Quneitra",
+      "period": "1967",
+      "date": "1967-06-10",
+      "district": "Golan Heights",
+      "population": 20000,
+      "current_status": "destroyed",
+      "displacement_method": "forced_expulsion",
+      "coordinates": [
+        33.1258,
+        35.8236
+      ],
+      "additional_notes": "Syrian city - Complete destruction after occupation"
+    },
+    {
+      "id": 400,
+      "name": "Sufsafa",
+      "period": "1967",
+      "date": "1967-06-11",
+      "district": "Golan Heights",
+      "population": 800,
+      "current_status": "destroyed",
+      "displacement_method": "forced_expulsion",
+      "coordinates": [
+        33.2167,
+        35.7833
+      ],
+      "additional_notes": "Golan Heights village"
+    },
+    {
+      "id": 401,
+      "name": "Ain Fit",
+      "period": "1967",
+      "date": "1967-06-11",
+      "district": "Golan Heights",
+      "population": 650,
+      "current_status": "destroyed",
+      "displacement_method": "forced_expulsion",
+      "coordinates": [
+        33.1833,
+        35.7667
+      ],
+      "additional_notes": "Golan Heights village"
+    },
+    {
+      "id": 402,
+      "name": "Khisfin",
+      "period": "1967",
+      "date": "1967-06-11",
+      "district": "Golan Heights",
+      "population": 920,
+      "current_status": "destroyed",
+      "displacement_method": "forced_expulsion",
+      "coordinates": [
+        33.25,
+        35.8167
+      ],
+      "additional_notes": "Golan Heights village"
+    },
+    {
+      "id": 403,
+      "name": "Fiq",
+      "period": "1967",
+      "date": "1967-06-11",
+      "district": "Golan Heights",
+      "population": 1400,
+      "current_status": "destroyed",
+      "displacement_method": "forced_expulsion",
+      "coordinates": [
+        32.7667,
+        35.6833
+      ],
+      "additional_notes": "Golan Heights village"
+    },
+    {
+      "id": 404,
+      "name": "Rafid",
+      "period": "1967-2023",
+      "date": "1974-06-01",
+      "district": "Golan Heights",
+      "population": 850,
+      "current_status": "partially_destroyed",
+      "displacement_method": "administrative_demolition",
+      "coordinates": [
+        32.75,
+        35.7167
+      ],
+      "additional_notes": "Ongoing displacement pressures"
+    },
+    {
+      "id": 405,
+      "name": "Mughr al-Khayt",
+      "period": "1967-2023",
+      "date": "1986-03-15",
+      "district": "Safad",
+      "population": 200,
+      "current_status": "destroyed",
+      "displacement_method": "administrative_demolition",
+      "coordinates": [
+        33.0333,
+        35.55
+      ],
+      "additional_notes": "Post-1967 demolition"
+    },
+    {
+      "id": 406,
+      "name": "Ein Hod",
+      "period": "1967-2023",
+      "date": "1988-05-20",
+      "district": "Haifa",
+      "population": 650,
+      "current_status": "unrecognized",
+      "displacement_method": "administrative_demolition",
+      "coordinates": [
+        32.6833,
+        35.0333
+      ],
+      "additional_notes": "Unrecognized village - ongoing displacement"
+    },
+    {
+      "id": 407,
+      "name": "Al-Araqib",
+      "period": "1967-2023",
+      "date": "2010-07-27",
+      "district": "Beersheba",
+      "population": 300,
+      "current_status": "demolished_multiple",
+      "displacement_method": "administrative_demolition",
+      "coordinates": [
+        31.2167,
+        34.9833
+      ],
+      "additional_notes": "Demolished over 200 times since 2010"
+    },
+    {
+      "id": 408,
+      "name": "Umm al-Hiran",
+      "period": "1967-2023",
+      "date": "2017-01-18",
+      "district": "Beersheba",
+      "population": 700,
+      "current_status": "demolished",
+      "displacement_method": "administrative_demolition",
+      "coordinates": [
+        31.2833,
+        35.0167
+      ],
+      "additional_notes": "Demolition and forced displacement"
+    },
+    {
+      "id": 409,
+      "name": "Susiya",
+      "period": "1967-2023",
+      "date": "2015-08-03",
+      "district": "Hebron",
+      "population": 340,
+      "current_status": "under_threat",
+      "displacement_method": "administrative_demolition",
+      "coordinates": [
+        31.4167,
+        35.1333
+      ],
+      "additional_notes": "Ongoing demolition threats"
+    },
+    {
+      "id": 410,
+      "name": "Khan al-Ahmar",
+      "period": "2023-present",
+      "date": "2023-ongoing",
+      "district": "Jerusalem",
+      "population": 180,
+      "current_status": "under_threat",
+      "displacement_method": "administrative_demolition",
+      "coordinates": [
+        31.7833,
+        35.3167
+      ],
+      "additional_notes": "Current displacement threat"
+    },
+    {
+      "id": 411,
+      "name": "Masafer Yatta",
+      "period": "2023-present",
+      "date": "2023-ongoing",
+      "district": "Hebron",
+      "population": 1300,
+      "current_status": "under_threat",
+      "displacement_method": "administrative_demolition",
+      "coordinates": [
+        31.4,
+        35.2
+      ],
+      "additional_notes": "Multiple communities under threat"
+    },
+    {
+      "id": 412,
+      "name": "Silwan",
+      "period": "2023-present",
+      "date": "2023-ongoing",
+      "district": "Jerusalem",
+      "population": 33000,
+      "current_status": "partial_displacement",
+      "displacement_method": "administrative_demolition",
+      "coordinates": [
+        31.7708,
+        35.2358
+      ],
+      "additional_notes": "Ongoing forced displacement in East Jerusalem"
+    },
+    {
+      "id": 413,
+      "name": "Sheikh Jarrah",
+      "period": "2023-present",
+      "date": "2023-ongoing",
+      "district": "Jerusalem",
+      "population": 3000,
+      "current_status": "partial_displacement",
+      "displacement_method": "administrative_demolition",
+      "coordinates": [
+        31.7906,
+        35.2281
+      ],
+      "additional_notes": "Ongoing forced displacement in East Jerusalem"
+    },
+    {
+      "id": 414,
+      "name": "Al-Walaja",
+      "period": "2023-present",
+      "date": "2023-ongoing",
+      "district": "Bethlehem",
+      "population": 2200,
+      "current_status": "under_threat",
+      "displacement_method": "administrative_demolition",
+      "coordinates": [
+        31.7167,
+        35.15
+      ],
+      "additional_notes": "Wall construction and land confiscation"
+    },
+    {
+      "id": 415,
+      "name": "Jabal al-Baba",
+      "period": "2023-present",
+      "date": "2023-ongoing",
+      "district": "Jerusalem",
+      "population": 400,
+      "current_status": "demolished",
+      "displacement_method": "administrative_demolition",
+      "coordinates": [
+        31.75,
+        35.2833
+      ],
+      "additional_notes": "Bedouin community demolished"
+    },
+    {
+      "id": 416,
+      "name": "Ras Jrabah",
+      "period": "2023-present",
+      "date": "2023-ongoing",
+      "district": "Nablus",
+      "population": 180,
+      "current_status": "under_threat",
+      "displacement_method": "administrative_demolition",
+      "coordinates": [
+        32.1833,
+        35.3167
+      ],
+      "additional_notes": "Demolition threats"
+    },
+    {
+      "id": 417,
+      "name": "Al-Samu",
+      "period": "2023-present",
+      "date": "2023-ongoing",
+      "district": "Hebron",
+      "population": 450,
+      "current_status": "partial_displacement",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        31.3833,
+        35.0667
+      ],
+      "additional_notes": "Raids and home demolitions"
+    },
+    {
+      "id": 418,
+      "name": "Beita",
+      "period": "2023-present",
+      "date": "2023-ongoing",
+      "district": "Nablus",
+      "population": 12000,
+      "current_status": "under_threat",
+      "displacement_method": "military_assault",
+      "coordinates": [
+        32.15,
+        35.3
+      ],
+      "additional_notes": "Ongoing military raids and settler attacks"
+    }
+  ]
+}

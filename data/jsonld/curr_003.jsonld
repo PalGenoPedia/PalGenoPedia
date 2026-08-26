@@ -1,0 +1,88 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "@id": "https://palgenopedia.org/data/events.json#curr_003",
+  "headline": "Flour Massacre - Al-Rashid Street",
+  "url": "https://palgenopedia.org/major-incidents-timeline.html",
+  "datePublished": "2024-02-29",
+  "dateModified": "2026-08-09",
+  "inLanguage": "en",
+  "about": {
+    "@type": "Event",
+    "name": "Flour Massacre - Al-Rashid Street",
+    "startDate": "2024-02-29",
+    "location": {
+      "@type": "Place",
+      "name": "Al-Rashid Street, Gaza City",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 31.5147,
+        "longitude": 34.4501
+      }
+    }
+  },
+  "articleBody": "Israeli forces opened fire on Palestinians waiting for food aid distribution. Hundreds of civilians killed and injured while trying to obtain flour.",
+  "keywords": "massacre, current",
+  "mentions": [
+    {
+      "@type": "Organization",
+      "name": "IDF"
+    }
+  ],
+  "citation": [
+    {
+      "@type": "Article",
+      "name": "UN OCHA"
+    },
+    {
+      "@type": "Article",
+      "name": "Gaza Health Ministry"
+    },
+    {
+      "@type": "Article",
+      "name": "Euro-Med Human Rights Monitor"
+    },
+    {
+      "@type": "Article",
+      "name": "Video evidence"
+    }
+  ],
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "Deaths",
+      "propertyID": "casualties/deaths",
+      "value": "118",
+      "minValue": 118,
+      "maxValue": 118
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Injured",
+      "propertyID": "casualties/injured",
+      "value": "760",
+      "minValue": 760,
+      "maxValue": 760
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Forced displacement",
+      "propertyID": "casualties/forced_displacement",
+      "value": "0",
+      "minValue": 0,
+      "maxValue": 0
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Verification status",
+      "propertyID": "verification_status",
+      "value": "verified"
+    }
+  ],
+  "provider": {
+    "@type": "Organization",
+    "name": "PalGenoPedia",
+    "url": "https://palgenopedia.org"
+  },
+  "isBasedOn": "https://palgenopedia.org/data/events.json"
+}

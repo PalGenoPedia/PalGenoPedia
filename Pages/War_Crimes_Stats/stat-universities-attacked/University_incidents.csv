@@ -1,0 +1,377 @@
+incident_id,facility_id,facility_name,starting_date,ending_date,attack_type,result,description,full_discription,source_url_1,source_url_2,archived_resources,has_image,image_url,archived_image,video_url,archived_video,civilians_killed,civilians_injured,hw_killed,hw_injured,added_by,reviewed_by,
+INC-000,FAC-004,Al-Aqsa University,22/01/2024 00:00,,Bombardment,Al-Aqsa University destroyed,"Israeli forces shelled Al-Aqsa University, which at the time was a shelter for displaced people",Footage shows the destruction caused to Al-Aqsa University in Khan Younis city in the Gaza Strip after it was bombed in a targeted attack by the Israeli army,https://www.middleeasteye.net/explainer-gaza-israel-palestine-war-university-destroy,https://www.youtube.com/shorts/vTwuTkzTCwU,,"Possibly - link to facebook video, but narative in Arabic.",https://www.facebook.com/AJA.Egypt/videos/1339154640139148/,,https://www.idf.il/en/mini-sites/idf-press-releases-israel-at-war/october-23-pr/why-did-the-idf-strike-the-islamic-university-in-gaza/,,,,,,Garth,Antonis,View Incident
+INC-001,FAC-004,Al-Aqsa University,20/05/2024 00:00,,Incineration,library books burned,Instagram post shows IDF soldier in front of bookshelf burning books in library.,Israeli soldiers set fire in Aqsa University library in Gaza City and took pictures of themselves in front of the flames ,https://www.timesofisrael.com/idf-opens-probe-after-social-media-posts-show-troops-burning-quran-other-books-in-gaza/,https://threadreaderapp.com/thread/1793700811870290179.html,,Yes,https://x.com/ytirawi/status/1793628894245118205?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1793628894245118205%7Ctwgr%5E3c3c4e3a656c76e64242489d538a2c47a65ab99b%7Ctwcon%5Es1_&ref_url=https%3A%2F%2Fthreadreaderapp.com%2Fthread%2F1793700811870290179.html,,,,,,,,Garth,Antonis,View Incident
+INC-002,FAC-004,Al-Aqsa University,30/12/2023 00:00,,Airstrike,20 people killed sheltering at al-Aqsa University. ,witnesses said strike killed 20 people sheltering at al-Aqsa University. ,,https://www.theguardian.com/world/2023/dec/31/israeli-airstrikes-kill-dozens-in-gaza-netanyahu-hamas,,,Yes,https://i.guim.co.uk/img/media/4b508e514dcf4439b3390cd674b1243e3f3d3e44/0_0_7917_4753/master/7917.jpg?width=1900&dpr=1&s=none&crop=none,,,,20,,,,Garth,Antonis,View Incident
+INC-003,FAC-004,Al-Aqsa University,2024-06-02,,Tank Shell,Two university buildings destroyed,Israeli army forces moved into the west of Gaza City and shelled and destroyed two buildings on the university campus. Israeli forces fired at displaced Palestinians who were taking shelter on campus.,,,,,Yes,,,https://x.com/DocumentIsrael/status/1747711679616479617/video/1,,,,,,Garth,,View Incident
+INC-004,FAC-004,Al-Aqsa University,2023-04-11,,Bombardment,University damaged by bombing,"An article from The National states that Al-Aqsa University was damaged in a bombing on 4 Nov but there do not seem to be other reports that directly mention this event, and the article does not specify whether this occured at the Khan Younis or Gaza City Campus of the Univesity.",,https://www.thenationalnews.com/mena/2024/03/01/gaza-israel-universities-war/,https://voices.uchicago.edu/scholasticide/timeline/,,Before & after videos.,"www.facebook.com/YeniSafakEnglish/videos/-before-and-after-footage-of-al-azhar-university-in-gaza-displays-the-extensive-/3729446140646878/,  https://www.bing.com/images/search?,view=detailV2&ccid=qG5%2FO%2BMj&id=DBE7446C12F87F0BD605D095499980D40C0C910C&thid=OIP.qG5_O-MjJidbg9CVvBMvDgHaC_&mediaurl=https%3A%2F%2Fwww.palestine-studies.org%2Fsites%2Fdefault%2Ffiles%2Fstyles%2Ftest_blog%2Fpublic%2Fimages%2Fblog_new%2FGettyImages-2012554702.jpg%3Fitok%3Dve2_0gJy%26c%3D1574715a79a3caf2e7ca32e59db69865&cdnurl=https%3A%2F%2Fth.bing.com%2Fth%2Fid%2FR.a86e7f3be32326275b83d095bc132f0e%3Frik%3DDJEMDNSAmUmV0A%26pid%3DImgRaw%26r%3D0&exph=500&expw=1240&q=Al-Azhar+University+%e2%80%93+Gaza&form=IQFRBA&ck=A7597C9BA98A4D016D1996BA7DD52BDC&selectedindex=2&ajaxhist=0&ajaxserp=0&pivotparams=insightsToken%3Dccid_6LWmlCl6*cp_64FD7348EF04CA85967D3F5D1C4DDE14*mid_77AB7DA902A6AF25276DC25BFDD3936482769FC9*thid_OIP.6LWmlCl647KYmt60Lm6fTAHaE8&vt=0&sim=11&iss=VSI&ajaxhist=0&ajaxserp=0 , https://x.com/Levantinette/status/1744774729125318915 ",,https://www.instagram.com/reel/C1vQ1YcInsv/,,,,,,Garth,,View Incident
+INC-005,FAC-003,Al-Azhar University – Gaza,2023-11-10,2023-11-10,Airstrike,Severe damage to the University's main campus.,"University's main campus in Gaza was targeted and suffered severe damage as a result, particularly affecting the Faculty of Intermediate Studies and other science faculties.",The UN Independent Commission verified the Israeli security forces’ seizure of Al-Azhar University’s Al-Mughraqa campus in November 2023 and the forces’ occupation of the campus to 7 December 2023,https://gazaeducationsector.palestine-studies.org/en/node/3526,,,,,,,,,,,,Garth,,View Incident
+INC-006,FAC-003,Al-Azhar University – Gaza,26/10/2023,26/10/2023,Airstrike,Series of airstrikes on Al-Azhar University,,,https://gazaeducationsector.palestine-studies.org/en/node/3526,,,Yes,"https://www.middleeasteye.net/explainer-gaza-israel-palestine-war-university-destroy,https://www.middleeastmonitor.com/20231106-israeli-air-strikes-target-gazas-al-azhar-university/",,,,,,,,Garth,,View Incident
+INC-007,FAC-003,Al-Azhar University – Gaza,2023-04-11,2023-04-11,Airstrike,University campus virtually destroyed,Strike on Al-Azhar University's new buildings in al-Mughraqa in the southern Gaza Strip,"Warplanes targeted Al-Azhar University campus in al-Maghraqa, east of Gaza City, and almost destroyed the campus as a whole. This campus has two main buildings: the first houses the Faculties of Arts and Humanities, Sharia, and Education, and the second houses the King Hassan II Building, which includes the Faculties of Agriculture, Veterinary Medicine, and Law. Additionally, the campus has laboratories and the University's radio and television station. The Faculty of Agriculture's farm in Beit Hanoun was destroyed, and the Haider Abdel Shafi Medical School building in Tal al-Hawa was partially damaged.",https://gazaeducationsector.palestine-studies.org/en/node/3526,"https://www.scholarsatrisk.org/report/2023-11-06-al-azhar-niversity/#:~:text=Around%20November%206%2C%202023%2C%20Israeli,the%20university%20had%20been%20destroyed, https://x.com/ytirawi/status/1789942261209325757?s=46&fbclid=IwZXh0bgNhZW0CMTAAAR3j1RdjkSsbE9GV1GA9V5aEyAkGwqGc-FMhED5EGzZOcazau1nfvQL8kZw_aem_ZmFrZWR1bW15MTZieXRlcw",,Yes,https://x.com/ytirawi/status/1835331007240655224,,,,,,,,Garth,,View Incident
+INC-008,FAC-003,Al-Azhar University – Gaza,2023-07-12,2023-07-12,Demolition,Faculty of Law building targetted,,"Israeli security forces also demolished part of the Al-Azhar University’s Al-Mughraqa campus. The UN Independent Commission established that Israeli security forces had targeted the campus at least three times between 26 October and 7 December 2023. On 7 December 2023, Israeli security forces demolished the Faculty of Arts and Human Sciences building and the Al Riyadh Auditorium building through controlled demolitions.",https://gazaeducationsector.palestine-studies.org/en/node/3526,https://docs.un.org/en/A/HRC/59/26,,Yes,"https://www.instagram.com/timesofgaza/p/Czq4eVeIza2/ , https://x.com/Levantinette/status/1744774743373275289 ",,https://www.idf.il/en/mini-sites/idf-press-releases-israel-at-war/october-23-pr/why-did-the-idf-strike-the-islamic-university-in-gaza/,,,,,,Garth,,View Incident
+INC-009,FAC-003,Al-Azhar University – Gaza,2023-11-10,,Attack,Israel begins attacks on Al-Azhar Univesrity,No 11 Octobter the Ministry of Higher Education and Research issued a statement saying that Al-Azhar University and the Islamic University of Gaza had been struck and damaged. Most other sources do not document the destruction of Al-Azhar University as starting until late October or early November.,,https://www.mohe.pna.ps/news?p=articles&news=8954,"https://www.universityworldnews.com/post.php?story=20231012162739531 , https://voices.uchicago.edu/scholasticide/timeline/ ",,,,,,,,,,,Garth,,View Incident
+INC-010,FAC-003,Al-Azhar University – Gaza,2023-04-11,,Bombardment,The campus was bombed leading to the destruction of most of the campus,"On November 4, 2023, the Israeli Occupation warplanes targeted Al-Azhar University campus in al-Maghraqa, east of Gaza City, and almost destroyed the campus as a whole... The Faculty of Agriculture's farm in Beit Hanoun was destroyed, and the Haider Abdel Shafi Medical School building in Tal al-Hawa was partially damaged... The West Campus faculties suffered significant damage... (Palestine Studies, Al-Azhar). A policy paper published by the Institute for Palestine Studies states ""On October 26 and again on November 4, Israeli military aircraft bombed the buildings of Al-Azhar University. These bombings occurred while a large number of civilians had taken refuge there. At least 12 people were reportedly killed and more than 50 wounded, while rescue teams were searching for survivors under the rubble."" The source cited for this information is Top War (a.k.a. Military Review), which is not considered highly reliable, and no other news agencies reported casualties at Al-Azhar on 26 Oct of 4 Nov.",,https://gazaeducationsector.palestine-studies.org/en/node/3526,"https://www.scholarsatrisk.org/report/2023-11-06-al-azhar-university/#:~:text=Around%20November%206%2C%202023%2C%20Israeli,the%20university%20had%20been%20destroyed. , https://voices.uchicago.edu/scholasticide/timeline/ , https://en.topwar.ru/229568-cahal-razbombil-palestinskij-universitet-al-azhar-v-gaze.html , https://www.palestine-studies.org/fr/node/1654680#_edn7 ",,,https://x.com/Levantinette/status/1744774743373275289,,,,,,,,Garth,,View Incident
+INC-011,FAC-003,Al-Azhar University – Gaza,26/10/2023,,Airstrike,Israeli forces launched airstrikes targeting the university,Israeli military aircraft bombed the buildings of Al-Azhar University. These bombings occurred while a large number of civilians had taken refuge there.,,https://www.palestine-studies.org/fr/node/1654680,https://gazaeducationsector.palestine-studies.org/en/node/3526,,Yes,https://www.middleeasteye.net/explainer-gaza-israel-palestine-war-university-destroy,,,,,,,,Garth,,View Incident
+INC-012,FAC-003,Al-Azhar University – Gaza,21/11/2023,,Airstrike,Airstrike on Al-Azhar campus,"The main headquarters of Al-Azhar University in Gaza City and its branch in the area of Al-Mughraqa were completely destroyed, stated the human rights group, due to repeated Israeli airstrikes on 11 October, 4 November, and 21 November of 2023.",,"https://www.euromedmonitor.org/en/article/6163/Israel%E2%80%99s-demolition-of-educational-institutions,-cultural-objects-in-Gaza-is-additional-manifestation-of-genocide",https://www.visionscarto.net/nehru-library-english,,,,,,,,,,,Garth,,View Incident
+,FAC-003,Al-Azhar University – Gaza,26/12/2026,26/12/2026,Airstrike,Heavy damage in surrounding area; mass displacement/missing persons reported,"Israeli forces struck a three-storey building in the vicinity of Al-Azhar University in Gaza City, leading to over 60 people reported missing. The university itself is not confirmed destroyed in this entry, but the surrounding area was heavily impacted.",,,,,,,,,,,,,,,,
+INC-014,FAC-008,Al-Quds Open University – Gaza,15/11/23,15/11/23,Airstrike,Bombed and destroyed,Gaza branch library,"Israeli forces turned university buildings into military barracks, before bombing the Gaza branch on 15 November",https://www.visionscarto.net/Libraries-Al-Quds-Open-University,"https://genocide.live/14500, https://x.com/MiddleEastEye/status/1728473137300320383?s=20, https://www.qou.edu/en/viewCmsContentDtlEn.do?contentId=82184",,,,,,,,,,,Garth,,View Incident
+INC-015,FAC-008,Al-Quds Open University – Gaza,15/11/2023,,Airstrike,University campus destroyed by Israeli bombing,"In the midst of the relentless attack and massacres against children, women, and the elderly, not to mention the targeting of safe houses and public infrastructure, al-Quds Open University represented by its Board of Trustees, President, staff, and students, reaffirms and condemns  the relentless bombardment  and destruction of its Gaza branch building, turning it into a military barracks as part of a systematic policy in the context of the continuing sinister aggression and the horrific crimes committed in the Gaza Strip for more than 40 days, adding to its crimes and massacres for the last 75 years of occupation.",,https://www.qou.edu/en/viewCmsContentDtlEn.do?contentId=82184,"https://voices.uchicago.edu/scholasticide/timeline/ , https://x.com/MiddleEastEye/status/1728473137300320383?s=20 ",,Yes,"https://www.facebook.com/mitri.raheb/videos/dar-al-kalima-university-gaza-training-center-once-a-place-for-of-creativity-and/361211246253057/, https://x.com/RahebM/status/1774863247721816186/photo/3, https://www.youtube.com/shorts/S_sjK5KPPMg",,,,,,,,Garth,,View Incident
+INC-016,FAC-009,Arab College for Applied Sciences,,,,Complete destruction,The Branch in the North Gaza was burned down and destroyed.,,https://gazaeducationsector.palestine-studies.org/sites/default/files/pdf/public_records/Rabaia%26Habash_Destruction%20of%20Higher%20Education%20%28educide%29%20in%20the%20Gaza%20Strip_Assessment%20and%20Support%20mechanisms.pdf,,,,,,,,,,,,Garth,,View Incident
+INC-017,FAC-009,Arab College for Applied Sciences,,,,Damaged,The Khan Yunis campus was partially damaged and the branch director was killed during the invasion of Khan Yunis governorate. Now the branch is sheltering thousands of displaced people.,,https://gazaeducationsector.palestine-studies.org/sites/default/files/pdf/public_records/Rabaia%26Habash_Destruction%20of%20Higher%20Education%20%28educide%29%20in%20the%20Gaza%20Strip_Assessment%20and%20Support%20mechanisms.pdf,,,,,,,,,,,,Garth,,View Incident
+INC-018,ID Not Found,Dar al-Kalima University: Gaza Training Centre,2000-03-24,2000-03-24,Airstrike,Destroyed, ,,https://www.facebook.com/mitri.raheb/videos/dar-al-kalima-university-gaza-training-center-once-a-place-for-of-creativity-and/361211246253057/,"https://www.ucc.org/destruction-of-ucc-partners-clinic-university-in-gaza-during-holy-week-testifies-to-horrors-of-ongoing-crisis/, https://genocide.live/14500",,,,,,,20,,,,Garth,,View Incident
+INC-019,FAC-000,Gaza University,2000-12-23,2000-12-23,Airstrike,University was destroyed in December by an Israeli air strike,,,https://www.middleeasteye.net/explainer-gaza-israel-palestine-war-university-destroy,https://genocide.live/14500,,,,,,,,,,,Garth,,View Incident
+INC-020,ID Not Found,Hassan II University of Agriculture and Environmental Sciences,2000-12-23,2000-12-23,,Destroyed,,,https://www.middleeasteye.net/explainer-gaza-israel-palestine-war-university-destroy,,,,,,,,,,,,Garth,,View Incident
+INC-021,FAC-001,Islamic University of Gaza,2023-09-10,2023-11-10,Airstrike,"Bombing destroyed a number of university buildings, including the library.","The buildings of the College of Information Technology, the Deanship of Community Service and Continuing Education, and  the university’s College of Sciences were all seriously damaged,” read a University statement. During the ground invasion, which began in the end of October, the rest of the Islamic University buildings were detonated by Israeli forces",,https://mondoweiss.net/2023/12/operation-al-aqsa-flood-day-58-israel-kills-700-in-gaza-over-24-hours-as-palestinians-get-forced-further-south-toward-egypt/,"https://www.middleeasteye.net/explainer-gaza-israel-palestine-war-university-destroy, https://genocide.live/14500, https://english.alarabiya.net/News/middle-east/2023/10/11/Israel-strikes-Islamic-University-in-Gaza",,https://archive.org/details/twitter-1800587364051656791,,,,,,,,,Garth,,View Incident
+INC-022,FAC-001,Islamic University of Gaza,2023-03-12,2023-03-12,Airstrike,Israeli airstrike in Al-Faluja area in Jabalia,University Rector / researcher in physics and applied mathematics and his family killed.,,https://mondoweiss.net/2023/12/operation-al-aqsa-flood-day-58-israel-kills-700-in-gaza-over-24-hours-as-palestinians-get-forced-further-south-toward-egypt/,,,,,,,,1,,,,Garth,,View Incident
+INC-023,FAC-001,Islamic University of Gaza,2023-10-12,2023-10-12,Demolition,Medical School destroyed,Israeli forces detonated the medical school of the Islamic University,,https://imemc.org/article/israel-detonates-last-university-in-gaza/,,,,,,,,,,,,Garth,,View Incident
+INC-024,FAC-001,Islamic University of Gaza,2023-03-12,2023-03-12,Airstrike,Palestinian researcher in physics and applied mathematics and the rector of the Gaza Islamic University,,,,,,,,,,,,,,,,,View Incident
+INC-025,FAC-001,Islamic University of Gaza,2023-09-10,,Airstrike,Islamic University of Gaza hit,The Israeli military commences its assault on Gaza’s education sector by leveling the Islamic University of Gaza’s library. ,,https://voices.uchicago.edu/scholasticide/timeline/,https://ccas.georgetown.edu/ccas-newsmagazine/scholasticide-in-gaza/,,,,,,,,,,,,,View Incident
+INC-026,FAC-001,Islamic University of Gaza,2023-11-10,,Airstrike,More strikes on the Islamic University of Gaza campus,"Israel extensively bombs the Gaza campus of the Islamic University of Gaza, destroying its mosque and most of its main buildings (University of Chicago). On its official Facebook page, the university announced that the Information Technology Faculty building, the Faculty of Social Affairs and Continuing Education building, and the Science Faculty building all suffered severe damage, along with their equipment, laboratories, and furniture. All the windows in all the university buildings and on their facades are shattered (Palestine Studies).",,https://voices.uchicago.edu/scholasticide/timeline/,"https://english.alarabiya.net/News/middle-east/2023/10/11/Israel-strikes-Islamic-University-in-Gaza , https://www.nbcnews.com/specials/gaza-universities-destroyed-israel-military-war/index.html , https://www.palestine-studies.org/fr/node/1654680 ",,Yes,https://gazacultrualsector.palestine-studies.org/en/node/4653,,"https://www.youtube.com/watch?v=L9N7We_iZSA , https://x.com/OnlinePalEng/status/1711725163148914848 ",,,,,,Tally,,View Incident
+,FAC-001,Islamic University of Gaza,2024-06-03,2024-06-03,Airstrike (Vicinity),Fatal civilian casualties in surrounding residential buildings,"Two houses were hit east of Islamic University of Gaza in western Khan Younis, resulting in multiple civilian deaths including women and children. No direct confirmation the university itself was struck.",,https://www.ochaopt.org/content/humanitarian-situation-update-176-gaza-strip,,,,,,,,10,,,,,,
+INC-028,FAC-002,Israa University,17/01/2024,17/01/2024,Demolition,"The targeted structures that housed graduate and undergraduate colleges, as well as a national museum",The army occupied and used the university as a military base for 70 days before it was detonated with 315 mines placed by the Israeli military.,The university said in a statement that its main buildings for graduate studies and bachelor’s colleges were destroyed.The university said Israeli forces seized the complex 70 days ago and used it as a base,https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-97,"https://www.timesofisrael.com/senior-idf-officer-censured-over-demolition-of-gaza-university-without-approval/,https://www.middleeasteye.net/explainer-gaza-israel-palestine-war-university-destroy, https://imemc.org/article/israel-detonates-last-university-in-gaza/",,Yes,,,"https://www.nbcnews.com/specials/gaza-universities-destroyed-israel-military-war/index.html , https://www.instagram.com/reel/CyOTHmlMlDr/ , https://www.dropsitenews.com/p/gaza-schools-university-reopen-education-israeli-attacks , https://therealnews.com/israel-destroyed-my-university-where-is-the-outrage",,,,,,Tally,,View Incident
+INC-029,FAC-006,Palestine Technical College,,,,,,,,,,No,,,,,,,,,Tally,,View Incident
+INC-030,FAC-007,University College of Applied Sciences (UCAS),22/01/24,22/01/24,Bombardment,Shelled on 22 January while sheltering displaced families. ,,,https://genocide.live/14500,"War on Gaza: Killing of Gaza’s academics amounts to ‘educide,’ say campaigners | Middle East Eye",,No,,,,,,,,,Tally,,View Incident
+INC-031,FAC-007,University College of Applied Sciences (UCAS),2000-08-24,,Access Restricted,Israeli Military base,Israeli occupation forces turn the University College of Applied Sciences into a military base in August 2024.,,,,,No,,,,,,,,,Tally,,View Incident
+INC-032,FAC-007,University College of Applied Sciences (UCAS),19/10/2023,,Bombardment (Vicinity),College severly damaged,The University College was severely damaged due to direct bombardment in Tel al-Hawa neighborhood.,,https://www.theguardian.com/world/2023/dec/31/israeli-airstrikes-kill-dozens-in-gaza-netanyahu-hamas,,,Yes,,,https://www.facebook.com/watch/?v=1024226265315856,,,,,,Tally,,View Incident
+INC-033,FAC-007,University College of Applied Sciences (UCAS),2024-03-08,,Bombardment,Total destruction,"Army forces incursion into the Tel al-Hawa neighborhood carried out blasting, detonation and shelling of the buildings of the university college and completely destroyed them",,https://gazaeducationsector.palestine-studies.org/en/node/3518,,,No,,,,,,,,,Tally,,View Incident
+INC-034,FAC-007,University College of Applied Sciences (UCAS),19/10/2023,,Airstrike,Campus attacked,Israel bombed and destroyed the campus.,,https://www.scholarsatrisk.org/report/2023-10-19-university-college-of-applied-sciences-gaza/,"https://www.middleeasteye.net/news/war-gaza-israel-killing-academics-educide-campaigners-say , https://voices.uchicago.edu/scholasticide/timeline/ ",,No,,,,,,,,,Tally,,View Incident
+INC-035,FAC-005,University of Palestine,17/01/2024,17/01/24,Demolition,,Forces detonated more than 300 mines at the university,,https://www.middleeasteye.net/explainer-gaza-israel-palestine-war-university-destroy,https://genocide.live/14500,,Yes,https://www.instagram.com/timesofgaza/p/Czq4eVeIza2/,,https://x.com/MiddleEastEye/status/1728473137300320383?s=20,,,,,,Tally,,View Incident
+INC-036,FAC-001,Islamic University of Gaza,14/09/2025 14:30,,Direct Strike,one or more buildings within the Islamic University were successively hit,"On 14 September, at about 14:30, at least seven Palestinians were reportedly killed, and others were reported missing under the rubble, when one or more buildings within the Islamic University were successively hit in Ar Rimal neighbourhood, in central Gaza city, after the Israeli military reportedly issued warnings for people in the area to evacuate. At least one building was sheltering IDPs, who reportedly returned to collect belongings after the second strike when the building was struck again with high-explosive missiles.",,https://www.ochaopt.org/content/humanitarian-situation-update-323-gaza-strip,,,No,,,,,,,,,Yassine,,View Incident
+INC-037,FAC-003,Al-Azhar University – Gaza,2025-08-09,,Direct Strike (Vicinity),"A building near the University was hit and destroyed, the hit came after the issuing of a displacement order the same day.","On 8 September, a displacement order was issued for a 12-storey commercial building and the surrounding blocks and IDP tents, near Al Azahar University in Ar Rimal, in central Gaza city. The order covered one square kilometre in one neighbourhood. On the same day, the building was hit and destroyed, causing severe damage to the area. ",,https://www.ochaopt.org/content/humanitarian-situation-update-321-gaza-strip,,,No,,,,,,,,,Yassine,,View Incident
+INC-038,ID Not Found,Gaza Sky Geeks,2023-09-10,,Airstrike (Vicinity),Facilities severely damaged,"The main hub in the Al Rimal neighborhood, had its front exterior completely ripped off. While parts of the structure initially remained standing, the surrounding area was leveled.",,Opinion: Gaza's techies see dreams crushed after Israel's bombs - Los Angeles Times,,,Yes,Opinion: Gaza's techies see dreams crushed after Israel's bombs - Los Angeles Times,,,,,,,,Garth,,View Incident
+INC-039,FAC-000,Gaza University,2023-04-12,,Destroyed,University of Gaza was bombed and appeared destroyed,"There are some reports of Gaza University being bombed on 4 Dec, 2023 but there do not seem to be any main stream news sources that confirm this, and one report puts the date of the attack as 1 Dec, 2023. ""In December 2023, Israeli airstrikes heavily targeted Gaza University and its main campus in al-Zeitoun neighbourhood. Four other university buildings suffered partial damage. The University's branch in Beit Lahia, northern Gaza, was also bombed, raided, and destroyed, as was its Khan Younis branch.""",,https://voices.uchicago.edu/scholasticide/timeline/,"https://gazaeducationsector.palestine-studies.org/en/node/4004 , https://mesana.org/advocacy/committee-on-academic-freedom/2024/01/25/letter-condemning-the-devastating-military-campaign-in-gaza ",,No,,,,,,,,,Tally,,View Incident
+INC-040,FAC-008,Al-Quds Open University – Gaza,2023-06-12,,Destroyed,Library at Al-Quds Open University was struck,"In early December 2023 many libraries in Gaza were targeted, including the library at Al-Quds Open University which was sustained serious damage. There are some images of damage to the library but it is not clear if these images show damage from the 6 Dec incident or a different attack.",,https://arablit.org/wp-content/uploads/2023/12/English-.pdf,"https://librarianswithpalestine.org/wp-content/uploads/2024/02/LAP-Gaza-Report-2024.pdf , https://voices.uchicago.edu/scholasticide/timeline/ , https://ccas.georgetown.edu/ccas-newsmagazine/scholasticide-in-gaza/ ",,Yes,"https://gazacultrualsector.palestine-studies.org/en/node/5006 , https://gazacultrualsector.palestine-studies.org/en/node/5006 ",,,,,,,,Tally,,View Incident
+INC-041,FAC-003,Al-Azhar University – Gaza,2023-12-07,,Demolition,Al-Mughraqa Campus of Al-Azhar University was demolished by Israeli forces after the soldiers had used it to store munitions and hold religious services,"Israeli security forces also demolished part of the Al-Azhar University’s Al-Mughraqa
+campus. The Commission established that Israeli security forces had targeted the campus at
+least three times between 26 October and 7 December 2023. On 7 December 2023, Israeli
+security forces demolished the Faculty of Arts and Human Sciences building and the AlRiyadh Auditorium building through controlled demolitions. The Commission identified
+those involved in the demolition as soldiers belonging to the 749th Combat Engineering
+Battalion.
+
+Images and videos depicting Israeli soldiers dancing and freely moving at the site, and
+satellite imagery analysis showing cars parked at the site, have led the Commission to
+conclude on reasonable grounds that there was no significant threat to Israeli security forces
+in the area and therefore no military necessity to demolish the university buildings.
+
+Incidents of the demolition of educational facilities have been filmed by Israeli
+soldiers. Footage depicts them expressing celebratory or demeaning comments and jokes
+during or after demolitions. In one example, an Israeli soldier says in Hebrew: “For all those
+asking why there is no education in Gaza, oops a missile fell on you, that sucks, too bad. That
+is how you will not be engineers anymore.”16 A caption to the posted video reads: “In the
+university of the terrorists.”
+
+The Commission verified the Israeli security forces’ seizure of Al-Azhar University’s
+Al-Mughraqa campus in November 2023 and the forces’ occupation of the campus to
+7 December 2023. Evidence collected and verified by the Commission indicated that Israeli
+security forces had used the campus to store munitions, vehicles and other military equipment;
+that religious services were provided to soldiers in an area of the building that Israeli security
+forces had transformed into a synagogue with a dedicated plaque; and that a Mezuzah18 had
+been fixed on the entrance to the building. ",,https://docs.un.org/en/A/HRC/59/26,"https://voices.uchicago.edu/scholasticide/timeline/ https://www.i24news.tv/en/news/israel-at-war/1702035523-idf-destroys-hamas-linked-facilities-at-gaza-s-al-azhar-university , https://gazaeducationsector.palestine-studies.org/en/node/3526 ",,Yes,,,https://www.instagram.com/reels/C1vQ1YcInsv/,,,,,,Tally,,View Incident
+INC-042,FAC-004,Al-Aqsa University,31/12/2023 00:00,,Airstrike,"Al-Aqsa University campus was hit, killing 20","Another strike killed 20 people sheltering at al-Aqsa University in the west of Gaza City, witnesses said.",,https://www.theguardian.com/world/2023/dec/31/israeli-airstrikes-kill-dozens-in-gaza-netanyahu-hamas,https://voices.uchicago.edu/scholasticide/timeline/,,No,,,,,20,,,,Tally,,View Incident
+INC-043,FAC-012,Al-Aqsa University - Khan Younis,2024-02-02,,Airstrike (Vicinity),"Warplanes targeted the area surrounding Al-Aqsa University in Khan Younis. At the time, the University's building had become a shelter centre, where people endured difficult conditions, with overflowing sewage and limited access to safe drinking water.",,,Al-Aqsa University | Documenting the Educide in the Gaza Strip,,,No,https://www.youtube.com/watch?v=P0lf-Mwk-v0&t=3s,,,,,,,,,,View Incident
+INC-044,FAC-012,Al-Aqsa University - Khan Younis,24/01/24,,Forced Evacuation,"During its ground invasion of Khan Younis, the Israeli Occupation besieged and bombed Al-Aqsa University and forced displaced Palestinian families to leave the site after they had taken shelter inside.",,Occupation forces demolished the university’s outer fence and then gave sufficient time for thieves to steal all its contents.,"""Al-Aqsa University | Documenting the Educide in the Gaza Strip""""https://electronicintifada.net/content/right-education-will-remain-under-threat-gaza/47466?utm_source=EI+readers&utm_campaign=e07301a25d-RSS_EMAIL_CAMPAIGN&utm_medium=email&utm_term=0_e802a7602d-e07301a25d-299323212""",,,No,Gaza’s Al-Aqsa University is destroyed after Israel intensifies its attack on  Khan Younis city,,,,,,,,,,View Incident
+INC-045,FAC-002,Israa University,2024-01-15,,Demolition,"After occupying Israa University for 70 days, Israeli forces demolished all remaining campus buildings around 15 Jan, and released footage of the destruction of 17 Jan","January 17 – Video footage emerges of Israeli forces detonating 315 mines to destroy the remaining buildings of Al-Israa University’s Al-Zahara campus, Gaza’s last standing university campus. Israeli soldiers had previously occupied the campus and used it as a military base for 70 days. Al-Israa University had been home to Gaza’s first national museum, containing over 3,000 artifacts, which Israeli forces looted before the demolition.",,https://www.aljazeera.com/news/2024/1/24/how-israel-has-destroyed-gazas-schools-and-universities,"https://voices.uchicago.edu/scholasticide/timeline/ , https://www.nbcnews.com/specials/gaza-universities-destroyed-israel-military-war/index.html , https://www.thenationalnews.com/mena/2024/03/01/gaza-israel-universities-war/ ,https://www.972mag.com/gaza-academia-destruction-universities/ ",,Yes,"https://www.thenationalnews.com/mena/2024/03/01/gaza-israel-universities-war/ , https://www.nbcnews.com/specials/gaza-universities-destroyed-israel-military-war/index.html ",,https://x.com/AJEnglish/status/1748435156816257196,,,,,,Tally,,View Incident
+INC-046,FAC-012,Al-Aqsa University - Khan Younis,25/01/2024 00:00,,Destroyed,Tanks entered the campus causing destruction,January 25 – Middle East Eye publishes footage showing severe damage to the Khan Yunis campus of Al-Aqsa University. Eyewitnesses report that Israeli tanks had stormed the campus and encouraged looting.,,https://voices.uchicago.edu/scholasticide/timeline/,,,Yes,,,https://www.youtube.com/shorts/vTwuTkzTCwU?app=desktop,,,,,,Tally,,View Incident
+INC-047,FAC-004,Al-Aqsa University,23/05/2024 00:00,,Unspecified,In May of 2024 images surfaced of Israeli soldiers burning books in the library of Al-Aqsa University,"Pictures of IDF soldiers setting fire to books in the library of Al-Aqsa University in Gaza City surfaced in late May, 2024. While the pictures started circulating on social media and in the news in May, it is not clear when exactly they were taken.",,https://www.timesofisrael.com/idf-opens-probe-after-social-media-posts-show-troops-burning-quran-other-books-in-gaza/,https://threadreaderapp.com/thread/1793700811870290179.html,,Yes,https://x.com/ytirawi/status/1793628894245118205,,,,,,,,Tally,,View Incident
+INC-048,FAC-004,Al-Aqsa University,2024-06-02,,Artillery Shelling,"Two buildings on the campus were destroyed by shelling, and displaced people sheltering on the campus were fired at","“Israeli army forces moved into the west of Gaza City and shelled and destroyed two buildings on the university campus,” an eyewitness told Anadolu.
+
+According to an Anadolu reporter, Israeli forces fired at displaced Palestinians who were taking shelter on campus.",,https://www.aa.com.tr/en/middle-east/israeli-army-destroys-2-buildings-of-al-aqsa-university-in-gaza-city/3129434,https://voices.uchicago.edu/scholasticide/timeline/,,Yes,,,"https://www.facebook.com/reel/696434100203891 , https://www.facebook.com/watch/?v=426619863263022 ",,,,,,Tally,,View Incident
+INC-049,FAC-003,Al-Azhar University – Gaza,13/05/2024 00:00,,Unspecified,A video taken by an IDF soldiers showing the destruction of Al-Azhar University starts circulating on social media,"An IDF soldier posted a video walking around the campus of Al-Azhar, showing the destruction and joking about the university being under construction and classes starting never. It is not clear exactly when the video was taken or what incident created the damage that was shown. ",,https://voices.uchicago.edu/scholasticide/timeline/,https://x.com/ytirawi/status/1789942261209325757?s=46&fbclid=IwZXh0bgNhZW0CMTAAAR3j1RdjkSsbE9GV1GA9V5aEyAkGwqGc-FMhED5EGzZOcazau1nfvQL8kZw_aem_ZmFrZWR1bW15MTZieXRlcw,,Yes,,,https://x.com/ytirawi/status/1789942261209325757?s=46&fbclid=IwZXh0bgNhZW0CMTAAAR3j1RdjkSsbE9GV1GA9V5aEyAkGwqGc-FMhED5EGzZOcazau1nfvQL8kZw_aem_ZmFrZWR1bW15MTZieXRlcw,,,,,,Tally,,View Incident
+INC-050,FAC-001,Islamic University of Gaza,2025-05-09,,Airstrike,An airstrike hit the Islamic University of Gaza killing three individuals who were sheltering on the campus,"Three Palestinians were killed and several others wounded after Israeli fighter jets struck a tent sheltering displaced families inside the Islamic University in al-Rimal al-Janoubi neighborhood, west of Gaza City.",,https://english.wafa.ps/Pages/Details/160970,https://voices.uchicago.edu/scholasticide/timeline/,,No,,,,,3,,,,Tally,,View Incident
+INC-051,FAC-001,Islamic University of Gaza,14/09/2025,,Airstrike,The university of was hit again while the IDF was targeting high rises in Gaza City,"Another building at the Islamic University in Gaza was struck and destroyed by several missiles, according to images and video from the scene. Israeli Defense Minister Israel Katz posted a video of the strikes targeting the six-story building on X, saying: “The ‘Islamic’ University in Gaza is going up in smoke. Eliminating the sources of incitement and terrorism.”",,https://www.haaretz.com/israel-news/2025-09-14/ty-article/.premium/idf-strikes-four-more-high-rises-in-gaza-city-as-netanyahu-tells-residents-to-leave/00000199-494e-d700-a5fd-ff6f74b40000,https://x.com/Israel_katz/status/1967210017008013424?s=20,,Yes,"https://www.reutersconnect.com/item/smoke-rises-from-the-islamic-university-building-in-gaza-city/dGFnOnJldXRlcnMuY29tLDIwMjU6bmV3c21sX1JDMlJSR0FNMEY3Tw , https://www.instagram.com/p/DOlb9jIjSFY/ ",,https://x.com/Israel_katz/status/1967210017008013424?s=20,,,,,,Tally,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,

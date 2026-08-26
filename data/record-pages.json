@@ -1,0 +1,568 @@
+{
+ "generated": "2026-08-25",
+ "sections": {
+  "hospitals": {
+   "FAC-000": {
+    "en": "/war-crimes/hospitals/al-shifa-medical-complex/",
+    "de": "/war-crimes/hospitals/de/al-shifa-medizinkomplex/",
+    "ar": "/war-crimes/hospitals/ar/مجمع-الشفاء-الطبي/"
+   },
+   "FAC-001": {
+    "en": "/war-crimes/hospitals/kamal-adwan-hospital/",
+    "de": "/war-crimes/hospitals/de/kamal-adwan-krankenhaus/",
+    "ar": "/war-crimes/hospitals/ar/مستشفى-كمال-عدوان/"
+   },
+   "FAC-002": {
+    "en": "/war-crimes/hospitals/nasser-medical-complex/",
+    "de": "/war-crimes/hospitals/de/nasser-medizinkomplex/",
+    "ar": "/war-crimes/hospitals/ar/مجمع-ناصر-الطبي/"
+   },
+   "FAC-003": {
+    "en": "/war-crimes/hospitals/al-awda-hospital/",
+    "de": "/war-crimes/hospitals/de/al-awda-krankenhaus/",
+    "ar": "/war-crimes/hospitals/ar/مستشفى-العودة/"
+   },
+   "FAC-004": {
+    "en": "/war-crimes/hospitals/al-awda-hospital-nusseirat/",
+    "de": "/war-crimes/hospitals/de/al-awda-krankenhaus-nusseirat/",
+    "ar": "/war-crimes/hospitals/ar/مستشفى-العودة-النصيرة/"
+   },
+   "FAC-005": {
+    "en": "/war-crimes/hospitals/al-amal-hospital/",
+    "de": "/war-crimes/hospitals/de/al-amal-krankenhaus/",
+    "ar": "/war-crimes/hospitals/ar/مستشفى-الأمل/"
+   },
+   "FAC-006": {
+    "en": "/war-crimes/hospitals/al-aqsa-martyrs-hospital/",
+    "de": "/war-crimes/hospitals/de/al-aqsa-maertyrerkrankenhaus/",
+    "ar": "/war-crimes/hospitals/ar/مستشفى-شهداء-الأقصى/"
+   },
+   "FAC-007": {
+    "en": "/war-crimes/hospitals/indonesian-hospital/",
+    "de": "/war-crimes/hospitals/de/indonesisches-krankenhaus/",
+    "ar": "/war-crimes/hospitals/ar/مستشفى-إندونيسي/"
+   },
+   "FAC-008": {
+    "en": "/war-crimes/hospitals/al-quds-hospital/",
+    "de": "/war-crimes/hospitals/de/al-quds-krankenhaus/",
+    "ar": "/war-crimes/hospitals/ar/مستشفى-القدس/"
+   },
+   "FAC-009": {
+    "en": "/war-crimes/hospitals/al-ahli-arab-hospital/",
+    "de": "/war-crimes/hospitals/de/al-ahli-arabisches-krankenhaus/",
+    "ar": "/war-crimes/hospitals/ar/مستشفى-الأهلي-العربي/"
+   },
+   "FAC-010": {
+    "en": "/war-crimes/hospitals/gaza-european-hospital/",
+    "de": "/war-crimes/hospitals/de/europaeisches-krankenhaus-gaza/",
+    "ar": "/war-crimes/hospitals/ar/مستشفى-غزة-الأوروبي/"
+   },
+   "FAC-011": {
+    "en": "/war-crimes/hospitals/al-ranteesi-al-naser-paediatric-hospital/",
+    "de": "/war-crimes/hospitals/de/al-ranteesi-al-naser-kinderkrankenhaus/",
+    "ar": "/war-crimes/hospitals/ar/مستشفى-الرنتيسي-النصر-لطب-الأطفال/"
+   },
+   "FAC-012": {
+    "en": "/war-crimes/hospitals/muhammad-al-durrah-children-s-hospital/",
+    "de": "/war-crimes/hospitals/de/muhammad-al-durrah-kinderkrankenhaus/",
+    "ar": "/war-crimes/hospitals/ar/مستشفى-محمد-الدرة-للأطفال/"
+   },
+   "FAC-013": {
+    "en": "/war-crimes/hospitals/beit-hanoun-hospital/",
+    "de": "/war-crimes/hospitals/de/beit-hanoun-krankenhaus/",
+    "ar": "/war-crimes/hospitals/ar/مستشفى-بيت-حانون/"
+   },
+   "FAC-014": {
+    "en": "/war-crimes/hospitals/sheikh-hamad-hospital-for-rehabilitation-and-prosthetics/",
+    "de": "/war-crimes/hospitals/de/sheikh-hamad-krankenhaus-fuer-rehabilitation-und-prothetik/",
+    "ar": "/war-crimes/hospitals/ar/مستشفى-الشيخ-حمد-للتأهيل-والأطراف-الصناعية/"
+   },
+   "FAC-015": {
+    "en": "/war-crimes/hospitals/al-karama-specialized-hospital/",
+    "de": "/war-crimes/hospitals/de/al-karama-spezialkrankenhaus/",
+    "ar": "/war-crimes/hospitals/ar/مستشفى-الكرامة-التخصصي/"
+   },
+   "FAC-016": {
+    "en": "/war-crimes/hospitals/gaza-psychiatric-hospital/",
+    "de": "/war-crimes/hospitals/de/psychiatrische-klinik-gaza/",
+    "ar": "/war-crimes/hospitals/ar/مستشفى-غزة-للأمراض-النفسية/"
+   },
+   "FAC-017": {
+    "en": "/war-crimes/hospitals/international-eye-hospital/",
+    "de": "/war-crimes/hospitals/de/internationales-augenkrankenhaus/",
+    "ar": "/war-crimes/hospitals/ar/مستشفى-العيون-الدولي/"
+   },
+   "FAC-018": {
+    "en": "/war-crimes/hospitals/muhammad-youssef-al-najjar-hospital/",
+    "de": "/war-crimes/hospitals/de/muhammad-youssef-al-najjar-krankenhaus/",
+    "ar": "/war-crimes/hospitals/ar/مستشفى-محمد-يوسف-النجار/"
+   },
+   "FAC-019": {
+    "en": "/war-crimes/hospitals/wafaa-medical-rehabilitation-and-specialized-surgery-hospital/",
+    "de": "/war-crimes/hospitals/de/wafaa-krankenhaus-fuer-medizinische-rehabilitation-und-spezialisierte-chirurgie/",
+    "ar": "/war-crimes/hospitals/ar/مستشفى-وفاء-للتأهيل-الطبي-والجراحة-التخصصية/"
+   },
+   "FAC-020": {
+    "en": "/war-crimes/hospitals/al-sahaba-medical-complex/",
+    "de": "/war-crimes/hospitals/de/al-sahaba-medizinkomplex/",
+    "ar": "/war-crimes/hospitals/ar/مجمع-الصحابة-الطبي/"
+   },
+   "FAC-021": {
+    "en": "/war-crimes/hospitals/khidma-aamma-hospital/",
+    "de": "/war-crimes/hospitals/de/khidma-aamma-krankenhaus/",
+    "ar": "/war-crimes/hospitals/ar/مستشفى-خيدما-أما/"
+   },
+   "FAC-022": {
+    "en": "/war-crimes/hospitals/asdiqaa-hospital/",
+    "de": "/war-crimes/hospitals/de/asdiqaa-krankenhaus/",
+    "ar": "/war-crimes/hospitals/ar/مستشفى-أصدقة/"
+   },
+   "FAC-023": {
+    "en": "/war-crimes/hospitals/turkish-friendship-hospital/",
+    "de": "/war-crimes/hospitals/de/tuerkisches-freundschaftskrankenhaus/",
+    "ar": "/war-crimes/hospitals/ar/مستشفى-الصداقة-التركية/"
+   },
+   "FAC-024": {
+    "en": "/war-crimes/hospitals/al-helou-international-hospital/",
+    "de": "/war-crimes/hospitals/de/internationales-krankenhaus-al-helou/",
+    "ar": "/war-crimes/hospitals/ar/مستشفى-الحلو-الدولي/"
+   },
+   "FAC-025": {
+    "en": "/war-crimes/hospitals/al-khair-hospital/",
+    "de": "/war-crimes/hospitals/de/al-khair-krankenhaus/",
+    "ar": "/war-crimes/hospitals/ar/مستشفى-الخير/"
+   },
+   "FAC-026": {
+    "en": "/war-crimes/hospitals/yafa-hospital/",
+    "de": "/war-crimes/hospitals/de/krankenhaus-in-yafa/",
+    "ar": "/war-crimes/hospitals/ar/مستشفى-يافا/"
+   },
+   "FAC-027": {
+    "en": "/war-crimes/hospitals/palestine-medical-relief-center-for-the-rehabilitation-of-the-disabled/",
+    "de": "/war-crimes/hospitals/de/palaestinensisches-zentrum-fuer-medizinische-hilfe-und-rehabilitation-von-behinderten/",
+    "ar": "/war-crimes/hospitals/ar/مركز-فلسطين-الطبي-للإغاثة-وإعادة-تأهيل-المعاقين/"
+   },
+   "FAC-028": {
+    "en": "/war-crimes/hospitals/al-yaman-al-saeed-hospital/",
+    "de": "/war-crimes/hospitals/de/al-yaman-al-saeed-krankenhaus/",
+    "ar": "/war-crimes/hospitals/ar/مستشفى-اليمان-السعيد/"
+   },
+   "FAC-029": {
+    "en": "/war-crimes/hospitals/patient-friends-association-hospital/",
+    "de": "/war-crimes/hospitals/de/patientenfreundevereinigung-krankenhaus/",
+    "ar": "/war-crimes/hospitals/ar/جمعية-أصدقاء-المرضى-بالمستشفى/"
+   },
+   "FAC-030": {
+    "en": "/war-crimes/hospitals/jordanian-field-hospital/",
+    "de": "/war-crimes/hospitals/de/jordanisches-feldlazarett/",
+    "ar": "/war-crimes/hospitals/ar/المستشفى-الميداني-الأردني/"
+   },
+   "FAC-031": {
+    "en": "/war-crimes/hospitals/jordanian-field-hospital-khan-yunis/",
+    "de": "/war-crimes/hospitals/de/jordanisches-feldlazarett-khan-yunis/",
+    "ar": "/war-crimes/hospitals/ar/المستشفى-الميداني-الأردني-خان-يونس/"
+   },
+   "FAC-032": {
+    "en": "/war-crimes/hospitals/red-cross-field-hospital/",
+    "de": "/war-crimes/hospitals/de/feldlazarett-des-roten-kreuzes/",
+    "ar": "/war-crimes/hospitals/ar/مستشفى-الصليب-الأحمر-الميداني/"
+   },
+   "FAC-033": {
+    "en": "/war-crimes/hospitals/red-cross-field-hospital-rafah/",
+    "de": "/war-crimes/hospitals/de/feldlazarett-des-roten-kreuzes-rafah/",
+    "ar": "/war-crimes/hospitals/ar/مستشفى-الصليب-الأحمر-الميداني-رفح/"
+   },
+   "FAC-034": {
+    "en": "/war-crimes/hospitals/al-emirati-field-hospital/",
+    "de": "/war-crimes/hospitals/de/feldlazarett-der-emirate/",
+    "ar": "/war-crimes/hospitals/ar/المستشفى-الميداني-الإماراتي/"
+   },
+   "FAC-035": {
+    "en": "/war-crimes/hospitals/al-quds-field-hospital/",
+    "de": "/war-crimes/hospitals/de/al-quds-feldlazarett/",
+    "ar": "/war-crimes/hospitals/ar/مستشفى-القدس-الميداني/"
+   },
+   "FAC-036": {
+    "en": "/war-crimes/hospitals/kuwait-field-hospital/",
+    "de": "/war-crimes/hospitals/de/feldlazarett-kuwait/",
+    "ar": "/war-crimes/hospitals/ar/مستشفى-الكويت-الميداني/"
+   },
+   "FAC-037": {
+    "en": "/war-crimes/hospitals/uae-field-hospital/",
+    "de": "/war-crimes/hospitals/de/feldlazarett-der-vae/",
+    "ar": "/war-crimes/hospitals/ar/مستشفى-ميداني-في-الإمارات-العربية-المتحدة/"
+   },
+   "FAC-038": {
+    "en": "/war-crimes/hospitals/international-medical-corps-field-hospital/",
+    "de": "/war-crimes/hospitals/de/feldlazarett-des-international-medical-corps/",
+    "ar": "/war-crimes/hospitals/ar/مستشفى-ميداني-تابع-للهيئة-الطبية-الدولية/"
+   },
+   "FAC-039": {
+    "en": "/war-crimes/hospitals/unrwa-health-centre/",
+    "de": "/war-crimes/hospitals/de/unrwa-gesundheitszentrum/",
+    "ar": "/war-crimes/hospitals/ar/مركز-الأونروا-الصحي/"
+   },
+   "FAC-040": {
+    "en": "/war-crimes/hospitals/primary-care-clinic/",
+    "de": "/war-crimes/hospitals/de/hausarztpraxis/",
+    "ar": "/war-crimes/hospitals/ar/عيادة-الرعاية-الصحية-الأولية/"
+   },
+   "FAC-041": {
+    "en": "/war-crimes/hospitals/msf-premise-01/",
+    "de": "/war-crimes/hospitals/de/msf-praesenz-01/",
+    "ar": "/war-crimes/hospitals/ar/فرضية-منظمة-أطباء-بلا-حدود-01/"
+   },
+   "FAC-042": {
+    "en": "/war-crimes/hospitals/msf-clinic/",
+    "de": "/war-crimes/hospitals/de/msf-klinik/",
+    "ar": "/war-crimes/hospitals/ar/عيادة-أطباء-بلا-حدود/"
+   },
+   "FAC-043": {
+    "en": "/war-crimes/hospitals/msf-urgent-care-unit-khan-younis/",
+    "de": "/war-crimes/hospitals/de/msf-notfallambulanz-khan-younis/",
+    "ar": "/war-crimes/hospitals/ar/وحدة-الرعاية-العاجلة-التابعة-لمنظمة-أطباء-بلا-حدود-خان-يونس/"
+   },
+   "FAC-044": {
+    "en": "/war-crimes/hospitals/noura-al-kaabi-specialist-dialysis-centre/",
+    "de": "/war-crimes/hospitals/de/noura-al-kaabi-spezialisiertes-dialysezentrum/",
+    "ar": "/war-crimes/hospitals/ar/مركز-نورة-الكعبي-التخصصي-لغسيل-الكلى/"
+   },
+   "FAC-045": {
+    "en": "/war-crimes/hospitals/al-zaytoun-medical-clinic/",
+    "de": "/war-crimes/hospitals/de/medizinische-klinik-al-zaytoun/",
+    "ar": "/war-crimes/hospitals/ar/عيادة-الزيتون-الطبية/"
+   },
+   "FAC-046": {
+    "en": "/war-crimes/hospitals/al-qarara-medical-clinic/",
+    "de": "/war-crimes/hospitals/de/al-qarara-klinik/",
+    "ar": "/war-crimes/hospitals/ar/عيادة-القرار-الطبية/"
+   },
+   "FAC-047": {
+    "en": "/war-crimes/hospitals/solidarity-polyclinic/",
+    "de": "/war-crimes/hospitals/de/solidaritaets-poliklinik/",
+    "ar": "/war-crimes/hospitals/ar/عيادة-التضامن-متعددة-التخصصات/"
+   },
+   "FAC-048": {
+    "en": "/war-crimes/hospitals/algerian-military-hospital/",
+    "de": "/war-crimes/hospitals/de/algerisches-militaerkrankenhaus/",
+    "ar": "/war-crimes/hospitals/ar/المستشفى-العسكري-الجزائري/"
+   },
+   "FAC-049": {
+    "en": "/war-crimes/hospitals/muscat-al-qarara-health-centre/",
+    "de": "/war-crimes/hospitals/de/al-qarara-gesundheitszentrum-in-maskat/",
+    "ar": "/war-crimes/hospitals/ar/مركز-مسقط-القرارة-الصحي/"
+   },
+   "FAC-050": {
+    "en": "/war-crimes/hospitals/al-mawasi-clinic/",
+    "de": "/war-crimes/hospitals/de/al-mawasi-klinik/",
+    "ar": "/war-crimes/hospitals/ar/عيادة-المواسي/"
+   }
+  },
+  "universities": {
+   "FAC-000": {
+    "en": "/war-crimes/universities/gaza-university/",
+    "de": "/war-crimes/universities/de/gaza-universitaet/",
+    "ar": "/war-crimes/universities/ar/جامعة-غزة/"
+   },
+   "FAC-001": {
+    "en": "/war-crimes/universities/islamic-university-of-gaza/",
+    "de": "/war-crimes/universities/de/islamische-universitaet-von-gaza/",
+    "ar": "/war-crimes/universities/ar/الجامعة-الإسلامية-في-غزة/"
+   },
+   "FAC-002": {
+    "en": "/war-crimes/universities/israa-university/",
+    "de": "/war-crimes/universities/de/israa-universitaet/",
+    "ar": "/war-crimes/universities/ar/جامعة-إسراء/"
+   },
+   "FAC-003": {
+    "en": "/war-crimes/universities/al-azhar-university-gaza/",
+    "de": "/war-crimes/universities/de/al-azhar-universitaet-gaza/",
+    "ar": "/war-crimes/universities/ar/جامعة-الأزهر-غزة/"
+   },
+   "FAC-004": {
+    "en": "/war-crimes/universities/al-aqsa-university/",
+    "de": "/war-crimes/universities/de/al-aqsa-universitaet/",
+    "ar": "/war-crimes/universities/ar/جامعة-الأقصى/"
+   },
+   "FAC-005": {
+    "en": "/war-crimes/universities/university-of-palestine/",
+    "de": "/war-crimes/universities/de/universitaet-von-palaestina/",
+    "ar": "/war-crimes/universities/ar/جامعة-فلسطين/"
+   },
+   "FAC-006": {
+    "en": "/war-crimes/universities/palestine-technical-college/",
+    "de": "/war-crimes/universities/de/palaestinensisches-technisches-college/",
+    "ar": "/war-crimes/universities/ar/كلية-فلسطين-التقنية/"
+   },
+   "FAC-007": {
+    "en": "/war-crimes/universities/university-college-of-applied-sciences-ucas/",
+    "de": "/war-crimes/universities/de/university-college-of-applied-sciences-ucas/",
+    "ar": "/war-crimes/universities/ar/كلية-العلوم-التطبيقية-الجامعية-ucas/"
+   },
+   "FAC-008": {
+    "en": "/war-crimes/universities/al-quds-open-university-gaza/",
+    "de": "/war-crimes/universities/de/al-quds-open-university-gaza/",
+    "ar": "/war-crimes/universities/ar/جامعة-القدس-المفتوحة-غزة/"
+   },
+   "FAC-009": {
+    "en": "/war-crimes/universities/arab-college-for-applied-sciences/",
+    "de": "/war-crimes/universities/de/arabische-hochschule-fuer-angewandte-wissenschaften/",
+    "ar": "/war-crimes/universities/ar/الكلية-العربية-للعلوم-التطبيقية/"
+   },
+   "FAC-010": {
+    "en": "/war-crimes/universities/palestine-college-of-nursing-and-midwifery/",
+    "de": "/war-crimes/universities/de/palestine-college-fuer-krankenpflege-und-hebammenwesen/",
+    "ar": "/war-crimes/universities/ar/كلية-فلسطين-للتمريض-والقبالة/"
+   },
+   "FAC-011": {
+    "en": "/war-crimes/universities/gaza-sky-geeks-technology-institutes/",
+    "de": "/war-crimes/universities/de/gaza-sky-geeks-technologieinstitute/",
+    "ar": "/war-crimes/universities/ar/معاهد-غزة-سكاي-جيكس-معاهد-التكنولوجيا/"
+   },
+   "FAC-012": {
+    "en": "/war-crimes/universities/al-aqsa-university-khan-younis/",
+    "de": "/war-crimes/universities/de/al-aqsa-universitaet-khan-younis/",
+    "ar": "/war-crimes/universities/ar/جامعة-الأقصى-خان-يونس/"
+   }
+  },
+  "schools": {
+   "FAC-000": {
+    "en": "/war-crimes/schools/al-fakhoora-school/",
+    "de": "/war-crimes/schools/de/al-fakhoora-schule/",
+    "ar": "/war-crimes/schools/ar/مدرسة-الفخورة/"
+   },
+   "FAC-001": {
+    "en": "/war-crimes/schools/abu-hussein-school-girls/",
+    "de": "/war-crimes/schools/de/abu-hussein-schule-maedchen/",
+    "ar": "/war-crimes/schools/ar/مدرسة-أبو-حسين-للبنات/"
+   },
+   "FAC-002": {
+    "en": "/war-crimes/schools/osama-bin-zaid-school/",
+    "de": "/war-crimes/schools/de/osama-bin-zaid-schule/",
+    "ar": "/war-crimes/schools/ar/مدرسة-أسامة-بن-زيد/"
+   },
+   "FAC-003": {
+    "en": "/war-crimes/schools/al-buraq-school/",
+    "de": "/war-crimes/schools/de/al-buraq-schule/",
+    "ar": "/war-crimes/schools/ar/مدرسة-البراق/"
+   },
+   "FAC-004": {
+    "en": "/war-crimes/schools/al-falah-school/",
+    "de": "/war-crimes/schools/de/al-falah-schule/",
+    "ar": "/war-crimes/schools/ar/مدرسة-الفلاح/"
+   },
+   "FAC-005": {
+    "en": "/war-crimes/schools/al-tabaeen-school/",
+    "de": "/war-crimes/schools/de/al-tabaeen-schule/",
+    "ar": "/war-crimes/schools/ar/مدرسة-التابعين/"
+   },
+   "FAC-006": {
+    "en": "/war-crimes/schools/maghazi-unrwa-school/",
+    "de": "/war-crimes/schools/de/maghazi-unrwa-schule/",
+    "ar": "/war-crimes/schools/ar/مدرسة-ماغازي-التابعة-لوكالة-الأونروا/"
+   },
+   "FAC-007": {
+    "en": "/war-crimes/schools/maghazi-secondary-girls-school/",
+    "de": "/war-crimes/schools/de/maghazi-sekundarschule-fuer-maedchen/",
+    "ar": "/war-crimes/schools/ar/مدرسة-ماغازي-الثانوية-للبنات/"
+   },
+   "FAC-008": {
+    "en": "/war-crimes/schools/haifa-school/",
+    "de": "/war-crimes/schools/de/haifa-schule/",
+    "ar": "/war-crimes/schools/ar/مدرسة-حيفا/"
+   },
+   "FAC-009": {
+    "en": "/war-crimes/schools/an-nazla-elementary-school/",
+    "de": "/war-crimes/schools/de/an-nazla-grundschule/",
+    "ar": "/war-crimes/schools/ar/مدرسة-النازلا-الابتدائية/"
+   },
+   "FAC-010": {
+    "en": "/war-crimes/schools/al-sardi-school/",
+    "de": "/war-crimes/schools/de/al-sardi-schule/",
+    "ar": "/war-crimes/schools/ar/مدرسة-السردي/"
+   },
+   "FAC-011": {
+    "en": "/war-crimes/schools/al-jawni-school/",
+    "de": "/war-crimes/schools/de/al-jawni-schule/",
+    "ar": "/war-crimes/schools/ar/مدرسة-الجاوني/"
+   },
+   "FAC-012": {
+    "en": "/war-crimes/schools/al-awda-school/",
+    "de": "/war-crimes/schools/de/al-awda-schule/",
+    "ar": "/war-crimes/schools/ar/مدرسة-العودة/"
+   },
+   "FAC-013": {
+    "en": "/war-crimes/schools/khadija-girls-school/",
+    "de": "/war-crimes/schools/de/khadija-maedchenschule/",
+    "ar": "/war-crimes/schools/ar/مدرسة-خديجة-للبنات/"
+   },
+   "FAC-014": {
+    "en": "/war-crimes/schools/rufaida-girls-high-school/",
+    "de": "/war-crimes/schools/de/rufaida-maedchengymnasium/",
+    "ar": "/war-crimes/schools/ar/مدرسة-روفيدا-الثانوية-للبنات/"
+   },
+   "FAC-015": {
+    "en": "/war-crimes/schools/holy-family-school/",
+    "de": "/war-crimes/schools/de/holy-family-schule/",
+    "ar": "/war-crimes/schools/ar/مدرسة-العائلة-المقدسة/"
+   },
+   "FAC-016": {
+    "en": "/war-crimes/schools/shadia-abu-ghazala-school/",
+    "de": "/war-crimes/schools/de/shadia-abu-ghazala-schule/",
+    "ar": "/war-crimes/schools/ar/مدرسة-شادية-أبو-غزالة/"
+   },
+   "FAC-017": {
+    "en": "/war-crimes/schools/fahmi-al-jarjawi-school/",
+    "de": "/war-crimes/schools/de/fahmi-al-jarjawi-schule/",
+    "ar": "/war-crimes/schools/ar/مدرسة-فهمي-الجرجاوي/"
+   },
+   "FAC-018": {
+    "en": "/war-crimes/schools/al-farabi-school/",
+    "de": "/war-crimes/schools/de/al-farabi-schule/",
+    "ar": "/war-crimes/schools/ar/مدرسة-الفارابي/"
+   },
+   "FAC-019": {
+    "en": "/war-crimes/schools/ibn-rushd-school/",
+    "de": "/war-crimes/schools/de/ibn-rushd-schule/",
+    "ar": "/war-crimes/schools/ar/مدرسة-ابن-رشد/"
+   },
+   "FAC-020": {
+    "en": "/war-crimes/schools/fatima-bint-asad-school/",
+    "de": "/war-crimes/schools/de/fatima-bint-asad-schule/",
+    "ar": "/war-crimes/schools/ar/مدرسة-فاطمة-بنت-أسد/"
+   },
+   "FAC-021": {
+    "en": "/war-crimes/schools/british-international-school-bis-gaza/",
+    "de": "/war-crimes/schools/de/britische-internationale-schule-bis-gaza/",
+    "ar": "/war-crimes/schools/ar/المدرسة-البريطانية-الدولية-bis-غزة/"
+   },
+   "FAC-022": {
+    "en": "/war-crimes/schools/khuza-a-martyrs-secondary-school/",
+    "de": "/war-crimes/schools/de/khuza-a-martyrs-secondary-school/",
+    "ar": "/war-crimes/schools/ar/مدرسة-شهداء-خزاعة-الثانوية/"
+   },
+   "FAC-023": {
+    "en": "/war-crimes/schools/abasan-basic-school/",
+    "de": "/war-crimes/schools/de/abasan-grundschule/",
+    "ar": "/war-crimes/schools/ar/مدرسة-أباسان-الأساسية/"
+   },
+   "FAC-024": {
+    "en": "/war-crimes/schools/abasan-al-jadeeda-basic-school/",
+    "de": "/war-crimes/schools/de/abasan-al-jadeeda-grundschule/",
+    "ar": "/war-crimes/schools/ar/مدرسة-عبسان-الجديدة-الأساسية/"
+   },
+   "FAC-025": {
+    "en": "/war-crimes/schools/abbas-mahmoud-al-akkad-basic-and-secondary-girls-school/",
+    "de": "/war-crimes/schools/de/abbas-mahmoud-al-akkad-grund-und-sekundarschule-fuer-maedchen/",
+    "ar": "/war-crimes/schools/ar/مدرسة-عباس-محمود-العقاد-الابتدائية-والثانوية-للبنات/"
+   },
+   "FAC-026": {
+    "en": "/war-crimes/schools/al-nazla-school/",
+    "de": "/war-crimes/schools/de/al-nazla-schule/",
+    "ar": "/war-crimes/schools/ar/مدرسة-النزلة/"
+   }
+  },
+  "religious-sites": {
+   "FAC-000": {
+    "en": "/war-crimes/religious-sites/great-omari-mosque/",
+    "de": "/war-crimes/religious-sites/de/grosse-omari-moschee/",
+    "ar": "/war-crimes/religious-sites/ar/الجامع-العمري-الكبير/"
+   },
+   "FAC-001": {
+    "en": "/war-crimes/religious-sites/church-of-saint-porphyrius/",
+    "de": "/war-crimes/religious-sites/de/kirche-des-heiligen-porphyrius/",
+    "ar": "/war-crimes/religious-sites/ar/كنيسة-القديس-بورفيريوس/"
+   },
+   "FAC-002": {
+    "en": "/war-crimes/religious-sites/holy-family-church/",
+    "de": "/war-crimes/religious-sites/de/kirche-der-heiligen-familie/",
+    "ar": "/war-crimes/religious-sites/ar/كنيسة-العائلة-المقدسة/"
+   },
+   "FAC-003": {
+    "en": "/war-crimes/religious-sites/katib-al-wilaya-mosque/",
+    "de": "/war-crimes/religious-sites/de/katib-al-wilaya-moschee/",
+    "ar": "/war-crimes/religious-sites/ar/مسجد-كاتب-الولاية/"
+   },
+   "FAC-004": {
+    "en": "/war-crimes/religious-sites/sayed-al-hashim-mosque/",
+    "de": "/war-crimes/religious-sites/de/sayed-al-haschim-moschee/",
+    "ar": "/war-crimes/religious-sites/ar/مسجد-سيد-الهاشم/"
+   },
+   "FAC-005": {
+    "en": "/war-crimes/religious-sites/khalid-bin-al-walid-mosque/",
+    "de": "/war-crimes/religious-sites/de/khalid-bin-al-walid-moschee/",
+    "ar": "/war-crimes/religious-sites/ar/مسجد-خالد-بن-الوليد/"
+   },
+   "FAC-006": {
+    "en": "/war-crimes/religious-sites/al-hassan-mosque/",
+    "de": "/war-crimes/religious-sites/de/al-hassan-moschee/",
+    "ar": "/war-crimes/religious-sites/ar/مسجد-الحسن/"
+   },
+   "FAC-007": {
+    "en": "/war-crimes/religious-sites/al-gharbi-mosque/",
+    "de": "/war-crimes/religious-sites/de/al-gharbi-moschee/",
+    "ar": "/war-crimes/religious-sites/ar/مسجد-الغربي/"
+   },
+   "FAC-008": {
+    "en": "/war-crimes/religious-sites/jaffa-mosque/",
+    "de": "/war-crimes/religious-sites/de/jaffa-moschee/",
+    "ar": "/war-crimes/religious-sites/ar/مسجد-يافا/"
+   },
+   "FAC-009": {
+    "en": "/war-crimes/religious-sites/shuhada-al-aqsa-mosque/",
+    "de": "/war-crimes/religious-sites/de/shuhada-al-aqsa-moschee/",
+    "ar": "/war-crimes/religious-sites/ar/مسجد-شهداء-الأقصى/"
+   },
+   "FAC-010": {
+    "en": "/war-crimes/religious-sites/zofor-domri-mosque/",
+    "de": "/war-crimes/religious-sites/de/zofor-domri-moschee/",
+    "ar": "/war-crimes/religious-sites/ar/مسجد-زوفور-دومري/"
+   },
+   "FAC-011": {
+    "en": "/war-crimes/religious-sites/al-riad-mosque/",
+    "de": "/war-crimes/religious-sites/de/al-riad-moschee/",
+    "ar": "/war-crimes/religious-sites/ar/مسجد-الرياض/"
+   },
+   "FAC-012": {
+    "en": "/war-crimes/religious-sites/ibn-marwan-mosque/",
+    "de": "/war-crimes/religious-sites/de/ibn-marwan-moschee/",
+    "ar": "/war-crimes/religious-sites/ar/مسجد-ابن-مروان/"
+   },
+   "FAC-013": {
+    "en": "/war-crimes/religious-sites/aybaki-mosque/",
+    "de": "/war-crimes/religious-sites/de/aybaki-moschee/",
+    "ar": "/war-crimes/religious-sites/ar/مسجد-أيباكي/"
+   },
+   "FAC-014": {
+    "en": "/war-crimes/religious-sites/ibn-othman-mosque/",
+    "de": "/war-crimes/religious-sites/de/ibn-othman-moschee/",
+    "ar": "/war-crimes/religious-sites/ar/مسجد-ابن-عثمان/"
+   },
+   "FAC-015": {
+    "en": "/war-crimes/religious-sites/mahkamah-mosque/",
+    "de": "/war-crimes/religious-sites/de/mahkamah-moschee/",
+    "ar": "/war-crimes/religious-sites/ar/مسجد-المحكمة/"
+   },
+   "FAC-016": {
+    "en": "/war-crimes/religious-sites/sheikh-zakariyya-mosque/",
+    "de": "/war-crimes/religious-sites/de/scheich-zakariyya-moschee/",
+    "ar": "/war-crimes/religious-sites/ar/مسجد-الشيخ-زكريا/"
+   },
+   "FAC-017": {
+    "en": "/war-crimes/religious-sites/al-shamah-mosque/",
+    "de": "/war-crimes/religious-sites/de/al-shamah-moschee/",
+    "ar": "/war-crimes/religious-sites/ar/مسجد-الشامة/"
+   },
+   "FAC-018": {
+    "en": "/war-crimes/religious-sites/st-hilarion-monastery/",
+    "de": "/war-crimes/religious-sites/de/kloster-st-hilarion/",
+    "ar": "/war-crimes/religious-sites/ar/دير-القديس-هيلاريون/"
+   },
+   "FAC-019": {
+    "en": "/war-crimes/religious-sites/gaza-baptist-church/",
+    "de": "/war-crimes/religious-sites/de/gaza-baptistenkirche/",
+    "ar": "/war-crimes/religious-sites/ar/كنيسة-غزة-المعمدانية/"
+   }
+  }
+ }
+}

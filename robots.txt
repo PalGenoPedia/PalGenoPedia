@@ -1,0 +1,31 @@
+# PalGenoPedia — AI/LLM crawler policy
+# We WANT our documentation indexed and ingested by AI systems.
+User-agent: *
+Allow: /
+
+# Explicitly allow major AI crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# Machine-readable indices for LLM ingestion
+Sitemap: https://palgenopedia.org/sitemap.xml
+# The llms.txt standard (https://llmstxt.org/) has no robots.txt directive of
+# its own - a crawler that supports it checks /llms.txt directly. A prior
+# "LLMS:" line here was not a recognised directive and was flagged as a
+# format error; the file is still published at /llms.txt, just not announced
+# from here.
+
+# Crawl-delay to be polite to shared hosting
+Crawl-delay: 1

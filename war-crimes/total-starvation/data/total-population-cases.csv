@@ -1,0 +1,9 @@
+id,name,arabicName,age,sex,location,status,circumstances,date_documented,reference_id,verification_level,category
+1,Abu Mahmoud Family,عائلة أبو محمود,Mixed,Mixed,Jabalia Camp,Critical,Family of 8 with 3 children under 5 - no food for 4 days,2025-07-30,ref_unicef,UNICEF Documented,family_unit
+2,Elderly Man Gaza City,رجل مسن مدينة غزة,72,Male,Gaza City,Deceased,Elderly man died of starvation - found alone in destroyed building,2025-08-01,ref_gaza_health,Hospital Verified,elderly
+3,Pregnant Woman Rafah,امرأة حامل رفح,26,Female,Rafah,Critical,Pregnant woman severely malnourished - baby at risk,2025-07-28,ref_who,WHO Documented,pregnant
+4,Disabled Man Khan Younis,رجل معاق خان يونس,45,Male,Khan Younis,Critical,Disabled man unable to reach food distribution points,2025-08-02,ref_unrwa,UNRWA Documented,disabled
+5,Large Family Deir al-Balah,عائلة كبيرة دير البلح,Mixed,Mixed,Deir al-Balah,Critical,Extended family of 15 people sharing one meal per day,2025-07-29,ref_al_jazeera,Media Documented,large_family
+6,Widow with Children,أرملة مع أطفال,35,Female,Gaza City,Critical,Widow with 5 children - youngest is 6 months old - no milk or food,2025-08-03,ref_unrwa,UNRWA Documented,widow
+7,Elderly Couple,زوجان مسنان,68-70,Mixed,North Gaza,Critical,Elderly couple trapped in North Gaza - no aid access for 3 months,2025-08-01,ref_npr,Media Documented,elderly_couple
+8,Young Adult,شاب,22,Male,Gaza City,Deceased,22-year-old university student died of malnutrition complications,2025-07-31,ref_al_jazeera,Hospital Verified,young_adult

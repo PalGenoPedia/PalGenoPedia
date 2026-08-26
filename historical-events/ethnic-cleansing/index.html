@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethnic Cleansing Documentation - Palestinian Villages 1948-Present</title>
+    <meta name="description" content="Comprehensive documentation of 418 Palestinian villages ethnically cleansed from 1948 to present day">
+    
+    <!-- Leaflet CSS for Map -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.Default.css" />
+    
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="/Styles/shared-styles.css">
+    
+    <style>
+        /* Ethnic Cleansing Page Specific Styles */
+        .period-selector {
+            background: var(--surface-color);
+            border-radius: var(--border-radius-lg);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .period-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .period-card {
+            background: var(--bg-secondary);
+            border: 2px solid var(--border-color);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        
+        .period-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .period-card.active {
+            border-color: var(--accent-color);
+            background: linear-gradient(135deg, rgba(220, 53, 69, 0.1), rgba(220, 53, 69, 0.05));
+        }
+        
+        .period-icon {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .period-label {
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .period-count {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            margin: 0.5rem 0;
+        }
+        
+        .period-population {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+        
+        .village-timeline {
+            background: var(--surface-color);
+            border-radius: var(--border-radius-lg);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .village-card {
+            background: var(--bg-secondary);
+            border-left: 4px solid var(--accent-color);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .village-card:hover {
+            transform: translateX(8px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .village-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .village-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .village-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+        
+        .method-badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: white;
+        }
+        
+        .filters-section {
+            background: var(--surface-color);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .filter-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        
+        .filter-label {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        
+        .map-container {
+            height: 600px;
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+        
+        #ethnicCleansingMap {
+            height: 100%;
+            width: 100%;
+        }
+        
+        .stats-dashboard {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .stat-card {
+            background: var(--surface-color);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .stat-icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            margin-bottom: 0.25rem;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .empty-state {
+            text-align: center;
+            padding: 4rem 2rem;
+            color: var(--text-secondary);
+        }
+        
+        .empty-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .period-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .filter-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Horizontal Scrolling Timeline */
+        .horizontal-scroll-container {
+            position: relative;
+            width: 100%;
+            margin-top: 1.5rem;
+        }
+
+        .horizontal-scroll-hint {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            padding: 0.75rem;
+            background: var(--bg-secondary);
+            border-radius: var(--border-radius);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.7; }
+            50% { opacity: 1; }
+        }
+
+        .timeline-cards-wrapper {
+            display: flex;
+            gap: 1.5rem;
+            overflow-x: auto;
+            overflow-y: hidden;
+            padding: 1rem 0 2rem 0;
+            scroll-behavior: smooth;
+
+            /* Custom scrollbar */
+            scrollbar-width: thin;
+            scrollbar-color: var(--accent-color) var(--bg-secondary);
+        }
+
+        .timeline-cards-wrapper::-webkit-scrollbar {
+            height: 16px;
+        }
+
+        .timeline-cards-wrapper::-webkit-scrollbar-track {
+            background: var(--bg-secondary);
+            border-radius: 8px;
+        }
+
+        .timeline-cards-wrapper::-webkit-scrollbar-thumb {
+            background: var(--accent-color);
+            border-radius: 8px;
+            border: 3px solid var(--bg-secondary);
+        }
+
+        .timeline-cards-wrapper::-webkit-scrollbar-thumb:hover {
+            background: #c0392b;
+        }
+
+        .timeline-village-card {
+            flex: 0 0 320px;
+            background: var(--surface-color);
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .timeline-village-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .timeline-village-card .card-header {
+            padding: 1rem;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .card-period-badge {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .card-date {
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .timeline-village-card .card-content {
+            padding: 1.25rem;
+            flex: 1;
+        }
+
+        .card-village-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .card-meta {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .card-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .meta-icon {
+            font-size: 1rem;
+        }
+
+        .meta-text {
+            color: var(--text-primary);
+        }
+
+        .method-badge-small {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: white;
+        }
+
+        .card-notes {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        .timeline-village-card .card-footer {
+            padding: 1rem 1.25rem;
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border-color);
+        }
+
+        .view-details-btn {
+            background: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            width: 100%;
+        }
+
+        .view-details-btn:hover {
+            background: var(--accent-color);
+            transform: scale(1.02);
+        }
+
+        /* Table Pagination */
+        .table-pagination {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: var(--surface-color);
+            border-radius: var(--border-radius);
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .pagination-info {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .pagination-buttons {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .pagination-btn {
+            padding: 0.5rem 1rem;
+            background: var(--bg-secondary);
+            border: 2px solid var(--border-color);
+            border-radius: 6px;
+            color: var(--text-primary);
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            min-width: 40px;
+        }
+
+        .pagination-btn:hover:not(:disabled) {
+            background: var(--secondary-color);
+            color: white;
+            border-color: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+        .pagination-btn.active {
+            background: var(--accent-color);
+            color: white;
+            border-color: var(--accent-color);
+        }
+
+        .pagination-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .pagination-ellipsis {
+            padding: 0.5rem;
+            color: var(--text-secondary);
+        }
+
+        @media (max-width: 768px) {
+            .timeline-village-card {
+                flex: 0 0 280px;
+            }
+
+            .table-pagination {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .pagination-buttons {
+                justify-content: center;
+            }
+        }
+    </style>
+<!-- SEO_START - generated by tools/seo_inject.py - do not edit by hand -->
+    <link rel="canonical" href="https://palgenopedia.org/historical-events/ethnic-cleansing/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="PalGenoPedia">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="Ethnic Cleansing Documentation - Palestinian Villages 1948-Present">
+    <meta property="og:description" content="Comprehensive documentation of 418 Palestinian villages ethnically cleansed from 1948 to present day">
+    <meta property="og:url" content="https://palgenopedia.org/historical-events/ethnic-cleansing/">
+    <meta property="og:image" content="https://palgenopedia.org/images/og-card.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="PalGenoPedia - documented war crimes, massacres and humanitarian violations concerning Palestine, 1948 to present">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ethnic Cleansing Documentation - Palestinian Villages 1948-Present">
+    <meta name="twitter:description" content="Comprehensive documentation of 418 Palestinian villages ethnically cleansed from 1948 to present day">
+    <meta name="twitter:image" content="https://palgenopedia.org/images/og-card.png">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="alternate" type="application/atom+xml" title="PalGenoPedia - documented events" href="../../feed.xml">
+    <link rel="alternate" type="application/rss+xml" title="PalGenoPedia - documented events" href="../../feed.rss">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "@id": "https://palgenopedia.org/historical-events/ethnic-cleansing/#page",
+  "url": "https://palgenopedia.org/historical-events/ethnic-cleansing/",
+  "name": "Ethnic Cleansing Documentation - Palestinian Villages 1948-Present",
+  "description": "Comprehensive documentation of 418 Palestinian villages ethnically cleansed from 1948 to present day",
+  "inLanguage": "en",
+  "isPartOf": {
+    "@id": "https://palgenopedia.org/#website"
+  },
+  "publisher": {
+    "@id": "https://palgenopedia.org/#org"
+  }
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://palgenopedia.org/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Historical Events",
+      "item": "https://palgenopedia.org/historical-events/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Ethnic Cleansing Documentation",
+      "item": "https://palgenopedia.org/historical-events/ethnic-cleansing/"
+    }
+  ]
+}
+    </script>
+    <!-- SEO_END -->
+</head>
+
+<body>
+    <!-- Header injected by header-component.js -->
+    <div id="header-placeholder"></div>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Page Header -->
+        <div class="page-header">
+            <div class="container">
+                <h1>🏘️ Ethnic Cleansing Documentation</h1>
+                <p>Comprehensive record of 418 Palestinian villages systematically depopulated from 1948 to present day</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <!-- Statistics Dashboard -->
+            <div class="stats-dashboard">
+                <div class="stat-card">
+                    <div class="stat-icon">🏘️</div>
+                    <div class="stat-value" id="totalVillages">418</div>
+                    <div class="stat-label">Villages Destroyed</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">👥</div>
+                    <div class="stat-value" id="totalDisplaced">950,000</div>
+                    <div class="stat-label">People Displaced</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">📅</div>
+                    <div class="stat-value">1948-2025</div>
+                    <div class="stat-label">Time Period</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">📚</div>
+                    <div class="stat-value" id="lastUpdated">2025-01-15</div>
+                    <div class="stat-label">Last Updated</div>
+                </div>
+            </div>
+
+            <!-- Period Selector -->
+            <div class="period-selector">
+                <h2>📊 Select Historical Period</h2>
+                <div class="period-grid">
+                    <div class="period-card active" data-period="all" onclick="filterByPeriod('all')">
+                        <div class="period-icon">📚</div>
+                        <div class="period-label">All Periods</div>
+                        <div class="period-count" id="count-all">418</div>
+                        <div class="period-population">1948 - Present</div>
+                    </div>
+                    <div class="period-card" data-period="1948-1949" onclick="filterByPeriod('1948-1949')">
+                        <div class="period-icon">📜</div>
+                        <div class="period-label">Nakba Period</div>
+                        <div class="period-count" id="count-1948-1949">392</div>
+                        <div class="period-population">1948 - 1949</div>
+                    </div>
+                    <div class="period-card" data-period="1950-1966" onclick="filterByPeriod('1950-1966')">
+                        <div class="period-icon">📋</div>
+                        <div class="period-label">Post-Nakba</div>
+                        <div class="period-count" id="count-1950-1966">1</div>
+                        <div class="period-population">1950 - 1966</div>
+                    </div>
+                    <div class="period-card" data-period="1967" onclick="filterByPeriod('1967')">
+                        <div class="period-icon">⚔️</div>
+                        <div class="period-label">Six-Day War</div>
+                        <div class="period-count" id="count-1967">9</div>
+                        <div class="period-population">June 1967</div>
+                    </div>
+                    <div class="period-card" data-period="1967-2023" onclick="filterByPeriod('1967-2023')">
+                        <div class="period-icon">🏛️</div>
+                        <div class="period-label">Occupation Era</div>
+                        <div class="period-count" id="count-1967-2023">6</div>
+                        <div class="period-population">1967 - 2023</div>
+                    </div>
+                    <div class="period-card" data-period="2023-present" onclick="filterByPeriod('2023-present')">
+                        <div class="period-icon">🚨</div>
+                        <div class="period-label">Current Period</div>
+                        <div class="period-count" id="count-2023-present">10</div>
+                        <div class="period-population">2023 - Present</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filters -->
+            <div class="filters-section">
+                <h3>🔍 Filters</h3>
+                <div class="filter-row">
+                    <div class="filter-group">
+                        <label class="filter-label">Search Villages</label>
+                        <input type="text" id="searchInput" class="search-input" placeholder="Search by name or district...">
+                    </div>
+                    <div class="filter-group">
+                        <label class="filter-label">Displacement Method</label>
+                        <select id="methodFilter" class="filter-select" onchange="applyFilters()">
+                            <option value="">All Methods</option>
+                            <option value="massacre">⚠️ Massacre</option>
+                            <option value="military_assault">🎯 Military Assault</option>
+                            <option value="forced_expulsion">👋 Forced Expulsion</option>
+                            <option value="fear_of_attack">😰 Fear of Attack</option>
+                            <option value="whispering_campaign">💭 Whispering Campaign</option>
+                            <option value="administrative_demolition">🏗️ Administrative Demolition</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label class="filter-label">District</label>
+                        <select id="districtFilter" class="filter-select" onchange="applyFilters()">
+                            <option value="">All Districts</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label class="filter-label">View Mode</label>
+                        <select id="viewMode" class="filter-select" onchange="switchView()">
+                            <option value="timeline" selected>📅 Timeline View</option>
+                            <option value="map">🗺️ Map View</option>
+                            <option value="table">📋 Table View</option>
+                        </select>
+                    </div>
+                </div>
+                <div style="margin-top: 1rem; text-align: right;">
+                    <button onclick="clearFilters()" class="clear-btn">🔄 Clear All Filters</button>
+                </div>
+            </div>
+
+            <!-- Timeline View -->
+            <div id="timelineView" class="village-timeline">
+                <h2>📜 Village Documentation</h2>
+                <div id="villageList">
+                    <div class="empty-state">
+                        <div class="empty-icon">📊</div>
+                        <p>Loading village data...</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map View -->
+            <div id="mapView" class="map-container" style="display: none;">
+                <div id="ethnicCleansingMap"></div>
+            </div>
+
+            <!-- Table View -->
+            <div id="tableView" style="display: none;">
+                <div class="table-container">
+                    <table id="villagesTable" class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Village Name</th>
+                                <th>Period</th>
+                                <th>Date</th>
+                                <th>District</th>
+                                <th>Population</th>
+                                <th>Method</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableBody"></tbody>
+                    </table>
+                </div>
+
+                <!-- Pagination -->
+                <div id="tablePagination" class="table-pagination" style="display: none;">
+                    <div id="paginationInfo" class="pagination-info"></div>
+                    <div id="paginationButtons" class="pagination-buttons"></div>
+                </div>
+            </div>
+
+            <!-- Results Count -->
+            <div id="resultsCount" style="margin-top: 1rem; text-align: center; color: var(--text-secondary);"></div>
+        </div>
+    </main>
+
+    <!-- Village Detail Modal -->
+    <div class="modal" id="villageModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Village Details</h2>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body" id="modalBody"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Header config: 'main' mode, this page auto-detected as ethnic-cleansing -->
+    <script>
+        window.headerConfig = {
+            mode: 'main',
+            activePage: 'ethnic-cleansing'
+        };
+    </script>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+    <script src="/js/config.js?v=1"></script>
+    <script src="/js/header-component.js?v=3"></script>
+    <script src="/js/translation-system.js?v=4"></script>
+    <script src="/js/footer-init.js?v=6"></script>
+    <script src="/js/ethnic-cleansing-manager.js"></script>
+</body>
+</html>

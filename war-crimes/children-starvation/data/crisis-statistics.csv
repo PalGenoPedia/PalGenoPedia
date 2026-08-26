@@ -1,0 +1,18 @@
+id,category,statistic,value,unit,date,description,reference_id,critical_level
+1,child_deaths,confirmed_starvation_deaths,93,children,2025-08-02,Children confirmed dead from starvation and malnutrition since October 2023,ref_gaza_health,critical
+2,at_risk,children_under_5_at_risk,320000,children,2025-07-29,All children under 5 at immediate risk of acute malnutrition,ref_unicef,critical
+3,malnutrition_rate,gaza_city_increase,16.5,percentage,2025-07-29,Malnutrition rates in Gaza City - quadrupled since February 2025,ref_ipc,critical
+4,food_access,going_days_without_eating,39,percentage,2025-07-29,Population going days at a time without eating,ref_ipc,critical
+5,treatment,gam_admissions_june,6500,children,2025-06-30,Children admitted for malnutrition treatment in June - highest since conflict began,ref_nutrition_cluster,high
+6,services,nutrition_services_functional,15,percentage,2025-07-29,Essential nutrition treatment services currently functional,ref_unicef,critical
+7,total_deaths,all_starvation_deaths,169,people,2025-08-02,Total Palestinians died of starvation since October 2023,ref_gaza_health,critical
+8,famine_conditions,people_in_famine,500000,people,2025-07-29,People enduring famine-like conditions - nearly quarter of population,ref_ipc,critical
+9,treatment_july,gam_admissions_july_half,5000,children,2025-07-15,Children admitted for malnutrition in first half of July 2025 alone,ref_nutrition_cluster,critical
+10,food_aid,monthly_need,62000,metric_tonnes,2025-07-29,Monthly food needed to meet basic needs for 2.1 million people,ref_humanitarian_orgs,high
+11,food_aid,israel_allowed_4months,56000,metric_tonnes,2025-06-30,Total food Israel allowed March-June 2025 - less than one month's needs,ref_cogat,critical
+12,violence,deaths_at_ghf_sites,859,deaths,2025-07-31,Deaths near GHF distribution sites from May 27 to July 31,ref_un_report,critical
+13,violence,killed_seeking_food_weekly,325,deaths,2025-08-03,Killed by Israeli forces while trying to reach food in one week,ref_gaza_health,critical
+14,individual_case,atef_weight_at_death,25,kg,2025-08-02,17-year-old Atef Abu Khater's weight at death - dropped from 70kg,ref_al_jazeera,critical
+15,daily_crisis,daily_malnutrition_deaths,7,deaths,2025-08-02,Palestinians died of malnutrition in past 24 hours including children,ref_al_shifa_hospital,critical
+16,famine_declaration,famine_thresholds_exceeded,2,out_of_3_thresholds,2025-07-29,Two out of three famine thresholds breached in parts of Gaza,ref_ipc,critical
+17,worst_case,famine_scenario_unfolding,1,confirmed,2025-07-29,UN confirms worst-case scenario of famine is now unfolding,ref_ipc,critical

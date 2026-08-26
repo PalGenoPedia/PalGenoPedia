@@ -1,0 +1,105 @@
+{
+  "metadata": {
+    "total_villages": 418,
+    "total_displaced": 950000,
+    "last_updated": "2025-01-15",
+    "data_sources": [
+      "Benny Morris - The Birth of the Palestinian Refugee Problem",
+      "Israeli Military Archives (declassified)",
+      "UN Documentation",
+      "B'Tselem",
+      "Human Rights Watch"
+    ],
+    "period_breakdown": {
+      "1948-1949": {
+        "villages": 392,
+        "population": 750000,
+        "description": "Nakba Period - Systematic ethnic cleansing during 1948 war"
+      },
+      "1950-1966": {
+        "villages": 1,
+        "population": 1180,
+        "description": "Post-Nakba - Continued displacement under military rule"
+      },
+      "1967": {
+        "villages": 9,
+        "population": 28000,
+        "description": "Six-Day War - Villages destroyed in West Bank and Golan Heights"
+      },
+      "1967-2023": {
+        "villages": 6,
+        "population": 3790,
+        "description": "Occupation Era - Ongoing demolitions and displacements"
+      },
+      "2023-present": {
+        "villages": 10,
+        "population": 53710,
+        "description": "Current Period - Active displacement threats and demolitions"
+      }
+    }
+  },
+  "displacement_methods": {
+    "massacre": {
+      "label": "Massacre",
+      "description": "Direct killing of civilians to force displacement",
+      "count": 4
+    },
+    "military_assault": {
+      "label": "Military Assault",
+      "description": "Armed military operations causing displacement",
+      "count": 245
+    },
+    "forced_expulsion": {
+      "label": "Forced Expulsion",
+      "description": "Direct orders forcing residents to leave",
+      "count": 38
+    },
+    "fear_of_attack": {
+      "label": "Fear of Attack",
+      "description": "Displacement due to fear of military action",
+      "count": 75
+    },
+    "whispering_campaign": {
+      "label": "Whispering Campaign",
+      "description": "Psychological warfare to encourage departure",
+      "count": 15
+    },
+    "administrative_demolition": {
+      "label": "Administrative Demolition",
+      "description": "House demolitions under administrative orders",
+      "count": 12
+    },
+    "unknown": {
+      "label": "Method Unknown",
+      "description": "Displacement method not documented",
+      "count": 29
+    }
+  },
+  "districts": [
+    "Safad",
+    "Acre",
+    "Tiberias",
+    "Nazareth",
+    "Haifa",
+    "Beisan",
+    "Jenin",
+    "Tulkarm",
+    "Jaffa",
+    "Ramle",
+    "Jerusalem",
+    "Hebron",
+    "Gaza",
+    "Beersheba",
+    "Ramallah",
+    "Bethlehem",
+    "Nablus",
+    "Golan Heights"
+  ],
+  "status_types": {
+    "destroyed": "Completely destroyed - no structures remain",
+    "partially_destroyed": "Partially demolished with some structures remaining",
+    "unrecognized": "Exists but not recognized by Israeli government",
+    "under_threat": "Currently facing demolition or displacement threats",
+    "demolished_multiple": "Demolished and rebuilt multiple times"
+  }
+}

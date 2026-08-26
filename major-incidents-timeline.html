@@ -1,0 +1,1244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="timeline.pageTitle">Major Incidents Timeline - Gaza Crisis Documentation</title>
+    <meta name="description" data-i18n="timeline.metaDescription" content="Comprehensive timeline of historical massacres (1948-2023) and current genocide (2023-present) in Gaza and Palestine">
+
+    <!-- External CSS Libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.Default.css" />
+
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="Styles/shared-styles.css">
+
+    <style>
+        /* ===== DUAL TIMELINE SPECIFIC STYLES ===== */
+
+        /* Timeline Mode Selector */
+        .timeline-mode-selector {
+            background: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius-lg);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-md);
+        }
+
+        .mode-selector-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .mode-selector-header h3 {
+            color: var(--text-primary);
+            font-size: 1.2rem;
+            margin: 0;
+        }
+
+        .mode-buttons {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+
+        .mode-btn {
+            background: var(--bg-secondary);
+            border: 2px solid var(--border-color);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: var(--transition-base);
+            text-align: center;
+        }
+
+        .mode-btn:hover {
+            border-color: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .mode-btn.active {
+            border-color: var(--accent-color);
+            background: linear-gradient(135deg, rgba(220, 53, 69, 0.1), rgba(220, 53, 69, 0.05));
+            box-shadow: var(--shadow-md);
+        }
+
+        .mode-btn.historical.active {
+            border-color: #6c757d;
+            background: linear-gradient(135deg, rgba(108, 117, 125, 0.1), rgba(108, 117, 125, 0.05));
+        }
+
+        .mode-btn.current.active {
+            border-color: #dc3545;
+            background: linear-gradient(135deg, rgba(220, 53, 69, 0.1), rgba(220, 53, 69, 0.05));
+        }
+
+        .mode-btn.both.active {
+            border-color: #0d6efd;
+            background: linear-gradient(135deg, rgba(13, 110, 253, 0.1), rgba(13, 110, 253, 0.05));
+        }
+
+        .mode-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .mode-label {
+            font-weight: 600;
+            color: var(--text-primary);
+            display: block;
+            margin-bottom: 0.25rem;
+            font-size: 1rem;
+        }
+
+        .mode-period {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .mode-stats {
+            margin-top: 0.75rem;
+            padding-top: 0.75rem;
+            border-top: 1px solid var(--border-light);
+        }
+
+        .mode-stat {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.25rem;
+        }
+
+        .mode-stat strong {
+            color: var(--accent-color);
+            font-weight: 700;
+        }
+
+        /* Enhanced Filters */
+        .advanced-filters {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .filter-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .filter-label {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .casualty-scale-filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .scale-chip {
+            background: var(--bg-tertiary);
+            border: 2px solid transparent;
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: var(--transition-base);
+            white-space: nowrap;
+        }
+
+        .scale-chip:hover {
+            border-color: var(--secondary-color);
+        }
+
+        .scale-chip.active {
+            background: var(--secondary-color);
+            color: white;
+            border-color: var(--secondary-color);
+        }
+
+        /* Timeline Statistics Dashboard */
+        .timeline-stats-dashboard {
+            background: linear-gradient(135deg, var(--bg-secondary), var(--bg-tertiary));
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius-lg);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-md);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .stat-card {
+            background: var(--surface-color);
+            border: 1px solid var(--border-light);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            text-align: center;
+            transition: var(--transition-base);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .stat-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            margin-bottom: 0.25rem;
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .stat-sublabel {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-top: 0.25rem;
+        }
+
+        /* Period Comparison */
+        .period-comparison {
+            background: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .comparison-header {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .comparison-card {
+            background: var(--bg-secondary);
+            border-left: 4px solid var(--accent-color);
+            padding: 1rem;
+            border-radius: var(--border-radius-sm);
+        }
+
+        .comparison-card.historical {
+            border-left-color: #6c757d;
+        }
+
+        .comparison-card.current {
+            border-left-color: #dc3545;
+        }
+
+        .comparison-title {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .comparison-stats {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+
+        .comparison-stat {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .comparison-stat strong {
+            color: var(--text-primary);
+        }
+
+        /* Event Type Legend */
+        .event-type-legend {
+            background: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .legend-title {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.75rem;
+            font-size: 0.9rem;
+        }
+
+        .legend-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+        }
+
+        .legend-color {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            border: 2px solid white;
+            box-shadow: var(--shadow-sm);
+        }
+
+        /* Data Source Badge */
+        .data-source-indicator {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(13, 110, 253, 0.1);
+            color: #0d6efd;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border: 1px solid rgba(13, 110, 253, 0.3);
+        }
+
+        /* Clarifies the stats-grid totals are a documented-incidents sum, not
+           an independent whole-war figure - see STATS_RECONCILIATION.md. */
+        .stats-scope-note {
+            font-size: 0.8rem;
+            color: var(--text-secondary, #6c757d);
+            text-align: center;
+            max-width: 42rem;
+            margin: 0.75rem auto 0;
+            line-height: 1.5;
+        }
+        .stats-scope-note a { color: inherit; text-decoration: underline; }
+
+        /* Loading States */
+        .timeline-loading {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 400px;
+            text-align: center;
+        }
+
+        .loading-spinner {
+            width: 60px;
+            height: 60px;
+            border: 6px solid var(--border-color);
+            border-top: 6px solid var(--accent-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 1.5rem;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .loading-message {
+            color: var(--text-primary);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .loading-detail {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .mode-buttons {
+                grid-template-columns: 1fr;
+            }
+
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .filter-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ===== STICKY SUB-HEADER ===== */
+        /*
+         * header-component.js injects .sub-header directly after .header.
+         * We override its top value here using --header-height which is set
+         * dynamically by JS below once the header renders.
+         * The fallback (64px) covers the common header height.
+         */
+        .sub-header {
+            position: sticky !important;
+            top: var(--header-height, 64px) !important;
+            z-index: 99;
+            background: var(--surface-color);
+            border-bottom: 1px solid var(--border-color);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+        }
+    </style>
+<!-- SEO_START - generated by tools/seo_inject.py - do not edit by hand -->
+    <link rel="canonical" href="https://palgenopedia.org/major-incidents-timeline.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="PalGenoPedia">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="Major Incidents Timeline - Gaza Crisis Documentation">
+    <meta property="og:description" content="Comprehensive timeline of historical massacres (1948-2023) and current genocide (2023-present) in Gaza and Palestine">
+    <meta property="og:url" content="https://palgenopedia.org/major-incidents-timeline.html">
+    <meta property="og:image" content="https://palgenopedia.org/images/og-card.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="PalGenoPedia - documented war crimes, massacres and humanitarian violations concerning Palestine, 1948 to present">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Major Incidents Timeline - Gaza Crisis Documentation">
+    <meta name="twitter:description" content="Comprehensive timeline of historical massacres (1948-2023) and current genocide (2023-present) in Gaza and Palestine">
+    <meta name="twitter:image" content="https://palgenopedia.org/images/og-card.png">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="alternate" type="application/atom+xml" title="PalGenoPedia - documented events" href="./feed.xml">
+    <link rel="alternate" type="application/rss+xml" title="PalGenoPedia - documented events" href="./feed.rss">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "@id": "https://palgenopedia.org/major-incidents-timeline.html#page",
+  "url": "https://palgenopedia.org/major-incidents-timeline.html",
+  "name": "Major Incidents Timeline - Gaza Crisis Documentation",
+  "description": "Comprehensive timeline of historical massacres (1948-2023) and current genocide (2023-present) in Gaza and Palestine",
+  "inLanguage": "en",
+  "isPartOf": {
+    "@id": "https://palgenopedia.org/#website"
+  },
+  "publisher": {
+    "@id": "https://palgenopedia.org/#org"
+  }
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://palgenopedia.org/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Major Incidents Timeline",
+      "item": "https://palgenopedia.org/major-incidents-timeline.html"
+    }
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Documented events, 1948-present",
+  "numberOfItems": 27,
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "Event",
+        "name": "Deir Yassin",
+        "startDate": "1948-04-09",
+        "url": "https://palgenopedia.org/Pages/Historical_Massacres/massacres.html#event/hist001"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "Event",
+        "name": "Tantura ",
+        "startDate": "1948-05-22",
+        "url": "https://palgenopedia.org/Pages/Historical_Massacres/massacres.html#event/hist002"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@type": "Event",
+        "name": "Lydda and Ramle",
+        "startDate": "1948-07-09",
+        "url": "https://palgenopedia.org/Pages/Historical_Massacres/massacres.html#event/hist003"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "item": {
+        "@type": "Event",
+        "name": "Qibya ",
+        "startDate": "1953-10-14",
+        "url": "https://palgenopedia.org/Pages/Historical_Massacres/massacres.html#event/hist004"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "item": {
+        "@type": "Event",
+        "name": "Khan Yunis Massacre",
+        "startDate": "1956-11-03",
+        "url": "https://palgenopedia.org/Pages/Historical_Massacres/massacres.html#event/hist005"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "item": {
+        "@type": "Event",
+        "name": "Six-Day War / Al-Naksa",
+        "startDate": "1967-06-05",
+        "url": "https://palgenopedia.org/Pages/Historical_Massacres/massacres.html#event/hist006"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 7,
+      "item": {
+        "@type": "Event",
+        "name": "Sabra and Shatila",
+        "startDate": "1982-09-16",
+        "url": "https://palgenopedia.org/Pages/Historical_Massacres/massacres.html#event/hist007"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 8,
+      "item": {
+        "@type": "Event",
+        "name": "First Intifada",
+        "startDate": "1987-12-08",
+        "url": "https://palgenopedia.org/Pages/Historical_Massacres/massacres.html#event/hist008"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 9,
+      "item": {
+        "@type": "Event",
+        "name": "Cave of the Patriarchs Massacre",
+        "startDate": "1994-02-25",
+        "url": "https://palgenopedia.org/Pages/Historical_Massacres/massacres.html#event/hist009"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 10,
+      "item": {
+        "@type": "Event",
+        "name": "Second Intifada",
+        "startDate": "2000-09-28",
+        "url": "https://palgenopedia.org/Pages/Historical_Massacres/massacres.html#event/hist010"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 11,
+      "item": {
+        "@type": "Event",
+        "name": "Battle of Jenin",
+        "startDate": "2002-04-03",
+        "url": "https://palgenopedia.org/Pages/Historical_Massacres/massacres.html#event/hist011"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 12,
+      "item": {
+        "@type": "Event",
+        "name": "Operation Cast Lead",
+        "startDate": "2008-12-27",
+        "url": "https://palgenopedia.org/Pages/Historical_Massacres/massacres.html#event/hist012"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 13,
+      "item": {
+        "@type": "Event",
+        "name": "Operation Pillar of Defense",
+        "startDate": "2012-11-14",
+        "url": "https://palgenopedia.org/Pages/Historical_Massacres/massacres.html#event/hist013"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 14,
+      "item": {
+        "@type": "Event",
+        "name": "Operation Protective Edge",
+        "startDate": "2014-07-07",
+        "url": "https://palgenopedia.org/Pages/Historical_Massacres/massacres.html#event/hist014"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 15,
+      "item": {
+        "@type": "Event",
+        "name": "Great March of Return",
+        "startDate": "2018-03-30",
+        "url": "https://palgenopedia.org/Pages/Historical_Massacres/massacres.html#event/hist015"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 16,
+      "item": {
+        "@type": "Event",
+        "name": "Operation Guardian of the Walls",
+        "startDate": "2021-05-10",
+        "url": "https://palgenopedia.org/Pages/Historical_Massacres/massacres.html#event/hist016"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 17,
+      "item": {
+        "@type": "Event",
+        "name": "West Bank Raids 2022–2023",
+        "startDate": "2022-01-01",
+        "url": "https://palgenopedia.org/Pages/Historical_Massacres/massacres.html#event/hist017"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 18,
+      "item": {
+        "@type": "Event",
+        "name": "UNRWA School Strikes",
+        "startDate": "2023-10-15",
+        "url": "https://palgenopedia.org/major-incidents-timeline.html#event/curr_004"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 19,
+      "item": {
+        "@type": "Event",
+        "name": "Al-Ahli Baptist Hospital Strike",
+        "startDate": "2023-10-17",
+        "url": "https://palgenopedia.org/major-incidents-timeline.html#event/curr_001"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 20,
+      "item": {
+        "@type": "Event",
+        "name": "Gaza City Systematic Destruction",
+        "startDate": "2023-10-27",
+        "url": "https://palgenopedia.org/major-incidents-timeline.html#event/curr_009"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 21,
+      "item": {
+        "@type": "Event",
+        "name": "Jabalia Refugee Camp Bombardment (First Strike)",
+        "startDate": "2023-10-31",
+        "url": "https://palgenopedia.org/major-incidents-timeline.html#event/curr_002"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 22,
+      "item": {
+        "@type": "Event",
+        "name": "Al-Shifa Hospital Siege",
+        "startDate": "2023-11-11",
+        "url": "https://palgenopedia.org/major-incidents-timeline.html#event/curr_006"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 23,
+      "item": {
+        "@type": "Event",
+        "name": "Flour Massacre - Al-Rashid Street",
+        "startDate": "2024-02-29",
+        "url": "https://palgenopedia.org/major-incidents-timeline.html#event/curr_003"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 24,
+      "item": {
+        "@type": "Event",
+        "name": "World Central Kitchen Workers Killing",
+        "startDate": "2024-04-01",
+        "url": "https://palgenopedia.org/major-incidents-timeline.html#event/curr_008"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 25,
+      "item": {
+        "@type": "Event",
+        "name": "Mass Graves Discovery at Nasser Hospital",
+        "startDate": "2024-04-22",
+        "url": "https://palgenopedia.org/major-incidents-timeline.html#event/curr_005"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 26,
+      "item": {
+        "@type": "Event",
+        "name": "Rafah Tent Camp Massacre",
+        "startDate": "2024-05-26",
+        "url": "https://palgenopedia.org/major-incidents-timeline.html#event/curr_007"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 27,
+      "item": {
+        "@type": "Event",
+        "name": "Starvation Genocide - Northern Gaza Blockade",
+        "startDate": "2024-10-01",
+        "url": "https://palgenopedia.org/major-incidents-timeline.html#event/curr_010"
+      }
+    }
+  ]
+}
+    </script>
+    <!-- SEO_END -->
+</head>
+
+<body data-i18n-page-title="timeline.pageTitle" data-i18n-meta-desc="timeline.metaDescription">
+    <!-- Shared header rendered by header-component.js -->
+    <div id="header-placeholder"></div>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Page Header -->
+        <div class="page-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="header-text">
+                        <h1 data-i18n="timeline.header.title">📋 Historical & Current Timeline</h1>
+                        <p data-i18n="timeline.header.description">Comprehensive documentation from 1948 Nakba through current genocide. Interactive timeline with verified sources from UN, Human Rights Watch, and other international organizations.</p>
+                    </div>
+                    <div class="header-stats" id="headerStats">
+                        <div class="quick-stat">
+                            <span class="stat-value" id="totalEvents">Loading...</span>
+                            <span class="stat-label" data-i18n="timeline.stats.totalEvents">Total Events</span>
+                        </div>
+                        <div class="quick-stat">
+                            <span class="stat-value" id="totalDeaths">Loading...</span>
+                            <span class="stat-label" data-i18n="timeline.stats.totalDeaths">Total Deaths</span>
+                        </div>
+                        <div class="quick-stat">
+                            <span class="stat-value" id="lastUpdate">Loading...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <!-- Timeline Mode Selector -->
+            <div class="timeline-mode-selector">
+                <div class="mode-selector-header">
+                    <h3 data-i18n="timeline.modeSelector.title">📊 Select Timeline Period</h3>
+                    <span class="data-source-indicator">
+                        <span data-i18n="timeline.modeSelector.sources">🔍 Sources: UN, Human Rights Watch</span>
+                    </span>
+                </div>
+                <div class="mode-buttons">
+                    <!-- Historical Mode - ACTIVE BY DEFAULT -->
+                    <button class="mode-btn historical active" data-mode="historical">
+                        <div class="mode-icon">📜</div>
+                        <span class="mode-label" data-i18n="timeline.modes.historical.title">Historical Massacres</span>
+                        <span class="mode-period" data-i18n="timeline.modes.historical.period">1948 - October 6, 2023</span>
+                        <div class="mode-stats">
+                            <div class="mode-stat">
+                                <span data-i18n="timeline.modes.historical.events">Events:</span>
+                                <strong id="historicalCount">17</strong>
+                            </div>
+                            <div class="mode-stat">
+                                <span data-i18n="timeline.modes.historical.deaths">Deaths:</span>
+                                <strong id="historicalDeaths">27K+</strong>
+                            </div>
+                        </div>
+                    </button>
+
+                    <!-- Current Mode -->
+                    <button class="mode-btn current" data-mode="current">
+                        <div class="mode-icon">🚨</div>
+                        <span class="mode-label" data-i18n="timeline.modes.current.title">Current Genocide</span>
+                        <span class="mode-period" data-i18n="timeline.modes.current.period">October 7, 2023 - Present</span>
+                        <div class="mode-stats">
+                            <div class="mode-stat">
+                                <span data-i18n="timeline.modes.current.events">Events:</span>
+                                <strong id="currentCount">10</strong>
+                            </div>
+                            <div class="mode-stat">
+                                <span data-i18n="timeline.modes.current.deaths">Deaths:</span>
+                                <strong id="currentDeaths">61K+</strong>
+                            </div>
+                        </div>
+                    </button>
+
+                    <!-- Both Mode -->
+                    <button class="mode-btn both" data-mode="both">
+                        <div class="mode-icon">📊</div>
+                        <span class="mode-label" data-i18n="timeline.modes.both.title">Complete Timeline</span>
+                        <span class="mode-period" data-i18n="timeline.modes.both.period">1948 - Present</span>
+                        <div class="mode-stats">
+                            <div class="mode-stat">
+                                <span data-i18n="timeline.modes.both.events">Total Events:</span>
+                                <strong id="bothCount">27</strong>
+                            </div>
+                            <div class="mode-stat">
+                                <span data-i18n="timeline.modes.both.deaths">Total Deaths:</span>
+                                <strong id="bothDeaths">88K+</strong>
+                            </div>
+                        </div>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Statistics Dashboard -->
+            <div class="timeline-stats-dashboard" id="statsDashboard">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">⚠️</div>
+                        <div class="stat-number" id="massacresCount">0</div>
+                        <div class="stat-label" data-i18n="timeline.stats.massacres">Massacres</div>
+                        <div class="stat-sublabel" data-i18n="timeline.stats.documentedEvents">Documented Events</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">💀</div>
+                        <div class="stat-number" id="deathsCount">0</div>
+                        <div class="stat-label" data-i18n="timeline.stats.deaths">Total Deaths</div>
+                        <div class="stat-sublabel" data-i18n="timeline.stats.verifiedCasualties">Verified Casualties</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🏥</div>
+                        <div class="stat-number" id="injuredCount">0</div>
+                        <div class="stat-label" data-i18n="timeline.stats.injured">Injured</div>
+                        <div class="stat-sublabel" data-i18n="timeline.stats.documentedInjuries">Documented Injuries</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🏠</div>
+                        <div class="stat-number" id="displacedCount">0</div>
+                        <div class="stat-label" data-i18n="timeline.stats.displaced">Displaced</div>
+                        <div class="stat-sublabel" data-i18n="timeline.stats.forcedDisplacement">Forced Displacement</div>
+                    </div>
+                </div>
+                <p class="stats-scope-note" data-i18n="timeline.stats.scopeNote">Totals sum the documented individual incidents shown below, filtered by the period selected above — not an independent whole-war casualty count. Updated 2026-08-24. See the <a href="/methodology.html">methodology page</a> for sourcing.</p>
+
+                <!-- Period Comparison (shown in "both" mode) -->
+                <div class="period-comparison" id="periodComparison" style="display: none;">
+                    <div class="comparison-header" data-i18n="timeline.comparison.title">
+                        📊 Historical vs Current Comparison
+                    </div>
+                    <div class="comparison-grid">
+                        <div class="comparison-card historical">
+                            <div class="comparison-title" data-i18n="timeline.comparison.historical.title">📜 Historical Period (1948-2023)</div>
+                            <div class="comparison-stats">
+                                <div class="comparison-stat">
+                                    <span data-i18n="timeline.comparison.historical.duration">Duration:</span>
+                                    <strong data-i18n="timeline.comparison.historical.durationValue">75 years</strong>
+                                </div>
+                                <div class="comparison-stat">
+                                    <span data-i18n="timeline.comparison.historical.events">Major Events:</span>
+                                    <strong id="compHistEvents">17</strong>
+                                </div>
+                                <div class="comparison-stat">
+                                    <span data-i18n="timeline.comparison.historical.deaths">Total Deaths:</span>
+                                    <strong id="compHistDeaths">27,000+</strong>
+                                </div>
+                                <div class="comparison-stat">
+                                    <span data-i18n="timeline.comparison.historical.avgDeaths">Avg Deaths/Year:</span>
+                                    <strong id="compHistAvg">360</strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comparison-card current">
+                            <div class="comparison-title" data-i18n="timeline.comparison.current.title">🚨 Current Genocide (Oct 2023-Present)</div>
+                            <div class="comparison-stats">
+                                <div class="comparison-stat">
+                                    <span data-i18n="timeline.comparison.current.duration">Duration:</span>
+                                    <strong id="genocideDuration">12 months</strong>
+                                </div>
+                                <div class="comparison-stat">
+                                    <span data-i18n="timeline.comparison.current.events">Major Events:</span>
+                                    <strong id="compCurrEvents">10</strong>
+                                </div>
+                                <div class="comparison-stat">
+                                    <span data-i18n="timeline.comparison.current.deaths">Total Deaths:</span>
+                                    <strong id="compCurrDeaths">61,200+</strong>
+                                </div>
+                                <div class="comparison-stat">
+                                    <span data-i18n="timeline.comparison.current.avgDeaths">Avg Deaths/Day:</span>
+                                    <strong id="compCurrAvg">167</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event Type Legend -->
+            <div class="event-type-legend">
+                <div class="legend-title" data-i18n="timeline.legend.title">📌 Event Types</div>
+                <div class="legend-items">
+                    <div class="legend-item">
+                        <span class="legend-color" style="background: #dc3545;"></span>
+                        <span data-i18n="timeline.legend.massacres">Massacres</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color" style="background: #fd7e14;"></span>
+                        <span data-i18n="timeline.legend.militaryOperations">Military Operations</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color" style="background: #6f42c1;"></span>
+                        <span data-i18n="timeline.legend.forcedDisplacement">Forced Displacement</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color" style="background: #e83e8c;"></span>
+                        <span data-i18n="timeline.legend.hospitalAttacks">Hospital Attacks</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color" style="background: #6c757d;"></span>
+                        <span data-i18n="timeline.legend.starvationWarfare">Starvation Warfare</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color" style="background: #0d6efd;"></span>
+                        <span data-i18n="timeline.legend.protestSuppression">Protest Suppression</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Advanced Filters -->
+            <div class="advanced-filters">
+                <div class="filter-grid">
+                    <!-- Date Range Filter -->
+                    <div class="filter-group">
+                        <label class="filter-label" data-i18n="timeline.filters.dateRange">
+                            📅 Date Range
+                        </label>
+                        <select id="dateRangeFilter" class="filter-select">
+                            <option value="" data-i18n="timeline.filters.allDates">All Dates</option>
+                            <option value="nakba" data-i18n="timeline.filters.nakba">Nakba (1948)</option>
+                            <option value="first_intifada" data-i18n="timeline.filters.firstIntifada">First Intifada (1987-1993)</option>
+                            <option value="second_intifada" data-i18n="timeline.filters.secondIntifada">Second Intifada (2000-2005)</option>
+                            <option value="gaza_operations" data-i18n="timeline.filters.gazaOperations">Gaza Operations (2008-2021)</option>
+                            <option value="current_genocide" data-i18n="timeline.filters.currentGenocide">Current Genocide (2023-Present)</option>
+                        </select>
+                    </div>
+
+                    <!-- Event Type Filter -->
+                    <div class="filter-group">
+                        <label class="filter-label" data-i18n="timeline.filters.eventType">
+                            🏷️ Event Type
+                        </label>
+                        <select id="eventTypeFilter" class="filter-select">
+                            <option value="" data-i18n="timeline.filters.allTypes">All Types</option>
+                            <option value="massacre" data-i18n="timeline.filters.massacres">Massacres</option>
+                            <option value="military_operation" data-i18n="timeline.filters.militaryOperations">Military Operations</option>
+                            <option value="forced_displacement" data-i18n="timeline.filters.forcedDisplacement">Forced Displacement</option>
+                            <option value="hospital_attack" data-i18n="timeline.filters.hospitalAttacks">Hospital Attacks</option>
+                            <option value="protected_site_attack" data-i18n="timeline.filters.protectedSiteAttacks">Protected Site Attacks</option>
+                            <option value="starvation_warfare" data-i18n="timeline.filters.starvationWarfare">Starvation Warfare</option>
+                            <option value="protest_suppression" data-i18n="timeline.filters.protestSuppression">Protest Suppression</option>
+                        </select>
+                    </div>
+
+                    <!-- Search Filter -->
+                    <div class="filter-group">
+                        <label class="filter-label" data-i18n="timeline.filters.search">
+                            🔍 Search
+                        </label>
+                        <input type="text" id="searchFilter" class="search-input" data-i18n-placeholder="timeline.filters.searchPlaceholder" placeholder="Search events, locations...">
+                    </div>
+
+                    <!-- Verification Status -->
+                    <div class="filter-group">
+                        <label class="filter-label" data-i18n="timeline.filters.verification">
+                            ✅ Verification
+                        </label>
+                        <select id="verificationFilter" class="filter-select">
+                            <option value="" data-i18n="timeline.filters.allStatuses">All Statuses</option>
+                            <option value="verified" data-i18n="timeline.filters.verified">Verified</option>
+                            <option value="disputed" data-i18n="timeline.filters.disputed">Disputed</option>
+                            <option value="under_investigation" data-i18n="timeline.filters.underInvestigation">Under Investigation</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Casualty Scale Chips -->
+                <div class="filter-group" style="margin-top: 1rem;">
+                    <label class="filter-label" data-i18n="timeline.filters.casualtyScale">
+                        📊 Casualty Scale
+                    </label>
+                    <div class="casualty-scale-filters">
+                        <button class="scale-chip active" data-scale="all" data-i18n="timeline.filters.allScales">All Scales</button>
+                        <button class="scale-chip" data-scale="low" data-i18n="timeline.filters.lowCasualties">1-50 casualties</button>
+                        <button class="scale-chip" data-scale="medium" data-i18n="timeline.filters.mediumCasualties">51-500 casualties</button>
+                        <button class="scale-chip" data-scale="high" data-i18n="timeline.filters.highCasualties">501-2000 casualties</button>
+                        <button class="scale-chip" data-scale="massive" data-i18n="timeline.filters.massiveCasualties">2000+ casualties</button>
+                    </div>
+                </div>
+
+                <div style="margin-top: 1rem; text-align: right;">
+                    <button id="clearAllFilters" class="clear-btn" data-i18n="timeline.filters.clearAll">🔄 Clear All Filters</button>
+                </div>
+            </div>
+
+            <!-- Loading Status -->
+            <div id="timelineStatus" class="container" style="display: none;">
+                <div class="csv-status" id="timelineStatusContent" data-i18n="timeline.loading.status">
+                    📊 Loading timeline data...
+                </div>
+            </div>
+        </div>
+
+        <!-- Timeline View - ACTIVE BY DEFAULT -->
+        <section class="view-section active" id="timelineView">
+            <div class="container">
+                <div class="timeline-container">
+                    <div id="timeline-embed" class="timeline">
+                        <div class="timeline-loading">
+                            <div class="loading-spinner"></div>
+                            <div class="loading-message" data-i18n="timeline.loading.message">Loading Historical Timeline...</div>
+                            <div class="loading-detail" data-i18n="timeline.loading.detail">Fetching massacres data from 1948-2023...</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map View -->
+        <section class="view-section" id="mapView">
+            <div class="container">
+                <div class="map-container">
+                    <div id="map" class="map"></div>
+                    <div class="map-legend">
+                        <h4 data-i18n="timeline.map.legendTitle">Incident Types</h4>
+                        <div class="legend-item"><span class="marker" style="background: #dc3545;"></span> <span data-i18n="timeline.map.massacres">Massacres</span></div>
+                        <div class="legend-item"><span class="marker" style="background: #fd7e14;"></span> <span data-i18n="timeline.map.militaryOperations">Military Operations</span></div>
+                        <div class="legend-item"><span class="marker" style="background: #6f42c1;"></span> <span data-i18n="timeline.map.forcedDisplacement">Forced Displacement</span></div>
+                        <div class="legend-item"><span class="marker" style="background: #e83e8c;"></span> <span data-i18n="timeline.map.hospitalAttacks">Hospital Attacks</span></div>
+                        <div class="legend-item"><span class="marker" style="background: #6c757d;"></span> <span data-i18n="timeline.map.starvationWarfare">Starvation Warfare</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- List View -->
+        <section class="view-section" id="listView">
+            <div class="container">
+                <div class="list-header">
+                    <h2 data-i18n="timeline.list.title">Event Documentation</h2>
+                    <div class="sort-controls">
+                        <label for="sortSelect" data-i18n="timeline.list.sortBy">Sort by:</label>
+                        <select id="sortSelect" class="sort-select">
+                            <option value="date-desc" data-i18n="timeline.list.sortDateDesc">Date (Newest First)</option>
+                            <option value="date-asc" data-i18n="timeline.list.sortDateAsc">Date (Oldest First)</option>
+                            <option value="deaths-desc" data-i18n="timeline.list.sortDeathsDesc">Deaths (Highest First)</option>
+                            <option value="type" data-i18n="timeline.list.sortType">Event Type</option>
+                            <option value="location" data-i18n="timeline.list.sortLocation">Location</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="incident-grid" id="incidentGrid">
+                    <!-- Events will be populated here -->
+                </div>
+                <div class="loading" id="loading">
+                    <div class="loading-spinner"></div>
+                    <span data-i18n="timeline.list.loading">Loading events...</span>
+                </div>
+                <div class="no-results" id="noResults" style="display: none;">
+                    <div class="no-results-icon">🔍</div>
+                    <h3 data-i18n="timeline.list.noResults">No events found</h3>
+                    <p data-i18n="timeline.list.adjustFilters">Try adjusting your filters or search criteria.</p>
+                    <button onclick="window.dualTimeline.clearAllFilters()" class="clear-all-btn" data-i18n="timeline.list.clearAllFilters">Clear All Filters</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Incident Detail Modal -->
+    <div class="modal" id="incidentModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle" data-i18n="timeline.modal.title">Event Details</h2>
+                <button class="modal-close" aria-label="Close modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="incident-details">
+                    <div class="detail-section">
+                        <h4 data-i18n="timeline.modal.basicInfo">📋 Basic Information</h4>
+                        <div class="detail-grid">
+                            <div class="detail-item">
+                                <strong data-i18n="timeline.modal.date">📅 Date:</strong> <span id="modalDate"></span>
+                            </div>
+                            <div class="detail-item">
+                                <strong data-i18n="timeline.modal.location">📍 Location:</strong> <span id="modalLocation"></span>
+                            </div>
+                            <div class="detail-item">
+                                <strong data-i18n="timeline.modal.eventType">🏷️ Event Type:</strong> <span id="modalType"></span>
+                            </div>
+                            <div class="detail-item">
+                                <strong data-i18n="timeline.modal.verification">✅ Verification:</strong> <span id="modalVerification"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detail-section">
+                        <h4 data-i18n="timeline.modal.summary">📄 Summary</h4>
+                        <p id="modalSummary"></p>
+                    </div>
+
+                    <div class="detail-section" id="modalCasualtiesSection">
+                        <h4 data-i18n="timeline.modal.casualties">💥 Casualties & Impact</h4>
+                        <div id="modalCasualties" class="casualties-display"></div>
+                    </div>
+
+                    <div class="detail-section" id="modalWarCrimesSection">
+                        <h4 data-i18n="timeline.modal.warCrimes">⚖️ War Crimes Documented</h4>
+                        <div id="modalWarCrimes" class="war-crimes-list"></div>
+                    </div>
+
+                    <div class="detail-section">
+                        <h4 data-i18n="timeline.modal.sources">📰 Verified Sources</h4>
+                        <div id="modalSources" class="sources-container"></div>
+                    </div>
+
+                    <div class="detail-section">
+                        <div class="modal-actions">
+                            <a id="modalDetailPage" href="#" class="detail-page-btn" target="_blank" data-i18n="timeline.modal.viewFullDoc">
+                                📖 View Full Documentation →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Translation System (load once) -->
+    <script src="js/translation-system.js?v=4"></script>
+
+    <!-- ① Header MUST be injected before dual-timeline-manager.js
+         so that .sub-nav-btn[data-view] elements exist in the DOM
+         when the timeline manager tries to wire up view switching. -->
+    <script>
+        window.headerConfig = { mode: 'main', activePage: 'timeline', subNav: 'timeline' };
+    </script>
+    <script src="js/config.js?v=1"></script>
+    <script src="js/header-component.js?v=3"></script>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+    <script src="js/footer-init.js?v=6"></script>
+
+    <!-- External JavaScript Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+
+    <!-- ② Timeline manager loads AFTER header so sub-nav buttons are in the DOM -->
+    <script src="js/dual-timeline-manager.js?v=2"></script>
+
+    <script>
+        /**
+         * Measure the rendered header height and expose it as --header-height
+         * so the sticky .sub-header sits flush below the main header.
+         * Runs after all scripts (and therefore after header-component.js has
+         * injected the <header>) and re-measures on resize.
+         */
+        (function syncHeaderHeight() {
+            function update() {
+                const header = document.querySelector('.header');
+                if (header) {
+                    document.documentElement.style.setProperty(
+                        '--header-height',
+                        header.getBoundingClientRect().height + 'px'
+                    );
+                }
+            }
+            // Run immediately (scripts are at end of body, DOM is ready)
+            update();
+            // Re-run after fonts/images settle
+            window.addEventListener('load', update);
+            // Re-run on viewport resize (mobile orientation changes, etc.)
+            window.addEventListener('resize', update);
+        })();
+    </script>

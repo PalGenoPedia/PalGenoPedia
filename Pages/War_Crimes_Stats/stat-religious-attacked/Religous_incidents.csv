@@ -1,0 +1,348 @@
+incident_id,facility_id,facility_name,starting_date,ending_date,attack_type,result,description,full_discription,source_url_1,source_url_2,archived_resources,has_image,image_url,archived_image,video_url,archived_video,civilians_killed,civilians_injured,hw_killed,hw_injured,added_by,reviewed_by,
+INC-000,FAC-000,Great Omari Mosque,2023-12-08,,direct-airstrike,,Complete destruction of Gaza's oldest and largest mosque. 1400-year-old structure reduced to rubble. Only bent and broken Mamluk-era minaret remains. Rare manuscript library destroyed. Built on site of 7th century mosque over Byzantine church over pagan temple.,,Al Jazeera Heritage for Peace,,,,,,,,unknown,unknown,,,,Verified,View Incident
+INC-001,FAC-001,Church of Saint Porphyrius,2023-10-19,,airstrike-compound-building,,Israeli airstrike hit building in church compound where displaced people sheltering. Building completely collapsed. 18 killed including 10 from one family and several children. About 500 people sheltering in compound mostly Christians. Church building itself not directly hit but damaged.,,Greek Orthodox Patriarchate Vatican News,,,,,,,,18,20,,,,Verified,View Incident
+INC-002,FAC-002,Holy Family Church,2023-12-16,,sniper-attack,,Israeli sniper killed Nahida Khalil Anton (70) and daughter Samar Kamal Anton (50) as they walked to Sisters Convent. Mother shot first daughter killed trying to save her. No warning given. 7 others wounded trying to protect people. Shot in cold blood according to Latin Patriarchate.,,Latin Patriarchate Vatican News,,,,,,,,2,7,,,,Verified,View Incident
+INC-003,FAC-002,Holy Family Church,2023-12-16,,tank-fire-convent,,Israeli tank fired three rockets at Convent of Missionaries of Charity housing 54 disabled persons. Destroyed generator and fuel supplies. Building rendered uninhabitable. 54 disabled displaced without access to respirators needed for survival.,,Latin Patriarchate,,,,,,,,0,3,,,,Verified,View Incident
+INC-004,FAC-002,Holy Family Church,2024-07-07,,airstrike-school,,Israeli airstrike on Holy Family Catholic School killed 4 people including Palestinian Deputy Labor Minister Ihab al-Ghussein who was sheltering there. School part of church compound. Condemned by Latin Patriarchate as targeting of civilians and sacred place.,,Latin Patriarchate Al Jazeera,,,,,,,,4,unknown,,,,Verified,View Incident
+INC-005,FAC-005,Khalid bin al-Walid Mosque,2023-11-08,,direct-airstrike,,Complete destruction of large mosque in Khan Younis. Named after companion of Prophet Muhammad and renowned military commander. Mosque reduced to rubble by bombing. Major worship center for southern Gaza eliminated.,,BBC WHO,,,,,,,,unknown,unknown,,,,Verified,View Incident
+INC-006,FAC-006,Al-Hassan Mosque,2023-11-16,,airstrike-during-prayer,,Israeli airstrike targeted mosque in Tuffah neighborhood during dawn prayers. 16 Palestinians killed while worshipping. Direct hit on prayer hall. Complete destruction of building. Attack during active worship.,,Al Jazeera Palestinian Health Ministry,,,,,,,,16,unknown,,,,Verified,View Incident
+INC-007,FAC-007,Al-Gharbi Mosque,2023-10-09,,direct-airstrike,,One of first mosques destroyed in conflict. Direct airstrike 9 October 2023. Complete structural collapse. Early indication of systematic pattern of religious site targeting.,,Heritage for Peace BBC,,,,,,,,unknown,unknown,,,,Verified,View Incident
+INC-008,FAC-001,Church of Saint Porphyrius,2024-08-05,,missile-attack-unexploded,,Missile hit Church of Saint Porphyrius compound but failed to explode averting loss of life among refugees still sheltering there. Second attack on church after October 2023 strike. Unexploded ordnance discovered on church grounds.,,Al Jazeera,,,,,,,,0,0,,,,Verified,View Incident
+INC-009,FAC-009,Shuhada al-Aqsa Mosque,2024-10-14,,bombing-during-prayer,,Mosque bombed during prayers killing 26 people. Families sheltering in mosque compound. Women and children among victims. Attack during active worship. Complete destruction of building.,,Al Jazeera Palestinian Health Ministry,,,,,,,,26,unknown,,,,Verified,View Incident
+INC-010,FAC-010,Zofor Domri Mosque,2023-11-20,,first-airstrike,,First of three airstrikes on mosque in Shuja'iyya neighborhood. Beginning of systematic targeting of this site.,,Heritage for Peace,,,,,,,,unknown,unknown,,,,Verified,View Incident
+INC-011,FAC-010,Zofor Domri Mosque,2023-11-25,,second-airstrike,,Second airstrike on same mosque. Continued targeting despite previous destruction.,,Heritage for Peace,,,,,,,,unknown,unknown,,,,Verified,View Incident
+INC-012,FAC-010,Zofor Domri Mosque,2023-12-05,,third-airstrike-bulldozing,,Third airstrike followed by bulldozing of entire mosque site by ground forces. Complete elimination of structure. Systematic destruction documented.,,Heritage for Peace WHO,,,,,,,,unknown,unknown,,,,Verified,View Incident
+INC-013,FAC-004,Sayed al-Hashim Mosque,2023-11-15,,airstrike-initial,,First major attack on mosque containing tomb of Hashim ibn Abd Manaf grandfather of Prophet Muhammad. Significant damage to UNESCO tentative World Heritage site.,,UNESCO Heritage for Peace,,,,,,,,unknown,unknown,,,,Verified,View Incident
+INC-014,FAC-004,Sayed al-Hashim Mosque,2023-12-10,,repeated-strikes,,Repeated airstrikes caused extensive damage to mosque structure and tomb area. Important pilgrimage site severely damaged.,,UNESCO Heritage for Peace,,,,,,,,unknown,unknown,,,,Verified,View Incident
+INC-015,FAC-003,Katib al-Wilaya Mosque,2023-10-19,,vicinity-strike,,Historic Mamluk mosque beside Church of Saint Porphyrius damaged in same strike that hit church compound. Collateral damage from attack on church area.,,Heritage for Peace,,,,,,,,unknown,unknown,,,,Verified,View Incident
+INC-016,FAC-003,Katib al-Wilaya Mosque,2023-12-08,,direct-destruction,,Complete destruction of historic mosque. Eliminated along with Great Omari Mosque in December attacks. Mamluk-era architecture lost.,,Heritage for Peace Al Jazeera,,,,,,,,unknown,unknown,,,,Verified,View Incident
+INC-017,FAC-011,Al-Riad Mosque,2024-03-09,,heavy-bombardment,,Large Khan Younis mosque heavily damaged by sustained bombardment. Extensive structural damage rendering non-functional. Part of March 2024 southern Gaza operations.,,Al Jazeera,,,,,,,,unknown,unknown,,,,Verified,View Incident
+INC-018,FAC-008,Jaffa Mosque,2023-12-15,,direct-airstrike,,Historic Deir al-Balah mosque destroyed December 2023. Over 130 years of history eliminated. Central Gaza religious infrastructure targeted.,,Heritage for Peace,,,,,,,,unknown,unknown,,,,Verified,View Incident
+INC-019,FAC-018,St. Hilarion Monastery,2024-01-15,,military-operations-vicinity,,Ancient 4th century monastery and archaeological site damaged by military operations and bombardment in vicinity. UNESCO World Heritage tentative list site at risk. Early Christian heritage threatened.,,UNESCO Heritage for Peace,,,,,,,,unknown,unknown,,,,Verified,View Incident
+INC-020,FAC-002,Holy Family Church,2023-12-14,,workmen-shot,,Two workmen attempting to repair water tanks damaged by explosions were shot by snipers and died of injuries. Maintenance workers targeted while trying to restore basic services.,,Latin Patriarchate ACN,,,,,,,,2,0,,,,Verified,View Incident
+INC-021,FAC-002,Holy Family Church,2023-12-16,,infrastructure-destruction,,Solar panels and water tanks destroyed. Generator damaged. Convent of Mother Teresa Sisters rendered uninhabitable. Critical infrastructure systematically targeted.,,Latin Patriarchate,,,,,,,,0,0,,,,Verified,View Incident
+INC-022,FAC-000,Great Omari Mosque,2023-10-19,,early-damage,,Early strike damaged portions of mosque structure. Pattern of repeated targeting before final destruction.,,Heritage for Peace,,,,,,,,unknown,unknown,,,,Verified,View Incident
+INC-023,ID Not Found,Multiple Mosques,2023-11-13,,systematic-campaign,,By 13 November 2023 at least 60 mosques destroyed by Israeli bombs according to reports. Systematic pattern of religious site targeting documented.,,BBC Al Jazeera,,,,,,,,unknown,unknown,,,,Verified,View Incident
+INC-024,ID Not Found,Rafah Mosque,2024-02-23,,airstrike-displaced-persons,,Airstrike on Rafah mosque full of displaced people killed at least 7. People sheltering in mosque seeking refuge. Attack on civilians in place of worship.,,Al Jazeera,,,,,,,,7,unknown,,,,Verified,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,View Incident
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,
+,,,,,,,,,,,No,,,,,,,,,,,,

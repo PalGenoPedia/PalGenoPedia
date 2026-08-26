@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Volunteer With Us — PalGenoPedia</title>
+    <meta name="description" content="Join the PalGenoPedia documentation effort. Volunteer roles in data collection, source verification, translation, and research for an open archive of war crimes and humanitarian violations in Palestine.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+
+<style>
+/* ═══════════════════════════════════════════════════════
+   CSS VARIABLES — exact tokens from shared-styles.css
+═══════════════════════════════════════════════════════ */
+:root {
+    --primary-color:      #2c3e50;
+    --secondary-color:    #3498db;
+    --accent-color:       #e74c3c;
+    --accent-color-dark:  #c0392b;
+    --success-color:      #27ae60;
+    --warning-color:      #f39c12;
+    --info-color:         #3498db;
+
+    --text-primary:       #2c3e50;
+    --text-secondary:     #7f8c8d;
+    --text-muted:         #95a5a6;
+    --text-inverse:       #ffffff;
+
+    --bg-primary:         #ffffff;
+    --bg-secondary:       #f8f9fa;
+    --bg-tertiary:        #ecf0f1;
+    --surface-color:      #ffffff;
+    --surface-elevated:   #ffffff;
+    --overlay-color:      rgba(0,0,0,.5);
+
+    --border-color:       #dee2e6;
+    --border-light:       #e9ecef;
+    --border-dark:        #adb5bd;
+
+    --shadow-sm:  0 1px 3px rgba(0,0,0,.10);
+    --shadow-md:  0 4px 6px rgba(0,0,0,.10);
+    --shadow-lg:  0 10px 25px rgba(0,0,0,.15);
+    --shadow-xl:  0 20px 50px rgba(0,0,0,.20);
+
+    --font-family-base: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    --font-display:     'Playfair Display', Georgia, serif;
+    --font-body:        'Source Serif 4', Georgia, serif;
+
+    --font-size-base: 1rem;
+    --font-size-sm:   0.875rem;
+    --font-size-lg:   1.125rem;
+    --line-height-base: 1.6;
+
+    --spacing-xs: .25rem;
+    --spacing-sm: .5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    --spacing-2xl: 3rem;
+
+    --container-max-width: 1200px;
+    --border-radius:    8px;
+    --border-radius-sm: 4px;
+    --border-radius-lg: 12px;
+    --border-radius-xl: 20px;
+
+    --transition-base: all .2s ease;
+    --transition-fast: all .1s ease;
+    --transition-slow: all .3s ease;
+}
+
+[data-theme="dark"] {
+    --primary-color:    #ffffff;
+    --secondary-color:  #74b9ff;
+    --accent-color:     #ff6b6b;
+    --accent-color-dark:#e55a2b;
+
+    --text-primary:     #ffffff;
+    --text-secondary:   #b2bec3;
+    --text-muted:       #636e72;
+    --text-inverse:     #000000;
+
+    --bg-primary:       #1a1a1a;
+    --bg-secondary:     #2d3436;
+    --bg-tertiary:      #404040;
+    --surface-color:    #2d3436;
+    --surface-elevated: #363636;
+    --overlay-color:    rgba(0,0,0,.8);
+
+    --border-color:     #4a4a4a;
+    --border-light:     #3a3a3a;
+    --border-dark:      #555555;
+
+    --shadow-sm:  0 1px 3px rgba(0,0,0,.30);
+    --shadow-md:  0 4px 6px rgba(0,0,0,.40);
+    --shadow-lg:  0 10px 25px rgba(0,0,0,.50);
+    --shadow-xl:  0 20px 50px rgba(0,0,0,.60);
+}
+
+/* ═══════════════════════════════════════════════════════
+   GLOBAL RESET
+═══════════════════════════════════════════════════════ */
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+
+body {
+    font-family: var(--font-body);
+    line-height: var(--line-height-base);
+    color: var(--text-primary);
+    background: var(--bg-primary);
+    transition: background .3s ease, color .3s ease;
+}
+
+/* ═══════════════════════════════════════════════════════
+   HEADER — identical to shared-styles.css
+═══════════════════════════════════════════════════════ */
+.header {
+    background: var(--surface-color);
+    border-bottom: 2px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-base);
+}
+
+.header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--spacing-md);
+    gap: var(--spacing-xl);
+}
+
+.container {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+.logo {
+    font-family: var(--font-family-base);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.logo a { color: inherit; text-decoration: none; }
+.logo a:hover { opacity: .8; }
+
+/* Language selector pill (from updated shared-styles.css) */
+.language-selector {
+    display: flex;
+    gap: .35rem;
+    align-items: center;
+    flex-shrink: 0;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: calc(var(--border-radius) + 2px);
+    padding: .25rem;
+}
+
+.lang-btn {
+    background: transparent;
+    border: none;
+    padding: .4rem .65rem;
+    border-radius: var(--border-radius-sm);
+    cursor: pointer;
+    transition: var(--transition-base);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .1rem;
+    font-family: var(--font-family-base);
+    color: var(--text-secondary);
+}
+.lang-btn:hover  { background: var(--secondary-color); color: var(--text-inverse); transform: translateY(-1px); }
+.lang-btn.active { background: var(--secondary-color); color: var(--text-inverse); box-shadow: var(--shadow-sm); }
+.lang-code { font-size: .72rem; font-weight: 700; text-transform: uppercase; line-height: 1; }
+.lang-name { font-size: .6rem; opacity: .8; line-height: 1; }
+.lang-btn.active .lang-name { opacity: 1; }
+
+.lang-separator { width:1px; height:1.5rem; background: var(--border-color); flex-shrink:0; margin:0 .1rem; }
+
+.theme-toggle {
+    background: transparent; border: none;
+    border-radius: var(--border-radius-sm);
+    padding: .4rem .55rem;
+    cursor: pointer; font-size:1rem;
+    transition: var(--transition-base);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--text-secondary);
+}
+.theme-toggle:hover { background: var(--bg-tertiary); color: var(--text-primary); transform: scale(1.05); }
+[data-theme="dark"] .theme-toggle { color: #fbbf24; }
+[data-theme="dark"] .theme-toggle:hover { background: rgba(251,191,36,.15); }
+
+.nav { display:flex; gap:.5rem; align-items:center; flex-wrap:wrap; }
+.nav-btn {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    padding: .75rem 1.25rem;
+    border-radius: var(--border-radius);
+    cursor: pointer; font-size:.9rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: var(--transition-base);
+    white-space: nowrap; font-weight: 500;
+    display: inline-flex; align-items: center; gap:.4rem;
+    font-family: var(--font-family-base);
+}
+.nav-btn:hover  { background: var(--secondary-color); color: var(--text-inverse); border-color: var(--secondary-color); transform: translateY(-1px); }
+.nav-btn.active { background: var(--secondary-color); color: var(--text-inverse); border-color: var(--secondary-color); }
+
+/* ═══════════════════════════════════════════════════════
+   HERO BANNER
+═══════════════════════════════════════════════════════ */
+.volunteer-hero {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 40%, #0f3460 70%, #533483 100%);
+    color: #fff;
+    padding: 4rem 0 3.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+/* subtle geometric pattern overlay */
+.volunteer-hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image:
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 40px,
+            rgba(255,255,255,.025) 40px,
+            rgba(255,255,255,.025) 41px
+        ),
+        repeating-linear-gradient(
+            90deg,
+            transparent,
+            transparent 40px,
+            rgba(255,255,255,.025) 40px,
+            rgba(255,255,255,.025) 41px
+        );
+    pointer-events: none;
+}
+
+/* warm glow behind the title */
+.volunteer-hero::after {
+    content: '';
+    position: absolute;
+    top: -60px; left: 50%; transform: translateX(-50%);
+    width: 600px; height: 300px;
+    background: radial-gradient(ellipse, rgba(231,76,60,.18) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.hero-inner {
+    position: relative; z-index: 1;
+    text-align: center;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: .45rem;
+    background: rgba(255,255,255,.12);
+    border: 1px solid rgba(255,255,255,.25);
+    color: rgba(255,255,255,.9);
+    text-decoration: none;
+    padding: .5rem 1rem;
+    border-radius: 22px;
+    font-size: .82rem;
+    font-weight: 600;
+    font-family: var(--font-family-base);
+    transition: var(--transition-base);
+    margin-bottom: 2rem;
+    backdrop-filter: blur(8px);
+    letter-spacing: .02em;
+}
+.back-btn:hover {
+    background: rgba(255,255,255,.22);
+    border-color: rgba(255,255,255,.45);
+    transform: translateX(-3px);
+}
+.back-btn svg { flex-shrink:0; }
+
+.hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    background: rgba(231,76,60,.25);
+    border: 1px solid rgba(231,76,60,.45);
+    color: #ff9a9a;
+    padding: .35rem .9rem;
+    border-radius: 20px;
+    font-size: .75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    margin-bottom: 1.25rem;
+    font-family: var(--font-family-base);
+}
+
+.hero-title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 1rem;
+    letter-spacing: -.02em;
+}
+
+.hero-title em {
+    font-style: normal;
+    color: #ff9a9a;
+}
+
+.hero-subtitle {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    opacity: .85;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    font-family: var(--font-body);
+    font-weight: 300;
+}
+
+.hero-badges {
+    display: flex;
+    gap: .75rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.hero-badge {
+    background: rgba(255,255,255,.1);
+    border: 1px solid rgba(255,255,255,.2);
+    color: rgba(255,255,255,.9);
+    padding: .35rem .85rem;
+    border-radius: 20px;
+    font-size: .78rem;
+    font-weight: 500;
+    font-family: var(--font-family-base);
+    display: flex; align-items:center; gap:.35rem;
+}
+
+/* ═══════════════════════════════════════════════════════
+   MAIN CONTENT
+═══════════════════════════════════════════════════════ */
+.main-content {
+    padding: 3rem 0 4rem;
+    background: var(--bg-primary);
+}
+
+/* section label (matches pattern from preview) */
+.section-label {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    font-family: var(--font-family-base);
+    font-size: .7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--accent-color);
+    margin-bottom: 1.75rem;
+}
+.section-label::before, .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border-color);
+}
+
+/* ═══════════════════════════════════════════════════════
+   ROLE CARDS
+═══════════════════════════════════════════════════════ */
+.roles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
+    gap: 1.75rem;
+    margin-bottom: 3rem;
+}
+
+.role-card {
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-xl);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-slow);
+    display: flex;
+    flex-direction: column;
+}
+.role-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--border-dark);
+}
+
+/* coloured top stripe per role */
+.role-card-stripe {
+    height: 5px;
+}
+.stripe-data    { background: linear-gradient(90deg, #2c3e50, #3498db); }
+.stripe-social  { background: linear-gradient(90deg, #e74c3c, #f39c12); }
+
+.role-card-body {
+    padding: 1.75rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* icon + title row */
+.role-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+.role-icon {
+    width: 52px; height: 52px;
+    border-radius: 14px;
+    display: flex; align-items:center; justify-content:center;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+.icon-data   { background: linear-gradient(135deg,rgba(52,152,219,.15),rgba(44,62,80,.1)); border:1px solid rgba(52,152,219,.3); }
+.icon-social { background: linear-gradient(135deg,rgba(231,76,60,.15),rgba(243,156,18,.1)); border:1px solid rgba(231,76,60,.3); }
+
+.role-title-block {}
+.role-tag {
+    display: inline-block;
+    font-family: var(--font-family-base);
+    font-size: .65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: .2rem .6rem;
+    border-radius: 10px;
+    margin-bottom: .4rem;
+}
+.tag-data   { background: rgba(52,152,219,.12); color:#2980b9; border:1px solid rgba(52,152,219,.25); }
+.tag-social { background: rgba(231,76,60,.12); color:#c0392b; border:1px solid rgba(231,76,60,.25); }
+[data-theme="dark"] .tag-data   { color:#74b9ff; background:rgba(116,185,255,.12); border-color:rgba(116,185,255,.25); }
+[data-theme="dark"] .tag-social { color:#ff9a9a; background:rgba(255,107,107,.12); border-color:rgba(255,107,107,.25); }
+
+.role-title {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.25;
+}
+
+/* what you'll do */
+.role-description {
+    font-size: .92rem;
+    color: var(--text-secondary);
+    line-height: 1.65;
+    margin-bottom: 1.5rem;
+}
+
+/* responsibility list */
+.responsibility-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: .65rem;
+    margin-bottom: 1.5rem;
+}
+
+.responsibility-item {
+    display: flex;
+    align-items: flex-start;
+    gap: .7rem;
+    font-size: .875rem;
+    color: var(--text-primary);
+    line-height: 1.5;
+}
+
+.resp-bullet {
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    display: flex; align-items:center; justify-content:center;
+    font-size: .7rem;
+    flex-shrink: 0;
+    margin-top: .1rem;
+}
+.bullet-data   { background: rgba(52,152,219,.15); color: #2980b9; }
+.bullet-social { background: rgba(231,76,60,.15); color: #c0392b; }
+[data-theme="dark"] .bullet-data   { color: #74b9ff; background: rgba(116,185,255,.15); }
+[data-theme="dark"] .bullet-social { color: #ff9a9a; background: rgba(255,107,107,.15); }
+
+.resp-text strong {
+    color: var(--text-primary);
+    font-weight: 600;
+    font-family: var(--font-family-base);
+    font-size: .82rem;
+    display: block;
+    margin-bottom: .1rem;
+}
+.resp-text span {
+    color: var(--text-secondary);
+    font-size: .82rem;
+}
+
+/* skills + gains row */
+.role-meta {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: auto;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--border-light);
+}
+
+.role-meta-block {}
+.role-meta-label {
+    font-family: var(--font-family-base);
+    font-size: .65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    margin-bottom: .5rem;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .35rem;
+}
+.skill-tag {
+    font-family: var(--font-family-base);
+    font-size: .7rem;
+    padding: .2rem .5rem;
+    border-radius: 6px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.gain-tag {
+    font-family: var(--font-family-base);
+    font-size: .7rem;
+    padding: .2rem .5rem;
+    border-radius: 6px;
+    background: rgba(39,174,96,.08);
+    border: 1px solid rgba(39,174,96,.2);
+    color: #27ae60;
+    font-weight: 500;
+    white-space: nowrap;
+}
+[data-theme="dark"] .gain-tag { color:#55efc4; background:rgba(85,239,196,.08); border-color:rgba(85,239,196,.2); }
+
+/* ═══════════════════════════════════════════════════════
+   APPLICATION CTA BLOCK
+═══════════════════════════════════════════════════════ */
+.apply-block {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-xl);
+    padding: 2.5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* decorative corner accent */
+.apply-block::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 140px; height: 140px;
+    background: radial-gradient(circle at top right, rgba(231,76,60,.12), transparent 70%);
+    pointer-events: none;
+}
+.apply-block::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 100px; height: 100px;
+    background: radial-gradient(circle at bottom left, rgba(52,152,219,.10), transparent 70%);
+    pointer-events: none;
+}
+
+.apply-inner { position: relative; z-index: 1; }
+
+.apply-icon {
+    font-size: 2.5rem;
+    margin-bottom: .75rem;
+    display: block;
+}
+
+.apply-title {
+    font-family: var(--font-display);
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: .6rem;
+    line-height: 1.2;
+}
+
+.apply-subtitle {
+    font-size: .95rem;
+    color: var(--text-secondary);
+    max-width: 500px;
+    margin: 0 auto 1.75rem;
+    line-height: 1.6;
+}
+
+/* Cover message instruction box */
+.cover-instruction {
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-left: 4px solid var(--accent-color);
+    border-radius: var(--border-radius-lg);
+    padding: 1.25rem 1.5rem;
+    margin: 0 auto 1.75rem;
+    max-width: 560px;
+    text-align: left;
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.cover-instruction-icon {
+    font-size: 1.4rem;
+    flex-shrink: 0;
+    margin-top: .1rem;
+}
+
+.cover-instruction-text {}
+.cover-instruction-text strong {
+    display: block;
+    font-family: var(--font-family-base);
+    font-weight: 700;
+    font-size: .9rem;
+    color: var(--text-primary);
+    margin-bottom: .3rem;
+}
+.cover-instruction-text p {
+    font-size: .85rem;
+    color: var(--text-secondary);
+    line-height: 1.55;
+    font-family: var(--font-family-base);
+}
+.cover-instruction-text p em {
+    font-style: normal;
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+/* Email CTA button */
+.apply-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: .6rem;
+    background: var(--accent-color);
+    color: #fff;
+    text-decoration: none;
+    padding: .9rem 2rem;
+    border-radius: 28px;
+    font-family: var(--font-family-base);
+    font-weight: 700;
+    font-size: .95rem;
+    transition: var(--transition-base);
+    box-shadow: 0 4px 16px rgba(231,76,60,.35);
+    letter-spacing: .01em;
+    border: 2px solid var(--accent-color);
+    cursor: pointer;
+}
+.apply-btn:hover {
+    background: var(--accent-color-dark);
+    border-color: var(--accent-color-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(231,76,60,.45);
+}
+.apply-btn:active { transform: translateY(0); }
+
+.apply-email-note {
+    display: block;
+    margin-top: .9rem;
+    font-size: .8rem;
+    color: var(--text-muted);
+    font-family: var(--font-family-base);
+}
+.apply-email-note a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+.apply-email-note a:hover { text-decoration: underline; }
+
+/* ═══════════════════════════════════════════════════════
+   WHY VOLUNTEER strip
+═══════════════════════════════════════════════════════ */
+.why-strip {
+    background: linear-gradient(135deg,#1a1a2e,#16213e);
+    color: #fff;
+    padding: 2.5rem 0;
+    margin-bottom: 3rem;
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+    text-align: center;
+}
+
+.why-item {}
+.why-item-icon { font-size: 1.75rem; margin-bottom: .5rem; }
+.why-item-label {
+    font-family: var(--font-family-base);
+    font-size: .8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .8px;
+    opacity: .85;
+}
+
+/* ═══════════════════════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+    .header .container {
+        flex-wrap: wrap; gap: .75rem; padding: .75rem; min-height: 60px;
+    }
+    .logo { font-size: 1.1rem; order: 1; }
+    .language-selector { order: 2; gap:.15rem; padding:.2rem; }
+    .lang-btn { padding:.35rem .5rem; }
+    .lang-code { font-size:.67rem; }
+    .lang-name { font-size:.55rem; }
+    .theme-toggle { padding:.35rem .5rem; font-size:.9rem; }
+    .nav { order: 3; flex: 1 1 100%; justify-content:center; gap:.35rem; }
+    .nav-btn { padding:.5rem .8rem; font-size:.78rem; }
+
+    .volunteer-hero { padding: 2.5rem 0 2rem; }
+    .hero-title { font-size: 1.9rem; }
+
+    .roles-grid { grid-template-columns: 1fr; gap: 1.25rem; }
+    .role-meta  { grid-template-columns: 1fr; }
+
+    .apply-block { padding: 1.75rem 1.25rem; }
+    .apply-title { font-size: 1.4rem; }
+    .cover-instruction { flex-direction: column; gap: .6rem; }
+
+    .why-grid { grid-template-columns: repeat(2,1fr); gap:1rem; }
+}
+
+@media (max-width: 480px) {
+    .lang-name { display: none; }
+    .lang-separator { height: 1.1rem; }
+    .hero-badges { flex-direction: column; align-items:center; }
+    .apply-btn { width:100%; justify-content:center; }
+    .why-grid { grid-template-columns: 1fr; }
+}
+
+/* ═══════════════════════════════════════════════════════
+   ENTRANCE ANIMATIONS
+═══════════════════════════════════════════════════════ */
+@keyframes fadeUp {
+    from { opacity:0; transform:translateY(24px); }
+    to   { opacity:1; transform:translateY(0); }
+}
+
+.hero-inner > * {
+    animation: fadeUp .6s ease both;
+}
+.hero-inner > *:nth-child(1) { animation-delay:.05s; }
+.hero-inner > *:nth-child(2) { animation-delay:.15s; }
+.hero-inner > *:nth-child(3) { animation-delay:.25s; }
+.hero-inner > *:nth-child(4) { animation-delay:.35s; }
+.hero-inner > *:nth-child(5) { animation-delay:.45s; }
+
+.role-card {
+    animation: fadeUp .6s ease both;
+}
+.role-card:nth-child(1) { animation-delay:.1s; }
+.role-card:nth-child(2) { animation-delay:.22s; }
+
+.apply-block { animation: fadeUp .6s ease .3s both; }
+
+@media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition-duration: .01ms !important; }
+}
+</style>
+<!-- SEO_START - generated by tools/seo_inject.py - do not edit by hand -->
+    <link rel="canonical" href="https://palgenopedia.org/volunteer.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="PalGenoPedia">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="Volunteer With Us — PalGenoPedia">
+    <meta property="og:description" content="Join the PalGenoPedia documentation effort. Volunteer roles in data collection, source verification, translation, and research for an open archive of war crimes and humanitarian violations in Palestine.">
+    <meta property="og:url" content="https://palgenopedia.org/volunteer.html">
+    <meta property="og:image" content="https://palgenopedia.org/images/og-card.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="PalGenoPedia - documented war crimes, massacres and humanitarian violations concerning Palestine, 1948 to present">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Volunteer With Us — PalGenoPedia">
+    <meta name="twitter:description" content="Join the PalGenoPedia documentation effort. Volunteer roles in data collection, source verification, translation, and research for an open archive of war crimes and humanitarian violations in Palestine.">
+    <meta name="twitter:image" content="https://palgenopedia.org/images/og-card.png">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="alternate" type="application/atom+xml" title="PalGenoPedia - documented events" href="./feed.xml">
+    <link rel="alternate" type="application/rss+xml" title="PalGenoPedia - documented events" href="./feed.rss">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "@id": "https://palgenopedia.org/volunteer.html#page",
+  "url": "https://palgenopedia.org/volunteer.html",
+  "name": "Volunteer With Us — PalGenoPedia",
+  "description": "Join the PalGenoPedia documentation effort. Volunteer roles in data collection, source verification, translation, and research for an open archive of war crimes and humanitarian violations in Palestine.",
+  "inLanguage": "en",
+  "isPartOf": {
+    "@id": "https://palgenopedia.org/#website"
+  },
+  "publisher": {
+    "@id": "https://palgenopedia.org/#org"
+  }
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://palgenopedia.org/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Volunteer With Us",
+      "item": "https://palgenopedia.org/volunteer.html"
+    }
+  ]
+}
+    </script>
+    <!-- SEO_END -->
+</head>
+
+<body>
+
+<!-- ═══════════════════════════════════════════════════════
+     HEADER
+═══════════════════════════════════════════════════════ -->
+<header class="header">
+    <div class="container">
+        <div class="logo">
+            <a href="index.html">Gaza Crisis Documentation</a>
+        </div>
+
+        <div class="language-selector">
+            <button class="lang-btn active" onclick="setLang('en',this)">
+                <span class="lang-code">EN</span>
+                <span class="lang-name">English</span>
+            </button>
+            <button class="lang-btn" onclick="setLang('ar',this)">
+                <span class="lang-code">AR</span>
+                <span class="lang-name">العربية</span>
+            </button>
+            <button class="lang-btn" onclick="setLang('de',this)">
+                <span class="lang-code">DE</span>
+                <span class="lang-name">Deutsch</span>
+            </button>
+            <div class="lang-separator"></div>
+            <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="Switch to dark mode">
+                🌙
+            </button>
+        </div>
+
+        <nav class="nav">
+            <a href="index.html"       class="nav-btn">🏠 Dashboard</a>
+            <a href="/war-crimes/"      class="nav-btn">⚖️ War Crimes</a>
+            <a href="hunger-crisis-stats.html"   class="nav-btn">🍽️ Hunger Crisis</a>
+            <a href="major-incidents-timeline.html" class="nav-btn">📋 Timeline</a>
+        </nav>
+    </div>
+</header>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     HERO
+═══════════════════════════════════════════════════════ -->
+<section class="volunteer-hero">
+    <div class="hero-inner">
+
+        <!-- Back button -->
+        <div>
+            <a href="index.html" class="back-btn">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <path d="M9 2L4 7L9 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Back to Home
+            </a>
+        </div>
+
+        <div class="hero-eyebrow">
+            🤝 Volunteer With Us
+        </div>
+
+        <h1 class="hero-title">
+            Help Document a<br><em>Crisis the World Must Not Forget</em>
+        </h1>
+
+        <p class="hero-subtitle">
+            PalGenoPedia is a human rights documentation platform tracking war crimes, starvation tactics, and humanitarian catastrophe in Gaza. Join our volunteer team and contribute to work that matters — for accountability, for history, for justice.
+        </p>
+
+        <div class="hero-badges">
+            <span class="hero-badge">📍 Remote &amp; Flexible</span>
+            <span class="hero-badge">🌍 Open to All Nationalities</span>
+            <span class="hero-badge">📜 Human Rights Documentation</span>
+            <span class="hero-badge">⚖️ International Law Focus</span>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     WHY VOLUNTEER STRIP
+═══════════════════════════════════════════════════════ -->
+<section class="why-strip">
+    <div class="container">
+        <div class="why-grid">
+            <div class="why-item">
+                <div class="why-item-icon">📖</div>
+                <div class="why-item-label">Human Rights Experience</div>
+            </div>
+            <div class="why-item">
+                <div class="why-item-icon">⚖️</div>
+                <div class="why-item-label">Int'l Humanitarian Law</div>
+            </div>
+            <div class="why-item">
+                <div class="why-item-icon">🌐</div>
+                <div class="why-item-label">Media &amp; Outreach Skills</div>
+            </div>
+            <div class="why-item">
+                <div class="why-item-icon">🔍</div>
+                <div class="why-item-label">Verified Data Research</div>
+            </div>
+            <div class="why-item">
+                <div class="why-item-icon">🏅</div>
+                <div class="why-item-label">Professional References</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════
+     OPEN ROLES
+═══════════════════════════════════════════════════════ -->
+<main class="main-content">
+    <div class="container">
+
+        <div class="section-label">Open Volunteer Positions</div>
+
+        <div class="roles-grid">
+
+            <!-- ── ROLE 1: Data Collection Officer ── -->
+            <article class="role-card">
+                <div class="role-card-stripe stripe-data"></div>
+                <div class="role-card-body">
+
+                    <div class="role-header">
+                        <div class="role-icon icon-data">🗂️</div>
+                        <div class="role-title-block">
+                            <span class="role-tag tag-data">Research &amp; Documentation</span>
+                            <h2 class="role-title">Data Collection Officer</h2>
+                        </div>
+                    </div>
+
+                    <p class="role-description">
+                        A critical role for detail-oriented volunteers dedicated to maintaining the integrity and comprehensiveness of our documentation. You will combine verified evidence with international legal frameworks to ensure accountability and awareness.
+                    </p>
+
+                    <ul class="responsibility-list">
+                        <li class="responsibility-item">
+                            <div class="resp-bullet bullet-data">✓</div>
+                            <div class="resp-text">
+                                <strong>Data Integrity</strong>
+                                <span>Conduct regular audits of collected data to ensure accuracy, completeness, and consistency across all documentation.</span>
+                            </div>
+                        </li>
+                        <li class="responsibility-item">
+                            <div class="resp-bullet bullet-data">✓</div>
+                            <div class="resp-text">
+                                <strong>Source Evaluation</strong>
+                                <span>Assess credibility and reliability of information sources using established verification protocols.</span>
+                            </div>
+                        </li>
+                        <li class="responsibility-item">
+                            <div class="resp-bullet bullet-data">✓</div>
+                            <div class="resp-text">
+                                <strong>Gap Analysis</strong>
+                                <span>Identify missing information and develop strategies to fill documentation gaps systematically.</span>
+                            </div>
+                        </li>
+                        <li class="responsibility-item">
+                            <div class="resp-bullet bullet-data">✓</div>
+                            <div class="resp-text">
+                                <strong>Fact-checking</strong>
+                                <span>Verify claims, statistics, and reports through multiple independent, credible sources.</span>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="role-meta">
+                        <div class="role-meta-block">
+                            <div class="role-meta-label">Skills Needed</div>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Attention to Detail</span>
+                                <span class="skill-tag">Data Analysis</span>
+                                <span class="skill-tag">Research</span>
+                                <span class="skill-tag">Fact-checking</span>
+                            </div>
+                        </div>
+                        <div class="role-meta-block">
+                            <div class="role-meta-label">You'll Gain</div>
+                            <div class="skill-tags">
+                                <span class="gain-tag">HR Documentation</span>
+                                <span class="gain-tag">Int'l Law Insight</span>
+                                <span class="gain-tag">References</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </article>
+
+            <!-- ── ROLE 2: Social Media & Graphics Officer ── -->
+            <article class="role-card">
+                <div class="role-card-stripe stripe-social"></div>
+                <div class="role-card-body">
+
+                    <div class="role-header">
+                        <div class="role-icon icon-social">📣</div>
+                        <div class="role-title-block">
+                            <span class="role-tag tag-social">Communications &amp; Design</span>
+                            <h2 class="role-title">Social Media &amp; Graphics Officer</h2>
+                        </div>
+                    </div>
+
+                    <p class="role-description">
+                        Help run PalGenoPedia's social media presence. You will write posts and produce data-driven graphics that communicate statistics from Gaza and explain the history of Israel's occupation — making critical information accessible to a global audience.
+                    </p>
+
+                    <ul class="responsibility-list">
+                        <li class="responsibility-item">
+                            <div class="resp-bullet bullet-social">✓</div>
+                            <div class="resp-text">
+                                <strong>Content Creation</strong>
+                                <span>Write clear, impactful posts that translate complex documentation into accessible public-facing content.</span>
+                            </div>
+                        </li>
+                        <li class="responsibility-item">
+                            <div class="resp-bullet bullet-social">✓</div>
+                            <div class="resp-text">
+                                <strong>Data Graphics</strong>
+                                <span>Design infographics and visual assets (Canva, Adobe, or equivalent) that communicate statistics and timeline events.</span>
+                            </div>
+                        </li>
+                        <li class="responsibility-item">
+                            <div class="resp-bullet bullet-social">✓</div>
+                            <div class="resp-text">
+                                <strong>Historical Context</strong>
+                                <span>Help produce educational content explaining the history of the occupation and the ongoing humanitarian crisis.</span>
+                            </div>
+                        </li>
+                        <li class="responsibility-item">
+                            <div class="resp-bullet bullet-social">✓</div>
+                            <div class="resp-text">
+                                <strong>Sensitive Content Handling</strong>
+                                <span>Work professionally and ethically with difficult material, applying appropriate content standards.</span>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="role-meta">
+                        <div class="role-meta-block">
+                            <div class="role-meta-label">Skills Needed</div>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Graphic Design</span>
+                                <span class="skill-tag">Canva / Adobe</span>
+                                <span class="skill-tag">Writing</span>
+                                <span class="skill-tag">Data Literacy</span>
+                            </div>
+                        </div>
+                        <div class="role-meta-block">
+                            <div class="role-meta-label">You'll Gain</div>
+                            <div class="skill-tags">
+                                <span class="gain-tag">Outreach Skills</span>
+                                <span class="gain-tag">Media Handling</span>
+                                <span class="gain-tag">References</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </article>
+
+        </div><!-- /.roles-grid -->
+
+
+        <!-- ═══════════════════════════════════════════
+             APPLICATION BLOCK
+        ═══════════════════════════════════════════ -->
+        <div class="section-label">How to Apply</div>
+
+        <div class="apply-block">
+            <div class="apply-inner">
+
+                <span class="apply-icon">✉️</span>
+
+                <h2 class="apply-title">Ready to Make a Difference?</h2>
+                <p class="apply-subtitle">
+                    Applications are open on a rolling basis. We welcome volunteers from all backgrounds who are committed to human rights documentation and evidence-based advocacy.
+                </p>
+
+                <!-- Cover message instruction -->
+                <div class="cover-instruction">
+                    <div class="cover-instruction-icon">📋</div>
+                    <div class="cover-instruction-text">
+                        <strong>Please attach a cover message to your email</strong>
+                        <p>
+                            Tell us which role you're applying for, why you want to join PalGenoPedia, and any relevant experience or skills. There is no required format — write to us directly at
+                            <em>contact@palgenopedia.org</em>.
+                            Applications without a cover message will not be reviewed.
+                        </p>
+                    </div>
+                </div>
+
+                <a href="mailto:contact@palgenopedia.org?subject=Volunteer Application — PalGenoPedia&body=Hello PalGenoPedia team,%0A%0AI am writing to apply for the [Role Name] volunteer position.%0A%0A[Your cover message here — tell us about yourself, your relevant experience, and why you want to join.]%0A%0AThank you."
+                   class="apply-btn">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                        <path d="M2 3.5h14a1 1 0 011 1v9a1 1 0 01-1 1H2a1 1 0 01-1-1v-9a1 1 0 011-1z" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M1 4.5l8 5.5 8-5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                    Apply via Email
+                </a>
+
+                <span class="apply-email-note">
+                    Or email us directly at
+                    <a href="mailto:contact@palgenopedia.org">contact@palgenopedia.org</a>
+                </span>
+
+            </div>
+        </div>
+
+    </div><!-- /.container -->
+</main>
+
+
+<script>
+/* ── Theme toggle ── */
+function toggleTheme() {
+    const html = document.documentElement;
+    const isDark = html.getAttribute('data-theme') === 'dark';
+    html.setAttribute('data-theme', isDark ? 'light' : 'dark');
+    const btn = document.getElementById('themeToggle');
+    btn.textContent = isDark ? '🌙' : '☀️';
+    btn.title = isDark ? 'Switch to dark mode' : 'Switch to light mode';
+    localStorage.setItem('gaza-docs-theme', isDark ? 'light' : 'dark');
+}
+
+/* ── Restore saved theme ── */
+(function () {
+    const saved = localStorage.getItem('gaza-docs-theme') || 'light';
+    document.documentElement.setAttribute('data-theme', saved);
+    const btn = document.getElementById('themeToggle');
+    if (btn) {
+        btn.textContent = saved === 'dark' ? '☀️' : '🌙';
+        btn.title = saved === 'dark' ? 'Switch to light mode' : 'Switch to dark mode';
+    }
+})();
+
+/* ── Language selector ── */
+function setLang(lang, btn) {
+    document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    // Wire into TranslationSystem if available
+    if (window.TranslationSystem && typeof window.TranslationSystem.setLanguage === 'function') {
+        window.TranslationSystem.setLanguage(lang);
+    }
+}
+</script>
+
+</body>
+</html>

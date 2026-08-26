@@ -1,0 +1,88 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "@id": "https://palgenopedia.org/data/events.json#curr_001",
+  "headline": "Al-Ahli Baptist Hospital Strike",
+  "url": "https://palgenopedia.org/major-incidents-timeline.html",
+  "datePublished": "2023-10-17",
+  "dateModified": "2026-08-09",
+  "inLanguage": "en",
+  "about": {
+    "@type": "Event",
+    "name": "Al-Ahli Baptist Hospital Strike",
+    "startDate": "2023-10-17",
+    "location": {
+      "@type": "Place",
+      "name": "Al-Ahli Arab Hospital, Gaza City",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 31.5123,
+        "longitude": 34.4545
+      }
+    }
+  },
+  "articleBody": "Explosion at Al-Ahli Baptist Hospital compound where thousands of displaced Palestinians were sheltering. Massive casualties in hospital courtyard.",
+  "keywords": "hospital_attack, current",
+  "mentions": [
+    {
+      "@type": "Organization",
+      "name": "Israeli Airstrikes (disputed)"
+    }
+  ],
+  "citation": [
+    {
+      "@type": "Article",
+      "name": "Gaza Health Ministry"
+    },
+    {
+      "@type": "Article",
+      "name": "Human Rights Watch Investigation"
+    },
+    {
+      "@type": "Article",
+      "name": "UN OCHA"
+    },
+    {
+      "@type": "Article",
+      "name": "Multiple witness testimonies"
+    }
+  ],
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "Deaths",
+      "propertyID": "casualties/deaths",
+      "value": "471",
+      "minValue": 471,
+      "maxValue": 471
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Injured",
+      "propertyID": "casualties/injured",
+      "value": "342",
+      "minValue": 342,
+      "maxValue": 342
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Forced displacement",
+      "propertyID": "casualties/forced_displacement",
+      "value": "0",
+      "minValue": 0,
+      "maxValue": 0
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Verification status",
+      "propertyID": "verification_status",
+      "value": "disputed"
+    }
+  ],
+  "provider": {
+    "@type": "Organization",
+    "name": "PalGenoPedia",
+    "url": "https://palgenopedia.org"
+  },
+  "isBasedOn": "https://palgenopedia.org/data/events.json"
+}

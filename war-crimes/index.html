@@ -1,0 +1,1889 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>War Crimes Statistics - Gaza Crisis Documentation</title>
+    <meta name="description" content="Comprehensive documentation of war crimes and violations of international humanitarian law in Gaza">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+
+    <!-- Shared design system -->
+    <link rel="stylesheet" href="/Styles/unified-crisis-styles.css" />
+
+    <style>
+        /* ================================================================
+           WAR CRIMES PAGE — page-specific overrides only
+           Everything else comes from unified-crisis-styles.css
+           ================================================================ */
+
+        /* Page header: centered text, tighter padding than shared default */
+        .war-crimes-header {
+            text-align: center;
+            padding: 0.6rem 0 0.5rem;
+        }
+
+        /* Banner last-updated pill: white-on-red instead of neutral */
+        .last-updated {
+            font-weight: 600;
+            color: white;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.4rem 1rem;
+            border-radius: 25px;
+            display: inline-block;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            font-size: 0.8rem;
+        }
+
+        /* Header meta row: centred on this page */
+        .header-meta-row {
+            justify-content: center;
+            margin-bottom: 0.25rem;
+        }
+
+        /* View section: slower, taller entrance than shared fadeIn */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+        .view-section { animation-name: fadeInUp; animation-duration: 0.6s; }
+
+        /* API status: bottom-right fixed (shared uses top-right) */
+        .api-status {
+            position: fixed;
+            top: auto;
+            bottom: 1rem;
+            right: 1rem;
+        }
+        .api-status.loading  { background: #fef3c7; color: #92400e; border: 1px solid #fbbf24; }
+        .api-status.live     { background: #d1fae5; color: #065f46; border: 1px solid #6ee7b7; }
+        .api-status.fallback { background: #fee2e2; color: #991b1b; border: 1px solid #fca5a5; }
+
+        /* Stats row: 4 fixed columns on desktop (shared uses auto-fill) */
+        .stats-row {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        /* Disabled card: slightly more transparent than shared (0.45 vs 0.6) */
+        .stat-card.disabled-card { opacity: 0.45; }
+
+        /* Action button (not in shared CSS) */
+        .action-btn {
+            background: linear-gradient(135deg, var(--accent-color), #fc8181);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition-base);
+            text-decoration: none;
+            display: inline-block;
+            font-family: var(--font-family-base);
+        }
+        .action-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(229, 62, 62, 0.3);
+        }
+
+        /* War crimes categories: extra top/bottom margin */
+        .war-crimes-categories { margin: 4rem 0; }
+
+        /* Loading indicator: inline centred variant (shared is flex row) */
+        .loading-indicator {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        /* Responsive overrides */
+        @media (max-width: 1200px) { .stats-row { grid-template-columns: repeat(3, 1fr); } }
+        @media (max-width: 900px)  { .stats-row { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 768px)  { .stats-row { grid-template-columns: repeat(2, 1fr); gap: 1rem; } }
+        @media (max-width: 480px)  { .stats-row { grid-template-columns: repeat(2, 1fr); } }
+
+        /* ── Hunger Crisis section in Overview ── */
+        .hunger-crisis-section {
+            border-top: 3px solid transparent;
+            border-image: linear-gradient(90deg, transparent, rgba(220,53,69,0.3), rgba(220,53,69,0.6), rgba(220,53,69,0.3), transparent) 1;
+            padding-top: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .section-domain-label {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 0.75rem;
+        }
+
+        .domain-tag {
+            font-size: 0.72rem;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            text-transform: uppercase;
+        }
+
+        .hunger-tag {
+            background: rgba(220, 53, 69, 0.12);
+            color: var(--critical-color);
+            border: 1px solid rgba(220, 53, 69, 0.3);
+        }
+
+        .domain-link {
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--critical-color);
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.2s;
+        }
+
+        .domain-link:hover { opacity: 1; text-decoration: underline; }
+
+        /* ── Framework grid domain divider ── */
+        .framework-domain-divider {
+            grid-column: 1 / -1;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin: 0.5rem 0;
+        }
+
+        .framework-domain-divider::before,
+        .framework-domain-divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--border-color), transparent);
+        }
+
+        .domain-divider-label {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--text-secondary);
+            background: var(--surface-color);
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+            white-space: nowrap;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        /* Hunger framework cards: slightly distinct left accent */
+        .hunger-framework-card {
+            border-left: 3px solid rgba(220, 53, 69, 0.4);
+        }
+
+        /* ── Hunger summary row: 4-col grid holding the composite cards ── */
+        .hunger-summary-row {
+            display: grid;
+            grid-template-columns: 1fr 2fr 2fr 2fr;
+            gap: 1.25rem;
+            align-items: stretch;
+        }
+
+        /* The first child (stat-link → stat-card) must stretch full height */
+        .hunger-summary-row > .stat-link {
+            height: auto;
+        }
+        .hunger-summary-row > .stat-link .stat-card {
+            height: 100%;
+            aspect-ratio: unset;
+            min-height: 220px;
+            justify-content: center;
+        }
+
+        /* ── Composite card shell ── */
+        .hunger-composite-card {
+            background: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius, 16px);
+            padding: 1.25rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            transition: var(--transition-base, all 0.3s ease);
+        }
+        .hunger-composite-card:hover {
+            border-color: var(--critical-color);
+            box-shadow: 0 6px 20px rgba(220,53,69,0.1);
+            transform: translateY(-2px);
+        }
+
+        /* Header row: big icon + number + title */
+        .hunger-composite-header {
+            display: flex;
+            align-items: center;
+            gap: 0.85rem;
+        }
+        .hunger-composite-icon {
+            font-size: 2rem;
+            line-height: 1;
+            flex-shrink: 0;
+        }
+        .hunger-composite-number {
+            font-size: 1.7rem;
+            font-weight: 800;
+            color: var(--critical-color);
+            line-height: 1.1;
+        }
+        .hunger-composite-title {
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            line-height: 1.3;
+        }
+
+        /* Mini stat rows stacked inside each card */
+        .hunger-mini-stats {
+            display: flex;
+            flex-direction: column;
+            gap: 0.45rem;
+            border-top: 1px solid var(--border-color);
+            padding-top: 0.75rem;
+        }
+        .hunger-mini-row {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.82rem;
+            line-height: 1.3;
+        }
+        .hunger-mini-icon {
+            font-size: 0.95rem;
+            width: 1.25rem;
+            text-align: center;
+            flex-shrink: 0;
+        }
+        .hunger-mini-val {
+            font-weight: 700;
+            color: var(--primary-color);
+            min-width: 2.8rem;
+            flex-shrink: 0;
+        }
+        .hunger-mini-label {
+            color: var(--text-secondary);
+        }
+
+        /* Responsive: collapse to 2-col then 1-col */
+        @media (max-width: 1100px) {
+            .hunger-summary-row {
+                grid-template-columns: 1fr 1fr;
+            }
+            .hunger-summary-row > .stat-link .stat-card { min-height: unset; }
+        }
+        @media (max-width: 600px) {
+            .hunger-summary-row { grid-template-columns: 1fr; }
+        }
+
+        /* ── Category tab domain divider ── */
+        .category-domain-divider {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin: 3rem 0 1.5rem;
+        }
+        .category-domain-divider::before,
+        .category-domain-divider::after {
+            content: '';
+            flex: 1;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(220,53,69,0.3), transparent);
+        }
+        .category-domain-divider .domain-divider-label {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--critical-color);
+            background: var(--surface-color);
+            padding: 0.4rem 1.25rem;
+            border-radius: 20px;
+            border: 1px solid rgba(220,53,69,0.3);
+            white-space: nowrap;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        /* Hunger category section: accent left border */
+        .hunger-category-section {
+            border-left: 4px solid rgba(220, 53, 69, 0.25);
+        }
+
+        /* ── Legal timeline domain divider ── */
+        .timeline-domain-divider {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin: 2rem 0 1.5rem 3rem;
+        }
+        .timeline-domain-divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(90deg, rgba(220,53,69,0.3), transparent);
+        }
+        .timeline-domain-divider .domain-divider-label {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--warning-color, #d97706);
+            background: var(--surface-color);
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            border: 1px solid rgba(217, 119, 6, 0.3);
+            white-space: nowrap;
+            letter-spacing: 0.04em;
+        }
+
+        /* ── Hunger resource category tag ── */
+        .resource-category-domain-tag {
+            font-size: 0.7rem;
+            font-weight: 800;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: var(--critical-color);
+            background: rgba(220,53,69,0.08);
+            border: 1px solid rgba(220,53,69,0.2);
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            display: inline-block;
+            margin-bottom: 0.75rem;
+        }
+        .hunger-resource-category {
+            border-top: 2px solid rgba(220,53,69,0.15);
+        }
+
+        /* ── Hunger Data tab: external link button alignment ── */
+        .hunger-data-external-btn {
+            flex-shrink: 0;
+            align-self: center;
+        }
+    </style>
+<!-- SEO_START - generated by tools/seo_inject.py - do not edit by hand -->
+    <link rel="canonical" href="https://palgenopedia.org/war-crimes/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="PalGenoPedia">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="War Crimes Statistics - Gaza Crisis Documentation">
+    <meta property="og:description" content="Comprehensive documentation of war crimes and violations of international humanitarian law in Gaza">
+    <meta property="og:url" content="https://palgenopedia.org/war-crimes/">
+    <meta property="og:image" content="https://palgenopedia.org/images/og-card.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="PalGenoPedia - documented war crimes, massacres and humanitarian violations concerning Palestine, 1948 to present">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="War Crimes Statistics - Gaza Crisis Documentation">
+    <meta name="twitter:description" content="Comprehensive documentation of war crimes and violations of international humanitarian law in Gaza">
+    <meta name="twitter:image" content="https://palgenopedia.org/images/og-card.png">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="alternate" type="application/atom+xml" title="PalGenoPedia - documented events" href="../feed.xml">
+    <link rel="alternate" type="application/rss+xml" title="PalGenoPedia - documented events" href="../feed.rss">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "@id": "https://palgenopedia.org/war-crimes/#page",
+  "url": "https://palgenopedia.org/war-crimes/",
+  "name": "War Crimes Statistics - Gaza Crisis Documentation",
+  "description": "Comprehensive documentation of war crimes and violations of international humanitarian law in Gaza",
+  "inLanguage": "en",
+  "isPartOf": {
+    "@id": "https://palgenopedia.org/#website"
+  },
+  "publisher": {
+    "@id": "https://palgenopedia.org/#org"
+  }
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://palgenopedia.org/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "War Crimes Statistics",
+      "item": "https://palgenopedia.org/war-crimes/"
+    }
+  ]
+}
+    </script>
+    <!-- SEO_END -->
+</head>
+<!--
+    data-i18n-page-title  → TranslationSystem sets document.title
+    data-i18n-meta-desc   → TranslationSystem sets <meta name="description"> content
+-->
+<body
+    data-i18n-page-title="warCrimes.pageTitle"
+    data-i18n-meta-desc="warCrimes.metaDescription"
+>
+
+    <div id="apiStatus" class="api-status loading" data-i18n="warCrimes.apiStatus.loading">Loading...</div>
+
+    <!-- Header (rendered by header-component.js) -->
+    <div id="header-placeholder"></div>
+
+    <main class="main">
+
+        <!-- ── Compact War Crimes Header ── -->
+        <section class="war-crimes-header">
+            <div class="container">
+                <h1 data-i18n="warCrimes.header.title">⚖️ War Crimes &amp; International Law Violations</h1>
+                <div class="header-meta-row">
+                    <div class="last-updated">
+                        <span id="warCrimesLastUpdated" data-i18n="warCrimes.apiStatus.loading">Loading...</span>
+                        <button onclick="toggleDebugMode()" style="margin-left:0.75rem;background:transparent;border:1px solid var(--border-color);color:var(--text-secondary);padding:0.2rem 0.4rem;border-radius:4px;font-size:0.75rem;cursor:pointer;"
+                            data-i18n="warCrimes.header.debugBtn">Debug</button>
+                    </div>
+                    <a href="/volunteer.html" class="join-us-btn" data-i18n="warCrimes.header.joinUsBtn">🤝 Join Us — Become a Volunteer</a>
+                </div>
+                <div id="debugPanel" class="hidden" style="background:var(--surface-color);border:1px solid var(--border-color);border-radius:8px;padding:1rem;margin-top:0.75rem;font-family:monospace;font-size:0.8rem;">
+                    <h4 data-i18n="warCrimes.header.debugTitle">Debug Information:</h4>
+                    <div id="debugContent" data-i18n="warCrimes.header.debugLoadingText">Loading debug info...</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── Overview ── -->
+        <section class="view-section active" id="overviewView">
+            <div class="container">
+
+                <!-- Emergency Banner -->
+                <div class="emergency-banner">
+                    <span class="emergency-icon">🚨</span>
+                    <div class="emergency-title" data-i18n="warCrimes.emergency.title">INTERNATIONAL LAW CRISIS:</div>
+                    <div class="emergency-stat" data-i18n="warCrimes.emergency.subtitle">Systematic violations of Geneva Conventions</div>
+                    <div class="emergency-details" id="emergencyDetails" data-i18n="warCrimes.apiStatus.loading">Loading...</div>
+                </div>
+
+                <div id="loadingIndicator" class="loading-indicator">
+                    <div class="loading-spinner"></div>
+                    <p data-i18n="warCrimes.loading.message">Loading latest data from Tech for Palestine API v3...</p>
+                </div>
+
+                <div id="errorMessage" class="error-message hidden">
+                    <p data-i18n="warCrimes.error.loadFailed">⚠️ Unable to load live data. Displaying cached information.</p>
+                    <button onclick="retryDataFetch()" style="background:var(--warning-color);color:white;border:none;padding:0.5rem 1rem;border-radius:8px;margin-top:0.5rem;cursor:pointer;"
+                        data-i18n="warCrimes.error.retryBtn">🔄 Retry Loading Live Data</button>
+                </div>
+
+                <!-- Casualties -->
+                <div class="stats-section">
+                    <h3 class="section-title" data-i18n="warCrimes.sections.humanCasualties">💀 Human Casualties</h3>
+                    <div class="stats-row" id="casualtiesRow"></div>
+                </div>
+
+                <!-- Medical, Education & Religious Facilities -->
+                <div class="stats-section">
+                    <h3 class="section-title" data-i18n="warCrimes.sections.medicalEducationReligious">🏥 Medical, Education &amp; Religious Facilities</h3>
+                    <div class="stats-row" id="facilitiesRow"></div>
+                </div>
+
+                <!-- Destroyed Infrastructure -->
+                <div class="stats-section">
+                    <h3 class="section-title" data-i18n="warCrimes.sections.destroyedInfrastructure">🏗️ Destroyed Infrastructure</h3>
+                    <div class="stats-row" id="infrastructureRow"></div>
+                </div>
+
+                <!-- Displacement & Collective Punishment -->
+                <div class="stats-section">
+                    <h3 class="section-title" data-i18n="warCrimes.sections.displacementCollectivePunishment">🏠 Displacement &amp; Collective Punishment</h3>
+                    <div class="stats-row" id="displacementRow"></div>
+                </div>
+
+                <!-- Hunger Crisis & Starvation -->
+                <div class="stats-section hunger-crisis-section">
+                    <div class="section-domain-label">
+                        <span class="domain-tag hunger-tag">🍽️ HUNGER CRISIS</span>
+                        <a href="/hunger-crisis-stats.html" class="domain-link" data-i18n="warCrimes.sections.hungerCrisisViewFull">View Full Hunger Crisis Page →</a>
+                    </div>
+                    <h3 class="section-title" data-i18n="warCrimes.sections.hungerCrisis">🍽️ Hunger Crisis &amp; Starvation</h3>
+                    <div class="hunger-summary-row" id="hungerRow">
+                        <!-- Card 1: Total Deaths — primary linked card -->
+                        <a href="/war-crimes/total-starvation/" class="stat-link">
+                            <div class="stat-card critical">
+                                <div class="stat-number" id="hungerTotalDeaths">169</div>
+                                <div class="stat-label">Total Deaths Due to Starvation</div>
+                                <div class="stat-subtitle">Confirmed starvation deaths</div>
+                                <div class="stat-source">Source: Gaza Health Ministry</div>
+                            </div>
+                        </a>
+
+                        <!-- Card 2: Affected Population -->
+                        <div class="hunger-composite-card">
+                            <div class="hunger-composite-header">
+                                <span class="hunger-composite-icon">👥</span>
+                                <div>
+                                    <div class="hunger-composite-number">2.3M</div>
+                                    <div class="hunger-composite-title">Population at Risk</div>
+                                </div>
+                            </div>
+                            <div class="hunger-mini-stats">
+                                <div class="hunger-mini-row">
+                                    <span class="hunger-mini-icon">🕯️</span>
+                                    <span class="hunger-mini-val" id="hungerChildDeathsCard">67</span>
+                                    <span class="hunger-mini-label">children died from starvation</span>
+                                </div>
+                                <div class="hunger-mini-row">
+                                    <span class="hunger-mini-icon">👵</span>
+                                    <span class="hunger-mini-val">0.7M</span>
+                                    <span class="hunger-mini-label">women &amp; elderly at risk</span>
+                                </div>
+                                <div class="hunger-mini-row">
+                                    <span class="hunger-mini-icon">📊</span>
+                                    <span class="hunger-mini-val">39%</span>
+                                    <span class="hunger-mini-label">population starvation rate</span>
+                                </div>
+                                <div class="hunger-mini-row">
+                                    <span class="hunger-mini-icon">🏠</span>
+                                    <span class="hunger-mini-val">1.9M</span>
+                                    <span class="hunger-mini-label">displaced, lost food access</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3: Aid & Economic Blockade -->
+                        <div class="hunger-composite-card">
+                            <div class="hunger-composite-header">
+                                <span class="hunger-composite-icon">🚫</span>
+                                <div>
+                                    <div class="hunger-composite-number">85%</div>
+                                    <div class="hunger-composite-title">Aid Requests Denied</div>
+                                </div>
+                            </div>
+                            <div class="hunger-mini-stats">
+                                <div class="hunger-mini-row">
+                                    <span class="hunger-mini-icon">💼</span>
+                                    <span class="hunger-mini-val">80%</span>
+                                    <span class="hunger-mini-label">unemployment — no income for food</span>
+                                </div>
+                                <div class="hunger-mini-row">
+                                    <span class="hunger-mini-icon">🥖</span>
+                                    <span class="hunger-mini-val">245</span>
+                                    <span class="hunger-mini-label">daily calorie deficit</span>
+                                </div>
+                                <div class="hunger-mini-row">
+                                    <span class="hunger-mini-icon">📦</span>
+                                    <span class="hunger-mini-val">97%</span>
+                                    <span class="hunger-mini-label">international donations blocked</span>
+                                </div>
+                                <div class="hunger-mini-row">
+                                    <span class="hunger-mini-icon">🚛</span>
+                                    <span class="hunger-mini-val">12</span>
+                                    <span class="hunger-mini-label">food trucks/day (was 500+)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 4: Infrastructure Destruction -->
+                        <div class="hunger-composite-card">
+                            <div class="hunger-composite-header">
+                                <span class="hunger-composite-icon">🏭</span>
+                                <div>
+                                    <div class="hunger-composite-number">78</div>
+                                    <div class="hunger-composite-title">Bakeries Destroyed</div>
+                                </div>
+                            </div>
+                            <div class="hunger-mini-stats">
+                                <div class="hunger-mini-row">
+                                    <span class="hunger-mini-icon">🌾</span>
+                                    <span class="hunger-mini-val">65%</span>
+                                    <span class="hunger-mini-label">agricultural land eliminated</span>
+                                </div>
+                                <div class="hunger-mini-row">
+                                    <span class="hunger-mini-icon">🏪</span>
+                                    <span class="hunger-mini-val">45</span>
+                                    <span class="hunger-mini-label">markets targeted</span>
+                                </div>
+                                <div class="hunger-mini-row">
+                                    <span class="hunger-mini-icon">💧</span>
+                                    <span class="hunger-mini-val">95%</span>
+                                    <span class="hunger-mini-label">water systems disrupted</span>
+                                </div>
+                                <div class="hunger-mini-row">
+                                    <span class="hunger-mini-icon">⚡</span>
+                                    <span class="hunger-mini-val">4 hrs</span>
+                                    <span class="hunger-mini-label">electricity per day</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3-column Systematic Pattern section -->
+                <div class="crisis-layers-section">
+                    <h3 data-i18n="warCrimes.sections.systematicPattern">⚖️ Systematic Pattern of International Law Violations</h3>
+                    <div class="crisis-layers-grid-3">
+
+                        <div class="crisis-layer">
+                            <div class="layer-icon">🎯</div>
+                            <h4 data-i18n="warCrimes.crisisLayers.targetingCivilians.title">Targeting Civilians &amp; Witnesses</h4>
+                            <p data-i18n="warCrimes.crisisLayers.targetingCivilians.body">Systematic attacks on civilian populations, residential areas, and gatherings — combined with deliberate targeting of journalists and media workers to suppress documentation. Both practices violate the fundamental principle of distinction and press protections under international humanitarian law.</p>
+                        </div>
+
+                        <div class="crisis-layer">
+                            <div class="layer-icon">🏥</div>
+                            <h4 data-i18n="warCrimes.crisisLayers.protectedSites.title">Protected Sites Attacked</h4>
+                            <p data-i18n="warCrimes.crisisLayers.protectedSites.body">Systematic destruction of hospitals, schools, religious sites, and UN facilities. Clear violations of Geneva Conventions protecting medical and educational facilities from targeting during armed conflict.</p>
+                        </div>
+
+                        <div class="crisis-layer">
+                            <div class="layer-icon">🚫</div>
+                            <h4 data-i18n="warCrimes.crisisLayers.collectivePunishment.title">Collective Punishment</h4>
+                            <p data-i18n="warCrimes.crisisLayers.collectivePunishment.body">Complete siege affecting the entire population of 2.3 million, cutting water, electricity, food, and medical supplies. Mass forced displacement constituting crimes against humanity under the Rome Statute.</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Legal Framework Overview -->
+                <div class="legal-framework-overview">
+                    <h3 data-i18n="warCrimes.sections.legalFramework">International Legal Framework Violations</h3>
+                    <div class="framework-grid">
+                        <div class="framework-card">
+                            <h4 data-i18n="warCrimes.legalFrameworkCards.genevaConventions.title">🔴 Geneva Conventions</h4>
+                            <p data-i18n="warCrimes.legalFrameworkCards.genevaConventions.body">Grave breaches including willful killing of civilians, extensive destruction of property, deportation of civilian population, and attacks on protected persons.</p>
+                            <div class="violation-count" data-i18n="warCrimes.legalFrameworkCards.genevaConventions.count">50+ Documented Violations</div>
+                        </div>
+                        <div class="framework-card">
+                            <h4 data-i18n="warCrimes.legalFrameworkCards.romeStatute.title">🔴 Rome Statute (ICC)</h4>
+                            <p data-i18n="warCrimes.legalFrameworkCards.romeStatute.body">War crimes and crimes against humanity including murder, persecution, forcible transfer, and other inhumane acts causing great suffering.</p>
+                            <div class="violation-count" data-i18n="warCrimes.legalFrameworkCards.romeStatute.count">25+ Applicable Charges</div>
+                        </div>
+                        <div class="framework-card">
+                            <h4 data-i18n="warCrimes.legalFrameworkCards.additionalProtocols.title">🔴 Additional Protocols</h4>
+                            <p data-i18n="warCrimes.legalFrameworkCards.additionalProtocols.body">Violations of Additional Protocols I &amp; II regarding protection of civilian population, medical personnel, and humanitarian aid during armed conflict.</p>
+                            <div class="violation-count" data-i18n="warCrimes.legalFrameworkCards.additionalProtocols.count">30+ Protocol Breaches</div>
+                        </div>
+                        <div class="framework-card">
+                            <h4 data-i18n="warCrimes.legalFrameworkCards.genocideConvention.title">🔴 Genocide Convention</h4>
+                            <p data-i18n="warCrimes.legalFrameworkCards.genocideConvention.body">Acts committed with intent to destroy Palestinian population including killing, causing serious harm, and deliberately inflicting conditions of life to bring about destruction.</p>
+                            <div class="violation-count" data-i18n="warCrimes.legalFrameworkCards.genocideConvention.count">Under ICJ Investigation</div>
+                        </div>
+
+                        <!-- Hunger Crisis legal framework divider -->
+                        <div class="framework-domain-divider">
+                            <span class="domain-divider-label">🍽️ Hunger Crisis — Additional Legal Violations</span>
+                        </div>
+
+                        <div class="framework-card hunger-framework-card">
+                            <h4 data-i18n="hungerCrisis.legalFrameworkCards.starvationAsWeapon.title">🔴 Starvation as Weapon of War</h4>
+                            <p data-i18n="hungerCrisis.legalFrameworkCards.starvationAsWeapon.body">Rome Statute, Article 8(2)(b)(xxv) — Intentionally using starvation of civilians as a method of warfare by depriving them of objects indispensable to their survival.</p>
+                            <div class="violation-count" data-i18n="hungerCrisis.legalFrameworkCards.starvationAsWeapon.count">War Crime</div>
+                        </div>
+                        <div class="framework-card hunger-framework-card">
+                            <h4 data-i18n="hungerCrisis.legalFrameworkCards.collectivePunishment.title">🔴 Collective Punishment</h4>
+                            <p data-i18n="hungerCrisis.legalFrameworkCards.collectivePunishment.body">Geneva Convention IV, Article 33 — No protected person may be punished for an offence they have not personally committed. Collective penalties and intimidation are prohibited.</p>
+                            <div class="violation-count" data-i18n="hungerCrisis.legalFrameworkCards.collectivePunishment.count">Geneva Convention Violation</div>
+                        </div>
+                        <div class="framework-card hunger-framework-card">
+                            <h4 data-i18n="hungerCrisis.legalFrameworkCards.rightToFood.title">🔴 Right to Adequate Food</h4>
+                            <p data-i18n="hungerCrisis.legalFrameworkCards.rightToFood.body">International Covenant on Economic, Social and Cultural Rights, Article 11 — Right of everyone to an adequate standard of living, including adequate food and the fundamental right to be free from hunger.</p>
+                            <div class="violation-count" data-i18n="hungerCrisis.legalFrameworkCards.rightToFood.count">Human Rights Violation</div>
+                        </div>
+                        <div class="framework-card hunger-framework-card">
+                            <h4 data-i18n="hungerCrisis.legalFrameworkCards.rightsOfChild.title">🔴 Rights of the Child</h4>
+                            <p data-i18n="hungerCrisis.legalFrameworkCards.rightsOfChild.body">Convention on the Rights of the Child, Article 27 — Right to a standard of living adequate for the child's physical, mental, spiritual, moral and social development.</p>
+                            <div class="violation-count" data-i18n="hungerCrisis.legalFrameworkCards.rightsOfChild.count">Children's Rights Violation</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ── Categories ── -->
+        <section class="view-section" id="violationsView">
+            <div class="container">
+                <div class="war-crimes-categories">
+
+                    <!-- Crimes Against Civilians -->
+                    <div class="category-section">
+                        <h3 data-i18n="warCrimes.violations.categories.crimesAgainstCivilians">🎯 Crimes Against Civilian Population</h3>
+                        <div class="violation-grid">
+
+                            <div class="violation-item">
+                                <div class="violation-header">
+                                    <h4 data-i18n="warCrimes.violations.items.indiscriminateAttacks.title">Indiscriminate Attacks on Civilians</h4>
+                                    <span class="violation-count" data-i18n="warCrimes.violations.items.indiscriminateAttacks.count">1,000+ incidents</span>
+                                </div>
+                                <p data-i18n="warCrimes.violations.items.indiscriminateAttacks.body">Systematic targeting of residential areas, markets, and civilian gatherings in violation of the principle of distinction. Over 40,000 civilians killed including 15,000 children.</p>
+                                <div class="legal-reference">
+                                    <strong data-i18n="warCrimes.violations.legalBasis">Legal Basis:</strong>
+                                    <span data-i18n="warCrimes.violations.items.indiscriminateAttacks.legal">Geneva Convention IV, Art. 27; Additional Protocol I, Art. 51; Rome Statute, Art. 8(2)(b)(i)</span>
+                                </div>
+                            </div>
+
+                            <div class="violation-item">
+                                <div class="violation-header">
+                                    <h4 data-i18n="warCrimes.violations.items.collectivePunishment.title">Collective Punishment</h4>
+                                    <span class="violation-count" data-i18n="warCrimes.violations.items.collectivePunishment.count">Systematic</span>
+                                </div>
+                                <p data-i18n="warCrimes.violations.items.collectivePunishment.body">Complete siege including cutting water, electricity, food, and medical supplies to entire civilian population of 2.3 million people for over 300 days.</p>
+                                <div class="legal-reference">
+                                    <strong data-i18n="warCrimes.violations.legalBasis">Legal Basis:</strong>
+                                    <span data-i18n="warCrimes.violations.items.collectivePunishment.legal">Geneva Convention IV, Art. 33; Additional Protocol I, Art. 54</span>
+                                </div>
+                            </div>
+
+                            <div class="violation-item">
+                                <div class="violation-header">
+                                    <h4 data-i18n="warCrimes.violations.items.forcedDisplacement.title">Forced Displacement</h4>
+                                    <span class="violation-count" data-i18n="warCrimes.violations.items.forcedDisplacement.count">1.9M+ people</span>
+                                </div>
+                                <p data-i18n="warCrimes.violations.items.forcedDisplacement.body">Forcible transfer of civilian population through military operations, destruction of homes, and orders to evacuate under threat of attack.</p>
+                                <div class="legal-reference">
+                                    <strong data-i18n="warCrimes.violations.legalBasis">Legal Basis:</strong>
+                                    <span data-i18n="warCrimes.violations.items.forcedDisplacement.legal">Geneva Convention IV, Art. 49; Rome Statute, Art. 8(2)(a)(vii)</span>
+                                </div>
+                            </div>
+
+                            <div class="violation-item">
+                                <div class="violation-header">
+                                    <h4 data-i18n="warCrimes.violations.items.starvationAsWeapon.title">Use of Starvation as Weapon</h4>
+                                    <span class="violation-count" data-i18n="warCrimes.violations.items.starvationAsWeapon.count">Ongoing</span>
+                                </div>
+                                <p data-i18n="warCrimes.violations.items.starvationAsWeapon.body">Deliberate deprivation of food, water, and humanitarian aid to civilian population, creating famine conditions affecting 2.3 million people.</p>
+                                <div class="legal-reference">
+                                    <strong data-i18n="warCrimes.violations.legalBasis">Legal Basis:</strong>
+                                    <span data-i18n="warCrimes.violations.items.starvationAsWeapon.legal">Additional Protocol I, Art. 54; Rome Statute, Art. 8(2)(b)(xxv)</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Attacks on Protected Sites -->
+                    <div class="category-section">
+                        <h3 data-i18n="warCrimes.violations.categories.attacksOnProtectedSites">🏥 Attacks on Protected Sites</h3>
+                        <div class="violation-grid">
+
+                            <div class="violation-item">
+                                <div class="violation-header">
+                                    <h4 data-i18n="warCrimes.violations.items.medicalFacilities.title">Medical Facilities &amp; Personnel</h4>
+                                    <span class="violation-count" data-i18n="warCrimes.violations.items.medicalFacilities.count">120+ hospitals</span>
+                                </div>
+                                <p data-i18n="warCrimes.violations.items.medicalFacilities.body">Direct attacks on hospitals, clinics, ambulances, and medical personnel. 500+ medical workers killed, 250+ detained in clear violation of medical neutrality.</p>
+                                <div class="legal-reference">
+                                    <strong data-i18n="warCrimes.violations.legalBasis">Legal Basis:</strong>
+                                    <span data-i18n="warCrimes.violations.items.medicalFacilities.legal">Geneva Convention I, Art. 19; Additional Protocol I, Art. 12; Rome Statute, Art. 8(2)(b)(ix)</span>
+                                </div>
+                            </div>
+
+                            <div class="violation-item">
+                                <div class="violation-header">
+                                    <h4 data-i18n="warCrimes.violations.items.educationalInstitutions.title">Educational Institutions</h4>
+                                    <span class="violation-count" data-i18n="warCrimes.violations.items.educationalInstitutions.count">300+ schools</span>
+                                </div>
+                                <p data-i18n="warCrimes.violations.items.educationalInstitutions.body">Systematic destruction of schools, universities, and educational infrastructure, depriving children of their right to education.</p>
+                                <div class="legal-reference">
+                                    <strong data-i18n="warCrimes.violations.legalBasis">Legal Basis:</strong>
+                                    <span data-i18n="warCrimes.violations.items.educationalInstitutions.legal">Additional Protocol I, Art. 52; Rome Statute, Art. 8(2)(b)(ix)</span>
+                                </div>
+                            </div>
+
+                            <div class="violation-item">
+                                <div class="violation-header">
+                                    <h4 data-i18n="warCrimes.violations.items.religiousCulturalSites.title">Religious &amp; Cultural Sites</h4>
+                                    <span class="violation-count" data-i18n="warCrimes.violations.items.religiousCulturalSites.count">200+ sites</span>
+                                </div>
+                                <p data-i18n="warCrimes.violations.items.religiousCulturalSites.body">Attacks on mosques, churches, cultural centers, and historical sites, constituting destruction of cultural heritage.</p>
+                                <div class="legal-reference">
+                                    <strong data-i18n="warCrimes.violations.legalBasis">Legal Basis:</strong>
+                                    <span data-i18n="warCrimes.violations.items.religiousCulturalSites.legal">Hague Convention 1954; Additional Protocol I, Art. 53; Rome Statute, Art. 8(2)(b)(ix)</span>
+                                </div>
+                            </div>
+
+                            <div class="violation-item">
+                                <div class="violation-header">
+                                    <h4 data-i18n="warCrimes.violations.items.unHumanitarianFacilities.title">UN &amp; Humanitarian Facilities</h4>
+                                    <span class="violation-count" data-i18n="warCrimes.violations.items.unHumanitarianFacilities.count">150+ facilities</span>
+                                </div>
+                                <p data-i18n="warCrimes.violations.items.unHumanitarianFacilities.body">Attacks on UN schools, UNRWA facilities, and humanitarian distribution centers, violating neutrality of humanitarian operations.</p>
+                                <div class="legal-reference">
+                                    <strong data-i18n="warCrimes.violations.legalBasis">Legal Basis:</strong>
+                                    <span data-i18n="warCrimes.violations.items.unHumanitarianFacilities.legal">UN Charter; Additional Protocol I, Art. 56; Rome Statute, Art. 8(2)(b)(iii)</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Targeting of Protected Persons -->
+                    <div class="category-section">
+                        <h3 data-i18n="warCrimes.violations.categories.targetingProtectedPersons">👥 Targeting of Protected Persons</h3>
+                        <div class="violation-grid">
+
+                            <div class="violation-item">
+                                <div class="violation-header">
+                                    <h4 data-i18n="warCrimes.violations.items.children.title">Children</h4>
+                                    <span class="violation-count" data-i18n="warCrimes.violations.items.children.count">15,000+ killed</span>
+                                </div>
+                                <p data-i18n="warCrimes.violations.items.children.body">Disproportionate killing of children constituting the largest child casualty rate in any modern conflict. Attacks on schools and playgrounds in direct violation of child protection laws.</p>
+                                <div class="legal-reference">
+                                    <strong data-i18n="warCrimes.violations.legalBasis">Legal Basis:</strong>
+                                    <span data-i18n="warCrimes.violations.items.children.legal">Convention on Rights of the Child; Additional Protocol I, Art. 77; Rome Statute, Art. 8(2)(b)(xxvi)</span>
+                                </div>
+                            </div>
+
+                            <div class="violation-item">
+                                <div class="violation-header">
+                                    <h4 data-i18n="warCrimes.violations.items.journalists.title">Journalists &amp; Media Workers</h4>
+                                    <span class="violation-count" data-i18n="warCrimes.violations.items.journalists.count">140+ killed</span>
+                                </div>
+                                <p data-i18n="warCrimes.violations.items.journalists.body">Deliberate targeting of journalists, media facilities, and suppression of information. Highest journalist death toll in any conflict.</p>
+                                <div class="legal-reference">
+                                    <strong data-i18n="warCrimes.violations.legalBasis">Legal Basis:</strong>
+                                    <span data-i18n="warCrimes.violations.items.journalists.legal">Additional Protocol I, Art. 79; Geneva Convention IV, Art. 27; Rome Statute, Art. 8(2)(b)(i)</span>
+                                </div>
+                            </div>
+
+                            <div class="violation-item">
+                                <div class="violation-header">
+                                    <h4 data-i18n="warCrimes.violations.items.medicalPersonnel.title">Medical Personnel</h4>
+                                    <span class="violation-count" data-i18n="warCrimes.violations.items.medicalPersonnel.count">500+ killed, 250+ detained</span>
+                                </div>
+                                <p data-i18n="warCrimes.violations.items.medicalPersonnel.body">Killing, detention, and torture of doctors, nurses, and medical staff. Systematic attacks on those providing medical care.</p>
+                                <div class="legal-reference">
+                                    <strong data-i18n="warCrimes.violations.legalBasis">Legal Basis:</strong>
+                                    <span data-i18n="warCrimes.violations.items.medicalPersonnel.legal">Geneva Convention I, Art. 24; Additional Protocol I, Art. 15; Rome Statute, Art. 8(2)(b)(ix)</span>
+                                </div>
+                            </div>
+
+                            <div class="violation-item">
+                                <div class="violation-header">
+                                    <h4 data-i18n="warCrimes.violations.items.women.title">Women</h4>
+                                    <span class="violation-count" data-i18n="warCrimes.violations.items.women.count">11,000+ killed</span>
+                                </div>
+                                <p data-i18n="warCrimes.violations.items.women.body">Disproportionate impact on women including pregnant women, mothers, and elderly women. Attacks on maternity wards and women's facilities.</p>
+                                <div class="legal-reference">
+                                    <strong data-i18n="warCrimes.violations.legalBasis">Legal Basis:</strong>
+                                    <span data-i18n="warCrimes.violations.items.women.legal">Geneva Convention IV, Art. 27; Additional Protocol I, Art. 76; Rome Statute, Art. 8(2)(b)(xxii)</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- ── Hunger Crisis Violations divider ── -->
+                    <div class="category-domain-divider">
+                        <span class="domain-divider-label">🍽️ Hunger Crisis — Food &amp; Starvation Violations</span>
+                    </div>
+
+                    <!-- Direct Starvation & Malnutrition -->
+                    <div class="category-section hunger-category-section">
+                        <h3 data-i18n="hungerCrisis.violations.categories.directStarvation">🍽️ Direct Starvation &amp; Malnutrition</h3>
+                        <div class="violation-grid">
+
+                            <div class="violation-item">
+                                <div class="violation-header">
+                                    <h4 data-i18n="hungerCrisis.violations.items.confirmedDeaths.title">Confirmed Deaths from Starvation</h4>
+                                    <span class="violation-count" id="hungerViolationTotalDeaths">169 deaths</span>
+                                </div>
+                                <p data-i18n="hungerCrisis.violations.items.confirmedDeaths.body">Total population deaths directly attributed to starvation, malnutrition, and related causes. Documented through medical records and death certificates.</p>
+                                <div class="legal-reference">
+                                    <strong data-i18n="hungerCrisis.violations.legalBasis">Legal Basis:</strong>
+                                    Rome Statute, Art. 8(2)(b)(xxv); Right to Life, ICCPR Art. 6
+                                </div>
+                            </div>
+
+                            <div class="violation-item">
+                                <div class="violation-header">
+                                    <h4 data-i18n="hungerCrisis.violations.items.childrenDeaths.title">Children Deaths from Starvation</h4>
+                                    <span class="violation-count" id="hungerViolationChildDeaths">67 children</span>
+                                </div>
+                                <p data-i18n="hungerCrisis.violations.items.childrenDeaths.body">Children under 18 who died from starvation, severe malnutrition, and related complications. Each case represents a preventable tragedy.</p>
+                                <div class="legal-reference">
+                                    <strong data-i18n="hungerCrisis.violations.legalBasis">Legal Basis:</strong>
+                                    Convention on Rights of the Child, Art. 6, 24, 27; Geneva Convention IV, Art. 24
+                                </div>
+                            </div>
+
+                            <div class="violation-item">
+                                <div class="violation-header">
+                                    <h4 data-i18n="hungerCrisis.violations.items.aidBlockade.title">Systematic Aid Blockade</h4>
+                                    <span class="violation-count">85% denied</span>
+                                </div>
+                                <p>Deliberate blocking of humanitarian food aid — 85% of international aid requests denied. Only 12 food trucks enter daily versus 500+ before the siege, constituting intentional starvation of the civilian population.</p>
+                                <div class="legal-reference">
+                                    <strong data-i18n="hungerCrisis.violations.legalBasis">Legal Basis:</strong>
+                                    Additional Protocol I, Art. 54, 70; Rome Statute, Art. 8(2)(b)(xxv)
+                                </div>
+                            </div>
+
+                            <div class="violation-item">
+                                <div class="violation-header">
+                                    <h4>Food Infrastructure Destruction</h4>
+                                    <span class="violation-count">78 bakeries</span>
+                                </div>
+                                <p>Targeted destruction of bakeries, markets, agricultural land (65% eliminated), and food storage facilities — systematically dismantling the population's capacity for food production and distribution.</p>
+                                <div class="legal-reference">
+                                    <strong data-i18n="hungerCrisis.violations.legalBasis">Legal Basis:</strong>
+                                    Additional Protocol I, Art. 54; Hague Regulations, Art. 23(g)
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ── Legal Framework ── -->
+        <section class="view-section" id="legalView">
+            <div class="container">
+                <div class="legal-actions-section">
+                    <h3 data-i18n="warCrimes.legalTimeline.sectionTitle">⚖️ International Legal Response</h3>
+                    <div class="legal-timeline">
+
+                        <div class="timeline-item active">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-date" data-i18n="warCrimes.legalTimeline.events.crisisBegins.date">October 2023</div>
+                                <h4 data-i18n="warCrimes.legalTimeline.events.crisisBegins.title">Crisis Begins - Mass Violations</h4>
+                                <p data-i18n="warCrimes.legalTimeline.events.crisisBegins.body">Systematic attacks on Gaza begin with immediate violations of international humanitarian law, including targeting of civilians and siege warfare.</p>
+                                <span class="timeline-status ongoing" data-i18n="warCrimes.legalTimeline.status.ongoingViolations">Ongoing Violations</span>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item active">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-date" data-i18n="warCrimes.legalTimeline.events.icjCase.date">January 2024</div>
+                                <h4 data-i18n="warCrimes.legalTimeline.events.icjCase.title">South Africa vs Israel - ICJ Case</h4>
+                                <p data-i18n="warCrimes.legalTimeline.events.icjCase.body">South Africa filed a case at the International Court of Justice alleging genocide against Palestinians in Gaza, citing systematic violations.</p>
+                                <span class="timeline-status ongoing" data-i18n="warCrimes.legalTimeline.status.ongoing">Ongoing</span>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item active">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-date" data-i18n="warCrimes.legalTimeline.events.iccInvestigation.date">March 2024</div>
+                                <h4 data-i18n="warCrimes.legalTimeline.events.iccInvestigation.title">ICC Investigation Accelerated</h4>
+                                <p data-i18n="warCrimes.legalTimeline.events.iccInvestigation.body">International Criminal Court investigating war crimes and crimes against humanity in Palestine, examining evidence of systematic violations.</p>
+                                <span class="timeline-status ongoing" data-i18n="warCrimes.legalTimeline.status.activeInvestigation">Active Investigation</span>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-date" data-i18n="warCrimes.legalTimeline.events.unRapporteur.date">May 2024</div>
+                                <h4 data-i18n="warCrimes.legalTimeline.events.unRapporteur.title">UN Special Rapporteur Report</h4>
+                                <p data-i18n="warCrimes.legalTimeline.events.unRapporteur.body">Special Rapporteur on Palestine documented systematic violations of international law and called for immediate accountability measures.</p>
+                                <span class="timeline-status completed" data-i18n="warCrimes.legalTimeline.status.published">Published</span>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-date" data-i18n="warCrimes.legalTimeline.events.iccWarrants.date">July 2024</div>
+                                <h4 data-i18n="warCrimes.legalTimeline.events.iccWarrants.title">ICC Arrest Warrants Consideration</h4>
+                                <p data-i18n="warCrimes.legalTimeline.events.iccWarrants.body">International Criminal Court considering arrest warrants for war crimes and crimes against humanity based on documented evidence.</p>
+                                <span class="timeline-status ongoing" data-i18n="warCrimes.legalTimeline.status.underReview">Under Review</span>
+                            </div>
+                        </div>
+
+                        <!-- Hunger Crisis legal timeline divider -->
+                        <div class="timeline-domain-divider">
+                            <span class="domain-divider-label">🍽️ Hunger Crisis — Legal Response</span>
+                        </div>
+
+                        <div class="timeline-item active">
+                            <div class="timeline-marker" style="background: var(--warning-color);"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-date" data-i18n="hungerCrisis.legalTimeline.events.completeSiege.date">October 2023</div>
+                                <h4 data-i18n="hungerCrisis.legalTimeline.events.completeSiege.title">Complete Siege Declared — Food Crisis Begins</h4>
+                                <p data-i18n="hungerCrisis.legalTimeline.events.completeSiege.body">All food, water, fuel, and electricity cut off. "Complete siege" officially announced affecting 2.3 million people, triggering immediate international legal concerns under Art. 54 of Additional Protocol I.</p>
+                                <span class="timeline-status ongoing" data-i18n="hungerCrisis.legalTimeline.status.ongoingViolation">Ongoing Violation</span>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-marker" style="background: var(--warning-color);"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">February 2024</div>
+                                <h4>IPC Famine Warning Issued</h4>
+                                <p>Integrated Food Security Phase Classification (IPC) issued famine warning for Gaza — the first famine determination in the region in decades — citing deliberate obstruction of humanitarian aid as a primary cause.</p>
+                                <span class="timeline-status ongoing">Famine Conditions</span>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-marker" style="background: var(--warning-color);"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">March 2024</div>
+                                <h4>UN Security Council Demands Aid Access</h4>
+                                <p>UN Security Council Resolution 2728 demanded an immediate ceasefire and unimpeded humanitarian access, citing starvation as a weapon of war. First binding resolution on the conflict, ignored by parties on the ground.</p>
+                                <span class="timeline-status completed">Resolution Passed</span>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-marker" style="background: var(--warning-color);"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">May 2024</div>
+                                <h4>ICJ Orders Food Aid Access</h4>
+                                <p>International Court of Justice ordered Israel to immediately ensure food, water, and humanitarian aid reaches Gaza without restriction, citing acute risk of irreversible harm to the Palestinian population's rights.</p>
+                                <span class="timeline-status ongoing">Order Pending Compliance</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── Resources ── -->
+        <section class="view-section" id="resourcesView">
+            <div class="container">
+                <div class="resources-section">
+                    <h3 data-i18n="warCrimes.resources.sectionTitle">📚 Legal Resources &amp; Documentation</h3>
+                    <div class="resources-grid">
+
+                        <!-- International Legal Framework -->
+                        <div class="resource-category">
+                            <h4 data-i18n="warCrimes.resources.categories.legalFramework.title">⚖️ International Legal Framework</h4>
+                            <div class="resource-links">
+                                <a href="https://www.icrc.org/en/doc/war-and-law/treaties-customary-law/geneva-conventions/overview-geneva-conventions.htm" class="resource-link" target="_blank">
+                                    <span class="link-icon">📜</span>
+                                    <div class="link-content">
+                                        <div class="link-title" data-i18n="warCrimes.resources.categories.legalFramework.links.genevaConventions.title">Geneva Conventions</div>
+                                        <div class="link-description" data-i18n="warCrimes.resources.categories.legalFramework.links.genevaConventions.description">The four treaties and their additional protocols governing humanitarian law</div>
+                                    </div>
+                                </a>
+                                <a href="https://www.icc-cpi.int/resource-library/documents/rs-eng.pdf" class="resource-link" target="_blank">
+                                    <span class="link-icon">⚖️</span>
+                                    <div class="link-content">
+                                        <div class="link-title" data-i18n="warCrimes.resources.categories.legalFramework.links.romeStatute.title">Rome Statute</div>
+                                        <div class="link-description" data-i18n="warCrimes.resources.categories.legalFramework.links.romeStatute.description">Founding treaty of International Criminal Court defining war crimes</div>
+                                    </div>
+                                </a>
+                                <a href="https://ihl-databases.icrc.org/customary-ihl/eng/docs/home" class="resource-link" target="_blank">
+                                    <span class="link-icon">📋</span>
+                                    <div class="link-content">
+                                        <div class="link-title" data-i18n="warCrimes.resources.categories.legalFramework.links.customaryIHL.title">Customary International Humanitarian Law</div>
+                                        <div class="link-description" data-i18n="warCrimes.resources.categories.legalFramework.links.customaryIHL.description">ICRC database of customary rules of international humanitarian law</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Official Documentation -->
+                        <div class="resource-category">
+                            <h4 data-i18n="warCrimes.resources.categories.officialDocumentation.title">🏛️ Official Documentation</h4>
+                            <div class="resource-links">
+                                <a href="https://www.ohchr.org/en/countries/middle-east-and-north-africa-region/palestine-state" class="resource-link" target="_blank">
+                                    <span class="link-icon">🔍</span>
+                                    <div class="link-content">
+                                        <div class="link-title" data-i18n="warCrimes.resources.categories.officialDocumentation.links.unHumanRights.title">UN Human Rights Office Reports</div>
+                                        <div class="link-description" data-i18n="warCrimes.resources.categories.officialDocumentation.links.unHumanRights.description">Official UN documentation of human rights violations</div>
+                                    </div>
+                                </a>
+                                <a href="https://www.icc-cpi.int/situations/palestine" class="resource-link" target="_blank">
+                                    <span class="link-icon">🏛️</span>
+                                    <div class="link-content">
+                                        <div class="link-title" data-i18n="warCrimes.resources.categories.officialDocumentation.links.iccPalestine.title">ICC Palestine Investigation</div>
+                                        <div class="link-description" data-i18n="warCrimes.resources.categories.officialDocumentation.links.iccPalestine.description">International Criminal Court investigation documents</div>
+                                    </div>
+                                </a>
+                                <a href="https://www.icj-cij.org/case/192" class="resource-link" target="_blank">
+                                    <span class="link-icon">⚖️</span>
+                                    <div class="link-content">
+                                        <div class="link-title" data-i18n="warCrimes.resources.categories.officialDocumentation.links.icjCase.title">ICJ South Africa v. Israel Case</div>
+                                        <div class="link-description" data-i18n="warCrimes.resources.categories.officialDocumentation.links.icjCase.description">International Court of Justice genocide case documents</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Evidence & Monitoring -->
+                        <div class="resource-category">
+                            <h4 data-i18n="warCrimes.resources.categories.evidenceMonitoring.title">🔬 Evidence &amp; Monitoring</h4>
+                            <div class="resource-links">
+                                <a href="https://www.hrw.org/middle-east/north-africa/israel/palestine" class="resource-link" target="_blank">
+                                    <span class="link-icon">👁️</span>
+                                    <div class="link-content">
+                                        <div class="link-title" data-i18n="warCrimes.resources.categories.evidenceMonitoring.links.hrw.title">Human Rights Watch</div>
+                                        <div class="link-description" data-i18n="warCrimes.resources.categories.evidenceMonitoring.links.hrw.description">Documentation of war crimes and human rights violations</div>
+                                    </div>
+                                </a>
+                                <a href="https://www.amnesty.org/en/location/middle-east-and-north-africa/palestine-state-of/" class="resource-link" target="_blank">
+                                    <span class="link-icon">🔍</span>
+                                    <div class="link-content">
+                                        <div class="link-title" data-i18n="warCrimes.resources.categories.evidenceMonitoring.links.amnesty.title">Amnesty International</div>
+                                        <div class="link-description" data-i18n="warCrimes.resources.categories.evidenceMonitoring.links.amnesty.description">Human rights violations and legal analysis</div>
+                                    </div>
+                                </a>
+                                <a href="https://www.forensic-architecture.org/" class="resource-link" target="_blank">
+                                    <span class="link-icon">🔬</span>
+                                    <div class="link-content">
+                                        <div class="link-title" data-i18n="warCrimes.resources.categories.evidenceMonitoring.links.forensicArchitecture.title">Forensic Architecture</div>
+                                        <div class="link-description" data-i18n="warCrimes.resources.categories.evidenceMonitoring.links.forensicArchitecture.description">Spatial and media investigations of human rights violations</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Academic & Legal Analysis -->
+                        <div class="resource-category">
+                            <h4 data-i18n="warCrimes.resources.categories.academicAnalysis.title">📚 Academic &amp; Legal Analysis</h4>
+                            <div class="resource-links">
+                                <a href="https://opil.ouplaw.com/home/ihl" class="resource-link" target="_blank">
+                                    <span class="link-icon">📚</span>
+                                    <div class="link-content">
+                                        <div class="link-title" data-i18n="warCrimes.resources.categories.academicAnalysis.links.oxford.title">Oxford Public International Law</div>
+                                        <div class="link-description" data-i18n="warCrimes.resources.categories.academicAnalysis.links.oxford.description">Academic legal analysis and commentary</div>
+                                    </div>
+                                </a>
+                                <a href="https://www.cambridge.org/core/journals/international-and-comparative-law-quarterly" class="resource-link" target="_blank">
+                                    <span class="link-icon">🎓</span>
+                                    <div class="link-content">
+                                        <div class="link-title" data-i18n="warCrimes.resources.categories.academicAnalysis.links.iclq.title">International Law Quarterly</div>
+                                        <div class="link-description" data-i18n="warCrimes.resources.categories.academicAnalysis.links.iclq.description">Peer-reviewed international law research</div>
+                                    </div>
+                                </a>
+                                <a href="https://www.ejiltalk.org/" class="resource-link" target="_blank">
+                                    <span class="link-icon">💬</span>
+                                    <div class="link-content">
+                                        <div class="link-title" data-i18n="warCrimes.resources.categories.academicAnalysis.links.ejilTalk.title">EJIL Talk</div>
+                                        <div class="link-description" data-i18n="warCrimes.resources.categories.academicAnalysis.links.ejilTalk.description">European Journal of International Law blog and analysis</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Hunger Crisis: UN & International Organizations -->
+                        <div class="resource-category hunger-resource-category">
+                            <div class="resource-category-domain-tag">🍽️ Hunger Crisis</div>
+                            <h4 data-i18n="hungerCrisis.resources.categories.unOrganizations.title">🏛️ UN &amp; International Organizations</h4>
+                            <div class="resource-links">
+                                <a href="https://www.wfp.org/stories/5-steps-food-security-famine" class="resource-link" target="_blank">
+                                    <span class="link-icon">🍽️</span>
+                                    <div class="link-content">
+                                        <div class="link-title" data-i18n="hungerCrisis.resources.categories.unOrganizations.links.wfp.title">World Food Programme — Palestine</div>
+                                        <div class="link-description" data-i18n="hungerCrisis.resources.categories.unOrganizations.links.wfp.description">Official WFP reports on food security and malnutrition in Gaza</div>
+                                    </div>
+                                </a>
+                                <a href="https://www.unicef.org/emergencies/children-under-attack-palestine" class="resource-link" target="_blank">
+                                    <span class="link-icon">🕯️</span>
+                                    <div class="link-content">
+                                        <div class="link-title">UNICEF — Gaza Emergency</div>
+                                        <div class="link-description">Children's malnutrition and starvation documentation</div>
+                                    </div>
+                                </a>
+                                <a href="https://www.fao.org/emergencies/fao-in-action/stories/stories-detail/en/c/1683882/" class="resource-link" target="_blank">
+                                    <span class="link-icon">🌾</span>
+                                    <div class="link-content">
+                                        <div class="link-title">FAO — Gaza Food Crisis</div>
+                                        <div class="link-description">Food and Agriculture Organization reports on agricultural destruction</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Hunger Crisis: IPC & Famine Monitoring -->
+                        <div class="resource-category hunger-resource-category">
+                            <div class="resource-category-domain-tag">🍽️ Hunger Crisis</div>
+                            <h4>📊 IPC &amp; Famine Monitoring</h4>
+                            <div class="resource-links">
+                                <a href="https://www.ipcinfo.org/ipc-country-analysis/details-map/en/c/1156749/" class="resource-link" target="_blank">
+                                    <span class="link-icon">📊</span>
+                                    <div class="link-content">
+                                        <div class="link-title">IPC Famine Classification — Gaza</div>
+                                        <div class="link-description">Integrated Food Security Phase Classification reports documenting IPC Phase 5 conditions</div>
+                                    </div>
+                                </a>
+                                <a href="https://www.msf.org/occupied-palestinian-territories" class="resource-link" target="_blank">
+                                    <span class="link-icon">🏥</span>
+                                    <div class="link-content">
+                                        <div class="link-title">Médecins Sans Frontières — Palestine</div>
+                                        <div class="link-description">MSF field reports on malnutrition, starvation, and medical conditions</div>
+                                    </div>
+                                </a>
+                                <a href="https://www.oxfam.org/en/what-we-do/countries/occupied-palestinian-territories" class="resource-link" target="_blank">
+                                    <span class="link-icon">🔍</span>
+                                    <div class="link-content">
+                                        <div class="link-title">Oxfam — Gaza Hunger Crisis</div>
+                                        <div class="link-description">Reports on food insecurity, aid blockade, and starvation as a weapon of war</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Actions -->
+                <div class="action-section">
+                    <h3 data-i18n="warCrimes.actions.sectionTitle">🚨 Take Urgent Action</h3>
+                    <div class="action-grid">
+
+                        <div class="action-item">
+                            <span class="action-icon">📞</span>
+                            <h4 data-i18n="warCrimes.actions.items.demandAccountability.title">Demand Accountability</h4>
+                            <p data-i18n="warCrimes.actions.items.demandAccountability.body">Contact representatives demanding immediate action to hold perpetrators accountable for war crimes and violations of international law.</p>
+                            <button class="action-btn" onclick="window.open('https://www.house.gov/representatives/find-your-representative','_blank')"
+                                data-i18n="warCrimes.actions.items.demandAccountability.btn">Contact Representatives</button>
+                        </div>
+
+                        <div class="action-item">
+                            <span class="action-icon">⚖️</span>
+                            <h4 data-i18n="warCrimes.actions.items.supportLegalAction.title">Support Legal Action</h4>
+                            <p data-i18n="warCrimes.actions.items.supportLegalAction.body">Support international legal proceedings at ICC and ICJ to ensure justice for war crimes and crimes against humanity.</p>
+                            <button class="action-btn" onclick="window.open('https://www.icc-cpi.int','_blank')"
+                                data-i18n="warCrimes.actions.items.supportLegalAction.btn">Support ICC Action</button>
+                        </div>
+
+                        <div class="action-item">
+                            <span class="action-icon">🍽️</span>
+                            <h4 data-i18n="hungerCrisis.actions.items.emergencyAdvocacy.title">End the Food Blockade</h4>
+                            <p data-i18n="hungerCrisis.actions.items.emergencyAdvocacy.body">Contact representatives demanding immediate humanitarian aid access and an end to the food blockade causing mass starvation of 2.3 million civilians.</p>
+                            <button class="action-btn" onclick="window.open('https://www.house.gov/representatives/find-your-representative', '_blank')"
+                                    data-i18n="hungerCrisis.actions.items.emergencyAdvocacy.btn">
+                                Demand Aid Access
+                            </button>
+                        </div>
+
+                        <div class="action-item">
+                            <span class="action-icon">📢</span>
+                            <h4 data-i18n="warCrimes.actions.items.raiseAwareness.title">Raise Awareness</h4>
+                            <p data-i18n="warCrimes.actions.items.raiseAwareness.body">Share documentation of war crimes and demand media coverage of systematic violations of international law.</p>
+                            <button class="action-btn" onclick="shareWarCrimesData()"
+                                data-i18n="warCrimes.actions.items.raiseAwareness.btn">Share This Data</button>
+                        </div>
+
+                        <div class="action-item">
+                            <span class="action-icon">🔍</span>
+                            <h4 data-i18n="warCrimes.actions.items.documentEvidence.title">Document Evidence</h4>
+                            <p data-i18n="warCrimes.actions.items.documentEvidence.body">Help document and report additional evidence of international law violations for legal accountability.</p>
+                            <button class="action-btn" onclick="window.open('../index.html#contributeView','_self')"
+                                data-i18n="warCrimes.actions.items.documentEvidence.btn">Submit Evidence</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── Hunger Data ── -->
+        <section class="view-section" id="hungerDataView">
+            <div class="container">
+
+                <!-- 3-layer siege section -->
+                <div class="crisis-layers-section">
+                    <h3 data-i18n="hungerCrisis.crisisLayers.sectionTitle">🔄 The Complete Siege: Multiple Layers of Starvation</h3>
+                    <div class="crisis-layers-grid">
+
+                        <div class="crisis-layer">
+                            <div class="layer-icon">🚧</div>
+                            <h4 data-i18n="hungerCrisis.crisisLayers.physicalBlockade.title">Physical Blockade</h4>
+                            <p data-i18n="hungerCrisis.crisisLayers.physicalBlockade.body">Complete siege blocks international donations and humanitarian aid. Only 12 food trucks enter daily (was 500+ before siege). 97% of international donations cannot reach the population.</p>
+                        </div>
+
+                        <div class="crisis-layer">
+                            <div class="layer-icon">💣</div>
+                            <h4 data-i18n="hungerCrisis.crisisLayers.economicWarfare.title">Economic Warfare &amp; Vulnerable Groups</h4>
+                            <p data-i18n="hungerCrisis.crisisLayers.economicWarfare.body">War creates 80% unemployment and displaces 1.9M people, stripping families of income and food access. Orphaned children, pregnant women, the elderly, and disabled are left entirely without support.</p>
+                        </div>
+
+                        <div class="crisis-layer">
+                            <div class="layer-icon">🏭</div>
+                            <h4 data-i18n="hungerCrisis.crisisLayers.infrastructureDestruction.title">Infrastructure Destruction</h4>
+                            <p data-i18n="hungerCrisis.crisisLayers.infrastructureDestruction.body">78 bakeries destroyed, 45 markets targeted, 65% of farmland eliminated. Even if money and aid were available, food production and distribution systems are destroyed.</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Legal framework cards -->
+                <div class="legal-framework-overview">
+                    <h3 data-i18n="hungerCrisis.legalFrameworkCards.sectionTitle">International Legal Framework Violations</h3>
+                    <div class="framework-grid">
+
+                        <div class="framework-card">
+                            <h4 data-i18n="hungerCrisis.legalFrameworkCards.starvationAsWeapon.title">🔴 Starvation as Weapon of War</h4>
+                            <p data-i18n="hungerCrisis.legalFrameworkCards.starvationAsWeapon.body">Rome Statute, Article 8(2)(b)(xxv) — "Intentionally using starvation of civilians as a method of warfare by depriving them of objects indispensable to their survival"</p>
+                            <div class="violation-count" data-i18n="hungerCrisis.legalFrameworkCards.starvationAsWeapon.count">War Crime</div>
+                        </div>
+
+                        <div class="framework-card">
+                            <h4 data-i18n="hungerCrisis.legalFrameworkCards.collectivePunishment.title">🔴 Collective Punishment</h4>
+                            <p data-i18n="hungerCrisis.legalFrameworkCards.collectivePunishment.body">Geneva Convention IV, Article 33 — "No protected person may be punished for an offence he or she has not personally committed. Collective penalties are prohibited."</p>
+                            <div class="violation-count" data-i18n="hungerCrisis.legalFrameworkCards.collectivePunishment.count">Geneva Convention Violation</div>
+                        </div>
+
+                        <div class="framework-card">
+                            <h4 data-i18n="hungerCrisis.legalFrameworkCards.rightToFood.title">🔴 Right to Adequate Food</h4>
+                            <p data-i18n="hungerCrisis.legalFrameworkCards.rightToFood.body">International Covenant on Economic, Social and Cultural Rights, Article 11 — "Right of everyone to an adequate standard of living, including adequate food"</p>
+                            <div class="violation-count" data-i18n="hungerCrisis.legalFrameworkCards.rightToFood.count">Human Rights Violation</div>
+                        </div>
+
+                        <div class="framework-card">
+                            <h4 data-i18n="hungerCrisis.legalFrameworkCards.rightsOfChild.title">🔴 Rights of the Child</h4>
+                            <p data-i18n="hungerCrisis.legalFrameworkCards.rightsOfChild.body">Convention on the Rights of the Child, Article 27 — "Right to a standard of living adequate for the child's physical, mental, spiritual, moral and social development"</p>
+                            <div class="violation-count" data-i18n="hungerCrisis.legalFrameworkCards.rightsOfChild.count">Children's Rights Violation</div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        // ── Translation helpers ───────────────────────────────────────────────
+        //
+        // t(key)           — looks up a single string via TranslationSystem
+        // tpl(key, params) — like t() but replaces ${varName} placeholders
+        //
+        // Both return the raw key as a safe fallback when translations are
+        // not yet loaded, so callers never need to guard against null.
+        // ─────────────────────────────────────────────────────────────────────
+
+        function t(key) {
+            if (window.TranslationSystem) {
+                const val = window.TranslationSystem.getTranslation(key);
+                if (val !== null && val !== undefined) return String(val);
+            }
+            return key;
+        }
+
+        function tpl(key, params) {
+            const str = t(key);
+            return str.replace(/\$\{(\w+)\}/g, (_, k) =>
+                params[k] !== undefined ? String(params[k]) : ''
+            );
+        }
+
+        // ── State ─────────────────────────────────────────────────────────────
+        let apiData         = null;
+        let lastUpdated     = null;
+        let isUsingFallback = false;
+
+        // ── Data mapping ──────────────────────────────────────────────────────
+        //
+        // labelKey / subtitleKey  → translation keys resolved at render time
+        // id                      → stable identifier used by calculateSpecialValue
+        // ─────────────────────────────────────────────────────────────────────
+
+        const dataMapping = {
+            casualties: [
+                {
+                    icon: "🕯️", id: "childrenKilled",
+                    labelKey:    "warCrimes.statCards.casualties.childrenKilled.label",
+                    subtitleKey: "warCrimes.statCards.casualties.childrenKilled.subtitle",
+                    apiKeys: ["gaza.killed.children"], fallbackValue: 19000,
+                    severity: "critical",
+                    linkPage: "/war-crimes/children-killed/"
+                },
+                {
+                    icon: "📰", id: "journalistsKilled",
+                    labelKey:    "warCrimes.statCards.casualties.journalistsKilled.label",
+                    subtitleKey: "warCrimes.statCards.casualties.journalistsKilled.subtitle",
+                    apiKeys: ["gaza.killed.press"], fallbackValue: 140,
+                    severity: "urgent",
+                    linkPage: "/war-crimes/journalists-killed/"
+                },
+                {
+                    icon: "🏥", id: "medicalPersonnelKilled",
+                    labelKey:    "warCrimes.statCards.casualties.medicalPersonnelKilled.label",
+                    subtitleKey: "warCrimes.statCards.casualties.medicalPersonnelKilled.subtitle",
+                    apiKeys: ["gaza.killed.medical"], fallbackValue: 1590,
+                    severity: "warning",
+                    linkPage: "/war-crimes/medical-personnel/"
+                },
+                {
+                    icon: "💀", id: "totalDeaths",
+                    labelKey:    "warCrimes.statCards.casualties.totalDeaths.label",
+                    subtitleKey: "warCrimes.statCards.casualties.totalDeaths.subtitle",
+                    apiKeys: ["gaza.killed.total"], fallbackValue: 61020,
+                    severity: "critical",
+                    linkPage: "/war-crimes/civilian-casualties/"
+                }
+            ],
+            infrastructure: [
+                {
+                    icon: "🏠", id: "residentialDestroyed",
+                    labelKey:    "warCrimes.statCards.infrastructure.residentialDestroyed.label",
+                    subtitleKey: "warCrimes.statCards.infrastructure.residentialDestroyed.subtitle",
+                    apiKeys: [], fallbackValue: 150000, severity: "danger",
+                    linkPage: "/Pages/War_Crimes_Stats/stat-housing-destroyed.html", disabled: true
+                },
+                {
+                    icon: "🏭", id: "industrialFacilities",
+                    labelKey:    "warCrimes.statCards.infrastructure.industrialFacilities.label",
+                    subtitleKey: "warCrimes.statCards.infrastructure.industrialFacilities.subtitle",
+                    apiKeys: [], fallbackValue: 800, severity: "warning",
+                    linkPage: "/Pages/War_Crimes_Stats/stat-industrial-destroyed.html", disabled: true
+                },
+                {
+                    icon: "🚑", id: "ambulancesTargeted",
+                    labelKey:    "warCrimes.statCards.infrastructure.ambulancesTargeted.label",
+                    subtitleKey: "warCrimes.statCards.infrastructure.ambulancesTargeted.subtitle",
+                    apiKeys: [], fallbackValue: 120, severity: "danger",
+                    linkPage: "/Pages/War_Crimes_Stats/stat-ambulances-targeted.html", disabled: true
+                },
+                {
+                    icon: "🛣️", id: "infrastructureDamage",
+                    labelKey:    "warCrimes.statCards.infrastructure.infrastructureDamage.label",
+                    subtitleKey: "warCrimes.statCards.infrastructure.infrastructureDamage.subtitle",
+                    apiKeys: [], fallbackValue: 1500, severity: "warning",
+                    linkPage: "/Pages/War_Crimes_Stats/stat-infrastructure-damage.html", disabled: true
+                }
+            ],
+            facilities: [
+                {
+                    icon: "🏥", id: "hospitalsOutOfService",
+                    labelKey:    "warCrimes.statCards.facilities.hospitalsOutOfService.label",
+                    subtitleKey: "warCrimes.statCards.facilities.hospitalsOutOfService.subtitle",
+                    apiKeys: [], fallbackValue: 73, severity: "critical",
+                    linkPage: "/war-crimes/hospitals/", csvKey: "hospitals"
+                },
+                {
+                    icon: "🎓", id: "schoolsDamaged",
+                    labelKey:    "warCrimes.statCards.facilities.schoolsDamaged.label",
+                    subtitleKey: "warCrimes.statCards.facilities.schoolsDamaged.subtitle",
+                    apiKeys: [], fallbackValue: 22, severity: "urgent",
+                    linkPage: "/war-crimes/schools/", csvKey: "schools"
+                },
+                {
+                    icon: "🏛️", id: "universitiesDamaged",
+                    labelKey:    "warCrimes.statCards.facilities.universitiesDamaged.label",
+                    subtitleKey: "warCrimes.statCards.facilities.universitiesDamaged.subtitle",
+                    apiKeys: [], fallbackValue: 12, severity: "warning",
+                    linkPage: "/war-crimes/universities/", csvKey: "universities"
+                },
+                {
+                    icon: "🕌", id: "religiousSitesDamaged",
+                    labelKey:    "warCrimes.statCards.facilities.religiousSitesDamaged.label",
+                    subtitleKey: "warCrimes.statCards.facilities.religiousSitesDamaged.subtitle",
+                    apiKeys: [], fallbackValue: 20, severity: "urgent",
+                    linkPage: "/war-crimes/religious-sites/", csvKey: "religious"
+                }
+            ],
+            displacement: [
+                {
+                    icon: "🏠", id: "internallyDisplaced",
+                    labelKey:    "warCrimes.statCards.displacement.internallyDisplaced.label",
+                    subtitleKey: "warCrimes.statCards.displacement.internallyDisplaced.subtitle",
+                    apiKeys: [], fallbackValue: 1900000, severity: "urgent",
+                    linkPage: "/Pages/War_Crimes_Stats/stat-forced-displacement.html", disabled: true
+                },
+                {
+                    icon: "💧", id: "waterWellsDestroyed",
+                    labelKey:    "warCrimes.statCards.displacement.waterWellsDestroyed.label",
+                    subtitleKey: "warCrimes.statCards.displacement.waterWellsDestroyed.subtitle",
+                    apiKeys: [], fallbackValue: 350, severity: "danger",
+                    linkPage: "/Pages/War_Crimes_Stats/stat-water-systems.html", disabled: true
+                },
+                {
+                    icon: "🚰", id: "waterTanksDestroyed",
+                    labelKey:    "warCrimes.statCards.displacement.waterTanksDestroyed.label",
+                    subtitleKey: "warCrimes.statCards.displacement.waterTanksDestroyed.subtitle",
+                    apiKeys: [], fallbackValue: 500, severity: "warning",
+                    linkPage: "/Pages/War_Crimes_Stats/stat-water-tanks.html", disabled: true
+                },
+                {
+                    // id "daysUnderSiege" is the stable identifier used by calculateSpecialValue
+                    icon: "🚫", id: "daysUnderSiege",
+                    labelKey:    "warCrimes.statCards.displacement.daysUnderSiege.label",
+                    subtitleKey: "warCrimes.statCards.displacement.daysUnderSiege.subtitle",
+                    apiKeys: [], fallbackValue: null, severity: "critical",
+                    linkPage: "/Pages/War_Crimes_Stats/stat-siege-violations.html",
+                    disabled: true, isCalculated: true
+                }
+            ]
+        };
+
+        const CSV_FACILITY_PATHS = {
+            hospitals:    '/Pages/War_Crimes_Stats/stat-hospitals-attacked/Hospital_facilities.csv',
+            schools:      '/Pages/War_Crimes_Stats/stat-schools-attacked/School_facilities.csv',
+            universities: '/Pages/War_Crimes_Stats/stat-universities-attacked/University_facilities.csv',
+            religious:    '/Pages/War_Crimes_Stats/stat-religious-attacked/Religous_facilities.csv',
+        };
+
+        async function countCSVRows(path) {
+            try {
+                const res = await fetch(path);
+                if (!res.ok) return null;
+                const text = await res.text();
+                return text.split('\n').slice(1).filter(l => l.trim() !== '').length;
+            } catch { return null; }
+        }
+
+        async function loadFacilityCounts() {
+            console.log('CSV loading disabled; using hardcoded facility counts.');
+        }
+
+        async function fetchApiData() {
+            const apiUrl = 'https://data.techforpalestine.org/api/v3/summary.json';
+            const proxyServices = [
+                { name: 'AllOrigins',    url: `https://api.allorigins.win/get?url=${encodeURIComponent(apiUrl)}`,       parseResponse: d => JSON.parse(d.contents) },
+                { name: 'CORS Anywhere', url: `https://cors-anywhere.herokuapp.com/${apiUrl}`,                          parseResponse: d => d },
+                { name: 'ThingProxy',    url: `https://thingproxy.freeboard.io/fetch/${apiUrl}`,                        parseResponse: d => d },
+                { name: 'CORS Proxy',    url: `https://corsproxy.io/?${encodeURIComponent(apiUrl)}`,                    parseResponse: d => d },
+                { name: 'Proxy API',     url: `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(apiUrl)}`,  parseResponse: d => d }
+            ];
+
+            try {
+                updateApiStatus('loading', t('warCrimes.apiStatus.loading'));
+                try {
+                    const r = await fetch(apiUrl, { method: 'GET', headers: { Accept: 'application/json' }, mode: 'cors' });
+                    if (r.ok) {
+                        const data = await r.json();
+                        apiData = data; lastUpdated = data.gaza?.last_update || new Date().toISOString();
+                        updateApiStatus('live', t('warCrimes.apiStatus.live'));
+                        isUsingFallback = false; return data;
+                    }
+                } catch(e) { console.log('Direct fetch failed:', e.message); }
+
+                for (const proxy of proxyServices) {
+                    try {
+                        updateApiStatus('loading', tpl('warCrimes.loading.tryingProxy', { proxyName: proxy.name }));
+                        const r = await fetch(proxy.url, { method: 'GET', headers: { Accept: 'application/json' } });
+                        if (r.ok) {
+                            const raw  = await r.json();
+                            const data = proxy.parseResponse(raw);
+                            if (data?.gaza?.killed) {
+                                apiData = data; lastUpdated = data.gaza?.last_update || new Date().toISOString();
+                                updateApiStatus('live', tpl('warCrimes.apiStatus.liveProxy', { proxyName: proxy.name }));
+                                isUsingFallback = false; return data;
+                            }
+                        }
+                    } catch(e) { console.log(`${proxy.name} failed:`, e.message); }
+                }
+                throw new Error('All proxy methods failed');
+            } catch(e) { console.error('All API fetch attempts failed:', e); throw e; }
+        }
+
+        function updateApiStatus(status, text) {
+            const el = document.getElementById('apiStatus');
+            if (el) { el.className = `api-status ${status}`; el.textContent = text; }
+        }
+
+        function getNestedValue(obj, path) {
+            if (!obj || !path) return null;
+            try { return path.split('.').reduce((c, k) => c && typeof c === 'object' ? c[k] : null, obj); }
+            catch(e) { return null; }
+        }
+
+        function getValueFromData(data, config) {
+            if (!data) return config.fallbackValue;
+            if (config.isCalculated) return calculateSpecialValue(config, data);
+            for (const key of config.apiKeys) {
+                const v = getNestedValue(data, key);
+                if (v !== null && v !== undefined) return v;
+            }
+            return config.fallbackValue;
+        }
+
+        // Uses config.id (stable) instead of config.label (translatable) for comparison
+        function calculateSpecialValue(config) {
+            if (config.id === 'daysUnderSiege') {
+                const diff = Math.abs(new Date() - new Date('2023-10-07'));
+                return Math.ceil(diff / (1000 * 60 * 60 * 24));
+            }
+            return config.fallbackValue;
+        }
+
+        function formatNumber(value) {
+            if (value === null || value === undefined) return 'N/A';
+            const n = parseInt(value);
+            if (isNaN(n)) return 'N/A';
+            if (n >= 1000000) return (n / 1000000).toFixed(1) + 'M';
+            if (n >= 1000)    return (n / 1000).toFixed(1) + 'K';
+            return n.toLocaleString();
+        }
+
+        // Only the four csvKey sections (hospitals/schools/universities/
+        // religious-sites) are build-generated with real /de/ and /ar/ URLs
+        // (see tools/build_records.py section_index_path()). Everything else
+        // linked from this hub is a single hand-authored English URL - the
+        // client-side TranslationSystem repaints its text in place instead of
+        // navigating anywhere. Without this, a reader who switched to Arabic
+        // here would land back in English the moment they opened a section,
+        // because the generated pages have no way to know what this hub's
+        // language selector was set to.
+        function localizedLinkPage(config) {
+            if (!config.csvKey) return config.linkPage;
+            const lang = (window.TranslationSystem && window.TranslationSystem.currentLanguage) || 'en';
+            return lang === 'en' ? config.linkPage : config.linkPage + lang + '/';
+        }
+
+        function createStatCard(config, data) {
+            const formatted = formatNumber(getValueFromData(data, config));
+            const label    = t(config.labelKey);
+            const subtitle = t(config.subtitleKey);
+            if (config.disabled) {
+                return `<div class="stat-link disabled-link">
+                    <div class="stat-card ${config.severity} disabled-card">
+                        <span class="stat-icon">${config.icon}</span>
+                        <div class="stat-number">${formatted}</div>
+                        <div class="stat-label">${label}</div>
+                        <div class="stat-subtitle">${subtitle}</div>
+                    </div>
+                </div>`;
+            }
+            return `<a href="${localizedLinkPage(config)}" class="stat-link">
+                <div class="stat-card ${config.severity}">
+                    <span class="stat-icon">${config.icon}</span>
+                    <div class="stat-number">${formatted}</div>
+                    <div class="stat-label">${label}</div>
+                    <div class="stat-subtitle">${subtitle}</div>
+                </div>
+            </a>`;
+        }
+
+        function populateStatistics(data) {
+            [['casualties','casualtiesRow'], ['infrastructure','infrastructureRow'], ['facilities','facilitiesRow'], ['displacement','displacementRow']]
+                .forEach(([key, rowId]) => {
+                    const el = document.getElementById(rowId);
+                    if (el) el.innerHTML = dataMapping[key].map(cfg => createStatCard(cfg, data)).join('');
+                });
+            updateEmergencyBanner(data);
+            updateLastUpdated();
+            setTimeout(addCardAnimations, 100);
+        }
+
+        function updateEmergencyBanner(data) {
+            const el = document.getElementById('emergencyDetails');
+            if (!el) return;
+            try {
+                const c = dataMapping.casualties;
+                el.innerHTML = tpl('warCrimes.emergency.detailsTemplate', {
+                    totalKilled:       formatNumber(getValueFromData(data, c[3])),
+                    childrenKilled:    formatNumber(getValueFromData(data, c[0])),
+                    journalistsKilled: formatNumber(getValueFromData(data, c[1])),
+                    medicalKilled:     formatNumber(getValueFromData(data, c[2]))
+                });
+            } catch { el.innerHTML = t('warCrimes.emergency.detailsFallback'); }
+        }
+
+        let debugMode = false;
+        function toggleDebugMode() {
+            debugMode = !debugMode;
+            const p = document.getElementById('debugPanel');
+            if (p) { p.classList.toggle('hidden', !debugMode); if (debugMode) updateDebugInfo(); }
+        }
+
+        function updateDebugInfo() {
+            const el = document.getElementById('debugContent');
+            if (!el || !debugMode) return;
+            const info = {
+                [t('warCrimes.header.debugLabels.apiStatus')]:        isUsingFallback ? t('warCrimes.apiStatus.fallback') : t('warCrimes.apiStatus.live'),
+                [t('warCrimes.header.debugLabels.lastApiCall')]:      new Date().toISOString(),
+                [t('warCrimes.header.debugLabels.apiDataAvailable')]: apiData ? 'Yes' : 'No',
+                [t('warCrimes.header.debugLabels.gazaData')]:         apiData?.gaza ? 'Available' : 'Missing',
+                [t('warCrimes.header.debugLabels.browserCors')]:      typeof fetch !== 'undefined' ? 'Yes' : 'No',
+                [t('warCrimes.header.debugLabels.apiEndpoint')]:      'https://data.techforpalestine.org/api/v3/summary.json'
+            };
+            el.innerHTML = Object.entries(info).map(([k, v]) => `<div><strong>${k}:</strong> ${v}</div>`).join('');
+        }
+
+        async function retryDataFetch() {
+            document.getElementById('errorMessage')?.classList.add('hidden');
+            const li = document.getElementById('loadingIndicator');
+            if (li) li.style.display = 'block';
+            await initializeData();
+        }
+
+        function updateLastUpdated() {
+            const el = document.getElementById('warCrimesLastUpdated');
+            if (!el) return;
+            // Use the active language for date formatting so locale-specific date
+            // representations (e.g. Arabic numerals, German month names) are applied.
+            const lang = window.TranslationSystem?.currentLanguage || 'en';
+            if (lastUpdated && !isUsingFallback) {
+                el.textContent = tpl('warCrimes.lastUpdated.live', { date: lastUpdated });
+            } else {
+                const opts = { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', timeZone: 'UTC' };
+                el.textContent = tpl('warCrimes.lastUpdated.cached', { date: new Date().toLocaleDateString(lang, opts) });
+            }
+            if (debugMode) updateDebugInfo();
+        }
+
+        function showErrorMessage()     { document.getElementById('errorMessage')?.classList.remove('hidden'); }
+        function hideLoadingIndicator() { const el = document.getElementById('loadingIndicator'); if (el) el.style.display = 'none'; }
+
+        function addCardAnimations() {
+            document.querySelectorAll('.stat-card:not(.disabled-card)').forEach((card, i) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                setTimeout(() => { card.style.transition = 'all 0.6s ease'; card.style.opacity = '1'; card.style.transform = 'translateY(0)'; }, i * 100);
+            });
+        }
+
+        function loadFallbackData() {
+            updateApiStatus('fallback', t('warCrimes.apiStatus.fallback'));
+            isUsingFallback = true;
+            populateStatistics({
+                gaza: {
+                    reports: 669, last_update: '2025-08-05', massacres: 12000,
+                    killed: { total: 61020, children: 19000, women: 12500, civil_defence: 122, press: 122, medical: 1590 },
+                    injured: { total: 150671 }
+                }
+            });
+        }
+
+        async function initializeData() {
+            await loadFacilityCounts();
+            try {
+                const data = await fetchApiData();
+                hideLoadingIndicator();
+                if (data?.gaza) { populateStatistics(data); } else { showErrorMessage(); loadFallbackData(); }
+            } catch { hideLoadingIndicator(); showErrorMessage(); loadFallbackData(); }
+            // Load hunger CSV data independently (non-blocking)
+            loadHungerCardData();
+        }
+
+        // ── Hunger card data (CSV-backed, with hardcoded fallbacks) ────────────
+        async function loadHungerCardData() {
+            try {
+                const response = await fetch('/war-crimes/total-starvation/data/total-population-statistics.csv');
+                if (!response.ok) throw new Error('CSV not found');
+                const text = await response.text();
+                const rows = text.split('\n').slice(1).filter(r => r.trim());
+                const data = {};
+                rows.forEach(row => {
+                    const cols = row.split(',');
+                    if (cols[0]) data[cols[0].trim()] = cols[1]?.trim();
+                });
+                // Stat id=1 → total starvation deaths
+                const totalDeaths   = parseInt(data['1']) || 169;
+                const childrenDeaths = Math.floor(totalDeaths * 0.4);
+
+                // Overview tab hunger row
+                const el = document.getElementById('hungerTotalDeaths');
+                if (el) el.textContent = totalDeaths.toLocaleString();
+
+                // Composite card — children deaths mini-stat
+                const childCardEl = document.getElementById('hungerChildDeathsCard');
+                if (childCardEl) childCardEl.textContent = childrenDeaths.toLocaleString();
+
+                // Categories tab violations counts
+                const vTotal    = document.getElementById('hungerViolationTotalDeaths');
+                const vChildren = document.getElementById('hungerViolationChildDeaths');
+                if (vTotal)    vTotal.textContent    = totalDeaths.toLocaleString()    + ' deaths';
+                if (vChildren) vChildren.textContent = childrenDeaths.toLocaleString() + ' children';
+            } catch {
+                // Fallback values already in HTML; nothing to do
+            }
+        }
+
+        function setupAutoRefresh() { setInterval(() => initializeData(), 30 * 60 * 1000); }
+
+        function shareWarCrimesData() {
+            const text  = t('warCrimes.share.text');
+            const title = t('warCrimes.share.shareTitle');
+            const url   = window.location.href;
+            if (navigator.share) { navigator.share({ title, text, url }); return; }
+            const full  = text + ' ' + url;
+            const copied = () => alert(t('warCrimes.share.copiedAlert'));
+            if (navigator.clipboard) { navigator.clipboard.writeText(full).then(copied); }
+            else {
+                const ta = document.createElement('textarea');
+                ta.value = full; document.body.appendChild(ta); ta.select();
+                document.execCommand('copy'); document.body.removeChild(ta);
+                copied();
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            initializeData();
+            setupAutoRefresh();
+
+            // ── Race-condition fix ─────────────────────────────────────────────
+            // The API fetch and the translation JSON load both start at
+            // DOMContentLoaded.  When the API wins (fast cache/live response),
+            // populateStatistics() runs before translations are ready and t()
+            // returns raw keys.  We fix that by listening for the
+            // 'translationsLoaded' event fired by TranslationSystem.init()
+            // and re-rendering every piece of JS-generated dynamic content.
+            // { once: true } – only needed once per page load; language-switch
+            // re-renders are handled separately by the 'languageChanged' listener.
+            document.addEventListener('translationsLoaded', () => {
+                if (apiData) {
+                    populateStatistics(apiData);
+                    // Also refresh the API-status badge, whose text was set via
+                    // t() before translations were available.
+                    updateApiStatus(
+                        isUsingFallback ? 'fallback' : 'live',
+                        t(isUsingFallback
+                            ? 'warCrimes.apiStatus.fallback'
+                            : 'warCrimes.apiStatus.live')
+                    );
+                }
+                updateLastUpdated();
+                if (debugMode) updateDebugInfo();
+            }, { once: true });
+
+            // Re-render all dynamic content whenever the user switches language
+            document.addEventListener('languageChanged', () => {
+                if (apiData) { populateStatistics(apiData); }
+                updateLastUpdated();
+                if (debugMode) { updateDebugInfo(); }
+            });
+
+            const observer = new IntersectionObserver(
+                entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('animate-in'); }),
+                { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+            );
+            document.querySelectorAll('.violation-item, .framework-card, .resource-category, .timeline-item, .crisis-layer')
+                    .forEach(el => observer.observe(el));
+        });
+
+        window.addEventListener('error',              () => updateApiStatus('fallback', t('warCrimes.apiStatus.error')));
+        window.addEventListener('unhandledrejection',  () => updateApiStatus('fallback', t('warCrimes.apiStatus.error')));
+    </script>
+
+    <div id="footer-placeholder"></div>
+    <script src="/js/footer-init.js?v=6"></script>
+
+    <!-- Header component — must load before translation-system so #language-selector exists -->
+    <script>window.headerConfig = { mode: 'main', activePage: 'war-crimes', subNav: 'stat-page' };</script>
+    <script src="/js/config.js?v=1"></script>
+    <script src="/js/header-component.js?v=3"></script>
+
+    <!-- Translation system — populates #language-selector injected by header-component.js -->
+    <script src="/js/translation-system.js?v=4"></script>
+
+    <script>
+        /**
+         * Measure the rendered header height and expose it as --header-height
+         * so the sticky .sub-header sits flush below the main header.
+         */
+        (function syncHeaderHeight() {
+            function update() {
+                const header = document.querySelector('.header');
+                if (header) {
+                    document.documentElement.style.setProperty(
+                        '--header-height',
+                        header.getBoundingClientRect().height + 'px'
+                    );
+                }
+            }
+            update();
+            window.addEventListener('load', update);
+            window.addEventListener('resize', update);
+        })();
+    </script>
+</body>
+</html>

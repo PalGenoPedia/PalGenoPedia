@@ -1,0 +1,353 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "@id": "https://palgenopedia.org/data/events.json#hist013",
+  "headline": "Operation Pillar of Defense",
+  "url": "https://palgenopedia.org/Pages/Historical_Massacres/massacres.html#event/hist013",
+  "datePublished": "2012-11-14",
+  "dateModified": "2026-08-09",
+  "inLanguage": "en",
+  "about": {
+    "@type": "Event",
+    "name": "Operation Pillar of Defense",
+    "startDate": "2012-11-14",
+    "endDate": "41234",
+    "description": "Escalation following targeted killing of Hamas military commander",
+    "location": {
+      "@type": "Place",
+      "name": "Gaza Strip; Palestinian territory, Israeli-occupied since 1967, Hamas-governed since 2007; Under blockade; subject to recurring Israeli military operations",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 31.5017,
+        "longitude": 34.4668
+      }
+    }
+  },
+  "articleBody": "On November 14, 2012, at approximately 15:45, the Israeli Air Force assassinated Ahmed al-Jabari, head of Hamas's military wing, marking the start of Operation Pillar of Defense. Over eight days, the IDF struck approximately 1,500 targets across Gaza—including underground rocket launchers, arms-smuggling tunnels, weapons storage facilities, and residences of Hamas officials. Unlike Operation Cast Lead (2008-09), no ground incursion occurred. According to B'Tselem's field investigations published May 2013, the operation killed 167 Palestinians: at least 87 civilians who did not participate in hostilities (52%), including 32 children; 62 combatants; 7 targets of assassinations; and 11 of unknown status. The UN Protection Cluster documented over 11,100 injuries, including 3,374 children. Analysis reveals 80% of civilian deaths occurred in the final four days, when the ratio of civilian to combatant deaths reversed sharply. Six Israelis died from Palestinian rocket fire: four civilians and two security personnel. Palestinian groups fired 1,667 rockets toward Israel (ISA figures); 436 were intercepted by Iron Dome. Hamas also executed at least 6-7 Palestinians accused of collaboration during the operation. B'Tselem investigated nine specific incidents raising 'grave suspicions' of IHL violations, including attacks killing children working in fields, families in homes without warnings, and civilians during Arab foreign ministers' visit. The IDF Spokesperson initially admitted 'probable error' in strike killing 12 members of al-Dalu family, but MAG Corps later closed case without prosecution.",
+  "keywords": "Military Operation, Airstrikes, Civilian Casualties, historical, War Crimes; Violations of IHL (B'Tselem May 2013 Report)",
+  "mentions": [
+    {
+      "@type": "Organization",
+      "name": "Israel Defense Forces (IDF)"
+    },
+    {
+      "@type": "Organization",
+      "name": "Israeli Air Force (IAF)"
+    },
+    {
+      "@type": "Organization",
+      "name": "Israeli Navy"
+    }
+  ],
+  "citation": [
+    {
+      "@type": "Article",
+      "name": "B'Tselem Report (May 2013), pp. 9-11",
+      "url": "https://www.btselem.org/download/201305_pillar_of_defense_operation_eng.pdf",
+      "about": {
+        "@type": "Thing",
+        "name": "casualty"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "B'Tselem Report (May 2013), p. 9",
+      "url": "https://www.btselem.org/download/201305_pillar_of_defense_operation_eng.pdf",
+      "about": {
+        "@type": "Thing",
+        "name": "casualty"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "B'Tselem Report (May 2013), p. 10",
+      "url": "https://www.btselem.org/download/201305_pillar_of_defense_operation_eng.pdf",
+      "about": {
+        "@type": "Thing",
+        "name": "casualty"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "B'Tselem Report (May 2013), p. 28",
+      "url": "https://www.btselem.org/download/201305_pillar_of_defense_operation_eng.pdf",
+      "about": {
+        "@type": "Thing",
+        "name": "casualty"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "UN OCHA Humanitarian Monitor (October-November 2012)",
+      "url": "https://www.un.org/unispal/document/auto-insert-201184/",
+      "about": {
+        "@type": "Thing",
+        "name": "casualty"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "OCHA, Key Figures on 2014 Hostilities (citing Israeli sources)",
+      "url": "https://www.ochaopt.org/content/key-figures-2014-hostilities",
+      "about": {
+        "@type": "Thing",
+        "name": "casualty"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "UN OCHA Humanitarian Monitor (Oct-Nov 2012)",
+      "url": "https://www.un.org/unispal/document/auto-insert-201184/",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "B'Tselem Report (May 2013), pp. 23-24",
+      "url": "https://www.btselem.org/download/201305_pillar_of_defense_operation_eng.pdf",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "B'Tselem Report (May 2013), pp. 24-25",
+      "url": "https://www.btselem.org/download/201305_pillar_of_defense_operation_eng.pdf",
+      "about": {
+        "@type": "Thing",
+        "name": "testimony"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "B'Tselem Report (May 2013), pp. 26-27",
+      "url": "https://www.btselem.org/download/201305_pillar_of_defense_operation_eng.pdf",
+      "about": {
+        "@type": "Thing",
+        "name": "testimony"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "B'Tselem Report (May 2013), pp. 15-16",
+      "url": "https://www.btselem.org/download/201305_pillar_of_defense_operation_eng.pdf",
+      "about": {
+        "@type": "Thing",
+        "name": "testimony"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "B'Tselem Report (May 2013), pp. 20-21",
+      "url": "https://www.btselem.org/download/201305_pillar_of_defense_operation_eng.pdf",
+      "about": {
+        "@type": "Thing",
+        "name": "testimony"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "B'Tselem Report (May 2013), p. 39",
+      "url": "https://www.btselem.org/download/201305_pillar_of_defense_operation_eng.pdf",
+      "about": {
+        "@type": "Thing",
+        "name": "testimony"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Amnesty International, Statement to UN HRC (February 2013)",
+      "url": "https://www.un.org/unispal/document/auto-insert-188596/",
+      "about": {
+        "@type": "Thing",
+        "name": "testimony"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "B'Tselem Report: 'Human Rights Violations during Operation Pillar of Defense' (May 2013), p. 3",
+      "url": "https://www.btselem.org/download/201305_pillar_of_defense_operation_eng.pdf",
+      "about": {
+        "@type": "Thing",
+        "name": "personality"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "B'Tselem Report (May 2013), pp. 3-5, 36",
+      "url": "https://www.btselem.org/download/201305_pillar_of_defense_operation_eng.pdf",
+      "about": {
+        "@type": "Thing",
+        "name": "personality"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "B'Tselem Report (May 2013), pp. 12-27 (case investigations)",
+      "url": "https://www.btselem.org/download/201305_pillar_of_defense_operation_eng.pdf",
+      "about": {
+        "@type": "Thing",
+        "name": "personality"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "B'Tselem Report (May 2013), pp. 4-5, 35-39",
+      "url": "https://www.btselem.org/download/201305_pillar_of_defense_operation_eng.pdf",
+      "about": {
+        "@type": "Thing",
+        "name": "personality"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Amnesty International, Statement to UN HRC (February 2013); B'Tselem Report (May 2013), pp. 35-39",
+      "url": "https://www.un.org/unispal/document/auto-insert-188596/; https://www.btselem.org/download/201305_pillar_of_defense_operation_eng.pdf",
+      "about": {
+        "@type": "Thing",
+        "name": "personality"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "B'Tselem Report (May 2013), p. 3",
+      "url": "https://www.btselem.org/download/201305_pillar_of_defense_operation_eng.pdf",
+      "about": {
+        "@type": "Thing",
+        "name": "personality"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "B'Tselem. 'Human Rights Violations during Operation Pillar of Defense, 14-21 November 2012' (May 2013)",
+      "url": "https://www.btselem.org/download/201305_pillar_of_defense_operation_eng.pdf",
+      "about": {
+        "@type": "Thing",
+        "name": "source"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "UN OCHA. 'Humanitarian Monitor: October-November 2012'",
+      "url": "https://www.un.org/unispal/document/auto-insert-201184/",
+      "about": {
+        "@type": "Thing",
+        "name": "source"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "UN OCHA. 'Key Figures on 2014 Hostilities' (includes 2012 comparison data)",
+      "url": "https://www.ochaopt.org/content/key-figures-2014-hostilities",
+      "about": {
+        "@type": "Thing",
+        "name": "source"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Amnesty International. 'Statement to UN Human Rights Council' (February 2013)",
+      "url": "https://www.un.org/unispal/document/auto-insert-188596/",
+      "about": {
+        "@type": "Thing",
+        "name": "source"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Haaretz. 'As IDF Strike Kills Entire Family in Gaza, Israel Is Starting to Get Into Trouble' (November 18, 2012)",
+      "url": "https://www.haaretz.com/news/diplomacy-defense/as-idf-strike-kills-entire-family-in-gaza-israel-is-starting-to-get-into-trouble-1.478879",
+      "about": {
+        "@type": "Thing",
+        "name": "source"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Israel Security Agency (ISA/Shin Bet). Official Statements (November 2012)",
+      "url": "https://www.gov.il/",
+      "about": {
+        "@type": "Thing",
+        "name": "source"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Meir Amit Intelligence and Terrorism Information Center. 'Escalation from the Gaza Strip: Operation Pillar of Defense Summary'",
+      "url": "https://www.terrorism-info.org.il/",
+      "about": {
+        "@type": "Thing",
+        "name": "source"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Al Mezan Center for Human Rights. Documentation and Legal Analysis (2012-2013)",
+      "url": "https://www.mezan.org/en",
+      "about": {
+        "@type": "Thing",
+        "name": "source"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Human Rights Watch. Various statements and reports (November 2012 - 2013)",
+      "url": "https://www.hrw.org/",
+      "about": {
+        "@type": "Thing",
+        "name": "source"
+      }
+    }
+  ],
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "Deaths",
+      "propertyID": "casualties/deaths",
+      "value": "167 Palestinian, 6 Israeli",
+      "minValue": 6,
+      "maxValue": 167
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Injured",
+      "propertyID": "casualties/injured",
+      "value": "11,100+ Palestinian, 1,600+ Israeli",
+      "minValue": 1600,
+      "maxValue": 11100
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Forced displacement",
+      "propertyID": "casualties/forced_displacement",
+      "value": "Not documented; blockade reinforced post-operation"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Verification status",
+      "propertyID": "verification_status",
+      "value": "verified"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Classification",
+      "propertyID": "classification",
+      "value": "War Crimes; Violations of IHL (B'Tselem May 2013 Report)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Author",
+      "propertyID": "author",
+      "value": "Yassin"
+    }
+  ],
+  "provider": {
+    "@type": "Organization",
+    "name": "PalGenoPedia",
+    "url": "https://palgenopedia.org"
+  },
+  "isBasedOn": "https://palgenopedia.org/data/events.json"
+}

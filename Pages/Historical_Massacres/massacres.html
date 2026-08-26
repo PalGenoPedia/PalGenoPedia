@@ -1,0 +1,1757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historical Events Documentation — Palestine</title>
+    <meta name="description" content="Comprehensive documentation of historical events, massacres, and military operations affecting the Palestinian people from 1948 to present.">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <link rel="stylesheet" href="shared.css">
+
+    <style>
+        /* ── Page-specific styles ────────────────────────────── */
+
+        /* Quick facts grid (reused from university page) */
+        .university-quick-facts {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 1rem;
+            background: #f8fafc;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+        @media (max-width: 640px) {
+            .university-quick-facts { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        /* Card quick-facts: fixed height so all three cells align */
+        .card-quick-facts {
+            grid-template-columns: repeat(3, 1fr);
+            align-items: start;
+        }
+        .card-quick-facts .quick-fact {
+            min-height: 4.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 0.25rem;
+            overflow: hidden;
+        }
+        .card-quick-facts .quick-fact-label {
+            margin-top: auto;
+            padding-top: 0.25rem;
+        }
+
+        /* Event detail: category section headers */
+        .cat-section-title {
+            font-size: 1.1rem;
+            font-weight: 800;
+            margin: 1.5rem 0 0.875rem;
+            padding-bottom: 0.625rem;
+            border-bottom: 2px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        /* Testimony blockquote */
+        .testimony-block {
+            background: white;
+            border-radius: 12px;
+            padding: 1.25rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+            border-left: 4px solid var(--accent-blue);
+            margin-bottom: 1rem;
+        }
+
+        /* Impact collapsible */
+        details.impact-block {
+            background: white;
+            border-radius: 12px;
+            padding: 1.25rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+            margin-bottom: 0.75rem;
+        }
+        details.impact-block summary {
+            font-weight: 700;
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            user-select: none;
+        }
+        details.impact-block summary::-webkit-details-marker { display: none; }
+        details.impact-block summary::before {
+            content: '▶';
+            font-size: 0.65rem;
+            color: var(--primary-red);
+            transition: transform 0.2s;
+            flex-shrink: 0;
+        }
+        details.impact-block[open] summary::before { transform: rotate(90deg); }
+        details.impact-block .impact-body {
+            margin-top: 0.75rem;
+            padding-top: 0.75rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        /* Person & commander cards */
+        .person-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.25rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+            margin-bottom: 1rem;
+        }
+
+        /* War crimes items */
+        .warcrime-item {
+            background: rgba(220,38,38,0.04);
+            border-left: 3px solid var(--primary-red);
+            padding: 0.875rem 1rem;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 0.75rem;
+        }
+
+        /* Casualty row cards */
+        .casualty-row {
+            background: white;
+            border-radius: 10px;
+            padding: 1rem 1.25rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+            border-left: 4px solid var(--primary-red);
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .casualty-value { font-size: 1.75rem; font-weight: 800; color: var(--primary-red); min-width: 80px; line-height: 1; }
+        .casualty-right { flex: 1; }
+        .casualty-label { font-weight: 700; color: var(--text-primary); margin-bottom: 0.2rem; }
+        .casualty-detail { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; }
+
+        /* Legal block */
+        .legal-alert {
+            background: #fffbeb;
+            border-left: 4px solid #f59e0b;
+            padding: 1rem 1.25rem;
+            border-radius: 0 8px 8px 0;
+            margin-top: 1rem;
+        }
+        .legal-item {
+            margin-bottom: 0.75rem;
+        }
+        .legal-item:last-child { margin-bottom: 0; }
+
+        /* Source item in detail panel */
+        .detail-source-item {
+            background: white;
+            border-radius: 10px;
+            padding: 1rem 1.25rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+            margin-bottom: 0.75rem;
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+        .detail-source-icon {
+            width: 36px; height: 36px;
+            background: var(--accent-blue); color: white;
+            border-radius: 8px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1rem; flex-shrink: 0;
+        }
+        .detail-source-body { flex: 1; }
+
+        /* Internal event timeline dots */
+        .ev-timeline-time {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--primary-red);
+            margin-bottom: 0.2rem;
+        }
+        .ev-timeline-content {
+            background: #f8fafc;
+            border-radius: 8px;
+            padding: 0.75rem 1rem;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            border: 1px solid var(--border-color);
+        }
+
+        /* Perpetrators tag cloud */
+        .perp-cloud {
+            background: white;
+            border-radius: 12px;
+            padding: 1.25rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+            margin-bottom: 1.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        .perp-tag {
+            padding: 0.375rem 0.875rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            background: #fef2f2;
+            color: #dc2626;
+            border: 1px solid rgba(220,38,38,0.3);
+        }
+
+        /* ── Page sub-header: page title + this page's tab nav,
+               sits sticky directly below the shared site header.
+               It has a light background (--surface-color), so the
+               .tab-btn / .nav-row-secondary / .btn-back-warcimes styles
+               below — originally designed for the dark hero <header> —
+               need light-theme overrides. ── */
+        /* Hide the raw "#event/..." permalink slug text next to the
+           back bar — keep the Copy Link button itself. */
+        .permalink-slug {
+            display: none;
+        }
+
+        /* This is a specific events page (Palestine massacres) — the
+           top "Documented Events / Deaths / Time Span / Displaced"
+           summary strip should only appear on the main events page,
+           not here. */
+        .stats-dashboard {
+            display: none;
+        }
+
+        /* Override: the sticky stats strip (Deaths/Injured/Displaced/Year)
+           should scroll normally on this page, not stick to the viewport. */
+        .detail-stats-strip {
+            position: static;
+        }
+
+        .page-subheader {
+            background: var(--surface-color, #ffffff);
+            border-bottom: 1px solid var(--border-color);
+            box-shadow: 0 2px 4px rgba(0,0,0,.06);
+            position: sticky;
+            top: var(--header-height, 60px);
+            z-index: 20;
+            padding: 0.75rem 0 0.5rem;
+        }
+        .page-subheader-top {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 0.5rem;
+        }
+        .page-subheader-title h1 {
+            margin: 0;
+            font-size: 1.15rem;
+            color: var(--text-primary);
+        }
+        .page-subheader-title .header-subtitle {
+            margin: 0.1rem 0 0;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        /* Light-theme overrides for the back link + tab nav */
+        .page-subheader .btn-back-warcimes {
+            background: transparent;
+            border-color: var(--border-color);
+            color: var(--text-secondary);
+            margin-bottom: 0;
+        }
+        .page-subheader .btn-back-warcimes:hover {
+            background: #f1f5f9;
+            color: var(--text-primary);
+            border-color: var(--text-secondary);
+        }
+        .page-subheader .nav-row-secondary::before {
+            color: var(--text-secondary);
+            opacity: 0.7;
+        }
+        .page-subheader .tab-btn {
+            background: transparent;
+            border-color: var(--border-color);
+            color: var(--text-secondary);
+        }
+        .page-subheader .tab-btn:hover {
+            background: #f1f5f9;
+            color: var(--text-primary);
+            border-color: var(--text-secondary);
+        }
+        .page-subheader .tab-btn.active {
+            background: #f1f5f9;
+            border-color: var(--text-primary);
+            color: var(--text-primary);
+        }
+        .page-subheader .tab-btn.tab-primary {
+            background: var(--surface-color, #ffffff);
+            border-color: var(--border-color);
+            color: var(--text-primary);
+            box-shadow: none;
+        }
+        .page-subheader .tab-btn.tab-primary:hover,
+        .page-subheader .tab-btn.tab-primary.active {
+            background: var(--primary-red);
+            border-color: var(--primary-red);
+            color: white;
+            box-shadow: 0 6px 18px rgba(220,38,38,0.35);
+        }
+
+        .page-subheader .nav-tabs { gap: 0.4rem; }
+        .page-subheader .nav-row-primary { gap: 0.5rem; }
+        .page-subheader .tab-btn.tab-primary {
+            padding: 0.5rem 1.1rem;
+            font-size: 0.875rem;
+            border-radius: 8px;
+            border-width: 1.5px;
+        }
+        .page-subheader .tab-btn {
+            padding: 0.3rem 0.7rem;
+            font-size: 0.75rem;
+        }
+
+        .stats-dashboard { margin-top: 1.5rem; }
+    </style>
+<!-- SEO_START - generated by tools/seo_inject.py - do not edit by hand -->
+    <link rel="canonical" href="https://palgenopedia.org/Pages/Historical_Massacres/massacres.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="PalGenoPedia">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="Historical Events Documentation — Palestine">
+    <meta property="og:description" content="Comprehensive documentation of historical events, massacres, and military operations affecting the Palestinian people from 1948 to present.">
+    <meta property="og:url" content="https://palgenopedia.org/Pages/Historical_Massacres/massacres.html">
+    <meta property="og:image" content="https://palgenopedia.org/images/og-card.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="PalGenoPedia - documented war crimes, massacres and humanitarian violations concerning Palestine, 1948 to present">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Historical Events Documentation — Palestine">
+    <meta name="twitter:description" content="Comprehensive documentation of historical events, massacres, and military operations affecting the Palestinian people from 1948 to present.">
+    <meta name="twitter:image" content="https://palgenopedia.org/images/og-card.png">
+    <meta name="robots" content="noindex, follow">
+    <link rel="alternate" type="application/atom+xml" title="PalGenoPedia - documented events" href="../../feed.xml">
+    <link rel="alternate" type="application/rss+xml" title="PalGenoPedia - documented events" href="../../feed.rss">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "@id": "https://palgenopedia.org/Pages/Historical_Massacres/massacres.html#page",
+  "url": "https://palgenopedia.org/Pages/Historical_Massacres/massacres.html",
+  "name": "Historical Events Documentation — Palestine",
+  "description": "Comprehensive documentation of historical events, massacres, and military operations affecting the Palestinian people from 1948 to present.",
+  "inLanguage": "en",
+  "isPartOf": {
+    "@id": "https://palgenopedia.org/#website"
+  },
+  "publisher": {
+    "@id": "https://palgenopedia.org/#org"
+  }
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://palgenopedia.org/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Historical Events",
+      "item": "https://palgenopedia.org/historical-events/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Historical Events Documentation",
+      "item": "https://palgenopedia.org/Pages/Historical_Massacres/massacres.html"
+    }
+  ]
+}
+    </script>
+    <!-- SEO_END -->
+</head>
+
+<body>
+
+    <!-- Shared site header: logo, main nav, language selector, theme toggle -->
+    <div id="header-placeholder"></div>
+
+    <!-- Page sub-header: this page's own title + tab navigation -->
+    <div class="page-subheader">
+        <div class="container">
+            <div class="page-subheader-top">
+                <div class="page-subheader-title">
+                    <h1 data-i18n="header.title">Historical Events Documentation</h1>
+                    <p class="header-subtitle" data-i18n="header.subtitle">Comprehensive documentation of historical massacres, military operations &amp; mass atrocities</p>
+                </div>
+                <a href="/historical-events/" class="btn-back-warcimes" data-i18n="nav.backToHistorical">← Historical Overview</a>
+            </div>
+            <nav class="nav-tabs" id="main-nav-tabs">
+                <div class="nav-row-primary">
+                    <button class="tab-btn tab-primary active" data-tab="overview" data-i18n="nav.overview">Overview</button>
+                    <button class="tab-btn tab-primary"        data-tab="events"   data-i18n="nav.events">Events</button>
+                </div>
+                <div class="nav-row-secondary">
+                    <button class="tab-btn" data-tab="timeline"   data-i18n="nav.timeline">Timeline</button>
+                    <button class="tab-btn" data-tab="statistics" data-i18n="nav.statistics">Statistics</button>
+                    <button class="tab-btn" data-tab="resources"  data-i18n="nav.resources">Sources</button>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+<!-- ── Dashboard Stats ── -->
+<section class="stats-dashboard">
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-card red">
+                <div class="stat-value" id="stat-events">—</div>
+                <div class="stat-label" data-i18n="stat.events">Documented Events</div>
+            </div>
+            <div class="stat-card orange">
+                <div class="stat-value" id="stat-deaths">—</div>
+                <div class="stat-label" data-i18n="stat.deaths">Deaths (Min. Est.)</div>
+            </div>
+            <div class="stat-card blue">
+                <div class="stat-value" id="stat-timespan">—</div>
+                <div class="stat-label" data-i18n="stat.timespan">Time Span</div>
+            </div>
+            <div class="stat-card green">
+                <div class="stat-value" id="stat-displaced">—</div>
+                <div class="stat-label" data-i18n="stat.displaced">Displaced (Min. Est.)</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<main class="container">
+
+    <!-- ══ Overview Tab ════════════════════════════════════════ -->
+    <section id="overview" class="content-section active">
+        <div class="section-header">
+            <h2 class="section-title" data-i18n="section.overview.title">Historical Events Overview</h2>
+            <p class="section-description" data-i18n="section.overview.desc">Statistical analysis of documented historical events from 1948 to present</p>
+        </div>
+        <div class="charts-grid">
+            <div class="chart-container" style="grid-column: 1 / -1;">
+                <h3 class="chart-title" data-i18n="chart.deathsOverTime">Deaths by Event Year (Minimum Estimates)</h3>
+                <canvas id="timelineChart"></canvas>
+            </div>
+        </div>
+        <div class="charts-grid">
+            <div class="chart-container">
+                <h3 class="chart-title" data-i18n="chart.byType">Events by Type</h3>
+                <canvas id="targetedChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <h3 class="chart-title" data-i18n="chart.byClassification">Events by Classification</h3>
+                <canvas id="attackTypeChart"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══ Events Tab ══════════════════════════════════════════ -->
+    <section id="events" class="content-section">
+        <div class="section-header">
+            <h2 class="section-title" data-i18n="section.events.title">Historical Events Directory</h2>
+            <p class="section-description" data-i18n="section.events.desc">Verified records of massacres, military operations and mass atrocities</p>
+        </div>
+        <div class="filters">
+            <input type="text" class="search-input" id="event-search"
+                   placeholder="Search events, locations…"
+                   data-i18n="filter.searchEvents" data-i18n-attr="placeholder">
+            <select class="filter-select" id="class-filter">
+                <option value="" data-i18n="filter.allClassifications">All Classifications</option>
+                <option value="War Crime">War Crime</option>
+                <option value="Crimes Against Humanity">Crimes Against Humanity</option>
+                <option value="Ethnic Cleansing">Ethnic Cleansing</option>
+                <option value="Genocide">Genocide</option>
+                <option value="Violations of IHL">Violations of IHL</option>
+                <option value="Military Operation">Military Operation</option>
+                <option value="Mass Killings">Mass Killings</option>
+            </select>
+            <select class="filter-select" id="type-filter">
+                <option value="" data-i18n="filter.allTypes">All Event Types</option>
+                <option value="Massacre">Massacre</option>
+                <option value="Military Operation">Military Operation</option>
+                <option value="Mass Displacement">Mass Displacement</option>
+                <option value="Mass Casualties / Uprising">Mass Casualties / Uprising</option>
+                <option value="Armed Uprising / Mass Casualties">Armed Uprising / Mass Casualties</option>
+                <option value="Mass Killings / Protest Suppression">Mass Killings / Protest Suppression</option>
+            </select>
+        </div>
+        <div id="events-grid" class="cards-grid">
+            <div class="loading" data-i18n="loading.events">Loading event data…</div>
+        </div>
+    </section>
+
+    <!-- ══ Timeline Tab ════════════════════════════════════════ -->
+    <section id="timeline" class="content-section">
+        <div class="section-header">
+            <h2 class="section-title" data-i18n="section.timeline.title">Chronological Timeline</h2>
+            <p class="section-description" data-i18n="section.timeline.desc">All documented events ordered chronologically from 1948 to present</p>
+        </div>
+        <div id="timeline-container" class="timeline">
+            <div class="loading" data-i18n="loading.timeline">Loading timeline…</div>
+        </div>
+    </section>
+
+    <!-- ══ Statistics Tab ══════════════════════════════════════ -->
+    <section id="statistics" class="content-section">
+        <div class="section-header">
+            <h2 class="section-title" data-i18n="section.statistics.title">Statistical Overview</h2>
+            <p class="section-description" data-i18n="section.statistics.desc">Deaths, injuries and displacement across all documented events</p>
+        </div>
+        <div id="statistics-table" class="data-table">
+            <div class="loading" data-i18n="loading.statistics">Loading statistics…</div>
+        </div>
+    </section>
+
+    <!-- ══ Sources Tab ═════════════════════════════════════════ -->
+    <section id="resources" class="content-section">
+        <div class="section-header">
+            <h2 class="section-title" data-i18n="section.resources.title">Primary Sources</h2>
+            <p class="section-description" data-i18n="section.resources.desc">Official reports, academic research, and verified documentation per event</p>
+        </div>
+        <div id="resources-grid">
+            <div class="loading" data-i18n="loading.resources">Loading sources…</div>
+        </div>
+    </section>
+
+    <!-- ══ Event Detail Panel ══════════════════════════════════ -->
+    <section id="event-detail" class="content-section">
+
+        <!-- Back navigation -->
+        <div class="detail-back-bar">
+            <button class="btn-back" id="detail-back-btn" data-i18n="detail.back">← Back to Events</button>
+            <div class="detail-breadcrumb">Events / <span id="detail-breadcrumb-name">—</span></div>
+            <div class="detail-back-bar-right">
+                <span class="permalink-slug" id="detail-permalink-slug"></span>
+                <button class="btn-permalink" id="detail-copy-link"
+                        title="Copy direct link to this event"
+                        data-i18n="detail.copyLink">🔗 Copy Link</button>
+            </div>
+        </div>
+
+        <!-- Hero (rendered by JS) -->
+        <div id="detail-hero-wrap"></div>
+
+        <!-- Sticky stats strip -->
+        <div class="detail-stats-strip">
+            <div class="detail-stats-strip-inner">
+                <div class="dss-item"><div class="dss-num" id="dss-deaths">—</div><div class="dss-label">Deaths</div></div>
+                <div class="dss-item"><div class="dss-num" id="dss-injured">—</div><div class="dss-label">Injured</div></div>
+                <div class="dss-item"><div class="dss-num" id="dss-displaced">—</div><div class="dss-label">Displaced</div></div>
+                <div class="dss-item"><div class="dss-num" id="dss-year">—</div><div class="dss-label">Year</div></div>
+            </div>
+        </div>
+
+        <!-- Body: main content + sidebar -->
+        <div class="detail-body">
+            <div id="event-detail-main"></div>
+            <aside class="detail-sidebar">
+                <div class="sidebar-box">
+                    <h3>Event Information</h3>
+                    <div id="detail-sidebar-info"></div>
+                </div>
+                <div class="sidebar-box" id="detail-type-dist-box" style="display:none">
+                    <h3>Details Distribution</h3>
+                    <div id="detail-type-dist"></div>
+                </div>
+                <div class="sidebar-box" id="detail-notes-box" style="display:none">
+                    <h3>Notes</h3>
+                    <div class="notes-box" id="detail-notes-text"></div>
+                </div>
+            </aside>
+        </div>
+
+    </section>
+
+</main>
+
+<!-- Shared PalGenoPedia footer (injected by footer-init.js) -->
+<div id="footer-placeholder"></div>
+
+<!-- ── shared.js must load before page script ── -->
+<script src="shared.js?v=3"></script>
+
+<script>
+// ═══════════════════════════════════════════════════════════════
+//  HISTORICAL EVENTS PAGE
+//  events.csv + details.csv  (comma-delimited, UTF-8)
+//  Localised: events_ar/de.csv + details_ar/de.csv
+//  Author: aliattia02 | Architecture: see Plan doc
+// ═══════════════════════════════════════════════════════════════
+
+// ── Page-specific translations ──────────────────────────────
+mergePageTranslations({
+    en: {
+        'header.title':               'Historical Events Documentation',
+        'header.subtitle':            'Comprehensive documentation of historical massacres, military operations & mass atrocities',
+        'nav.backToHistorical':       '\u2190 Historical Overview',
+        'nav.events':                 'Events',
+        'stat.events':                'Documented Events',
+        'stat.deaths':                'Deaths (Min. Est.)',
+        'stat.timespan':              'Time Span',
+        'stat.displaced':             'Displaced (Min. Est.)',
+        'section.overview.title':     'Historical Events Overview',
+        'section.overview.desc':      'Statistical analysis of documented historical events from 1948 to present',
+        'section.events.title':       'Historical Events Directory',
+        'section.events.desc':        'Verified records of massacres, military operations and mass atrocities',
+        'section.timeline.desc':      'All documented events ordered chronologically from 1948 to present',
+        'section.statistics.desc':    'Deaths, injuries and displacement across all documented events',
+        'section.resources.title':    'Primary Sources',
+        'section.resources.desc':     'Official reports, academic research, and verified documentation per event',
+        'filter.searchEvents':        'Search events, locations\u2026',
+        'filter.allClassifications':  'All Classifications',
+        'filter.allTypes':            'All Event Types',
+        'loading.events':             'Loading event data\u2026',
+        'chart.deathsOverTime':       'Deaths by Event Year (Minimum Estimates)',
+        'chart.byType':               'Events by Type',
+        'chart.byClassification':     'Events by Classification',
+        'detail.back':                '\u2190 Back to Events',
+        'detail.copyLink':            '\uD83D\uDD17 Copy Link',
+        'detail.copied':              '\u2713 Copied!',
+        'modal.back':                 '\u2190 Back',
+        'modal.copyLink':             '\uD83D\uDD17 Copy Link',
+        // Detail panel hero facts
+        'detail.deaths':              'Deaths',
+        'detail.injured':             'Injured',
+        'detail.displaced':           'Displaced',
+        'detail.date':                'Date',
+        // Detail panel sidebar
+        'detail.eventId':             'Event ID',
+        'detail.type':                'Type',
+        'detail.dateRange':           'Date Range',
+        'detail.dateContext':         'Date Context',
+        'detail.historicalLocation':  'Historical Location',
+        'detail.currentLocation':     'Current Location',
+        'detail.perpetrators':        'Perpetrators',
+        'detail.classification':      'Classification',
+        'detail.author':              'Author',
+        'detail.lastUpdated':         'Last Updated',
+        // Detail panel section titles
+        'detail.section.summary':           '\uD83D\uDCC4 Summary',
+        'detail.section.legalFramework':    '\u2696\uFE0F Legal Framework',
+        'detail.section.casualties':        '\uD83D\uDC80 Casualties Documentation',
+        'detail.section.eventTimeline':     '\uD83D\uDCC5 Event Timeline',
+        'detail.section.warCrimes':         '\u2696\uFE0F Documented War Crimes',
+        'detail.section.testimonies':       '\uD83D\uDCAC Witness Testimonies',
+        'detail.section.historicalImpact':  '\uD83C\uDF0D Historical Impact',
+        'detail.section.perpetrators':      '\u26A0\uFE0F Perpetrators',
+        'detail.section.commanders':        '\uD83D\uDC64 Commanders & Accountability',
+        'detail.section.personalities':     '\uD83D\uDC64 Key Personalities',
+        'detail.section.legalAnalysis':     '\u2696\uFE0F Legal Analysis',
+        'detail.section.sources':           '\uD83D\uDCDA Sources',
+        'detail.casualtyFallback':    'Casualty',
+        'detail.witnessFallback':     'Witness',
+        'detail.commanderFallback':   'Commander',
+        'detail.personFallback':      'Person',
+        'detail.sourceLink':          'Source \u2192',
+        'detail.viewSource':          'View Source \u2192',
+    },
+    de: {
+        'header.title':               'Dokumentation historischer Ereignisse',
+        'nav.backToHistorical':       '\u2190 Historischer \u00dcberblick',
+        'nav.events':                 'Ereignisse',
+        'stat.events':                'Dokumentierte Ereignisse',
+        'stat.deaths':                'Tode (Mindestsch.)',
+        'stat.timespan':              'Zeitraum',
+        'stat.displaced':             'Vertriebene (Mindestsch.)',
+        'section.events.title':       'Verzeichnis historischer Ereignisse',
+        'filter.searchEvents':        'Ereignisse, Orte suchen\u2026',
+        'detail.back':                '\u2190 Zur\u00fcck zu Ereignissen',
+        // Detail panel hero facts
+        'detail.deaths':              'Tote',
+        'detail.injured':             'Verletzte',
+        'detail.displaced':           'Vertriebene',
+        'detail.date':                'Datum',
+        // Detail panel sidebar
+        'detail.eventId':             'Ereignis-ID',
+        'detail.type':                'Typ',
+        'detail.dateRange':           'Zeitraum',
+        'detail.dateContext':         'Zeitlicher Kontext',
+        'detail.historicalLocation':  'Historischer Ort',
+        'detail.currentLocation':     'Aktueller Ort',
+        'detail.perpetrators':        'T\u00e4ter',
+        'detail.classification':      'Einstufung',
+        'detail.author':              'Autor',
+        'detail.lastUpdated':         'Zuletzt aktualisiert',
+        // Detail panel section titles
+        'detail.section.summary':           '\uD83D\uDCC4 Zusammenfassung',
+        'detail.section.legalFramework':    '\u2696\uFE0F Rechtlicher Rahmen',
+        'detail.section.casualties':        '\uD83D\uDC80 Dokumentation der Opfer',
+        'detail.section.eventTimeline':     '\uD83D\uDCC5 Zeitlicher Ablauf',
+        'detail.section.warCrimes':         '\u2696\uFE0F Dokumentierte Kriegsverbrechen',
+        'detail.section.testimonies':       '\uD83D\uDCAC Zeugenaussagen',
+        'detail.section.historicalImpact':  '\uD83C\uDF0D Historische Auswirkungen',
+        'detail.section.perpetrators':      '\u26A0\uFE0F T\u00e4ter',
+        'detail.section.commanders':        '\uD83D\uDC64 Befehlshaber & Verantwortlichkeit',
+        'detail.section.personalities':     '\uD83D\uDC64 Wichtige Pers\u00f6nlichkeiten',
+        'detail.section.legalAnalysis':     '\u2696\uFE0F Rechtliche Analyse',
+        'detail.section.sources':           '\uD83D\uDCDA Quellen',
+        'detail.casualtyFallback':    'Opfer',
+        'detail.witnessFallback':     'Zeuge',
+        'detail.commanderFallback':   'Befehlshaber',
+        'detail.personFallback':      'Person',
+        'detail.sourceLink':          'Quelle \u2192',
+        'detail.viewSource':          'Quelle ansehen \u2192',
+    },
+    ar: {
+        'header.title':               '\u062a\u0648\u062b\u064a\u0642 \u0627\u0644\u0623\u062d\u062f\u0627\u062b \u0627\u0644\u062a\u0627\u0631\u064a\u062e\u064a\u0629',
+        'nav.backToHistorical':       '\u2190 \u0627\u0644\u0639\u0648\u062f\u0629 \u0644\u0644\u0623\u062d\u062f\u0627\u062b \u0627\u0644\u062a\u0627\u0631\u064a\u062e\u064a\u0629',
+        'nav.events':                 '\u0627\u0644\u0623\u062d\u062f\u0627\u062b',
+        'stat.events':                '\u0623\u062d\u062f\u0627\u062b \u0645\u0648\u062b\u0642\u0629',
+        'stat.deaths':                '\u0648\u0641\u064a\u0627\u062a (\u062d\u062f.\u0623\u062f\u0646\u0649)',
+        'stat.timespan':              '\u0627\u0644\u0641\u062a\u0631\u0629 \u0627\u0644\u0632\u0645\u0646\u064a\u0629',
+        'stat.displaced':             '\u0646\u0627\u0632\u062d\u0648\u0646 (\u062d\u062f.\u0623\u062f\u0646\u0649)',
+        'filter.searchEvents':        '\u0628\u062d\u062b \u0639\u0646 \u0623\u062d\u062f\u0627\u062b\u2026',
+        'detail.back':                '\u2190 \u0639\u0648\u062f\u0629 \u0625\u0644\u0649 \u0627\u0644\u0623\u062d\u062f\u0627\u062b',
+    }
+});
+
+// ── Local data stores ────────────────────────────────────────
+let eventsData  = [];
+let detailsData = [];
+
+// ── PAGE_CONFIG ──────────────────────────────────────────────
+window.PAGE_CONFIG = {
+    entitySingular:   'Event',
+    entityPlural:     'Events',
+    facilityIdKey:    'id',
+    incidentFacKey:   'event_id',
+    detailSectionId:  'event-detail',
+    facilitiesTabId:  'events',
+    facilitySearchId: 'event-search',
+    statusFilterId:   'class-filter',
+    districtFilterId: 'type-filter',
+    incidentSearchId: '_no_incidents_search',   // element doesn't exist → no-op
+    attackFilterId:   '_no_attack_filter',       // element doesn't exist → no-op
+    backBtnId:        'detail-back-btn',
+    breadcrumbId:     'detail-breadcrumb-name',
+    permalinkSlugId:  'detail-permalink-slug',
+    copyLinkBtnId:    'detail-copy-link',
+    gridId:           'events-grid',
+    incGridId:        '_no_incidents_grid',      // element doesn't exist → renderIncidents no-ops
+    timelineId:       'timeline-container',
+    statisticsId:     'statistics-table',
+    resourcesId:      'resources-grid',
+    urlPrefix:        'event',
+    pendingKey:       '_pendingEvent',
+    pendingIncKey:    '_pendingEvent_incident',
+    renderFacilities: () => renderEvents(),
+    updateDashboard:  () => updateDashboard(),
+};
+
+// ═══════════════════════════════════════════════════════════
+//  UTILITY HELPERS
+// ═══════════════════════════════════════════════════════════
+
+/** Extract minimum numeric value from strings like "≈107–250", "≈1,500", "69" */
+function parseDeaths(str) {
+    if (!str || str === '—' || str === 'None') return 0;
+    const cleaned = String(str).replace(/[≈≤≥~,\s]/g, '');
+    const m = cleaned.match(/(\d+(?:\.\d+)?)/);
+    return m ? parseFloat(m[1]) : 0;
+}
+
+/** Format an ISO date string for display */
+function fmtDate(dateStr) {
+    if (!dateStr || dateStr === 'None') return '—';
+    const d = new Date(dateStr);
+    if (isNaN(d)) return String(dateStr);
+    return d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+}
+
+/** Return event title — uses event_name column directly; falls back to constructed title */
+function eventTitle(ev) {
+    if (ev.event_name && String(ev.event_name).trim() !== '' && ev.event_name !== 'None') {
+        return String(ev.event_name).trim();
+    }
+    const year = ev.date_start ? new Date(ev.date_start).getFullYear() : '';
+    const name = (ev.location_historical || '').split(',')[0].trim();
+    const type = ev.event_type || 'Historical Event';
+    if (name) return `${name} ${type} (${year})`;
+    return `${type}${year ? ' (' + year + ')' : ''}`;
+}
+
+/**
+ * Build a clean URL slug from an event. Uses event_name if available, e.g.:
+ *   "Sabra and Shatila Massacre 1982"  →  "sabra-and-shatila-massacre-1982"
+ *   "Qibya Massacre 1953"              →  "qibya-massacre-1953"
+ */
+function eventSlug(ev) {
+    if (ev._slug) return ev._slug;   // cached after data load — always canonical
+    // Prefer the explicit event_name column for stable, readable slugs
+    const baseName = (ev.event_name && String(ev.event_name).trim() !== '' && ev.event_name !== 'None')
+        ? String(ev.event_name).trim()
+        : (() => {
+            const year = ev.date_start ? new Date(ev.date_start).getFullYear() : '';
+            const name = (ev.location_historical || '').split(',')[0].trim()
+                             .replace(/\s*\([^)]*\)/g, '').trim();
+            const type = (ev.event_type || 'event').split(',')[0].trim();
+            return `${name} ${type}${year ? ' ' + year : ''}`;
+          })();
+    return baseName
+        .toLowerCase()
+        .normalize('NFD').replace(/[\u0300-\u036f]/g, '')   // strip accent marks
+        .replace(/[^a-z0-9\s]/g, ' ')                        // non-alphanumeric → space
+        .trim()
+        .replace(/\s+/g, '-')                                 // spaces → hyphens
+        .replace(/-+/g, '-');                                 // collapse runs
+}
+
+/** Global slug→id reverse map; populated after CSV load */
+const slugToId = {};
+
+/**
+ * Render a quick-fact value with font size that adapts to text length.
+ * Short numeric values get the big display font; long descriptive text
+ * shrinks gracefully and truncates beyond ~70 chars.
+ */
+function statVal(raw, color) {
+    const str = (raw && String(raw).trim() !== '' && raw !== 'None') ? String(raw).trim() : '—';
+    const len = str.length;
+    let fs, maxLines;
+    if (len <= 12)       { fs = '1.5rem';  maxLines = 1; }
+    else if (len <= 30)  { fs = '1rem';    maxLines = 2; }
+    else if (len <= 60)  { fs = '0.78rem'; maxLines = 3; }
+    else                 { fs = '0.72rem'; maxLines = 3; }
+    const display = len > 75 ? str.slice(0, 72) + '…' : str;
+    return `<div class="quick-fact-value"
+                 style="color:${color};font-size:${fs};line-height:1.25;
+                        display:-webkit-box;-webkit-line-clamp:${maxLines};
+                        -webkit-box-orient:vertical;overflow:hidden;
+                        word-break:break-word;hyphens:auto;">${display}</div>`;
+}
+
+/** Resolve a colour pair for a classification string */
+function clsStyle(cls) {
+    if (!cls) return { bg: '#f1f5f9', color: '#64748b' };
+    const c = cls.toLowerCase();
+    if (c.includes('genocide'))            return { bg: '#fef2f2', color: '#7f1d1d' };
+    if (c.includes('war crime'))           return { bg: '#fff7ed', color: '#9a3412' };
+    if (c.includes('ethnic cleansing') || c.includes('nakba'))
+                                           return { bg: '#fffbeb', color: '#92400e' };
+    if (c.includes('crimes against'))      return { bg: '#fdf4ff', color: '#7e22ce' };
+    if (c.includes('ihl') || c.includes('unlawful')) return { bg: '#eff6ff', color: '#1e40af' };
+    if (c.includes('military operation')) return { bg: '#eff6ff', color: '#1d4ed8' };
+    if (c.includes('uprising') || c.includes('mass casualties')) return { bg: '#f0fdf4', color: '#15803d' };
+    if (c.includes('mass killings') || c.includes('protest')) return { bg: '#fef9c3', color: '#713f12' };
+    return { bg: '#f1f5f9', color: '#334155' };
+}
+
+/** Render a badge span for a classification string */
+function clsBadge(cls, size) {
+    const st = clsStyle(cls);
+    const fs = size || '0.72rem';
+    return `<span style="display:inline-block;padding:0.25rem 0.6rem;border-radius:5px;font-size:${fs};font-weight:700;background:${st.bg};color:${st.color};border:1px solid ${st.color}30;text-transform:uppercase;letter-spacing:0.04em;">${cls}</span>`;
+}
+
+// ═══════════════════════════════════════════════════════════
+//  DASHBOARD
+// ═══════════════════════════════════════════════════════════
+function updateDashboard() {
+    const totalDeaths = eventsData.reduce((s, e) => s + parseDeaths(e.deaths), 0);
+    const totalDisp   = eventsData.reduce((s, e) => s + parseDeaths(e.forced_displacement), 0);
+
+    const startDates = eventsData.map(e => e.date_start ? new Date(e.date_start) : null).filter(Boolean).sort((a, b) => a - b);
+    const endDates   = eventsData.map(e => e.date_end   ? new Date(e.date_end)   : null).filter(Boolean).sort((a, b) => a - b);
+    const span = (startDates.length && endDates.length)
+        ? `${startDates[0].getFullYear()}–${endDates[endDates.length - 1].getFullYear()}`
+        : '—';
+
+    document.getElementById('stat-events').textContent    = eventsData.length;
+    document.getElementById('stat-deaths').textContent    = totalDeaths ? '~' + totalDeaths.toLocaleString() : '—';
+    document.getElementById('stat-timespan').textContent  = span;
+    document.getElementById('stat-displaced').textContent = totalDisp ? totalDisp.toLocaleString() + '+' : '—';
+}
+
+// ═══════════════════════════════════════════════════════════
+//  EVENTS GRID
+// ═══════════════════════════════════════════════════════════
+function renderEvents() {
+    const container = document.getElementById(PAGE_CONFIG.gridId);
+    if (!container) return;
+    const search   = (document.getElementById('event-search')?.value  || '').toLowerCase();
+    const clsFilt  = document.getElementById('class-filter')?.value   || '';
+    const typeFilt = document.getElementById('type-filter')?.value    || '';
+
+    const filtered = eventsData.filter(e => {
+        const matchS = !search || [
+            e.event_name,
+            getField(e, 'event_type',          currentLang),
+            getField(e, 'location_historical', currentLang),
+            getField(e, 'summary_para_1',      currentLang),
+        ].some(v => (v || '').toLowerCase().includes(search));
+        // Classification and type filters compare against English values (matches <option> values)
+        const matchC = !clsFilt  || (e.classification || '').includes(clsFilt);
+        const matchT = !typeFilt || (e.event_type     || '') === typeFilt;
+        return matchS && matchC && matchT;
+    });
+
+    if (!filtered.length) {
+        container.innerHTML = `<div class="loading">No events match your filters.</div>`;
+        return;
+    }
+
+    // Sort chronologically
+    const sorted = [...filtered].sort((a, b) => {
+        const da = a.date_start ? new Date(a.date_start) : null;
+        const db = b.date_start ? new Date(b.date_start) : null;
+        if (!da && !db) return 0; if (!da) return 1; if (!db) return -1;
+        return da - db;
+    });
+
+    container.innerHTML = sorted.map(e => {
+        // Use English classification for colour logic (clsStyle matches English keywords)
+        const st         = clsStyle(e.classification);
+        const title      = eventTitle(e);
+        const startFmt   = fmtDate(e.date_start);
+        const endFmt     = e.date_end ? fmtDate(e.date_end) : '';
+        const dateRange  = (endFmt && endFmt !== startFmt) ? `${startFmt} → ${endFmt}` : startFmt;
+        // Translated display fields
+        const summaryRaw = getField(e, 'summary_para_1',     currentLang) || '';
+        const summary    = summaryRaw.slice(0, 200) + (summaryRaw.length > 200 ? '…' : '');
+        const locDisplay = getField(e, 'location_historical', currentLang) || e.location_historical || '—';
+        const slug       = eventSlug(e);
+        // For badge display use translated classification when available, English for colour
+        const clsRaw     = getField(e, 'classification', currentLang) || e.classification || '';
+        const primaryCls = (e.classification || '').split(';')[0].trim();   // English — for colour
+        const primaryClsDisplay = (clsRaw || '').split(';')[0].trim();       // Translated — for text
+
+        return `
+        <div class="card clickable" style="border-left-color:${st.color};" onclick="openEventDetail('${e.id}')">
+            <div class="card-header">
+                <div style="margin-bottom:0.5rem;">
+                    ${clsBadge(primaryCls, '0.68rem')}
+                </div>
+                <div class="card-title">${title}</div>
+                <div class="card-subtitle">📍 ${(e.location_historical || '—').split(',').slice(0, 2).join(',')}</div>
+                <div class="card-subtitle" style="margin-top:0.2rem;">📅 ${dateRange}</div>
+            </div>
+            <div class="university-quick-facts card-quick-facts">
+                <div class="quick-fact">
+                    ${statVal(e.deaths, 'var(--primary-red)')}
+                    <div class="quick-fact-label">Deaths</div>
+                </div>
+                <div class="quick-fact">
+                    ${statVal(e.injured, 'var(--secondary-orange)')}
+                    <div class="quick-fact-label">Injured</div>
+                </div>
+                <div class="quick-fact">
+                    ${statVal(e.forced_displacement, '#7c3aed')}
+                    <div class="quick-fact-label">Displaced</div>
+                </div>
+            </div>
+            ${summary ? `<div class="card-body"><p style="margin-top:0.5rem">${summary}</p></div>` : ''}
+            <div style="margin-top:0.875rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;">
+                ${e.last_updated ? `<span style="font-size:0.7rem;color:var(--text-secondary);">Updated: ${e.last_updated}</span>` : '<span></span>'}
+                <a class="btn-profile" href="#event/${slug}"
+                   style="margin-top:0;padding:0.6rem 1rem;font-size:0.825rem;"
+                   onclick="event.stopPropagation(); openEventDetail('${e.id}')">
+                    <span>View Full Record</span><span class="arrow">→</span>
+                </a>
+            </div>
+        </div>`;
+    }).join('');
+}
+
+// ═══════════════════════════════════════════════════════════
+//  OVERRIDE: Timeline tab  (events-based, not incidents-based)
+// ═══════════════════════════════════════════════════════════
+function renderTimeline() {
+    const container = document.getElementById(PAGE_CONFIG.timelineId);
+    if (!container) return;
+
+    const sorted = [...eventsData].sort((a, b) => {
+        const da = a.date_start ? new Date(a.date_start) : null;
+        const db = b.date_start ? new Date(b.date_start) : null;
+        if (!da && !db) return 0; if (!da) return 1; if (!db) return -1;
+        return da - db;
+    });
+
+    container.innerHTML = sorted.map(e => {
+        const st       = clsStyle(e.classification);
+        const startFmt = fmtDate(e.date_start);
+        const endFmt   = e.date_end ? fmtDate(e.date_end) : '';
+        const dateR    = (endFmt && endFmt !== startFmt) ? `${startFmt} – ${endFmt}` : startFmt;
+        const primaryCls = (e.classification || '').split(';')[0].trim();
+        return `
+        <div class="timeline-item" style="cursor:pointer;" onclick="openEventDetail('${e.id}')">
+            <div class="timeline-date">${dateR}</div>
+            <div class="timeline-title">${eventTitle(e)}</div>
+            <div class="timeline-content">
+                <p>${clsBadge(primaryCls)}</p>
+                ${e.location_historical ? `<p style="margin-top:0.4rem;">📍 ${e.location_historical}</p>` : ''}
+                ${e.deaths ? `<p style="color:var(--primary-red);font-weight:600;margin-top:0.4rem;">Deaths: ${e.deaths}</p>` : ''}
+                ${e.summary_para_1 ? `<p style="margin-top:0.4rem;">${(e.summary_para_1).slice(0, 240)}${(e.summary_para_1).length > 240 ? '…' : ''}</p>` : ''}
+            </div>
+        </div>`;
+    }).join('');
+}
+
+// ═══════════════════════════════════════════════════════════
+//  OVERRIDE: Statistics tab
+// ═══════════════════════════════════════════════════════════
+function renderStatistics() {
+    const container = document.getElementById(PAGE_CONFIG.statisticsId);
+    if (!container) return;
+
+    const sorted = [...eventsData].sort((a, b) => {
+        const da = a.date_start ? new Date(a.date_start) : null;
+        const db = b.date_start ? new Date(b.date_start) : null;
+        if (!da && !db) return 0; if (!da) return 1; if (!db) return -1;
+        return da - db;
+    });
+
+    container.innerHTML = `
+        <table>
+            <thead>
+                <tr>
+                    <th>Event</th>
+                    <th>Date</th>
+                    <th>Location</th>
+                    <th>Deaths</th>
+                    <th>Injured</th>
+                    <th>Displaced</th>
+                    <th>Classification</th>
+                </tr>
+            </thead>
+            <tbody>
+                ${sorted.map(e => {
+                    const st  = clsStyle(e.classification);
+                    const pc  = (e.classification || '—').split(';')[0].trim();
+                    const loc = (e.location_historical || '—').split(',').slice(0,2).join(',');
+                    return `
+                    <tr style="cursor:pointer" onclick="openEventDetail('${e.id}')">
+                        <td><strong>${eventTitle(e)}</strong></td>
+                        <td style="white-space:nowrap">${fmtDate(e.date_start)}</td>
+                        <td style="font-size:0.82rem;max-width:180px;">${loc}</td>
+                        <td style="font-weight:700;color:var(--primary-red)">${e.deaths || '—'}</td>
+                        <td style="color:var(--secondary-orange)">${e.injured || '—'}</td>
+                        <td style="color:#7c3aed">${e.forced_displacement || '—'}</td>
+                        <td>${clsBadge(pc, '0.62rem')}</td>
+                    </tr>`;
+                }).join('')}
+            </tbody>
+        </table>`;
+}
+
+// ═══════════════════════════════════════════════════════════
+//  OVERRIDE: Sources tab  (details where category='source')
+// ═══════════════════════════════════════════════════════════
+function renderResources() {
+    const container = document.getElementById(PAGE_CONFIG.resourcesId);
+    if (!container) return;
+
+    const sources = detailsData.filter(d => d.category === 'source');
+    if (!sources.length) {
+        container.innerHTML = `<div class="loading">No sources found in the database. Add rows with category='source' to the details CSV.</div>`;
+        return;
+    }
+
+    // Group by event_id
+    const byEvent = {};
+    sources.forEach(s => {
+        if (!byEvent[s.event_id]) byEvent[s.event_id] = [];
+        byEvent[s.event_id].push(s);
+    });
+
+    container.innerHTML = Object.entries(byEvent).map(([evId, srcs]) => {
+        const ev    = eventsData.find(e => e.id === evId);
+        const title = ev ? eventTitle(ev) : evId;
+        return `
+        <div style="margin-bottom:2rem;">
+            <h3 style="font-size:1rem;font-weight:700;margin-bottom:0.75rem;padding-bottom:0.5rem;border-bottom:2px solid var(--border-color);">${title}</h3>
+            <div class="resources-grid">
+                ${srcs.map(s => `
+                <div class="resource-card">
+                    <div class="resource-type">${s.value || 'Source'}</div>
+                    <div class="resource-title">${s.heading_label || '—'}</div>
+                    <div class="resource-org" style="font-size:0.82rem;color:var(--text-secondary);margin-top:0.35rem;">
+                        ${s.content ? s.content.slice(0, 130) + (s.content.length > 130 ? '…' : '') : ''}
+                    </div>
+                    ${s.source_link ? `<a href="${s.source_link}" target="_blank" rel="noopener" class="resource-link" style="margin-top:0.75rem;">View Source →</a>` : ''}
+                </div>`).join('')}
+            </div>
+        </div>`;
+    }).join('');
+}
+
+// ═══════════════════════════════════════════════════════════
+//  OVERRIDE: Charts  (uses eventsData)
+// ═══════════════════════════════════════════════════════════
+function renderCharts() {
+    if (chartsRendered) return;
+    chartsRendered = true;
+
+    // ── 1. Deaths over time (grouped bar by year) ───────────
+    const deathsByYear = {};
+    eventsData.forEach(e => {
+        if (!e.date_start) return;
+        const yr = new Date(e.date_start).getFullYear();
+        deathsByYear[yr] = (deathsByYear[yr] || 0) + parseDeaths(e.deaths);
+    });
+    const yrs = Object.keys(deathsByYear).sort();
+    const tlEl = document.getElementById('timelineChart');
+    if (tlEl) {
+        new Chart(tlEl, {
+            type: 'bar',
+            data: {
+                labels: yrs,
+                datasets: [{
+                    label: 'Documented Deaths',
+                    data: yrs.map(y => deathsByYear[y]),
+                    backgroundColor: yrs.map(y => deathsByYear[y] > 500 ? '#dc2626' : '#f87171'),
+                    borderRadius: 4, borderSkipped: false,
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: { callbacks: {
+                        title: ctx => `Year: ${ctx[0].label}`,
+                        label: ctx => ` ~${ctx.raw.toLocaleString()} deaths (minimum)`
+                    }}
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: { display: true, text: 'Deaths (minimum estimates)', color: '#64748b', font: { size: 12 } },
+                        grid: { color: 'rgba(0,0,0,0.05)' }
+                    },
+                    x: { grid: { display: false } }
+                }
+            }
+        });
+    }
+
+    // ── 2. Events by type (horizontal bar) ─────────────────
+    const typeCounts = {};
+    eventsData.forEach(e => {
+        const tp = (e.event_type || 'Unknown').split(',')[0].trim();
+        typeCounts[tp] = (typeCounts[tp] || 0) + 1;
+    });
+    const sortedTypes = Object.entries(typeCounts).sort((a, b) => b[1] - a[1]);
+    const tEl = document.getElementById('targetedChart');
+    if (tEl) {
+        new Chart(tEl, {
+            type: 'bar',
+            data: {
+                labels: sortedTypes.map(t => t[0]),
+                datasets: [{ label: 'Events', data: sortedTypes.map(t => t[1]), backgroundColor: '#ea580c', borderRadius: 3 }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                plugins: { legend: { display: false } },
+                scales: { x: { beginAtZero: true, ticks: { precision: 0 } }, y: { ticks: { font: { size: 11 } } } }
+            }
+        });
+    }
+
+    // ── 3. Events by classification (doughnut) ──────────────
+    const clsCounts = {};
+    eventsData.forEach(e => {
+        (e.classification || 'Unknown').split(';').forEach(c => {
+            const key = c.trim().replace(/\(.*?\)/g, '').trim() || 'Unknown';
+            if (key) clsCounts[key] = (clsCounts[key] || 0) + 1;
+        });
+    });
+    const sortedCls  = Object.entries(clsCounts).sort((a, b) => b[1] - a[1]).slice(0, 8);
+    const doughColors = ['#dc2626','#ea580c','#d97706','#7c3aed','#0284c7','#16a34a','#db2777','#64748b'];
+    const dEl = document.getElementById('attackTypeChart');
+    if (dEl) {
+        new Chart(dEl, {
+            type: 'doughnut',
+            data: {
+                labels: sortedCls.map(c => c[0]),
+                datasets: [{
+                    data: sortedCls.map(c => c[1]),
+                    backgroundColor: doughColors.slice(0, sortedCls.length),
+                    borderWidth: 2, borderColor: '#ffffff'
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { position: 'right', labels: { font: { size: 11 }, boxWidth: 14, padding: 12 } },
+                    tooltip: { callbacks: { label: ctx => ` ${ctx.label}: ${ctx.raw}` } }
+                }
+            }
+        });
+    }
+}
+
+// ═══════════════════════════════════════════════════════════
+//  OVERRIDE: openFacilityDetail → route to openEventDetail
+//  Accepts either a slug ("sabra-and-shatila-massacre-1982")
+//  or a raw id ("hist_007") — resolves via slugToId map first.
+// ═══════════════════════════════════════════════════════════
+function openFacilityDetail(slugOrId) {
+    openEventDetail(slugToId[slugOrId] || slugOrId);
+}
+
+// ═══════════════════════════════════════════════════════════
+//  openEventDetail — main entry point (card clicks + hash)
+// ═══════════════════════════════════════════════════════════
+function openEventDetail(eventId) {
+    const cfg = window.PAGE_CONFIG;
+    // Accept slug or raw id
+    const resolvedId = slugToId[eventId] || eventId;
+    const ev  = eventsData.find(e => e.id === resolvedId);
+    if (!ev) { console.warn('Event not found:', eventId); return; }
+
+    window._currentEventId = resolvedId;
+
+    // Group details by category, sorted by order
+    const relDetails = detailsData.filter(d => d.event_id === eventId);
+    const byCat = {};
+    relDetails.forEach(d => {
+        if (!byCat[d.category]) byCat[d.category] = [];
+        byCat[d.category].push(d);
+    });
+    Object.values(byCat).forEach(arr => arr.sort((a, b) => (parseInt(a.order) || 0) - (parseInt(b.order) || 0)));
+
+    history.pushState({ event: eventId }, '', `#event/${eventSlug(ev)}`);
+
+    document.querySelectorAll('.content-section').forEach(s => s.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById(cfg.detailSectionId).classList.add('active');
+
+    const title = eventTitle(ev);
+    document.getElementById(cfg.breadcrumbId).textContent   = title;
+    const slugEl = document.getElementById(cfg.permalinkSlugId);
+    if (slugEl) slugEl.textContent = `#event/${eventSlug(ev)}`;
+
+    _renderDetailPanel(ev, byCat);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// ═══════════════════════════════════════════════════════════
+//  _renderDetailPanel — category-aware renderer
+// ═══════════════════════════════════════════════════════════
+function _renderDetailPanel(ev, byCat) {
+    const title       = eventTitle(ev);
+    const evType      = getField(ev, 'event_type',          currentLang) || ev.event_type          || '';
+    const evLocHist   = getField(ev, 'location_historical', currentLang) || ev.location_historical || '';
+    const evLocCur    = getField(ev, 'location_current',    currentLang) || ev.location_current    || '';
+    const evDateCtx   = getField(ev, 'date_context',        currentLang) || ev.date_context        || '';
+    const evCls       = getField(ev, 'classification',      currentLang) || ev.classification      || '';
+    const evSummary1  = getField(ev, 'summary_para_1',       currentLang) || ev.summary_para_1       || '';
+    const evSummary2  = getField(ev, 'summary_para_2',       currentLang) || ev.summary_para_2       || '';
+    const evSummary3  = getField(ev, 'summary_para_3',       currentLang) || ev.summary_para_3       || '';
+    const st       = clsStyle(ev.classification);
+    const startFmt = fmtDate(ev.date_start);
+    const endFmt   = ev.date_end ? fmtDate(ev.date_end) : '';
+    const dateR    = (endFmt && endFmt !== startFmt) ? `${startFmt} – ${endFmt}` : startFmt;
+
+    // ── Hero ─────────────────────────────────────────────────
+    const origClsList = (ev.classification || '').split(';').map(x => x.trim()).filter(Boolean);
+    const clsBadges = (evCls || '').split(';')
+        .map(c => c.trim()).filter(Boolean)
+        .map((c, idx) => {
+            const s = clsStyle(origClsList[idx] || c);
+            return `<span class="detail-hero-badge" style="background:${s.bg};color:${s.color};border:1px solid ${s.color}40;">${c}</span>`;
+        }).join('');
+
+    document.getElementById('detail-hero-wrap').innerHTML = `
+        <div class="detail-hero">
+            <div class="detail-hero-inner">
+                <div class="detail-hero-text">
+                    <div class="detail-eyebrow">📜 ${evType || 'Historical Event'} · ${new Date(ev.date_start || Date.now()).getFullYear()}</div>
+                    <h2>${title}</h2>
+                    <div class="detail-hero-sub">📍 ${evLocHist || '—'}</div>
+                    <div class="detail-hero-badges">${clsBadges}</div>
+                    ${evSummary1 ? `<p class="detail-hero-intro">${evSummary1.slice(0, 320)}${evSummary1.length > 320 ? '…' : ''}</p>` : ''}
+                    ${evSummary2 ? `<p class="detail-hero-intro" style="margin-top:0.75rem;">${evSummary2.slice(0, 320)}${evSummary2.length > 320 ? '…' : ''}</p>` : ''}
+                </div>
+                <div class="detail-hero-facts">
+                    <div><div class="dhf-label">${t('detail.deaths')}</div><div class="dhf-value red">${ev.deaths || '—'}</div></div>
+                    <div><div class="dhf-label">${t('detail.injured')}</div><div class="dhf-value">${ev.injured || '—'}</div></div>
+                    <div><div class="dhf-label">${t('detail.displaced')}</div><div class="dhf-value">${ev.forced_displacement || '—'}</div></div>
+                    <div><div class="dhf-label">${t('detail.date')}</div><div class="dhf-value" style="font-size:0.8rem;">${dateR}</div></div>
+                </div>
+            </div>
+        </div>`;
+
+    // ── Stats strip ──────────────────────────────────────────
+    document.getElementById('dss-deaths').textContent    = ev.deaths              || '—';
+    document.getElementById('dss-injured').textContent   = ev.injured             || '—';
+    document.getElementById('dss-displaced').textContent = ev.forced_displacement || '—';
+    document.getElementById('dss-year').textContent      = ev.date_start ? new Date(ev.date_start).getFullYear() : '—';
+
+    // ── Sidebar ───────────────────────────────────────────────
+    document.getElementById('detail-sidebar-info').innerHTML = [
+        [t('detail.eventId'),             ev.id],
+        [t('detail.type'),                evType],
+        [t('detail.dateRange'),           dateR],
+        [t('detail.dateContext'),         evDateCtx],
+        [t('detail.historicalLocation'),  evLocHist],
+        [t('detail.currentLocation'),     evLocCur],
+        [t('detail.perpetrators'),        ev.perpetrators],
+        [t('detail.classification'),      evCls],
+        [t('detail.author'),              ev.author],
+        [t('detail.lastUpdated'),         ev.last_updated],
+    ].filter(([, v]) => v && String(v).trim() !== '' && v !== 'None')
+     .map(([k, v]) => `
+        <div class="info-row">
+            <span class="info-key">${k}</span>
+            <span class="info-val">${v}</span>
+        </div>`).join('');
+
+    document.getElementById('detail-notes-box').style.display     = 'none';
+    document.getElementById('detail-type-dist-box').style.display = 'none';
+
+    // ── Main body: categories in order ───────────────────────
+    let html = '';
+
+    // ① Quick facts bar
+    if (byCat.quick_fact?.length) {
+        html += `<div class="university-quick-facts" style="margin-bottom:1.5rem;">
+            ${byCat.quick_fact.map(qf => `
+            <div class="quick-fact">
+                <div class="quick-fact-value" style="font-size:0.85rem;word-break:break-word;line-height:1.2;">${qf.value || '—'}</div>
+                <div class="quick-fact-label">${qf.heading_label || ''}</div>
+            </div>`).join('')}
+        </div>`;
+    }
+
+    // ② Summary paragraphs (from events.csv summary_para_1/2/3, replaces old executive_summary category)
+    if (evSummary1 || evSummary2 || evSummary3) {
+        html += `<div class="cat-section-title">${t('detail.section.summary')}</div>`;
+        html += `<div style="background:white;border-radius:12px;padding:1.5rem;box-shadow:0 1px 3px rgba(0,0,0,0.08);margin-bottom:1.5rem;">`;
+        if (evSummary1) html += `<p style="line-height:1.8;margin-bottom:1rem;font-size:0.95rem;">${evSummary1}</p>`;
+        if (evSummary2) html += `<p style="line-height:1.8;margin-bottom:1rem;font-size:0.95rem;">${evSummary2}</p>`;
+        if (evSummary3) html += `<p style="line-height:1.8;margin-bottom:1rem;font-size:0.95rem;">${evSummary3}</p>`;
+        // Inline legal context (first 2 items) if any
+        if (byCat.legal?.length) {
+            html += `<div class="legal-alert">
+                <strong style="font-size:0.78rem;text-transform:uppercase;letter-spacing:0.06em;color:#92400e;">${t('detail.section.legalFramework')}</strong>
+                ${byCat.legal.slice(0, 2).map(l => {
+                    const lLabel   = getField(l, 'heading_label', currentLang) || l.heading_label || '';
+                    const lContent = getField(l, 'content',      currentLang) || l.content      || '';
+                    return `
+                <div class="legal-item" style="margin-top:0.625rem;">
+                    ${lLabel   ? `<p style="font-size:0.8rem;font-weight:700;color:#78350f;">${lLabel}</p>` : ''}
+                    ${lContent ? `<p style="font-size:0.82rem;color:#78350f;line-height:1.6;">${lContent}</p>` : ''}
+                </div>`;
+                }).join('')}
+            </div>`;
+        }
+        html += `</div>`;
+    }
+
+    // ③ Casualties
+    if (byCat.casualty?.length) {
+        html += `<div class="cat-section-title">${t('detail.section.casualties')}</div>`;
+        html += `<div style="margin-bottom:1.5rem;">`;
+        byCat.casualty.forEach(c => {
+            const cLabel   = getField(c, 'heading_label', currentLang) || c.heading_label || '';
+            const cContent = getField(c, 'content',      currentLang) || c.content      || '';
+            const cValue   = getField(c, 'value',        currentLang) || c.value        || '';
+            const srcLink = c.source_link
+                ? `<a href="${c.source_link}" target="_blank" rel="noopener" style="color:var(--accent-blue);font-size:0.75rem;margin-left:0.5rem;">${t('detail.sourceLink')}</a>` : '';
+            const srcName = c.source
+                ? `<span style="font-size:0.75rem;color:#94a3b8;">📚 ${c.source}</span>` : '';
+            html += `
+            <div class="casualty-row">
+                ${cValue ? `<div class="casualty-value">${cValue}</div>` : ''}
+                <div class="casualty-right">
+                    <div class="casualty-label">${cLabel || t('detail.casualtyFallback')}</div>
+                    ${cContent ? `<div class="casualty-detail">${cContent}</div>` : ''}
+                    ${(srcName || srcLink) ? `<div style="margin-top:0.4rem;">${srcName}${srcLink}</div>` : ''}
+                </div>
+            </div>`;
+        });
+        html += `</div>`;
+    }
+
+    // ④ Internal event timeline
+    if (byCat.timeline?.length) {
+        html += `<div class="cat-section-title">${t('detail.section.eventTimeline')}</div>`;
+        html += `<div class="timeline" style="margin-bottom:1.5rem;">`;
+        byCat.timeline.forEach(t2 => {
+            const tTime    = getField(t2, 'time',          currentLang) || t2.time          || '';
+            const tLabel   = getField(t2, 'heading_label', currentLang) || t2.heading_label || '';
+            const tContent = getField(t2, 'content',       currentLang) || t2.content       || '';
+            html += `
+            <div class="timeline-item">
+                <div class="ev-timeline-time">${tTime || tLabel || '—'}</div>
+                <div class="timeline-title">${tLabel}</div>
+                <div class="ev-timeline-content">${tContent}</div>
+            </div>`;
+        });
+        html += `</div>`;
+    }
+
+    // ⑤ War crimes
+    if (byCat.war_crime?.length) {
+        html += `<div class="cat-section-title">${t('detail.section.warCrimes')}</div>`;
+        html += `<div style="margin-bottom:1.5rem;">`;
+        byCat.war_crime.forEach(w => {
+            const wLabel   = getField(w, 'heading_label', currentLang) || w.heading_label || '';
+            const wContent = getField(w, 'content',      currentLang) || w.content      || '';
+            html += `
+            <div class="warcrime-item">
+                <strong style="color:var(--text-primary);font-size:0.9rem;">${wLabel}</strong>
+                ${wContent ? `<p style="color:var(--text-secondary);font-size:0.85rem;margin-top:0.35rem;line-height:1.55;">${wContent}</p>` : ''}
+            </div>`;
+        });
+        html += `</div>`;
+    }
+
+    // ⑥ Testimonies
+    if (byCat.testimony?.length) {
+        html += `<div class="cat-section-title">${t('detail.section.testimonies')}</div>`;
+        html += `<div style="margin-bottom:1.5rem;">`;
+        byCat.testimony.forEach(t2 => {
+            const tLabel   = getField(t2, 'heading_label', currentLang) || t2.heading_label || '';
+            const tValue   = getField(t2, 'value',        currentLang) || t2.value        || '';
+            const tContent = getField(t2, 'content',      currentLang) || t2.content      || '';
+            const initials = (tLabel || '?').split(' ').map(w => w[0] || '').join('').slice(0, 2).toUpperCase();
+            html += `
+            <div class="testimony-block">
+                <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.75rem;">
+                    <div style="width:40px;height:40px;border-radius:50%;background:var(--accent-blue);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;flex-shrink:0;">${initials}</div>
+                    <div>
+                        <div style="font-weight:700;color:var(--text-primary);font-size:0.9rem;">${tLabel || t('detail.witnessFallback')}</div>
+                        ${tValue ? `<div style="font-size:0.75rem;color:var(--text-secondary);">${tValue}</div>` : ''}
+                    </div>
+                </div>
+                ${tContent ? `<blockquote style="font-style:italic;line-height:1.75;color:var(--text-primary);padding:0.75rem 1rem;background:#f8fafc;border-radius:8px;font-size:0.875rem;margin:0 0 0.5rem;">"${tContent}"</blockquote>` : ''}
+                ${t2.source ? `<div style="font-size:0.72rem;color:#94a3b8;">📚 ${t2.source}${t2.source_link ? ` <a href="${t2.source_link}" target="_blank" rel="noopener" style="color:var(--accent-blue);">→</a>` : ''}</div>` : ''}
+            </div>`;
+        });
+        html += `</div>`;
+    }
+
+    // ⑦ Historical impact
+    if (byCat.historical_impact?.length) {
+        html += `<div class="cat-section-title">${t('detail.section.historicalImpact')}</div>`;
+        html += `<div style="margin-bottom:1.5rem;">`;
+        // Group by translated heading_label
+        const impGroups = {};
+        byCat.historical_impact.forEach(h => {
+            const hLabel = getField(h, 'heading_label', currentLang) || h.heading_label || 'General';
+            if (!impGroups[hLabel]) impGroups[hLabel] = [];
+            impGroups[hLabel].push(h);
+        });
+        Object.entries(impGroups).forEach(([label, items], idx) => {
+            html += `
+            <details class="impact-block"${idx < 3 ? ' open' : ''}>
+                <summary>${label}</summary>
+                <div class="impact-body">
+                    ${items.map(i => {
+                        const iContent = getField(i, 'content', currentLang) || i.content || '';
+                        return iContent ? `<p style="line-height:1.75;margin-bottom:0.625rem;font-size:0.9rem;color:var(--text-secondary);">${iContent}</p>` : '';
+                    }).join('')}
+                </div>
+            </details>`;
+        });
+        html += `</div>`;
+    }
+
+    // ⑧ Perpetrators (from events.csv perpetrators field — no longer a separate category in details.csv)
+    if (ev.perpetrators && String(ev.perpetrators).trim() !== '' && ev.perpetrators !== 'None') {
+        html += `<div class="cat-section-title">${t('detail.section.perpetrators')}</div>`;
+        html += `<div class="perp-cloud">`;
+        ev.perpetrators.split(';').map(p => p.trim()).filter(Boolean).forEach(p => {
+            html += `<span class="perp-tag">${p}</span>`;
+        });
+        html += `</div>`;
+    }
+
+    // ⑨ Commanders
+    if (byCat.commander?.length) {
+        html += `<div class="cat-section-title">${t('detail.section.commanders')}</div>`;
+        html += `<div style="margin-bottom:1.5rem;">`;
+        byCat.commander.forEach(c => {
+            const cLabel   = getField(c, 'heading_label', currentLang) || c.heading_label || '';
+            const cContent = getField(c, 'content',      currentLang) || c.content      || '';
+            html += `
+            <div class="person-card" style="border-left:4px solid #7c3aed;">
+                <div style="font-weight:700;color:var(--text-primary);margin-bottom:0.5rem;">🎖👤 ${cLabel || t('detail.commanderFallback')}</div>
+                ${cContent ? `<p style="font-size:0.85rem;color:var(--text-secondary);line-height:1.65;">${cContent}</p>` : ''}
+            </div>`;
+        });
+        html += `</div>`;
+    }
+
+    // ⑩ Personalities
+    if (byCat.personality?.length) {
+        html += `<div class="cat-section-title">${t('detail.section.personalities')}</div>`;
+        html += `<div style="margin-bottom:1.5rem;">`;
+        byCat.personality.forEach(p => {
+            const pLabel   = getField(p, 'heading_label', currentLang) || p.heading_label || '';
+            const pValue   = getField(p, 'value',        currentLang) || p.value        || '';
+            const pContent = getField(p, 'content',      currentLang) || p.content      || '';
+            const initial = (pLabel || '?')[0].toUpperCase();
+            html += `
+            <div class="person-card" style="border-left:4px solid var(--accent-blue);">
+                <div style="display:flex;align-items:flex-start;gap:0.875rem;margin-bottom:0.625rem;">
+                    <div style="width:38px;height:38px;border-radius:50%;background:var(--accent-blue);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;flex-shrink:0;">${initial}</div>
+                    <div>
+                        <div style="font-weight:700;color:var(--text-primary);">${pLabel || t('detail.personFallback')}</div>
+                        ${pValue ? `<div style="font-size:0.75rem;color:var(--text-secondary);">${pValue}</div>` : ''}
+                    </div>
+                </div>
+                ${pContent ? `<p style="font-size:0.85rem;color:var(--text-secondary);line-height:1.65;">${pContent}</p>` : ''}
+                ${p.source_link ? `<a href="${p.source_link}" target="_blank" rel="noopener" style="font-size:0.75rem;color:var(--accent-blue);margin-top:0.4rem;display:inline-block;">📚 ${t('detail.sourceLink')}</a>` : ''}
+            </div>`;
+        });
+        html += `</div>`;
+    }
+
+    // ⑪ Legal (full — if more than 2 items)
+    if (byCat.legal?.length > 2) {
+        html += `<div class="cat-section-title">${t('detail.section.legalAnalysis')}</div>`;
+        html += `<div style="margin-bottom:1.5rem;">`;
+        byCat.legal.slice(2).forEach(l => {  // first 2 shown inline in summary block
+            const lLabel   = getField(l, 'heading_label', currentLang) || l.heading_label || '';
+            const lContent = getField(l, 'content',      currentLang) || l.content      || '';
+            html += `
+            <div class="legal-alert" style="margin-bottom:0.75rem;">
+                ${lLabel   ? `<strong style="font-size:0.82rem;color:#92400e;">${lLabel}</strong>` : ''}
+                ${lContent ? `<p style="font-size:0.85rem;color:#78350f;line-height:1.6;margin-top:0.4rem;">${lContent}</p>` : ''}
+            </div>`;
+        });
+        html += `</div>`;
+    }
+
+    // ⑫ Sources (for this event)
+    if (byCat.source?.length) {
+        html += `<div class="cat-section-title">${t('detail.section.sources')}</div>`;
+        html += `<div style="margin-bottom:1.5rem;">`;
+        byCat.source.forEach(s => {
+            const sLabel   = getField(s, 'heading_label', currentLang) || s.heading_label || '';
+            const sValue   = getField(s, 'value',        currentLang) || s.value        || '';
+            const sContent = getField(s, 'content',      currentLang) || s.content      || '';
+            html += `
+            <div class="detail-source-item">
+                <div class="detail-source-icon">📄</div>
+                <div class="detail-source-body">
+                    <div style="font-weight:700;font-size:0.9rem;color:var(--text-primary);">${sLabel || '—'}</div>
+                    ${sValue   ? `<div style="font-size:0.72rem;text-transform:uppercase;letter-spacing:0.04em;color:var(--accent-blue);font-weight:600;margin:0.2rem 0;">${sValue}</div>` : ''}
+                    ${sContent ? `<p style="font-size:0.82rem;color:var(--text-secondary);line-height:1.55;margin-top:0.25rem;">${sContent}</p>` : ''}
+                    ${s.source_link ? `<a href="${s.source_link}" target="_blank" rel="noopener" class="resource-link" style="font-size:0.8rem;margin-top:0.5rem;">${t('detail.viewSource')}</a>` : ''}
+                </div>
+            </div>`;
+        });
+        html += `</div>`;
+    }
+
+    document.getElementById('event-detail-main').innerHTML = html;
+}
+
+// ═══════════════════════════════════════════════════════════
+//  BOOT: load CSVs and initialise page
+// ═══════════════════════════════════════════════════════════
+
+/** Strip UTF-8 BOM from CSV column keys */
+function stripBOM(records) {
+    return records.map(r => {
+        const clean = {};
+        Object.keys(r).forEach(k => {
+            clean[k.replace(/^\uFEFF/, '').trim()] = r[k];
+        });
+        return clean;
+    });
+}
+
+async function loadAllData() {
+    const cfg = window.PAGE_CONFIG;
+
+    // Always load the base English files + ALL translation delta files in parallel.
+    // Translation CSVs are delta files — they contain only translated columns (no
+    // structural fields like event_name, category, order, deaths, etc.).
+    // We merge the _ar / _de columns onto the base English records at load time so
+    // getField(record, fieldName, lang) can pick them up when setLang() re-renders.
+    const [
+        rawEvents,  rawDetails,
+        rawEventsAr, rawEventsDe,
+        rawDetailsAr, rawDetailsDe,
+    ] = await Promise.all([
+        loadCSV('events.csv'),
+        loadCSV('details.csv'),
+        loadCSV('events_ar.csv',  false),
+        loadCSV('events_de.csv',  false),
+        loadCSV('details_ar.csv', false),
+        loadCSV('details_de.csv', false),
+    ]);
+
+    eventsData  = stripBOM(rawEvents) .filter(r => r.id        && r.id.trim()        !== '');
+    detailsData = stripBOM(rawDetails).filter(r => r.detail_id && r.event_id);
+
+    // ── Normalise events translation deltas ───────────────────────────
+    // events_ar/de.csv export the main summary under the column name
+    // brief_summary_ar / brief_summary_de (legacy naming).
+    // The renderer calls getField(e, 'summary_para_1', lang) which looks for
+    // e.summary_para_1_ar / e.summary_para_1_de.
+    // Add an alias so both spellings resolve correctly after the merge.
+    function normEventTrans(rows, lang) {
+        return stripBOM(rows).map(r => {
+            const out    = { ...r };
+            const oldKey = `brief_summary_${lang}`;
+            const newKey = `summary_para_1_${lang}`;
+            if (out[oldKey] !== undefined && out[newKey] === undefined) {
+                out[newKey] = out[oldKey];
+            }
+            return out;
+        });
+    }
+
+    mergeTransRow(eventsData,  normEventTrans(rawEventsAr, 'ar'), 'id');
+    mergeTransRow(eventsData,  normEventTrans(rawEventsDe, 'de'), 'id');
+    mergeTransRow(detailsData, stripBOM(rawDetailsAr),            'detail_id');
+    mergeTransRow(detailsData, stripBOM(rawDetailsDe),            'detail_id');
+
+    // Build slug → id reverse-lookup map (used by openFacilityDetail + openEventDetail)
+    // If two events produce the same slug (same location+type+year), append a counter.
+    const slugCount = {};
+    eventsData.forEach(ev => {
+        const base = eventSlug(ev);
+        slugCount[base] = (slugCount[base] || 0) + 1;
+    });
+    const slugSeen = {};
+    eventsData.forEach(ev => {
+        const base = eventSlug(ev);
+        let finalSlug;
+        if (slugCount[base] > 1) {
+            slugSeen[base] = (slugSeen[base] || 0) + 1;
+            finalSlug = `${base}-${slugSeen[base]}`;
+        } else {
+            finalSlug = base;
+        }
+        slugToId[finalSlug] = ev.id;
+        ev._slug = finalSlug;   // cache on the event for fast lookup in card rendering
+    });
+
+    // Expose to shared.js globals (some shared functions read these)
+    facilitiesData = eventsData;
+    incidentsData  = [];
+    resourcesData  = detailsData.filter(d => d.category === 'source');
+
+    console.log(`✅ Loaded: ${eventsData.length} events, ${detailsData.length} detail rows`);
+
+    // Sync with TranslationSystem's already-restored language preference
+    // (from localStorage) so first render uses the correct CSV-side lang.
+    if (window.TranslationSystem && TranslationSystem.currentLanguage) {
+        currentLang = TranslationSystem.currentLanguage;
+        document.documentElement.lang = currentLang;
+        document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+    }
+
+    updateDashboard();
+    renderEvents();
+    renderTimeline();
+    renderStatistics();
+    renderResources();
+    renderCharts();
+    applyI18n();
+    wireSharedEvents();
+    routeFromHash();
+
+    const pending = window[cfg.pendingKey];
+    if (pending) { openEventDetail(pending); delete window[cfg.pendingKey]; }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    routeFromHash(); // handle tab hash before data loads
+    loadAllData();
+});
+
+// ─────────────────────────────────────────────────────────────
+//  Bridge: TranslationSystem (header EN/AR/DE buttons) -> shared.js setLang()
+//  TranslationSystem.changeLanguage() dispatches 'languageChanged' with
+//  detail.language. setLang() re-renders all CSV-driven content using
+//  getField(record, field, currentLang). Also re-render the open event
+//  detail panel (not covered by setLang's generic re-render calls).
+// ─────────────────────────────────────────────────────────────
+document.addEventListener('languageChanged', (e) => {
+    if (typeof setLang === 'function') setLang(e.detail.language);
+
+    const detailSection = document.getElementById(PAGE_CONFIG.detailSectionId);
+    if (window._currentEventId && detailSection && detailSection.classList.contains('active')) {
+        openEventDetail(window._currentEventId);
+    }
+});
+
+</script>
+
+<!-- Header component — must load before translation-system so #language-selector exists -->
+<script>window.headerConfig = { mode: 'main', activePage: 'historical' };</script>
+<!-- Shared footer script — root-relative path (2 levels up from Pages/Historical_Massacres/) -->
+<script src="../../js/footer-init.js?v=5"></script>
+
+<script src="../../js/config.js"></script>
+<script src="../../js/header-component.js?v=3"></script>
+
+<!-- Translation system — populates #language-selector injected by header-component.js -->
+<script src="../../js/translation-system.js?v=2"></script>
+
+<script>
+    /**
+     * Measure the rendered header height and expose it as --header-height
+     * so the sticky .page-subheader sits flush below the main header.
+     */
+    (function syncHeaderHeight() {
+        function update() {
+            const header = document.querySelector('.header');
+            if (header) {
+                document.documentElement.style.setProperty(
+                    '--header-height',
+                    header.getBoundingClientRect().height + 'px'
+                );
+            }
+        }
+        update();
+        window.addEventListener('load', update);
+        window.addEventListener('resize', update);
+    })();
+
+    /**
+     * Measure the rendered .page-subheader height and expose it as
+     * --subheader-height so the sticky .detail-back-bar sits flush
+     * below it (height changes depending on which tab/view is active).
+     */
+    (function syncSubheaderHeight() {
+        function update() {
+            const subheader = document.querySelector('.page-subheader');
+            if (subheader) {
+                document.documentElement.style.setProperty(
+                    '--subheader-height',
+                    subheader.getBoundingClientRect().height + 'px'
+                );
+            }
+        }
+        update();
+        window.addEventListener('load', update);
+        window.addEventListener('resize', update);
+        window.addEventListener('hashchange', () => setTimeout(update, 0));
+        window.addEventListener('popstate', () => setTimeout(update, 0));
+        document.querySelectorAll('.tab-btn').forEach(b => b.addEventListener('click', () => setTimeout(update, 0)));
+        new MutationObserver(() => update()).observe(document.querySelector('.page-subheader'), { childList: true, subtree: true, attributes: true });
+    })();
+</script>
+</body>
+</html>

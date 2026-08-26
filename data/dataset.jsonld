@@ -1,0 +1,172 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "@id": "https://palgenopedia.org/data/events.json",
+  "name": "PalGenoPedia Documented Events Dataset",
+  "description": "Open documentation of verified war crimes, massacres, and humanitarian violations concerning Palestine, 1948–present. Every figure carries provenance and a verification status. Canonical machine-readable source for PalGenoPedia.",
+  "url": "https://palgenopedia.org/data/events.json",
+  "datePublished": "2026-08-09",
+  "dateModified": "2026-08-09",
+  "inLanguage": "en",
+  "creator": {
+    "@type": "Organization",
+    "name": "PalGenoPedia",
+    "url": "https://palgenopedia.org"
+  },
+  "keywords": "Palestine, war crimes, massacres, humanitarian violations, documentation, 1948, Gaza, Nakba",
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "application/json",
+      "contentUrl": "https://palgenopedia.org/data/events.json"
+    },
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "application/x-ndjson",
+      "contentUrl": "https://palgenopedia.org/data/events.ndjson"
+    },
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "text/csv",
+      "contentUrl": "https://palgenopedia.org/data/events.csv"
+    }
+  ],
+  "hasPart": [
+    {
+      "@type": "CreativeWork",
+      "@id": "https://palgenopedia.org/data/events.json#hist001",
+      "name": "Deir Yassin"
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://palgenopedia.org/data/events.json#hist002",
+      "name": "Tantura "
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://palgenopedia.org/data/events.json#hist003",
+      "name": "Lydda and Ramle"
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://palgenopedia.org/data/events.json#hist004",
+      "name": "Qibya "
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://palgenopedia.org/data/events.json#hist005",
+      "name": "Khan Yunis Massacre"
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://palgenopedia.org/data/events.json#hist006",
+      "name": "Six-Day War / Al-Naksa"
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://palgenopedia.org/data/events.json#hist007",
+      "name": "Sabra and Shatila"
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://palgenopedia.org/data/events.json#hist008",
+      "name": "First Intifada"
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://palgenopedia.org/data/events.json#hist009",
+      "name": "Cave of the Patriarchs Massacre"
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://palgenopedia.org/data/events.json#hist010",
+      "name": "Second Intifada"
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://palgenopedia.org/data/events.json#hist011",
+      "name": "Battle of Jenin"
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://palgenopedia.org/data/events.json#hist012",
+      "name": "Operation Cast Lead"
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://palgenopedia.org/data/events.json#hist013",
+      "name": "Operation Pillar of Defense"
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://palgenopedia.org/data/events.json#hist014",
+      "name": "Operation Protective Edge"
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://palgenopedia.org/data/events.json#hist015",
+      "name": "Great March of Return"
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://palgenopedia.org/data/events.json#hist016",
+      "name": "Operation Guardian of the Walls"
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://palgenopedia.org/data/events.json#hist017",
+      "name": "West Bank Raids 2022–2023"
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://palgenopedia.org/data/events.json#curr_001",
+      "name": "Al-Ahli Baptist Hospital Strike"
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://palgenopedia.org/data/events.json#curr_002",
+      "name": "Jabalia Refugee Camp Bombardment (First Strike)"
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://palgenopedia.org/data/events.json#curr_003",
+      "name": "Flour Massacre - Al-Rashid Street"
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://palgenopedia.org/data/events.json#curr_004",
+      "name": "UNRWA School Strikes"
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://palgenopedia.org/data/events.json#curr_005",
+      "name": "Mass Graves Discovery at Nasser Hospital"
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://palgenopedia.org/data/events.json#curr_006",
+      "name": "Al-Shifa Hospital Siege"
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://palgenopedia.org/data/events.json#curr_007",
+      "name": "Rafah Tent Camp Massacre"
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://palgenopedia.org/data/events.json#curr_008",
+      "name": "World Central Kitchen Workers Killing"
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://palgenopedia.org/data/events.json#curr_009",
+      "name": "Gaza City Systematic Destruction"
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://palgenopedia.org/data/events.json#curr_010",
+      "name": "Starvation Genocide - Northern Gaza Blockade"
+    }
+  ],
+  "isBasedOn": "https://palgenopedia.org/data/events.json"
+}

@@ -1,0 +1,1343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1948 Nakba - Ethnically Cleansed Villages Documentation</title>
+    <meta name="description" content="Interactive map of 418 Palestinian villages depopulated or destroyed during the Nakba of 1948, with district, date of depopulation, and what stands on each site today.">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.Default.css" />
+
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --success-color: #27ae60;
+            --warning-color: #f39c12;
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8f9fa;
+            --text-primary: #2c3e50;
+            --text-secondary: #7f8c8d;
+            --border-color: #dee2e6;
+            --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        [data-theme="dark"] {
+            --primary-color: #ffffff;
+            --bg-primary: #1a1a1a;
+            --bg-secondary: #2d3436;
+            --text-primary: #ffffff;
+            --text-secondary: #b2bec3;
+            --border-color: #4a4a4a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #c0392b, #8e44ad);
+            color: white;
+            padding: 2rem 0;
+            box-shadow: var(--shadow-md);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .stats-banner {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            box-shadow: var(--shadow-md);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1.5rem;
+            text-align: center;
+        }
+
+        .stat-card {
+            background: var(--bg-primary);
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            margin-bottom: 0.25rem;
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .view-controls {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .view-btn {
+            background: var(--bg-primary);
+            border: 2px solid var(--border-color);
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        .view-btn:hover {
+            border-color: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+        .view-btn.active {
+            background: var(--secondary-color);
+            color: white;
+            border-color: var(--secondary-color);
+        }
+
+        .filters {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            align-items: center;
+            flex: 1;
+        }
+
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+
+        .filter-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+        }
+
+        select, input {
+            padding: 0.5rem 0.75rem;
+            border: 2px solid var(--border-color);
+            border-radius: 6px;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            font-size: 0.9rem;
+        }
+
+        .search-input {
+            min-width: 250px;
+        }
+
+        .view-section {
+            display: none;
+        }
+
+        .view-section.active {
+            display: block;
+        }
+
+        #map {
+            height: 700px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-md);
+        }
+
+        .timeline-container {
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            padding: 2rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .timeline-item {
+            background: var(--bg-primary);
+            border-left: 4px solid var(--accent-color);
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            transition: all 0.2s;
+        }
+
+        .timeline-item:hover {
+            transform: translateX(5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .timeline-date {
+            font-weight: 700;
+            color: var(--accent-color);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-village {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .timeline-cause {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .village-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .village-card {
+            background: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .village-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--secondary-color);
+        }
+
+        .village-name {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.75rem;
+        }
+
+        .village-info {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .info-row {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .info-label {
+            font-weight: 600;
+            color: var(--text-secondary);
+            min-width: 60px;
+        }
+
+        .cause-badge {
+            background: var(--accent-color);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 0.5rem;
+        }
+
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+            padding: 1rem;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: var(--bg-primary);
+            border-radius: 12px;
+            max-width: 700px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+        }
+
+        .modal-header {
+            padding: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+            color: var(--text-secondary);
+            padding: 0;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            transition: all 0.2s;
+        }
+
+        .modal-close:hover {
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+        }
+
+        .modal-body {
+            padding: 1.5rem;
+        }
+
+        .detail-section {
+            margin-bottom: 1.5rem;
+        }
+
+        .detail-section h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-primary);
+        }
+
+        .detail-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .detail-item {
+            background: var(--bg-secondary);
+            padding: 1rem;
+            border-radius: 8px;
+        }
+
+        .legend {
+            background: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .legend-title {
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .legend-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+        }
+
+        .legend-color {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            border: 2px solid white;
+        }
+
+        .source-attribution {
+            background: rgba(231, 76, 60, 0.1);
+            border-left: 4px solid var(--accent-color);
+            padding: 1rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+
+        .source-attribution h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .source-attribution p {
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .detail-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .village-grid {
+                grid-template-columns: 1fr;
+            }
+
+            #map {
+                height: 500px;
+            }
+        }
+
+        .loading {
+            text-align: center;
+            padding: 3rem;
+            color: var(--text-secondary);
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 3rem;
+            color: var(--text-secondary);
+        }
+    </style>
+<!-- SEO_START - generated by tools/seo_inject.py - do not edit by hand -->
+    <link rel="canonical" href="https://palgenopedia.org/Pages/nakba_villages_map.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="PalGenoPedia">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="1948 Nakba - Ethnically Cleansed Villages Documentation">
+    <meta property="og:description" content="Interactive map of 418 Palestinian villages depopulated or destroyed during the Nakba of 1948, with district, date of depopulation, and what stands on each site today.">
+    <meta property="og:url" content="https://palgenopedia.org/Pages/nakba_villages_map.html">
+    <meta property="og:image" content="https://palgenopedia.org/images/og-card.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="PalGenoPedia - documented war crimes, massacres and humanitarian violations concerning Palestine, 1948 to present">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="1948 Nakba - Ethnically Cleansed Villages Documentation">
+    <meta name="twitter:description" content="Interactive map of 418 Palestinian villages depopulated or destroyed during the Nakba of 1948, with district, date of depopulation, and what stands on each site today.">
+    <meta name="twitter:image" content="https://palgenopedia.org/images/og-card.png">
+    <meta name="robots" content="noindex, follow">
+    <link rel="alternate" type="application/atom+xml" title="PalGenoPedia - documented events" href="../feed.xml">
+    <link rel="alternate" type="application/rss+xml" title="PalGenoPedia - documented events" href="../feed.rss">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "@id": "https://palgenopedia.org/Pages/nakba_villages_map.html#page",
+  "url": "https://palgenopedia.org/Pages/nakba_villages_map.html",
+  "name": "1948 Nakba - Ethnically Cleansed Villages Documentation",
+  "description": "Interactive map of 418 Palestinian villages depopulated or destroyed during the Nakba of 1948, with district, date of depopulation, and what stands on each site today.",
+  "inLanguage": "en",
+  "isPartOf": {
+    "@id": "https://palgenopedia.org/#website"
+  },
+  "publisher": {
+    "@id": "https://palgenopedia.org/#org"
+  }
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://palgenopedia.org/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "1948 Nakba",
+      "item": "https://palgenopedia.org/Pages/nakba_villages_map.html"
+    }
+  ]
+}
+    </script>
+    <!-- SEO_END -->
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div>
+                    <h1>📜 1948 Nakba: Ethnically Cleansed Villages</h1>
+                    <p class="subtitle">Comprehensive documentation of 418 Palestinian villages depopulated during the 1948 ethnic cleansing</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container" style="margin-top: 2rem;">
+        <!-- Statistics Banner -->
+        <div class="stats-banner">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number" id="totalVillages">418</div>
+                    <div class="stat-label">Villages Destroyed</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="totalPopulation">~750,000</div>
+                    <div class="stat-label">Palestinians Displaced</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">1948</div>
+                    <div class="stat-label">Year of Nakba</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="daysCount">280</div>
+                    <div class="stat-label">Days of Ethnic Cleansing</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Source Attribution -->
+        <div class="source-attribution">
+            <h3>📚 Data Sources & Methodology</h3>
+            <p><strong>Based on:</strong> Israeli historian Benny Morris's "The Birth of the Palestinian Refugee Problem" and declassified Israeli military archives. This data represents verified documentation of the systematic ethnic cleansing of Palestinian villages during 1948.</p>
+            <p><strong>Cause Codes:</strong> F=Fear of attack, M=Military assault, C=Capitulation/Surrender, W=Whispering campaign, E=Expulsion by force, A=Abandonment, I=Influenced by fall of neighboring village, L=Late expulsion, R=Remained initially then expelled</p>
+        </div>
+
+        <!-- View Controls -->
+        <div class="view-controls">
+            <button class="view-btn active" data-view="map">🗺️ Map View</button>
+            <button class="view-btn" data-view="timeline">📅 Timeline</button>
+            <button class="view-btn" data-view="list">📋 Village List</button>
+
+            <div class="filters">
+                <div class="filter-group">
+                    <label class="filter-label">Filter by Month</label>
+                    <select id="monthFilter">
+                        <option value="">All Months</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label class="filter-label">Filter by Cause</label>
+                    <select id="causeFilter">
+                        <option value="">All Causes</option>
+                        <option value="M">Military Assault</option>
+                        <option value="F">Fear of Attack</option>
+                        <option value="E">Forced Expulsion</option>
+                        <option value="C">Capitulation</option>
+                        <option value="W">Whispering Campaign</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label class="filter-label">Search Villages</label>
+                    <input type="text" id="searchInput" class="search-input" placeholder="Search village names...">
+                </div>
+            </div>
+        </div>
+
+        <!-- Cause Legend -->
+        <div class="legend">
+            <div class="legend-title">Ethnic Cleansing Methods</div>
+            <div class="legend-items">
+                <div class="legend-item">
+                    <span class="legend-color" style="background: #dc3545;"></span>
+                    <span>M - Military Assault</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-color" style="background: #fd7e14;"></span>
+                    <span>F - Fear of Attack</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-color" style="background: #6f42c1;"></span>
+                    <span>E - Forced Expulsion</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-color" style="background: #e83e8c;"></span>
+                    <span>C - Capitulation</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-color" style="background: #20c997;"></span>
+                    <span>W - Whispering Campaign</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-color" style="background: #0d6efd;"></span>
+                    <span>A - Abandonment</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Map View -->
+        <div id="mapView" class="view-section active">
+            <div id="map"></div>
+        </div>
+
+        <!-- Timeline View -->
+        <div id="timelineView" class="view-section">
+            <div class="timeline-container" id="timelineContainer">
+                <div class="loading">Loading timeline data...</div>
+            </div>
+        </div>
+
+        <!-- List View -->
+        <div id="listView" class="view-section">
+            <div class="village-grid" id="villageGrid">
+                <div class="loading">Loading village data...</div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Village Detail Modal -->
+    <div class="modal" id="villageModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Village Details</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Content will be populated dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.min.js"></script>
+
+    <script>
+        // Parse CSV data
+        const csvData = `id,village_name,ethnic_cleansing_cause,date
+1,Abil AL Qamh,"F,C",10/5/1948
+2,Zuq Al Fauqani,"W,M",21/05/1948
+3,Sanbariya,,05/1948 (?)
+4,Shauqa Al Tahta,F,14/05/1948
+5,Khisas,"W,C,E",25/05/1948 - 06/1949
+6,Hunin,"F,E",03/05/1948 - 09/1948
+7,Mansura,W,25/05/1948
+8,Lazzaza,W,21/05/1948
+9,Zuq Al Tahtanii,C,11/5/1948
+10,Khalisa,"C,W",11/5/1948
+11,Madahil,F,30/04/1948
+12,Qeitiya,"W,E",19/05/1948 - 06/1948
+13,Abisiyya,C,25/05/1948
+14,Dawwara,W,25/05/1948
+15,Salihiya,"F,W",25/05/1948
+16,Muftakhira,F,16/05/1948
+17,Zawiya,"M,E",24/05/1948
+18,Buweiziya,C,11/5/1948
+19,Na'ima,C,14/05/1948
+20,Hamra,"F,M",1/5/1948
+21,Ghuraba,F,28/05/1948
+22,Khirbet Khiyam Al Walid,"F,I",1/5/1948
+23,Jahula,,05/1948 (?)
+24,Qadas,C,28/05/1948
+25,Malikiya,"M,E",28/05/1948
+26,Nabi Yusha,"M,E",16/05/1948
+27,Beisamun,W,25/05/1948
+28,Mallaha,W,25/05/1948
+29,Darbashiya,,05/1948 (?)
+30,Ulmaniya,"M,E",20/04/1948
+31,Arab Zubeih,F,20/04/1948
+32,Deishum,"M,E",30/10/1948
+33,Alma,"M,E",30/10/1948
+34,Saliha,"M,E",30/10/1948
+35,Fara,"M,E",30/10/1948
+36,Husseiniya,C,21/04/1948
+37,Tuleil,,04/1948 (?)
+38,Kafr Bir'im,E,Nov-48
+39,Ras Al Ahmar,M,30/10/1948
+40,Dallata,(?),(?)
+41,Marus,C,26/05/1948
+42,Kirad Al Ghannama,C,22/04/1948
+43,Kirad Al Baqqara,C,22/04/1948
+44,Teitaba,,05/1948 (?)
+45,Safsaf,"M, F",29/10/1948
+46,Qaddita,C,11/5/1948
+47,Ammuqa,M,24/05/1948
+48,Qabba'a,M,26/05/1948
+49,Weiziya,,05/1948 (?)
+50,Mughr Al Kheit,M,2/5/1948
+51,Fir'im,M,26/05/1948
+52,Ja'una,C,9/5/1948
+53,Ein Al Zeitun,M,2/5/1948
+54,Biriya,M,2/5/1948
+55,(Arab) Safad,M,11/05/1948 - 12/05/1948
+56,Meirun,C,10/05/1948 - 12/05/1948
+57,Sammu'i,C,12/5/1948
+58,Dhahiriya Tahta,C,10/5/1948
+59,Mansurat Al Kheit,M,18/01/1948
+60,Sa'sa,"M, E ",30/10/1948
+61,Ghabbatiya,,30/10/1948 (?)
+62,Sabalan,,30/10/1948 (?)
+63,Deir Al Qasi,M,30/10/1948
+64,Suhmata,M,30/10/1948
+65,Mansura,E,Nov-48
+66,Tarbikha,E,Nov-48
+67,Suruh,E,Nov-48
+68,Nabi Rubin,E,Nov-48
+69,Iqrit,E,Nov-48
+70,Farradiya,E,Feb-48
+71,Kafr I'nan,E,Feb-48
+72,Shuna,,(?)
+73,Yaquq,,05/1948 (?)
+74,Qudeiriya,"M, E ",4/5/1948
+75,Arab AL Suyyad,"M, E ",4/5/1948
+76,Zanghariya,"M, E ",4/5/1948
+77,Arab Al Shamalina (Al Tabigha),"M, E ",4/5/1948
+78,Bassa,"M, E ",14/05/1948
+79,Zib,M,14/05/1948
+80,Tell,M,21/05/1948
+81,Kabri,"F, M",05/05/1948 - 21/05/1948
+82,Nahr,M,21/05/1948
+83,Umm Al Faraj,M,21/05/1948
+84,Ghabasiya,E,May-48
+85,Amqa,M,10/07/1948 - 11/07/1948
+86,Kuweikat,M,10/7/1948
+87,Sumeiriya,M,14/05/1948
+88,Manshiya (near Acre),M,14/05/1948
+89,Birwa,M,11/07/1948 (?)
+90,Damun,M,15/07/1948 - 16/07/1948
+91,Ruweis,M,15/07/1948 - 16/07/1948
+92,Majdal,"M, C",22/04/1948
+93,Ghuweir Abu Shusha,"M, C",21/04/1948 - 28/04/1948
+94,Hittin,"F, M",16/07/1948 -17/07/1948
+95,Nimrin,"F, M",16/07/1948 - 17/07/1948
+96,Lubya,"F, M",16/07/1948 - 17/07/1948
+97,Khirbet Nasir Al Din,"M, C, F",12/4/1948
+98,(Arab) Tiberias,M,18/04/1948
+99,Manara,M,Mar-48
+100,Shajara,M,6/5/1948
+101,Kafr Sabt,C,22/04/1948
+102,Samra,C,21/04/1948
+103,Samakh,M,28/04/1948
+104,Ubeidiya,F,5/3/1948
+105,Ma'dhar,A,6/4/1948
+106,Hadatha,A,Jun-48
+107,Ulam,A,6/14/1948
+108,Sirin,A,6/4/1948
+109,Tira,W,15/04/1948
+110,Indur,"C, M",24/05/1948
+111,Danna,E,28/05/1948
+112,Bira,C,16/05/1948
+113,Yubla,C,16/05/1948
+114,Jabbul,"C, F",18/05/1948
+115,Kaukab Al Hawa,M,16/05/1948
+116,Arab Al Subeih,C,19/04/1948
+117,Murassas,C,16/05/1948
+118,Kafra,C,16/05/1948
+119,Hamidiya,C,12/5/1948
+120,Quimiya,F,26/03/1948
+121,Zir'in,M,28/05/1948
+122,Mazar,M,30/05/1948
+123,Nuris,"M, F",29/05/1948 - 30/05/1948
+124,Khirbet Al Jaufa,C,12/5/1948
+125,Tall Al Shauk,C,12/5/1948
+126,Beisan,"M,C, E",May-48
+127,Ashrafiya,C,12/5/1948
+128,Farwana,M,11/5/1948
+129,Samiriya,M,27/05/1948
+130,Arida,C,20/05/1948
+131,Arab Al Khuneizir,C,20/05/1948
+132,Arab Al Safa,C,20/05/1948
+133,Arab Al Zarra'a,C,20/05/1948
+134,Arab Al Ghazawiya,C,20/05/1948
+135,Arab Al Bawati,C,16/05/1948 - 20/05/1948
+136,Arab Al Bashatiwa,C,16/05/1948
+137,Mujeidil,M,15/07/1948
+138,Ma'lul,M,15/07/1948
+139,Saffuriya,"M, E ",16/07/1948 - 01/1949
+140,Beit Lahm,M,Apr-48
+141,Waldheim (Um Al Amad),M,Apr-48
+142,Khirbet Ras Ali,,(?)
+143,Yajur,"M, C",25/04/1948
+144,Balad Al Sheikh,"M, C",25/04/1948
+145,Arab Al Ghawarina,"W, M",Apr-48
+146,Wadi'Ara,F,27/02/1948
+147,Lajjun,M,30/05/1948
+148,Mansi (Arab Baniha),M,12/04/1948 - 13/04/1948
+149,Naghnaghiya,M,12/04/1948 - 13/04/1949
+150,Ghubayya Al Fauqa,M,08/04/1948 - 09/04/1948
+151,Ghubayya Al Tahta,M,08/04/1948 - 09/04/1948
+152,Abu Shusha,M,09/04/1948 - 10/04/1948
+153,Abu Zureiq,"M, E ",12/04/1948 - 13/04/1948
+154,Qira Wa Qamun,W,03/1948
+155,Kafrin,M,12-04/1948 - 13/04/1948
+156,Buteimat,F,05/1948
+157,Umm Al Shauf,M,12/05/1948 - 14/05/1948
+158,Khubbeiza,M,12/05/1948 - 14/05/1948
+159,Sabbarin,M,12/05/1948 - 14/05/1948
+160,Sindayana,M,12/05/1948 - 14/05/1948
+161,Bureika,C,05/05/1948
+162,Damoyat Al Ruha,"W, M",03/1948
+163,Rihaniya,,(?)
+164,Umm Al Zinat,F,05/1948
+165,Khirbat Qumbaza,,05/1948 (?)
+166,Ein Ghazal,M,24/07/1948 - 26/07/1948
+167,Ijzim,M,24/07/1948 - 26/07/1948
+168,Jab'a,M,24/07/1948 - 26/07/1948
+169,Mazar,M,15/07/1948
+170,Ein Haud,M,15/07/1948
+171,Qannir,"C, F",25/04/1948
+172,(Arab) Haifa,"M, A",21/04/1948 - 01/05/1948
+173,Tira,M,16/07/1948
+174,Sarafand,"M, C",16/07/1948
+175,Kaft Lam,"M, C",16/07/1948
+176,Tantura,E,21/05/1948
+177,Qisarya,E,02/1948
+178,Khirbet Al Sarkas,E,15/04/1948
+179,Dumeira,E,01/04/1948
+180,Arab Al Fuqara,E,10/04/1948
+181,Arab Al Nufeiat,E,10/04/1948
+182,Wadi Al Hawarith,"M, F",15/03/1948
+183,Raml Zeita,,(?)
+184,Khirbet Manshiya,F,15/04/1948
+185,Khirbet Zalafa,F,15/04/1948
+186,Wadi Qabbani,,(?)
+187,Qaqun,M,05/06/1948
+188,Umm Khalid,,(?)
+189,Khirbet Beit Lid,F,05/04/1948
+190,Birket Ramadan,,(?)
+191,Miska,E,15/04/1948
+192,Tabsar (Khirbet Azzun),"F, E",03/04/1948
+193,Kafr Saba,M,15/05/1948
+194,Biyar Adas,M,12/04/1948
+195,Haram (Sayyidna Ali),F,03/02/1948
+196,Jalil (Jalil or Ijlil Al Qibliyya and Jalil or Ijlil Al Shamaliyya),F,03/1948 - 03/04/1948
+197,Arab Abu Kischk,"F, C",30/03/1948
+198,Arab Al Sawalima,"F, C",30/03/1948
+199,Mirr,F,02/1948 - 03/1948
+200,Cheikh Muwannis,"M, F",30/03/1948
+201,Ras Al Ein,M,13/07/1948
+202,Majdal Yaba,M,13/07/1948
+203,Fajja,W,15/05/1948
+204,Jammasin,F,17/03/1948
+205,Mas'udiya (Summeil),F,25/12/1947
+206,Sarona,,(?)
+207,Jaffa,M,04/1948 - 05/1948
+208,Salama,M,25/04/1948
+209,Kheiriya,M,25/04/1948
+210,Muzeiri'a,,(?)
+211,Qula,M,10/07/1948
+212,Rantiya,M,28/04/1948
+213,Yahudiya (Al Abbasiyya),M,04/05/1948
+214,Saqiya,M,25/04/1948
+215,Yazur,"C, M",01/05/1948
+216,Tira (Tirat Dandan),M,10/07/1948
+217,Wilhelma,M,10/07/1948
+218,Kafr Ana,M,25/04/1948
+219,Beit Dajan,C,25/04/1948
+220,Safiriya,,(?)
+221,Deir Tarif,M,10/07/1948
+222,Beit Nabala,A,13/05/1948
+223,Jindas,,(?)
+224,Haditha,M,12/07/1948
+225,Sarafand Al Amar,,(?)
+226,Lydda,"E, M",10/07/1948 - 13/07/1948
+227,Ramle,"E, M",10/07/1948 - 13/07/1948
+228,Deir Abu Salama,M,13/07/1948
+229,Khirbet AL Dhuheiriya,M,10/07/1948
+230,Jimzu,M,10/07/1948
+231,Khirbet Zakariya,"M, C",12/07/1948 - 13/07/1948
+232,Daniyal,M,10/07/1948
+233,Abu Al Fadl (Arab Al Satariyya),C,09/05/1948
+234,Sarafand AL Kharab,F,20/04/1948
+235,Shilta,M,15/07/1948 - 16/07/1948
+236,Burj,M,15/07/1948 - 16/07/1948
+237,Bir Ma'in,M,15/07/1948 - 16/07/1948
+238,Beit Shanna,M,15/07/1948 -16/07/1948
+239,Salbit,M,15/07/1948 - 16/07/1948
+240,Qubab,M,15/05/1948
+241,Barfiliya,M,14/07/1948
+242,Kharruba,M,12/07/1948 - 15/07/1948
+243,Khirbet Al Kunaisiya,M,10/07/1948
+244,Innaba,M,10/07/1948
+245,Barriya,M,10/07/1948 - 13/07/1948
+246,Abu Shusha (near Ramle),M,14/05/1948
+247,Na'ana,F,14/05/1948
+248,Bir Salim,M,09/05/1948
+249,Wadi Hunein,C,17/04/1948
+250,Zarnuqa,E,27/05/1948 - 28/05/1948
+251,Qubeiba,E,27/05/1948 - 28/05/1948
+252,Aqir,M,05/1948
+253,Nabi Rubin ,E,01/06/1948
+254,Arab Sukrir (Arab Abu Suweirih),M,25/05/1948
+255,Yibna,"M, E ",04/06/1948
+256,Mighrar,M,18/05/1948
+257,Bash-Shit,M,13/05/1948
+258,Qatra,"M, E ",05/1948
+259,Seidun,,(?)
+260,Mansura,M,20/04/1948
+261,Khulda,M,06/04/1948
+262,Shashma,C,14/05/1948
+263,Mukheizin,M,20/04/1948
+264,Sajad,,(?)
+265,Qazaza,C,09/07/1948 - 10/07/1948
+266,Jilya,C,09/07/1948 - 10/07/1948
+267,Kheima,,(?)
+268,Huraniya,,(?)
+269,Tina,M,08/07/1948 - 09/07/1948
+270,Idhnibba,C,09/07/1948 -10/07/1948
+271,Mughallis,C,09/07/1948 - 10/07/1948
+272,Bureij,,(?)
+273,Masmiya Al Kabira,M,08/07/1948 - 09/07/1948
+274,Masmiya Al Saghira,M,08/07/1948 - 09/07/1948
+275,Qastina,"M, C",09/07/1948
+276,Tall AL Turmus,F,07/1948
+277,Yasur,M,11/06/1948
+278,Batani Al Sharqi,M,13/05/1948
+279,Batani AL Gharbi,M,13/05/1948
+280,Barqa,M,13/05/1948
+281,Isdud,"M, E ",28/10/1948
+282,Beit Datas,M,11/05/1948
+283,Sawafir AL Shamaliyya,F,18/05/1948
+284,Sawafir Al Gharbiyya,F,18/05/1948
+285,Sawafir Al Sharqiyya,F,18/05/1948
+286,Hamam,M,04/11/1948
+287,Julis,M,11/06/1948
+288,Ibdis,M,08/07/1948 - 09/07/1948
+289,Jaladiya,,(?)
+290,Bi'lin,,(?)
+291,Barqusiya,,(?)
+292,Tel AL Safi,M,09/07/1948 - 10/07/1948
+293,Deir Al Dubban,M,23/10/1948 - 24/10/1948
+294,Ajjur,M,23/07/1948 - 24/07/1948
+295,Zakariya,E,06/1950
+296,Ra'na,M,22/10/1948 - 23/10/1948
+297,Zikrin,M,22/10/1948 - 23/10/1948
+298,Summeil,M,07/1948
+299,Zeita,M,17/07/1948 - 18/07/1948
+300,Juseir,M,17/07/1948 - 18/07/1948
+301,Hatta,M,17/07/1948 - 18/07/1948
+302,Katariya,M,17/07/1948 - 18/07/1948
+303,Beit'Affa,,(?)
+304,Kaukaba,C,12/05/1948
+305,Beit Tima,M,18/10/1948 - 19/10/1948
+306,Majdal (Ashkelon),"M, R",04/11/1948 - 05/11/1948
+307,Jura,M,04/11/1948 - 05/11/1948
+308,Khirbat Khisas,M,04/11/1948 - 05/11/1948
+309,Ni'ilya,M,04/11/1948 - 05/11/1948
+310,Barbara,M,04/11/1948 - 05/11/1948
+311,Jiyya,M,04/1/1948 - 05/11/1948
+312,Beit Jirja,,(?)
+313,Deir Suneid,,(?)
+314,Dimra,F,11/1948
+315,Najd,E,12/05/1948
+316,Sumsum,E,12/05/1948
+317,Huleiqat,C,12/05/1948
+318,Burayr,M,12/05/1948
+319,Faluja,E,02/1949 - 03/1949
+320,Iraq AL Manshiya,E,02/1949 - 06/1949
+321,Kidna,M,22/10/1948 - 23/10/1948
+322,Beit Jibrin,M,29/10/1948
+323,Qubeiba,M,28/10/1948
+324,Dawayima,M,29/10/1948
+325,Deir Nakh-khas,M,29/10/1948
+326,Khirbet Umm Burj,,(?)
+327,Deir Muheisin,M,06/04/1948
+328,Beit Jiz,M,20/04/1948
+329,Beit Susin,M,20/04/1948
+330,Islin,M,18/1948
+331,Ishwa,M,18/07/1948
+332,Sar'a,M,18/07/1948
+333,Deir Rafat,M,18/07/1948
+334,Artuf,M,18/07/1948
+335,Deiraban,M,19/10/1948 - 20/10/1948
+336,Beit Mahsir,M,10/05/1948 - 11/05/1948
+337,Deir Aiyib,M,04/1948
+338,Kasla,M,17/07/1948 - 18/07/1948
+339,Deir AL Hawa,M,19/10/1948 - 20/10/1948
+340,Sufla,M,19/10/1948 - 20/10/1948
+341,Jarash,M,21/10/1948
+342,Beit Nattif,M,21/10/1948
+343,Beit Itab,M,21/10/1948
+344,Beit Umm AL Meis,M,21/10/1948
+345,Saris,M,16/04/1948 - 17/04/1948
+346,Allar,M,22/10/1948
+347,Ras Abu Ammar,L,21/10/1948
+348,Qabu,M,22/10/1948 - 23/10/1948
+349,Walaja,M,21/10/1948
+350,Khirbet Al Umir,M,21/10/1948
+351,Deir AL Sheick,M,21/10/1948
+352,Aqqur,M,13/07/1948 - 14/07/1948
+353,Suba,M,13/07/1948
+354,Sataf,M,13/07/1948 - 14/07/1948
+355,Jura,,(?)
+356,Qastal,M,03/04/1948
+357,Beit Naqquba,M,04/1948
+358,Beit Thul,,(?)
+359,Qaluniya,M,04/1948
+360,Ein Karim,C,10/04/1948 - 21/04/1948
+361,Maliha,C,21/04/1948
+362,Deir Yassin,"M, E ",09/04/1948 - 10/04/1948
+363,Lifta,M,01/1948
+364,Jammama,M,22/05/1948
+365,Arab Al Jurabat,,(?)
+366,Huj,E,31/05/1948
+367,Muharraqa,M,25/05/1948
+368,Koufakha,M,25/05/1948
+369,Beersheba,"M, E ",21/10/1948
+370,Nuqeib (Arab Argibat),E,14/05/1948
+371,Khirbat Sarona (Arab Al Masharqa),,(?)
+372,Arab Al Mawasi (Khirbet Al Wa'ara Al Sawda),E,2/11/1948
+373,Arab Al Samakiya (Samakiya/Talhum),,(?)
+374,Bayarrat Hannun,"F, E",Apr-48
+375,Arab Al Bara (Barrat Qisarya),"F, E",04/1948
+376,Hirbiya,"M, E ",10/1948 - 11/1948
+377,Shu'ut,"F, M",08/1948
+378,Arab Al Sakhina,,(?)
+379,Khan Al Duweir,,(?)
+380,Iraq Suweidan,M,08/07/1948
+381,Wa'arat Al Sarris,,(?)
+382,Hawsha,M,Nov-48
+383,Khirbet Kasayir,M,Nov-48
+384,Khirbet Al Damun,"F, M",04/1948
+385,Khirbet Lid Al Awadin,,(?)
+386,Ein Al Mansi,M,04/1948
+387,Atlit,,(?)
+388,Majdal Yaba (Majdal Al Sadiq),M,10/07/1948
+389,Arab Abu Rizik,F,03/1948 - 04/1948
+390,Manshiya,,(?)
+391,Harrawi,,(?)
+392,Arab Al Suyyad,,(?)`;
+
+        // Approximate coordinates for Palestine region (since exact coords aren't in CSV)
+        const palestineCenter = [31.9466, 35.2137];
+
+        // Parse CSV into objects
+        function parseCSV(csv) {
+            const lines = csv.trim().split('\n');
+            const headers = lines[0].split(',');
+            const data = [];
+
+            for (let i = 1; i < lines.length; i++) {
+                const values = lines[i].split(',');
+                if (values.length >= 3) {
+                    const obj = {
+                        id: values[0],
+                        village_name: values[1].replace(/"/g, ''),
+                        ethnic_cleansing_cause: values[2].replace(/"/g, ''),
+                        date: values[3] ? values[3].replace(/"/g, '') : 'Unknown'
+                    };
+                    data.push(obj);
+                }
+            }
+            return data;
+        }
+
+        const villages = parseCSV(csvData);
+
+        // Helper functions
+        function getCauseColor(cause) {
+            if (!cause) return '#6c757d';
+            if (cause.includes('M')) return '#dc3545';
+            if (cause.includes('F')) return '#fd7e14';
+            if (cause.includes('E')) return '#6f42c1';
+            if (cause.includes('C')) return '#e83e8c';
+            if (cause.includes('W')) return '#20c997';
+            if (cause.includes('A')) return '#0d6efd';
+            return '#6c757d';
+        }
+
+        function getCauseLabel(code) {
+            const labels = {
+                'M': 'Military Assault',
+                'F': 'Fear of Attack',
+                'E': 'Forced Expulsion',
+                'C': 'Capitulation/Surrender',
+                'W': 'Whispering Campaign',
+                'A': 'Abandonment',
+                'I': 'Influenced by Neighbors',
+                'L': 'Late Expulsion',
+                'R': 'Remained then Expelled'
+            };
+            if (!code) return 'Unknown';
+            const causes = code.split(',').map(c => c.trim());
+            return causes.map(c => labels[c] || c).join(', ');
+        }
+
+        function parseDate(dateStr) {
+            if (!dateStr || dateStr === '(?)' || dateStr.includes('?')) return null;
+
+            // Handle different date formats
+            const dateMatch = dateStr.match(/(\d{1,2})\/(\d{1,2})?\/(\d{4})/);
+            if (dateMatch) {
+                const day = dateMatch[1];
+                const month = dateMatch[2] || '01';
+                const year = dateMatch[3];
+                return new Date(`${year}-${month.padStart(2, '0')}-${day.padStart(2, '0')}`);
+            }
+
+            // Handle month-year format
+            const monthMatch = dateStr.match(/(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)-(\d{2})/);
+            if (monthMatch) {
+                const monthMap = {Jan:1,Feb:2,Mar:3,Apr:4,May:5,Jun:6,Jul:7,Aug:8,Sep:9,Oct:10,Nov:11,Dec:12};
+                return new Date(`19${monthMatch[2]}-${monthMap[monthMatch[1]]}-01`);
+            }
+
+            return null;
+        }
+
+        // Initialize map
+        const map = L.map('map').setView(palestineCenter, 8);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        const markerCluster = L.markerClusterGroup();
+
+        // Add markers (with approximate distributed coordinates)
+        villages.forEach((village, index) => {
+            // Distribute markers across Palestine region
+            const latOffset = (Math.random() - 0.5) * 2;
+            const lngOffset = (Math.random() - 0.5) * 2;
+            const coords = [palestineCenter[0] + latOffset, palestineCenter[1] + lngOffset];
+
+            const marker = L.circleMarker(coords, {
+                radius: 8,
+                fillColor: getCauseColor(village.ethnic_cleansing_cause),
+                color: '#fff',
+                weight: 2,
+                opacity: 1,
+                fillOpacity: 0.8
+            });
+
+            marker.bindPopup(`
+                <div style="min-width: 200px;">
+                    <h3 style="margin: 0 0 0.5rem 0; color: #2c3e50;">${village.village_name}</h3>
+                    <p style="margin: 0.25rem 0;"><strong>Date:</strong> ${village.date}</p>
+                    <p style="margin: 0.25rem 0;"><strong>Cause:</strong> ${getCauseLabel(village.ethnic_cleansing_cause)}</p>
+                    <button onclick="showVillageDetail(${village.id})" style="margin-top: 0.5rem; padding: 0.5rem 1rem; background: #3498db; color: white; border: none; border-radius: 4px; cursor: pointer;">View Details</button>
+                </div>
+            `);
+
+            markerCluster.addLayer(marker);
+        });
+
+        map.addLayer(markerCluster);
+
+        // Render Timeline
+        function renderTimeline(data) {
+            const container = document.getElementById('timelineContainer');
+            const sorted = data.filter(v => parseDate(v.date)).sort((a, b) => {
+                const dateA = parseDate(a.date);
+                const dateB = parseDate(b.date);
+                return dateA - dateB;
+            });
+
+            container.innerHTML = sorted.map(village => `
+                <div class="timeline-item" onclick="showVillageDetail(${village.id})">
+                    <div class="timeline-date">${village.date}</div>
+                    <div class="timeline-village">${village.village_name}</div>
+                    <div class="timeline-cause">${getCauseLabel(village.ethnic_cleansing_cause)}</div>
+                </div>
+            `).join('');
+        }
+
+        // Render Village List
+        function renderVillageList(data) {
+            const container = document.getElementById('villageGrid');
+            container.innerHTML = data.map(village => `
+                <div class="village-card" onclick="showVillageDetail(${village.id})">
+                    <div class="village-name">${village.village_name}</div>
+                    <div class="village-info">
+                        <div class="info-row">
+                            <span class="info-label">📅 Date:</span>
+                            <span>${village.date}</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">⚠️ Method:</span>
+                            <span>${getCauseLabel(village.ethnic_cleansing_cause)}</span>
+                        </div>
+                    </div>
+                    <span class="cause-badge" style="background: ${getCauseColor(village.ethnic_cleansing_cause)}">
+                        ${village.ethnic_cleansing_cause || 'Unknown'}
+                    </span>
+                </div>
+            `).join('');
+        }
+
+        // Show village detail modal
+        window.showVillageDetail = function(id) {
+            const village = villages.find(v => v.id == id);
+            if (!village) return;
+
+            const modal = document.getElementById('villageModal');
+            const modalBody = document.getElementById('modalBody');
+            const modalTitle = document.getElementById('modalTitle');
+
+            modalTitle.textContent = village.village_name;
+            modalBody.innerHTML = `
+                <div class="detail-section">
+                    <h4>Basic Information</h4>
+                    <div class="detail-grid">
+                        <div class="detail-item">
+                            <strong>Village ID:</strong>
+                            <div>${village.id}</div>
+                        </div>
+                        <div class="detail-item">
+                            <strong>Date of Cleansing:</strong>
+                            <div>${village.date}</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="detail-section">
+                    <h4>Ethnic Cleansing Details</h4>
+                    <div class="detail-item">
+                        <strong>Method/Cause:</strong>
+                        <div style="margin-top: 0.5rem;">${getCauseLabel(village.ethnic_cleansing_cause)}</div>
+                        <div style="margin-top: 0.5rem;">
+                            <span class="cause-badge" style="background: ${getCauseColor(village.ethnic_cleansing_cause)}">
+                                ${village.ethnic_cleansing_cause || 'Unknown'}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="detail-section">
+                    <h4>📚 Historical Context</h4>
+                    <p style="line-height: 1.6; color: var(--text-secondary);">
+                        ${village.village_name} was one of 418 Palestinian villages systematically depopulated during the 1948 Nakba (Catastrophe).
+                        The ethnic cleansing of this village is documented in Israeli military archives and historical research,
+                        particularly in Benny Morris's "The Birth of the Palestinian Refugee Problem."
+                    </p>
+                </div>
+
+                <div class="detail-section" style="border: none; padding-bottom: 0;">
+                    <div style="background: rgba(231, 76, 60, 0.1); padding: 1rem; border-radius: 8px; border-left: 4px solid var(--accent-color);">
+                        <strong>📖 Source:</strong> Benny Morris, "The Birth of the Palestinian Refugee Problem" based on declassified Israeli military archives
+                    </div>
+                </div>
+            `;
+
+            modal.classList.add('active');
+        };
+
+        // View switching
+        document.querySelectorAll('.view-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.view-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+
+                document.querySelectorAll('.view-section').forEach(s => s.classList.remove('active'));
+                const view = this.dataset.view;
+                document.getElementById(view + 'View').classList.add('active');
+
+                if (view === 'timeline') renderTimeline(villages);
+                if (view === 'list') renderVillageList(villages);
+            });
+        });
+
+        // Close modal
+        document.querySelector('.modal-close').addEventListener('click', () => {
+            document.getElementById('villageModal').classList.remove('active');
+        });
+
+        document.getElementById('villageModal').addEventListener('click', (e) => {
+            if (e.target.id === 'villageModal') {
+                document.getElementById('villageModal').classList.remove('active');
+            }
+        });
+
+        // Populate month filter
+        const months = [...new Set(villages.map(v => {
+            const date = parseDate(v.date);
+            return date ? `${date.getMonth() + 1}/${date.getFullYear()}` : null;
+        }).filter(Boolean))].sort();
+
+        const monthFilter = document.getElementById('monthFilter');
+        months.forEach(month => {
+            const option = document.createElement('option');
+            option.value = month;
+            option.textContent = month;
+            monthFilter.appendChild(option);
+        });
+
+        // Filter functionality
+        function applyFilters() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const monthFilter = document.getElementById('monthFilter').value;
+            const causeFilter = document.getElementById('causeFilter').value;
+
+            const filtered = villages.filter(village => {
+                const matchesSearch = village.village_name.toLowerCase().includes(searchTerm);
+                const matchesMonth = !monthFilter || village.date.includes(monthFilter);
+                const matchesCause = !causeFilter || (village.ethnic_cleansing_cause && village.ethnic_cleansing_cause.includes(causeFilter));
+
+                return matchesSearch && matchesMonth && matchesCause;
+            });
+
+            renderVillageList(filtered);
+
+            // Update stats
+            document.getElementById('totalVillages').textContent = filtered.length;
+        }
+
+        document.getElementById('searchInput').addEventListener('input', applyFilters);
+        document.getElementById('monthFilter').addEventListener('change', applyFilters);
+        document.getElementById('causeFilter').addEventListener('change', applyFilters);
+
+        // Initial render
+        renderVillageList(villages);
+    </script>
+</body>
+</html>

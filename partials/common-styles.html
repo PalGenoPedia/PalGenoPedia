@@ -1,0 +1,703 @@
+<!-- common-styles.html - Universal Footer Navigation Component with Complete Page Styling -->
+<!-- Import this file into all pages to replace navigation sections -->
+
+<style>
+    /* ===== UNIVERSAL CSS VARIABLES ===== */
+    :root {
+        /* Color Palette */
+        --primary-color: #dc3545;
+        --secondary-color: #6c757d;
+        --accent-color: #ff6b35;
+        --accent-color-dark: #e55a2b;
+        --success-color: #28a745;
+        --warning-color: #ffc107;
+        --danger-color: #dc3545;
+        --info-color: #17a2b8;
+
+        /* Background Colors */
+        --bg-primary: #ffffff;
+        --bg-secondary: #f8f9fa;
+        --bg-tertiary: #e9ecef;
+
+        /* Surface Colors */
+        --surface-color: #ffffff;
+        --surface-elevated: #ffffff;
+
+        /* Text Colors */
+        --text-primary: #212529;
+        --text-secondary: #6c757d;
+        --text-muted: #adb5bd;
+        --text-inverse: #ffffff;
+
+        /* Border Colors */
+        --border-color: #dee2e6;
+        --border-light: #e9ecef;
+        --border-dark: #adb5bd;
+
+        /* Shadows */
+        --shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+        --shadow-md: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        --shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+
+        /* Border Radius */
+        --border-radius: 0.375rem;
+        --border-radius-lg: 0.75rem;
+
+        /* Spacing */
+        --spacing-xs: 0.25rem;
+        --spacing-sm: 0.5rem;
+        --spacing-md: 1rem;
+        --spacing-lg: 1.5rem;
+        --spacing-xl: 3rem;
+
+        /* Transitions */
+        --transition-base: all 0.2s ease;
+        --transition-fast: all 0.1s ease;
+        --transition-slow: all 0.3s ease;
+
+        /* Typography */
+        --font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        --font-size-base: 1rem;
+        --font-size-sm: 0.875rem;
+        --font-size-lg: 1.125rem;
+        --line-height-base: 1.5;
+    }
+
+    /* Dark Theme Variables */
+    [data-theme="dark"] {
+        --primary-color: #ff6b6b;
+        --accent-color: #ff6b35;
+        --accent-color-dark: #e55a2b;
+
+        --bg-primary: #1a1a1a;
+        --bg-secondary: #2d2d2d;
+        --bg-tertiary: #404040;
+
+        --surface-color: #1a1a1a;
+        --surface-elevated: #2d2d2d;
+
+        --text-primary: #ffffff;
+        --text-secondary: #cccccc;
+        --text-muted: #888888;
+        --text-inverse: #000000;
+
+        --border-color: #404040;
+        --border-light: #333333;
+        --border-dark: #555555;
+
+        --shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.3);
+        --shadow-md: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
+        --shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.5);
+    }
+
+    /* ===== UNIVERSAL BASE STYLES ===== */
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: var(--font-family-base);
+        background: var(--bg-primary);
+        color: var(--text-primary);
+        margin: 0;
+        padding: 0;
+        line-height: var(--line-height-base);
+        transition: var(--transition-base);
+    }
+
+    /* ===== SOCIAL MEDIA SHARE SECTION (FOOTER) ===== */
+
+    .footer-social-share {
+        background: linear-gradient(135deg, var(--bg-secondary), var(--bg-tertiary));
+        border-top: 2px solid var(--accent-color);
+        border-bottom: 2px solid var(--border-color);
+        padding: 2.5rem 0;
+        margin-bottom: 2rem;
+    }
+
+    .social-share-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem;
+        text-align: center;
+    }
+
+    .social-share-header {
+        margin-bottom: 2rem;
+    }
+
+    .social-share-title {
+        font-size: 1.75rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        margin-bottom: 0.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .social-share-description {
+        font-size: 1rem;
+        color: var(--text-secondary);
+        margin: 0;
+        line-height: 1.5;
+    }
+
+    .social-share-buttons {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 1rem;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .social-share-btn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1.25rem 1rem;
+        border: none;
+        border-radius: 12px;
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.9rem;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        min-height: 100px;
+        font-family: var(--font-family-base);
+    }
+
+    .social-share-btn:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+        filter: brightness(1.1);
+    }
+
+    .social-share-btn:active {
+        transform: translateY(-2px);
+    }
+
+    .share-icon {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+        display: block;
+    }
+
+    .share-label {
+        font-size: 0.85rem;
+        text-align: center;
+        line-height: 1.2;
+    }
+
+    /* Platform-specific colors */
+    .btn-twitter { background-color: #000000; }
+    .btn-facebook { background-color: #1877F2; }
+    .btn-linkedin { background-color: #0A66C2; }
+    .btn-whatsapp { background-color: #25D366; }
+    .btn-telegram { background-color: #0088CC; }
+    .btn-reddit { background-color: #FF4500; }
+    .btn-email { background-color: #EA4335; }
+    .btn-copy { background-color: #6B7280; }
+
+    /* Copy notification */
+    .copy-notification {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        background: var(--success-color);
+        color: white;
+        padding: 1rem 1.5rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        font-weight: 600;
+        z-index: 10000;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .copy-notification.show {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* ===== UNIVERSAL FOOTER NAVIGATION STYLES ===== */
+
+    .universal-footer {
+        background: var(--surface-color);
+        border-top: 2px solid var(--border-color);
+        margin-top: 4rem;
+        padding: 0;
+        color: var(--text-primary);
+    }
+
+    .universal-footer * {
+        box-sizing: border-box;
+    }
+
+    /* Container */
+    .footer-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 2rem 1rem 1rem;
+    }
+
+    /* Main Grid Layout - Desktop */
+    .footer-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    /* Column Headers */
+    .footer-column h4 {
+        margin: 0 0 1rem 0;
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: var(--accent-color);
+        border-bottom: 2px solid var(--accent-color);
+        padding-bottom: 0.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    /* Navigation Links */
+    .footer-nav-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .footer-nav-link {
+        color: var(--text-secondary);
+        text-decoration: none;
+        padding: 0.5rem 0;
+        border-radius: 4px;
+        transition: all 0.2s ease;
+        font-size: 0.9rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .footer-nav-link:hover {
+        color: var(--accent-color);
+        background: rgba(255, 107, 53, 0.1);
+        padding-left: 0.5rem;
+        transform: translateX(2px);
+    }
+
+    /* Disabled navigation links */
+    .footer-nav-link.disabled {
+        color: var(--text-muted);
+        cursor: not-allowed;
+        opacity: 0.6;
+    }
+
+    .footer-nav-link.disabled:hover {
+        color: var(--text-muted);
+        background: transparent;
+        padding-left: 0;
+        transform: none;
+    }
+
+    /* Status Indicators */
+    .status-badge {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.4rem;
+        border-radius: 10px;
+        font-weight: 600;
+        margin-left: auto;
+    }
+
+    .status-implemented {
+        background: var(--success-color);
+        color: white;
+    }
+
+    .status-planned {
+        background: var(--warning-color);
+        color: black;
+    }
+
+    .status-active {
+        background: var(--info-color);
+        color: white;
+    }
+
+    /* Quick Stats Grid */
+    .footer-quick-stats {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+        margin-bottom: 2rem;
+        padding: 1.5rem;
+        background: var(--bg-secondary);
+        border-radius: 8px;
+        border: 1px solid var(--border-color);
+    }
+
+    .footer-stat-item {
+        text-align: center;
+        padding: 0.5rem;
+    }
+
+    .footer-stat-number {
+        display: block;
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: var(--accent-color);
+        margin-bottom: 0.2rem;
+    }
+
+    .footer-stat-label {
+        font-size: 0.8rem;
+        color: var(--text-secondary);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    /* Bottom Bar */
+    .footer-bottom {
+        border-top: 1px solid var(--border-color);
+        padding-top: 1rem;
+        text-align: center;
+        font-size: 0.85rem;
+        color: var(--text-secondary);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .footer-meta {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .footer-update-time {
+        color: var(--accent-color);
+        font-weight: 600;
+    }
+
+    /* ===== MOBILE RESPONSIVE FOOTER ===== */
+
+    @media (max-width: 768px) {
+        .footer-container {
+            padding: 1.5rem 1rem 1rem;
+        }
+
+        .footer-grid {
+            grid-template-columns: 1fr;
+            gap: 0;
+        }
+
+        .footer-column {
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .footer-column:last-child {
+            border-bottom: none;
+        }
+
+        .footer-column h4 {
+            cursor: pointer;
+            user-select: none;
+            padding: 1rem 0;
+            margin: 0;
+            border-bottom: none;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .footer-column h4:hover {
+            color: var(--accent-color);
+        }
+
+        .footer-column h4::after {
+            content: '▼';
+            position: absolute;
+            right: 0;
+            transition: transform 0.3s ease;
+            font-size: 0.8rem;
+        }
+
+        .footer-column.collapsed h4::after {
+            transform: rotate(-90deg);
+        }
+
+        .footer-nav-list {
+            max-height: 500px;
+            overflow: hidden;
+            opacity: 1;
+            transition: all 0.3s ease;
+            padding-bottom: 1rem;
+        }
+
+        .footer-column.collapsed .footer-nav-list {
+            max-height: 0;
+            opacity: 0;
+            padding-bottom: 0;
+        }
+
+        .footer-quick-stats {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.5rem;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-stat-item {
+            padding: 0.5rem 0.25rem;
+        }
+
+        .footer-stat-number {
+            font-size: 1.1rem;
+        }
+
+        .footer-stat-label {
+            font-size: 0.7rem;
+        }
+
+        .footer-bottom {
+            flex-direction: column;
+            text-align: center;
+            gap: 0.5rem;
+        }
+
+        .footer-meta {
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .social-share-buttons {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.75rem;
+        }
+
+        .social-share-btn {
+            padding: 1rem 0.75rem;
+            min-height: 85px;
+        }
+
+        .share-icon {
+            font-size: 2rem;
+            margin-bottom: 0.375rem;
+        }
+
+        .share-label {
+            font-size: 0.8rem;
+        }
+
+        .social-share-title {
+            font-size: 1.5rem;
+        }
+
+        .copy-notification {
+            bottom: 1rem;
+            right: 1rem;
+            left: 1rem;
+            text-align: center;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .footer-container {
+            padding: 1rem 0.5rem;
+        }
+
+        .footer-quick-stats {
+            grid-template-columns: 1fr;
+            padding: 0.75rem;
+        }
+
+        .footer-column h4 {
+            font-size: 1rem;
+            padding: 0.75rem 1rem;
+        }
+
+        .footer-nav-link {
+            padding: 0.4rem 1rem;
+            font-size: 0.85rem;
+        }
+
+        .social-share-buttons {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.5rem;
+        }
+
+        .social-share-btn {
+            padding: 0.875rem 0.5rem;
+            min-height: 75px;
+        }
+
+        .share-icon {
+            font-size: 1.75rem;
+        }
+
+        .share-label {
+            font-size: 0.75rem;
+        }
+
+        .social-share-title {
+            font-size: 1.25rem;
+        }
+
+        .social-share-description {
+            font-size: 0.9rem;
+        }
+    }
+
+    [data-theme="dark"] .footer-social-share {
+        background: linear-gradient(135deg, var(--bg-secondary), var(--bg-primary));
+    }
+
+    [data-theme="dark"] .social-share-btn {
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    }
+
+    [data-theme="dark"] .social-share-btn:hover {
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+    }
+</style>
+
+<!-- ===== UNIVERSAL FOOTER NAVIGATION HTML ===== -->
+<footer class="universal-footer">
+
+    <!-- ===== SOCIAL MEDIA SHARE SECTION ===== -->
+    <div class="footer-social-share" id="footerSocialShare">
+        <div class="social-share-container">
+            <div class="social-share-header">
+                <h3 class="social-share-title">
+                    <span>📤</span>
+                    <span data-i18n="common.share.title">Share This Documentation</span>
+                </h3>
+                <p class="social-share-description" data-i18n="common.share.description">
+                    Help spread awareness about this crisis by sharing this page on social media
+                </p>
+            </div>
+            <div class="social-share-buttons" id="socialShareButtons">
+                <!-- Buttons will be generated by JavaScript immediately -->
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-container">
+
+        <!-- Quick Access Stats -->
+        <div class="footer-quick-stats">
+            <div class="footer-stat-item">
+                <span class="footer-stat-number">19.0K</span>
+                <span class="footer-stat-label" data-i18n="common.stats.childrenKilled">Children Killed</span>
+            </div>
+            <div class="footer-stat-item">
+                <span class="footer-stat-number">232</span>
+                <span class="footer-stat-label" data-i18n="common.stats.journalistsKilled">Journalists Killed</span>
+            </div>
+            <div class="footer-stat-item">
+                <span class="footer-stat-number">1.6K</span>
+                <span class="footer-stat-label" data-i18n="common.stats.medicalStaffKilled">Medical Staff Killed</span>
+            </div>
+            <div class="footer-stat-item">
+                <span class="footer-stat-number">61.2K</span>
+                <span class="footer-stat-label" data-i18n="common.stats.totalDeaths">Total Deaths</span>
+            </div>
+        </div>
+
+        <!-- Main Navigation Grid -->
+        <div class="footer-grid">
+
+            <!-- Main Sections -->
+            <div class="footer-column">
+                <h4 data-i18n="common.footer.mainSections">🏠 Main Sections</h4>
+                <ul class="footer-nav-list">
+                    <li><a href="index.html" class="footer-nav-link" data-i18n="common.footer.dashboard">🏠 Crisis Dashboard <span class="status-badge no-translate status-active">ACTIVE</span></a></li>
+                    <li><a href="/war-crimes/" class="footer-nav-link" data-i18n="common.footer.warCrimes">⚖️ War Crimes Documentation <span class="status-badge no-translate status-active">ACTIVE</span></a></li>
+                    <li><a href="hunger-crisis-stats.html" class="footer-nav-link" data-i18n="common.footer.hungerCrisis">🍽️ Hunger Crisis Analysis <span class="status-badge no-translate status-active">ACTIVE</span></a></li>
+                    <li><a href="major-incidents-timeline.html" class="footer-nav-link" data-i18n="common.footer.timeline">📋 Major Incidents Timeline <span class="status-badge no-translate status-active">ACTIVE</span></a></li>
+                </ul>
+            </div>
+
+            <!-- War Crimes Statistics -->
+            <div class="footer-column">
+                <h4 data-i18n="common.footer.warCrimesStats">⚖️ War Crimes Stats</h4>
+                <ul class="footer-nav-list">
+                    <li><a href="/war-crimes/children-killed/" class="footer-nav-link" data-i18n="common.footer.childrenKilled">🕯️ Children Killed <span class="status-badge no-translate status-implemented">ACTIVE</span></a></li>
+                    <li><a href="/war-crimes/journalists-killed/" class="footer-nav-link" data-i18n="common.footer.journalistsKilled">📰 Journalists Killed <span class="status-badge no-translate status-implemented">ACTIVE</span></a></li>
+                    <li><a href="/war-crimes/medical-personnel/" class="footer-nav-link" data-i18n="common.footer.medicalPersonnel">🏥 Medical Personnel Killed <span class="status-badge no-translate status-implemented">ACTIVE</span></a></li>
+                    <li><a href="/war-crimes/civilian-casualties/" class="footer-nav-link" data-i18n="common.footer.totalDeaths">💀 Total Deaths <span class="status-badge no-translate status-implemented">ACTIVE</span></a></li>
+                    <li><a href="/war-crimes/hospitals/" class="footer-nav-link" data-i18n="common.footer.hospitalsOutOfService">🏥 Hospitals Out of Service <span class="status-badge no-translate status-implemented">ACTIVE</span></a></li>
+                    <li><a href="/war-crimes/schools/" class="footer-nav-link" data-i18n="common.footer.schoolsDestroyed">🎓 Schools Damaged/Destroyed <span class="status-badge no-translate status-implemented">ACTIVE</span></a></li>
+                    <li><a href="/war-crimes/universities/" class="footer-nav-link" data-i18n="common.footer.universitiesDamaged">🏛️ Universities Damaged <span class="status-badge no-translate status-implemented">ACTIVE</span></a></li>
+                    <li><a href="/war-crimes/religious-sites/" class="footer-nav-link" data-i18n="common.footer.religiousSitesDamaged">🕌 Religious Sites Damaged <span class="status-badge no-translate status-implemented">ACTIVE</span></a></li>
+                </ul>
+            </div>
+
+            <!-- Hunger Crisis Statistics -->
+            <div class="footer-column">
+                <h4 data-i18n="common.footer.hungerCrisisStats">🍽️ Hunger Crisis Stats</h4>
+                <ul class="footer-nav-list">
+                    <li><a href="/war-crimes/total-starvation/" class="footer-nav-link" data-i18n="common.footer.totalStarvationDeaths">💀 Total Deaths Due to Starvation <span class="status-badge no-translate status-active">ACTIVE</span></a></li>
+                    <li><a href="/war-crimes/children-starvation/" class="footer-nav-link" data-i18n="common.footer.childrenStarvation">👶 Children Died from Starvation <span class="status-badge no-translate status-active">ACTIVE</span></a></li>
+                    <!-- Not yet built. Rendered as non-links so they document the
+                         planned scope without emitting a 404 - same approach as the
+                         disabled stat cards in war-crimes-stats.html. -->
+                    <li><span class="footer-nav-link disabled" data-i18n="common.footer.starvationRate">📊 Population Starvation Rate <span class="status-badge no-translate status-planned">PLANNED</span></span></li>
+                    <li><span class="footer-nav-link disabled" data-i18n="common.footer.displacedPeople">🏠 Displaced People <span class="status-badge no-translate status-planned">PLANNED</span></span></li>
+                    <li><span class="footer-nav-link disabled" data-i18n="common.footer.calorieDeficit">🥖 Daily Calorie Deficit <span class="status-badge no-translate status-planned">PLANNED</span></span></li>
+                    <li><span class="footer-nav-link disabled" data-i18n="common.footer.aidBlocked">🚫 Aid Requests Denied <span class="status-badge no-translate status-planned">PLANNED</span></span></li>
+                    <li><span class="footer-nav-link disabled" data-i18n="common.footer.bakeriesDestroyed">🏭 Bakeries Destroyed <span class="status-badge no-translate status-planned">PLANNED</span></span></li>
+                    <li><span class="footer-nav-link disabled" data-i18n="common.footer.agricultureDestroyed">🌾 Agricultural Land Destroyed <span class="status-badge no-translate status-planned">PLANNED</span></span></li>
+                </ul>
+            </div>
+
+            <!-- Platform Info -->
+            <div class="footer-column">
+                <h4 data-i18n="common.footer.platformInfo">📚 Platform Info</h4>
+                <ul class="footer-nav-list">
+                    <li><span class="footer-nav-link disabled" title="Coming soon" data-i18n="common.footer.about">ℹ️ About This Documentation</span></li>
+                    <li><a href="/methodology.html" class="footer-nav-link" data-i18n="common.footer.methodology">🔬 Data Methodology</a></li>
+                    <li><span class="footer-nav-link disabled" title="Coming soon" data-i18n="common.footer.sources">📰 Sources & Verification</span></li>
+                    <li><span class="footer-nav-link disabled" title="Coming soon" data-i18n="common.footer.legal">⚖️ Legal Framework</span></li>
+                    <li><span class="footer-nav-link disabled" title="Coming soon" data-i18n="common.footer.contact">📧 Contact & Reports</span></li>
+                    <li><span class="footer-nav-link disabled" title="Coming soon" data-i18n="common.footer.api">🔌 Data API Access</span></li>
+                    <li><span class="footer-nav-link disabled" title="Coming soon" data-i18n="common.footer.download">📥 Download Reports</span></li>
+                    <li><span class="footer-nav-link disabled" title="Coming soon" data-i18n="common.footer.share">📤 Share & Embed</span></li>
+                </ul>
+            </div>
+
+        </div>
+        
+<!-- Footer Bottom -->
+<div class="footer-bottom">
+    <div class="footer-copyright" data-i18n="common.footer.copyright">
+        © 2024 Gaza Crisis Documentation Platform. All rights reserved.
+    </div>
+    <div class="footer-meta">
+        <span class="footer-update-time">Last Updated: October 11, 2025</span>
+        <span>•</span>
+        <span data-i18n="common.footer.verifiedData">🔍 All data verified through multiple sources</span>
+        <span>•</span>
+        <span data-i18n="common.footer.legalAccountability">⚖️ Preserved for legal accountability</span>
+        <span>•</span>
+        <span>📧 <a href="mailto:contact@palgenopedia.org" style="color: var(--accent-color); text-decoration: none;">contact@palgenopedia.org</a></span>
+        <span>•</span>
+        <span>🌐 <a href="https://palgenopedia.org" style="color: var(--accent-color); text-decoration: none;">palgenopedia.org</a></span>
+    </div>
+</div>

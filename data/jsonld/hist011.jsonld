@@ -1,0 +1,378 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "@id": "https://palgenopedia.org/data/events.json#hist011",
+  "headline": "Battle of Jenin",
+  "url": "https://palgenopedia.org/Pages/Historical_Massacres/massacres.html#event/hist011",
+  "datePublished": "2002-04-03",
+  "dateModified": "2026-08-09",
+  "inLanguage": "en",
+  "about": {
+    "@type": "Event",
+    "name": "Battle of Jenin",
+    "startDate": "2002-04-03",
+    "endDate": "37357",
+    "description": "Part of Operation Defensive Shield; response to Passover massacre (27 March 2002)",
+    "location": {
+      "@type": "Place",
+      "name": "Jenin Refugee Camp, West Bank, Under Israeli military occupation; PA has limited security control; Camp rebuilt but remains flashpoint; frequent Israeli military raids; site of ongoing violence",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 32.4644,
+        "longitude": 35.2956
+      }
+    }
+  },
+  "articleBody": "Jenin refugee camp was established in 1953 to house Palestinians displaced during the 1948 Nakba, primarily from Haifa and surrounding villages. By 2002, approximately 14,000 refugees lived in the densely packed camp covering just one square kilometer. Under the Oslo Accords, Jenin came under full Palestinian Authority control in 1995 (Area A). However, the camp became a stronghold for Palestinian militant groups during the Second Intifada. According to both Israeli and Palestinian sources, an estimated 80-100 armed fighters from Hamas, Islamic Jihad, Al-Aqsa Martyrs' Brigades, and Tanzim operated from the camp. Israel claimed 28 suicide attacks between October 2000 and April 2002 were planned and launched from Jenin. After the devastating Passover massacre at Park Hotel in Netanya killed 30 Israeli civilians on March 27, 2002, the Israeli government launched Operation Defensive Shield—the largest military operation in the West Bank since 1967. Jenin refugee camp was identified as a primary target. On April 3, 2002, approximately 200 Israeli tanks surrounded Jenin refugee camp. Apache helicopters and F-16 fighter jets provided air support. The IDF's stated objective was to 'destroy the operational infrastructure of militant organizations' and capture or kill those responsible for suicide bombings. Palestinian militants had anticipated the assault and extensively prepared the camp's defense: they planted dozens of explosive charges in water pipes, kitchen cabinets, doorways, and streets; created booby traps throughout the camp; fortified positions in buildings; and prepared ambush sites. The IDF began house-to-house searches, advancing slowly through narrow alleys. On April 9, the sixth day of the operation, 13 Israeli soldiers were killed in a devastating ambush—Palestinian fighters lured an IDF unit into a narrow alley and detonated massive explosives, collapsing buildings on the soldiers. This was the deadliest single incident for the IDF during the entire Second Intifada. Following this catastrophic loss, Israeli military tactics changed dramatically. After the April 9 ambush, the IDF deployed massive American-made Caterpillar D-9 armored bulldozers—60-ton machines with armor plating that could demolish multi-story buildings in minutes. Rather than continuing dangerous house-to-house combat, bulldozers began systematically demolishing buildings to create wide paths for tanks and to eliminate potential ambush sites. Human Rights Watch investigators documented that bulldozers demolished over 140 buildings, destroying approximately 10% of the entire camp's structures. Many buildings were demolished with families still trapped inside—some residents were crushed to death, others buried alive in rubble. The IDF enforced total siege: no one allowed in or out; medical access blocked for 11 days (April 4-15); ambulances fired upon; water and electricity cut off; food prevented from entering. Farwa Jammal, a 27-year-old uniformed nurse, was shot dead by IDF fire while treating a wounded civilian. At least two injured civilians died because Israeli soldiers prevented ambulances from reaching them for over 36 hours. When Human Rights Watch investigators finally gained access on April 19, they found scenes of massive destruction: entire neighborhoods reduced to rubble, bodies still buried under collapsed buildings, and evidence of willful killings. Their 52-page report concluded: 'Israeli forces committed serious violations of international humanitarian law, some amounting prima facie to war crimes.' The UN attempted to launch an investigation, but Israel blocked the fact-finding mission. Final toll: 52 Palestinians killed (22 civilians—including a 14-year-old boy, wheelchair-bound elderly man, and women), 23 Israeli soldiers killed, over 140 buildings demolished, 4,000 people rendered homeless.",
+  "keywords": "Military Operation / Urban Warfare, historical, War Crimes (HRW prima facie); Violations of IHL",
+  "mentions": [
+    {
+      "@type": "Organization",
+      "name": "Israel Defense Forces"
+    },
+    {
+      "@type": "Organization",
+      "name": "Israeli government (Operation Defensive Shield policy)"
+    },
+    {
+      "@type": "Organization",
+      "name": "Specific IDF units involved in demolitions and civilian killings"
+    }
+  ],
+  "citation": [
+    {
+      "@type": "Article",
+      "name": "Human Rights Watch - Jenin Report",
+      "url": "https://www.hrw.org/report/2002/05/02/jenin/idf-military-operations",
+      "about": {
+        "@type": "Thing",
+        "name": "casualty"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Human Rights Watch Documentation",
+      "url": "https://www.hrw.org/reports/2002/israel3/israel0502-05.htm",
+      "about": {
+        "@type": "Thing",
+        "name": "casualty"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Israeli Military Records",
+      "url": "https://www.inss.org.il/wp-content/uploads/sites/2/systemfiles/(FILE)1190277272.pdf",
+      "about": {
+        "@type": "Thing",
+        "name": "casualty"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Human Rights Watch Report",
+      "url": "https://www.hrw.org/report/2002/05/02/jenin/idf-military-operations",
+      "about": {
+        "@type": "Thing",
+        "name": "casualty"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "UNRWA Reports",
+      "url": "https://www.unrwa.org/",
+      "about": {
+        "@type": "Thing",
+        "name": "casualty"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Palestinian Red Crescent Society",
+      "url": "https://www.palestinercs.org/",
+      "about": {
+        "@type": "Thing",
+        "name": "casualty"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Human Rights Watch - Jenin Report (May 2002)",
+      "url": "https://www.hrw.org/report/2002/05/02/jenin/idf-military-operations",
+      "about": {
+        "@type": "Thing",
+        "name": "testimony"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Human Rights Watch investigation; direct testimony",
+      "url": "https://www.hrw.org/reports/2002/israel3/israel0502-05.htm",
+      "about": {
+        "@type": "Thing",
+        "name": "testimony"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Human Rights Watch documentation; Middle East Monitor",
+      "url": "https://www.middleeastmonitor.com/20200414-we-must-never-forget-israels-massacre-in-jenin/",
+      "about": {
+        "@type": "Thing",
+        "name": "testimony"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Palestinian Red Crescent testimony",
+      "about": {
+        "@type": "Thing",
+        "name": "testimony"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Human Rights Watch - Jenin: IDF Military Operations (May 2, 2002)",
+      "url": "https://www.hrw.org/news/2002/05/02/israel/occupied-territories-jenin-war-crimes-investigation-needed",
+      "about": {
+        "@type": "Thing",
+        "name": "testimony"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "UN Secretary-General statement on blocked investigation",
+      "url": "https://www.un.org/unispal/document/auto-insert-187399/",
+      "about": {
+        "@type": "Thing",
+        "name": "testimony"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Contemporary interviews and statements",
+      "about": {
+        "@type": "Thing",
+        "name": "testimony"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Breaking the Silence testimonies",
+      "url": "https://www.breakingthesilence.org.il/",
+      "about": {
+        "@type": "Thing",
+        "name": "testimony"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Amnesty International - Israel and the Occupied Territories: Shielded from Scrutiny",
+      "url": "https://www.amnesty.org/",
+      "about": {
+        "@type": "Thing",
+        "name": "testimony"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Human Rights Watch Context",
+      "url": "https://www.hrw.org/report/2002/05/02/jenin/idf-military-operations",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "UN Secretary-General Report",
+      "url": "https://www.un.org/unispal/document/auto-insert-187399/",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Human Rights Watch - Battle Background",
+      "url": "https://www.hrw.org/report/2002/05/02/jenin/idf-military-operations",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "HRW - Medical Access Violations",
+      "url": "https://www.hrw.org/report/2002/05/02/jenin/idf-military-operations",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "HRW - Civilian Casualties",
+      "url": "https://www.hrw.org/news/2002/05/02/israel/occupied-territories-jenin-war-crimes-investigation-needed",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Israeli Institute Analysis",
+      "url": "https://www.inss.org.il/wp-content/uploads/sites/2/systemfiles/(FILE)1190277272.pdf",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "HRW - Unlawful Killings",
+      "url": "https://www.hrw.org/reports/2002/israel3/israel0502-05.htm",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "HRW - Medical Personnel Attacks",
+      "url": "https://www.hrw.org/news/2002/05/02/israel/occupied-territories-jenin-war-crimes-investigation-needed",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "HRW Investigation",
+      "url": "https://www.hrw.org/report/2002/05/02/jenin/idf-military-operations",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "HRW Report",
+      "url": "https://www.hrw.org/report/2002/05/02/jenin/idf-military-operations",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "UN SG Report on Blocked Investigation",
+      "url": "https://www.un.org/unispal/document/auto-insert-187399/",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "HRW - Jenin Investigation Methodology",
+      "url": "https://www.hrw.org/report/2002/05/02/jenin/idf-military-operations",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "HRW - Jenin Report Release",
+      "url": "https://www.hrw.org/news/2002/05/02/israel/occupied-territories-jenin-war-crimes-investigation-needed",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "HRW - UN Report Criticism",
+      "url": "https://www.hrw.org/news/2002/08/01/un-jenin-report",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "HRW Documentation",
+      "url": "https://www.hrw.org/news/2002/05/02/israel/occupied-territories-jenin-war-crimes-investigation-needed",
+      "about": {
+        "@type": "Thing",
+        "name": "war_crime"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "UN Report on Blocked Mission",
+      "url": "https://www.un.org/unispal/document/auto-insert-187399/",
+      "about": {
+        "@type": "Thing",
+        "name": "war_crime"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Israeli Documentation",
+      "url": "https://www.inss.org.il/wp-content/uploads/sites/2/systemfiles/(FILE)1190277272.pdf",
+      "about": {
+        "@type": "Thing",
+        "name": "war_crime"
+      }
+    }
+  ],
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "Deaths",
+      "propertyID": "casualties/deaths",
+      "value": "52 Palestinians (22 civilians, 27 combatants, 3 unclear); 23 Israeli soldiers",
+      "minValue": 3,
+      "maxValue": 52
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Injured",
+      "propertyID": "casualties/injured",
+      "value": "Hundreds of Palestinians wounded; unknown number of Israeli soldiers wounded"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Forced displacement",
+      "propertyID": "casualties/forced_displacement",
+      "value": "4,000 Palestinians rendered homeless",
+      "minValue": 4000,
+      "maxValue": 4000
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Verification status",
+      "propertyID": "verification_status",
+      "value": "verified"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Classification",
+      "propertyID": "classification",
+      "value": "War Crimes (HRW prima facie); Violations of IHL"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Author",
+      "propertyID": "author",
+      "value": "aliattia02"
+    }
+  ],
+  "provider": {
+    "@type": "Organization",
+    "name": "PalGenoPedia",
+    "url": "https://palgenopedia.org"
+  },
+  "isBasedOn": "https://palgenopedia.org/data/events.json"
+}

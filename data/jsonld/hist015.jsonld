@@ -1,0 +1,474 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "@id": "https://palgenopedia.org/data/events.json#hist015",
+  "headline": "Great March of Return",
+  "url": "https://palgenopedia.org/Pages/Historical_Massacres/massacres.html#event/hist015",
+  "datePublished": "2018-03-30",
+  "dateModified": "2026-08-09",
+  "inLanguage": "en",
+  "about": {
+    "@type": "Event",
+    "name": "Great March of Return",
+    "startDate": "2018-03-30",
+    "endDate": "43826",
+    "description": "Weekly protests at Gaza-Israel separation fence demanding right of return",
+    "location": {
+      "@type": "Place",
+      "name": "Gaza Strip, Under Israeli blockade; governed by Hamas, Blockade ongoing; protests ended December 2019",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 31.35,
+        "longitude": 34.45
+      }
+    }
+  },
+  "articleBody": "The Great March of Return began on March 30, 2018—Palestinian Land Day and the 42nd anniversary of mass protests against Israeli land confiscation. Organized by independent activists, the protests were conceived as peaceful demonstrations to draw international attention to Gaza's humanitarian crisis, the blockade, and the right of return for Palestinian refugees. Five designated protest sites were established along Gaza's eastern border, several hundred meters from the separation fence. The protests were intended to last from Land Day (March 30) through Nakba Day (May 15), but continued for 21 months until Hamas announced their end on December 27, 2019. Israel's response was immediate and lethal. Israeli Defense Forces deployed snipers along the fence with rules of engagement permitting use of live ammunition against protesters. On the opening day, March 30, 2018, Israeli forces killed 18 Palestinians and shot over 700 with live ammunition. The bloodiest day came on May 14, 2018—the day the US Embassy officially opened in Jerusalem—when Israeli forces killed 60 Palestinians and shot over 1,100. By December 31, 2018, Israeli snipers had shot 6,106 Palestinians with live ammunition, killing 183 during official protest days. Thirty-five were children, three were clearly marked paramedics, and two were clearly marked journalists. Another 3,098 Palestinians were injured by bullet fragmentation, rubber-coated metal bullets, or tear gas canisters. The UN Commission of Inquiry investigated every killing at the designated demonstration sites on official protest days between March 30 and December 31, 2018. Commissioners reviewed video evidence, medical records, ballistics reports, and conducted extensive interviews. Their finding was damning: with the exception of two incidents, the Commission found reasonable grounds to believe the use of live ammunition was unlawful. The victims 'were neither participating directly in hostilities nor posing an imminent threat' when shot. Commissioner Sara Hossain stated: 'There can be no justification for killing and injuring journalists, medics, and persons who were clearly not posing an imminent threat of death or serious injury.' The Commission concluded the pattern of violations may constitute war crimes or crimes against humanity. Notable victims included 21-year-old paramedic Razan al-Najjar, shot and killed while treating wounded protesters despite wearing a clearly marked white medical vest, and journalist Yaser Murtaja, shot dead while wearing press insignia. By the time protests ended in December 2019, 223 Palestinians had been killed and 28,939 injured. At least 122 Palestinians required limb amputations including 20 children. Israel has conducted no meaningful investigations, with all but a handful of cases closed without indictment.",
+  "keywords": "Mass Killings / Protest Suppression, historical, Mass Killings / Protest Suppression",
+  "mentions": [
+    {
+      "@type": "Organization",
+      "name": "Israel Defense Forces"
+    },
+    {
+      "@type": "Organization",
+      "name": "Israeli Border Police"
+    },
+    {
+      "@type": "Organization",
+      "name": "Israeli military snipers"
+    },
+    {
+      "@type": "Organization",
+      "name": "Israeli security forces"
+    }
+  ],
+  "citation": [
+    {
+      "@type": "Article",
+      "name": "UN Commission Report A/HRC/40/74; B'Tselem Comprehensive Statistics",
+      "url": "https://www.un.org/unispal/document/commission-of-inquiry-on-2018-protests-in-opt-final-report-a-hrc-40-74-advance-unedited/; https://www.btselem.org/gaza_strip/20190330_gaza_march_of_return",
+      "about": {
+        "@type": "Thing",
+        "name": "casualty"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "UN Commission Report para. 77-82; Defense for Children International - Palestine",
+      "url": "https://www.un.org/unispal/document/commission-of-inquiry-on-2018-protests-in-opt-final-report-a-hrc-40-74-advance-unedited/; https://www.dci-palestine.org/",
+      "about": {
+        "@type": "Thing",
+        "name": "casualty"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "UN Commission Report para. 83-87; Physicians for Human Rights - Israel",
+      "url": "https://www.un.org/unispal/document/commission-of-inquiry-on-2018-protests-in-opt-final-report-a-hrc-40-74-advance-unedited/; https://www.phr.org.il/en/",
+      "about": {
+        "@type": "Thing",
+        "name": "casualty"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Committee to Protect Journalists Report; UN Commission Report para. 88-92",
+      "url": "https://cpj.org/; https://www.un.org/unispal/document/commission-of-inquiry-on-2018-protests-in-opt-final-report-a-hrc-40-74-advance-unedited/",
+      "about": {
+        "@type": "Thing",
+        "name": "casualty"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "UN OCHA Humanitarian Bulletin; Palestinian Ministry of Health Gaza",
+      "url": "https://www.ochaopt.org/; https://www.moh.gov.ps/",
+      "about": {
+        "@type": "Thing",
+        "name": "casualty"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "UN Commission Special Section",
+      "url": "https://www.un.org/unispal/document/commission-of-inquiry-on-2018-protests-in-opt-final-report-a-hrc-40-74-advance-unedited/",
+      "about": {
+        "@type": "Thing",
+        "name": "casualty"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "WHO Special Report on Limb Injuries; Medical Aid for Palestinians Assessment",
+      "url": "https://www.who.int/; https://www.map.org.uk/",
+      "about": {
+        "@type": "Thing",
+        "name": "casualty"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "UN Commission Report Executive Summary",
+      "url": "https://www.un.org/unispal/document/commission-of-inquiry-on-2018-protests-in-opt-final-report-a-hrc-40-74-advance-unedited/",
+      "about": {
+        "@type": "Thing",
+        "name": "casualty"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Physicians for Human Rights - Israel",
+      "url": "https://www.phr.org.il/en/",
+      "about": {
+        "@type": "Thing",
+        "name": "casualty"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Committee to Protect Journalists",
+      "url": "https://cpj.org/",
+      "about": {
+        "@type": "Thing",
+        "name": "casualty"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "UN Commission Report",
+      "url": "https://www.un.org/unispal/document/commission-of-inquiry-on-2018-protests-in-opt-final-report-a-hrc-40-74-advance-unedited/",
+      "about": {
+        "@type": "Thing",
+        "name": "casualty"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "UN Commission Press Conference, February 28, 2019",
+      "url": "https://www.ohchr.org/en/press-releases/2019/02/israeli-snipers-shot-children-and-journalists-gaza-protests-un-inquiry-finds",
+      "about": {
+        "@type": "Thing",
+        "name": "testimony"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "UN Commission Report, February 2019",
+      "url": "https://www.un.org/unispal/document/commission-of-inquiry-on-2018-protests-in-opt-final-report-a-hrc-40-74-advance-unedited/",
+      "about": {
+        "@type": "Thing",
+        "name": "testimony"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Family testimony to investigators; media interviews",
+      "url": "https://www.phr.org.il/en/",
+      "about": {
+        "@type": "Thing",
+        "name": "testimony"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Testimony to Canadian Parliament; media interviews, May 2018",
+      "url": "https://www.hrw.org/",
+      "about": {
+        "@type": "Thing",
+        "name": "testimony"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Final interview; Committee to Protect Journalists investigation",
+      "url": "https://cpj.org/",
+      "about": {
+        "@type": "Thing",
+        "name": "testimony"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "The Elders statement, May 2018",
+      "url": "https://www.theelders.org/",
+      "about": {
+        "@type": "Thing",
+        "name": "testimony"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "OHCHR Statement, March 31, 2018",
+      "url": "https://www.ohchr.org/",
+      "about": {
+        "@type": "Thing",
+        "name": "testimony"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "WHO Situation Report, June 2018",
+      "url": "https://www.who.int/",
+      "about": {
+        "@type": "Thing",
+        "name": "testimony"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "PHR-Israel Report, June 2018",
+      "url": "https://www.phr.org.il/en/",
+      "about": {
+        "@type": "Thing",
+        "name": "testimony"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Soldier testimonies collected 2018-2019",
+      "url": "https://www.breakingthesilence.org.il/",
+      "about": {
+        "@type": "Thing",
+        "name": "testimony"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "UN Commission Background",
+      "url": "https://www.un.org/unispal/document/commission-of-inquiry-on-2018-protests-in-opt-final-report-a-hrc-40-74-advance-unedited/",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "UN Commission Report para. 35-40; B'Tselem Documentation",
+      "url": "https://www.un.org/unispal/document/commission-of-inquiry-on-2018-protests-in-opt-final-report-a-hrc-40-74-advance-unedited/; https://www.btselem.org/gaza_strip/20190330_gaza_march_of_return",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Committee to Protect Journalists Investigation; UN Commission para. 88-92",
+      "url": "https://cpj.org/; https://www.un.org/unispal/document/commission-of-inquiry-on-2018-protests-in-opt-final-report-a-hrc-40-74-advance-unedited/",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "UN HRC Resolution S-28/1",
+      "url": "https://www.ohchr.org/en/hr-bodies/hrc/co-i-gaza-protests/index",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "UN Commission Special Section on May 14; Al Jazeera Documentation",
+      "url": "https://www.un.org/unispal/document/commission-of-inquiry-on-2018-protests-in-opt-final-report-a-hrc-40-74-advance-unedited/; https://www.aljazeera.com/",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "UN Commission Investigation para. 83-87; Physicians for Human Rights Report",
+      "url": "https://www.un.org/unispal/document/commission-of-inquiry-on-2018-protests-in-opt-final-report-a-hrc-40-74-advance-unedited/; https://www.phr.org.il/en/",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "UN Commission Methodology Section",
+      "url": "https://www.un.org/unispal/document/commission-of-inquiry-on-2018-protests-in-opt-final-report-a-hrc-40-74-advance-unedited/",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "WHO Special Report",
+      "url": "https://www.who.int/",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "B'Tselem Statistics",
+      "url": "https://www.btselem.org/gaza_strip/20190330_gaza_march_of_return",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "UN Commission Report A/HRC/40/74",
+      "url": "https://www.un.org/unispal/document/commission-of-inquiry-on-2018-protests-in-opt-final-report-a-hrc-40-74-advance-unedited/",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "UN HRC Resolution",
+      "url": "https://www.ohchr.org/en/hr-bodies/hrc/co-i-gaza-protests/index",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "B'Tselem Final Statistics",
+      "url": "https://www.btselem.org/gaza_strip/20190330_gaza_march_of_return",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Adalah - Legal Center for Arab Minority Rights",
+      "url": "https://www.adalah.org/",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "📄 UN Commission Report, Executive Summary ↑",
+      "url": "https://www.un.org/unispal/document/commission-of-inquiry-on-2018-protests-in-opt-final-report-a-hrc-40-74-advance-unedited/",
+      "about": {
+        "@type": "Thing",
+        "name": "war_crime"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "📄 UN Commission para. 83-87 ↑",
+      "url": "https://www.un.org/unispal/document/commission-of-inquiry-on-2018-protests-in-opt-final-report-a-hrc-40-74-advance-unedited/",
+      "about": {
+        "@type": "Thing",
+        "name": "war_crime"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "📄 CPJ Investigation ↑",
+      "url": "https://cpj.org/",
+      "about": {
+        "@type": "Thing",
+        "name": "war_crime"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "📄 UN Commission para. 77-82 ↑",
+      "url": "https://www.un.org/unispal/document/commission-of-inquiry-on-2018-protests-in-opt-final-report-a-hrc-40-74-advance-unedited/",
+      "about": {
+        "@type": "Thing",
+        "name": "war_crime"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "📄 WHO Report on Limb Injuries ↑",
+      "url": "https://www.who.int/",
+      "about": {
+        "@type": "Thing",
+        "name": "war_crime"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "📄 UN Commission Special Section on May 14 ↑",
+      "url": "https://www.un.org/unispal/document/commission-of-inquiry-on-2018-protests-in-opt-final-report-a-hrc-40-74-advance-unedited/",
+      "about": {
+        "@type": "Thing",
+        "name": "war_crime"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "📄 UN Commission Legal Analysis ↑",
+      "url": "https://www.un.org/unispal/document/commission-of-inquiry-on-2018-protests-in-opt-final-report-a-hrc-40-74-advance-unedited/",
+      "about": {
+        "@type": "Thing",
+        "name": "war_crime"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "📄 UN Commission Conclusions ↑",
+      "url": "https://www.un.org/unispal/document/commission-of-inquiry-on-2018-protests-in-opt-final-report-a-hrc-40-74-advance-unedited/",
+      "about": {
+        "@type": "Thing",
+        "name": "war_crime"
+      }
+    }
+  ],
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "Deaths",
+      "propertyID": "casualties/deaths",
+      "value": "223 Palestinians (189 during 2018; 34 during 2019); Zero Israelis killed",
+      "minValue": 34,
+      "maxValue": 2019
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Injured",
+      "propertyID": "casualties/injured",
+      "value": "28,939 Palestinians total; 6,106 by live ammunition; Zero Israeli injuries reported",
+      "minValue": 6106,
+      "maxValue": 28939
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Forced displacement",
+      "propertyID": "casualties/forced_displacement",
+      "value": "No displacement but severe long-term disabilities created"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Verification status",
+      "propertyID": "verification_status",
+      "value": "verified"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Classification",
+      "propertyID": "classification",
+      "value": "Mass Killings / Protest Suppression"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Author",
+      "propertyID": "author",
+      "value": "aliattia02"
+    }
+  ],
+  "provider": {
+    "@type": "Organization",
+    "name": "PalGenoPedia",
+    "url": "https://palgenopedia.org"
+  },
+  "isBasedOn": "https://palgenopedia.org/data/events.json"
+}

@@ -1,0 +1,321 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "@id": "https://palgenopedia.org/data/events.json#hist007",
+  "headline": "Sabra and Shatila",
+  "url": "https://palgenopedia.org/Pages/Historical_Massacres/massacres.html#event/hist007",
+  "datePublished": "1982-09-16",
+  "dateModified": "2026-08-09",
+  "inLanguage": "en",
+  "about": {
+    "@type": "Event",
+    "name": "Sabra and Shatila",
+    "startDate": "1982-09-16",
+    "endDate": "30212",
+    "description": "During Israeli occupation of West Beirut, Lebanon War",
+    "location": {
+      "@type": "Place",
+      "name": "Sabra and Shatila, Beirut, Lebanon; Camps still exist; memorial sites established",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 33.8547,
+        "longitude": 35.4881
+      }
+    }
+  },
+  "articleBody": "The Sabra and Shatila massacre occurred during Israel's 1982 invasion of Lebanon ('Operation Peace for Galilee'). After the assassination of Lebanese President-elect Bachir Gemayel on September 14, 1982, Israeli Defense Minister Ariel Sharon ordered IDF forces to occupy West Beirut, ostensibly to maintain order. On September 16, Sharon authorized Lebanese Phalangist militias to enter the Sabra and Shatila Palestinian refugee camps, claiming they would 'mop up' remaining PLO fighters—though PLO forces had evacuated weeks earlier under international agreement. For approximately 40 hours (September 16-18), Phalangist militiamen systematically killed Palestinian civilians, including women, children, and elderly persons. Israeli forces surrounded the camps, controlled all entry and exit points, provided logistical support, and fired illumination flares throughout the nights allowing the killings to continue after dark. Israeli commanders received reports of civilian massacres but did not intervene. Methods included shooting, stabbing, decapitation, mutilation. Bodies were dumped in mass graves or left in streets. The exact death toll remains disputed. Lebanon's official investigation documented approximately 800 killed; the Palestinian Red Crescent estimated 3,500; various international sources cite 2,000-3,500. The Israeli Kahan Commission investigated and found Defense Minister Sharon bore 'personal responsibility' for the massacre, recommending his removal. Sharon resigned as Defense Minister but remained in cabinet without portfolio, later serving as Israeli Prime Minister (2001-2006). Multiple international legal attempts to prosecute him failed.",
+  "keywords": "Massacre, historical, War Crime; Crimes Against Humanity; Genocide (UNSC Res 521; Kahan Commission)",
+  "mentions": [
+    {
+      "@type": "Organization",
+      "name": "Lebanese Forces (Phalangist militia)"
+    },
+    {
+      "@type": "Organization",
+      "name": "Israeli Defense Forces (facilitation and responsibility)"
+    },
+    {
+      "@type": "Organization",
+      "name": "Defense Minister Ariel Sharon (personal responsibility per Kahan Commission)"
+    }
+  ],
+  "citation": [
+    {
+      "@type": "Article",
+      "name": "Lebanese Government Commission Report (1982-83)",
+      "url": "https://www.un.org/unispal/",
+      "about": {
+        "@type": "Thing",
+        "name": "casualty"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Palestinian Red Crescent Society Reports 1982",
+      "url": "http://www.palestinercs.org/",
+      "about": {
+        "@type": "Thing",
+        "name": "casualty"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Kahan Commission Report (1983)",
+      "url": "https://www.mfa.gov.il/mfa/foreignpolicy/mfadocuments/yearbook6/pages/104%20report%20of%20the%20commission%20of%20inquiry%20into%20the%20e.aspx",
+      "about": {
+        "@type": "Thing",
+        "name": "casualty"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Pity the Nation: Lebanon at War' (1990); The Independent September 18-19, 1982",
+      "about": {
+        "@type": "Thing",
+        "name": "testimony"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Commission of Inquiry into Events at Refugee Camps in Beirut - Final Report, February 8, 1983",
+      "url": "https://www.mfa.gov.il/mfa/foreignpolicy/mfadocuments/yearbook6/pages/104%20report%20of%20the%20commission%20of%20inquiry%20into%20the%20e.aspx",
+      "about": {
+        "@type": "Thing",
+        "name": "testimony"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Testimony to human rights organizations; documented in UN reports",
+      "url": "https://www.un.org/unispal/",
+      "about": {
+        "@type": "Thing",
+        "name": "testimony"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Warrior: An Autobiography' (1989); Official statements to Kahan Commission",
+      "about": {
+        "@type": "Thing",
+        "name": "testimony"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Collected by Lebanese government commission, human rights organizations, Palestinian Red Crescent",
+      "url": "http://www.palestinercs.org/",
+      "about": {
+        "@type": "Thing",
+        "name": "testimony"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Kahan Commission testimony; later interviews with Breaking the Silence",
+      "url": "https://www.breakingthesilence.org.il/",
+      "about": {
+        "@type": "Thing",
+        "name": "testimony"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Kahan Commission Report - Background",
+      "url": "https://www.mfa.gov.il/mfa/foreignpolicy/mfadocuments/yearbook6/pages/104%20report%20of%20the%20commission%20of%20inquiry%20into%20the%20e.aspx",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Kahan Commission - Decision Making",
+      "url": "https://www.mfa.gov.il/mfa/foreignpolicy/mfadocuments/yearbook6/pages/104%20report%20of%20the%20commission%20of%20inquiry%20into%20the%20e.aspx",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Kahan Commission - Operational Timeline",
+      "url": "https://www.mfa.gov.il/mfa/foreignpolicy/mfadocuments/yearbook6/pages/104%20report%20of%20the%20commission%20of%20inquiry%20into%20the%20e.aspx",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Robert Fisk - The Independent, September 18-19, 1982",
+      "url": "https://www.icrc.org/",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Kahan Commission - Day Two Events",
+      "url": "https://www.mfa.gov.il/mfa/foreignpolicy/mfadocuments/yearbook6/pages/104%20report%20of%20the%20commission%20of%20inquiry%20into%20the%20e.aspx",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "ICRC Documentation 1982",
+      "url": "https://www.icrc.org/",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "US State Department Records 1982",
+      "url": "https://history.state.gov/",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Robert Fisk - 'Pity the Nation' (1990)",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Peace Now Historical Documentation",
+      "url": "https://peacenow.org.il/",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Kahan Commission - Establishment Order",
+      "url": "https://www.mfa.gov.il/mfa/foreignpolicy/mfadocuments/yearbook6/pages/104%20report%20of%20the%20commission%20of%20inquiry%20into%20the%20e.aspx",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Kahan Commission - Full Report",
+      "url": "https://www.mfa.gov.il/mfa/foreignpolicy/mfadocuments/yearbook6/pages/104%20report%20of%20the%20commission%20of%20inquiry%20into%20the%20e.aspx",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "UN General Assembly Resolution 37/123",
+      "url": "https://www.un.org/unispal/",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Kahan Commission Report",
+      "url": "https://www.mfa.gov.il/mfa/foreignpolicy/mfadocuments/yearbook6/pages/104%20report%20of%20the%20commission%20of%20inquiry%20into%20the%20e.aspx",
+      "about": {
+        "@type": "Thing",
+        "name": "war_crime"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "UN Documentation",
+      "url": "https://www.un.org/unispal/",
+      "about": {
+        "@type": "Thing",
+        "name": "war_crime"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "ICRC Reports",
+      "url": "https://www.icrc.org/",
+      "about": {
+        "@type": "Thing",
+        "name": "war_crime"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Kahan Commission - Israeli Responsibility",
+      "url": "https://www.mfa.gov.il/mfa/foreignpolicy/mfadocuments/yearbook6/pages/104%20report%20of%20the%20commission%20of%20inquiry%20into%20the%20e.aspx",
+      "about": {
+        "@type": "Thing",
+        "name": "war_crime"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Journalist Accounts",
+      "url": "https://www.un.org/unispal/",
+      "about": {
+        "@type": "Thing",
+        "name": "war_crime"
+      }
+    }
+  ],
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "Deaths",
+      "propertyID": "casualties/deaths",
+      "value": "800-3,500",
+      "minValue": -3500,
+      "maxValue": 800
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Injured",
+      "propertyID": "casualties/injured",
+      "value": "Hundreds (not systematically recorded)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Forced displacement",
+      "propertyID": "casualties/forced_displacement",
+      "value": "Survivors fled camps; infrastructure destroyed"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Verification status",
+      "propertyID": "verification_status",
+      "value": "verified"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Classification",
+      "propertyID": "classification",
+      "value": "War Crime; Crimes Against Humanity; Genocide (UNSC Res 521; Kahan Commission)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Author",
+      "propertyID": "author",
+      "value": "Yassin"
+    }
+  ],
+  "provider": {
+    "@type": "Organization",
+    "name": "PalGenoPedia",
+    "url": "https://palgenopedia.org"
+  },
+  "isBasedOn": "https://palgenopedia.org/data/events.json"
+}

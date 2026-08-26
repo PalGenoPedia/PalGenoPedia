@@ -1,0 +1,1565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="index.pageTitle">Gaza Crisis Documentation</title>
+    <meta name="description" data-i18n="index.metaDescription" content="Comprehensive documentation of war crimes, hunger crisis, and humanitarian violations in Gaza">
+
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="Styles/shared-styles.css">
+
+    <style>
+        /* ===== PAGE-SPECIFIC STYLES ===== */
+
+        /* FIXED: Consistent banner heights and text handling */
+        .crisis-banner {
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+            border-radius: 0 0 20px 20px;
+            position: relative;
+            overflow: hidden;
+            min-height: 160px;
+        }
+
+        .banner-content {
+            display: grid;
+            grid-template-columns: 1fr auto auto;
+            gap: 2rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+            height: 100%;
+        }
+
+        .banner-text {
+            flex: 1;
+            max-width: 400px;
+        }
+
+        .banner-text h3 {
+            margin: 0 0 0.5rem 0;
+            font-weight: 700;
+            line-height: 1.2;
+            font-size: 1.5rem;
+        }
+
+        .banner-text p {
+            margin: 0;
+            opacity: 0.9;
+            line-height: 1.4;
+            font-size: 0.95rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .banner-stats {
+            display: flex;
+            gap: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .quick-stat {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 1rem;
+            border-radius: var(--border-radius-lg);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            min-width: 110px;
+            max-width: 120px;
+        }
+
+        .stat-value {
+            display: block;
+            font-size: 1.6rem;
+            font-weight: 900;
+            margin-bottom: 0.25rem;
+            line-height: 1;
+        }
+
+        .stat-label {
+            display: block;
+            font-size: 0.75rem;
+            opacity: 0.9;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: 600;
+            line-height: 1.1;
+        }
+
+        .banner-action {
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .stats-btn {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            text-decoration: none;
+            padding: 0.9rem 1.8rem;
+            border-radius: 25px;
+            font-weight: 700;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            transition: var(--transition-base);
+            white-space: nowrap;
+            font-size: 0.9rem;
+        }
+
+        .stats-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Accent CTA button — used on the 3 crisis banners */
+        .stats-btn-accent {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.92);
+            color: #1a1a2e;
+            text-decoration: none;
+            padding: 0.9rem 1.8rem;
+            border-radius: 25px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            white-space: nowrap;
+            border: 2px solid rgba(255, 255, 255, 0.6);
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+        }
+
+        .stats-btn-accent:hover {
+            background: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+        }
+
+        /* Keep Join Us on the same row as nav buttons on desktop */
+        .header .nav {
+            flex-wrap: nowrap !important;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Major Incidents card — 2-row grid: text|stats in row 1, centred button in row 2 */
+        .major-incidents-banner {
+            max-height: none !important;
+            height: auto !important;
+        }
+
+        .major-incidents-banner .banner-content {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            grid-template-rows: auto auto;
+            gap: 0.75rem 2rem;
+            align-items: center;
+            text-align: left;
+        }
+
+        .major-incidents-banner .banner-text {
+            max-width: 500px;
+        }
+
+        .major-incidents-banner .banner-stats {
+            justify-content: flex-end;
+        }
+
+        .major-incidents-banner .banner-action {
+            grid-column: 1 / -1;
+            justify-content: center;
+            padding-top: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .major-incidents-banner .banner-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .major-incidents-banner .banner-stats {
+                justify-content: center;
+            }
+        }
+
+        /* Data loading indicators */
+        .data-loading-indicator {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            margin-left: 0.5rem;
+            animation: pulse 2s infinite;
+        }
+
+        .data-source-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.15);
+            color: rgba(255, 255, 255, 0.8);
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            margin-top: 0.5rem;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+
+        .crisis-banner .data-loading-indicator,
+        .crisis-banner .data-source-badge {
+            display: none;
+        }
+
+        /* Data loading status */
+        .data-loading {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 400px;
+            text-align: center;
+            color: var(--text-secondary);
+        }
+
+        .loading-spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid var(--border-color);
+            border-top: 4px solid var(--accent-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 20px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .data-progress {
+            margin-top: 20px;
+            padding: 15px;
+            background: var(--light-color);
+            border-radius: 6px;
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        /* Mobile responsiveness for banners */
+        @media (max-width: 768px) {
+            .crisis-banner {
+                min-height: auto;
+                max-height: none;
+                padding: 1.5rem 0;
+            }
+
+            .banner-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 1.5rem;
+            }
+
+            .banner-text {
+                max-width: none;
+            }
+
+            .banner-text p {
+                -webkit-line-clamp: 2;
+            }
+
+            .banner-stats {
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+
+            .quick-stat {
+                min-width: 90px;
+                padding: 0.75rem;
+            }
+
+            .stat-value {
+                font-size: 1.4rem;
+            }
+
+            .stat-label {
+                font-size: 0.7rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .banner-stats {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 0.5rem;
+            }
+
+            .quick-stat {
+                min-width: 80px;
+                padding: 0.5rem;
+            }
+
+            .stat-value {
+                font-size: 1.2rem;
+            }
+
+            .stats-btn {
+                padding: 0.75rem 1.5rem;
+                font-size: 0.85rem;
+            }
+        }
+
+        /* ===== TIMELINE STYLES ===== */
+
+        /* Timeline Statistics Dashboard */
+        .timeline-stats-dashboard {
+            background: linear-gradient(135deg, var(--bg-secondary), var(--bg-tertiary));
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius-lg);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-md);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .stat-card {
+            background: var(--surface-color);
+            border: 1px solid var(--border-light);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            text-align: center;
+            transition: var(--transition-base);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .stat-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            margin-bottom: 0.25rem;
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+        }
+
+        .stat-sublabel {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-top: 0.25rem;
+        }
+
+        /* Period Comparison */
+        .period-comparison {
+            background: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .comparison-header {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .comparison-card {
+            background: var(--bg-secondary);
+            border-left: 4px solid var(--accent-color);
+            padding: 1rem;
+            border-radius: var(--border-radius-sm);
+        }
+
+        .comparison-card.historical {
+            border-left-color: #6c757d;
+        }
+
+        .comparison-card.current {
+            border-left-color: #dc3545;
+        }
+
+        .comparison-title {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .comparison-stats {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+
+        .comparison-stat {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .comparison-stat strong {
+            color: var(--text-primary);
+        }
+
+        /* Event Type Legend */
+        .event-type-legend {
+            background: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .legend-title {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.75rem;
+        }
+
+        .legend-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+        }
+
+        .legend-color {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            border: 2px solid white;
+            box-shadow: var(--shadow-sm);
+        }
+
+        /* Data Source Badge */
+        .data-source-indicator {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(13, 110, 253, 0.1);
+            color: #0d6efd;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border: 1px solid rgba(13, 110, 253, 0.3);
+        }
+
+        /* Clarifies the stats-grid totals are a documented-incidents sum, not
+           an independent whole-war figure - see STATS_RECONCILIATION.md. */
+        .stats-scope-note {
+            font-size: 0.8rem;
+            color: var(--text-secondary, #6c757d);
+            text-align: center;
+            max-width: 42rem;
+            margin: 0.75rem auto 0;
+            line-height: 1.5;
+        }
+        .stats-scope-note a { color: inherit; text-decoration: underline; }
+
+        /* Advanced Filters */
+        .advanced-filters {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .filter-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .filter-label {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .casualty-scale-filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .scale-chip {
+            background: var(--bg-tertiary);
+            border: 2px solid transparent;
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: var(--transition-base);
+        }
+
+        .scale-chip:hover {
+            border-color: var(--secondary-color);
+        }
+
+        .scale-chip.active {
+            background: var(--secondary-color);
+            color: white;
+            border-color: var(--secondary-color);
+        }
+
+        /* Timeline Loading */
+        .timeline-loading {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 400px;
+            text-align: center;
+        }
+
+        .loading-message {
+            color: var(--text-primary);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .loading-detail {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Timeline Container */
+        .timeline-container {
+            width: 100%;
+            margin-top: 2rem;
+        }
+
+        .timeline {
+            width: 100%;
+            min-height: 600px;
+        }
+
+        /* Timeline Header */
+        .timeline-header-section {
+            background: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius-lg);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-md);
+            text-align: center;
+        }
+
+        .timeline-header-section h2 {
+            color: var(--text-primary);
+            font-size: 1.8rem;
+            margin: 0 0 0.5rem 0;
+            font-weight: 700;
+        }
+
+        .timeline-header-section p {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            margin: 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .filter-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+<!-- SEO_START - generated by tools/seo_inject.py - do not edit by hand -->
+    <link rel="canonical" href="https://palgenopedia.org/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="PalGenoPedia">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="Gaza Crisis Documentation">
+    <meta property="og:description" content="Comprehensive documentation of war crimes, hunger crisis, and humanitarian violations in Gaza">
+    <meta property="og:url" content="https://palgenopedia.org/">
+    <meta property="og:image" content="https://palgenopedia.org/images/og-card.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="PalGenoPedia - documented war crimes, massacres and humanitarian violations concerning Palestine, 1948 to present">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Gaza Crisis Documentation">
+    <meta name="twitter:description" content="Comprehensive documentation of war crimes, hunger crisis, and humanitarian violations in Gaza">
+    <meta name="twitter:image" content="https://palgenopedia.org/images/og-card.png">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="alternate" type="application/atom+xml" title="PalGenoPedia - documented events" href="./feed.xml">
+    <link rel="alternate" type="application/rss+xml" title="PalGenoPedia - documented events" href="./feed.rss">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://palgenopedia.org/#website",
+  "url": "https://palgenopedia.org/",
+  "name": "PalGenoPedia",
+  "description": "Comprehensive documentation of war crimes, hunger crisis, and humanitarian violations in Gaza",
+  "inLanguage": [
+    "en",
+    "ar",
+    "de"
+  ],
+  "publisher": {
+    "@id": "https://palgenopedia.org/#org"
+  }
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://palgenopedia.org/#org",
+  "name": "PalGenoPedia",
+  "url": "https://palgenopedia.org/",
+  "logo": "https://palgenopedia.org/images/og-card.png",
+  "description": "An open documentation resource of verified war crimes, massacres, and humanitarian violations concerning Palestine, 1948-present."
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "@id": "https://palgenopedia.org/data/events.json",
+  "name": "PalGenoPedia Documented Events Dataset",
+  "description": "Verified war crimes, massacres and humanitarian violations concerning Palestine, 1948-present. Every figure carries provenance and a verification status.",
+  "url": "https://palgenopedia.org/data/events.json",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "creator": {
+    "@id": "https://palgenopedia.org/#org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "application/json",
+      "contentUrl": "https://palgenopedia.org/data/events.json"
+    },
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "text/csv",
+      "contentUrl": "https://palgenopedia.org/data/events.csv"
+    },
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "application/x-ndjson",
+      "contentUrl": "https://palgenopedia.org/data/events.ndjson"
+    }
+  ]
+}
+    </script>
+    <!-- SEO_END -->
+</head>
+<body data-i18n-page-title="index.pageTitle" data-i18n-meta-desc="index.metaDescription">
+    <!-- API Status Indicator -->
+    <div id="apiStatus" class="api-status loading" data-i18n="index.apiStatus.loading">Loading...</div>
+
+    <!-- Header (rendered by header-component.js) -->
+    <div id="header-placeholder"></div>
+
+    <!-- Site intro. The homepage previously had no top-level heading at all -
+         its first heading was a section h3 inside a banner. This states what the archive is,
+         for readers and for search engines. -->
+    <section class="site-intro">
+        <div class="container">
+            <h1 data-i18n="index.intro.title">Documented war crimes, massacres and humanitarian violations in Palestine</h1>
+            <p data-i18n="index.intro.body">An open archive spanning 1948 to the present. Every figure carries provenance and a verification status, and the underlying data is published in machine-readable form.</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Data Loading Status -->
+        <div id="dataStatus" class="container" style="display: none;">
+            <div class="data-status" id="dataStatusContent" data-i18n="index.dataStatus.loading">
+                📊 Loading crisis data from Tech for Palestine API v3...
+            </div>
+        </div>
+
+        <!-- War Crimes Banner -->
+        <section class="crisis-banner war-crimes-banner">
+            <div class="container">
+                <div class="banner-content">
+                    <div class="banner-text">
+                        <h3 data-i18n="index.warCrimes.title">⚖️ War Crimes &amp; International Law Violations</h3>
+                        <p data-i18n="index.warCrimes.description">Comprehensive documentation of systematic violations including attacks on civilians, medical facilities, and journalists.</p>
+                    </div>
+                    <div class="banner-stats">
+                        <div class="quick-stat">
+                            <span class="stat-value" id="warChildrenKilled">20.2K</span>
+                            <span class="stat-label" data-i18n="common.stats.childrenKilled">Children Killed</span>
+                        </div>
+                        <div class="quick-stat">
+                            <span class="stat-value" id="warJournalistsKilled">262</span>
+                            <span class="stat-label" data-i18n="common.stats.journalistsKilled">Journalists Killed</span>
+                        </div>
+                        <div class="quick-stat">
+                            <span class="stat-value" id="warMedicalKilled">1.7K</span>
+                            <span class="stat-label" data-i18n="common.stats.medicalStaffKilled">Medical Staff Killed</span>
+                        </div>
+                    </div>
+                    <div class="banner-action">
+                        <a href="/war-crimes/" class="stats-btn-accent" data-i18n="index.warCrimes.viewStats">
+                            View Full Statistics →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hunger Crisis Banner -->
+        <section class="crisis-banner hunger-crisis-banner">
+            <div class="container">
+                <div class="banner-content">
+                    <div class="banner-text">
+                        <h3 data-i18n="index.hungerCrisis.title">📜 Historical Events &amp; Systematic Oppression</h3>
+                        <p data-i18n="index.hungerCrisis.description">Seven decades of documented violations of international law — from the 1948 Nakba to ongoing displacement, massacres, and home demolitions.</p>
+                    </div>
+                    <div class="banner-stats">
+                        <div class="quick-stat">
+                            <span class="stat-value" id="hungerDeaths">750,000+</span>
+                            <span class="stat-label" data-i18n="index.hungerCrisis.starvationDeaths">Displaced in the Nakba (1948)</span>
+                        </div>
+                        <div class="quick-stat">
+                            <span class="stat-value" id="hungerFamine">70+</span>
+                            <span class="stat-label" data-i18n="index.hungerCrisis.famineConditions">Documented Massacres (1948–2023)</span>
+                        </div>
+                        <div class="quick-stat">
+                            <span class="stat-value" id="hungerTotal">55,000+</span>
+                            <span class="stat-label" data-i18n="index.hungerCrisis.totalAffected">Homes Demolished (1967–2023)</span>
+                        </div>
+                    </div>
+                    <div class="banner-action">
+                        <a href="/historical-events/" class="stats-btn-accent" data-i18n="index.hungerCrisis.viewStats">
+                            View Historical Events →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Major Incidents Banner -->
+        <section class="crisis-banner major-incidents-banner">
+            <div class="container">
+                <div class="banner-content">
+                    <div class="banner-text">
+                        <h3 data-i18n="index.majorIncidents.title">📋 Major Incidents Timeline</h3>
+                        <p data-i18n="index.majorIncidents.description">Chronological documentation of verified incidents, massacres, and key escalation points from October 2023 onwards.</p>
+                    </div>
+                    <div class="banner-stats">
+                        <div class="quick-stat">
+                            <span class="stat-value" id="timelineIncidents">450+</span>
+                            <span class="stat-label" data-i18n="index.majorIncidents.incidentsDocumented">Incidents Documented</span>
+                        </div>
+                        <div class="quick-stat">
+                            <span class="stat-value" id="timelineVerified">95%</span>
+                            <span class="stat-label" data-i18n="index.majorIncidents.multiSourceVerified">Multi-Source Verified</span>
+                        </div>
+                    </div>
+                    <div class="banner-action">
+                        <a href="major-incidents-timeline.html" class="stats-btn-accent" data-i18n="index.majorIncidents.viewTimeline">
+                            View Full Timeline →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Join Us Banner -->
+        <section class="join-us-section" style="
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #1565c0 100%);
+            padding: 2.5rem 0;
+            margin-bottom: var(--spacing-xl, 2rem);
+            border-radius: 16px;
+            position: relative;
+            overflow: hidden;
+        ">
+            <!-- subtle grid overlay -->
+            <div style="
+                position:absolute; inset:0; pointer-events:none;
+                background-image:
+                    repeating-linear-gradient(0deg, transparent, transparent 40px, rgba(255,255,255,.04) 40px, rgba(255,255,255,.04) 41px),
+                    repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(255,255,255,.04) 40px, rgba(255,255,255,.04) 41px);
+            "></div>
+
+            <div class="container" style="position:relative; z-index:1;">
+                <div style="
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 1.5rem;
+                    flex-wrap: wrap;
+                ">
+                    <!-- Left text -->
+                    <div style="color:#fff;">
+                        <div data-i18n="index.joinUs.badge" style="
+                            font-size:.72rem; font-weight:700; text-transform:uppercase;
+                            letter-spacing:1.4px; color:#ffd6d6;
+                            margin-bottom:.5rem; font-family:var(--font-family-base,-apple-system,sans-serif);
+                        ">🤝 Volunteer With Us</div>
+                        <div data-i18n="index.joinUs.title" style="
+                            font-size:1.3rem; font-weight:700; line-height:1.25;
+                            font-family:var(--font-family-base,-apple-system,sans-serif);
+                            margin-bottom:.35rem;
+                        ">Help Document a Crisis the World Must Not Forget</div>
+                        <div data-i18n="index.joinUs.description" style="
+                            font-size:.88rem; opacity:.85; line-height:1.5;
+                            font-family:var(--font-family-base,-apple-system,sans-serif);
+                            max-width:480px;
+                        ">We are looking for Data Collection Officers and Social Media &amp; Graphics Officers to join the team. Remote, flexible, open to all.</div>
+                    </div>
+
+                    <!-- Right CTA -->
+                    <div style="flex-shrink:0;">
+                        <a href="volunteer.html" class="join-us-btn" data-i18n="index.joinUs.cta" style="font-size:1rem; padding:.9rem 2.2rem;">
+                            🤝 Join Us →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline Section -->
+        <div class="container">
+            <!-- Timeline Header -->
+            <div class="timeline-header-section">
+                <h2 data-i18n="index.timelineSection.title">📊 Complete Historical Timeline (1948-Present)</h2>
+                <p data-i18n="index.timelineSection.subtitle">27 major documented massacres and war crimes from the Nakba to current genocide</p>
+                <span class="data-source-indicator">
+                    <span data-i18n="index.timelineSection.sources">🔍 Sources: UN, Human Rights Watch, B'Tselem, Al-Haq, PCHR</span>
+                </span>
+            </div>
+
+            <!-- Statistics Dashboard -->
+            <div class="timeline-stats-dashboard" id="statsDashboard">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">⚠️</div>
+                        <div class="stat-number" id="massacresCount">27</div>
+                        <div class="stat-label" data-i18n="index.stats.totalEvents">Total Events</div>
+                        <div class="stat-sublabel" data-i18n="index.stats.documentedIncidents">Documented Incidents</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">💀</div>
+                        <div class="stat-number" id="deathsCount">88K+</div>
+                        <div class="stat-label" data-i18n="index.stats.totalDeaths">Total Deaths</div>
+                        <div class="stat-sublabel" data-i18n="index.stats.verifiedCasualties">Verified Casualties</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🏥</div>
+                        <div class="stat-number" id="injuredCount">150K+</div>
+                        <div class="stat-label" data-i18n="index.stats.injured">Injured</div>
+                        <div class="stat-sublabel" data-i18n="index.stats.documentedInjuries">Documented Injuries</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🏠</div>
+                        <div class="stat-number" id="displacedCount">2.3M</div>
+                        <div class="stat-label" data-i18n="index.stats.displaced">Displaced</div>
+                        <div class="stat-sublabel" data-i18n="index.stats.forcedDisplacement">Forced Displacement</div>
+                    </div>
+                </div>
+                <p class="stats-scope-note" data-i18n="index.stats.scopeNote">Totals sum the documented individual incidents shown below, filtered by the period selected above — not an independent whole-war casualty count. Updated 2026-08-24. See the <a href="/methodology.html">methodology page</a> for sourcing.</p>
+
+                <!-- Period Comparison -->
+                <div class="period-comparison" id="periodComparison">
+                    <div class="comparison-header" data-i18n="index.comparison.header">
+                        📊 Historical vs Current Comparison
+                    </div>
+                    <div class="comparison-grid">
+                        <div class="comparison-card historical">
+                            <div class="comparison-title" data-i18n="index.comparison.historicalTitle">📜 Historical Period (1948-2023)</div>
+                            <div class="comparison-stats">
+                                <div class="comparison-stat">
+                                    <span data-i18n="index.comparison.duration">Duration:</span>
+                                    <strong>75 years</strong>
+                                </div>
+                                <div class="comparison-stat">
+                                    <span data-i18n="index.comparison.majorEvents">Major Events:</span>
+                                    <strong>17</strong>
+                                </div>
+                                <div class="comparison-stat">
+                                    <span data-i18n="index.comparison.totalDeaths">Total Deaths:</span>
+                                    <strong>27,000+</strong>
+                                </div>
+                                <div class="comparison-stat">
+                                    <span data-i18n="index.comparison.avgDeathsYear">Avg Deaths/Year:</span>
+                                    <strong>360</strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comparison-card current">
+                            <div class="comparison-title" data-i18n="index.comparison.currentTitle">🚨 Current Genocide (Oct 2023-Present)</div>
+                            <div class="comparison-stats">
+                                <div class="comparison-stat">
+                                    <span data-i18n="index.comparison.duration">Duration:</span>
+                                    <strong>12 months</strong>
+                                </div>
+                                <div class="comparison-stat">
+                                    <span data-i18n="index.comparison.majorEvents">Major Events:</span>
+                                    <strong>10</strong>
+                                </div>
+                                <div class="comparison-stat">
+                                    <span data-i18n="index.comparison.totalDeaths">Total Deaths:</span>
+                                    <strong>61,200+</strong>
+                                </div>
+                                <div class="comparison-stat">
+                                    <span data-i18n="index.comparison.avgDeathsDay">Avg Deaths/Day:</span>
+                                    <strong>167</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event Type Legend -->
+            <div class="event-type-legend">
+                <div class="legend-title" data-i18n="index.legend.title">📌 Event Types</div>
+                <div class="legend-items">
+                    <div class="legend-item">
+                        <span class="legend-color" style="background: #dc3545;"></span>
+                        <span data-i18n="index.legend.massacres">Massacres</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color" style="background: #fd7e14;"></span>
+                        <span data-i18n="index.legend.militaryOperations">Military Operations</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color" style="background: #6f42c1;"></span>
+                        <span data-i18n="index.legend.forcedDisplacement">Forced Displacement</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color" style="background: #e83e8c;"></span>
+                        <span data-i18n="index.legend.hospitalAttacks">Hospital Attacks</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color" style="background: #6c757d;"></span>
+                        <span data-i18n="index.legend.starvationWarfare">Starvation Warfare</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color" style="background: #0d6efd;"></span>
+                        <span data-i18n="index.legend.protestSuppression">Protest Suppression</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Advanced Filters -->
+            <div class="advanced-filters">
+                <div class="filter-grid">
+                    <!-- Date Range Filter -->
+                    <div class="filter-group">
+                        <label class="filter-label" data-i18n="index.filters.dateRange">📅 Date Range</label>
+                        <select id="dateRangeFilter" class="filter-select">
+                            <option value="" data-i18n="index.filters.allDates">All Dates (1948-Present)</option>
+                            <option value="nakba" data-i18n="index.filters.nakba">Nakba (1948)</option>
+                            <option value="first_intifada" data-i18n="index.filters.firstIntifada">First Intifada (1987-1993)</option>
+                            <option value="second_intifada" data-i18n="index.filters.secondIntifada">Second Intifada (2000-2005)</option>
+                            <option value="gaza_operations" data-i18n="index.filters.gazaOperations">Gaza Operations (2008-2021)</option>
+                            <option value="current_genocide" data-i18n="index.filters.currentGenocide">Current Genocide (2023-Present)</option>
+                        </select>
+                    </div>
+
+                    <!-- Event Type Filter -->
+                    <div class="filter-group">
+                        <label class="filter-label" data-i18n="index.filters.eventType">🏷️ Event Type</label>
+                        <select id="eventTypeFilter" class="filter-select">
+                            <option value="" data-i18n="index.filters.allTypes">All Types</option>
+                            <option value="massacre" data-i18n="index.filters.massacres">Massacres</option>
+                            <option value="military_operation" data-i18n="index.filters.militaryOperations">Military Operations</option>
+                            <option value="forced_displacement" data-i18n="index.filters.forcedDisplacement">Forced Displacement</option>
+                            <option value="hospital_attack" data-i18n="index.filters.hospitalAttacks">Hospital Attacks</option>
+                            <option value="protected_site_attack" data-i18n="index.filters.protectedSiteAttacks">Protected Site Attacks</option>
+                            <option value="starvation_warfare" data-i18n="index.filters.starvationWarfare">Starvation Warfare</option>
+                            <option value="protest_suppression" data-i18n="index.filters.protestSuppression">Protest Suppression</option>
+                        </select>
+                    </div>
+
+                    <!-- Search Filter -->
+                    <div class="filter-group">
+                        <label class="filter-label" data-i18n="index.filters.search">🔍 Search</label>
+                        <input type="text" id="searchFilter" class="search-input" data-i18n-placeholder="index.filters.searchPlaceholder" placeholder="Search events, locations...">
+                    </div>
+
+                    <!-- Verification Status -->
+                    <div class="filter-group">
+                        <label class="filter-label" data-i18n="index.filters.verification">✅ Verification</label>
+                        <select id="verificationFilter" class="filter-select">
+                            <option value="" data-i18n="index.filters.allStatuses">All Statuses</option>
+                            <option value="verified" data-i18n="index.filters.verified">Verified</option>
+                            <option value="disputed" data-i18n="index.filters.disputed">Disputed</option>
+                            <option value="under_investigation" data-i18n="index.filters.underInvestigation">Under Investigation</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Casualty Scale Chips -->
+                <div class="filter-group" style="margin-top: 1rem;">
+                    <label class="filter-label" data-i18n="index.filters.casualtyScale">📊 Casualty Scale</label>
+                    <div class="casualty-scale-filters">
+                        <button class="scale-chip active" data-scale="all" data-i18n="index.filters.allScales">All Scales</button>
+                        <button class="scale-chip" data-scale="low" data-i18n="index.filters.lowCasualties">1-50 casualties</button>
+                        <button class="scale-chip" data-scale="medium" data-i18n="index.filters.mediumCasualties">51-500 casualties</button>
+                        <button class="scale-chip" data-scale="high" data-i18n="index.filters.highCasualties">501-2000 casualties</button>
+                        <button class="scale-chip" data-scale="massive" data-i18n="index.filters.massiveCasualties">2000+ casualties</button>
+                    </div>
+                </div>
+
+                <div style="margin-top: 1rem; text-align: right;">
+                    <button id="clearAllFilters" class="clear-btn" data-i18n="index.filters.clearAll">🔄 Clear All Filters</button>
+                </div>
+            </div>
+
+            <!-- Loading Status -->
+            <div id="timelineStatus" class="container" style="display: none;">
+                <div class="csv-status" id="timelineStatusContent" data-i18n="index.timelineStatus.loading">
+                    📊 Loading timeline data...
+                </div>
+            </div>
+
+            <!-- Timeline View -->
+            <div class="timeline-container">
+                <div id="timeline-embed" class="timeline">
+                    <div class="timeline-loading">
+                        <div class="loading-spinner"></div>
+                        <div class="loading-message" data-i18n="index.timelineLoading.message">Loading Complete Historical Timeline...</div>
+                        <div class="loading-detail" data-i18n="index.timelineLoading.detail">Fetching data from 1948 to present...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Incident Detail Modal -->
+    <div class="modal" id="incidentModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle" data-i18n="index.modal.title">Event Details</h2>
+                <button class="modal-close" aria-label="Close modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="incident-details">
+                    <div class="detail-section">
+                        <h4 data-i18n="index.modal.basicInfo">📋 Basic Information</h4>
+                        <div class="detail-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
+                            <div class="detail-item">
+                                <strong data-i18n="index.modal.date">📅 Date:</strong> <span id="modalDate"></span>
+                            </div>
+                            <div class="detail-item">
+                                <strong data-i18n="index.modal.location">📍 Location:</strong> <span id="modalLocation"></span>
+                            </div>
+                            <div class="detail-item">
+                                <strong data-i18n="index.modal.eventType">🏷️ Event Type:</strong> <span id="modalType"></span>
+                            </div>
+                            <div class="detail-item">
+                                <strong data-i18n="index.modal.verification">✅ Verification:</strong> <span id="modalVerification"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detail-section">
+                        <h4 data-i18n="index.modal.summary">📄 Summary</h4>
+                        <p id="modalSummary"></p>
+                    </div>
+
+                    <div class="detail-section" id="modalCasualtiesSection">
+                        <h4 data-i18n="index.modal.casualties">💥 Casualties & Impact</h4>
+                        <div id="modalCasualties" class="casualties-display"></div>
+                    </div>
+
+                    <div class="detail-section" id="modalWarCrimesSection">
+                        <h4 data-i18n="index.modal.warCrimes">⚖️ War Crimes Documented</h4>
+                        <div id="modalWarCrimes" class="war-crimes-list"></div>
+                    </div>
+
+                    <div class="detail-section">
+                        <h4 data-i18n="index.modal.sources">📰 Verified Sources</h4>
+                        <div id="modalSources" class="sources-container"></div>
+                    </div>
+
+                    <div class="detail-section">
+                        <div class="modal-actions">
+                            <a id="modalDetailPage" href="#" class="detail-page-btn" target="_blank" style="display: inline-block; background: var(--secondary-color); color: white; padding: 0.75rem 1.5rem; border-radius: var(--border-radius); text-decoration: none; transition: var(--transition-base);" data-i18n="index.modal.viewFull">
+                                📖 View Full Documentation →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Styles -->
+    <style>
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 10000;
+            overflow-y: auto;
+        }
+
+        .modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .modal-content {
+            background: var(--surface-color);
+            border-radius: var(--border-radius-lg);
+            max-width: 800px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: var(--shadow-xl);
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .modal-header h2 {
+            margin: 0;
+            color: var(--text-primary);
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+            color: var(--text-secondary);
+            transition: var(--transition-base);
+        }
+
+        .modal-close:hover {
+            color: var(--accent-color);
+        }
+
+        .modal-body {
+            padding: 2rem;
+        }
+
+        .detail-section {
+            margin-bottom: 2rem;
+        }
+
+        .detail-section h4 {
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .detail-item {
+            font-size: 0.9rem;
+        }
+
+        .detail-item strong {
+            color: var(--text-primary);
+        }
+
+        .detail-page-btn:hover {
+            background: var(--accent-color);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .detail-grid {
+                grid-template-columns: 1fr !important;
+            }
+        }
+
+        /* Site intro - states the archive's purpose above the fold */
+        .site-intro {
+            padding: 1.75rem 0 1.25rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .site-intro h1 {
+            margin: 0 0 0.55rem;
+            font-size: clamp(1.4rem, 3.2vw, 2.15rem);
+            font-weight: 700;
+            line-height: 1.22;
+            color: var(--text-primary);
+            max-width: 30ch;
+        }
+        .site-intro p {
+            margin: 0;
+            max-width: 68ch;
+            color: var(--text-secondary);
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+    </style>
+
+    <!-- Universal Footer Component -->
+    <div id="footer-placeholder"></div>
+    <script src="js/footer-init.js?v=6"></script>
+
+
+
+    <!-- External JavaScript Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+<!-- Main Application Script -->
+<script>
+    console.log('🔧 Initializing main index page with Complete Historical Timeline (1948-Present)...');
+
+    // Initialize global variables
+    window.incidents = [];
+    window.filteredIncidents = [];
+    window.dataLoaded = false;
+    window.apiData = null;
+    let lastUpdated = null;
+    let isUsingFallback = false;
+
+
+        // Data mapping configuration for API v3 structure
+        const dataMapping = {
+            casualties: [
+                {
+                    icon: "👶",
+                    label: "Children Killed",
+                    apiKeys: ["gaza.killed.children"],
+                    fallbackValue: 19000,
+                    severity: "critical"
+                },
+                {
+                    icon: "📰",
+                    label: "Journalists Killed",
+                    apiKeys: ["gaza.killed.press"],
+                    fallbackValue: 140,
+                    severity: "urgent"
+                },
+                {
+                    icon: "🏥",
+                    label: "Medical Personnel Killed",
+                    apiKeys: ["gaza.killed.medical"],
+                    fallbackValue: 1590,
+                    severity: "warning"
+                }
+            ]
+        };
+
+        async function fetchApiData() {
+            const apiUrl = 'https://data.techforpalestine.org/api/v3/summary.json';
+
+            const proxyServices = [
+                {
+                    name: 'AllOrigins',
+                    url: `https://api.allorigins.win/get?url=${encodeURIComponent(apiUrl)}`,
+                    parseResponse: (data) => JSON.parse(data.contents)
+                }
+            ];
+
+            try {
+                console.log('Attempting to fetch data from Tech for Palestine API v3...');
+                updateApiStatus('loading', 'Loading API v3...');
+
+                try {
+                    const response = await fetch(apiUrl, {
+                        method: 'GET',
+                        headers: { 'Accept': 'application/json' },
+                        mode: 'cors'
+                    });
+
+                    if (response.ok) {
+                        const data = await response.json();
+                        window.apiData = data;
+                        lastUpdated = data.gaza?.last_update || new Date().toISOString();
+                        console.log('API v3 data fetched directly:', data);
+                        updateApiStatus('live', 'Live Data');
+                        isUsingFallback = false;
+                        return data;
+                    }
+                } catch (directError) {
+                    console.log('Direct fetch failed (expected due to CORS):', directError.message);
+                }
+
+                for (const proxy of proxyServices) {
+                    try {
+                        console.log(`Trying ${proxy.name} proxy...`);
+                        updateApiStatus('loading', `Trying ${proxy.name}...`);
+
+                        const proxyResponse = await fetch(proxy.url, {
+                            method: 'GET',
+                            headers: { 'Accept': 'application/json' }
+                        });
+
+                        if (proxyResponse.ok) {
+                            const proxyData = await proxyResponse.json();
+                            const data = proxy.parseResponse(proxyData);
+
+                            if (data && data.gaza && data.gaza.killed) {
+                                window.apiData = data;
+                                lastUpdated = data.gaza?.last_update || new Date().toISOString();
+                                console.log(`API v3 data fetched via ${proxy.name}:`, data);
+                                updateApiStatus('live', `Live Data (${proxy.name})`);
+                                isUsingFallback = false;
+                                return data;
+                            }
+                        }
+                    } catch (proxyError) {
+                        console.log(`${proxy.name} proxy failed:`, proxyError.message);
+                        continue;
+                    }
+                }
+
+                throw new Error('All proxy methods failed');
+
+            } catch (error) {
+                console.error('All API fetch attempts failed:', error);
+                throw error;
+            }
+        }
+
+        function updateApiStatus(status, text) {
+            const apiStatus = document.getElementById('apiStatus');
+            if (apiStatus) {
+                apiStatus.className = `api-status ${status}`;
+
+                // Use translation if available
+                if (window.TranslationSystem) {
+                    const key = `index.apiStatus.${status}`;
+                    const translation = window.TranslationSystem.getTranslation(key);
+                    if (translation) {
+                        apiStatus.textContent = translation;
+                        return;
+                    }
+                }
+
+                // Fallback if no translation available
+                apiStatus.textContent = text;
+            }
+        }
+
+        function getNestedValue(obj, path) {
+            if (!obj || !path) return null;
+            try {
+                return path.split('.').reduce((current, key) => {
+                    return current && typeof current === 'object' ? current[key] : null;
+                }, obj);
+            } catch (error) {
+                console.warn(`Failed to get nested value for path: ${path}`, error);
+                return null;
+            }
+        }
+
+        function getValueFromData(data, config) {
+            if (!data) return config.fallbackValue;
+
+            for (const apiKey of config.apiKeys) {
+                const value = getNestedValue(data, apiKey);
+                if (value !== null && value !== undefined) {
+                    return value;
+                }
+            }
+
+            return config.fallbackValue;
+        }
+
+        function formatNumber(value) {
+            if (value === null || value === undefined) return 'N/A';
+
+            const num = parseInt(value);
+            if (isNaN(num)) return 'N/A';
+
+            // Use TranslationSystem's number formatter if available
+            if (window.TranslationSystem && typeof window.TranslationSystem.formatNumber === 'function') {
+                return window.TranslationSystem.formatNumber(num);
+            }
+
+            // Fallback formatting
+            if (num >= 1000000) {
+                return (num / 1000000).toFixed(1) + 'M';
+            } else if (num >= 1000) {
+                return (num / 1000).toFixed(1) + 'K';
+            } else {
+                return num.toLocaleString();
+            }
+        }
+
+        function showDataSuccess() {
+            console.log('✅ Data loaded successfully');
+        }
+
+        function showDataError(error) {
+            console.error('Data Loading Error:', error);
+        }
+
+        async function loadMainPageData() {
+            try {
+                console.log('📊 Loading main page data from Tech for Palestine API v3 and CSV sources...');
+
+                const [apiData, csvSuccess] = await Promise.all([
+                    fetchApiData().catch(error => {
+                        console.log('API fetch failed, continuing with CSV data only');
+                        return null;
+                    })
+                ]);
+
+                if (apiData && apiData.gaza) {
+                    updateWarCrimesBannerStats(apiData);
+                    console.log('✅ API data loaded successfully');
+                } else {
+                    console.log('⚠️ Using fallback data for API-dependent stats');
+                    loadFallbackData();
+                }
+
+                showDataSuccess();
+
+                console.log('✅ Main page data loaded successfully from combined sources');
+                window.dataLoaded = true;
+                return true;
+
+            } catch (error) {
+                console.error('Error loading main page data:', error);
+                showDataError(error.message);
+                loadFallbackData();
+                return false;
+            }
+        }
+
+        function updateWarCrimesBannerStats(data) {
+            try {
+                console.log('📊 Updating war crimes banner stats with API data...');
+
+                const childrenKilled = getValueFromData(data, dataMapping.casualties[0]);
+                const journalistsKilled = getValueFromData(data, dataMapping.casualties[1]);
+                const medicalStaffKilled = getValueFromData(data, dataMapping.casualties[2]);
+
+                const childrenKilledEl = document.getElementById('warChildrenKilled');
+                const journalistsKilledEl = document.getElementById('warJournalistsKilled');
+                const medicalStaffKilledEl = document.getElementById('warMedicalKilled');
+
+                if (childrenKilledEl) childrenKilledEl.textContent = formatNumber(childrenKilled);
+                if (journalistsKilledEl) journalistsKilledEl.textContent = formatNumber(journalistsKilled);
+                if (medicalStaffKilledEl) medicalStaffKilledEl.textContent = formatNumber(medicalStaffKilled);
+
+                console.log('✅ War crimes banner stats updated successfully');
+
+            } catch (error) {
+                console.error('Error updating war crimes banner stats:', error);
+                loadFallbackData();
+            }
+        }
+
+        function loadFallbackData() {
+            console.log('Loading fallback API data...');
+            updateApiStatus('fallback', 'Cached Data');
+            isUsingFallback = true;
+
+            const childrenKilledEl = document.getElementById('warChildrenKilled');
+            const journalistsKilledEl = document.getElementById('warJournalistsKilled');
+            const medicalStaffKilledEl = document.getElementById('warMedicalKilled');
+
+            if (childrenKilledEl) childrenKilledEl.textContent = '19K';
+            if (journalistsKilledEl) journalistsKilledEl.textContent = '140';
+            if (medicalStaffKilledEl) medicalStaffKilledEl.textContent = '1.6K';
+
+            console.log('Fallback API data loaded successfully');
+        }
+
+        async function initializeIndexPage() {
+            console.log('🚀 Index page initializing with Complete Historical Timeline (1948-Present)...');
+
+            try {
+                await loadMainPageData();
+                console.log('📅 Dual Timeline Manager will auto-initialize with Complete Timeline (1948-Present)...');
+            } catch (error) {
+                console.error('Failed to initialize page:', error);
+                showDataError(error.message);
+            }
+        }
+
+        // Listen for language change events
+        document.addEventListener('languageChanged', function(e) {
+            console.log('🌐 Language changed to:', e.detail.language, 'with direction:', e.detail.direction);
+
+            // Update stats after language change to format numbers correctly
+            if (window.apiData) {
+                updateWarCrimesBannerStats(window.apiData);
+            }
+        });
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initializeIndexPage);
+        } else {
+            initializeIndexPage();
+        }
+    </script>
+
+    <!-- Header component -->
+    <script src="js/config.js?v=1"></script>
+    <script src="js/header-component.js?v=3"></script>
+
+    <!-- Custom Scripts - Use dual-timeline-manager.js -->
+    <script src="js/dual-timeline-manager.js?v=2"></script>
+</body>
+</html>

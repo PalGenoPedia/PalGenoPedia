@@ -1,0 +1,236 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "@id": "https://palgenopedia.org/data/events.json#hist003",
+  "headline": "Lydda and Ramle",
+  "url": "https://palgenopedia.org/Pages/Historical_Massacres/massacres.html#event/hist003",
+  "datePublished": "1948-07-09",
+  "dateModified": "2026-08-09",
+  "inLanguage": "en",
+  "about": {
+    "@type": "Event",
+    "name": "Lydda and Ramle",
+    "startDate": "1948-07-09",
+    "endDate": "1948-07-13",
+    "description": "Operation Dani, 1948 Arab-Israeli War",
+    "location": {
+      "@type": "Place",
+      "name": "Lod and Ramla, Central District, Israel; Cities renamed and repopulated; small Palestinian minority remains",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 31.951,
+        "longitude": 34.8881
+      }
+    }
+  },
+  "articleBody": "On July 9–13, 1948, during Operation Dani under the command of Yigal Allon (with Yitzhak Rabin as deputy), Israeli forces captured Lydda and Ramle. In Lydda, city-wide shootings killed hundreds of civilians; the Dahmash Mosque massacre alone claimed 70–250+ lives (estimates vary). Moshe Dayan's 89th Battalion participated in ground operations. Immediately after the takeover, expulsion orders were executed: the entire Palestinian populations of both towns—approximately 50,000–70,000 people, including refugees—were forced to march on foot toward Ramallah in extreme July heat. This 'death march' saw numerous deaths from thirst, heat exhaustion, and deprivation; survivors reported infants dying, people chewing grass for moisture, and soldiers preventing access to water. Total deaths are estimated at 400–1,000 (including in-city killings and march fatalities). No perpetrators were prosecuted. Allon became Deputy Prime Minister; Rabin became Prime Minister and Nobel Peace Prize laureate (1994); Dayan became Defense Minister and Foreign Minister. Rabin's memoir passages describing the expulsion order were censored in 1979, later restored.",
+  "keywords": "Massacre, Forced Expulsion, Death March, historical, War Crime; Crimes Against Humanity; Ethnic Cleansing (Nakba)",
+  "mentions": [
+    {
+      "@type": "Organization",
+      "name": "IDF Yiftach Brigade (11th Brigade)"
+    },
+    {
+      "@type": "Organization",
+      "name": "IDF 8th Armored Brigade"
+    },
+    {
+      "@type": "Organization",
+      "name": "Operation Dani command structure"
+    }
+  ],
+  "citation": [
+    {
+      "@type": "Article",
+      "name": "Morris, Benny. 'Operation Dani and the Palestinian Exodus from Lydda and Ramle in 1948'",
+      "url": "https://www.jstor.org/stable/4327250",
+      "about": {
+        "@type": "Thing",
+        "name": "casualty"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Survivor testimonies - IPS/PalQuest",
+      "url": "https://www.palquest.org/en/highlight/24073/lydda-9-13-july-1948",
+      "about": {
+        "@type": "Thing",
+        "name": "casualty"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Morris, Benny. 'The Birth of the Palestinian Refugee Problem Revisited' (2004)",
+      "url": "https://www.cambridge.org/core/books/birth-of-the-palestinian-refugee-problem-revisited/4A0958EED322D2FAC1D245128A1D44CB",
+      "about": {
+        "@type": "Thing",
+        "name": "casualty"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "'The Fall of Lydda' memoir (archived PDF)",
+      "url": "https://web.archive.org/web/20120723132022/http://www.palestine-studies.org/enakba/Memoirs/Munayyer%2C%20The%20Fall%20of%20Lydda.pdf",
+      "about": {
+        "@type": "Thing",
+        "name": "testimony"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Memoir/testimony reproduced by IPS/PalQuest",
+      "url": "https://www.palquest.org/en/highlight/24073/lydda-9-13-july-1948",
+      "about": {
+        "@type": "Thing",
+        "name": "testimony"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Interview excerpt cited by IPS/PalQuest",
+      "url": "https://www.palquest.org/en/highlight/24073/lydda-9-13-july-1948",
+      "about": {
+        "@type": "Thing",
+        "name": "testimony"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "The Rabin Memoirs (1979/later editions); cited in Morris 2004",
+      "url": "https://en.wikipedia.org/wiki/1948_Palestinian_expulsion_from_Lydda_and_Ramle#Rabin's_account",
+      "about": {
+        "@type": "Thing",
+        "name": "testimony"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "IPS/PalQuest",
+      "url": "https://www.palquest.org/en/highlight/24073/lydda-9-13-july-1948",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Munayyer memoir",
+      "url": "https://web.archive.org/web/20120723132022/http://www.palestine-studies.org/enakba/Memoirs/Munayyer%2C%20The%20Fall%20of%20Lydda.pdf",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Rabin memoirs analysis",
+      "url": "https://en.wikipedia.org/wiki/1948_Palestinian_expulsion_from_Lydda_and_Ramle#Rabin's_account",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "IPS/PalQuest Overview",
+      "url": "https://www.palquest.org/en/highlight/24073/lydda-9-13-july-1948",
+      "about": {
+        "@type": "Thing",
+        "name": "war_crime"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "'The Fall of Lydda' (Munayyer memoir)",
+      "url": "https://web.archive.org/web/20120723132022/http://www.palestine-studies.org/enakba/Memoirs/Munayyer%2C%20The%20Fall%20of%20Lydda.pdf",
+      "about": {
+        "@type": "Thing",
+        "name": "war_crime"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Survivor Testimonies",
+      "url": "https://www.palquest.org/en/highlight/24073/lydda-9-13-july-1948",
+      "about": {
+        "@type": "Thing",
+        "name": "war_crime"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "IPS/PalQuest Testimonies",
+      "url": "https://www.palquest.org/en/highlight/24073/lydda-9-13-july-1948",
+      "about": {
+        "@type": "Thing",
+        "name": "war_crime"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "IPS/PalQuest Excerpts",
+      "url": "https://www.palquest.org/en/highlight/24073/lydda-9-13-july-1948",
+      "about": {
+        "@type": "Thing",
+        "name": "war_crime"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "IPS Portal Entry",
+      "url": "https://www.palestine-studies.org/en/node/1657540",
+      "about": {
+        "@type": "Thing",
+        "name": "war_crime"
+      }
+    }
+  ],
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "Deaths",
+      "propertyID": "casualties/deaths",
+      "value": "≈400–1,000",
+      "minValue": 400,
+      "maxValue": 1000
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Injured",
+      "propertyID": "casualties/injured",
+      "value": "Unknown (not systematically recorded)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Forced displacement",
+      "propertyID": "casualties/forced_displacement",
+      "value": "≈50,000–70,000",
+      "minValue": 50000,
+      "maxValue": 70000
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Verification status",
+      "propertyID": "verification_status",
+      "value": "verified"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Classification",
+      "propertyID": "classification",
+      "value": "War Crime; Crimes Against Humanity; Ethnic Cleansing (Nakba)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Author",
+      "propertyID": "author",
+      "value": "Yassin"
+    }
+  ],
+  "provider": {
+    "@type": "Organization",
+    "name": "PalGenoPedia",
+    "url": "https://palgenopedia.org"
+  },
+  "isBasedOn": "https://palgenopedia.org/data/events.json"
+}

@@ -1,0 +1,415 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "@id": "https://palgenopedia.org/data/events.json#hist014",
+  "headline": "Operation Protective Edge",
+  "url": "https://palgenopedia.org/Pages/Historical_Massacres/massacres.html#event/hist014",
+  "datePublished": "2014-07-07",
+  "dateModified": "2026-08-09",
+  "inLanguage": "en",
+  "about": {
+    "@type": "Event",
+    "name": "Operation Protective Edge",
+    "startDate": "2014-07-07",
+    "endDate": "41877",
+    "description": "51-day Israeli military operation in Gaza Strip; deadliest Gaza conflict",
+    "location": {
+      "@type": "Place",
+      "name": "Gaza Strip, Under Israeli blockade; governed by Hamas; Reconstruction incomplete; ongoing blockade; infrastructure severely damaged"
+    }
+  },
+  "articleBody": "Operation Protective Edge began on July 7, 2014, ostensibly in response to escalating rocket fire from Gaza, but in a context of heightened tensions following the abduction and murder of three Israeli teenagers in the West Bank in June. Israel launched massive airstrikes across Gaza, conducting over 6,000 air raids in 51 days. The operation had three phases: an initial week of intensive aerial bombardment, a ground invasion beginning July 17 aimed at destroying cross-border tunnels, and a final phase from August 5 characterized by alternating ceasefires and continued strikes. The stated objectives were to stop rocket attacks and destroy Hamas's military infrastructure and tunnel network. The human toll was unprecedented. The UN Commission of Inquiry documented 2,251 Palestinian deaths, with 1,462 identified as civilians—65% of all deaths. Among the dead were 551 children and 299 women. Entire families were wiped out in single strikes: 18 members of the Al-Batsh family killed on July 13, 17 members of the Abu Jame family on July 20, 26 members of the Al-Najjar family on July 20. The Commission investigated 15 cases of attacks on residential buildings and found that in many instances there was no evidence of a legitimate military target, or the attacks were grossly disproportionate. B'Tselem documented 606 attacks on residential buildings killing 1,447 civilians. The percentage of women among civilian deaths (20.2%) was significantly higher than in previous operations. Several specific incidents stood out for their brutality. On July 19-20, Israeli forces launched a massive assault on Shuja'iya, one of Gaza's most densely populated neighborhoods. Over 100 Palestinians were killed in approximately 24 hours as Israeli artillery fired thousands of shells into residential areas. Witnesses described civilians being shot while attempting to flee with white flags. On August 1, after an Israeli soldier was reportedly captured in Rafah, Israel invoked the Hannibal Directive—calling for overwhelming force without regard for civilian life. In three hours, Israeli forces fired over 1,000 artillery shells into Rafah, killing 130-150 Palestinians, overwhelmingly civilians. The UN described this as a 'moral outrage and a criminal act.' The systematic destruction of Gaza's infrastructure was also staggering: Gaza's only power plant destroyed, 18,000 homes razed, 89,000 damaged, 73 medical facilities attacked, 262 schools damaged. The UN Commission concluded there was evidence indicating serious violations of international humanitarian law amounting to war crimes by Israeli forces, including deliberate attacks on civilians and civilian infrastructure. The Commission also found Palestinian armed groups committed war crimes through indiscriminate rocket attacks and the extrajudicial execution of 21 alleged collaborators. On the Israeli side, 73 people died: 67 soldiers and 6 civilians killed by rockets and mortars.",
+  "keywords": "Military Operation, historical, War Crimes; Crimes Against Humanity (UN Commission of Inquiry 2015)",
+  "mentions": [
+    {
+      "@type": "Organization",
+      "name": "Israel Defense Forces"
+    },
+    {
+      "@type": "Organization",
+      "name": "Israeli Air Force"
+    },
+    {
+      "@type": "Organization",
+      "name": "Israeli Artillery"
+    },
+    {
+      "@type": "Organization",
+      "name": "Hamas military wing (Izz ad-Din al-Qassam Brigades)"
+    },
+    {
+      "@type": "Organization",
+      "name": "Palestinian Islamic Jihad"
+    },
+    {
+      "@type": "Organization",
+      "name": "Hamas authorities in Gaza"
+    }
+  ],
+  "citation": [
+    {
+      "@type": "Article",
+      "name": "UN Commission of Inquiry Report A/HRC/29/52",
+      "url": "https://www.un.org/unispal/document/auto-insert-185919/",
+      "about": {
+        "@type": "Thing",
+        "name": "casualty"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "UN Commission Report para. 24",
+      "url": "https://www.un.org/unispal/document/auto-insert-185919/",
+      "about": {
+        "@type": "Thing",
+        "name": "casualty"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "B'Tselem Report on Residential Buildings",
+      "url": "https://www.btselem.org/gaza_strip/gaza_201407_operation",
+      "about": {
+        "@type": "Thing",
+        "name": "casualty"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "UN Commission Report",
+      "url": "https://www.un.org/unispal/document/auto-insert-185919/",
+      "about": {
+        "@type": "Thing",
+        "name": "casualty"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "UN OCHA Assessment",
+      "url": "https://www.ochaopt.org/content/key-figures-2014-hostilities",
+      "about": {
+        "@type": "Thing",
+        "name": "casualty"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "IMEU Report",
+      "url": "https://imeu.org/article/50-days-of-death-destruction-israels-operation-protective-edge",
+      "about": {
+        "@type": "Thing",
+        "name": "casualty"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Amnesty International Statement",
+      "url": "https://www.amnesty.org/",
+      "about": {
+        "@type": "Thing",
+        "name": "casualty"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "OCHA Statistics",
+      "url": "https://www.ochaopt.org/content/key-figures-2014-hostilities",
+      "about": {
+        "@type": "Thing",
+        "name": "casualty"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "OCHA Report citing IDF data",
+      "url": "https://www.ochaopt.org/content/key-figures-2014-hostilities",
+      "about": {
+        "@type": "Thing",
+        "name": "casualty"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "OCHA citing IDF",
+      "url": "https://www.ochaopt.org/content/key-figures-2014-hostilities",
+      "about": {
+        "@type": "Thing",
+        "name": "casualty"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "UN Commission Press Conference, June 22, 2015",
+      "url": "https://www.ohchr.org/en/hr-bodies/hrc/co-i-gaza-conflict/report-co-i-gaza",
+      "about": {
+        "@type": "Thing",
+        "name": "testimony"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "UN Commission testimony, 2014-2015",
+      "url": "https://www.un.org/unispal/document/auto-insert-185919/",
+      "about": {
+        "@type": "Thing",
+        "name": "testimony"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "UN Secretary-General statements, August 2014",
+      "url": "https://www.un.org/unispal/",
+      "about": {
+        "@type": "Thing",
+        "name": "testimony"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "UNRWA Statement, August 3, 2014",
+      "url": "https://www.unrwa.org/",
+      "about": {
+        "@type": "Thing",
+        "name": "testimony"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Amnesty Report: 'Families Under the Rubble', November 2014",
+      "url": "https://www.amnesty.org/",
+      "about": {
+        "@type": "Thing",
+        "name": "testimony"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "HRW Report 'Findings on Violations', September 2014",
+      "url": "https://www.hrw.org/",
+      "about": {
+        "@type": "Thing",
+        "name": "testimony"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Breaking the Silence testimonies, 2014-2015",
+      "url": "https://www.breakingthesilence.org.il/",
+      "about": {
+        "@type": "Thing",
+        "name": "testimony"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Medical testimonies compilation, UN Commission",
+      "url": "https://www.un.org/unispal/",
+      "about": {
+        "@type": "Thing",
+        "name": "testimony"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "UN Documentation",
+      "url": "https://www.un.org/unispal/",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "UN Commission Report para. 69-70",
+      "url": "https://www.un.org/unispal/document/auto-insert-185919/",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "UN Commission Report para. 19",
+      "url": "https://www.un.org/unispal/document/auto-insert-185919/",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "HRW Investigation",
+      "url": "https://www.hrw.org/",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "UN Detailed Findings Report",
+      "url": "https://www.un.org/unispal/wp-content/uploads/2015/06/cb361dbaf1526e5785257e6c004b1e94_20150622%20--%20OHCHR%20Report%20on%20Palestine%20%5BA_HRC_CRP_4%5D.pdf",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "MERIP Analysis",
+      "url": "https://merip.org/2015/10/operation-protective-edge/",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "B'Tselem Documentation",
+      "url": "https://www.btselem.org/gaza_strip/gaza_201407_operation",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "UN HRC Resolution",
+      "url": "https://www.ohchr.org/en/hr-bodies/hrc/co-i-gaza-conflict/report-co-i-gaza",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Amnesty Statement",
+      "url": "https://www.amnesty.org/",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "UN Commission para. 27",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "UN Investigation Report",
+      "url": "https://www.un.org/unispal/",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "UN Commission para. 67-68",
+      "url": "https://www.un.org/unispal/document/auto-insert-185919/",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "UN OCHA Final Assessment",
+      "url": "https://www.ochaopt.org/content/key-figures-2014-hostilities",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "UN Commission Report A/HRC/29/52",
+      "url": "https://www.un.org/unispal/document/auto-insert-185919/",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "UN Commission Report para. 26-35",
+      "url": "https://www.un.org/unispal/document/auto-insert-185919/",
+      "about": {
+        "@type": "Thing",
+        "name": "war_crime"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Amnesty & HRW Statements",
+      "url": "https://www.amnesty.org/",
+      "about": {
+        "@type": "Thing",
+        "name": "war_crime"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "Human Rights Watch Investigation",
+      "url": "https://www.hrw.org/",
+      "about": {
+        "@type": "Thing",
+        "name": "war_crime"
+      }
+    }
+  ],
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "Deaths",
+      "propertyID": "casualties/deaths",
+      "value": "2,251 Palestinians (1,462 civilians, 551 children, 299 women); 73 Israelis (67 soldiers, 6 civilians)",
+      "minValue": 6,
+      "maxValue": 2251
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Injured",
+      "propertyID": "casualties/injured",
+      "value": "11,231 Palestinians (3,436 children); 1,600 Israelis (270 children)",
+      "minValue": 270,
+      "maxValue": 11231
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Forced displacement",
+      "propertyID": "casualties/forced_displacement",
+      "value": "500,000 Palestinians (1/3 of Gaza's population); 100,000 remained displaced one year later",
+      "minValue": 1,
+      "maxValue": 500000
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Verification status",
+      "propertyID": "verification_status",
+      "value": "verified"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Classification",
+      "propertyID": "classification",
+      "value": "War Crimes; Crimes Against Humanity (UN Commission of Inquiry 2015)"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Author",
+      "propertyID": "author",
+      "value": "aliattia02"
+    }
+  ],
+  "provider": {
+    "@type": "Organization",
+    "name": "PalGenoPedia",
+    "url": "https://palgenopedia.org"
+  },
+  "isBasedOn": "https://palgenopedia.org/data/events.json"
+}
