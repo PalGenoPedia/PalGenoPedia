@@ -106,14 +106,14 @@ console.log('🔧 Universal Footer Initializer loading...');
             // Versioned like every other changed asset: the footer's nav links moved
             // with the stat pages, and a browser holding the previous copy would keep
             // serving the old ones. Bump on any edit to the partial.
-            const commonStylesPath = `${rootPath}partials/common-styles.html?v=5`;
-            
-            console.log(`🔍 Loading footer from: ${commonStylesPath}`);
+            const footerPartialPath = `${rootPath}partials/site-footer.html?v=6`;
+
+            console.log(`🔍 Loading footer from: ${footerPartialPath}`);
 
             // Load the footer HTML with error handling
             let response;
             try {
-                response = await fetch(commonStylesPath);
+                response = await fetch(footerPartialPath);
             } catch (fetchError) {
                 console.error('❌ Network error loading footer:', fetchError);
                 throw new Error(`Network error: ${fetchError.message}`);

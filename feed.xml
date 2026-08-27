@@ -2,18 +2,18 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>PalGenoPedia — Documented Events</title>
   <id>https://palgenopedia.org/data/events.json</id>
-  <updated>2026-08-09T00:00:00Z</updated>
+  <updated>2026-08-24T00:00:00Z</updated>
   <link rel="self" href="https://palgenopedia.org/feed.xml"/>
-  <link rel="alternate" href="https://palgenopedia.org/major-incidents-timeline.html"/>
+  <link rel="alternate" href="https://palgenopedia.org/historical-events/massacres/timeline.html"/>
   <subtitle>Documented war crimes, massacres, and humanitarian violations concerning Palestine, 1948–present. Generated from the canonical /data/events.json (27 events).</subtitle>
   <author><name>PalGenoPedia</name></author>
   <!-- Regenerate from data/events.json to publish future additions. Newest events first. -->
   <entry>
     <title>Starvation Genocide - Northern Gaza Blockade</title>
-    <link rel="alternate" href="https://palgenopedia.org/major-incidents-timeline.html"/>
+    <link rel="alternate" href="https://palgenopedia.org/historical-events/massacres/timeline.html#event/curr_010"/>
     <id>https://palgenopedia.org/data/events.json#curr_010</id>
     <published>2024-10-01T00:00:00Z</published>
-    <updated>2026-08-09T00:00:00Z</updated>
+    <updated>2026-08-24T00:00:00Z</updated>
     <category term="starvation_warfare"/>
     <category term="verification:verified"/>
     <summary>Starvation Genocide - Northern Gaza Blockade — starvation_warfare (verified).
@@ -26,10 +26,10 @@ Sources: UN Special Rapporteurs; World Food Programme; Human Rights Watch; Genoc
   </entry>
   <entry>
     <title>Rafah Tent Camp Massacre</title>
-    <link rel="alternate" href="https://palgenopedia.org/major-incidents-timeline.html"/>
+    <link rel="alternate" href="https://palgenopedia.org/historical-events/massacres/timeline.html#event/curr_007"/>
     <id>https://palgenopedia.org/data/events.json#curr_007</id>
     <published>2024-05-26T00:00:00Z</published>
-    <updated>2026-08-09T00:00:00Z</updated>
+    <updated>2026-08-24T00:00:00Z</updated>
     <category term="massacre"/>
     <category term="verification:verified"/>
     <summary>Rafah Tent Camp Massacre — massacre (verified).
@@ -42,10 +42,10 @@ Sources: UN OCHA; Gaza Health Ministry; Human Rights Watch; Video evidence</summ
   </entry>
   <entry>
     <title>Mass Graves Discovery at Nasser Hospital</title>
-    <link rel="alternate" href="https://palgenopedia.org/major-incidents-timeline.html"/>
+    <link rel="alternate" href="https://palgenopedia.org/historical-events/massacres/timeline.html#event/curr_005"/>
     <id>https://palgenopedia.org/data/events.json#curr_005</id>
     <published>2024-04-22T00:00:00Z</published>
-    <updated>2026-08-09T00:00:00Z</updated>
+    <updated>2026-08-24T00:00:00Z</updated>
     <category term="mass_graves"/>
     <category term="verification:verified"/>
     <summary>Mass Graves Discovery at Nasser Hospital — mass_graves (verified).
@@ -58,10 +58,10 @@ Sources: Gaza Civil Defense; UN OCHA; Human Rights Watch; Euro-Med Human Rights 
   </entry>
   <entry>
     <title>World Central Kitchen Workers Killing</title>
-    <link rel="alternate" href="https://palgenopedia.org/major-incidents-timeline.html"/>
+    <link rel="alternate" href="https://palgenopedia.org/historical-events/massacres/timeline.html#event/curr_008"/>
     <id>https://palgenopedia.org/data/events.json#curr_008</id>
     <published>2024-04-01T00:00:00Z</published>
-    <updated>2026-08-09T00:00:00Z</updated>
+    <updated>2026-08-24T00:00:00Z</updated>
     <category term="aid_workers_killing"/>
     <category term="verification:verified"/>
     <summary>World Central Kitchen Workers Killing — aid_workers_killing (verified).
@@ -74,10 +74,10 @@ Sources: World Central Kitchen Statement; UN Security Council; Human Rights Watc
   </entry>
   <entry>
     <title>Flour Massacre - Al-Rashid Street</title>
-    <link rel="alternate" href="https://palgenopedia.org/major-incidents-timeline.html"/>
+    <link rel="alternate" href="https://palgenopedia.org/historical-events/massacres/timeline.html#event/curr_003"/>
     <id>https://palgenopedia.org/data/events.json#curr_003</id>
     <published>2024-02-29T00:00:00Z</published>
-    <updated>2026-08-09T00:00:00Z</updated>
+    <updated>2026-08-24T00:00:00Z</updated>
     <category term="massacre"/>
     <category term="verification:verified"/>
     <summary>Flour Massacre - Al-Rashid Street — massacre (verified).
@@ -90,10 +90,10 @@ Sources: UN OCHA; Gaza Health Ministry; Euro-Med Human Rights Monitor; Video evi
   </entry>
   <entry>
     <title>Al-Shifa Hospital Siege</title>
-    <link rel="alternate" href="https://palgenopedia.org/major-incidents-timeline.html"/>
+    <link rel="alternate" href="https://palgenopedia.org/historical-events/massacres/timeline.html#event/curr_006"/>
     <id>https://palgenopedia.org/data/events.json#curr_006</id>
     <published>2023-11-11T00:00:00Z</published>
-    <updated>2026-08-09T00:00:00Z</updated>
+    <updated>2026-08-24T00:00:00Z</updated>
     <category term="hospital_siege"/>
     <category term="verification:verified"/>
     <summary>Al-Shifa Hospital Siege — hospital_siege (verified).
@@ -106,10 +106,10 @@ Sources: WHO; UN OCHA; Human Rights Watch; Doctors Without Borders</summary>
   </entry>
   <entry>
     <title>Jabalia Refugee Camp Bombardment (First Strike)</title>
-    <link rel="alternate" href="https://palgenopedia.org/major-incidents-timeline.html"/>
+    <link rel="alternate" href="https://palgenopedia.org/historical-events/massacres/timeline.html#event/curr_002"/>
     <id>https://palgenopedia.org/data/events.json#curr_002</id>
     <published>2023-10-31T00:00:00Z</published>
-    <updated>2026-08-09T00:00:00Z</updated>
+    <updated>2026-08-24T00:00:00Z</updated>
     <category term="refugee_camp_attack"/>
     <category term="verification:verified"/>
     <summary>Jabalia Refugee Camp Bombardment (First Strike) — refugee_camp_attack (verified).
@@ -122,10 +122,10 @@ Sources: UN OCHA; Human Rights Watch; Gaza Civil Defense; Multiple news agencies
   </entry>
   <entry>
     <title>Gaza City Systematic Destruction</title>
-    <link rel="alternate" href="https://palgenopedia.org/major-incidents-timeline.html"/>
+    <link rel="alternate" href="https://palgenopedia.org/historical-events/massacres/timeline.html#event/curr_009"/>
     <id>https://palgenopedia.org/data/events.json#curr_009</id>
     <published>2023-10-27T00:00:00Z</published>
-    <updated>2026-08-09T00:00:00Z</updated>
+    <updated>2026-08-24T00:00:00Z</updated>
     <category term="urban_destruction"/>
     <category term="verification:verified"/>
     <summary>Gaza City Systematic Destruction — urban_destruction (verified).
@@ -138,10 +138,10 @@ Sources: UN OCHA; Satellite imagery analysis; Human Rights Watch; UN Satellite C
   </entry>
   <entry>
     <title>Al-Ahli Baptist Hospital Strike</title>
-    <link rel="alternate" href="https://palgenopedia.org/major-incidents-timeline.html"/>
+    <link rel="alternate" href="https://palgenopedia.org/historical-events/massacres/timeline.html#event/curr_001"/>
     <id>https://palgenopedia.org/data/events.json#curr_001</id>
     <published>2023-10-17T00:00:00Z</published>
-    <updated>2026-08-09T00:00:00Z</updated>
+    <updated>2026-08-24T00:00:00Z</updated>
     <category term="hospital_attack"/>
     <category term="verification:disputed"/>
     <summary>Al-Ahli Baptist Hospital Strike — hospital_attack (disputed).
@@ -154,10 +154,10 @@ Sources: Gaza Health Ministry; Human Rights Watch Investigation; UN OCHA; Multip
   </entry>
   <entry>
     <title>UNRWA School Strikes</title>
-    <link rel="alternate" href="https://palgenopedia.org/major-incidents-timeline.html"/>
+    <link rel="alternate" href="https://palgenopedia.org/historical-events/massacres/timeline.html#event/curr_004"/>
     <id>https://palgenopedia.org/data/events.json#curr_004</id>
     <published>2023-10-15T00:00:00Z</published>
-    <updated>2026-08-09T00:00:00Z</updated>
+    <updated>2026-08-24T00:00:00Z</updated>
     <category term="protected_site_attack"/>
     <category term="verification:verified"/>
     <summary>UNRWA School Strikes — protected_site_attack (verified).
@@ -170,14 +170,14 @@ Sources: UNRWA Official Statements; UN Secretary-General Reports; Human Rights W
   </entry>
   <entry>
     <title>West Bank Raids 2022–2023</title>
-    <link rel="alternate" href="https://palgenopedia.org/Pages/Historical_Massacres/massacres.html#event/hist017"/>
+    <link rel="alternate" href="https://palgenopedia.org/historical-events/massacres/west-bank-raids-20222023/"/>
     <id>https://palgenopedia.org/data/events.json#hist017</id>
     <published>2022-01-01T00:00:00Z</published>
-    <updated>2026-08-09T00:00:00Z</updated>
+    <updated>2026-08-24T00:00:00Z</updated>
     <category term="Military Raids / Systematic Killings"/>
     <category term="verification:verified"/>
     <summary>West Bank Raids 2022–2023 — Military Raids / Systematic Killings (verified).
-Date: 2022-01-01 to 45291
+Date: 2022-01-01
 Location: West Bank, Under Israeli military occupation; Areas A, B, C division under Oslo Accords; Ongoing occupation; violence escalated significantly
 Casualties: deaths: 500+ Palestinians (2022-2023 combined) including 78+ children; 19 Israelis killed by Palestinians (early 2022); injured: 9,000+ Palestinians injured in 2022 alone (UN data); thousands more in 2023; forced displacement: Multiple communities displaced by settler violence; 500 families displaced in Jenin July 2023
 Alleged perpetrators: Israel Defense Forces, Israeli Border Police, Israeli settlers (complicit in attacks), Shin Bet (Israeli internal security), Special forces units including Duvdevan
@@ -186,14 +186,14 @@ Sources: Middle East Eye Comprehensive Analysis (https://www.middleeasteye.net/n
   </entry>
   <entry>
     <title>Operation Guardian of the Walls</title>
-    <link rel="alternate" href="https://palgenopedia.org/Pages/Historical_Massacres/massacres.html#event/hist016"/>
+    <link rel="alternate" href="https://palgenopedia.org/historical-events/massacres/operation-guardian-of-the-walls/"/>
     <id>https://palgenopedia.org/data/events.json#hist016</id>
     <published>2021-05-10T00:00:00Z</published>
-    <updated>2026-08-09T00:00:00Z</updated>
+    <updated>2026-08-24T00:00:00Z</updated>
     <category term="Military Operation"/>
     <category term="verification:verified"/>
     <summary>Operation Guardian of the Walls — Military Operation (verified).
-Date: 2021-05-10 to 44337
+Date: 2021-05-10
 Location: Gaza Strip, Under Israeli blockade; governed by Hamas, Blockade ongoing; reconstruction incomplete
 Casualties: deaths: 260 Palestinians (129 civilians, 66 children, 40 women); 13 Israelis (12 civilians, 1 soldier); injured: 1,948 Palestinians; Several hundred Israelis; forced displacement: Tens of thousands temporarily displaced in Gaza
 Alleged perpetrators: Israel Defense Forces, Israeli Air Force, Hamas military wing (Izz ad-Din al-Qassam Brigades), Palestinian Islamic Jihad
@@ -202,14 +202,14 @@ Sources: Human Rights Watch Report; UN OCHA Statistics (https://www.hrw.org/news
   </entry>
   <entry>
     <title>Great March of Return</title>
-    <link rel="alternate" href="https://palgenopedia.org/Pages/Historical_Massacres/massacres.html#event/hist015"/>
+    <link rel="alternate" href="https://palgenopedia.org/historical-events/massacres/great-march-of-return/"/>
     <id>https://palgenopedia.org/data/events.json#hist015</id>
     <published>2018-03-30T00:00:00Z</published>
-    <updated>2026-08-09T00:00:00Z</updated>
+    <updated>2026-08-24T00:00:00Z</updated>
     <category term="Mass Killings / Protest Suppression"/>
     <category term="verification:verified"/>
     <summary>Great March of Return — Mass Killings / Protest Suppression (verified).
-Date: 2018-03-30 to 43826
+Date: 2018-03-30
 Location: Gaza Strip, Under Israeli blockade; governed by Hamas, Blockade ongoing; protests ended December 2019
 Casualties: deaths: 223 Palestinians (189 during 2018; 34 during 2019); Zero Israelis killed; injured: 28,939 Palestinians total; 6,106 by live ammunition; Zero Israeli injuries reported; forced displacement: No displacement but severe long-term disabilities created
 Alleged perpetrators: Israel Defense Forces, Israeli Border Police, Israeli military snipers, Israeli security forces
@@ -218,14 +218,14 @@ Sources: UN Commission Report A/HRC/40/74; B'Tselem Comprehensive Statistics (ht
   </entry>
   <entry>
     <title>Operation Protective Edge</title>
-    <link rel="alternate" href="https://palgenopedia.org/Pages/Historical_Massacres/massacres.html#event/hist014"/>
+    <link rel="alternate" href="https://palgenopedia.org/historical-events/massacres/operation-protective-edge/"/>
     <id>https://palgenopedia.org/data/events.json#hist014</id>
     <published>2014-07-07T00:00:00Z</published>
-    <updated>2026-08-09T00:00:00Z</updated>
+    <updated>2026-08-24T00:00:00Z</updated>
     <category term="Military Operation"/>
     <category term="verification:verified"/>
     <summary>Operation Protective Edge — Military Operation (verified).
-Date: 2014-07-07 to 41877
+Date: 2014-07-07
 Location: Gaza Strip, Under Israeli blockade; governed by Hamas; Reconstruction incomplete; ongoing blockade; infrastructure severely damaged
 Casualties: deaths: 2,251 Palestinians (1,462 civilians, 551 children, 299 women); 73 Israelis (67 soldiers, 6 civilians); injured: 11,231 Palestinians (3,436 children); 1,600 Israelis (270 children); forced displacement: 500,000 Palestinians (1/3 of Gaza's population); 100,000 remained displaced one year later
 Alleged perpetrators: Israel Defense Forces, Israeli Air Force, Israeli Artillery, Hamas military wing (Izz ad-Din al-Qassam Brigades), Palestinian Islamic Jihad, Hamas authorities in Gaza
@@ -234,14 +234,14 @@ Sources: UN Commission of Inquiry Report A/HRC/29/52 (https://www.un.org/unispal
   </entry>
   <entry>
     <title>Operation Pillar of Defense</title>
-    <link rel="alternate" href="https://palgenopedia.org/Pages/Historical_Massacres/massacres.html#event/hist013"/>
+    <link rel="alternate" href="https://palgenopedia.org/historical-events/massacres/operation-pillar-of-defense/"/>
     <id>https://palgenopedia.org/data/events.json#hist013</id>
     <published>2012-11-14T00:00:00Z</published>
-    <updated>2026-08-09T00:00:00Z</updated>
+    <updated>2026-08-24T00:00:00Z</updated>
     <category term="Military Operation, Airstrikes, Civilian Casualties"/>
     <category term="verification:verified"/>
     <summary>Operation Pillar of Defense — Military Operation, Airstrikes, Civilian Casualties (verified).
-Date: 2012-11-14 to 41234
+Date: 2012-11-14
 Location: Gaza Strip; Palestinian territory, Israeli-occupied since 1967, Hamas-governed since 2007; Under blockade; subject to recurring Israeli military operations
 Casualties: deaths: 167 Palestinian, 6 Israeli; injured: 11,100+ Palestinian, 1,600+ Israeli; forced displacement: Not documented; blockade reinforced post-operation
 Alleged perpetrators: Israel Defense Forces (IDF), Israeli Air Force (IAF), Israeli Navy
@@ -250,14 +250,14 @@ Sources: B'Tselem Report (May 2013), pp. 9-11 (https://www.btselem.org/download/
   </entry>
   <entry>
     <title>Operation Cast Lead</title>
-    <link rel="alternate" href="https://palgenopedia.org/Pages/Historical_Massacres/massacres.html#event/hist012"/>
+    <link rel="alternate" href="https://palgenopedia.org/historical-events/massacres/operation-cast-lead/"/>
     <id>https://palgenopedia.org/data/events.json#hist012</id>
     <published>2008-12-27T00:00:00Z</published>
-    <updated>2026-08-09T00:00:00Z</updated>
+    <updated>2026-08-24T00:00:00Z</updated>
     <category term="Military Operation"/>
     <category term="verification:verified"/>
     <summary>Operation Cast Lead — Military Operation (verified).
-Date: 2008-12-27 to 39831
+Date: 2008-12-27
 Location: Gaza Strip, Under Israeli blockade and occupation; governed by Hamas, Ongoing blockade since 2007; reconstruction incomplete
 Casualties: deaths: 1,383-1,419 Palestinians; 13 Israelis (10 soldiers, 3 civilians); injured: 5,300+ Palestinians; 518 Israelis; forced displacement: 20,000+ Palestinians made homeless
 Alleged perpetrators: Israel Defense Forces, Israeli Air Force, Ground forces and naval units
@@ -266,14 +266,14 @@ Sources: Palestinian Centre for Human Rights; B'Tselem; UN OCHA (https://www.pch
   </entry>
   <entry>
     <title>Battle of Jenin</title>
-    <link rel="alternate" href="https://palgenopedia.org/Pages/Historical_Massacres/massacres.html#event/hist011"/>
+    <link rel="alternate" href="https://palgenopedia.org/historical-events/massacres/battle-of-jenin/"/>
     <id>https://palgenopedia.org/data/events.json#hist011</id>
     <published>2002-04-03T00:00:00Z</published>
-    <updated>2026-08-09T00:00:00Z</updated>
+    <updated>2026-08-24T00:00:00Z</updated>
     <category term="Military Operation / Urban Warfare"/>
     <category term="verification:verified"/>
     <summary>Battle of Jenin — Military Operation / Urban Warfare (verified).
-Date: 2002-04-03 to 37357
+Date: 2002-04-03
 Location: Jenin Refugee Camp, West Bank, Under Israeli military occupation; PA has limited security control; Camp rebuilt but remains flashpoint; frequent Israeli military raids; site of ongoing violence
 Casualties: deaths: 52 Palestinians (22 civilians, 27 combatants, 3 unclear); 23 Israeli soldiers; injured: Hundreds of Palestinians wounded; unknown number of Israeli soldiers wounded; forced displacement: 4,000 Palestinians rendered homeless
 Alleged perpetrators: Israel Defense Forces, Israeli government (Operation Defensive Shield policy), Specific IDF units involved in demolitions and civilian killings
@@ -282,14 +282,14 @@ Sources: Human Rights Watch - Jenin Report (https://www.hrw.org/report/2002/05/0
   </entry>
   <entry>
     <title>Second Intifada</title>
-    <link rel="alternate" href="https://palgenopedia.org/Pages/Historical_Massacres/massacres.html#event/hist010"/>
+    <link rel="alternate" href="https://palgenopedia.org/historical-events/massacres/second-intifada/"/>
     <id>https://palgenopedia.org/data/events.json#hist010</id>
     <published>2000-09-28T00:00:00Z</published>
-    <updated>2026-08-09T00:00:00Z</updated>
+    <updated>2026-08-24T00:00:00Z</updated>
     <category term="Armed Uprising / Mass Casualties"/>
     <category term="verification:verified"/>
     <summary>Second Intifada — Armed Uprising / Mass Casualties (verified).
-Date: 2000-09-28 to 38717
+Date: 2000-09-28
 Location: Occupied Palestinian Territories and Israel, West Bank under Israeli military occupation with PA limited control; Gaza under blockade; Second Intifada led to Israeli disengagement from Gaza (2005), construction of separation barrier, and collapse of peace process
 Casualties: deaths: 3,200-4,800 Palestinians; 1,000-1,100 Israelis; injured: 45,000+ Palestinians; 7,500+ Israelis; forced displacement: Thousands displaced through home demolitions and military operations
 Alleged perpetrators: Palestinian armed groups (Hamas, Islamic Jihad, Al-Aqsa Martyrs' Brigades, PFLP), Israel Defense Forces, Israeli government policy, Israeli settlers
@@ -298,14 +298,14 @@ Sources: B'Tselem - Second Intifada Fatalities (https://www.btselem.org/statisti
   </entry>
   <entry>
     <title>Cave of the Patriarchs Massacre</title>
-    <link rel="alternate" href="https://palgenopedia.org/Pages/Historical_Massacres/massacres.html#event/hist009"/>
+    <link rel="alternate" href="https://palgenopedia.org/historical-events/massacres/cave-of-the-patriarchs-massacre/"/>
     <id>https://palgenopedia.org/data/events.json#hist009</id>
     <published>1994-02-25T00:00:00Z</published>
-    <updated>2026-08-09T00:00:00Z</updated>
+    <updated>2026-08-24T00:00:00Z</updated>
     <category term="Massacre / Mass Shooting"/>
     <category term="verification:verified"/>
     <summary>Cave of the Patriarchs Massacre — Massacre / Mass Shooting (verified).
-Date: 1994-02-25 to 34411
+Date: 1994-02-25
 Location: Hebron Old City, West Bank, H2 area under full Israeli military control since 1997 Hebron Protocol; Ibrahimi Mosque divided 60% for Jews, 40% for Muslims since massacre; Old City strangled by checkpoints, closures, settler violence
 Casualties: deaths: 50-60 Palestinians total (29 in mosque shooting + 25+ killed by Israeli forces during protests); injured: 125+ in mosque; hundreds more during protests; forced displacement: Mass exodus from Hebron Old City due to closures and restrictions
 Alleged perpetrators: Baruch Goldstein (direct perpetrator), Kach movement (ideological support), Israeli military (facilitation through absence/inaction), Israeli government (collective punishment of victims after massacre)
@@ -314,14 +314,14 @@ Sources: Institute for Palestine Studies (https://www.palestine-studies.org/en/n
   </entry>
   <entry>
     <title>First Intifada</title>
-    <link rel="alternate" href="https://palgenopedia.org/Pages/Historical_Massacres/massacres.html#event/hist008"/>
+    <link rel="alternate" href="https://palgenopedia.org/historical-events/massacres/first-intifada/"/>
     <id>https://palgenopedia.org/data/events.json#hist008</id>
     <published>1987-12-08T00:00:00Z</published>
-    <updated>2026-08-09T00:00:00Z</updated>
+    <updated>2026-08-24T00:00:00Z</updated>
     <category term="Mass Casualties / Uprising"/>
     <category term="verification:verified"/>
     <summary>First Intifada — Mass Casualties / Uprising (verified).
-Date: 1987-12-08 to 34225
+Date: 1987-12-08
 Location: Occupied Palestinian Territories, West Bank under Israeli military occupation; Gaza under blockade since 2007, Continued occupation; First Intifada led to Oslo Accords and creation of Palestinian Authority
 Casualties: deaths: 1,087-1,284 Palestinians; 160-200 Israelis; injured: 120,000+ Palestinians injured; 3,100 Israeli soldiers/civilians injured; forced displacement: Thousands displaced through home demolitions
 Alleged perpetrators: Israel Defense Forces, Israeli Border Police, Israeli Civil Administration, Shin Bet (Israeli Security Service), Israeli settler violence
@@ -330,14 +330,14 @@ Sources: B'Tselem - First Intifada Fatalities; Al Jazeera - Intifada Documentati
   </entry>
   <entry>
     <title>Sabra and Shatila</title>
-    <link rel="alternate" href="https://palgenopedia.org/Pages/Historical_Massacres/massacres.html#event/hist007"/>
+    <link rel="alternate" href="https://palgenopedia.org/historical-events/massacres/sabra-and-shatila/"/>
     <id>https://palgenopedia.org/data/events.json#hist007</id>
     <published>1982-09-16T00:00:00Z</published>
-    <updated>2026-08-09T00:00:00Z</updated>
+    <updated>2026-08-24T00:00:00Z</updated>
     <category term="Massacre"/>
     <category term="verification:verified"/>
     <summary>Sabra and Shatila — Massacre (verified).
-Date: 1982-09-16 to 30212
+Date: 1982-09-16
 Location: Sabra and Shatila, Beirut, Lebanon; Camps still exist; memorial sites established
 Casualties: deaths: 800-3,500; injured: Hundreds (not systematically recorded); forced displacement: Survivors fled camps; infrastructure destroyed
 Alleged perpetrators: Lebanese Forces (Phalangist militia), Israeli Defense Forces (facilitation and responsibility), Defense Minister Ariel Sharon (personal responsibility per Kahan Commission)
@@ -346,14 +346,14 @@ Sources: Lebanese Government Commission Report (1982-83) (https://www.un.org/uni
   </entry>
   <entry>
     <title>Six-Day War / Al-Naksa</title>
-    <link rel="alternate" href="https://palgenopedia.org/Pages/Historical_Massacres/massacres.html#event/hist006"/>
+    <link rel="alternate" href="https://palgenopedia.org/historical-events/massacres/six-day-war-al-naksa/"/>
     <id>https://palgenopedia.org/data/events.json#hist006</id>
     <published>1967-06-05T00:00:00Z</published>
-    <updated>2026-08-09T00:00:00Z</updated>
+    <updated>2026-08-24T00:00:00Z</updated>
     <category term="Mass Displacement"/>
     <category term="verification:verified"/>
     <summary>Six-Day War / Al-Naksa — Mass Displacement (verified).
-Date: 1967-06-05 to 24633
+Date: 1967-06-05
 Location: Occupied Palestinian Territories; Annexed Golan Heights, West Bank and Gaza under Israeli occupation since 1967; East Jerusalem annexed; Golan annexed 1981; Ongoing military occupation; UN recognizes territories as occupied
 Casualties: deaths: 10,000-15,000 combatants total (all sides); civilian deaths not systematically recorded; injured: Thousands (not systematically recorded); forced displacement: 300,000-400,000 Palestinians
 Alleged perpetrators: Israel Defense Forces, Israeli government policy, Military administration of occupied territories
@@ -362,14 +362,14 @@ Sources: UNRWA - Registered Refugees from 1967 (https://www.unrwa.org/palestine-
   </entry>
   <entry>
     <title>Khan Yunis Massacre</title>
-    <link rel="alternate" href="https://palgenopedia.org/Pages/Historical_Massacres/massacres.html#event/hist005"/>
+    <link rel="alternate" href="https://palgenopedia.org/historical-events/massacres/khan-yunis-massacre/"/>
     <id>https://palgenopedia.org/data/events.json#hist005</id>
     <published>1956-11-03T00:00:00Z</published>
-    <updated>2026-08-09T00:00:00Z</updated>
+    <updated>2026-08-24T00:00:00Z</updated>
     <category term="Massacre"/>
     <category term="verification:verified"/>
     <summary>Khan Yunis Massacre — Massacre (verified).
-Date: 1956-11-03 to 20771
+Date: 1956-11-03
 Location: Khan Yunis, Gaza Strip, Palestine; Major city; heavily damaged in 2023-2024 conflict
 Casualties: deaths: 275-525; injured: Unknown number; not systematically documented; forced displacement: Temporary displacement during operations
 Alleged perpetrators: Israel Defense Forces, IDF Intelligence units, Shin Bet security forces
@@ -378,14 +378,14 @@ Sources: UNRWA Special Report to UN General Assembly (A/3512) (https://www.un.or
   </entry>
   <entry>
     <title>Qibya </title>
-    <link rel="alternate" href="https://palgenopedia.org/Pages/Historical_Massacres/massacres.html#event/hist004"/>
+    <link rel="alternate" href="https://palgenopedia.org/historical-events/massacres/qibya/"/>
     <id>https://palgenopedia.org/data/events.json#hist004</id>
     <published>1953-10-14T00:00:00Z</published>
-    <updated>2026-08-09T00:00:00Z</updated>
+    <updated>2026-08-24T00:00:00Z</updated>
     <category term="Massacre"/>
     <category term="verification:verified"/>
     <summary>Qibya  — Massacre (verified).
-Date: 1953-10-14 to 19647
+Date: 1953-10-14
 Location: Qibya, West Bank, Palestinian Territories; Village rebuilt; under Israeli occupation since 1967
 Casualties: deaths: 69; injured: 15 documented; forced displacement: Temporary evacuation during attack
 Alleged perpetrators: IDF Unit 101 (Commander: Ariel Sharon), Paratroop companies, Supporting Israeli regular army units
@@ -394,10 +394,10 @@ Sources: UN Security Council Report S/3113 (1953) (https://www.un.org/unispal/do
   </entry>
   <entry>
     <title>Lydda and Ramle</title>
-    <link rel="alternate" href="https://palgenopedia.org/Pages/Historical_Massacres/massacres.html#event/hist003"/>
+    <link rel="alternate" href="https://palgenopedia.org/historical-events/massacres/lydda-and-ramle/"/>
     <id>https://palgenopedia.org/data/events.json#hist003</id>
     <published>1948-07-09T00:00:00Z</published>
-    <updated>2026-08-09T00:00:00Z</updated>
+    <updated>2026-08-24T00:00:00Z</updated>
     <category term="Massacre, Forced Expulsion, Death March"/>
     <category term="verification:verified"/>
     <summary>Lydda and Ramle — Massacre, Forced Expulsion, Death March (verified).
@@ -410,10 +410,10 @@ Sources: Morris, Benny. 'Operation Dani and the Palestinian Exodus from Lydda an
   </entry>
   <entry>
     <title>Tantura </title>
-    <link rel="alternate" href="https://palgenopedia.org/Pages/Historical_Massacres/massacres.html#event/hist002"/>
+    <link rel="alternate" href="https://palgenopedia.org/historical-events/massacres/tantura/"/>
     <id>https://palgenopedia.org/data/events.json#hist002</id>
     <published>1948-05-22T00:00:00Z</published>
-    <updated>2026-08-09T00:00:00Z</updated>
+    <updated>2026-08-24T00:00:00Z</updated>
     <category term="Massacre"/>
     <category term="verification:verified"/>
     <summary>Tantura  — Massacre (verified).
@@ -426,10 +426,10 @@ Sources: Katz, Teddy. MA Thesis (1998) - Based on 140+ interviews (https://www.h
   </entry>
   <entry>
     <title>Deir Yassin</title>
-    <link rel="alternate" href="https://palgenopedia.org/Pages/Historical_Massacres/massacres.html#event/hist001"/>
+    <link rel="alternate" href="https://palgenopedia.org/historical-events/massacres/deir-yassin/"/>
     <id>https://palgenopedia.org/data/events.json#hist001</id>
     <published>1948-04-09T00:00:00Z</published>
-    <updated>2026-08-09T00:00:00Z</updated>
+    <updated>2026-08-24T00:00:00Z</updated>
     <category term="Massacre"/>
     <category term="verification:verified"/>
     <summary>Deir Yassin — Massacre (verified).

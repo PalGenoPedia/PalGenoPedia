@@ -50,7 +50,7 @@ SECTION_OF = {
     'war-crimes/index.html': ('War Crimes Statistics', None),
     'hunger-crisis-stats.html': ('Hunger Crisis Statistics', None),
     'historical-events/index.html': ('Historical Events', None),
-    'major-incidents-timeline.html': ('Major Incidents Timeline', None),
+    'historical-events/massacres/timeline.html': ('Major Incidents Timeline', None),
     'volunteer.html': ('Volunteer', None),
 }
 BREADCRUMB_PARENT = {
@@ -90,7 +90,6 @@ NOINDEX_PATHS = {
     'Pages/War_Crimes_Stats/stat-universities-damaged.html',
     'Pages/War_Crimes_Stats/stat-religious-sites.html',
     'Pages/Historical_Massacres/massacres.html',
-    'Pages/nakba_villages_map.html',
 }
 
 
@@ -182,6 +181,25 @@ def load_events():
     return d if isinstance(d, list) else d.get('events', [])
 
 
+TIMELINE_PAGE = "/historical-events/massacres/timeline.html"
+
+
+def _history_slug_map():
+    """id -> canonical English record URL, from the history manifest, so the
+    ItemList points at the real generated event pages rather than the old
+    interactive archive."""
+    out = {}
+    p = os.path.join(HERE, '_history_manifest.json')
+    if os.path.exists(p):
+        try:
+            for x in json.load(open(p, encoding='utf-8'))['pages']:
+                if x.get('lang') == 'en' and x.get('id') and x.get('path'):
+                    out[x['id']] = x['path']
+        except Exception:
+            pass
+    return out
+
+
 def event_items(events, period=None, limit=None):
     """Compact ItemList entries - name/date/url only. The full record already
     lives in data/events.json and the per-event .jsonld files; repeating all of
@@ -190,12 +208,15 @@ def event_items(events, period=None, limit=None):
     sel.sort(key=lambda e: e.get('date_start') or '')
     if limit:
         sel = sel[:limit]
+    hist = _history_slug_map()
     items = []
     for i, e in enumerate(sel, 1):
-        if e.get('period') == 'historical':
-            url = "%s/Pages/Historical_Massacres/massacres.html#event/%s" % (BASE, e['id'])
+        if e.get('period') == 'historical' and e['id'] in hist:
+            url = BASE + hist[e['id']]
         else:
-            url = "%s/major-incidents-timeline.html#event/%s" % (BASE, e['id'])
+            # current-genocide events have no generated record page yet; they
+            # resolve on the timeline itself via #event/<id> hash routing.
+            url = "%s%s#event/%s" % (BASE, TIMELINE_PAGE, e['id'])
         items.append({
             "@type": "ListItem",
             "position": i,
@@ -301,7 +322,7 @@ def jsonld_for(rel, title, desc, events):
     # no ItemList at all rather than a fixed one: the working copy exists
     # elsewhere and duplicating it here would just be a second thing to keep
     # in sync.
-    if rel == 'major-incidents-timeline.html':
+    if rel == 'historical-events/massacres/timeline.html':
         items = event_items(events)
         if items:
             blocks.append({

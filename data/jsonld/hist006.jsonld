@@ -3,15 +3,14 @@
   "@type": "Article",
   "@id": "https://palgenopedia.org/data/events.json#hist006",
   "headline": "Six-Day War / Al-Naksa",
-  "url": "https://palgenopedia.org/Pages/Historical_Massacres/massacres.html#event/hist006",
+  "url": "https://palgenopedia.org/historical-events/massacres/six-day-war-al-naksa/",
   "datePublished": "1967-06-05",
-  "dateModified": "2026-08-09",
+  "dateModified": "2026-08-24",
   "inLanguage": "en",
   "about": {
     "@type": "Event",
     "name": "Six-Day War / Al-Naksa",
     "startDate": "1967-06-05",
-    "endDate": "24633",
     "description": "Six-Day War (Israel vs Egypt, Jordan, Syria)",
     "location": {
       "@type": "Place",

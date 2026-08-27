@@ -3,15 +3,14 @@
   "@type": "Article",
   "@id": "https://palgenopedia.org/data/events.json#hist011",
   "headline": "Battle of Jenin",
-  "url": "https://palgenopedia.org/Pages/Historical_Massacres/massacres.html#event/hist011",
+  "url": "https://palgenopedia.org/historical-events/massacres/battle-of-jenin/",
   "datePublished": "2002-04-03",
-  "dateModified": "2026-08-09",
+  "dateModified": "2026-08-24",
   "inLanguage": "en",
   "about": {
     "@type": "Event",
     "name": "Battle of Jenin",
     "startDate": "2002-04-03",
-    "endDate": "37357",
     "description": "Part of Operation Defensive Shield; response to Passover massacre (27 March 2002)",
     "location": {
       "@type": "Place",

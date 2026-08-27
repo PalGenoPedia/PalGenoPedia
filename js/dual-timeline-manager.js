@@ -34,22 +34,24 @@ class DualTimelineManager {
         };
 
         // Paths for the CSV-based historical data source and its JSON fallback.
-        // Adjust these if events.csv/details.csv/massacres.html live elsewhere.
+        // Root-absolute so they resolve the same from every page that embeds the
+        // timeline (the timeline page under /historical-events/massacres/ and the
+        // home page at /). Override via timeline-config.json if the CSVs move.
         this.dataPaths = {
-            eventsCSV: 'Pages/Historical_Massacres/events.csv',
-            detailsCSV: 'Pages/Historical_Massacres/details.csv',
-            historicalJSON: 'timeline-data/historical-massacres.json',
+            eventsCSV: '/Pages/Historical_Massacres/events.csv',
+            detailsCSV: '/Pages/Historical_Massacres/details.csv',
+            historicalJSON: '/timeline-data/historical-massacres.json',
             // Per-field translation "delta" CSVs — same folder as events.csv/details.csv.
             // Each row only carries the translated columns (e.g. brief_summary_de,
             // heading_label_ar) for the matching id / detail_id. Missing files are
             // tolerated — parseCSVFile() resolves to [] on a load error.
             eventsTranslationsCSV: {
-                de: 'Pages/Historical_Massacres/events_de.csv',
-                ar: 'Pages/Historical_Massacres/events_ar.csv'
+                de: '/Pages/Historical_Massacres/events_de.csv',
+                ar: '/Pages/Historical_Massacres/events_ar.csv'
             },
             detailsTranslationsCSV: {
-                de: 'Pages/Historical_Massacres/details_de.csv',
-                ar: 'Pages/Historical_Massacres/details_ar.csv'
+                de: '/Pages/Historical_Massacres/details_de.csv',
+                ar: '/Pages/Historical_Massacres/details_ar.csv'
             }
         };
 
@@ -63,9 +65,14 @@ class DualTimelineManager {
         // window.TranslationSystem.currentLanguage at init and on 'languageChanged'.
         this.currentLang = 'en';
 
-        // Single unified detail page for all historical events
-        // (replaces one HTML file per event). Linked as `${detailPageBase}#event/<id>`.
-        this.detailPageBase = 'Pages/Historical_Massacres/massacres.html';
+        // Historical events each have their own generated record page at
+        // `${detailPageBase}<slug>/` where <slug> = slugify(event_name), matching
+        // tools/build_history.py. Override via timeline-config.json.
+        this.detailPageBase = '/historical-events/massacres/';
+
+        // The timeline page itself — current-genocide incidents have no record
+        // page yet, so they resolve here via #event/<id> hash routing.
+        this.timelinePage = '/historical-events/massacres/timeline.html';
 
         // Approximate region centroids for broad, multi-location historical
         // events that don't have a single location_lat/location_lng in
@@ -164,7 +171,7 @@ class DualTimelineManager {
     async loadConfiguration() {
         try {
             console.log('📋 Loading timeline configuration...');
-            const response = await fetch('timeline-data/timeline-config.json');
+            const response = await fetch('/timeline-data/timeline-config.json');
 
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
@@ -213,7 +220,7 @@ class DualTimelineManager {
     async loadSources() {
         try {
             console.log('📰 Loading sources metadata...');
-            const response = await fetch('timeline-data/timeline-sources.json');
+            const response = await fetch('/timeline-data/timeline-sources.json');
 
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
@@ -360,6 +367,17 @@ class DualTimelineManager {
         });
     }
 
+    // Latin slug — mirrors slugify() in tools/build_history.py / build_records.py
+    // so a timeline card links to the exact generated record-page URL.
+    slugify(text) {
+        return (text || '')
+            .normalize('NFKD')
+            .replace(/[̀-ͯ]/g, '')
+            .toLowerCase()
+            .replace(/[^a-z0-9]+/g, '-')
+            .replace(/^-+|-+$/g, '');
+    }
+
     // Transform a single events.csv row (+ its matching details.csv rows) into
     // the internal data model used throughout the timeline manager (the same
     // shape previously read from historical-massacres.json's "massacres" array).
@@ -452,7 +470,7 @@ class DualTimelineManager {
             // documented historical event in this archive is treated as verified.
             verification_status: 'verified',
             sources: Array.from(sourcesSet),
-            detail_page: `${this.detailPageBase}#event/${encodeURIComponent(id)}`,
+            detail_page: `${this.detailPageBase}${this.slugify(title)}/`,
             hero_facts: this.extractHeroFacts(row),
             last_updated: (row.last_updated || '').trim(),
             author: (row.author || '').trim(),
@@ -606,9 +624,10 @@ class DualTimelineManager {
         const data = await response.json();
         this.historicalData = (data.massacres || []).map(item => ({
             ...item,
-            // Normalise legacy "hist_001" ids to the "hist001" form used by
-            // events.csv/massacres.html, and route to the unified detail page.
-            detail_page: `${this.detailPageBase}#event/${encodeURIComponent((item.id || '').replace(/_/g, ''))}`,
+            // Legacy JSON fallback: its titles ("Deir Yassin Massacre") don't
+            // slugify to the generated page slugs, so route to the timeline
+            // itself via #event/<id> rather than risk a 404 on a record page.
+            detail_page: `${this.timelinePage}#event/${encodeURIComponent((item.id || '').replace(/_/g, ''))}`,
             period: 'historical'
         }));
 
@@ -621,14 +640,20 @@ class DualTimelineManager {
             console.log('🚨 Loading current genocide data...');
             this.showLoading('Loading current genocide data (2023-present)...');
 
-            const response = await fetch('timeline-data/civilian-casualties-current.json');
+            const response = await fetch('/timeline-data/civilian-casualties-current.json');
 
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
 
             const data = await response.json();
-            this.currentData = data.incidents || [];
+            // The JSON carries detail_page paths to Pages/Current_Genocide/*.html
+            // that don't exist. Current incidents have no record page yet, so
+            // point every one at the timeline via #event/<id> hash routing.
+            this.currentData = (data.incidents || []).map(item => ({
+                ...item,
+                detail_page: `${this.timelinePage}#event/${encodeURIComponent(item.id || '')}`
+            }));
 
             console.log(`✅ Loaded ${this.currentData.length} current genocide events`);
 
@@ -2388,10 +2413,10 @@ class DualTimelineManager {
             timeline_modes: {
                 historical: {
                     label: "Historical Massacres (1948-2023)",
-                    data_source: "timeline-data/historical-massacres.json",
-                    events_csv: "Pages/Historical_Massacres/events.csv",
-                    details_csv: "Pages/Historical_Massacres/details.csv",
-                    detail_page_base: "Pages/Historical_Massacres/massacres.html",
+                    data_source: "/timeline-data/historical-massacres.json",
+                    events_csv: "/Pages/Historical_Massacres/events.csv",
+                    details_csv: "/Pages/Historical_Massacres/details.csv",
+                    detail_page_base: "/historical-events/massacres/",
                     color_theme: "#6c757d",
                     icon: "📜"
                 }

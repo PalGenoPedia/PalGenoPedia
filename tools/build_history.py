@@ -37,6 +37,11 @@ GROUP, SEG = "historical-events", "massacres"
 # URL; these generated pages are an additional, canonical surface.
 HUB = "/Pages/Historical_Massacres/massacres.html"
 
+# The interactive Timeline / Map / List page, moved under this section
+# 2026-08-27 (was /major-incidents-timeline.html). The section index links
+# to it; it links back to these record pages for each historical event.
+TIMELINE_PAGE = "/historical-events/massacres/timeline.html"
+
 LABEL = {"en": "Historical Massacres",
          "de": "Historische Massaker",
          "ar": "المجازر التاريخية"}
@@ -83,17 +88,20 @@ T = {
            "classification": "Classification", "location_then": "Location, then",
            "location_now": "Location, now", "context": "Context",
            "source": "Source", "all_events": "All documented events",
-           "summary": "Summary", "details": "Documented details", "deaths": "Deaths", "injured": "Injured", "displaced": "Displaced", "data": "Data"},
+           "summary": "Summary", "details": "Documented details", "deaths": "Deaths", "injured": "Injured", "displaced": "Displaced", "data": "Data",
+           "timeline_cta": "📅 Explore the interactive timeline, map & list — 1948 to present"},
     "de": {"home": "Startseite", "events": "Ereignisse", "perpetrators": "Täter",
            "classification": "Einordnung", "location_then": "Ort, damals",
            "location_now": "Ort, heute", "context": "Kontext",
            "source": "Quelle", "all_events": "Alle dokumentierten Ereignisse",
-           "summary": "Zusammenfassung", "details": "Dokumentierte Angaben", "deaths": "Todesopfer", "injured": "Verletzte", "displaced": "Vertriebene", "data": "Daten"},
+           "summary": "Zusammenfassung", "details": "Dokumentierte Angaben", "deaths": "Todesopfer", "injured": "Verletzte", "displaced": "Vertriebene", "data": "Daten",
+           "timeline_cta": "📅 Interaktive Zeitleiste, Karte & Liste — 1948 bis heute"},
     "ar": {"home": "الرئيسية", "events": "الأحداث", "perpetrators": "الجناة",
            "classification": "التكييف", "location_then": "الموقع، آنذاك",
            "location_now": "الموقع، اليوم", "context": "السياق",
            "source": "المصدر", "all_events": "جميع الأحداث الموثقة",
-           "summary": "ملخص", "details": "تفاصيل موثقة", "deaths": "القتلى", "injured": "الجرحى", "displaced": "المهجّرون", "data": "البيانات"},
+           "summary": "ملخص", "details": "تفاصيل موثقة", "deaths": "القتلى", "injured": "الجرحى", "displaced": "المهجّرون", "data": "البيانات",
+           "timeline_cta": "📅 الجدول الزمني التفاعلي والخريطة والقائمة — من 1948 حتى اليوم"},
 }
 
 
@@ -347,7 +355,7 @@ def render_event(ev, details, slugs, lang):
         L.append(json.dumps(block, ensure_ascii=False, indent=2))
         L.append("</script>")
     L.append("</head>")
-    L.append('<body%s>' % (' dir="rtl"' if lang in B.RTL else ""))
+    L.append('<body class="rp-hist rp-hist-event"%s>' % (' dir="rtl"' if lang in B.RTL else ""))
     L.extend(B.site_header(lang, alts_rel, t, "/historical-events/"))
     subtitle = " · ".join([x for x in (etype, event_date(ev), context) if x])
     L.extend(B.page_subheader(name, subtitle, None, None, None))
@@ -441,7 +449,7 @@ def render_index(events, by_event, slug_map, lang):
         L.append(json.dumps(blk, ensure_ascii=False, indent=2))
         L.append("</script>")
     L.append("</head>")
-    L.append('<body%s>' % (' dir="rtl"' if lang in B.RTL else ""))
+    L.append('<body class="rp-hist rp-hist-index"%s>' % (' dir="rtl"' if lang in B.RTL else ""))
     L.extend(B.site_header(lang, alts_rel, t, "/historical-events/"))
     L.extend(B.page_subheader(LABEL[lang], desc, None, None, None))
 
@@ -451,6 +459,8 @@ def render_index(events, by_event, slug_map, lang):
 
     a = L.append
     a('<div class="container" style="padding-top:1.75rem">')
+    a('<a class="rp-hist-timeline-cta" href="%s">%s</a>'
+      % (B.url_quote(TIMELINE_PAGE), e(t["timeline_cta"])))
     a('<h2 class="detail-section-title">%s</h2>' % e(t["all_events"]))
     a('<div class="cards-grid">')
     for ev in sorted(events, key=lambda x: B.clean(x.get("date_start"))):

@@ -104,7 +104,7 @@ assert n==jl==rss==atom, 'COUNT MISMATCH'; print('COUNT OK')"
 **d. No event links resolve to 404**
 - Historical events link to `Pages/Historical_Massacres/massacres.html#event/<id>` (verified live 200).
 - Current-genocide detail pages referenced in the source JSON 404, so current
-  events fall back to `major-incidents-timeline.html`. Confirm no `Current_Genocide/...`
+  events fall back to `historical-events/massacres/timeline.html#event/<id>`. Confirm no `Current_Genocide/...`
   URLs leaked into the feeds:
 ```bash
 python -c "import re; t=open('feed.rss').read()+open('feed.xml').read(); \

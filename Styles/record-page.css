@@ -790,3 +790,166 @@ body[dir="rtl"] .rp-chart svg { direction: ltr; }
 /* the citation trailing a prose cell */
 .rp-src { color: var(--text-secondary, #64748b); font-size: 0.85em; }
 .rp-src a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+
+
+/* ================================================================
+   Historical event pages — "detail hero" treatment
+   ----------------------------------------------------------------
+   build_history.py tags these <body class="rp-hist rp-hist-event">
+   (event pages) / "rp-hist rp-hist-index" (the section index).
+
+   The generic .page-subheader above is a plain white sticky bar. The
+   interactive archive (Pages/Historical_Massacres/) fronts each event
+   with a dark gradient hero, an accent eyebrow and coloured badges.
+   This block gives the generated pages the same face using the markup
+   they already emit — no photo column, no sticky behaviour, no extra
+   DOM. Dark in both colour schemes on purpose, exactly like the
+   interactive .detail-hero it mirrors.
+   ================================================================ */
+.rp-hist .page-subheader {
+    position: relative;          /* was sticky — a tall dark bar should scroll away */
+    top: auto;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 60%, #1a2744 100%);
+    border-bottom: none;
+    box-shadow: none;
+    padding: 2.3rem 0 1.7rem;
+    overflow: hidden;
+}
+.rp-hist .page-subheader::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0;
+    width: 420px;
+    background: radial-gradient(ellipse at top right, rgba(220, 38, 38, 0.20), transparent 70%);
+    pointer-events: none;
+}
+.rp-hist .page-subheader::after {
+    content: '';
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    height: 3px;
+    background: linear-gradient(90deg,
+        var(--primary-red, #dc2626),
+        var(--secondary-orange, #ea580c),
+        var(--accent-blue, #0284c7));
+}
+.rp-hist .page-subheader .container { position: relative; z-index: 1; }
+.rp-hist .page-subheader-top { margin-bottom: 0; }
+.rp-hist .page-subheader-title h1 {
+    color: #fff;
+    font-size: clamp(1.55rem, 3.4vw, 2.05rem);
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+}
+.rp-hist .page-subheader-title .header-subtitle {
+    margin-top: 0.55rem;
+    color: #f87171;
+    font-size: 0.71rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+}
+
+/* Stat band sits flush under the hero and reads as one unit with it */
+.rp-hist .detail-stats-strip {
+    background: var(--surface-color, #fff);
+    border-bottom: 1px solid var(--border-color, #e2e8f0);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+.rp-hist .detail-stats-strip-inner { flex-wrap: wrap; }
+.rp-hist .dss-item {
+    flex: 1 1 25%;
+    min-width: 150px;
+    padding: 1rem 1.25rem;
+}
+.rp-hist .dss-num {
+    font-size: clamp(1rem, 2.2vw, 1.45rem);
+    line-height: 1.25;
+}
+
+/* Section headings get the same left accent the interactive view uses */
+.rp-hist .detail-section-title {
+    position: relative;
+    margin: 2.5rem 0 1.15rem;
+    padding-bottom: 0.6rem;
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    border-bottom: 2px solid var(--border-color, #e2e8f0);
+}
+.rp-hist .detail-section-title::after {
+    content: '';
+    position: absolute;
+    left: 0; bottom: -2px;
+    width: 44px; height: 2px;
+    background: var(--primary-red, #dc2626);
+}
+.rp-hist .detail-section-title:first-of-type { margin-top: 2rem; }
+
+/* Prose tables: card-framed, readable label column */
+.rp-hist .rp-table-wrap {
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+.rp-hist .rp-table--prose { font-size: 0.92rem; }
+.rp-hist .rp-table--prose th {
+    width: 32%;
+    font-weight: 700;
+    color: var(--text-primary);
+    background: var(--bg-secondary, #f8fafc);
+}
+.rp-hist .rp-table--prose td { line-height: 1.6; color: var(--text-secondary); }
+.rp-hist .rp-table tbody tr:hover { background: transparent; }
+
+.rp-hist .rp-lede {
+    max-width: 74ch;
+    color: var(--text-primary);
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+/* Back-link at the foot, styled like a real control rather than a bare link */
+.rp-hist .container > p:last-child a[href$="/massacres/"],
+.rp-hist .container > p:last-child a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--border-color, #e2e8f0);
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--primary-red, #dc2626);
+    text-decoration: none;
+}
+.rp-hist .container > p:last-child a:hover {
+    background: var(--bg-secondary, #f8fafc);
+    border-color: var(--text-secondary, #94a3b8);
+}
+
+/* Section index → interactive timeline call-to-action */
+.rp-hist-timeline-cta {
+    display: block;
+    margin: 0 0 1.75rem;
+    padding: 0.9rem 1.15rem;
+    border: 1px solid var(--border-color, #e2e8f0);
+    border-left: 4px solid var(--primary-red, #dc2626);
+    border-radius: 10px;
+    background: var(--surface-color, #fff);
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background .15s, border-color .15s, transform .1s;
+}
+.rp-hist-timeline-cta::after { content: ' →'; color: var(--primary-red, #dc2626); }
+.rp-hist-timeline-cta:hover {
+    background: var(--bg-secondary, #f8fafc);
+    border-color: var(--primary-red, #dc2626);
+    transform: translateX(2px);
+}
+
+@media (max-width: 640px) {
+    .rp-hist .page-subheader { padding: 1.7rem 0 1.3rem; }
+    .rp-hist .dss-item { flex-basis: 50%; min-width: 50%; }
+    .rp-hist .rp-table--prose th { width: 40%; }
+}

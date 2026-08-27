@@ -211,7 +211,7 @@ T = {
         'undated': 'Undated',
         'no_resources': 'No sources are catalogued for this section yet.',
         'type_labels': {'airstrike': 'Airstrike', 'direct': 'Direct attack', 'siege': 'Siege', 'invasion': 'Invasion / ground assault', 'indirect': 'Nearby / indirect', 'access': 'Access restricted', 'unidentified': 'Unspecified'},
-        'nav': {'nav.warCrimes': '⚖️ War Crimes', 'nav.historical': '📜 History', 'nav.timeline': '📋 Timeline', 'nav.joinUs': '🤝 Join Us'},
+        'nav': {'nav.warCrimes': '⚖️ War Crimes', 'nav.hungerCrisis': '🍽️ Hunger Crisis', 'nav.historical': '📜 History', 'nav.timeline': '📋 Timeline', 'nav.joinUs': '🤝 Join Us'},
         'total_incidents': 'Total incidents',
         'civilians_injured': 'Civilians injured',
         'hw_killed_short': 'Health workers killed',
@@ -304,7 +304,7 @@ T = {
         'undated': 'Ohne Datum',
         'no_resources': 'Für diesen Bereich sind noch keine Quellen erfasst.',
         'type_labels': {'airstrike': 'Luftangriff', 'direct': 'Direkter Angriff', 'siege': 'Belagerung', 'invasion': 'Invasion / Bodenangriff', 'indirect': 'Umfeld / indirekt', 'access': 'Zugang verwehrt', 'unidentified': 'Nicht angegeben'},
-        'nav': {'nav.warCrimes': '⚖️ Kriegsverbrechen', 'nav.historical': '📜 Geschichte', 'nav.timeline': '📋 Zeitleiste', 'nav.joinUs': '🤝 Mitmachen'},
+        'nav': {'nav.warCrimes': '⚖️ Kriegsverbrechen', 'nav.hungerCrisis': '🍽️ Hungerkrise', 'nav.historical': '📜 Geschichte', 'nav.timeline': '📋 Zeitleiste', 'nav.joinUs': '🤝 Mitmachen'},
         'total_incidents': 'Vorfälle insgesamt',
         'civilians_injured': 'Verletzte Zivilisten',
         'hw_killed_short': 'Getötete Gesundheitskräfte',
@@ -399,7 +399,7 @@ T = {
         'undated': 'بلا تاريخ',
         'no_resources': 'لم تُسجَّل مصادر لهذا القسم بعد.',
         'type_labels': {'airstrike': 'غارة جوية', 'direct': 'استهداف مباشر', 'siege': 'حصار', 'invasion': 'اجتياح / هجوم بري', 'indirect': 'محيط / غير مباشر', 'access': 'منع الوصول', 'unidentified': 'غير محدد'},
-        'nav': {'nav.warCrimes': '⚖️ جرائم حرب', 'nav.historical': '📜 التاريخ', 'nav.timeline': '📋 الجدول الزمني', 'nav.joinUs': '🤝 انضم إلينا'},
+        'nav': {'nav.warCrimes': '⚖️ جرائم حرب', 'nav.hungerCrisis': '🍽️ أزمة الجوع', 'nav.historical': '📜 التاريخ', 'nav.timeline': '📋 الجدول الزمني', 'nav.joinUs': '🤝 انضم إلينا'},
         'total_incidents': 'إجمالي الحوادث',
         'civilians_injured': 'المدنيون الجرحى',
         'hw_killed_short': 'الكوادر الصحية القتلى',
@@ -852,7 +852,7 @@ def head_common(title, desc, canonical, alts, img, robots, lang):
     # two-column body, sidebar, incident cards. Loading it rather than copying
     # it means the generated pages cannot drift from the interactive view.
     a('<link rel="stylesheet" href="/Pages/War_Crimes_Stats/shared.css?v=4">')
-    a('<link rel="stylesheet" href="/Styles/record-page.css?v=18">')
+    a('<link rel="stylesheet" href="/Styles/record-page.css?v=20">')
     return L
 
 
@@ -884,8 +884,9 @@ ATTACK_CLASSES = (
 # (/war-crimes/hospitals/x/ and /war-crimes/hospitals/de/x/).
 SITE_NAV = (
     ("/war-crimes/", "nav.warCrimes", "\u2696\ufe0f War Crimes", True),
+    ("/hunger-crisis-stats.html", "nav.hungerCrisis", "\U0001F37D\ufe0f Hunger Crisis", False),
     ("/historical-events/", "nav.historical", "\U0001F4DC History", False),
-    ("/major-incidents-timeline.html", "nav.timeline", "\U0001F4CB Timeline", False),
+    ("/historical-events/massacres/timeline.html", "nav.timeline", "\U0001F4CB Timeline", False),
     ("/volunteer.html", "nav.joinUs", "\U0001F91D Join Us", False),
 )
 LANG_NAMES = {"en": ("EN", "English"), "de": ("DE", "Deutsch"), "ar": ("AR", "\u0627\u0644\u0639\u0631\u0628\u064a\u0629")}

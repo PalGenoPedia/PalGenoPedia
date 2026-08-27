@@ -309,8 +309,18 @@ And the historical half:
 /historical-events/massacres/                  generated section index
 /historical-events/massacres/<slug>/           event, EN
 /historical-events/massacres/{de,ar}/<slug>/   event, DE / AR
+/historical-events/massacres/timeline.html     interactive Timeline/Map/List, hand-authored
+                                               (was /major-incidents-timeline.html, moved 2026-08-27)
 /historical-events/testimonies/                hand-authored, self-contained (no data/ folder)
 ```
+
+`massacres/timeline.html` is a **file**, not a directory index, on purpose:
+`build_history.py`'s pruner walks `historical-events/massacres/<entry>/index.html`
+and removes anything not in its manifest — a `timeline/` dir would be deleted
+on the next build, a bare `.html` file is left alone. It is hand-authored
+(loads `js/dual-timeline-manager.js`), `seo_inject.py` stamps its head, and it
+links to the generated `<slug>/` record pages for each historical event. The
+section index links to it via a CTA (`build_history.py` `timeline_cta`).
 
 `testimonies/` moved from `Pages/quotes-archive-page.html` on 2026-08-24 — the
 last live, indexed page still sitting under `Pages/`. It has no CSV or shared
@@ -489,8 +499,9 @@ as bytes, remember the ending, restore it on write.
 must be written with the Write tool, not piped through a heredoc.
 
 **Cache-busting.** Changed JS/CSS gets `?v=N` bumped everywhere it is
-referenced. Currently: `footer-init.js?v=4`, `header-component.js?v=3`,
-`common-styles.html?v=3`, `record-page.css?v=15`, `record-page.js?v=5`.
+referenced. Currently: `footer-init.js?v=6`, `header-component.js?v=5`,
+`partials/site-footer.html?v=6` (was `common-styles.html`),
+`dual-timeline-manager.js?v=3`, `record-page.css?v=20`, `record-page.js?v=5`.
 `transferSize: 0` in `performance.getEntriesByType('resource')` proves a
 stale cached asset.
 

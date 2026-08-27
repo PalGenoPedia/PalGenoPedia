@@ -21,9 +21,21 @@ ENABLE_PROBE=1 to re-check liveness against the live site.
 import json, os, sys, glob, datetime
 
 BASE = "https://palgenopedia.org"
-TIMELINE = f"{BASE}/major-incidents-timeline.html"
+TIMELINE = f"{BASE}/historical-events/massacres/timeline.html"
 SNAPSHOT = "2026-08-24"          # provenance / "as_of" date for this build
-HIST_DETAIL = f"{BASE}/Pages/Historical_Massacres/massacres.html"
+# id -> canonical English record URL, from the history manifest (the generated
+# per-event pages superseded the old interactive archive).
+def _hist_urls():
+    p = os.path.join(os.path.dirname(os.path.abspath(__file__)), "_history_manifest.json")
+    out = {}
+    if os.path.exists(p):
+        try:
+            for x in json.load(open(p, encoding="utf-8")).get("pages", []):
+                if x.get("lang") == "en" and x.get("id") and x.get("path"):
+                    out[x["id"]] = BASE + x["path"]
+        except Exception:
+            pass
+    return out
 MON = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
 WK = ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"]
 
@@ -47,11 +59,14 @@ def rfc822(d):
     dt = _dt(d)
     return f"{WK[dt.weekday()]} {dt.strftime('%d')} {MON[dt.month-1]} {dt.year} 00:00:00 +0000"
 
+_HIST_URLS = _hist_urls()
+
 def detail_url(e):
-    # historical detail page verified live (200); current detail pages 404 -> timeline
-    if e.get("period") == "historical":
-        return f"{HIST_DETAIL}#event/{e['id']}"
-    return TIMELINE
+    # historical events have their own generated record page; current events
+    # have none yet and resolve on the timeline via #event/<id>.
+    if e.get("period") == "historical" and e["id"] in _HIST_URLS:
+        return _HIST_URLS[e["id"]]
+    return f"{TIMELINE}#event/{e['id']}"
 
 def guid(e):
     return f"{BASE}/data/events.json#{e['id']}"

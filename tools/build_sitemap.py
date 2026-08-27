@@ -32,7 +32,6 @@ NOINDEX_PATHS = {
     "Pages/War_Crimes_Stats/stat-universities-damaged.html",
     "Pages/War_Crimes_Stats/stat-religious-sites.html",
     "Pages/Historical_Massacres/massacres.html",
-    "Pages/nakba_villages_map.html",
 }
 
 # hand-maintained priorities for the hub pages; everything else gets a default
@@ -41,7 +40,7 @@ PRIORITY = {
     "war-crimes/index.html": ("0.8", "weekly"),
     "hunger-crisis-stats.html": ("0.8", "weekly"),
     "historical-events/index.html": ("0.9", "weekly"),
-    "major-incidents-timeline.html": ("1.0", "daily"),
+    "historical-events/massacres/timeline.html": ("1.0", "daily"),
     "volunteer.html": ("0.4", "monthly"),
 }
 DATA_URLS = ["data/events.json", "data/events.ndjson", "data/events.csv",
