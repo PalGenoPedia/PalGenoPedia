@@ -520,13 +520,19 @@ def read_csv(path):
         return [r for r in csv.DictReader(fh)]
 
 
-def merge_translations(base, trans, key):
-    """Copy _de/_ar suffixed columns from the delta CSV onto the base rows."""
+def merge_translations(base, trans, key, trans_key=None):
+    """Copy _de/_ar suffixed columns from the delta CSV onto the base rows.
+
+    trans_key lets the delta CSV be joined on a different column than the base
+    (e.g. base row keyed on `detail_id`, delta keyed on `_anchor` which holds
+    the base id verbatim — the delta's own `detail_id` is a row-count formula
+    that drifts once the row counts diverge)."""
     if not trans:
         return
+    tk = trans_key or key
     idx = {}
     for r in trans:
-        k = (r.get(key) or "").strip()
+        k = (r.get(tk) or "").strip() or (r.get(key) or "").strip()
         if k:
             idx[k] = r
     for rec in base:
@@ -852,7 +858,7 @@ def head_common(title, desc, canonical, alts, img, robots, lang):
     # two-column body, sidebar, incident cards. Loading it rather than copying
     # it means the generated pages cannot drift from the interactive view.
     a('<link rel="stylesheet" href="/Pages/War_Crimes_Stats/shared.css?v=4">')
-    a('<link rel="stylesheet" href="/Styles/record-page.css?v=20">')
+    a('<link rel="stylesheet" href="/Styles/record-page.css?v=21">')
     return L
 
 

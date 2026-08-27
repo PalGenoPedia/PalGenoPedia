@@ -3,14 +3,15 @@
   "@type": "Article",
   "@id": "https://palgenopedia.org/data/events.json#curr_010",
   "headline": "Starvation Genocide - Northern Gaza Blockade",
-  "url": "https://palgenopedia.org/historical-events/massacres/timeline.html#event/curr_010",
+  "url": "https://palgenopedia.org/historical-events/massacres/starvation-genocide-northern-gaza-blockade/",
   "datePublished": "2024-10-01",
-  "dateModified": "2026-08-24",
+  "dateModified": "2026-08-27",
   "inLanguage": "en",
   "about": {
     "@type": "Event",
     "name": "Starvation Genocide - Northern Gaza Blockade",
     "startDate": "2024-10-01",
+    "description": "Current genocide (2023 to present)",
     "location": {
       "@type": "Place",
       "name": "Northern Gaza Strip",
@@ -22,7 +23,7 @@
     }
   },
   "articleBody": "Complete blockade of northern Gaza including Jabalia, Beit Hanoun, and Beit Lahiya. No food, water, or medical supplies allowed. Use of starvation as method of warfare.",
-  "keywords": "starvation_warfare, current",
+  "keywords": "Starvation Warfare, current",
   "mentions": [
     {
       "@type": "Organization",
@@ -36,19 +37,35 @@
   "citation": [
     {
       "@type": "Article",
-      "name": "UN Special Rapporteurs"
+      "name": "UN Special Rapporteurs",
+      "about": {
+        "@type": "Thing",
+        "name": "source"
+      }
     },
     {
       "@type": "Article",
-      "name": "World Food Programme"
+      "name": "World Food Programme",
+      "about": {
+        "@type": "Thing",
+        "name": "source"
+      }
     },
     {
       "@type": "Article",
-      "name": "Human Rights Watch"
+      "name": "Human Rights Watch",
+      "about": {
+        "@type": "Thing",
+        "name": "source"
+      }
     },
     {
       "@type": "Article",
-      "name": "Genocide Watch"
+      "name": "Genocide Watch",
+      "about": {
+        "@type": "Thing",
+        "name": "source"
+      }
     }
   ],
   "additionalProperty": [
@@ -81,6 +98,12 @@
       "name": "Verification status",
       "propertyID": "verification_status",
       "value": "verified"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Author",
+      "propertyID": "author",
+      "value": "aliattia02"
     }
   ],
   "provider": {

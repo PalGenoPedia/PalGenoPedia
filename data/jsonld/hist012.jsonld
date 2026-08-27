@@ -5,12 +5,13 @@
   "headline": "Operation Cast Lead",
   "url": "https://palgenopedia.org/historical-events/massacres/operation-cast-lead/",
   "datePublished": "2008-12-27",
-  "dateModified": "2026-08-24",
+  "dateModified": "2026-08-27",
   "inLanguage": "en",
   "about": {
     "@type": "Event",
     "name": "Operation Cast Lead",
     "startDate": "2008-12-27",
+    "endDate": "39831",
     "description": "22-day Israeli military operation in Gaza Strip",
     "location": {
       "@type": "Place",
@@ -343,15 +344,15 @@
       "name": "Deaths",
       "propertyID": "casualties/deaths",
       "value": "1,383-1,419 Palestinians; 13 Israelis (10 soldiers, 3 civilians)",
-      "minValue": -1419,
-      "maxValue": 1383
+      "minValue": 1383,
+      "maxValue": 1419
     },
     {
       "@type": "PropertyValue",
       "name": "Injured",
       "propertyID": "casualties/injured",
       "value": "5,300+ Palestinians; 518 Israelis",
-      "minValue": 518,
+      "minValue": 5300,
       "maxValue": 5300
     },
     {

@@ -5,12 +5,13 @@
   "headline": "First Intifada",
   "url": "https://palgenopedia.org/historical-events/massacres/first-intifada/",
   "datePublished": "1987-12-08",
-  "dateModified": "2026-08-24",
+  "dateModified": "2026-08-27",
   "inLanguage": "en",
   "about": {
     "@type": "Event",
     "name": "First Intifada",
     "startDate": "1987-12-08",
+    "endDate": "34225",
     "description": "Palestinian uprising against 20-year Israeli occupation",
     "location": {
       "@type": "Place",
@@ -340,15 +341,15 @@
       "name": "Deaths",
       "propertyID": "casualties/deaths",
       "value": "1,087-1,284 Palestinians; 160-200 Israelis",
-      "minValue": -1284,
-      "maxValue": 1087
+      "minValue": 1087,
+      "maxValue": 1284
     },
     {
       "@type": "PropertyValue",
       "name": "Injured",
       "propertyID": "casualties/injured",
       "value": "120,000+ Palestinians injured; 3,100 Israeli soldiers/civilians injured",
-      "minValue": 3100,
+      "minValue": 120000,
       "maxValue": 120000
     },
     {

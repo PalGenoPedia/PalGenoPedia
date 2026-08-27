@@ -2,18 +2,19 @@
 """
 build_history.py - generate one indexable page per documented historical event.
 
-READS   Pages/Historical_Massacres/events.csv          17 events, 28 columns
-        Pages/Historical_Massacres/details.csv         ~1,290 categorised rows
+READS   Pages/Historical_Massacres/events.csv          documented events, 1948–present
+        Pages/Historical_Massacres/details.csv         categorised rows (sources, war crimes, …)
         Pages/Historical_Massacres/{events,details}_{de,ar}.csv
 WRITES  historical-events/massacres/**                 section index + records
         tools/_history_manifest.json                   consumed by the sitemap
 
 Why a separate generator from build_records.py: that one models a *facility*
 with a list of *incidents* - a hero, incident cards, attack-type filters,
-casualty totals. An event has none of that. It has three summary paragraphs,
-four hero label/value pairs, and eighty categorised prose blocks. Different
-render, same everything else - this imports build_records for the shell,
-header, slugs, escaping and CSV handling so the two cannot drift apart.
+casualty totals. An event has none of that. It has up to three summary
+paragraphs and a set of categorised prose blocks; the four-fact stat strip is
+computed from its own fields (hero_pairs()). Different render, same everything
+else - this imports build_records for the shell, header, slugs, escaping and
+CSV handling so the two cannot drift apart.
 
 Usage
   python tools/build_history.py            build
@@ -88,19 +89,19 @@ T = {
            "classification": "Classification", "location_then": "Location, then",
            "location_now": "Location, now", "context": "Context",
            "source": "Source", "all_events": "All documented events",
-           "summary": "Summary", "details": "Documented details", "deaths": "Deaths", "injured": "Injured", "displaced": "Displaced", "data": "Data",
+           "summary": "Summary", "details": "Documented details", "deaths": "Deaths", "injured": "Injured", "displaced": "Displaced", "data": "Data", "f_date": "Date", "f_location": "Location",
            "timeline_cta": "📅 Explore the interactive timeline, map & list — 1948 to present"},
     "de": {"home": "Startseite", "events": "Ereignisse", "perpetrators": "Täter",
            "classification": "Einordnung", "location_then": "Ort, damals",
            "location_now": "Ort, heute", "context": "Kontext",
            "source": "Quelle", "all_events": "Alle dokumentierten Ereignisse",
-           "summary": "Zusammenfassung", "details": "Dokumentierte Angaben", "deaths": "Todesopfer", "injured": "Verletzte", "displaced": "Vertriebene", "data": "Daten",
+           "summary": "Zusammenfassung", "details": "Dokumentierte Angaben", "deaths": "Todesopfer", "injured": "Verletzte", "displaced": "Vertriebene", "data": "Daten", "f_date": "Datum", "f_location": "Ort",
            "timeline_cta": "📅 Interaktive Zeitleiste, Karte & Liste — 1948 bis heute"},
     "ar": {"home": "الرئيسية", "events": "الأحداث", "perpetrators": "الجناة",
            "classification": "التكييف", "location_then": "الموقع، آنذاك",
            "location_now": "الموقع، اليوم", "context": "السياق",
            "source": "المصدر", "all_events": "جميع الأحداث الموثقة",
-           "summary": "ملخص", "details": "تفاصيل موثقة", "deaths": "القتلى", "injured": "الجرحى", "displaced": "المهجّرون", "data": "البيانات",
+           "summary": "ملخص", "details": "تفاصيل موثقة", "deaths": "القتلى", "injured": "الجرحى", "displaced": "المهجّرون", "data": "البيانات", "f_date": "التاريخ", "f_location": "الموقع",
            "timeline_cta": "📅 الجدول الزمني التفاعلي والخريطة والقائمة — من 1948 حتى اليوم"},
 }
 
@@ -127,9 +128,12 @@ def load():
     # a row is real when it has both an event and a category.
     details = [r for r in B.read_csv(os.path.join(d, "details.csv"))
                if B.clean(r.get("event_id")) and B.clean(r.get("category"))]
+    # The delta CSVs carry a self-counting detail_id / id formula that drifts
+    # once row counts diverge from the base (adding the current-genocide rows
+    # did exactly this). `_anchor` holds the base id verbatim — join on that.
     for lang in ("de", "ar"):
-        B.merge_translations(events, B.read_csv(os.path.join(d, "events_%s.csv" % lang)), "id")
-        B.merge_translations(details, B.read_csv(os.path.join(d, "details_%s.csv" % lang)), "detail_id")
+        B.merge_translations(events, B.read_csv(os.path.join(d, "events_%s.csv" % lang)), "id", trans_key="_anchor")
+        B.merge_translations(details, B.read_csv(os.path.join(d, "details_%s.csv" % lang)), "detail_id", trans_key="_anchor")
 
     by_event = {}
     for r in details:
@@ -267,13 +271,59 @@ def event_date(ev):
     return s
 
 
-def hero_pairs(ev):
+_re = __import__("re")
+_PAREN_RE = _re.compile(r"\s*\([^)]*\)")
+
+
+def _short_loc(s):
+    """Place name for a stat chip: parentheticals dropped, first comma-part,
+    a second only if the pair still fits.
+    'Deir Yassin (Dayr Yasin), Jerusalem, British Mandate' -> 'Deir Yassin, Jerusalem'."""
+    s = _PAREN_RE.sub("", s or "").strip()
+    parts = [p.strip().split(" - ")[0].strip() for p in s.split(",") if p.strip()]
+    if not parts:
+        return ""
+    out = parts[0]
+    if len(parts) > 1 and len(out) + len(parts[1]) <= 34:
+        out += ", " + parts[1]
+    return out[:40].rstrip(" ,;–-") + ("…" if len(out) > 40 else "")
+
+
+def _short_qty(s):
+    """Casualty figure for a stat chip: the leading quantity, before any
+    '(', ';' or clause break. '223 Palestinians (189 during 2018…)' -> '223 Palestinians'.
+    A bare integer gets thousands separators ('5000' -> '5,000')."""
+    s = (s or "").strip()
+    s = _re.split(r"\s*[(;]|\s+[-–]\s+", s, 1)[0].strip().rstrip(".,")
+    if s.isdigit():
+        return "{:,}".format(int(s))
+    return s[:42].rstrip(" ,;–-") + ("…" if len(s) > 42 else "")
+
+
+def hero_pairs(ev, t):
+    """The four stat-strip facts, computed from the event's own fields.
+    The sheet no longer carries hero_1..4 columns — this replaces them with
+    Date / Location / Deaths / (Displaced or Injured, whichever is recorded)."""
+    a_ = B.clean
     out = []
-    for i in (1, 2, 3, 4):
-        lbl = B.clean(ev.get("hero_%d_label" % i))
-        val = B.clean(ev.get("hero_%d_value" % i))
-        if lbl or val:
-            out.append((val, lbl))
+    d = event_date(ev)
+    if d:
+        out.append((d, t["f_date"]))
+    loc = _short_loc(a_(ev.get("location_historical")))
+    if loc:
+        out.append((loc, t["f_location"]))
+    def _q(field):
+        v = a_(ev.get(field))
+        return "" if v in ("", "0", "0.0", "None") else _short_qty(v)
+
+    deaths = _q("deaths")
+    if deaths:
+        out.append((deaths, t["deaths"]))
+    disp, inj = _q("forced_displacement"), _q("injured")
+    if disp:
+        out.append((disp, t["displaced"]))
+    elif inj:
+        out.append((inj, t["injured"]))
     return out
 
 
@@ -361,7 +411,7 @@ def render_event(ev, details, slugs, lang):
     L.extend(B.page_subheader(name, subtitle, None, None, None))
 
     a = L.append
-    pairs = hero_pairs(ev)
+    pairs = hero_pairs(ev, t)
     if pairs:
         L.extend(B.stats_strip(pairs))
 
@@ -392,22 +442,58 @@ def render_event(ev, details, slugs, lang):
         rows = [r for r in details if a_(r.get("category")) == cat]
         lbl = CATEGORY_LABEL.get(cat, {}).get(lang) or cat.replace("_", " ").title()
         a('<h2 class="detail-section-title">%s</h2>' % e(lbl))
-        a('<div class="rp-table-wrap"><table class="rp-table rp-table--prose"><tbody>')
+        # One card per row — mirrors the timeline modal's enrichment cards
+        # (.dtm-detail-row / .dtm-testimony / .dtm-timeline-row in
+        # js/dual-timeline-manager.js). testimony and timeline get their own
+        # card variant; everything else is a plain heading + body + source card.
+        a('<div class="rp-cards rp-cards--%s">' % e(cat))
         for r in rows:
             head = B.get_field(r, "heading_label", lang) or a_(r.get("heading_label"))
             body = B.get_field(r, "content", lang) or a_(r.get("content"))
             val = a_(r.get("value"))
             when = a_(r.get("time"))
-            cell = " ".join([x for x in (val, body) if x])
             src = a_(r.get("source"))
             link = a_(r.get("source_link"))
-            if src:
+            # In a Sources section the source IS the heading. When there is no
+            # heading_label, promote the (localised) content / source name to
+            # the heading so nothing renders as an empty card or a name echoed
+            # twice.
+            if cat == "source" and not head:
+                head = body or src
+                body = ""
+            if cat == "source" and (body == head or body == src):
+                body = ""
+            src_html = ""
+            if src and src != head:
                 cited = ('<a href="%s" rel="nofollow noopener" target="_blank">%s</a>'
                          % (e(link), e(src))) if link.startswith("http") else e(src)
-                cell += ' <span class="rp-src">— %s</span>' % cited
-            a("<tr><th>%s</th><td>%s</td></tr>"
-              % (e(" ".join([x for x in (when, head) if x])), cell))
-        a("</tbody></table></div>")
+                src_html = '<div class="rp-card-src">%s</div>' % cited
+            elif cat == "source" and link.startswith("http"):
+                src_html = ('<div class="rp-card-src"><a href="%s" rel="nofollow noopener" '
+                            'target="_blank">%s</a></div>' % (e(link), e(link)))
+
+            if cat == "testimony":
+                quote = '“%s”' % e(body) if body else ""
+                a('<div class="rp-card rp-card--testimony">'
+                  '<div class="rp-card-head">%s</div>'
+                  '<div class="rp-card-body">%s</div>%s</div>'
+                  % (e(head or t.get("summary", "")), quote, src_html))
+            elif cat == "timeline":
+                body_html = '<div class="rp-card-body">%s</div>' % e(body) if body else ""
+                a('<div class="rp-card rp-card--timeline">'
+                  '<div class="rp-card-time">%s</div>'
+                  '<div class="rp-card-main"><div class="rp-card-head">%s</div>%s%s</div>'
+                  '</div>' % (e(when), e(head), body_html, src_html))
+            else:
+                title = e(head)
+                if val:
+                    title += ' <span class="rp-card-val">%s</span>' % e(val)
+                elif when:
+                    title = e(" ".join([x for x in (when, head) if x]))
+                body_html = '<div class="rp-card-body">%s</div>' % e(body) if body else ""
+                a('<div class="rp-card"><div class="rp-card-head">%s</div>%s%s</div>'
+                  % (title, body_html, src_html))
+        a('</div>')
 
     a('<p style="margin-top:2rem"><a href="%s">%s</a></p>'
       % (B.url_quote(section_index_path(lang)), e(t["all_events"])))

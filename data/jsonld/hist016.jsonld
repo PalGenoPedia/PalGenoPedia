@@ -5,12 +5,13 @@
   "headline": "Operation Guardian of the Walls",
   "url": "https://palgenopedia.org/historical-events/massacres/operation-guardian-of-the-walls/",
   "datePublished": "2021-05-10",
-  "dateModified": "2026-08-24",
+  "dateModified": "2026-08-27",
   "inLanguage": "en",
   "about": {
     "@type": "Event",
     "name": "Operation Guardian of the Walls",
     "startDate": "2021-05-10",
+    "endDate": "44337",
     "description": "11-day Israeli military operation in Gaza Strip",
     "location": {
       "@type": "Place",
@@ -288,6 +289,15 @@
     },
     {
       "@type": "Article",
+      "name": "UN Documentation",
+      "url": "https://www.un.org/unispal/",
+      "about": {
+        "@type": "Thing",
+        "name": "timeline"
+      }
+    },
+    {
+      "@type": "Article",
       "name": "Meir Amit Summary",
       "url": "https://www.terrorism-info.org.il/en/escalation-from-the-gaza-strip-operation-guardian-of-the-walls-summary/",
       "about": {
@@ -365,7 +375,7 @@
       "name": "Deaths",
       "propertyID": "casualties/deaths",
       "value": "260 Palestinians (129 civilians, 66 children, 40 women); 13 Israelis (12 civilians, 1 soldier)",
-      "minValue": 1,
+      "minValue": 260,
       "maxValue": 260
     },
     {

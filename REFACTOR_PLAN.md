@@ -351,6 +351,13 @@ Given the plain white sub-header vs. the interactive archive's dark hero:
   generator rewrite — same markup the pages already emit.
 - War-crimes record pages are untouched (no `rp-hist` class); they already
   carry the richer `.detail-hero` + sidebar from `build_records.py`.
+- **Detail sections are cards, not tables** (2026-08-27, second pass): the
+  categorised `details.csv` blocks now render as `.rp-card` lists mirroring
+  the timeline modal's `.dtm-detail-row` / `.dtm-testimony` /
+  `.dtm-timeline-row` — heading + body + `📰` source, testimony with an
+  accent rail and italic quote, timeline with a red time chip. The old
+  two-column `.rp-table--prose` is kept only for the top facts block.
+  `record-page.css` `?v=20`→`?v=21`.
 
 ### `major-incidents-timeline.html` → `/historical-events/massacres/timeline.html`
 
@@ -381,3 +388,104 @@ Action rebuilds all of it from the CSVs on push (`build_records.py` /
 `build_history.py` / `build_sitemap.py` are all in the workflow trigger).
 `historical-massacres.json` was **not** deleted this session — it is still a
 live fallback; retiring it stays a later step.
+
+---
+
+## 12. Collapse to one source of truth — `Pages/Historical_Massacres/*.csv`
+
+Goal: the Google Sheet (→ `events.csv` + `details.csv`) is the *only* place
+event data is edited. `data/events.json` and
+`timeline-data/civilian-casualties-current.json` stop being hand-maintained
+inputs.
+
+### Sheet changes (owner) — **no new columns**
+
+- **`Events`**: add 10 rows for the current-genocide events (`curr_001`…`curr_010`),
+  using the existing columns. Convert `civilian-casualties-current.json.incidents[]`
+  — script did this: `scratchpad/current_events_rows.tsv`.
+- **`Details`**: add the `war_crime` + `source` rows for those 10 events —
+  `scratchpad/current_details_rows.tsv` (80 rows).
+- **Remove 9 columns**: `hero_1_label`…`hero_4_value` (8) and `last_updated` (1).
+  Nothing reads them any more (see below).
+- **`id` must be a typed column**, not a row-count formula — the new rows
+  need the literal ids `curr_001`… (feed GUIDs + `#event/<id>` depend on
+  them). Paste the current computed `hist0NN` values back as static text,
+  then type the `curr_` ids. This also retires the `PIPELINE.md` ③
+  "ids are not stable" trap.
+- `verification_status`: **not added** — hardcoded `"verified"` in the build.
+- Whole-war totals (61,200 deaths, infra counts): **not a tab** — hardcoded
+  as a dated `const` in `js/dual-timeline-manager.js`, edit there when they move.
+- Apps Script: no `SPREADSHEETS` change (same workbook, same `Events`/`Details`
+  tabs). Just delete the hard-coded token from `storeToken()`.
+
+### Repo changes
+
+### Status — **applied 2026-08-27** (Sheet synced: 27 events, +80 detail rows, ids `curr_001…`)
+
+| file | change |
+|---|---|
+| `tools/build_history.py` | `hero_pairs()` computes the 4-fact strip from the row (Date / Location / Deaths / Displaced-or-Injured), truncated, `0` suppressed, bare ints comma-formatted — the `hero_*` columns are dead. All 27 events now generate record pages (84 incl. de/ar). |
+| `tools/regenerate.py` | **rewritten** — reads `events.csv` + `details.csv`; derives `period` (date ≥ 2023-10-07), casualty `min`/`max`/`estimate` (`parse_range`), `sources[]` + `war_crimes[]` from `details.csv`, `verification_status="verified"`; dataset metadata = constants. **`data/events.json`, `data/events.csv`, `data/events.ndjson` are now OUTPUTS.** `detail_url()` → generated record page for every event. |
+| `js/dual-timeline-manager.js` `?v=3`→`?v=5` | one load from `events.csv` (1948→present), split historical/current by date (`CURRENT_FROM = 2023-10-07`); `extractHeroFacts()` computed from the row; current events link to their real record pages; JSON fallback gutted (degrade to empty, not the stale drift). |
+| `tools/seo_inject.py` | `event_items()` → real record-page URL for every id in the manifest (not just historical). Still reads the now-generated `data/events.json`. |
+| retired | `timeline-data/civilian-casualties-current.json`, `timeline-data/historical-massacres.json` (deleted); `timeline-config.json` `data_source` refs removed. |
+
+**Verified in a local server:** timeline loads 17 + 10 = 27, no console errors,
+current mode filters to 10, current events link to
+`/historical-events/massacres/<slug>/` (all 200), `data/events.json`
+regenerates from CSV with matching source/casualty data, all JSON-LD + feeds
+well-formed.
+
+**Not done — `current_statistics` (whole-war 61,200 toll):** turned out to be
+**dead data** — nothing reads it. The timeline shows per-incident sums. If
+whole-war figures should appear on the timeline that is a separate ~5-line
+add (a `const` + two `textContent` writes); `WAR_TOTALS` was drafted and
+removed.
+
+### Translation join fixed (2026-08-27, after the sync)
+
+Adding the 80 `curr_` rows to `Details` but a different count to `Details_de`
+/ `Details_ar` broke the `detail_id` join — the delta CSVs' `detail_id` is a
+self-counting formula that drifted, so `curr_` events showed **German/Arabic
+text from unrelated rows**. Fixed: `merge_translations()` gained a `trans_key`
+param and `build_history.py` now joins the delta CSVs on **`_anchor`** (which
+holds the base id verbatim, 1370/1370 coverage) instead of `detail_id`.
+Verified EN↔DE↔AR now line up for the current events.
+
+`source`-category rows: the current-event ones carry the source name in
+`content`/`source` only (no `heading_label`); `build_history.py` now promotes
+the localised name to the card heading so they don't render as blank or
+doubled cards.
+
+### CI now regenerates the whole derived layer (2026-08-27)
+
+`data/` cannot move to `draft/` — it is the **published output** of the
+machine-readable layer (`seo_inject.py` reads `data/events.json` for the
+homepage/timeline ItemList; `data/record-pages.json` is fetched at runtime by
+the war-crimes hub; the JSON-LD + feed files are served; the dataset
+downloads are linked from methodology/404/llms.txt/sitemap).
+
+The reason it drifted: `.github/workflows/build-records.yml` only ran
+`build_records.py` / `build_history.py` / `build_sitemap.py`. Fixed — the
+workflow now also runs, in order:
+
+```
+build_records.py  ->  build_history.py  ->  regenerate.py  ->  seo_inject.py  ->  build_sitemap.py
+```
+
+So one Sheet sync now regenerates **everything** from the CSVs: HTML record
+pages, `data/events.json` + `.csv` + `.ndjson`, all JSON-LD, `feed.xml`,
+`feed.rss`, the injected `<head>` blocks, and the sitemap — and commits it
+back to `main`. `data/` tracks the Sheet with zero manual steps, same as the
+pages. `tools/regenerate.py` + `tools/seo_inject.py` added to the trigger
+`paths:`.
+
+`llms.txt` stale refs fixed (the deleted `civilian-casualties-current.json`,
+the moved timeline path).
+
+### Still owner-side (only this)
+
+- **Remove the 9 dead columns** from the `Events` tab (`hero_1_label`…`hero_4_value`, `last_updated`). Optional — the code already ignores them.
+
+DONE: DE/AR rows for the 10 `curr_` events are synced; the Apps Script token
+was removed.

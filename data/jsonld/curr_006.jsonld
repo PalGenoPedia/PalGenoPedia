@@ -3,14 +3,15 @@
   "@type": "Article",
   "@id": "https://palgenopedia.org/data/events.json#curr_006",
   "headline": "Al-Shifa Hospital Siege",
-  "url": "https://palgenopedia.org/historical-events/massacres/timeline.html#event/curr_006",
+  "url": "https://palgenopedia.org/historical-events/massacres/al-shifa-hospital-siege/",
   "datePublished": "2023-11-11",
-  "dateModified": "2026-08-24",
+  "dateModified": "2026-08-27",
   "inLanguage": "en",
   "about": {
     "@type": "Event",
     "name": "Al-Shifa Hospital Siege",
     "startDate": "2023-11-11",
+    "description": "Current genocide (2023 to present)",
     "location": {
       "@type": "Place",
       "name": "Al-Shifa Hospital, Gaza City",
@@ -22,7 +23,7 @@
     }
   },
   "articleBody": "Israeli forces besieged Gaza's largest hospital, cutting off power and water. Patients died due to lack of medical care. Hospital raided despite being protected under international law.",
-  "keywords": "hospital_siege, current",
+  "keywords": "Hospital Siege, current",
   "mentions": [
     {
       "@type": "Organization",
@@ -32,19 +33,35 @@
   "citation": [
     {
       "@type": "Article",
-      "name": "WHO"
+      "name": "WHO",
+      "about": {
+        "@type": "Thing",
+        "name": "source"
+      }
     },
     {
       "@type": "Article",
-      "name": "UN OCHA"
+      "name": "UN OCHA",
+      "about": {
+        "@type": "Thing",
+        "name": "source"
+      }
     },
     {
       "@type": "Article",
-      "name": "Human Rights Watch"
+      "name": "Human Rights Watch",
+      "about": {
+        "@type": "Thing",
+        "name": "source"
+      }
     },
     {
       "@type": "Article",
-      "name": "Doctors Without Borders"
+      "name": "Doctors Without Borders",
+      "about": {
+        "@type": "Thing",
+        "name": "source"
+      }
     }
   ],
   "additionalProperty": [
@@ -77,6 +94,12 @@
       "name": "Verification status",
       "propertyID": "verification_status",
       "value": "verified"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Author",
+      "propertyID": "author",
+      "value": "aliattia02"
     }
   ],
   "provider": {

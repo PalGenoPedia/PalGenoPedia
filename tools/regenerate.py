@@ -1,28 +1,44 @@
 #!/usr/bin/env python3
 """
-regenerate.py — PalGenoPedia JSON-LD + RSS/Atom layer generator.
+regenerate.py — PalGenoPedia machine-readable layer generator.
 
-READS ONLY (never writes):  ../data/events.json   (sole canonical source of truth)
-WRITES (additive, derived): ../data/dataset.jsonld
-                            ../data/events.jsonld
-                            ../data/jsonld/<id>.jsonld
-                            ../data/jsonld/embed/<id>.html (+ dataset.html, events-graph.html)
-                            ../feed.xml
-                            ../feed.rss
+READS   Pages/Historical_Massacres/events.csv     canonical event data (from the Sheet)
+        Pages/Historical_Massacres/details.csv     sources + war-crime rows
+        tools/_history_manifest.json               id -> generated record-page URL
+WRITES  data/events.json                           the normalised dataset (now an OUTPUT)
+        data/events.csv  data/events.ndjson         flat / line-delimited exports
+        data/events.jsonld  data/dataset.jsonld
+        data/jsonld/<id>.jsonld
+        data/jsonld/embed/<id>.html (+ dataset.html, events-graph.html)
+        feed.xml  feed.rss
 
-Idempotent: re-running after an events.json update republishes everything.
-No external dependencies (stdlib only).
-
-Link integrity: detail-page links are resolved by rule, validated live once
-during the initial build (see DEPLOY.md). Current-genocide detail pages were
-found to 404, so current events fall back to the timeline page. Set
-ENABLE_PROBE=1 to re-check liveness against the live site.
+Single source of truth: the Google Sheet -> events.csv / details.csv. Everything
+here is derived. `verification_status` is hardcoded "verified"; casualty min/max
+are parsed from the raw strings; `period` is by date (>= 2023-10-07 = current).
+Run after build_history.py so the manifest URLs are current.
 """
-import json, os, sys, glob, datetime
+import json, os, sys, re, datetime
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import build_records as B
 
 BASE = "https://palgenopedia.org"
 TIMELINE = f"{BASE}/historical-events/massacres/timeline.html"
-SNAPSHOT = "2026-08-24"          # provenance / "as_of" date for this build
+SNAPSHOT = datetime.date.today().isoformat()   # provenance / "as_of" date
+CURRENT_FROM = "2023-10-07"                      # date >= this -> period "current"
+
+SRC = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                   "Pages", "Historical_Massacres")
+
+DATASET_META = {
+    "schema_version": "1.0",
+    "dataset_description": ("Documented war crimes, massacres, and humanitarian violations "
+                            "concerning Palestine, 1948-present. Figures carry explicit "
+                            "provenance and verification status."),
+    "provenance_sources": ["Al Jazeera", "B'Tselem", "Euro-Med Monitor", "Gaza Health Ministry",
+                           "Historical Archives", "Human Rights Watch", "UN", "UN OCHA"],
+}
+
 # id -> canonical English record URL, from the history manifest (the generated
 # per-event pages superseded the old interactive archive).
 def _hist_urls():
@@ -62,11 +78,9 @@ def rfc822(d):
 _HIST_URLS = _hist_urls()
 
 def detail_url(e):
-    # historical events have their own generated record page; current events
-    # have none yet and resolve on the timeline via #event/<id>.
-    if e.get("period") == "historical" and e["id"] in _HIST_URLS:
-        return _HIST_URLS[e["id"]]
-    return f"{TIMELINE}#event/{e['id']}"
+    # every event now has a generated record page (build_history.py renders all
+    # rows in events.csv); fall back to the timeline hash only if one is missing.
+    return _HIST_URLS.get(e["id"], f"{TIMELINE}#event/{e['id']}")
 
 def guid(e):
     return f"{BASE}/data/events.json#{e['id']}"
@@ -223,11 +237,144 @@ def write_feeds(events):
     with open(os.path.join(DEP, "feed.rss"), "w", encoding="utf-8") as f:
         f.write("\n".join(rss) + "\n")
 
+def parse_range(raw):
+    """'≈107–250' -> (107, 250, 250) ; '471' -> (471,471,471) ; prose -> (None,None,None).
+    estimate is the conservative upper bound (max)."""
+    head = re.split(r"[(;]", (raw or "").strip(), 1)[0]
+    nums = [int(n.replace(",", "")) for n in re.findall(r"\d[\d,]*", head)]
+    if not nums:
+        return (None, None, None)
+    return (min(nums), max(nums), max(nums))
+
+
+def load_events_from_csv():
+    """Build the normalised event list from the Sheet CSVs — the shape the
+    JSON-LD / feed builders below expect (was data/events.json)."""
+    a_ = B.clean
+    rows = [r for r in B.read_csv(os.path.join(SRC, "events.csv")) if not B.is_blank(r.get("id"))]
+    details = [r for r in B.read_csv(os.path.join(SRC, "details.csv"))
+               if a_(r.get("event_id")) and a_(r.get("category"))]
+
+    by_ev = {}
+    for r in details:
+        by_ev.setdefault(a_(r.get("event_id")), []).append(r)
+
+    out = []
+    for r in rows:
+        eid = a_(r.get("id"))
+        ds = a_(r.get("date_start"))[:10]
+        de = a_(r.get("date_end"))[:10] or ds
+        cas = {}
+        for col, key in (("deaths", "deaths"), ("injured", "injured"),
+                         ("forced_displacement", "forced_displacement")):
+            raw = a_(r.get(col))
+            lo, hi, est = parse_range(raw)
+            cas[key] = {"raw": raw, "min": lo, "max": hi, "estimate": est}
+
+        drows = by_ev.get(eid, [])
+        seen, sources = set(), []
+        for d in drows:
+            s = a_(d.get("source"))
+            if not s:
+                continue
+            link = a_(d.get("source_link"))
+            k = (s, link)
+            if k in seen:
+                continue
+            seen.add(k)
+            sources.append({"source": s,
+                            "source_link": link if link.startswith("http") else None,
+                            "category": a_(d.get("category")) or None})
+        war_crimes = [a_(d.get("heading_label")) for d in drows
+                      if a_(d.get("category")) == "war_crime" and a_(d.get("heading_label"))]
+        summary = " ".join(x for x in (a_(r.get("summary_para_1")), a_(r.get("summary_para_2")),
+                                       a_(r.get("summary_para_3"))) if x)
+
+        out.append({
+            "id": eid,
+            "title": a_(r.get("event_name")),
+            "period": "current" if ds >= CURRENT_FROM else "historical",
+            "date_start": ds,
+            "date_end": de,
+            "date_context": a_(r.get("date_context")) or None,
+            "event_type": a_(r.get("event_type")),
+            "classification": a_(r.get("classification")) or None,
+            "location": {
+                "name_historical": a_(r.get("location_historical")),
+                "name_current": a_(r.get("location_current")) or a_(r.get("location_historical")),
+                "lat": float(r["location_lat"]) if a_(r.get("location_lat")) else None,
+                "lng": float(r["location_lng"]) if a_(r.get("location_lng")) else None,
+            },
+            "casualties": cas,
+            "perpetrators": [p.strip() for p in re.split(r"\s*;\s*", a_(r.get("perpetrators"))) if p.strip()],
+            "summary": summary,
+            "war_crimes": war_crimes,
+            "verification_status": "verified",
+            "sources": sources,
+            "source_file": "events.csv",
+            "last_updated": a_(r.get("last_updated")) or None,
+            "author": a_(r.get("author")) or None,
+        })
+    out.sort(key=lambda e: e["date_start"] or "")
+    return out
+
+
+FLAT_COLS = ["id", "title", "period", "date_start", "date_end", "event_type", "classification",
+             "location_historical", "location_current", "lat", "lng",
+             "deaths_raw", "deaths_estimate", "injured_raw", "injured_estimate",
+             "displaced_raw", "displaced_estimate", "perpetrators", "verification_status",
+             "summary", "num_sources", "source_links"]
+
+
+def flat_row(e):
+    import csv, io
+    c = e["casualties"]
+    d = {
+        "id": e["id"], "title": e["title"], "period": e["period"],
+        "date_start": e["date_start"], "date_end": e["date_end"],
+        "event_type": e["event_type"], "classification": e["classification"] or "",
+        "location_historical": e["location"]["name_historical"],
+        "location_current": e["location"]["name_current"],
+        "lat": e["location"]["lat"] if e["location"]["lat"] is not None else "",
+        "lng": e["location"]["lng"] if e["location"]["lng"] is not None else "",
+        "deaths_raw": c["deaths"]["raw"], "deaths_estimate": c["deaths"]["estimate"] or "",
+        "injured_raw": c["injured"]["raw"], "injured_estimate": c["injured"]["estimate"] or "",
+        "displaced_raw": c["forced_displacement"]["raw"],
+        "displaced_estimate": c["forced_displacement"]["estimate"] or "",
+        "perpetrators": ";".join(e["perpetrators"]),
+        "verification_status": e["verification_status"], "summary": e["summary"],
+        "num_sources": len(e["sources"]),
+        "source_links": ";".join(s["source_link"] for s in e["sources"] if s["source_link"]),
+    }
+    buf = io.StringIO()
+    csv.DictWriter(buf, FLAT_COLS, extrasaction="ignore", lineterminator="\n").writerow(d)
+    return buf.getvalue().rstrip("\n")
+
+
 def main():
     ensure(JLD); ensure(EMB)
-    with open(os.path.join(DATA, "events.json"), encoding="utf-8") as f:
-        bundle = json.load(f)
-    events = bundle["events"]
+    events = load_events_from_csv()
+
+    # data/events.json is now an OUTPUT, derived from the CSVs
+    bundle = {
+        **DATASET_META,
+        "generated_from": "Pages/Historical_Massacres/{events,details}.csv (Google Sheet sync)",
+        "counts": {"total_events": len(events),
+                   "historical": sum(1 for e in events if e["period"] == "historical"),
+                   "current": sum(1 for e in events if e["period"] == "current")},
+        "events": events,
+    }
+    with open(os.path.join(DATA, "events.json"), "w", encoding="utf-8") as f:
+        json.dump(bundle, f, ensure_ascii=False, indent=2)
+    # flat CSV + ndjson exports
+    with open(os.path.join(DATA, "events.csv"), "w", encoding="utf-8", newline="") as f:
+        f.write(",".join(FLAT_COLS) + "\n")
+        for e in events:
+            f.write(flat_row(e) + "\n")
+    with open(os.path.join(DATA, "events.ndjson"), "w", encoding="utf-8") as f:
+        for e in events:
+            f.write(json.dumps(e, ensure_ascii=False) + "\n")
+
     articles = [build_article(e) for e in events]
     dataset = build_dataset(events, articles)
 
@@ -255,7 +402,8 @@ def main():
         f.write(gr_block)
 
     write_feeds(events)
-    print(f"OK: regenerated JSON-LD ({len(articles)} events) + feed.xml + feed.rss from data/events.json")
+    print("OK: %d events from events.csv -> data/events.json + .csv + .ndjson, "
+          "JSON-LD, feed.xml, feed.rss" % len(events))
 
 if __name__ == "__main__":
     main()

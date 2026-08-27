@@ -40,7 +40,7 @@ class DualTimelineManager {
         this.dataPaths = {
             eventsCSV: '/Pages/Historical_Massacres/events.csv',
             detailsCSV: '/Pages/Historical_Massacres/details.csv',
-            historicalJSON: '/timeline-data/historical-massacres.json',
+            historicalJSON: null,  // retired — events.csv is the only source
             // Per-field translation "delta" CSVs — same folder as events.csv/details.csv.
             // Each row only carries the translated columns (e.g. brief_summary_de,
             // heading_label_ar) for the matching id / detail_id. Missing files are
@@ -131,11 +131,8 @@ class DualTimelineManager {
             // Load sources metadata
             await this.loadSources();
 
-            // Load both historical and current data
-            await Promise.all([
-                this.loadHistoricalData(),
-                this.loadCurrentData()
-            ]);
+            // One load — events.csv covers 1948→present, split by date inside
+            await this.loadHistoricalData();
 
             // Combine data
             this.combineData();
@@ -238,33 +235,37 @@ class DualTimelineManager {
     // Load historical massacres data
     // Primary source: events.csv + details.csv (parsed with PapaParse)
     // Fallback: timeline-data/historical-massacres.json (legacy per-event JSON)
+    // The single load: events.csv carries every documented event (1948→present).
+    // Split into historical / current by date for the mode selector.
     async loadHistoricalData() {
         try {
-            console.log('📜 Loading historical massacres data...');
-            this.showLoading('Loading historical data (1948-2023)...');
+            console.log('📜 Loading documented events (events.csv)…');
+            this.showLoading('Loading documented events (1948–present)…');
 
+            let all = [];
             if (typeof Papa !== 'undefined') {
-                const csvData = await this.loadHistoricalFromCSV();
-
-                if (csvData.length) {
-                    this.historicalData = csvData;
-                    console.log(`✅ Loaded ${this.historicalData.length} historical events from events.csv/details.csv`);
-                    return;
-                }
-
-                console.warn('⚠️ events.csv/details.csv returned no usable rows — falling back to historical-massacres.json');
-            } else {
-                console.warn('⚠️ PapaParse not found — falling back to historical-massacres.json');
+                all = await this.loadHistoricalFromCSV();
+            }
+            if (!all.length) {
+                console.warn('⚠️ events.csv returned no rows — no data source available');
+                await this.loadHistoricalFromJSON();
+                all = this.historicalData;
             }
 
-            await this.loadHistoricalFromJSON();
-
+            this.historicalData = all.filter(e => (e.date || '') < DualTimelineManager.CURRENT_FROM);
+            this.currentData    = all.filter(e => (e.date || '') >= DualTimelineManager.CURRENT_FROM)
+                                     .map(e => ({ ...e, period: 'current' }));
+            console.log(`✅ ${all.length} events — ${this.historicalData.length} historical, ${this.currentData.length} current`);
         } catch (error) {
-            console.error('❌ Error loading historical data:', error);
+            console.error('❌ Error loading events:', error);
             this.historicalData = [];
+            this.currentData = [];
             throw error;
         }
     }
+
+    // events.csv split point — anything on/after this date is "current genocide".
+    static get CURRENT_FROM() { return '2023-10-07'; }
 
     // ── CSV-based historical data loading ──────────────────────────────
 
@@ -601,68 +602,43 @@ class DualTimelineManager {
         return 'massacre';
     }
 
-    // Pull the hero_N_label / hero_N_value pairs from an events.csv row into
-    // a simple [{ label, value }, ...] array for the modal's "Key Facts" section.
+    // The modal's "Key Facts" — computed from the row's own fields (the sheet
+    // no longer carries hero_1..4 columns). Mirrors hero_pairs() in
+    // tools/build_history.py: Date / Location / Deaths / (Displaced or Injured).
     extractHeroFacts(row) {
         const facts = [];
-        for (let i = 1; i <= 4; i++) {
-            const label = (row[`hero_${i}_label`] || '').trim();
-            const value = (row[`hero_${i}_value`] || '').trim();
-            if (label && value) facts.push({ label, value });
-        }
+        const push = (label, value) => {
+            value = (value || '').trim();
+            if (value && value !== '0') facts.push({ label, value });
+        };
+        const start = (row.date_start || '').trim().slice(0, 10);
+        const end = (row.date_end || '').trim().slice(0, 10);
+        const dateStr = (end && end !== start && /^\d{4}-\d{2}-\d{2}$/.test(end))
+            ? `${start} – ${end}` : start;
+        push(this.getTranslation('detail.fact.date', 'Date'), dateStr);
+        const loc = (row.location_historical || '')
+            .replace(/\s*\([^)]*\)/g, '')
+            .split(',').map(s => s.trim()).filter(Boolean).slice(0, 2).join(', ');
+        push(this.getTranslation('detail.fact.location', 'Location'), loc);
+        push(this.getTranslation('detail.fact.deaths', 'Deaths'), row.deaths);
+        if ((row.forced_displacement || '').trim())
+            push(this.getTranslation('detail.fact.displaced', 'Displaced'), row.forced_displacement);
+        else
+            push(this.getTranslation('detail.fact.injured', 'Injured'), row.injured);
         return facts;
     }
 
-    // ── JSON fallback (legacy per-event historical-massacres.json) ─────────
+    // events.csv is the only source now. If PapaParse fails to load, there is
+    // nothing to fall back to — degrade to an empty timeline rather than the
+    // stale, drifted historical-massacres.json that used to live here.
     async loadHistoricalFromJSON() {
-        const response = await fetch(this.dataPaths.historicalJSON);
-
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-
-        const data = await response.json();
-        this.historicalData = (data.massacres || []).map(item => ({
-            ...item,
-            // Legacy JSON fallback: its titles ("Deir Yassin Massacre") don't
-            // slugify to the generated page slugs, so route to the timeline
-            // itself via #event/<id> rather than risk a 404 on a record page.
-            detail_page: `${this.timelinePage}#event/${encodeURIComponent((item.id || '').replace(/_/g, ''))}`,
-            period: 'historical'
-        }));
-
-        console.log(`✅ Loaded ${this.historicalData.length} historical events from historical-massacres.json (fallback)`);
+        console.error('❌ PapaParse unavailable and events.csv could not be parsed — no data to show.');
+        this.historicalData = [];
     }
 
-    // Load current genocide data
-    async loadCurrentData() {
-        try {
-            console.log('🚨 Loading current genocide data...');
-            this.showLoading('Loading current genocide data (2023-present)...');
-
-            const response = await fetch('/timeline-data/civilian-casualties-current.json');
-
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-
-            const data = await response.json();
-            // The JSON carries detail_page paths to Pages/Current_Genocide/*.html
-            // that don't exist. Current incidents have no record page yet, so
-            // point every one at the timeline via #event/<id> hash routing.
-            this.currentData = (data.incidents || []).map(item => ({
-                ...item,
-                detail_page: `${this.timelinePage}#event/${encodeURIComponent(item.id || '')}`
-            }));
-
-            console.log(`✅ Loaded ${this.currentData.length} current genocide events`);
-
-        } catch (error) {
-            console.error('❌ Error loading current data:', error);
-            this.currentData = [];
-            throw error;
-        }
-    }
+    // Current-genocide events now come from events.csv too (split out by date in
+    // loadHistoricalData). Kept as a no-op so nothing that calls it breaks.
+    async loadCurrentData() { /* handled in loadHistoricalData() */ }
 
     // Combine historical and current data
     combineData() {

@@ -152,7 +152,6 @@
   "timeline_modes": {
     "historical": {
       "label": "Historical Massacres (1948-2023)",
-      "data_source": "/timeline-data/historical-massacres.json",
       "events_csv": "/Pages/Historical_Massacres/events.csv",
       "details_csv": "/Pages/Historical_Massacres/details.csv",
       "detail_page_base": "/historical-events/massacres/",
@@ -161,16 +160,11 @@
     },
     "current": {
       "label": "Current Genocide (2023-Present)",
-      "data_source": "/timeline-data/civilian-casualties-current.json",
       "color_theme": "#dc3545",
       "icon": "🚨"
     },
     "both": {
       "label": "Complete Timeline (1948-Present)",
-      "data_sources": [
-        "/timeline-data/historical-massacres.json",
-        "/timeline-data/civilian-casualties-current.json"
-      ],
       "color_theme": "#0d6efd",
       "icon": "📊"
     }
@@ -182,7 +176,10 @@
     "comparison_enabled": true
   },
   "map_settings": {
-    "default_center": [34.4668, 31.5204],
+    "default_center": [
+      34.4668,
+      31.5204
+    ],
     "default_zoom": 9,
     "cluster_radius": 50,
     "heat_map_enabled": true,

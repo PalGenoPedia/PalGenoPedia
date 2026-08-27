@@ -5,12 +5,13 @@
   "headline": "Great March of Return",
   "url": "https://palgenopedia.org/historical-events/massacres/great-march-of-return/",
   "datePublished": "2018-03-30",
-  "dateModified": "2026-08-24",
+  "dateModified": "2026-08-27",
   "inLanguage": "en",
   "about": {
     "@type": "Event",
     "name": "Great March of Return",
     "startDate": "2018-03-30",
+    "endDate": "43826",
     "description": "Weekly protests at Gaza-Israel separation fence demanding right of return",
     "location": {
       "@type": "Place",
@@ -428,15 +429,15 @@
       "name": "Deaths",
       "propertyID": "casualties/deaths",
       "value": "223 Palestinians (189 during 2018; 34 during 2019); Zero Israelis killed",
-      "minValue": 34,
-      "maxValue": 2019
+      "minValue": 223,
+      "maxValue": 223
     },
     {
       "@type": "PropertyValue",
       "name": "Injured",
       "propertyID": "casualties/injured",
       "value": "28,939 Palestinians total; 6,106 by live ammunition; Zero Israeli injuries reported",
-      "minValue": 6106,
+      "minValue": 28939,
       "maxValue": 28939
     },
     {

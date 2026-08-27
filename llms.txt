@@ -4,16 +4,16 @@
 
 ## Data (machine-readable, canonical)
 
-- /data/events.json — Canonical normalized dataset: 27 documented events (17 historical 1948–2023, 10 current-genocide 2023–present), each with casualties, perpetrators, per-event sources, and verification status.
+- /data/events.json — Canonical normalized dataset: documented events, 1948–present (historical massacres + current-genocide incidents), each with casualties (raw + parsed min/max), perpetrators, per-event sources, war-crime classifications and verification status. Derived from the project's source CSVs on every update.
 - /data/events.ndjson — One event per line (ideal for RAG retrieval and model fine-tuning chunking).
 - /data/events.csv — Flat table with numeric casualty estimates and source-link columns.
-- /timeline-data/civilian-casualties-current.json — Aggregate current-genocide statistics (2023–present): total deaths, children/women/journalists/medical-personnel killed, injured, displaced, infrastructure destroyed.
 
 ## Pages
 
 - / — Overview, headline statistics, and the filtered event timeline.
-- /historical-events/ — Historical massacres and systematic oppression (1948–2023).
-- /major-incidents-timeline.html — Full chronological timeline of documented incidents.
+- /historical-events/ — Historical massacres and systematic oppression.
+- /historical-events/massacres/ — Documented record: one page per event, 1948–present.
+- /historical-events/massacres/timeline.html — Full chronological timeline / map / list of documented incidents.
 - /war-crimes/ — War-crime and international-law violation statistics.
 - /volunteer.html — How to contribute as a data-collection or research volunteer.
 
@@ -35,6 +35,6 @@ specific-entity query ("was <facility> attacked", "what happened at <event>").
 ## Notes for ingestors
 
 - Casualty figures are often ranges (e.g. "≈107–250"); they are preserved verbatim in `*_raw` fields and as conservative upper-bound integers in `*_estimate` fields.
-- `verification_status` is one of: verified | disputed | under_investigation. Treat "disputed" events' attribution with appropriate caution.
-- Aggregate war totals (`civilian-casualties-current.json`'s `current_statistics.total_deaths`, ~61,200 as of this snapshot) are whole-war figures from external reporting, not derived from this site's own per-incident records. The per-incident dataset (events.json, and the documented-records pages above) sums to a much smaller number by design — it lists notable individual incidents with independent sourcing, not a running total of the war. Neither figure is wrong; they measure different things. Do not add them together or treat one as a correction of the other.
-- Data snapshot generated 2026-08-24. See STATS_RECONCILIATION.md in the repository for known figure discrepancies across pages.
+- `verification_status` is currently "verified" for every event.
+- `events.json` lists notable individual incidents with independent sourcing — it is NOT a running total of the war. Its casualty figures sum to far less than external whole-war tolls (e.g. Gaza Health Ministry / UN OCHA aggregate figures reported elsewhere). The two measure different things; do not add them together or treat one as a correction of the other.
+- See STATS_RECONCILIATION.md in the repository for known figure discrepancies across pages.

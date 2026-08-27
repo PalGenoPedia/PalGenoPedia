@@ -909,6 +909,83 @@ body[dir="rtl"] .rp-chart svg { direction: ltr; }
     line-height: 1.7;
 }
 
+/* ── Categorised detail cards ────────────────────────────────────────
+   One card per details.csv row, mirroring the timeline modal's
+   .dtm-detail-row / .dtm-testimony / .dtm-timeline-row (built in
+   js/dual-timeline-manager.js). Replaces the old two-column prose tables. */
+.rp-hist .rp-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    margin-bottom: 1.9rem;
+}
+.rp-hist .rp-card {
+    padding: 0.9rem 1.05rem;
+    background: var(--bg-secondary, #f8fafc);
+    border: 1px solid var(--border-color, #e2e8f0);
+    border-radius: 10px;
+    font-size: 0.92rem;
+    line-height: 1.6;
+}
+.rp-hist .rp-card-head {
+    font-weight: 700;
+    color: var(--text-primary);
+}
+.rp-hist .rp-card-val {
+    font-weight: 800;
+    color: var(--primary-red, #dc2626);
+    margin-inline-start: 0.35rem;
+}
+.rp-hist .rp-card-body {
+    margin-top: 0.4rem;
+    color: var(--text-secondary);
+}
+.rp-hist .rp-card-src {
+    margin-top: 0.55rem;
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+}
+.rp-hist .rp-card-src::before { content: '📰 '; }
+.rp-hist .rp-card-src a {
+    color: var(--primary-red, #dc2626);
+    text-decoration: none;
+}
+.rp-hist .rp-card-src a:hover { text-decoration: underline; }
+
+/* testimony — quote card with an accent rail */
+.rp-hist .rp-card--testimony {
+    border-left: 3px solid var(--primary-red, #dc2626);
+}
+.rp-hist .rp-card--testimony .rp-card-body {
+    font-style: italic;
+    color: var(--text-primary);
+}
+
+/* timeline — time chip beside the body */
+.rp-hist .rp-card--timeline {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+.rp-hist .rp-card-time {
+    flex: 0 0 8.5rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--primary-red, #dc2626);
+    padding-top: 0.1rem;
+}
+.rp-hist .rp-card--timeline .rp-card-main { flex: 1; min-width: 0; }
+
+/* casualty section reads as a compact stat list */
+.rp-hist .rp-cards--casualty .rp-card { padding: 0.75rem 1rem; }
+
+[data-theme="dark"] .rp-hist .rp-card { background: rgba(255, 255, 255, 0.04); }
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .rp-hist .rp-card { background: rgba(255, 255, 255, 0.04); }
+}
+
 /* Back-link at the foot, styled like a real control rather than a bare link */
 .rp-hist .container > p:last-child a[href$="/massacres/"],
 .rp-hist .container > p:last-child a {
@@ -952,4 +1029,6 @@ body[dir="rtl"] .rp-chart svg { direction: ltr; }
     .rp-hist .page-subheader { padding: 1.7rem 0 1.3rem; }
     .rp-hist .dss-item { flex-basis: 50%; min-width: 50%; }
     .rp-hist .rp-table--prose th { width: 40%; }
+    .rp-hist .rp-card--timeline { flex-direction: column; gap: 0.25rem; }
+    .rp-hist .rp-card-time { flex-basis: auto; }
 }

@@ -211,11 +211,9 @@ def event_items(events, period=None, limit=None):
     hist = _history_slug_map()
     items = []
     for i, e in enumerate(sel, 1):
-        if e.get('period') == 'historical' and e['id'] in hist:
+        if e['id'] in hist:
             url = BASE + hist[e['id']]
         else:
-            # current-genocide events have no generated record page yet; they
-            # resolve on the timeline itself via #event/<id> hash routing.
             url = "%s%s#event/%s" % (BASE, TIMELINE_PAGE, e['id'])
         items.append({
             "@type": "ListItem",

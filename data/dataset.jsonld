@@ -5,8 +5,8 @@
   "name": "PalGenoPedia Documented Events Dataset",
   "description": "Open documentation of verified war crimes, massacres, and humanitarian violations concerning Palestine, 1948–present. Every figure carries provenance and a verification status. Canonical machine-readable source for PalGenoPedia.",
   "url": "https://palgenopedia.org/data/events.json",
-  "datePublished": "2026-08-24",
-  "dateModified": "2026-08-24",
+  "datePublished": "2026-08-27",
+  "dateModified": "2026-08-27",
   "inLanguage": "en",
   "creator": {
     "@type": "Organization",
@@ -40,7 +40,7 @@
     {
       "@type": "CreativeWork",
       "@id": "https://palgenopedia.org/data/events.json#hist002",
-      "name": "Tantura "
+      "name": "Tantura"
     },
     {
       "@type": "CreativeWork",
@@ -50,7 +50,7 @@
     {
       "@type": "CreativeWork",
       "@id": "https://palgenopedia.org/data/events.json#hist004",
-      "name": "Qibya "
+      "name": "Qibya"
     },
     {
       "@type": "CreativeWork",
@@ -119,8 +119,18 @@
     },
     {
       "@type": "CreativeWork",
+      "@id": "https://palgenopedia.org/data/events.json#curr_004",
+      "name": "UNRWA School Strikes"
+    },
+    {
+      "@type": "CreativeWork",
       "@id": "https://palgenopedia.org/data/events.json#curr_001",
       "name": "Al-Ahli Baptist Hospital Strike"
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://palgenopedia.org/data/events.json#curr_009",
+      "name": "Gaza City Systematic Destruction"
     },
     {
       "@type": "CreativeWork",
@@ -129,28 +139,13 @@
     },
     {
       "@type": "CreativeWork",
-      "@id": "https://palgenopedia.org/data/events.json#curr_003",
-      "name": "Flour Massacre - Al-Rashid Street"
-    },
-    {
-      "@type": "CreativeWork",
-      "@id": "https://palgenopedia.org/data/events.json#curr_004",
-      "name": "UNRWA School Strikes"
-    },
-    {
-      "@type": "CreativeWork",
-      "@id": "https://palgenopedia.org/data/events.json#curr_005",
-      "name": "Mass Graves Discovery at Nasser Hospital"
-    },
-    {
-      "@type": "CreativeWork",
       "@id": "https://palgenopedia.org/data/events.json#curr_006",
       "name": "Al-Shifa Hospital Siege"
     },
     {
       "@type": "CreativeWork",
-      "@id": "https://palgenopedia.org/data/events.json#curr_007",
-      "name": "Rafah Tent Camp Massacre"
+      "@id": "https://palgenopedia.org/data/events.json#curr_003",
+      "name": "Flour Massacre - Al-Rashid Street"
     },
     {
       "@type": "CreativeWork",
@@ -159,8 +154,13 @@
     },
     {
       "@type": "CreativeWork",
-      "@id": "https://palgenopedia.org/data/events.json#curr_009",
-      "name": "Gaza City Systematic Destruction"
+      "@id": "https://palgenopedia.org/data/events.json#curr_005",
+      "name": "Mass Graves Discovery at Nasser Hospital"
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "https://palgenopedia.org/data/events.json#curr_007",
+      "name": "Rafah Tent Camp Massacre"
     },
     {
       "@type": "CreativeWork",

@@ -3,14 +3,15 @@
   "@type": "Article",
   "@id": "https://palgenopedia.org/data/events.json#curr_004",
   "headline": "UNRWA School Strikes",
-  "url": "https://palgenopedia.org/historical-events/massacres/timeline.html#event/curr_004",
+  "url": "https://palgenopedia.org/historical-events/massacres/unrwa-school-strikes/",
   "datePublished": "2023-10-15",
-  "dateModified": "2026-08-24",
+  "dateModified": "2026-08-27",
   "inLanguage": "en",
   "about": {
     "@type": "Event",
     "name": "UNRWA School Strikes",
     "startDate": "2023-10-15",
+    "description": "Current genocide (2023 to present)",
     "location": {
       "@type": "Place",
       "name": "Multiple UNRWA Schools, Gaza Strip",
@@ -22,7 +23,7 @@
     }
   },
   "articleBody": "Series of attacks on UNRWA schools serving as shelters for displaced Palestinians. Multiple schools hit despite UN coordination with Israeli forces.",
-  "keywords": "protected_site_attack, current",
+  "keywords": "Protected Site Attack, current",
   "mentions": [
     {
       "@type": "Organization",
@@ -32,15 +33,27 @@
   "citation": [
     {
       "@type": "Article",
-      "name": "UNRWA Official Statements"
+      "name": "UNRWA Official Statements",
+      "about": {
+        "@type": "Thing",
+        "name": "source"
+      }
     },
     {
       "@type": "Article",
-      "name": "UN Secretary-General Reports"
+      "name": "UN Secretary-General Reports",
+      "about": {
+        "@type": "Thing",
+        "name": "source"
+      }
     },
     {
       "@type": "Article",
-      "name": "Human Rights Watch"
+      "name": "Human Rights Watch",
+      "about": {
+        "@type": "Thing",
+        "name": "source"
+      }
     }
   ],
   "additionalProperty": [
@@ -73,6 +86,12 @@
       "name": "Verification status",
       "propertyID": "verification_status",
       "value": "verified"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Author",
+      "propertyID": "author",
+      "value": "aliattia02"
     }
   ],
   "provider": {

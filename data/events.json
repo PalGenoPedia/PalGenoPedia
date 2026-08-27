@@ -1,6 +1,5 @@
 {
   "schema_version": "1.0",
-  "generated_from": "palgenopedia.org live data snapshot 2026-08-09",
   "dataset_description": "Documented war crimes, massacres, and humanitarian violations concerning Palestine, 1948-present. Figures carry explicit provenance and verification status.",
   "provenance_sources": [
     "Al Jazeera",
@@ -12,6 +11,7 @@
     "UN",
     "UN OCHA"
   ],
+  "generated_from": "Pages/Historical_Massacres/{events,details}.csv (Google Sheet sync)",
   "counts": {
     "total_events": 27,
     "historical": 17,
@@ -59,7 +59,13 @@
         "Haganah/Palmach (support)"
       ],
       "summary": "The Deir Yassin massacre occurred during intense fighting around Jerusalem in early April 1948 (Operation Nachshon context). The village had previously concluded a local non-aggression understanding with nearby Jewish communities; nonetheless, Irgun and Lehi launched a multi-axis assault at dawn. Haganah/Palmach elements later provided support. Killings of civilians—including women, children and elderly—were documented by Israeli and international witnesses; surviving captives were paraded in Jerusalem and later released. Death estimates vary; most research centers near ≈107, with higher claims (≈200–250) appearing in contemporary accounts. The entire village population (≈710 in 1948) was displaced; Deir Yassin's lands were later absorbed into West Jerusalem neighborhoods. No perpetrators were prosecuted; Irgun commander Menachem Begin later became Prime Minister (1977–1983).",
-      "war_crimes": [],
+      "war_crimes": [
+        "Mass Killings of Civilians",
+        "Summary Executions",
+        "Sexual Violence & Desecration",
+        "Looting & Destruction",
+        "Forced Displacement & Humiliation"
+      ],
       "verification_status": "verified",
       "sources": [
         {
@@ -129,7 +135,7 @@
     },
     {
       "id": "hist002",
-      "title": "Tantura ",
+      "title": "Tantura",
       "period": "historical",
       "date_start": "1948-05-22",
       "date_end": "1948-05-23",
@@ -145,9 +151,9 @@
       "casualties": {
         "deaths": {
           "raw": "≈200-250",
-          "min": -250,
-          "max": 200,
-          "estimate": 200
+          "min": 200,
+          "max": 250,
+          "estimate": 250
         },
         "injured": {
           "raw": "Unknown (most male captives were killed)",
@@ -166,7 +172,15 @@
         "Alexandroni Brigade (Haganah/IDF)"
       ],
       "summary": "On May 22-23, 1948, the Alexandroni Brigade of the Haganah (which became the IDF) attacked the Palestinian coastal village of Tantura. The village had a population of approximately 1,500 and was known for its fishing industry. Despite attempts at surrender and raising white flags, Israeli forces conducted house-to-house searches, separated men from women and children, and executed male villagers. An estimated 200-250 Palestinian men were systematically executed after the village surrendered. Bodies were buried in multiple mass graves, including one beneath what is now the parking lot of Dor Beach. The massacre remained largely unknown until 1998 when Israeli graduate student Teddy Katz documented it through interviews with both Palestinian survivors and Israeli soldiers who participated. Despite initial confirmation by veterans, Katz faced a libel lawsuit and was forced under pressure to sign an 'apology' (later withdrawn). Israeli authorities have consistently refused to excavate the mass graves or conduct official investigations. No perpetrators were prosecuted. The village was demolished and Kibbutz Nahsholim was built on its ruins.",
-      "war_crimes": [],
+      "war_crimes": [
+        "Mass Execution of Prisoners of War",
+        "Execution After Surrender",
+        "Executions on the Beach",
+        "Mass Graves and Concealment of Evidence",
+        "Separation of Families",
+        "Looting and Complete Destruction",
+        "Forced Expulsion"
+      ],
       "verification_status": "verified",
       "sources": [
         {
@@ -345,7 +359,14 @@
         "Operation Dani command structure"
       ],
       "summary": "On July 9–13, 1948, during Operation Dani under the command of Yigal Allon (with Yitzhak Rabin as deputy), Israeli forces captured Lydda and Ramle. In Lydda, city-wide shootings killed hundreds of civilians; the Dahmash Mosque massacre alone claimed 70–250+ lives (estimates vary). Moshe Dayan's 89th Battalion participated in ground operations. Immediately after the takeover, expulsion orders were executed: the entire Palestinian populations of both towns—approximately 50,000–70,000 people, including refugees—were forced to march on foot toward Ramallah in extreme July heat. This 'death march' saw numerous deaths from thirst, heat exhaustion, and deprivation; survivors reported infants dying, people chewing grass for moisture, and soldiers preventing access to water. Total deaths are estimated at 400–1,000 (including in-city killings and march fatalities). No perpetrators were prosecuted. Allon became Deputy Prime Minister; Rabin became Prime Minister and Nobel Peace Prize laureate (1994); Dayan became Defense Minister and Foreign Minister. Rabin's memoir passages describing the expulsion order were censored in 1979, later restored.",
-      "war_crimes": [],
+      "war_crimes": [
+        "City-Wide Shootings",
+        "Dahmash Mosque Massacre",
+        "Forced Expulsion & 'Death March'",
+        "Deaths of Infants & Elderly on March",
+        "Denial of Water & Aid",
+        "Looting & Property Seizure"
+      ],
       "verification_status": "verified",
       "sources": [
         {
@@ -435,10 +456,10 @@
     },
     {
       "id": "hist004",
-      "title": "Qibya ",
+      "title": "Qibya",
       "period": "historical",
       "date_start": "1953-10-14",
-      "date_end": null,
+      "date_end": "19647",
       "date_context": "Jordanian-controlled West Bank",
       "event_type": "Massacre",
       "classification": "War Crime; Crimes Against Humanity (UNSC Res 101)",
@@ -474,7 +495,13 @@
         "Supporting Israeli regular army units"
       ],
       "summary": "The Qibya massacre occurred during heightened tensions along the Jordan-Israel armistice line. Following the October 12, 1953 killing of an Israeli woman and her two children in Yehud, Israel launched 'Operation Shoshana'—a large-scale reprisal attack on the Jordanian village of Qibya. Unit 101, led by 25-year-old Major Ariel Sharon, attacked with approximately half a battalion of soldiers. After a mortar barrage, demolition squads systematically destroyed homes with inhabitants inside using explosives and grenades. Sharon later wrote the operation was meant to be 'an example for everyone' with orders for 'maximal killing and damage to property.' The UN Mixed Armistice Commission condemned the attack as a breach of the Israel-Jordan armistice agreement. The UN Security Council passed Resolution 101 expressing 'strongest censure.' The US State Department called it 'shocking' and suspended economic aid to Israel. Despite international condemnation, no perpetrators were prosecuted.",
-      "war_crimes": [],
+      "war_crimes": [
+        "House-to-House Killings",
+        "Women and Children Targeted",
+        "Deliberate Civilian Infrastructure Destruction",
+        "Systematic Looting",
+        "Prevention of Rescue"
+      ],
       "verification_status": "verified",
       "sources": [
         {
@@ -572,7 +599,7 @@
       "title": "Khan Yunis Massacre",
       "period": "historical",
       "date_start": "1956-11-03",
-      "date_end": null,
+      "date_end": "20771",
       "date_context": "During Israeli occupation of Gaza in Suez Crisis",
       "event_type": "Massacre",
       "classification": "War Crime; Crimes Against Humanity (UNRWA/UN GA Doc A/3512)",
@@ -585,9 +612,9 @@
       "casualties": {
         "deaths": {
           "raw": "275-525",
-          "min": -525,
-          "max": 275,
-          "estimate": 275
+          "min": 275,
+          "max": 525,
+          "estimate": 525
         },
         "injured": {
           "raw": "Unknown number; not systematically documented",
@@ -608,7 +635,13 @@
         "Shin Bet security forces"
       ],
       "summary": "In October-November 1956, Israel launched Operation Kadesh in coordination with France and the UK's invasion of Egypt during the Suez Crisis. Israeli forces rapidly occupied the Gaza Strip and Sinai Peninsula. During the occupation of Gaza, IDF conducted systematic 'screening' operations ostensibly to identify Egyptian soldiers and Palestinian fighters (fedayeen) who had infiltrated Israel. On November 3, 1956, in Khan Yunis and its refugee camp, Israeli forces conducted mass roundups of male residents. During screenings, curfews, and arbitrary detentions, IDF personnel systematically executed civilians. UNRWA Director for Gaza Affairs compiled detailed victim lists and reported to UN General Assembly that 275 men were killed in Khan Yunis and 111 in nearby Rafah. Palestinian sources documented 415 killed with 57 missing. Methods included shooting during curfew, execution after screening, and arbitrary killings. Bodies were buried in mass graves, including in the streets of Khan Yunis. UNRWA provided names, ages, and circumstances of death for verified victims. Despite international documentation and UN reports, no Israeli personnel were prosecuted. Israel withdrew from Gaza in March 1957 under international pressure, particularly from the United States and Soviet Union.",
-      "war_crimes": [],
+      "war_crimes": [
+        "Systematic Screenings and Executions",
+        "Curfew Killings",
+        "Mass Graves",
+        "Arbitrary Detentions and Killings",
+        "Collective Punishment"
+      ],
       "verification_status": "verified",
       "sources": [
         {
@@ -716,7 +749,7 @@
       "title": "Six-Day War / Al-Naksa",
       "period": "historical",
       "date_start": "1967-06-05",
-      "date_end": null,
+      "date_end": "24633",
       "date_context": "Six-Day War (Israel vs Egypt, Jordan, Syria)",
       "event_type": "Mass Displacement",
       "classification": "War Crimes; Violations of IHL; Unlawful Occupation (UNSC Res 242)",
@@ -729,9 +762,9 @@
       "casualties": {
         "deaths": {
           "raw": "10,000-15,000 combatants total (all sides); civilian deaths not systematically recorded",
-          "min": -15000,
-          "max": 10000,
-          "estimate": 10000
+          "min": 10000,
+          "max": 15000,
+          "estimate": 15000
         },
         "injured": {
           "raw": "Thousands (not systematically recorded)",
@@ -741,9 +774,9 @@
         },
         "forced_displacement": {
           "raw": "300,000-400,000 Palestinians",
-          "min": -400000,
-          "max": 300000,
-          "estimate": 300000
+          "min": 300000,
+          "max": 400000,
+          "estimate": 400000
         }
       },
       "perpetrators": [
@@ -752,7 +785,14 @@
         "Military administration of occupied territories"
       ],
       "summary": "The Six-Day War erupted on June 5, 1967 when Israel launched preemptive strikes on Egyptian airfields, followed by ground operations. Within six days, Israel occupied the Egyptian-controlled Gaza Strip and Sinai Peninsula, Jordanian-controlled West Bank and East Jerusalem, and Syrian Golan Heights. The rapid Israeli victory fundamentally transformed the Israeli-Palestinian conflict by bringing all of historic Palestine under Israeli control. Mass displacement began immediately. As Israeli forces advanced into the West Bank, panic spread among Palestinians remembering the 1948 Nakba. Estimates of those who fled or were expelled range from 280,000 (Israeli sources) to 400,000+ (Palestinian and UN sources). Approximately 175,000 were refugees from 1948 being displaced a second time. The displacement was not solely a byproduct of combat—Israeli authorities issued military orders preventing return and systematically demolished entire villages. Three villages in the Latrun area (Imwas, Yalo, and Beit Nuba) were completely destroyed by Israeli forces, their 10,000 residents expelled. In Jerusalem's Old City, the Moroccan Quarter was bulldozed days after occupation to create a plaza at the Western Wall. UN Security Council Resolution 242 called for 'withdrawal of Israeli armed forces from territories occupied' and for 'achieving a just settlement of the refugee problem,' but Israel has maintained occupation for over 55 years. The 1967 displacement and subsequent occupation created the framework for the current Israeli-Palestinian conflict.",
-      "war_crimes": [],
+      "war_crimes": [
+        "Systematic Village Destruction",
+        "Moroccan Quarter Demolition",
+        "Prevention of Return",
+        "Illegal Annexation",
+        "Mass Displacement",
+        "Extrajudicial Killings"
+      ],
       "verification_status": "verified",
       "sources": [
         {
@@ -880,7 +920,7 @@
       "title": "Sabra and Shatila",
       "period": "historical",
       "date_start": "1982-09-16",
-      "date_end": null,
+      "date_end": "30212",
       "date_context": "During Israeli occupation of West Beirut, Lebanon War",
       "event_type": "Massacre",
       "classification": "War Crime; Crimes Against Humanity; Genocide (UNSC Res 521; Kahan Commission)",
@@ -893,9 +933,9 @@
       "casualties": {
         "deaths": {
           "raw": "800-3,500",
-          "min": -3500,
-          "max": 800,
-          "estimate": 800
+          "min": 800,
+          "max": 3500,
+          "estimate": 3500
         },
         "injured": {
           "raw": "Hundreds (not systematically recorded)",
@@ -916,7 +956,14 @@
         "Defense Minister Ariel Sharon (personal responsibility per Kahan Commission)"
       ],
       "summary": "The Sabra and Shatila massacre occurred during Israel's 1982 invasion of Lebanon ('Operation Peace for Galilee'). After the assassination of Lebanese President-elect Bachir Gemayel on September 14, 1982, Israeli Defense Minister Ariel Sharon ordered IDF forces to occupy West Beirut, ostensibly to maintain order. On September 16, Sharon authorized Lebanese Phalangist militias to enter the Sabra and Shatila Palestinian refugee camps, claiming they would 'mop up' remaining PLO fighters—though PLO forces had evacuated weeks earlier under international agreement. For approximately 40 hours (September 16-18), Phalangist militiamen systematically killed Palestinian civilians, including women, children, and elderly persons. Israeli forces surrounded the camps, controlled all entry and exit points, provided logistical support, and fired illumination flares throughout the nights allowing the killings to continue after dark. Israeli commanders received reports of civilian massacres but did not intervene. Methods included shooting, stabbing, decapitation, mutilation. Bodies were dumped in mass graves or left in streets. The exact death toll remains disputed. Lebanon's official investigation documented approximately 800 killed; the Palestinian Red Crescent estimated 3,500; various international sources cite 2,000-3,500. The Israeli Kahan Commission investigated and found Defense Minister Sharon bore 'personal responsibility' for the massacre, recommending his removal. Sharon resigned as Defense Minister but remained in cabinet without portfolio, later serving as Israeli Prime Minister (2001-2006). Multiple international legal attempts to prosecute him failed.",
-      "war_crimes": [],
+      "war_crimes": [
+        "Systematic Massacre of Civilians",
+        "Torture and Mutilation",
+        "Sexual Violence",
+        "Mass Graves and Body Disposal",
+        "Israeli Facilitation",
+        "Killing of Children and Infants"
+      ],
       "verification_status": "verified",
       "sources": [
         {
@@ -1059,7 +1106,7 @@
       "title": "First Intifada",
       "period": "historical",
       "date_start": "1987-12-08",
-      "date_end": null,
+      "date_end": "34225",
       "date_context": "Palestinian uprising against 20-year Israeli occupation",
       "event_type": "Mass Casualties / Uprising",
       "classification": "Mass Casualties / Uprising",
@@ -1072,13 +1119,13 @@
       "casualties": {
         "deaths": {
           "raw": "1,087-1,284 Palestinians; 160-200 Israelis",
-          "min": -1284,
-          "max": 1087,
-          "estimate": 1087
+          "min": 1087,
+          "max": 1284,
+          "estimate": 1284
         },
         "injured": {
           "raw": "120,000+ Palestinians injured; 3,100 Israeli soldiers/civilians injured",
-          "min": 3100,
+          "min": 120000,
           "max": 120000,
           "estimate": 120000
         },
@@ -1097,7 +1144,15 @@
         "Israeli settler violence"
       ],
       "summary": "On December 8, 1987, an Israeli army truck collided with civilian vehicles at the Erez checkpoint in Gaza, killing four Palestinian workers from Jabalia refugee camp. Palestinians believed it was deliberate revenge for the stabbing death of an Israeli in Gaza two days earlier. The following day, December 9, massive protests erupted in Jabalia. When 17-year-old Hatem al-Sisi was shot dead by Israeli soldiers, the uprising exploded across Gaza, East Jerusalem, and the West Bank within days. What began as spontaneous protests transformed into organized, sustained civil resistance coordinated by grassroots committees and later by the United National Leadership of the Uprising (UNLU). The Intifada was characterized by largely non-violent tactics: general strikes, tax resistance, boycotts of Israeli products, and civil disobedience. Palestinian youth confronted Israeli soldiers with stones and Molotov cocktails. The Israeli response was brutal. Defense Minister Yitzhak Rabin issued orders to use 'force, might, and beatings' and to 'break bones' of demonstrators. Soldiers systematically beat protesters, fired live ammunition at stone-throwers, and used tear gas extensively. In the first year alone, Israeli forces killed at least 300 Palestinians and wounded tens of thousands. By 1990, the death toll exceeded 1,000. The uprising exacted an enormous toll: 1,087-1,284 Palestinians killed (including 241-332 children), over 120,000 wounded, approximately 20,000 arrested in the first year alone (with estimates reaching 120,000 total over six years), 2,532 homes demolished, and 481 Palestinians deported. Approximately 160-200 Israelis (soldiers and civilians) were killed during the same period. International condemnation was swift—the UN Security Council condemned Israel's response, and even the Reagan Administration criticized the 'harsh security measures and excessive use of live ammunition.' The Intifada forced recognition of Palestinian national aspirations, led to the Madrid Conference (1991) and secret Oslo negotiations, culminating in the September 1993 Oslo Accords which created the Palestinian Authority and promised future statehood—though these promises remain unfulfilled over 30 years later.",
-      "war_crimes": [],
+      "war_crimes": [
+        "Excessive Use of Lethal Force",
+        "Systematic Beatings and Bone-Breaking Policy",
+        "Punitive Home Demolitions",
+        "Mass Arbitrary Detention and Torture",
+        "Collective Punishment",
+        "Illegal Deportations",
+        "Killing of Children"
+      ],
       "verification_status": "verified",
       "sources": [
         {
@@ -1270,7 +1325,7 @@
       "title": "Cave of the Patriarchs Massacre",
       "period": "historical",
       "date_start": "1994-02-25",
-      "date_end": null,
+      "date_end": "34411",
       "date_context": "Ramadan 1994, following Oslo Accords (September 1993)",
       "event_type": "Massacre / Mass Shooting",
       "classification": "War Crime; Crimes Against Humanity; State Responsibility (UNSC Res 904)",
@@ -1283,9 +1338,9 @@
       "casualties": {
         "deaths": {
           "raw": "50-60 Palestinians total (29 in mosque shooting + 25+ killed by Israeli forces during protests)",
-          "min": -60,
-          "max": 50,
-          "estimate": 50
+          "min": 50,
+          "max": 60,
+          "estimate": 60
         },
         "injured": {
           "raw": "125+ in mosque; hundreds more during protests",
@@ -1307,7 +1362,15 @@
         "Israeli government (collective punishment of victims after massacre)"
       ],
       "summary": "Baruch Goldstein was born Benjamin Carl Goldstein in Brooklyn, New York in 1956 to an Orthodox Jewish family. In the 1970s, he became a charter member of the Jewish Defense League (JDL), a militant organization founded by Rabbi Meir Kahane. After graduating from Yeshiva University's Albert Einstein College of Medicine, Goldstein emigrated to Israel in 1983. He served as a physician in the Israel Defense Forces and later settled in Kiryat Arba, an extremist settlement adjacent to Hebron. Goldstein was an active member of Kach, Kahane's ultranationalist party, and was third on its list for the 1984 Knesset elections. Israeli press reported that Goldstein refused to treat Arabs, even Arab soldiers serving in the IDF, believing it violated Jewish religious law to treat non-Jews. He compared Israel's democracy to Nazism and wore a yellow star marked 'JUDE' in protest. In the weeks before the massacre, Goldstein made ominous statements and was involved in violent incidents at the mosque, including pouring acid on carpets. Palestinian authorities wrote to Prime Minister Rabin warning about Goldstein's dangerous behavior, but no action was taken. On the morning of February 25, 1994, the 15th day of Ramadan, worshippers noticed the unusual absence of Israeli soldiers from their normal positions around the Ibrahimi Mosque despite tensions the previous evening. At approximately 5:30 AM, as Imam Khalil Muhsen Jabari led hundreds in Fajr (dawn) prayer, Goldstein entered the Isaac Hall—the main prayer area—dressed in his IDF reserve uniform and carrying a Galil assault rifle and pistol. He positioned himself behind a pillar at the rear of the hall. When worshippers prostrated (sujood position), Goldstein opened fire. He reloaded multiple times, methodically shooting prostrate worshippers who were trapped and defenseless. Survivors report the shooting continued for ten minutes. Some eyewitnesses claim they saw additional gunmen, though Israeli investigations denied this. When worshippers finally overcame Goldstein, they beat him to death. By then, 29 Palestinians lay dead—including children as young as 11—and 125 were wounded. The horror did not end with the shooting. Israeli soldiers present at the mosque closed the gates, trapping survivors inside with the dead and wounded, and preventing medical help from entering. When the gates finally opened, Israeli forces fired on protesters outside, killing more Palestinians. Over the next three weeks, as news of the massacre spread, Palestinians rioted throughout Hebron and the West Bank. Israeli forces killed at least 25 more Palestinians during these protests, including at victims' funerals. The total death toll reached 50-60. Israel's response was to punish the victims: a six-month closure of Hebron; formation of the one-sided Shamgar Commission whose recommendations all favored settlers; partition of the Ibrahimi Mosque giving 60% to Jews (who comprised 0.003% of Hebron's population); closure of 520 businesses and 1,800 shops in the Old City; sealing of Shuhada Street (the main commercial artery); and a network of military checkpoints suffocating Palestinian life. The massacre achieved Goldstein's goal: it did not stop Oslo, but it transformed Hebron into a strangled city, its Old City a ghost town, its Palestinian population subjected to daily humiliation while a few hundred extremist settlers lived under heavy military protection.",
-      "war_crimes": [],
+      "war_crimes": [
+        "Mass Murder / Terrorist Attack",
+        "Israeli Military Facilitation and Complicity",
+        "Collective Punishment of Victims",
+        "Killing of Palestinian Protesters",
+        "Failure to Protect Civilians",
+        "Religious Site Appropriation",
+        "Economic Strangulation of Palestinian Community"
+      ],
       "verification_status": "verified",
       "sources": [
         {
@@ -1396,6 +1459,11 @@
           "category": "timeline"
         },
         {
+          "source": "WAFA News Agency",
+          "source_link": "https://english.wafa.ps/Pages/Details/133561",
+          "category": "timeline"
+        },
+        {
           "source": "WAFA Documentation",
           "source_link": "https://english.wafa.ps/Pages/Details/128189",
           "category": "timeline"
@@ -1435,7 +1503,7 @@
       "title": "Second Intifada",
       "period": "historical",
       "date_start": "2000-09-28",
-      "date_end": null,
+      "date_end": "38717",
       "date_context": "Collapse of Camp David peace talks; Ariel Sharon's provocative Temple Mount visit",
       "event_type": "Armed Uprising / Mass Casualties",
       "classification": "War Crimes; Violations of IHL (UN Special Rapporteur; HRW; Amnesty)",
@@ -1448,13 +1516,13 @@
       "casualties": {
         "deaths": {
           "raw": "3,200-4,800 Palestinians; 1,000-1,100 Israelis",
-          "min": -4800,
-          "max": 3200,
-          "estimate": 3200
+          "min": 3200,
+          "max": 4800,
+          "estimate": 4800
         },
         "injured": {
           "raw": "45,000+ Palestinians; 7,500+ Israelis",
-          "min": 7500,
+          "min": 45000,
           "max": 45000,
           "estimate": 45000
         },
@@ -1472,7 +1540,16 @@
         "Israeli settlers"
       ],
       "summary": "The Second Intifada's immediate trigger was Ariel Sharon's September 28, 2000 visit to the Temple Mount/Haram al-Sharif, accompanied by 1,000 Israeli police. Palestinians viewed this as deliberate provocation at one of Islam's holiest sites by a figure they associated with past massacres (Sabra and Shatila 1982, Qibya 1953). Protests erupted immediately. The next day, September 29 (a Friday), after prayers at Al-Aqsa Mosque, Israeli police fired on Palestinian demonstrators, killing 7 and wounding over 300. By October 1, violence had spread throughout the occupied territories and into Israel. Thirteen Palestinian citizens of Israel were shot dead by Israeli police during protests inside Israel proper. Within two weeks, 100 Palestinians and 10 Israelis had been killed. The uprising's deeper causes lay in the failure of the Oslo peace process: seven years after Oslo, Palestinians remained under occupation, settlements had doubled, movement restrictions had increased, and statehood seemed further away than ever. Unlike the First Intifada's stones and civil disobedience, the Second Intifada quickly became armed conflict. Palestinian militant groups—Hamas, Islamic Jihad, Al-Aqsa Martyrs' Brigades (affiliated with Fatah), and PFLP—launched devastating suicide bombing campaigns targeting Israeli civilians in buses, restaurants, markets, and nightclubs. The peak came in March 2002 with the Passover massacre at Park Hotel in Netanya (30 killed), triggering Israel's massive Operation Defensive Shield. Israel responded with overwhelming military force: helicopter gunships, F-16 fighter jets, tanks, and bulldozers deployed in densely populated Palestinian areas. Targeted assassinations by helicopter missile strikes often killed bystanders. Entire cities were placed under curfew for months. The 2002 siege of Jenin refugee camp became emblematic: Israeli forces demolished 140+ buildings, killed 52 Palestinians (23 civilians), and faced international accusations of war crimes. By the Second Intifada's end in late 2005, the toll was catastrophic: 3,223-4,789 Palestinians killed (including 700+ children, 47% civilians); 1,024-1,100 Israelis killed (including 300+ children, 64% civilians); 45,000+ Palestinians wounded; 7,500+ Israelis wounded; approximately 40,000-50,000 Palestinians imprisoned; and massive infrastructure destruction. Israel unilaterally withdrew from Gaza in August 2005 while accelerating settlement expansion in the West Bank. The separation barrier was constructed—declared illegal by the International Court of Justice—confiscating thousands of acres of Palestinian land. The Second Intifada destroyed what remained of the peace process, entrenched the occupation, empowered Hamas, and created the siege of Gaza. It established patterns that continue today: Palestinian resistance met with disproportionate Israeli force; suicide bombings used to justify collective punishment; negotiated peace deemed impossible. The human cost was immense on both sides, but the political outcome was clear: Israeli control deepened while Palestinian freedom receded further.",
-      "war_crimes": [],
+      "war_crimes": [
+        "Palestinian Suicide Bombings (War Crimes)",
+        "Targeted Assassinations and Disproportionate Force",
+        "Excessive Destruction in Jenin Refugee Camp",
+        "Mass Home Demolitions",
+        "Killing of Children",
+        "Mass Arbitrary Detention",
+        "Collective Punishment and Closure",
+        "Separation Barrier (Illegal Under International Law)"
+      ],
       "verification_status": "verified",
       "sources": [
         {
@@ -1650,7 +1727,7 @@
       "title": "Battle of Jenin",
       "period": "historical",
       "date_start": "2002-04-03",
-      "date_end": null,
+      "date_end": "37357",
       "date_context": "Part of Operation Defensive Shield; response to Passover massacre (27 March 2002)",
       "event_type": "Military Operation / Urban Warfare",
       "classification": "War Crimes (HRW prima facie); Violations of IHL",
@@ -1663,7 +1740,7 @@
       "casualties": {
         "deaths": {
           "raw": "52 Palestinians (22 civilians, 27 combatants, 3 unclear); 23 Israeli soldiers",
-          "min": 3,
+          "min": 52,
           "max": 52,
           "estimate": 52
         },
@@ -1686,7 +1763,15 @@
         "Specific IDF units involved in demolitions and civilian killings"
       ],
       "summary": "Jenin refugee camp was established in 1953 to house Palestinians displaced during the 1948 Nakba, primarily from Haifa and surrounding villages. By 2002, approximately 14,000 refugees lived in the densely packed camp covering just one square kilometer. Under the Oslo Accords, Jenin came under full Palestinian Authority control in 1995 (Area A). However, the camp became a stronghold for Palestinian militant groups during the Second Intifada. According to both Israeli and Palestinian sources, an estimated 80-100 armed fighters from Hamas, Islamic Jihad, Al-Aqsa Martyrs' Brigades, and Tanzim operated from the camp. Israel claimed 28 suicide attacks between October 2000 and April 2002 were planned and launched from Jenin. After the devastating Passover massacre at Park Hotel in Netanya killed 30 Israeli civilians on March 27, 2002, the Israeli government launched Operation Defensive Shield—the largest military operation in the West Bank since 1967. Jenin refugee camp was identified as a primary target. On April 3, 2002, approximately 200 Israeli tanks surrounded Jenin refugee camp. Apache helicopters and F-16 fighter jets provided air support. The IDF's stated objective was to 'destroy the operational infrastructure of militant organizations' and capture or kill those responsible for suicide bombings. Palestinian militants had anticipated the assault and extensively prepared the camp's defense: they planted dozens of explosive charges in water pipes, kitchen cabinets, doorways, and streets; created booby traps throughout the camp; fortified positions in buildings; and prepared ambush sites. The IDF began house-to-house searches, advancing slowly through narrow alleys. On April 9, the sixth day of the operation, 13 Israeli soldiers were killed in a devastating ambush—Palestinian fighters lured an IDF unit into a narrow alley and detonated massive explosives, collapsing buildings on the soldiers. This was the deadliest single incident for the IDF during the entire Second Intifada. Following this catastrophic loss, Israeli military tactics changed dramatically. After the April 9 ambush, the IDF deployed massive American-made Caterpillar D-9 armored bulldozers—60-ton machines with armor plating that could demolish multi-story buildings in minutes. Rather than continuing dangerous house-to-house combat, bulldozers began systematically demolishing buildings to create wide paths for tanks and to eliminate potential ambush sites. Human Rights Watch investigators documented that bulldozers demolished over 140 buildings, destroying approximately 10% of the entire camp's structures. Many buildings were demolished with families still trapped inside—some residents were crushed to death, others buried alive in rubble. The IDF enforced total siege: no one allowed in or out; medical access blocked for 11 days (April 4-15); ambulances fired upon; water and electricity cut off; food prevented from entering. Farwa Jammal, a 27-year-old uniformed nurse, was shot dead by IDF fire while treating a wounded civilian. At least two injured civilians died because Israeli soldiers prevented ambulances from reaching them for over 36 hours. When Human Rights Watch investigators finally gained access on April 19, they found scenes of massive destruction: entire neighborhoods reduced to rubble, bodies still buried under collapsed buildings, and evidence of willful killings. Their 52-page report concluded: 'Israeli forces committed serious violations of international humanitarian law, some amounting prima facie to war crimes.' The UN attempted to launch an investigation, but Israel blocked the fact-finding mission. Final toll: 52 Palestinians killed (22 civilians—including a 14-year-old boy, wheelchair-bound elderly man, and women), 23 Israeli soldiers killed, over 140 buildings demolished, 4,000 people rendered homeless.",
-      "war_crimes": [],
+      "war_crimes": [
+        "Mass Demolitions with People Inside (War Crime)",
+        "Willful Killings of Civilians",
+        "Attacks on Medical Personnel and Denial of Medical Care",
+        "Use of Palestinian Civilians as Human Shields",
+        "Indiscriminate and Disproportionate Use of Force",
+        "Blocking of Independent Investigation",
+        "Palestinian Violations: Booby Traps Endangering Civilians"
+      ],
       "verification_status": "verified",
       "sources": [
         {
@@ -1835,7 +1920,17 @@
           "category": "timeline"
         },
         {
+          "source": "HRW - Civilian Casualties",
+          "source_link": "https://www.hrw.org/reports/2002/israel3/israel0502-05.htm",
+          "category": "war_crime"
+        },
+        {
           "source": "HRW Documentation",
+          "source_link": "https://www.hrw.org/news/2002/05/02/israel/occupied-territories-jenin-war-crimes-investigation-needed",
+          "category": "war_crime"
+        },
+        {
+          "source": "HRW Investigation",
           "source_link": "https://www.hrw.org/news/2002/05/02/israel/occupied-territories-jenin-war-crimes-investigation-needed",
           "category": "war_crime"
         },
@@ -1859,7 +1954,7 @@
       "title": "Operation Cast Lead",
       "period": "historical",
       "date_start": "2008-12-27",
-      "date_end": null,
+      "date_end": "39831",
       "date_context": "22-day Israeli military operation in Gaza Strip",
       "event_type": "Military Operation",
       "classification": "War Crimes; Crimes Against Humanity (UN Goldstone Report)",
@@ -1872,13 +1967,13 @@
       "casualties": {
         "deaths": {
           "raw": "1,383-1,419 Palestinians; 13 Israelis (10 soldiers, 3 civilians)",
-          "min": -1419,
-          "max": 1383,
-          "estimate": 1383
+          "min": 1383,
+          "max": 1419,
+          "estimate": 1419
         },
         "injured": {
           "raw": "5,300+ Palestinians; 518 Israelis",
-          "min": 518,
+          "min": 5300,
           "max": 5300,
           "estimate": 5300
         },
@@ -1895,7 +1990,16 @@
         "Ground forces and naval units"
       ],
       "summary": "Operation Cast Lead began at 11:30 AM on December 27, 2008, when Israeli F-16 fighter jets and Apache helicopters simultaneously struck over 100 pre-planned targets across Gaza within 220 seconds. The opening attacks hit police stations—including during a graduation ceremony for new officers, killing 99 police personnel—government buildings, and Hamas infrastructure. By the end of the first day, at least 230 Palestinians were killed. The aerial bombardment continued for seven days before Israeli ground forces invaded Gaza from the north and east on January 3, 2009. The navy simultaneously shelled from offshore. Over 22 days, Israeli forces conducted what the UN investigation described as a deliberately disproportionate attack designed to punish, humiliate and terrorize a civilian population. The operation involved widespread destruction of civilian infrastructure including hospitals, schools, mosques, United Nations facilities, water installations, and sewage treatment plants. Multiple incidents documented by the UN mission and human rights organizations revealed patterns of violations: the Samouni family massacre where soldiers forced approximately 100 civilians into a building then shelled it killing 21; the Al-Daya family airstrike killing 22 civilians; several cases where soldiers shot civilians carrying white flags; and extensive use of white phosphorus munitions in densely populated areas. The Palestinian Centre for Human Rights documented 1,419 Palestinian deaths including 1,167 civilians, while B'Tselem reported 1,385 killed including 762 noncombatants and 318 minors.",
-      "war_crimes": [],
+      "war_crimes": [
+        "Samouni Family Massacre",
+        "Al-Daya Family Airstrike",
+        "White Flag Killings",
+        "White Phosphorus in Populated Areas",
+        "Attacks on Medical and UN Facilities",
+        "Destruction of Civilian Infrastructure",
+        "Deliberately Disproportionate Force",
+        "Palestinian Rocket Attacks (War Crime)"
+      ],
       "verification_status": "verified",
       "sources": [
         {
@@ -2073,7 +2177,7 @@
       "title": "Operation Pillar of Defense",
       "period": "historical",
       "date_start": "2012-11-14",
-      "date_end": null,
+      "date_end": "41234",
       "date_context": "Escalation following targeted killing of Hamas military commander",
       "event_type": "Military Operation, Airstrikes, Civilian Casualties",
       "classification": "War Crimes; Violations of IHL (B'Tselem May 2013 Report)",
@@ -2267,7 +2371,7 @@
       "title": "Operation Protective Edge",
       "period": "historical",
       "date_start": "2014-07-07",
-      "date_end": null,
+      "date_end": "41877",
       "date_context": "51-day Israeli military operation in Gaza Strip; deadliest Gaza conflict",
       "event_type": "Military Operation",
       "classification": "War Crimes; Crimes Against Humanity (UN Commission of Inquiry 2015)",
@@ -2280,19 +2384,19 @@
       "casualties": {
         "deaths": {
           "raw": "2,251 Palestinians (1,462 civilians, 551 children, 299 women); 73 Israelis (67 soldiers, 6 civilians)",
-          "min": 6,
+          "min": 2251,
           "max": 2251,
           "estimate": 2251
         },
         "injured": {
           "raw": "11,231 Palestinians (3,436 children); 1,600 Israelis (270 children)",
-          "min": 270,
+          "min": 11231,
           "max": 11231,
           "estimate": 11231
         },
         "forced_displacement": {
           "raw": "500,000 Palestinians (1/3 of Gaza's population); 100,000 remained displaced one year later",
-          "min": 1,
+          "min": 500000,
           "max": 500000,
           "estimate": 500000
         }
@@ -2306,7 +2410,17 @@
         "Hamas authorities in Gaza"
       ],
       "summary": "Operation Protective Edge began on July 7, 2014, ostensibly in response to escalating rocket fire from Gaza, but in a context of heightened tensions following the abduction and murder of three Israeli teenagers in the West Bank in June. Israel launched massive airstrikes across Gaza, conducting over 6,000 air raids in 51 days. The operation had three phases: an initial week of intensive aerial bombardment, a ground invasion beginning July 17 aimed at destroying cross-border tunnels, and a final phase from August 5 characterized by alternating ceasefires and continued strikes. The stated objectives were to stop rocket attacks and destroy Hamas's military infrastructure and tunnel network. The human toll was unprecedented. The UN Commission of Inquiry documented 2,251 Palestinian deaths, with 1,462 identified as civilians—65% of all deaths. Among the dead were 551 children and 299 women. Entire families were wiped out in single strikes: 18 members of the Al-Batsh family killed on July 13, 17 members of the Abu Jame family on July 20, 26 members of the Al-Najjar family on July 20. The Commission investigated 15 cases of attacks on residential buildings and found that in many instances there was no evidence of a legitimate military target, or the attacks were grossly disproportionate. B'Tselem documented 606 attacks on residential buildings killing 1,447 civilians. The percentage of women among civilian deaths (20.2%) was significantly higher than in previous operations. Several specific incidents stood out for their brutality. On July 19-20, Israeli forces launched a massive assault on Shuja'iya, one of Gaza's most densely populated neighborhoods. Over 100 Palestinians were killed in approximately 24 hours as Israeli artillery fired thousands of shells into residential areas. Witnesses described civilians being shot while attempting to flee with white flags. On August 1, after an Israeli soldier was reportedly captured in Rafah, Israel invoked the Hannibal Directive—calling for overwhelming force without regard for civilian life. In three hours, Israeli forces fired over 1,000 artillery shells into Rafah, killing 130-150 Palestinians, overwhelmingly civilians. The UN described this as a 'moral outrage and a criminal act.' The systematic destruction of Gaza's infrastructure was also staggering: Gaza's only power plant destroyed, 18,000 homes razed, 89,000 damaged, 73 medical facilities attacked, 262 schools damaged. The UN Commission concluded there was evidence indicating serious violations of international humanitarian law amounting to war crimes by Israeli forces, including deliberate attacks on civilians and civilian infrastructure. The Commission also found Palestinian armed groups committed war crimes through indiscriminate rocket attacks and the extrajudicial execution of 21 alleged collaborators. On the Israeli side, 73 people died: 67 soldiers and 6 civilians killed by rockets and mortars.",
-      "war_crimes": [],
+      "war_crimes": [
+        "Systematic Attacks on Residential Buildings",
+        "Shuja'iya Massacre - Indiscriminate Artillery Fire",
+        "Rafah 'Black Friday' - Hannibal Directive",
+        "Attacks on Medical Facilities and Personnel",
+        "Attacks on UN Schools Sheltering Displaced",
+        "Destruction of Civilian Infrastructure - Power Plant",
+        "Gaza City Beach - Killing of Four Boys",
+        "Palestinian Indiscriminate Rocket Attacks (War Crime)",
+        "Extrajudicial Executions by Hamas (War Crime)"
+      ],
       "verification_status": "verified",
       "sources": [
         {
@@ -2475,6 +2589,11 @@
           "category": "war_crime"
         },
         {
+          "source": "UN Commission para. 27",
+          "source_link": "https://www.un.org/unispal/document/auto-insert-185919/",
+          "category": "war_crime"
+        },
+        {
           "source": "Amnesty & HRW Statements",
           "source_link": "https://www.amnesty.org/",
           "category": "war_crime"
@@ -2494,7 +2613,7 @@
       "title": "Great March of Return",
       "period": "historical",
       "date_start": "2018-03-30",
-      "date_end": null,
+      "date_end": "43826",
       "date_context": "Weekly protests at Gaza-Israel separation fence demanding right of return",
       "event_type": "Mass Killings / Protest Suppression",
       "classification": "Mass Killings / Protest Suppression",
@@ -2507,13 +2626,13 @@
       "casualties": {
         "deaths": {
           "raw": "223 Palestinians (189 during 2018; 34 during 2019); Zero Israelis killed",
-          "min": 34,
-          "max": 2019,
-          "estimate": 2019
+          "min": 223,
+          "max": 223,
+          "estimate": 223
         },
         "injured": {
           "raw": "28,939 Palestinians total; 6,106 by live ammunition; Zero Israeli injuries reported",
-          "min": 6106,
+          "min": 28939,
           "max": 28939,
           "estimate": 28939
         },
@@ -2531,7 +2650,16 @@
         "Israeli security forces"
       ],
       "summary": "The Great March of Return began on March 30, 2018—Palestinian Land Day and the 42nd anniversary of mass protests against Israeli land confiscation. Organized by independent activists, the protests were conceived as peaceful demonstrations to draw international attention to Gaza's humanitarian crisis, the blockade, and the right of return for Palestinian refugees. Five designated protest sites were established along Gaza's eastern border, several hundred meters from the separation fence. The protests were intended to last from Land Day (March 30) through Nakba Day (May 15), but continued for 21 months until Hamas announced their end on December 27, 2019. Israel's response was immediate and lethal. Israeli Defense Forces deployed snipers along the fence with rules of engagement permitting use of live ammunition against protesters. On the opening day, March 30, 2018, Israeli forces killed 18 Palestinians and shot over 700 with live ammunition. The bloodiest day came on May 14, 2018—the day the US Embassy officially opened in Jerusalem—when Israeli forces killed 60 Palestinians and shot over 1,100. By December 31, 2018, Israeli snipers had shot 6,106 Palestinians with live ammunition, killing 183 during official protest days. Thirty-five were children, three were clearly marked paramedics, and two were clearly marked journalists. Another 3,098 Palestinians were injured by bullet fragmentation, rubber-coated metal bullets, or tear gas canisters. The UN Commission of Inquiry investigated every killing at the designated demonstration sites on official protest days between March 30 and December 31, 2018. Commissioners reviewed video evidence, medical records, ballistics reports, and conducted extensive interviews. Their finding was damning: with the exception of two incidents, the Commission found reasonable grounds to believe the use of live ammunition was unlawful. The victims 'were neither participating directly in hostilities nor posing an imminent threat' when shot. Commissioner Sara Hossain stated: 'There can be no justification for killing and injuring journalists, medics, and persons who were clearly not posing an imminent threat of death or serious injury.' The Commission concluded the pattern of violations may constitute war crimes or crimes against humanity. Notable victims included 21-year-old paramedic Razan al-Najjar, shot and killed while treating wounded protesters despite wearing a clearly marked white medical vest, and journalist Yaser Murtaja, shot dead while wearing press insignia. By the time protests ended in December 2019, 223 Palestinians had been killed and 28,939 injured. At least 122 Palestinians required limb amputations including 20 children. Israel has conducted no meaningful investigations, with all but a handful of cases closed without indictment.",
-      "war_crimes": [],
+      "war_crimes": [
+        "Unlawful Killings - 187 of 189 Cases",
+        "Targeting of Medical Personnel",
+        "Killing and Wounding of Journalists",
+        "Killing of 41 Children",
+        "Deliberate Targeting of Lower Limbs",
+        "Excessive and Indiscriminate Use of Force",
+        "Unlawful Rules of Engagement",
+        "Possible Crimes Against Humanity"
+      ],
       "verification_status": "verified",
       "sources": [
         {
@@ -2754,7 +2882,7 @@
       "title": "Operation Guardian of the Walls",
       "period": "historical",
       "date_start": "2021-05-10",
-      "date_end": null,
+      "date_end": "44337",
       "date_context": "11-day Israeli military operation in Gaza Strip",
       "event_type": "Military Operation",
       "classification": "Military Operation",
@@ -2767,7 +2895,7 @@
       "casualties": {
         "deaths": {
           "raw": "260 Palestinians (129 civilians, 66 children, 40 women); 13 Israelis (12 civilians, 1 soldier)",
-          "min": 1,
+          "min": 260,
           "max": 260,
           "estimate": 260
         },
@@ -2791,7 +2919,14 @@
         "Palestinian Islamic Jihad"
       ],
       "summary": "The escalation that became Operation Guardian of the Walls was rooted in events in Jerusalem. During Ramadan 2021, Israeli police erected barriers preventing Palestinians from gathering at Damascus Gate—a traditional gathering place—and violently suppressed protests. Simultaneously, Israeli courts moved forward with eviction proceedings against Palestinian families in the Sheikh Jarrah neighborhood of East Jerusalem to make way for Jewish settlers. On May 7, hundreds of Palestinians were injured when Israeli police stormed Al-Aqsa Mosque compound during prayers, firing rubber bullets, stun grenades, and tear gas inside the mosque itself. International condemnation was swift, but on May 10—Lailat al-Qadr, the holiest night of Ramadan—Israeli police again raided Al-Aqsa, injuring over 300 Palestinians. Hamas issued an ultimatum demanding Israeli forces withdraw from Al-Aqsa and Sheikh Jarrah by 6 PM. When Israel refused, Hamas and Palestinian Islamic Jihad fired rockets toward Jerusalem at 6:05 PM, marking the beginning of the conflict. Israel's response was immediate and overwhelming. Within hours, Israeli jets struck over 130 targets across Gaza. Over the next 11 days, the IDF conducted more than 1,500 airstrikes while Palestinian armed groups fired 4,360 rockets and mortars into Israel—the Iron Dome intercepted approximately 90% of projectiles headed toward populated areas. The first day saw the al-Masri family strike in Beit Hanoun where a missile killed 8 civilians including 6 children who were packing barley for animal feed. Israel claimed it was a misfired Palestinian rocket, but Human Rights Watch's investigation found evidence of a guided missile and no military target. The deadliest single incident came on May 16 when Israeli forces launched a four-minute assault on al-Wahda Street in central Gaza City, causing three multi-story residential buildings to collapse. Forty-four civilians were killed including 18 children. HRW found the buildings collapsed after missiles struck the road or sidewalk adjacent to them—there were no evident military targets. The operation took place against the backdrop of Israel's 14-year blockade of Gaza and its systematic discrimination against Palestinians, which Human Rights Watch had characterized as apartheid just one month earlier in April 2021. The 11-day conflict killed 260 Palestinians (129 civilians according to UN/HRW, though Israel claimed most were militants). Thirteen Israelis died including 12 civilians killed by rockets. Human Rights Watch conducted in-depth investigations of three Israeli strikes that killed 62 Palestinian civilians total, finding 'no evident military targets in the vicinity' of any—constituting apparent war crimes. A third incident HRW investigated was the May 15 bombing of a building in Shati refugee camp that killed 10 people (8 children, 2 women); Israel claimed senior Hamas officials were hiding there, but HRW found no evidence of military targets. The report also documented that Palestinian armed groups committed war crimes through indiscriminate rocket fire at Israeli population centers. The operation ended with an Egyptian-mediated ceasefire on May 21, but neither side achieved strategic objectives, and Gaza's humanitarian crisis deepened significantly.",
-      "war_crimes": [],
+      "war_crimes": [
+        "Al-Wahda Street Attack - 44 Civilians Killed",
+        "Al-Masri Family Strike - 6 Children Killed",
+        "Shati Refugee Camp Bombing - 8 Children Killed",
+        "Indiscriminate Rocket Attacks (Palestinian War Crime)",
+        "Destruction of High-Rise Buildings",
+        "Pattern of Attacks Without Evident Military Targets"
+      ],
       "verification_status": "verified",
       "sources": [
         {
@@ -2930,6 +3065,11 @@
           "category": "timeline"
         },
         {
+          "source": "UN Documentation",
+          "source_link": "https://www.un.org/unispal/",
+          "category": "timeline"
+        },
+        {
           "source": "Meir Amit Summary",
           "source_link": "https://www.terrorism-info.org.il/en/escalation-from-the-gaza-strip-operation-guardian-of-the-walls-summary/",
           "category": "timeline"
@@ -2979,7 +3119,7 @@
       "title": "West Bank Raids 2022–2023",
       "period": "historical",
       "date_start": "2022-01-01",
-      "date_end": null,
+      "date_end": "45291",
       "date_context": "Two-year period of intensified Israeli military operations in West Bank",
       "event_type": "Military Raids / Systematic Killings",
       "classification": "Unlawful killings; disproportionate force",
@@ -2992,9 +3132,9 @@
       "casualties": {
         "deaths": {
           "raw": "500+ Palestinians (2022-2023 combined) including 78+ children; 19 Israelis killed by Palestinians (early 2022)",
-          "min": -2023,
-          "max": 2022,
-          "estimate": 2022
+          "min": 500,
+          "max": 500,
+          "estimate": 500
         },
         "injured": {
           "raw": "9,000+ Palestinians injured in 2022 alone (UN data); thousands more in 2023",
@@ -3004,9 +3144,9 @@
         },
         "forced_displacement": {
           "raw": "Multiple communities displaced by settler violence; 500 families displaced in Jenin July 2023",
-          "min": 500,
-          "max": 2023,
-          "estimate": 2023
+          "min": null,
+          "max": null,
+          "estimate": null
         }
       },
       "perpetrators": [
@@ -3017,7 +3157,16 @@
         "Special forces units including Duvdevan"
       ],
       "summary": "The escalation began in spring 2022 following a series of attacks by Palestinians inside Israel that killed 19 Israelis between March 22 and May 7. Israel responded by launching 'Operation Break the Wave'—near-nightly military raids into West Bank cities and refugee camps, particularly Jenin and Nablus. These cities had become centers of renewed armed Palestinian resistance with the emergence of groups like the Jenin Brigades (founded September 2021), the Lions' Den in Nablus, and the Balata Brigades. The Israeli operations involved massive deployments of troops, bulldozers destroying infrastructure and roads, use of live ammunition in densely populated areas, and increasingly, aerial bombardment including drone strikes. By the end of 2022, 220 Palestinians had been killed including 48 children—the highest annual toll since the Second Intifada ended in 2005. The violence was not limited to armed confrontations. According to Middle East Eye's analysis, the majority of Palestinian casualties in 2022 were likely unarmed at the time of their death. At least 95 Palestinians were shot by Israeli soldiers as bystanders during army raids or while participating in anti-occupation demonstrations. Seven women and girls were killed, including 15-year-old Jana Zakarneh shot twice in the face while playing with her cat on her rooftop, and 15-year-old Fulla al-Masalma killed a day before her birthday. The most internationally significant killing was that of Shireen Abu Akleh, Al Jazeera's veteran Palestinian correspondent, shot in the head on May 11, 2022 while covering a raid in Jenin. Despite wearing a clearly marked PRESS vest and standing with other journalists, Abu Akleh was killed by Israeli fire. The UN Commission of Inquiry investigated and concluded 'on reasonable grounds that Israeli forces used lethal force without justification under international human rights law and, intentionally or recklessly, violated Abu Akleh's right to life.' The violence intensified further in 2023. In January, a raid on Jenin killed 10 Palestinians including a 61-year-old woman shot through the neck while watching from her bedroom window. In February, 11 Palestinians were killed in Nablus including civilians shot in the back while fleeing. In July, Israel conducted its largest West Bank operation in 20 years—a 14-hour assault on Jenin refugee camp using drones, helicopter gunships, and hundreds of troops, killing 12 and forcing 500 families to flee. By December 2023, Doctors Without Borders declared it 'the deadliest year for Palestinians in the West Bank in recorded history' with 507 killed including 127 children. The UN Commission found Israeli forces systematically violated international law by applying combat rules to law enforcement situations, using disproportionate force, failing to distinguish between civilians and combatants, obstructing medical care, and conducting what amounted to extrajudicial executions. Meanwhile, settler violence also surged—the UN recorded over 800 settler attacks on Palestinians between October 2022 and May 2024, often occurring with Israeli military acquiescence or participation.",
-      "war_crimes": [],
+      "war_crimes": [
+        "Unlawful Killing of Journalist Shireen Abu Akleh",
+        "Extrajudicial Executions",
+        "Unnecessary and Disproportionate Force",
+        "Killing of 78+ Children",
+        "Obstruction of Medical Care",
+        "Hospital Raid with Perfidy (War Crime)",
+        "Misapplication of Legal Framework",
+        "Destruction of Civilian Property"
+      ],
       "verification_status": "verified",
       "sources": [
         {
@@ -3154,6 +3303,11 @@
           "source": "📄 UN Commission Legal Analysis ↑",
           "source_link": "https://www.ohchr.org/en/press-releases/2023/10/civilians-are-primary-victims-increased-violence-israel-and-occupied",
           "category": "war_crime"
+        },
+        {
+          "source": "📄 Documentation ↑",
+          "source_link": "https://en.wikipedia.org/wiki/July_2023_Jenin_incursion",
+          "category": "war_crime"
         }
       ],
       "source_file": "events.csv",
@@ -3161,229 +3315,13 @@
       "author": "aliattia02"
     },
     {
-      "id": "curr_001",
-      "title": "Al-Ahli Baptist Hospital Strike",
-      "period": "current",
-      "date_start": "2023-10-17",
-      "date_end": "2023-10-17",
-      "date_context": null,
-      "event_type": "hospital_attack",
-      "classification": null,
-      "location": {
-        "name_historical": "Al-Ahli Arab Hospital, Gaza City",
-        "name_current": "Al-Ahli Arab Hospital, Gaza City",
-        "lat": 31.5123,
-        "lng": 34.4545
-      },
-      "casualties": {
-        "deaths": {
-          "raw": "471",
-          "min": 471,
-          "max": 471,
-          "estimate": 471
-        },
-        "injured": {
-          "raw": "342",
-          "min": 342,
-          "max": 342,
-          "estimate": 342
-        },
-        "forced_displacement": {
-          "raw": "0",
-          "min": 0,
-          "max": 0,
-          "estimate": 0
-        }
-      },
-      "perpetrators": [
-        "Israeli Airstrikes (disputed)"
-      ],
-      "summary": "Explosion at Al-Ahli Baptist Hospital compound where thousands of displaced Palestinians were sheltering. Massive casualties in hospital courtyard.",
-      "war_crimes": [
-        "Attack on medical facility",
-        "Targeting of protected site",
-        "Civilian deaths",
-        "Attack on displaced persons"
-      ],
-      "verification_status": "disputed",
-      "sources": [
-        {
-          "source": "Gaza Health Ministry",
-          "source_link": null,
-          "category": null
-        },
-        {
-          "source": "Human Rights Watch Investigation",
-          "source_link": null,
-          "category": null
-        },
-        {
-          "source": "UN OCHA",
-          "source_link": null,
-          "category": null
-        },
-        {
-          "source": "Multiple witness testimonies",
-          "source_link": null,
-          "category": null
-        }
-      ],
-      "source_file": "civilian-casualties-current.json",
-      "last_updated": null,
-      "author": null
-    },
-    {
-      "id": "curr_002",
-      "title": "Jabalia Refugee Camp Bombardment (First Strike)",
-      "period": "current",
-      "date_start": "2023-10-31",
-      "date_end": "2023-10-31",
-      "date_context": null,
-      "event_type": "refugee_camp_attack",
-      "classification": null,
-      "location": {
-        "name_historical": "Jabalia Refugee Camp, North Gaza",
-        "name_current": "Jabalia Refugee Camp, North Gaza",
-        "lat": 31.5333,
-        "lng": 34.4833
-      },
-      "casualties": {
-        "deaths": {
-          "raw": "195",
-          "min": 195,
-          "max": 195,
-          "estimate": 195
-        },
-        "injured": {
-          "raw": "777",
-          "min": 777,
-          "max": 777,
-          "estimate": 777
-        },
-        "forced_displacement": {
-          "raw": "0",
-          "min": 0,
-          "max": 0,
-          "estimate": 0
-        }
-      },
-      "perpetrators": [
-        "IDF"
-      ],
-      "summary": "Massive airstrike on densely populated Jabalia refugee camp. Entire residential blocks destroyed. Israel admitted targeting Hamas commander.",
-      "war_crimes": [
-        "Disproportionate attack",
-        "Targeting civilians",
-        "Collective punishment",
-        "Destruction of civilian homes"
-      ],
-      "verification_status": "verified",
-      "sources": [
-        {
-          "source": "UN OCHA",
-          "source_link": null,
-          "category": null
-        },
-        {
-          "source": "Human Rights Watch",
-          "source_link": null,
-          "category": null
-        },
-        {
-          "source": "Gaza Civil Defense",
-          "source_link": null,
-          "category": null
-        },
-        {
-          "source": "Multiple news agencies",
-          "source_link": null,
-          "category": null
-        }
-      ],
-      "source_file": "civilian-casualties-current.json",
-      "last_updated": null,
-      "author": null
-    },
-    {
-      "id": "curr_003",
-      "title": "Flour Massacre - Al-Rashid Street",
-      "period": "current",
-      "date_start": "2024-02-29",
-      "date_end": "2024-02-29",
-      "date_context": null,
-      "event_type": "massacre",
-      "classification": null,
-      "location": {
-        "name_historical": "Al-Rashid Street, Gaza City",
-        "name_current": "Al-Rashid Street, Gaza City",
-        "lat": 31.5147,
-        "lng": 34.4501
-      },
-      "casualties": {
-        "deaths": {
-          "raw": "118",
-          "min": 118,
-          "max": 118,
-          "estimate": 118
-        },
-        "injured": {
-          "raw": "760",
-          "min": 760,
-          "max": 760,
-          "estimate": 760
-        },
-        "forced_displacement": {
-          "raw": "0",
-          "min": 0,
-          "max": 0,
-          "estimate": 0
-        }
-      },
-      "perpetrators": [
-        "IDF"
-      ],
-      "summary": "Israeli forces opened fire on Palestinians waiting for food aid distribution. Hundreds of civilians killed and injured while trying to obtain flour.",
-      "war_crimes": [
-        "Targeting civilians",
-        "Firing on aid recipients",
-        "Starvation as weapon of war",
-        "Mass killing"
-      ],
-      "verification_status": "verified",
-      "sources": [
-        {
-          "source": "UN OCHA",
-          "source_link": null,
-          "category": null
-        },
-        {
-          "source": "Gaza Health Ministry",
-          "source_link": null,
-          "category": null
-        },
-        {
-          "source": "Euro-Med Human Rights Monitor",
-          "source_link": null,
-          "category": null
-        },
-        {
-          "source": "Video evidence",
-          "source_link": null,
-          "category": null
-        }
-      ],
-      "source_file": "civilian-casualties-current.json",
-      "last_updated": null,
-      "author": null
-    },
-    {
       "id": "curr_004",
       "title": "UNRWA School Strikes",
       "period": "current",
       "date_start": "2023-10-15",
       "date_end": "2023-10-15",
-      "date_context": null,
-      "event_type": "protected_site_attack",
+      "date_context": "Current genocide (2023 to present)",
+      "event_type": "Protected Site Attack",
       "classification": null,
       "location": {
         "name_historical": "Multiple UNRWA Schools, Gaza Strip",
@@ -3426,50 +3364,50 @@
         {
           "source": "UNRWA Official Statements",
           "source_link": null,
-          "category": null
+          "category": "source"
         },
         {
           "source": "UN Secretary-General Reports",
           "source_link": null,
-          "category": null
+          "category": "source"
         },
         {
           "source": "Human Rights Watch",
           "source_link": null,
-          "category": null
+          "category": "source"
         }
       ],
-      "source_file": "civilian-casualties-current.json",
+      "source_file": "events.csv",
       "last_updated": null,
-      "author": null
+      "author": "aliattia02"
     },
     {
-      "id": "curr_005",
-      "title": "Mass Graves Discovery at Nasser Hospital",
+      "id": "curr_001",
+      "title": "Al-Ahli Baptist Hospital Strike",
       "period": "current",
-      "date_start": "2024-04-22",
-      "date_end": "2024-04-22",
-      "date_context": null,
-      "event_type": "mass_graves",
+      "date_start": "2023-10-17",
+      "date_end": "2023-10-17",
+      "date_context": "Current genocide (2023 to present)",
+      "event_type": "Hospital Attack",
       "classification": null,
       "location": {
-        "name_historical": "Nasser Medical Complex, Khan Yunis",
-        "name_current": "Nasser Medical Complex, Khan Yunis",
-        "lat": 31.3459,
-        "lng": 34.3062
+        "name_historical": "Al-Ahli Arab Hospital, Gaza City",
+        "name_current": "Al-Ahli Arab Hospital, Gaza City",
+        "lat": 31.5123,
+        "lng": 34.4545
       },
       "casualties": {
         "deaths": {
-          "raw": "392",
-          "min": 392,
-          "max": 392,
-          "estimate": 392
+          "raw": "471",
+          "min": 471,
+          "max": 471,
+          "estimate": 471
         },
         "injured": {
-          "raw": "0",
-          "min": 0,
-          "max": 0,
-          "estimate": 0
+          "raw": "342",
+          "min": 342,
+          "max": 342,
+          "estimate": 342
         },
         "forced_displacement": {
           "raw": "0",
@@ -3479,257 +3417,41 @@
         }
       },
       "perpetrators": [
-        "IDF (alleged)"
+        "Israeli Airstrikes (disputed)"
       ],
-      "summary": "Mass graves discovered at Nasser Hospital after Israeli withdrawal. Bodies found with hands tied, evidence of executions. Some bodies taken from hospital by Israeli forces.",
-      "war_crimes": [
-        "Extrajudicial executions",
-        "Desecration of dead",
-        "Forced disappearances",
-        "War crimes"
-      ],
-      "verification_status": "verified",
-      "sources": [
-        {
-          "source": "Gaza Civil Defense",
-          "source_link": null,
-          "category": null
-        },
-        {
-          "source": "UN OCHA",
-          "source_link": null,
-          "category": null
-        },
-        {
-          "source": "Human Rights Watch",
-          "source_link": null,
-          "category": null
-        },
-        {
-          "source": "Euro-Med Human Rights Monitor",
-          "source_link": null,
-          "category": null
-        }
-      ],
-      "source_file": "civilian-casualties-current.json",
-      "last_updated": null,
-      "author": null
-    },
-    {
-      "id": "curr_006",
-      "title": "Al-Shifa Hospital Siege",
-      "period": "current",
-      "date_start": "2023-11-11",
-      "date_end": "2023-11-11",
-      "date_context": null,
-      "event_type": "hospital_siege",
-      "classification": null,
-      "location": {
-        "name_historical": "Al-Shifa Hospital, Gaza City",
-        "name_current": "Al-Shifa Hospital, Gaza City",
-        "lat": 31.5019,
-        "lng": 34.4561
-      },
-      "casualties": {
-        "deaths": {
-          "raw": "200",
-          "min": 200,
-          "max": 200,
-          "estimate": 200
-        },
-        "injured": {
-          "raw": "500",
-          "min": 500,
-          "max": 500,
-          "estimate": 500
-        },
-        "forced_displacement": {
-          "raw": "0",
-          "min": 0,
-          "max": 0,
-          "estimate": 0
-        }
-      },
-      "perpetrators": [
-        "IDF"
-      ],
-      "summary": "Israeli forces besieged Gaza's largest hospital, cutting off power and water. Patients died due to lack of medical care. Hospital raided despite being protected under international law.",
+      "summary": "Explosion at Al-Ahli Baptist Hospital compound where thousands of displaced Palestinians were sheltering. Massive casualties in hospital courtyard.",
       "war_crimes": [
         "Attack on medical facility",
-        "Denial of medical care",
-        "Targeting protected site",
-        "Civilian deaths"
-      ],
-      "verification_status": "verified",
-      "sources": [
-        {
-          "source": "WHO",
-          "source_link": null,
-          "category": null
-        },
-        {
-          "source": "UN OCHA",
-          "source_link": null,
-          "category": null
-        },
-        {
-          "source": "Human Rights Watch",
-          "source_link": null,
-          "category": null
-        },
-        {
-          "source": "Doctors Without Borders",
-          "source_link": null,
-          "category": null
-        }
-      ],
-      "source_file": "civilian-casualties-current.json",
-      "last_updated": null,
-      "author": null
-    },
-    {
-      "id": "curr_007",
-      "title": "Rafah Tent Camp Massacre",
-      "period": "current",
-      "date_start": "2024-05-26",
-      "date_end": "2024-05-26",
-      "date_context": null,
-      "event_type": "massacre",
-      "classification": null,
-      "location": {
-        "name_historical": "Displacement Camp, Rafah",
-        "name_current": "Displacement Camp, Rafah",
-        "lat": 31.289,
-        "lng": 34.2505
-      },
-      "casualties": {
-        "deaths": {
-          "raw": "45",
-          "min": 45,
-          "max": 45,
-          "estimate": 45
-        },
-        "injured": {
-          "raw": "200",
-          "min": 200,
-          "max": 200,
-          "estimate": 200
-        },
-        "forced_displacement": {
-          "raw": "0",
-          "min": 0,
-          "max": 0,
-          "estimate": 0
-        }
-      },
-      "perpetrators": [
-        "IDF"
-      ],
-      "summary": "Israeli airstrike on tent camp sheltering displaced Palestinians in Rafah. Many victims burned alive in their tents. Israel claimed targeting Hamas operatives.",
-      "war_crimes": [
-        "Targeting displaced persons",
-        "Disproportionate force",
+        "Targeting of protected site",
         "Civilian deaths",
-        "Use of incendiary weapons"
+        "Attack on displaced persons"
       ],
       "verification_status": "verified",
       "sources": [
-        {
-          "source": "UN OCHA",
-          "source_link": null,
-          "category": null
-        },
         {
           "source": "Gaza Health Ministry",
           "source_link": null,
-          "category": null
+          "category": "source"
         },
         {
-          "source": "Human Rights Watch",
+          "source": "Human Rights Watch Investigation",
           "source_link": null,
-          "category": null
+          "category": "source"
         },
         {
-          "source": "Video evidence",
+          "source": "UN OCHA",
           "source_link": null,
-          "category": null
+          "category": "source"
+        },
+        {
+          "source": "Multiple witness testimonies",
+          "source_link": null,
+          "category": "source"
         }
       ],
-      "source_file": "civilian-casualties-current.json",
+      "source_file": "events.csv",
       "last_updated": null,
-      "author": null
-    },
-    {
-      "id": "curr_008",
-      "title": "World Central Kitchen Workers Killing",
-      "period": "current",
-      "date_start": "2024-04-01",
-      "date_end": "2024-04-01",
-      "date_context": null,
-      "event_type": "aid_workers_killing",
-      "classification": null,
-      "location": {
-        "name_historical": "Deir al-Balah, Central Gaza",
-        "name_current": "Deir al-Balah, Central Gaza",
-        "lat": 31.4181,
-        "lng": 34.3517
-      },
-      "casualties": {
-        "deaths": {
-          "raw": "7",
-          "min": 7,
-          "max": 7,
-          "estimate": 7
-        },
-        "injured": {
-          "raw": "0",
-          "min": 0,
-          "max": 0,
-          "estimate": 0
-        },
-        "forced_displacement": {
-          "raw": "0",
-          "min": 0,
-          "max": 0,
-          "estimate": 0
-        }
-      },
-      "perpetrators": [
-        "IDF"
-      ],
-      "summary": "Israeli forces targeted and killed seven World Central Kitchen aid workers in three consecutive strikes on clearly marked vehicles. International outcry followed.",
-      "war_crimes": [
-        "Targeting aid workers",
-        "Targeting clearly marked vehicles",
-        "War crimes",
-        "Obstruction of humanitarian aid"
-      ],
-      "verification_status": "verified",
-      "sources": [
-        {
-          "source": "World Central Kitchen Statement",
-          "source_link": null,
-          "category": null
-        },
-        {
-          "source": "UN Security Council",
-          "source_link": null,
-          "category": null
-        },
-        {
-          "source": "Human Rights Watch",
-          "source_link": null,
-          "category": null
-        },
-        {
-          "source": "Multiple governments",
-          "source_link": null,
-          "category": null
-        }
-      ],
-      "source_file": "civilian-casualties-current.json",
-      "last_updated": null,
-      "author": null
+      "author": "aliattia02"
     },
     {
       "id": "curr_009",
@@ -3737,8 +3459,8 @@
       "period": "current",
       "date_start": "2023-10-27",
       "date_end": "2023-10-27",
-      "date_context": null,
-      "event_type": "urban_destruction",
+      "date_context": "Current genocide (2023 to present)",
+      "event_type": "Urban Destruction",
       "classification": null,
       "location": {
         "name_historical": "Gaza City",
@@ -3781,27 +3503,459 @@
         {
           "source": "UN OCHA",
           "source_link": null,
-          "category": null
+          "category": "source"
         },
         {
           "source": "Satellite imagery analysis",
           "source_link": null,
-          "category": null
+          "category": "source"
         },
         {
           "source": "Human Rights Watch",
           "source_link": null,
-          "category": null
+          "category": "source"
         },
         {
           "source": "UN Satellite Centre",
           "source_link": null,
-          "category": null
+          "category": "source"
         }
       ],
-      "source_file": "civilian-casualties-current.json",
+      "source_file": "events.csv",
       "last_updated": null,
-      "author": null
+      "author": "aliattia02"
+    },
+    {
+      "id": "curr_002",
+      "title": "Jabalia Refugee Camp Bombardment (First Strike)",
+      "period": "current",
+      "date_start": "2023-10-31",
+      "date_end": "2023-10-31",
+      "date_context": "Current genocide (2023 to present)",
+      "event_type": "Refugee Camp Attack",
+      "classification": null,
+      "location": {
+        "name_historical": "Jabalia Refugee Camp, North Gaza",
+        "name_current": "Jabalia Refugee Camp, North Gaza",
+        "lat": 31.5333,
+        "lng": 34.4833
+      },
+      "casualties": {
+        "deaths": {
+          "raw": "195",
+          "min": 195,
+          "max": 195,
+          "estimate": 195
+        },
+        "injured": {
+          "raw": "777",
+          "min": 777,
+          "max": 777,
+          "estimate": 777
+        },
+        "forced_displacement": {
+          "raw": "0",
+          "min": 0,
+          "max": 0,
+          "estimate": 0
+        }
+      },
+      "perpetrators": [
+        "IDF"
+      ],
+      "summary": "Massive airstrike on densely populated Jabalia refugee camp. Entire residential blocks destroyed. Israel admitted targeting Hamas commander.",
+      "war_crimes": [
+        "Disproportionate attack",
+        "Targeting civilians",
+        "Collective punishment",
+        "Destruction of civilian homes"
+      ],
+      "verification_status": "verified",
+      "sources": [
+        {
+          "source": "UN OCHA",
+          "source_link": null,
+          "category": "source"
+        },
+        {
+          "source": "Human Rights Watch",
+          "source_link": null,
+          "category": "source"
+        },
+        {
+          "source": "Gaza Civil Defense",
+          "source_link": null,
+          "category": "source"
+        },
+        {
+          "source": "Multiple news agencies",
+          "source_link": null,
+          "category": "source"
+        }
+      ],
+      "source_file": "events.csv",
+      "last_updated": null,
+      "author": "aliattia02"
+    },
+    {
+      "id": "curr_006",
+      "title": "Al-Shifa Hospital Siege",
+      "period": "current",
+      "date_start": "2023-11-11",
+      "date_end": "2023-11-11",
+      "date_context": "Current genocide (2023 to present)",
+      "event_type": "Hospital Siege",
+      "classification": null,
+      "location": {
+        "name_historical": "Al-Shifa Hospital, Gaza City",
+        "name_current": "Al-Shifa Hospital, Gaza City",
+        "lat": 31.5019,
+        "lng": 34.4561
+      },
+      "casualties": {
+        "deaths": {
+          "raw": "200",
+          "min": 200,
+          "max": 200,
+          "estimate": 200
+        },
+        "injured": {
+          "raw": "500",
+          "min": 500,
+          "max": 500,
+          "estimate": 500
+        },
+        "forced_displacement": {
+          "raw": "0",
+          "min": 0,
+          "max": 0,
+          "estimate": 0
+        }
+      },
+      "perpetrators": [
+        "IDF"
+      ],
+      "summary": "Israeli forces besieged Gaza's largest hospital, cutting off power and water. Patients died due to lack of medical care. Hospital raided despite being protected under international law.",
+      "war_crimes": [
+        "Attack on medical facility",
+        "Denial of medical care",
+        "Targeting protected site",
+        "Civilian deaths"
+      ],
+      "verification_status": "verified",
+      "sources": [
+        {
+          "source": "WHO",
+          "source_link": null,
+          "category": "source"
+        },
+        {
+          "source": "UN OCHA",
+          "source_link": null,
+          "category": "source"
+        },
+        {
+          "source": "Human Rights Watch",
+          "source_link": null,
+          "category": "source"
+        },
+        {
+          "source": "Doctors Without Borders",
+          "source_link": null,
+          "category": "source"
+        }
+      ],
+      "source_file": "events.csv",
+      "last_updated": null,
+      "author": "aliattia02"
+    },
+    {
+      "id": "curr_003",
+      "title": "Flour Massacre - Al-Rashid Street",
+      "period": "current",
+      "date_start": "2024-02-29",
+      "date_end": "2024-02-29",
+      "date_context": "Current genocide (2023 to present)",
+      "event_type": "Massacre",
+      "classification": null,
+      "location": {
+        "name_historical": "Al-Rashid Street, Gaza City",
+        "name_current": "Al-Rashid Street, Gaza City",
+        "lat": 31.5147,
+        "lng": 34.4501
+      },
+      "casualties": {
+        "deaths": {
+          "raw": "118",
+          "min": 118,
+          "max": 118,
+          "estimate": 118
+        },
+        "injured": {
+          "raw": "760",
+          "min": 760,
+          "max": 760,
+          "estimate": 760
+        },
+        "forced_displacement": {
+          "raw": "0",
+          "min": 0,
+          "max": 0,
+          "estimate": 0
+        }
+      },
+      "perpetrators": [
+        "IDF"
+      ],
+      "summary": "Israeli forces opened fire on Palestinians waiting for food aid distribution. Hundreds of civilians killed and injured while trying to obtain flour.",
+      "war_crimes": [
+        "Targeting civilians",
+        "Firing on aid recipients",
+        "Starvation as weapon of war",
+        "Mass killing"
+      ],
+      "verification_status": "verified",
+      "sources": [
+        {
+          "source": "UN OCHA",
+          "source_link": null,
+          "category": "source"
+        },
+        {
+          "source": "Gaza Health Ministry",
+          "source_link": null,
+          "category": "source"
+        },
+        {
+          "source": "Euro-Med Human Rights Monitor",
+          "source_link": null,
+          "category": "source"
+        },
+        {
+          "source": "Video evidence",
+          "source_link": null,
+          "category": "source"
+        }
+      ],
+      "source_file": "events.csv",
+      "last_updated": null,
+      "author": "aliattia02"
+    },
+    {
+      "id": "curr_008",
+      "title": "World Central Kitchen Workers Killing",
+      "period": "current",
+      "date_start": "2024-04-01",
+      "date_end": "2024-04-01",
+      "date_context": "Current genocide (2023 to present)",
+      "event_type": "Aid Workers Killing",
+      "classification": null,
+      "location": {
+        "name_historical": "Deir al-Balah, Central Gaza",
+        "name_current": "Deir al-Balah, Central Gaza",
+        "lat": 31.4181,
+        "lng": 34.3517
+      },
+      "casualties": {
+        "deaths": {
+          "raw": "7",
+          "min": 7,
+          "max": 7,
+          "estimate": 7
+        },
+        "injured": {
+          "raw": "0",
+          "min": 0,
+          "max": 0,
+          "estimate": 0
+        },
+        "forced_displacement": {
+          "raw": "0",
+          "min": 0,
+          "max": 0,
+          "estimate": 0
+        }
+      },
+      "perpetrators": [
+        "IDF"
+      ],
+      "summary": "Israeli forces targeted and killed seven World Central Kitchen aid workers in three consecutive strikes on clearly marked vehicles. International outcry followed.",
+      "war_crimes": [
+        "Targeting aid workers",
+        "Targeting clearly marked vehicles",
+        "War crimes",
+        "Obstruction of humanitarian aid"
+      ],
+      "verification_status": "verified",
+      "sources": [
+        {
+          "source": "World Central Kitchen Statement",
+          "source_link": null,
+          "category": "source"
+        },
+        {
+          "source": "UN Security Council",
+          "source_link": null,
+          "category": "source"
+        },
+        {
+          "source": "Human Rights Watch",
+          "source_link": null,
+          "category": "source"
+        },
+        {
+          "source": "Multiple governments",
+          "source_link": null,
+          "category": "source"
+        }
+      ],
+      "source_file": "events.csv",
+      "last_updated": null,
+      "author": "aliattia02"
+    },
+    {
+      "id": "curr_005",
+      "title": "Mass Graves Discovery at Nasser Hospital",
+      "period": "current",
+      "date_start": "2024-04-22",
+      "date_end": "2024-04-22",
+      "date_context": "Current genocide (2023 to present)",
+      "event_type": "Mass Graves",
+      "classification": null,
+      "location": {
+        "name_historical": "Nasser Medical Complex, Khan Yunis",
+        "name_current": "Nasser Medical Complex, Khan Yunis",
+        "lat": 31.3459,
+        "lng": 34.3062
+      },
+      "casualties": {
+        "deaths": {
+          "raw": "392",
+          "min": 392,
+          "max": 392,
+          "estimate": 392
+        },
+        "injured": {
+          "raw": "0",
+          "min": 0,
+          "max": 0,
+          "estimate": 0
+        },
+        "forced_displacement": {
+          "raw": "0",
+          "min": 0,
+          "max": 0,
+          "estimate": 0
+        }
+      },
+      "perpetrators": [
+        "IDF (alleged)"
+      ],
+      "summary": "Mass graves discovered at Nasser Hospital after Israeli withdrawal. Bodies found with hands tied, evidence of executions. Some bodies taken from hospital by Israeli forces.",
+      "war_crimes": [
+        "Extrajudicial executions",
+        "Desecration of dead",
+        "Forced disappearances",
+        "War crimes"
+      ],
+      "verification_status": "verified",
+      "sources": [
+        {
+          "source": "Gaza Civil Defense",
+          "source_link": null,
+          "category": "source"
+        },
+        {
+          "source": "UN OCHA",
+          "source_link": null,
+          "category": "source"
+        },
+        {
+          "source": "Human Rights Watch",
+          "source_link": null,
+          "category": "source"
+        },
+        {
+          "source": "Euro-Med Human Rights Monitor",
+          "source_link": null,
+          "category": "source"
+        }
+      ],
+      "source_file": "events.csv",
+      "last_updated": null,
+      "author": "aliattia02"
+    },
+    {
+      "id": "curr_007",
+      "title": "Rafah Tent Camp Massacre",
+      "period": "current",
+      "date_start": "2024-05-26",
+      "date_end": "2024-05-26",
+      "date_context": "Current genocide (2023 to present)",
+      "event_type": "Massacre",
+      "classification": null,
+      "location": {
+        "name_historical": "Displacement Camp, Rafah",
+        "name_current": "Displacement Camp, Rafah",
+        "lat": 31.289,
+        "lng": 34.2505
+      },
+      "casualties": {
+        "deaths": {
+          "raw": "45",
+          "min": 45,
+          "max": 45,
+          "estimate": 45
+        },
+        "injured": {
+          "raw": "200",
+          "min": 200,
+          "max": 200,
+          "estimate": 200
+        },
+        "forced_displacement": {
+          "raw": "0",
+          "min": 0,
+          "max": 0,
+          "estimate": 0
+        }
+      },
+      "perpetrators": [
+        "IDF"
+      ],
+      "summary": "Israeli airstrike on tent camp sheltering displaced Palestinians in Rafah. Many victims burned alive in their tents. Israel claimed targeting Hamas operatives.",
+      "war_crimes": [
+        "Targeting displaced persons",
+        "Disproportionate force",
+        "Civilian deaths",
+        "Use of incendiary weapons"
+      ],
+      "verification_status": "verified",
+      "sources": [
+        {
+          "source": "UN OCHA",
+          "source_link": null,
+          "category": "source"
+        },
+        {
+          "source": "Gaza Health Ministry",
+          "source_link": null,
+          "category": "source"
+        },
+        {
+          "source": "Human Rights Watch",
+          "source_link": null,
+          "category": "source"
+        },
+        {
+          "source": "Video evidence",
+          "source_link": null,
+          "category": "source"
+        }
+      ],
+      "source_file": "events.csv",
+      "last_updated": null,
+      "author": "aliattia02"
     },
     {
       "id": "curr_010",
@@ -3809,8 +3963,8 @@
       "period": "current",
       "date_start": "2024-10-01",
       "date_end": "2024-10-01",
-      "date_context": null,
-      "event_type": "starvation_warfare",
+      "date_context": "Current genocide (2023 to present)",
+      "event_type": "Starvation Warfare",
       "classification": null,
       "location": {
         "name_historical": "Northern Gaza Strip",
@@ -3855,27 +4009,27 @@
         {
           "source": "UN Special Rapporteurs",
           "source_link": null,
-          "category": null
+          "category": "source"
         },
         {
           "source": "World Food Programme",
           "source_link": null,
-          "category": null
+          "category": "source"
         },
         {
           "source": "Human Rights Watch",
           "source_link": null,
-          "category": null
+          "category": "source"
         },
         {
           "source": "Genocide Watch",
           "source_link": null,
-          "category": null
+          "category": "source"
         }
       ],
-      "source_file": "civilian-casualties-current.json",
+      "source_file": "events.csv",
       "last_updated": null,
-      "author": null
+      "author": "aliattia02"
     }
   ]
 }

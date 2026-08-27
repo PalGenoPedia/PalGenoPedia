@@ -5,12 +5,13 @@
   "headline": "Operation Pillar of Defense",
   "url": "https://palgenopedia.org/historical-events/massacres/operation-pillar-of-defense/",
   "datePublished": "2012-11-14",
-  "dateModified": "2026-08-24",
+  "dateModified": "2026-08-27",
   "inLanguage": "en",
   "about": {
     "@type": "Event",
     "name": "Operation Pillar of Defense",
     "startDate": "2012-11-14",
+    "endDate": "41234",
     "description": "Escalation following targeted killing of Hamas military commander",
     "location": {
       "@type": "Place",

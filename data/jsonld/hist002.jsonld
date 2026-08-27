@@ -2,14 +2,14 @@
   "@context": "https://schema.org",
   "@type": "Article",
   "@id": "https://palgenopedia.org/data/events.json#hist002",
-  "headline": "Tantura ",
+  "headline": "Tantura",
   "url": "https://palgenopedia.org/historical-events/massacres/tantura/",
   "datePublished": "1948-05-22",
-  "dateModified": "2026-08-24",
+  "dateModified": "2026-08-27",
   "inLanguage": "en",
   "about": {
     "@type": "Event",
-    "name": "Tantura ",
+    "name": "Tantura",
     "startDate": "1948-05-22",
     "endDate": "1948-05-23",
     "description": "1948 Arab-Israeli War, coastal operations",
@@ -273,8 +273,8 @@
       "name": "Deaths",
       "propertyID": "casualties/deaths",
       "value": "≈200-250",
-      "minValue": -250,
-      "maxValue": 200
+      "minValue": 200,
+      "maxValue": 250
     },
     {
       "@type": "PropertyValue",

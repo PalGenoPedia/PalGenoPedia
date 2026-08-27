@@ -5,12 +5,13 @@
   "headline": "Battle of Jenin",
   "url": "https://palgenopedia.org/historical-events/massacres/battle-of-jenin/",
   "datePublished": "2002-04-03",
-  "dateModified": "2026-08-24",
+  "dateModified": "2026-08-27",
   "inLanguage": "en",
   "about": {
     "@type": "Event",
     "name": "Battle of Jenin",
     "startDate": "2002-04-03",
+    "endDate": "37357",
     "description": "Part of Operation Defensive Shield; response to Passover massacre (27 March 2002)",
     "location": {
       "@type": "Place",
@@ -300,7 +301,25 @@
     },
     {
       "@type": "Article",
+      "name": "HRW - Civilian Casualties",
+      "url": "https://www.hrw.org/reports/2002/israel3/israel0502-05.htm",
+      "about": {
+        "@type": "Thing",
+        "name": "war_crime"
+      }
+    },
+    {
+      "@type": "Article",
       "name": "HRW Documentation",
+      "url": "https://www.hrw.org/news/2002/05/02/israel/occupied-territories-jenin-war-crimes-investigation-needed",
+      "about": {
+        "@type": "Thing",
+        "name": "war_crime"
+      }
+    },
+    {
+      "@type": "Article",
+      "name": "HRW Investigation",
       "url": "https://www.hrw.org/news/2002/05/02/israel/occupied-territories-jenin-war-crimes-investigation-needed",
       "about": {
         "@type": "Thing",
@@ -332,7 +351,7 @@
       "name": "Deaths",
       "propertyID": "casualties/deaths",
       "value": "52 Palestinians (22 civilians, 27 combatants, 3 unclear); 23 Israeli soldiers",
-      "minValue": 3,
+      "minValue": 52,
       "maxValue": 52
     },
     {

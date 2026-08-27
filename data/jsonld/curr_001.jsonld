@@ -3,14 +3,15 @@
   "@type": "Article",
   "@id": "https://palgenopedia.org/data/events.json#curr_001",
   "headline": "Al-Ahli Baptist Hospital Strike",
-  "url": "https://palgenopedia.org/historical-events/massacres/timeline.html#event/curr_001",
+  "url": "https://palgenopedia.org/historical-events/massacres/al-ahli-baptist-hospital-strike/",
   "datePublished": "2023-10-17",
-  "dateModified": "2026-08-24",
+  "dateModified": "2026-08-27",
   "inLanguage": "en",
   "about": {
     "@type": "Event",
     "name": "Al-Ahli Baptist Hospital Strike",
     "startDate": "2023-10-17",
+    "description": "Current genocide (2023 to present)",
     "location": {
       "@type": "Place",
       "name": "Al-Ahli Arab Hospital, Gaza City",
@@ -22,7 +23,7 @@
     }
   },
   "articleBody": "Explosion at Al-Ahli Baptist Hospital compound where thousands of displaced Palestinians were sheltering. Massive casualties in hospital courtyard.",
-  "keywords": "hospital_attack, current",
+  "keywords": "Hospital Attack, current",
   "mentions": [
     {
       "@type": "Organization",
@@ -32,19 +33,35 @@
   "citation": [
     {
       "@type": "Article",
-      "name": "Gaza Health Ministry"
+      "name": "Gaza Health Ministry",
+      "about": {
+        "@type": "Thing",
+        "name": "source"
+      }
     },
     {
       "@type": "Article",
-      "name": "Human Rights Watch Investigation"
+      "name": "Human Rights Watch Investigation",
+      "about": {
+        "@type": "Thing",
+        "name": "source"
+      }
     },
     {
       "@type": "Article",
-      "name": "UN OCHA"
+      "name": "UN OCHA",
+      "about": {
+        "@type": "Thing",
+        "name": "source"
+      }
     },
     {
       "@type": "Article",
-      "name": "Multiple witness testimonies"
+      "name": "Multiple witness testimonies",
+      "about": {
+        "@type": "Thing",
+        "name": "source"
+      }
     }
   ],
   "additionalProperty": [
@@ -76,7 +93,13 @@
       "@type": "PropertyValue",
       "name": "Verification status",
       "propertyID": "verification_status",
-      "value": "disputed"
+      "value": "verified"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Author",
+      "propertyID": "author",
+      "value": "aliattia02"
     }
   ],
   "provider": {

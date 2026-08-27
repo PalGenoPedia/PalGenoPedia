@@ -5,12 +5,13 @@
   "headline": "Khan Yunis Massacre",
   "url": "https://palgenopedia.org/historical-events/massacres/khan-yunis-massacre/",
   "datePublished": "1956-11-03",
-  "dateModified": "2026-08-24",
+  "dateModified": "2026-08-27",
   "inLanguage": "en",
   "about": {
     "@type": "Event",
     "name": "Khan Yunis Massacre",
     "startDate": "1956-11-03",
+    "endDate": "20771",
     "description": "During Israeli occupation of Gaza in Suez Crisis",
     "location": {
       "@type": "Place",
@@ -215,8 +216,8 @@
       "name": "Deaths",
       "propertyID": "casualties/deaths",
       "value": "275-525",
-      "minValue": -525,
-      "maxValue": 275
+      "minValue": 275,
+      "maxValue": 525
     },
     {
       "@type": "PropertyValue",
