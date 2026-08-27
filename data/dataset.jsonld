@@ -5,8 +5,8 @@
   "name": "PalGenoPedia Documented Events Dataset",
   "description": "Open documentation of verified war crimes, massacres, and humanitarian violations concerning Palestine, 1948–present. Every figure carries provenance and a verification status. Canonical machine-readable source for PalGenoPedia.",
   "url": "https://palgenopedia.org/data/events.json",
-  "datePublished": "2026-08-27",
-  "dateModified": "2026-08-27",
+  "datePublished": "2026-08-28",
+  "dateModified": "2026-08-28",
   "inLanguage": "en",
   "creator": {
     "@type": "Organization",

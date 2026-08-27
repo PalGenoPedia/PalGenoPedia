@@ -72,7 +72,7 @@ class DualTimelineManager {
 
         // The timeline page itself — current-genocide incidents have no record
         // page yet, so they resolve here via #event/<id> hash routing.
-        this.timelinePage = '/historical-events/massacres/timeline.html';
+        this.timelinePage = '/historical-events/massacres/';
 
         // Approximate region centroids for broad, multi-location historical
         // events that don't have a single location_lat/location_lng in

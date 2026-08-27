@@ -1,0 +1,442 @@
+/* ===== DUAL TIMELINE SPECIFIC STYLES ===== */
+
+/* Timeline Mode Selector */
+.timeline-mode-selector {
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-lg);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-md);
+}
+
+.mode-selector-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.mode-selector-header h3 {
+    color: var(--text-primary);
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.mode-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.mode-btn {
+    background: var(--bg-secondary);
+    border: 2px solid var(--border-color);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition-base);
+    text-align: center;
+}
+
+.mode-btn:hover {
+    border-color: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+}
+
+.mode-btn.active {
+    border-color: var(--accent-color);
+    background: linear-gradient(135deg, rgba(220, 53, 69, 0.1), rgba(220, 53, 69, 0.05));
+    box-shadow: var(--shadow-md);
+}
+
+.mode-btn.historical.active {
+    border-color: #6c757d;
+    background: linear-gradient(135deg, rgba(108, 117, 125, 0.1), rgba(108, 117, 125, 0.05));
+}
+
+.mode-btn.current.active {
+    border-color: #dc3545;
+    background: linear-gradient(135deg, rgba(220, 53, 69, 0.1), rgba(220, 53, 69, 0.05));
+}
+
+.mode-btn.both.active {
+    border-color: #0d6efd;
+    background: linear-gradient(135deg, rgba(13, 110, 253, 0.1), rgba(13, 110, 253, 0.05));
+}
+
+.mode-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.mode-label {
+    font-weight: 600;
+    color: var(--text-primary);
+    display: block;
+    margin-bottom: 0.25rem;
+    font-size: 1rem;
+}
+
+.mode-period {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.mode-stats {
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--border-light);
+}
+
+.mode-stat {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.25rem;
+}
+
+.mode-stat strong {
+    color: var(--accent-color);
+    font-weight: 700;
+}
+
+/* Enhanced Filters */
+.advanced-filters {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.filter-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.filter-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.casualty-scale-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.scale-chip {
+    background: var(--bg-tertiary);
+    border: 2px solid transparent;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: var(--transition-base);
+    white-space: nowrap;
+}
+
+.scale-chip:hover {
+    border-color: var(--secondary-color);
+}
+
+.scale-chip.active {
+    background: var(--secondary-color);
+    color: white;
+    border-color: var(--secondary-color);
+}
+
+/* Timeline Statistics Dashboard */
+.timeline-stats-dashboard {
+    background: linear-gradient(135deg, var(--bg-secondary), var(--bg-tertiary));
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-lg);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-md);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+}
+
+.stat-card {
+    background: var(--surface-color);
+    border: 1px solid var(--border-light);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    text-align: center;
+    transition: var(--transition-base);
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+}
+
+.stat-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    margin-bottom: 0.25rem;
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.stat-sublabel {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-top: 0.25rem;
+}
+
+/* Period Comparison */
+.period-comparison {
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    margin-top: 1rem;
+}
+
+.comparison-header {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.comparison-card {
+    background: var(--bg-secondary);
+    border-left: 4px solid var(--accent-color);
+    padding: 1rem;
+    border-radius: var(--border-radius-sm);
+}
+
+.comparison-card.historical {
+    border-left-color: #6c757d;
+}
+
+.comparison-card.current {
+    border-left-color: #dc3545;
+}
+
+.comparison-title {
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.comparison-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.comparison-stat {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    display: flex;
+    justify-content: space-between;
+}
+
+.comparison-stat strong {
+    color: var(--text-primary);
+}
+
+/* Event Type Legend */
+.event-type-legend {
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.legend-title {
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+    font-size: 0.9rem;
+}
+
+.legend-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+}
+
+.legend-color {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 2px solid white;
+    box-shadow: var(--shadow-sm);
+}
+
+/* Data Source Badge */
+.data-source-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(13, 110, 253, 0.1);
+    color: #0d6efd;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: 1px solid rgba(13, 110, 253, 0.3);
+}
+
+/* Clarifies the stats-grid totals are a documented-incidents sum, not
+   an independent whole-war figure - see STATS_RECONCILIATION.md. */
+.stats-scope-note {
+    font-size: 0.8rem;
+    color: var(--text-secondary, #6c757d);
+    text-align: center;
+    max-width: 42rem;
+    margin: 0.75rem auto 0;
+    line-height: 1.5;
+}
+.stats-scope-note a { color: inherit; text-decoration: underline; }
+
+/* Loading States */
+.timeline-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    text-align: center;
+}
+
+.loading-spinner {
+    width: 60px;
+    height: 60px;
+    border: 6px solid var(--border-color);
+    border-top: 6px solid var(--accent-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 1.5rem;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loading-message {
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.loading-detail {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .mode-buttons {
+        grid-template-columns: 1fr;
+    }
+
+    .comparison-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .filter-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===== STICKY SUB-HEADER ===== */
+/*
+ * header-component.js injects .sub-header directly after .header.
+ * We override its top value here using --header-height which is set
+ * dynamically by JS below once the header renders.
+ * The fallback (64px) covers the common header height.
+ */
+.sub-header {
+    position: sticky !important;
+    top: var(--header-height, 64px) !important;
+    z-index: 99;
+    background: var(--surface-color);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* ── Static (no-JS / crawler) event list inside #timeline-embed ──
+   dual-timeline-manager.js empties #timeline-embed and rebuilds it on load;
+   this is what a crawler or a JS-disabled visitor sees. */
+.timeline-static { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.75rem; }
+.timeline-static .ts-item a {
+    display: block; padding: 1rem 1.15rem; text-decoration: none;
+    background: var(--surface-color, #fff); color: var(--text-primary, #1a1a2e);
+    border: 1px solid var(--border-color, #e2e8f0);
+    border-left: 4px solid var(--primary-red, #dc2626); border-radius: 10px;
+    transition: background .15s, transform .1s;
+}
+.timeline-static .ts-item a:hover { background: var(--bg-secondary, #f8fafc); transform: translateX(2px); }
+.timeline-static .ts-date { display: inline-block; font-weight: 700; font-size: 0.78rem;
+    text-transform: uppercase; letter-spacing: 0.04em; color: var(--primary-red, #dc2626); margin-right: 0.6rem; }
+.timeline-static .ts-title { font-weight: 700; }
+.timeline-static .ts-badge { display: inline-block; margin-left: 0.5rem; padding: 0.1rem 0.5rem;
+    font-size: 0.68rem; font-weight: 700; text-transform: uppercase; border-radius: 4px;
+    background: rgba(220,38,38,0.12); color: var(--primary-red, #dc2626); }
+.timeline-static .ts-meta { display: block; margin-top: 0.35rem; font-size: 0.82rem; color: var(--text-secondary, #64748b); }
+.timeline-static .ts-summary { display: block; margin-top: 0.4rem; font-size: 0.9rem; line-height: 1.55; color: var(--text-secondary, #64748b); }

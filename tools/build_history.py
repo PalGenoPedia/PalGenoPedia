@@ -41,7 +41,7 @@ HUB = "/Pages/Historical_Massacres/massacres.html"
 # The interactive Timeline / Map / List page, moved under this section
 # 2026-08-27 (was /major-incidents-timeline.html). The section index links
 # to it; it links back to these record pages for each historical event.
-TIMELINE_PAGE = "/historical-events/massacres/timeline.html"
+TIMELINE_PAGE = "/historical-events/massacres/"
 
 LABEL = {"en": "Historical Massacres",
          "de": "Historische Massaker",
@@ -503,18 +503,58 @@ def render_event(ev, details, slugs, lang):
     return B.CRLF.join(L) + B.CRLF
 
 
-def render_index(events, by_event, slug_map, lang):
-    e = B.e
-    t = T[lang]
-    canonical = B.BASE_URL + B.url_quote(section_index_path(lang))
-    alts = [(l2, B.BASE_URL + B.url_quote(section_index_path(l2))) for l2 in B.LANGS]
-    alts.append(("x-default", B.BASE_URL + B.url_quote(section_index_path("en"))))
-    alts_rel = [(l2, B.url_quote(section_index_path(l2))) for l2 in B.LANGS]
+TIMELINE_SHELL = open(os.path.join(ROOT, "partials", "timeline-shell.html"),
+                      encoding="utf-8").read().replace("\r\n", "\n")
 
+
+def _static_list(events, slug_map, lang):
+    """No-JS / crawler baseline inside #timeline-embed until
+    dual-timeline-manager.js replaces it: a chronological list, each event
+    linking to its own generated record page."""
+    e, a_ = B.e, B.clean
+    t = T[lang]
+    out = ['<ol class="timeline-static">']
+    for ev in sorted(events, key=lambda x: a_(x.get("date_start"))):
+        eid = a_(ev.get("id"))
+        nm = a_(ev.get("event_name"))
+        etype = B.get_field(ev, "event_type", lang) or a_(ev.get("event_type"))
+        classif = B.get_field(ev, "classification", lang) or a_(ev.get("classification"))
+        paras = summary_paragraphs(ev, lang)
+        cas = " \u00b7 ".join(
+            "%s %s" % (e(a_(ev.get(c))), e(lbl))
+            for c, lbl in (("deaths", t["deaths"]), ("forced_displacement", t["displaced"]))
+            if a_(ev.get(c)) and a_(ev.get(c)) != "0")
+        out.append(
+            '<li class="ts-item"><a href="%s">'
+            '<span class="ts-date">%s</span>'
+            '<span class="ts-title">%s</span>%s%s%s</a></li>' % (
+                B.url_quote(rel_url(slug_map[eid][lang], lang)),
+                e(event_date(ev)), e(nm),
+                ('<span class="ts-badge">%s</span>' % e(classif.split(";")[0].strip())) if classif else "",
+                ('<span class="ts-meta">%s%s</span>' % (e(etype), (" \u00b7 " + cas) if cas else "")) if (etype or cas) else "",
+                ('<span class="ts-summary">%s</span>' % e(paras[0])) if paras else ""))
+    out.append("</ol>")
+    return "\n".join(out)
+
+
+def render_index(events, by_event, slug_map, lang):
+    canonical = B.BASE_URL + B.url_quote(section_index_path(lang))
     title = "%s | %s" % (INDEX_TITLE[lang], B.SITE)
     desc = INDEX_DESC[lang].format(n=len(events))
+    ev_sorted = sorted(events, key=lambda x: B.clean(x.get("date_start")))
 
-    block = {
+    itemlist = {
+        "@context": "https://schema.org", "@type": "ItemList",
+        "name": INDEX_TITLE[lang], "numberOfItems": len(events),
+        "itemListElement": [
+            {"@type": "ListItem", "position": i,
+             "item": {"@type": "Event", "name": B.clean(ev.get("event_name")),
+                      "startDate": B.clean(ev.get("date_start"))[:10],
+                      "url": B.BASE_URL + B.url_quote(
+                          rel_url(slug_map[B.clean(ev.get("id"))][lang], lang))}}
+            for i, ev in enumerate(ev_sorted, 1)],
+    }
+    collection = {
         "@context": "https://schema.org", "@type": "CollectionPage",
         "@id": canonical + "#page", "url": canonical, "name": INDEX_TITLE[lang],
         "description": desc, "inLanguage": lang,
@@ -523,67 +563,36 @@ def render_index(events, by_event, slug_map, lang):
     crumbs = {
         "@context": "https://schema.org", "@type": "BreadcrumbList",
         "itemListElement": [
-            {"@type": "ListItem", "position": 1, "name": t["home"],
+            {"@type": "ListItem", "position": 1, "name": T[lang]["home"],
              "item": B.BASE_URL + ("/" if lang == "en" else "/%s/" % lang)},
             {"@type": "ListItem", "position": 2, "name": LABEL[lang], "item": canonical},
         ],
     }
 
-    L = B.head_common(title, desc, canonical, alts, B.OG_IMAGE, B.INDEXABLE, lang)
-    for blk in (block, crumbs):
-        L.append('<script type="application/ld+json">')
-        L.append(json.dumps(blk, ensure_ascii=False, indent=2))
-        L.append("</script>")
-    L.append("</head>")
-    L.append('<body class="rp-hist rp-hist-index"%s>' % (' dir="rtl"' if lang in B.RTL else ""))
-    L.extend(B.site_header(lang, alts_rel, t, "/historical-events/"))
-    L.extend(B.page_subheader(LABEL[lang], desc, None, None, None))
+    head = ['    <link rel="canonical" href="%s">' % canonical]
+    for l2 in list(B.LANGS) + ["x-default"]:
+        tgt = section_index_path("en" if l2 == "x-default" else l2)
+        head.append('    <link rel="alternate" hreflang="%s" href="%s">'
+                    % (l2, B.BASE_URL + B.url_quote(tgt)))
+    head += ['    <meta name="robots" content="%s">' % B.INDEXABLE,
+             '    <meta property="og:type" content="website">',
+             '    <meta property="og:title" content="%s">' % B.e(title),
+             '    <meta property="og:description" content="%s">' % B.e(desc),
+             '    <meta property="og:url" content="%s">' % canonical,
+             '    <meta property="og:image" content="%s">' % B.OG_IMAGE]
+    for blk in (collection, crumbs, itemlist):
+        head.append('    <script type="application/ld+json">')
+        head.append(json.dumps(blk, ensure_ascii=False, indent=2))
+        head.append('    </script>')
 
-    total_details = sum(len(by_event.get(B.clean(x.get("id")), [])) for x in events)
-    L.extend(B.stats_strip([(len(events), t["events"]),
-                            (total_details, t["details"])]))
-
-    a = L.append
-    a('<div class="container" style="padding-top:1.75rem">')
-    a('<a class="rp-hist-timeline-cta" href="%s">%s</a>'
-      % (B.url_quote(TIMELINE_PAGE), e(t["timeline_cta"])))
-    a('<h2 class="detail-section-title">%s</h2>' % e(t["all_events"]))
-    a('<div class="cards-grid">')
-    for ev in sorted(events, key=lambda x: B.clean(x.get("date_start"))):
-        eid = B.clean(ev.get("id"))
-        nm = B.clean(ev.get("event_name"))
-        etype = B.get_field(ev, "event_type", lang) or B.clean(ev.get("event_type"))
-        classif = B.get_field(ev, "classification", lang) or B.clean(ev.get("classification"))
-        place = B.get_field(ev, "location_historical", lang) or B.clean(ev.get("location_historical"))
-        paras = summary_paragraphs(ev, lang)
-        a('<a class="card rec-card" href="%s">'
-          % B.url_quote(rel_url(slug_map[eid][lang], lang)))
-        if classif:
-            # the classification is the first thing the interactive archive
-            # shows, and it is the thing that makes the card worth opening
-            a('<span class="rec-badge">%s</span>' % e(classif.split(";")[0].strip()))
-        a('<div class="card-header"><h3 class="card-title">%s</h3></div>' % e(nm))
-        if place:
-            a('<div class="card-sub">&#128205; %s</div>' % e(place))
-        a('<div class="card-sub">&#128197; %s</div>'
-          % e(" · ".join([x for x in (event_date(ev), etype) if x])))
-        a('<div class="university-quick-facts">')
-        for col, lbl in (("deaths", t["deaths"]), ("injured", t["injured"]),
-                         ("forced_displacement", t["displaced"])):
-            v = B.clean(ev.get(col))
-            a('<div class="quick-fact"><div class="quick-fact-value">%s</div>'
-              '<div class="quick-fact-label">%s</div></div>'
-              % (e(v) if v else "\u2014", e(lbl)))
-        a("</div>")
-        if paras:
-            a('<div class="card-excerpt">%s</div>' % e(paras[0]))
-        a("</a>")
-    a("</div>")
-    a("</div>")
-    a('<script src="/js/record-page.js?v=5" defer></script>')
-    a("</body>")
-    a("</html>")
-    return B.CRLF.join(L) + B.CRLF
+    page = (TIMELINE_SHELL
+            .replace("{{LANG}}", lang)
+            .replace("{{DIR}}", ' dir="rtl"' if lang in B.RTL else "")
+            .replace("{{TITLE}}", B.e(title))
+            .replace("{{DESC}}", B.e(desc))
+            .replace("{{HEAD_EXTRA}}", "\n".join(head))
+            .replace("{{STATIC_LIST}}", _static_list(events, slug_map, lang)))
+    return page.replace("\n", B.CRLF)
 
 
 # ── build ───────────────────────────────────────────────────────────────

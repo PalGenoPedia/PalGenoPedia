@@ -892,7 +892,7 @@ SITE_NAV = (
     ("/war-crimes/", "nav.warCrimes", "\u2696\ufe0f War Crimes", True),
     ("/hunger-crisis-stats.html", "nav.hungerCrisis", "\U0001F37D\ufe0f Hunger Crisis", False),
     ("/historical-events/", "nav.historical", "\U0001F4DC History", False),
-    ("/historical-events/massacres/timeline.html", "nav.timeline", "\U0001F4CB Timeline", False),
+    ("/historical-events/massacres/", "nav.timeline", "\U0001F4CB Timeline", False),
     ("/volunteer.html", "nav.joinUs", "\U0001F91D Join Us", False),
 )
 LANG_NAMES = {"en": ("EN", "English"), "de": ("DE", "Deutsch"), "ar": ("AR", "\u0627\u0644\u0639\u0631\u0628\u064a\u0629")}

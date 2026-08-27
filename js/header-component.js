@@ -46,7 +46,7 @@
         if (/^\/war-crimes(\/|$)/.test(window.location.pathname)) return 'war-crimes';
         if (filename === 'hunger-crisis-stats.html')           return 'hunger-crisis';
         if (/^\/historical-events\/ethnic-cleansing(\/|$)/.test(window.location.pathname)) return 'ethnic-cleansing';
-        if (/\/historical-events\/massacres\/timeline\.html$/.test(window.location.pathname)) return 'timeline';
+        if (/\/historical-events\/massacres\/(index\.html)?$/.test(window.location.pathname)) return 'timeline';
         if (/^\/historical-events(\/|$)/.test(window.location.pathname)) return 'historical';
         if (filename === 'major-incidents-timeline.html')      return 'timeline';
         if (filename === 'volunteer.html')                     return 'volunteer';
@@ -86,7 +86,7 @@
                data-i18n="common.nav.hungerCrisis">🍽️ Hunger Crisis</a>
             <a href="${rootPath('historical-events/')}"${activeIf('historical')}
                data-i18n="common.nav.historical">📜 History</a>
-            <a href="${rootPath('historical-events/massacres/timeline.html')}"${activeIf('timeline')}
+            <a href="${rootPath('historical-events/massacres/')}"${activeIf('timeline')}
                data-i18n="common.nav.timeline">📋 Timeline</a>
             <a href="${rootPath('volunteer.html')}" class="nav-btn join-us-btn"
                data-i18n="common.nav.joinUs">🤝 Join Us</a>`;

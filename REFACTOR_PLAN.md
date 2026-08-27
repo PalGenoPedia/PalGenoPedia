@@ -489,3 +489,32 @@ the moved timeline path).
 
 DONE: DE/AR rows for the 10 `curr_` events are synced; the Apps Script token
 was removed.
+
+---
+
+## 13. Timeline IS the massacres index — applied 2026-08-28
+
+The generated card grid at `/historical-events/massacres/` is gone; the
+interactive Timeline / Map / List (was `timeline.html`) is now that URL.
+
+- `partials/timeline-shell.html` — the interactive skeleton, extracted from
+  the old hand-authored page (inline `<style>` → `Styles/timeline.css`).
+  Placeholders: `{{LANG}} {{DIR}} {{TITLE}} {{DESC}} {{HEAD_EXTRA}} {{STATIC_LIST}}`.
+- `build_history.py` `render_index()` fills the shell per language: a proper
+  `<head>` (canonical, hreflang, OG, `CollectionPage` + `BreadcrumbList` +
+  `ItemList` JSON-LD) and a static `<ol class="timeline-static">` of every
+  event inside `#timeline-embed`. `dual-timeline-manager.js` (`?v=6`) empties
+  that container and rebuilds it on load — the list is the no-JS / crawler
+  baseline.
+- `historical-events/massacres/timeline.html` + `/major-incidents-timeline.html`
+  → redirect stubs to `/historical-events/massacres/`.
+- Rewired: nav (`header-component.js`, `build_records.py` `SITE_NAV`),
+  `partials/site-footer.html`, `index.html`, `volunteer.html`, `404.html`,
+  `regenerate.py` `TIMELINE`, `seo_inject.py` (dropped the timeline from
+  `SECTION_OF`; removed the now-dead `event_items` injection).
+- Docs: `PIPELINE.md`, `DEPLOY.md`, `STATS_RECONCILIATION.md` rewritten to the
+  current pipeline (5-tool CI chain, CSV-canonical, timeline-as-index).
+
+Verified locally: `/historical-events/massacres/` loads 17+10 events, sub-nav
++ mode selector work, no console errors, old URLs redirect, record pages'
+"Timeline" nav points here, all 3 languages generate.

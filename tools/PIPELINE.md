@@ -3,7 +3,7 @@
 How data gets from a Google Sheet to an indexed page. Written as handoff
 context — paste it into a new session before asking for changes.
 
-Last verified: 2026-08-24.
+Last verified: 2026-08-28.
 
 ---
 
@@ -18,15 +18,20 @@ _de / _ar tabs  (GOOGLETRANSLATE + VLOOKUP — fully derived, nothing typed)
     │
     │  ② Apps Script: syncAll()  → GitHub Contents API
     ▼
-CSV files committed to the repo
+CSV files committed to main
     │
-    │  ③ GitHub Actions: build-records.yml
-    │     build_records.py  → facility records
-    │     build_history.py  → historical events
+    │  ③ GitHub Actions: build-records.yml, on any push touching a CSV
+    │     build_records.py   → war-crimes facility records + data/record-pages.json
+    │     build_history.py   → historical + current-genocide event records
+    │                          + the timeline (= the massacres section index)
+    │     regenerate.py      → data/events.json + .csv + .ndjson, JSON-LD, feeds
+    │     seo_inject.py      → the <head> SEO block on every hand-authored page
+    │     build_sitemap.py   → sitemap.xml
+    │  → commits the whole regenerated output back to main
     ▼
-453 static HTML pages + sitemap.xml, committed back to main
+static HTML + data/ + feeds + sitemap
     │
-    │  ④ GitHub Pages
+    │  ④ GitHub Pages redeploys from that commit
     ▼
 palgenopedia.org
 ```
@@ -35,6 +40,13 @@ Nothing is compiled at request time. **What is committed is exactly what is
 served.** There is no bundler, no framework, no server. Every path in a page
 resolves at runtime relative to that *page*, not to the file the string was
 written in.
+
+**The Sheet is the only thing anyone edits.** Every `.html`, everything under
+`data/`, the feeds and the sitemap are regenerated from the CSVs by the
+Action and must never be hand-edited — the next run overwrites them. The
+hand-authored surfaces are a fixed ~19-page set (the two hubs, the six
+war-crimes stat pages, hunger-crisis-stats, methodology, volunteer, 404, the
+translation JSON) plus the redirect stubs.
 
 ---
 
@@ -50,12 +62,13 @@ written in.
 Each workbook also holds four translation tabs: `<base>_de` and `<base>_ar`
 for both facilities and incidents.
 
-A fifth workbook holds the historical events, on a different data model —
-see **⑤ Historical events** below.
+A fifth workbook holds the historical + current-genocide events, on a
+different data model — see **⑤ Historical events** below. It **is** in the
+Apps Script `SPREADSHEETS` config now and syncs like the rest.
 
 | section | spreadsheet ID | events tab | details tab |
 |---|---|---|---|
-| Historical events | `1fTNCpO6vhsRZz_OrHNs7b4B7aVotfcA0XH8yygybkPo` | `events` | `details` |
+| Historical events | `1fTNCpO6vhsRZz_OrHNs7b4B7aVotfcA0XH8yygybkPo` | `Events` | `Details` |
 
 **Two spelling traps, both load-bearing:**
 
@@ -104,24 +117,25 @@ The `_de` and `_ar` tabs pull each field by lookup and run it through
 `GOOGLETRANSLATE`. Measured coverage is **100.0% with zero untranslated
 cells** across ~1,100 cells — that is a formula signature, not hand work.
 
-**Therefore the translation join cannot drift.** When a base id shifts, the
-translation shifts with it, because both regenerate together on every
-recalculation. This was verified, and it is why no stable key is needed there.
+**For the facility sheets the translation join cannot drift.** When a base id
+shifts, the translation shifts with it, because both regenerate together on
+every recalculation. That is why no stable key is needed there. The `_anchor`
+column in the *facility* translation tabs is the facility **name** — a
+readability helper, not a key.
 
-Two things to know:
-
-- The `_de`/`_ar` tabs generate their own `incident_id` as `INC-{their own row
-  number}`, independently of the base. They agree today only because both
-  sequences are dense. The `_de` tab already emits `INC-376`/`INC-377`, which
-  exist in no base row.
-- The `_anchor` column in those tabs is the facility **name** — a readability
-  helper, not a key (308 incident rows share 37 values). `dual-timeline-manager.js`
-  skips it explicitly.
+**The historical workbook is different — its translation tabs DO drift, and
+`_anchor` IS the join key there.** `Events_de` / `Details_de` (and `_ar`)
+carry a self-counting `id` / `detail_id` formula that fell ~28 rows behind the
+base once the 80 current-genocide detail rows were added — base `DET-1291`
+then matched a delta row holding the translation of `DET-1256`, and current
+events briefly showed German text from unrelated events. Those tabs carry an
+`_anchor` column holding the **base id verbatim** (1370/1370 coverage), and
+`build_history.py` joins on it:
+`merge_translations(..., trans_key="_anchor")`. Do not revert that.
 
 **If you ever hand-correct a translation**, that cell becomes the only copy of
-that text and needs a stable anchor. Do it in a separate overrides tab keyed on
-a pasted `uid`, not by typing into the derived sheet — a formula uid re-derives
-and follows the drift while the typed text sits still.
+that text and needs a stable anchor — do it in a separate overrides tab keyed
+on `_anchor`, not by typing into the derived sheet.
 
 ---
 
@@ -168,32 +182,28 @@ GET /repos/PalGenoPedia/PalGenoPedia -> 200  push permission: true
 `401` = expired. `200 /user` + `404` repo = fine-grained token not granted
 this repo.
 
-### Gap: the historical workbook is not in `SPREADSHEETS`
+### The historical workbook (in the sync since 2026-08-27)
 
-`Pages/Historical_Massacres/*.csv` were last auto-synced on **2026-06-14** and
-the historical spreadsheet is absent from the `SPREADSHEETS` array. Editing
-that sheet today changes nothing in the repo. The generator and the workflow
-are both wired and waiting; only the export leg is missing. Add:
+One block in `SPREADSHEETS`, on the same Hospitals Apps Script project:
 
 ```javascript
-  // ── HISTORICAL EVENTS ──────────────────────────────────────
   {
     id: '1fTNCpO6vhsRZz_OrHNs7b4B7aVotfcA0XH8yygybkPo',
     sheets: {
-      'events':  'Pages/Historical_Massacres/events.csv',
-      'details': 'Pages/Historical_Massacres/details.csv',
+      'Events':  'Pages/Historical_Massacres/events.csv',
+      'Details': 'Pages/Historical_Massacres/details.csv',
     },
     translationSheets: {
-      'events_de':  'Pages/Historical_Massacres/events_de.csv',
-      'events_ar':  'Pages/Historical_Massacres/events_ar.csv',
-      'details_de': 'Pages/Historical_Massacres/details_de.csv',
-      'details_ar': 'Pages/Historical_Massacres/details_ar.csv',
+      'Events_de':  'Pages/Historical_Massacres/events_de.csv',
+      'Events_ar':  'Pages/Historical_Massacres/events_ar.csv',
+      'Details_de': 'Pages/Historical_Massacres/details_de.csv',
+      'Details_ar': 'Pages/Historical_Massacres/details_ar.csv',
     }
   },
 ```
 
-Check the tab names against the workbook before pasting — the paths are
-confirmed from the June commits, the tab names are inferred from them.
+Editing that sheet + `syncAll()` now publishes the generated event pages, the
+timeline, **and** `data/events.json` + the feeds + JSON-LD (see ④).
 
 ---
 
@@ -206,38 +216,49 @@ Fires on push to `main` touching:
 ```
 Pages/War_Crimes_Stats/**/*.csv
 Pages/Historical_Massacres/*.csv
-tools/build_records.py
-tools/build_sitemap.py
-js/record-page.js
-Styles/record-page.css
+tools/build_records.py   tools/build_history.py   tools/build_sitemap.py
+tools/regenerate.py      tools/seo_inject.py
+js/record-page.js        Styles/record-page.css
 ```
 
-Runs `build_records.py` then `build_sitemap.py`, commits the result back to
-`main`, which redeploys Pages.
+Runs the five generators **in this order** (each reads the previous one's
+output), then commits everything back to `main`:
 
-`concurrency: cancel-in-progress: true` — `syncAll()` makes up to 24 commits
-per sync and each fires the workflow. Only the last matters; the build is a
-full regeneration from the CSVs.
+```
+build_records.py  →  build_history.py  →  regenerate.py  →  seo_inject.py  →  build_sitemap.py
+```
+
+`concurrency: cancel-in-progress: true` — a sync makes many commits and each
+fires the workflow; only the last matters, every run is a full regeneration.
 
 ### The tools
 
-| script | reads | writes |
-|---|---|---|
-| `tools/build_records.py` | the facility CSVs | `war-crimes/**`, `tools/_records_manifest.json`, `data/record-pages.json` |
-| `tools/build_history.py` | the historical CSVs | `historical-events/massacres/**`, `tools/_history_manifest.json` |
-| `tools/build_sitemap.py` | served pages + both manifests | `sitemap.xml` |
-| `tools/seo_inject.py` | hand-authored pages | marker-delimited `<head>` block in each |
-| `tools/regenerate.py` | `data/events.json` | JSON-LD layer, `feed.xml`, `feed.rss` |
-| `tools/tree_gen.py` | the repo | `tools/tree_map.txt` |
+| # | script | reads | writes |
+|---|---|---|---|
+| 1 | `build_records.py` | facility CSVs | `war-crimes/**`, `_records_manifest.json`, `data/record-pages.json` |
+| 2 | `build_history.py` | `Pages/Historical_Massacres/{events,details}.csv` (+ `_de`/`_ar`), `partials/timeline-shell.html` | `historical-events/massacres/**` — one record page per event (1948→present) + the timeline at `massacres/{,/de,/ar}/index.html`; `_history_manifest.json` |
+| 3 | `regenerate.py` | the same historical CSVs + `_history_manifest.json` | **`data/events.json`** + `data/events.csv` + `data/events.ndjson`, `data/*.jsonld`, `data/jsonld/**`, `feed.xml`, `feed.rss` |
+| 4 | `seo_inject.py` | `data/events.json` + hand-authored pages | marker-delimited `<head>` block (canonical, OG, feed links, JSON-LD) in each hand-authored page |
+| 5 | `build_sitemap.py` | served pages + both manifests | `sitemap.xml` |
+| — | `tree_gen.py` | the repo | `tools/tree_map.txt` (not in CI) |
 
-All stdlib-only, all idempotent. Run locally with:
+All stdlib-only, all idempotent. Whole chain locally:
 
 ```bash
-python tools/build_records.py && python tools/build_history.py && python tools/build_sitemap.py
+python tools/build_records.py && python tools/build_history.py && \
+python tools/regenerate.py && python tools/seo_inject.py && python tools/build_sitemap.py
 ```
 
-`--check` reports without writing. `--reslug` forces new slugs (breaks live
-URLs — only with intent). `--only <section>` limits the run.
+`--check` reports without writing (`build_records`, `build_history`,
+`seo_inject`). `--reslug` forces new slugs (breaks live URLs). `--only <section>`
+limits `build_records`.
+
+**`data/events.json` is an OUTPUT.** It used to be the hand-maintained
+canonical source. Since 2026-08-27 the CSVs are canonical and `regenerate.py`
+*builds* it — deriving `period` (date ≥ `2023-10-07` → `current`), casualty
+`min`/`max`/`estimate` from the raw strings, `sources[]` + `war_crimes[]` from
+`details.csv`, `verification_status` hardcoded `"verified"`, dataset metadata
+from constants in the script.
 
 ### Adding a section
 
@@ -286,7 +307,9 @@ direct URL — see **Pages/ is now developer-only** below.
 /war-crimes/<section>/de/{tab}/               tabs per language
 ```
 
-Plus six hand-authored, API-driven pages sharing the same scheme:
+Plus six hand-authored, API-driven pages sharing the same scheme (and one
+more hand-authored surface, `/hunger-crisis-stats.html`, reached from the
+nav's Hunger Crisis link):
 
 ```
 /war-crimes/civilian-casualties/     /war-crimes/journalists-killed/
@@ -306,21 +329,25 @@ And the historical half:
 ```
 /historical-events/                            hub (was historical-events.html)
 /historical-events/ethnic-cleansing/           418 villages, one page, not generated
-/historical-events/massacres/                  generated section index
-/historical-events/massacres/<slug>/           event, EN
-/historical-events/massacres/{de,ar}/<slug>/   event, DE / AR
-/historical-events/massacres/timeline.html     interactive Timeline/Map/List, hand-authored
-                                               (was /major-incidents-timeline.html, moved 2026-08-27)
+/historical-events/massacres/                  the interactive Timeline / Map / List
+                                               — this IS the section index (generated)
+/historical-events/massacres/{de,ar}/          same, DE / AR
+/historical-events/massacres/<slug>/           event record page, EN
+/historical-events/massacres/{de,ar}/<slug>/   event record page, DE / AR
+/historical-events/massacres/timeline.html     redirect stub → /historical-events/massacres/
+                                               (old /major-incidents-timeline.html also stubs here)
 /historical-events/testimonies/                hand-authored, self-contained (no data/ folder)
 ```
 
-`massacres/timeline.html` is a **file**, not a directory index, on purpose:
-`build_history.py`'s pruner walks `historical-events/massacres/<entry>/index.html`
-and removes anything not in its manifest — a `timeline/` dir would be deleted
-on the next build, a bare `.html` file is left alone. It is hand-authored
-(loads `js/dual-timeline-manager.js`), `seo_inject.py` stamps its head, and it
-links to the generated `<slug>/` record pages for each historical event. The
-section index links to it via a CTA (`build_history.py` `timeline_cta`).
+**The timeline is the section index (since 2026-08-28).** `build_history.py`
+`render_index()` fills `partials/timeline-shell.html` (the interactive
+Timeline/Map/List skeleton, extracted from the old hand-authored page) with a
+per-language `<head>` and a **static `<ol class="timeline-static">` of every
+event** inside `#timeline-embed`. `dual-timeline-manager.js` empties that
+container and rebuilds it on load — the static list is the no-JS / crawler
+baseline. The old card grid is gone. `timeline-shell.html` lives under
+`partials/` so `seo_inject.py` / `build_sitemap.py` skip it; the generated
+`index.html` carries its own canonical + `ItemList` JSON-LD.
 
 `testimonies/` moved from `Pages/quotes-archive-page.html` on 2026-08-24 — the
 last live, indexed page still sitting under `Pages/`. It has no CSV or shared
@@ -338,18 +365,17 @@ Incident deep links: `…/<slug>/#incident-2025-08-02-artillery-shelling`
 
 ### Current output
 
-| section | facilities | incidents | pages | indexable |
+| section | facilities / events | incidents / details | pages | indexable |
 |---|---|---|---|---|
-| hospitals | 49 | 309 | 162 | 123 |
-| universities | 13 | 50 | 54 | 51 |
-| schools | 27 | 2 | 96 | 18 |
-| religious-sites | 20 | 25 | 75 | 60 |
-| massacres | 17 events | 1,290 details | 54 | 54 |
-| | | | **453** | |
+| hospitals | ~51 | ~308 | ~168 | ~123 |
+| universities | ~13 | ~50 | ~54 | ~51 |
+| schools | ~27 | few | ~96 | ~18 |
+| religious-sites | ~20 | ~25 | ~75 | ~60 |
+| massacres | **27 events** (17 historical + 10 current-genocide) | ~1,370 details | 84 event pages + 3 timeline index pages | all |
 
-`sitemap.xml`: 337 URLs (14 static pages, 5 data files, 318 record pages) —
-excludes the 6 `NOINDEX_PATHS` entries under `Pages/` (see below) and every
-redirect stub.
+`sitemap.xml`: ~367 URLs (14 static, 5 data files, ~348 record pages) —
+excludes the `NOINDEX_PATHS` entries under `Pages/` and every redirect stub.
+Exact counts shift with the CSVs; the build prints them.
 
 Schools is mostly stubs on purpose — see *indexability* below.
 
@@ -358,28 +384,40 @@ Schools is mostly stubs on purpose — see *indexability* below.
 ## ⑤ Historical events
 
 A different data model, so a different generator. `build_records.py` renders a
-*facility* with a list of *incidents* — hero, incident cards, attack-type
-filters, casualty totals. An *event* has none of that: three summary
-paragraphs, four hero label/value pairs, and ~80 categorised prose blocks.
-
-`tools/build_history.py` imports `build_records` for the shell, header, slugs,
-escaping and CSV handling, so the two cannot drift. It owns only the render.
+*facility* with a list of *incidents*. An *event* is up to three summary
+paragraphs plus a set of categorised prose blocks. `build_history.py` imports
+`build_records` for the shell, header, slugs, escaping and CSV handling, so
+the two cannot drift. It owns the event render, the timeline index, and
+(indirectly, via `regenerate.py` reading the same CSVs) `data/events.json`.
 
 ### Data
 
-`events.csv` — 17 rows, 28 columns: `event_name` `event_type` `date_start`
-`date_end` `date_context` `deaths` `injured` `forced_displacement`
-`location_historical` `location_current` `perpetrators` `classification`,
-`summary_para_1..3`, and `hero_1..4_{label,value}`.
+`events.csv` — **27 rows** (17 historical `hist0NN` + 10 current-genocide
+`curr_0NN`, split by `date_start` ≥ `2023-10-07`). Columns:
+`id` `event_name` `event_type` `date_start` `date_end` `date_context`
+`deaths` `injured` `forced_displacement` `location_lat` `location_lng`
+`location_historical` `location_current` `perpetrators` `classification`
+`author` `summary_para_1..3`.
 
-`details.csv` — 1,290 real rows in ten categories, rendered in this order:
+- `id` is a **typed** column now (not a row-count formula) — `hist001`… and
+  `curr_001`… are load-bearing (feed GUIDs, `#event/<id>` anchors, the
+  translation `_anchor` join).
+- The old `hero_1..4_{label,value}` columns are **retired** — `build_history.py`
+  `hero_pairs()` computes the four-fact stat strip from the row (Date /
+  Location / Deaths / Displaced-or-Injured, truncated). `last_updated` is
+  also unused.
+- No `verification_status` column — hardcoded `"verified"` in `regenerate.py`.
+
+`details.csv` — ~1,370 real rows in ten categories, rendered in this order:
 `quick_fact` `casualty` `timeline` `testimony` `war_crime` `legal`
-`commander` `personality` `historical_impact` `source`. Each row is
-`heading_label` + `value`/`content` + `source`/`source_link`.
+`commander` `personality` `historical_impact` `source`. Columns:
+`detail_id` `event_id` `category` `order` `time` `heading_label` `value`
+`content` `source` `source_link`. Rendered as `.rp-card` lists (heading +
+body + 📰 source; `testimony` and `timeline` get their own card variant),
+mirroring the timeline modal.
 
-> `details.csv` exports ~6,000 blank padding rows past the last real one. A
-> row counts only when it has **both** an event id and a category — 1,290 real
-> of 7,302. Same padding pattern as the facility sheets.
+> Both CSVs export thousands of blank padding rows. A row counts only when it
+> has the required keys (`id` for events, `event_id` + `category` for details).
 
 ### Translation differs from the facility sheets
 
@@ -392,13 +430,13 @@ the data, not a bug.
 `event_name`, `perpetrators` and the hero label/value pairs are **not**
 translated and render in English on all three.
 
-### The interactive archive stays put
+### The old interactive archive
 
-`Pages/Historical_Massacres/massacres.html` keeps its URL. Its
-`#event/hist001` anchors are indexed and linked from `404.html`, and it lives
-beside the CSVs it reads. The generated pages are an additional canonical
-surface, reached from the hub; the archive sits behind the "← Interactive
-archive" back-link on every one of them.
+`Pages/Historical_Massacres/massacres.html` still exists (`noindex`, beside
+the CSVs) but nothing links to it any more — the generated timeline at
+`/historical-events/massacres/` superseded it. Safe to leave as a developer
+reference; its `#event/<id>` deep links in `404.html` were repointed at the
+generated record pages.
 
 ### Villages are deliberately not generated
 
@@ -501,9 +539,9 @@ must be written with the Write tool, not piped through a heredoc.
 **Cache-busting.** Changed JS/CSS gets `?v=N` bumped everywhere it is
 referenced. Currently: `footer-init.js?v=6`, `header-component.js?v=5`,
 `partials/site-footer.html?v=6` (was `common-styles.html`),
-`dual-timeline-manager.js?v=3`, `record-page.css?v=20`, `record-page.js?v=5`.
-`transferSize: 0` in `performance.getEntriesByType('resource')` proves a
-stale cached asset.
+`dual-timeline-manager.js?v=6`, `timeline.css?v=1`, `record-page.css?v=21`,
+`record-page.js?v=5`. `transferSize: 0` in
+`performance.getEntriesByType('resource')` proves a stale cached asset.
 
 **GitHub Pages cannot 301.** A moved page leaves a stub carrying a canonical
 to its replacement plus `<meta http-equiv="refresh">`. Never `noindex` a
@@ -521,11 +559,11 @@ which was right while only one generator existed. Pass `active_href` —
 `"/war-crimes/"` or `"/historical-events/"` — or the wrong tab lights up.
 
 **`seo_inject.py` must skip generated pages.** It walks the whole tree,
-including `war-crimes/` and `historical-events/massacres/`. Those pages
-already carry a canonical and JSON-LD from their generator; injecting would
-duplicate both and be discarded on the next build. It filters on the
-manifests — scope should be ~20 pages, not ~290. If that number jumps, the
-guard broke.
+including `war-crimes/` and `historical-events/massacres/` (record pages AND
+the timeline index). Those already carry a canonical and JSON-LD from their
+generator; injecting would duplicate both. It filters on the manifests (and
+skips `partials/` and redirect stubs) — scope should be ~19 pages, not ~290.
+If that number jumps, the guard broke.
 
 **The pruner only walks its own section.** `build_records.py` removes stale
 files inside `war-crimes/<seg>/` only, which is why hand-authored pages can
@@ -540,8 +578,9 @@ routinely. Do not hand-merge:
 
 ```bash
 git pull --rebase origin main
-# on conflict:
-python tools/build_records.py && python tools/build_sitemap.py
+# on conflict — regenerate the whole chain, then continue:
+python tools/build_records.py && python tools/build_history.py && \
+python tools/regenerate.py && python tools/seo_inject.py && python tools/build_sitemap.py
 git add -A && git rebase --continue
 ```
 
@@ -567,12 +606,20 @@ generated files churn between the two. Harmless, but it makes diffs noisy.
 - Eight `disabled: true` stat cards on the hub point at pages that do not
   exist yet (housing, industrial, ambulances, infrastructure, displacement,
   water systems, water tanks, siege violations).
-- **Historical workbook not in the sync** — see the gap under ③. This is the
-  one thing standing between editing that sheet and seeing it published.
-- **`hist004` (Qibya) `date_end` is `"19647"`** — it rendered as
-  `1953-10-14 – 19647`. The generator now drops a `date_end` that does not
-  parse, but the cell is still wrong.
+- **`hist004` (Qibya) `date_end` is `"19647"`** — the generator drops a
+  `date_end` that does not parse, but the cell is still wrong.
 - **Village spreadsheet** — planned separately; district pages once it has
   real prose.
+- **The 9 retired `Events` columns** (`hero_1..4_*`, `last_updated`) are still
+  in the sheet — the code ignores them, deleting them is optional tidy-up.
+- **`details.csv` `value` / `time` columns are English-only** — no
+  `value_de` / `time_de`, so those bits render in English on every page.
 - 59 of 662 source-URL cells are not URLs.
-- `Hospital_facilities_ar.csv` has a duplicated `introduction_ar` column.
+- The 10 current-genocide `source` detail rows carry the source name in
+  `content`/`source` but no `heading_label`; `build_history.py` promotes the
+  name to the card heading. Adding proper `heading_label` + a description in
+  the sheet would make those cards richer.
+
+**Resolved since the last edit:** historical workbook is in the sync; the
+`data/` layer + feeds regenerate in CI; `data/events.json` is CSV-derived;
+the timeline is the massacres index; translation join fixed via `_anchor`.

@@ -23,7 +23,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import build_records as B
 
 BASE = "https://palgenopedia.org"
-TIMELINE = f"{BASE}/historical-events/massacres/timeline.html"
+TIMELINE = f"{BASE}/historical-events/massacres/"
 SNAPSHOT = datetime.date.today().isoformat()   # provenance / "as_of" date
 CURRENT_FROM = "2023-10-07"                      # date >= this -> period "current"
 
