@@ -1,6 +1,6 @@
 {
   "generated": "2026-08-27",
-  "count": 54,
+  "count": 84,
   "pages": [
     {
       "url": "https://palgenopedia.org/historical-events/massacres/deir-yassin/",
@@ -510,6 +510,306 @@
       "id": "hist017",
       "slug": "west-bank-raids-20222023",
       "details": 98,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/al-ahli-baptist-hospital-strike/",
+      "path": "/historical-events/massacres/al-ahli-baptist-hospital-strike/",
+      "lang": "en",
+      "section": "massacres",
+      "id": "curr_001",
+      "slug": "al-ahli-baptist-hospital-strike",
+      "details": 8,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/de/al-ahli-baptist-hospital-strike/",
+      "path": "/historical-events/massacres/de/al-ahli-baptist-hospital-strike/",
+      "lang": "de",
+      "section": "massacres",
+      "id": "curr_001",
+      "slug": "al-ahli-baptist-hospital-strike",
+      "details": 8,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/ar/al-ahli-baptist-hospital-strike/",
+      "path": "/historical-events/massacres/ar/al-ahli-baptist-hospital-strike/",
+      "lang": "ar",
+      "section": "massacres",
+      "id": "curr_001",
+      "slug": "al-ahli-baptist-hospital-strike",
+      "details": 8,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/jabalia-refugee-camp-bombardment-first-strike/",
+      "path": "/historical-events/massacres/jabalia-refugee-camp-bombardment-first-strike/",
+      "lang": "en",
+      "section": "massacres",
+      "id": "curr_002",
+      "slug": "jabalia-refugee-camp-bombardment-first-strike",
+      "details": 8,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/de/jabalia-refugee-camp-bombardment-first-strike/",
+      "path": "/historical-events/massacres/de/jabalia-refugee-camp-bombardment-first-strike/",
+      "lang": "de",
+      "section": "massacres",
+      "id": "curr_002",
+      "slug": "jabalia-refugee-camp-bombardment-first-strike",
+      "details": 8,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/ar/jabalia-refugee-camp-bombardment-first-strike/",
+      "path": "/historical-events/massacres/ar/jabalia-refugee-camp-bombardment-first-strike/",
+      "lang": "ar",
+      "section": "massacres",
+      "id": "curr_002",
+      "slug": "jabalia-refugee-camp-bombardment-first-strike",
+      "details": 8,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/flour-massacre-al-rashid-street/",
+      "path": "/historical-events/massacres/flour-massacre-al-rashid-street/",
+      "lang": "en",
+      "section": "massacres",
+      "id": "curr_003",
+      "slug": "flour-massacre-al-rashid-street",
+      "details": 8,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/de/flour-massacre-al-rashid-street/",
+      "path": "/historical-events/massacres/de/flour-massacre-al-rashid-street/",
+      "lang": "de",
+      "section": "massacres",
+      "id": "curr_003",
+      "slug": "flour-massacre-al-rashid-street",
+      "details": 8,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/ar/flour-massacre-al-rashid-street/",
+      "path": "/historical-events/massacres/ar/flour-massacre-al-rashid-street/",
+      "lang": "ar",
+      "section": "massacres",
+      "id": "curr_003",
+      "slug": "flour-massacre-al-rashid-street",
+      "details": 8,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/unrwa-school-strikes/",
+      "path": "/historical-events/massacres/unrwa-school-strikes/",
+      "lang": "en",
+      "section": "massacres",
+      "id": "curr_004",
+      "slug": "unrwa-school-strikes",
+      "details": 7,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/de/unrwa-school-strikes/",
+      "path": "/historical-events/massacres/de/unrwa-school-strikes/",
+      "lang": "de",
+      "section": "massacres",
+      "id": "curr_004",
+      "slug": "unrwa-school-strikes",
+      "details": 7,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/ar/unrwa-school-strikes/",
+      "path": "/historical-events/massacres/ar/unrwa-school-strikes/",
+      "lang": "ar",
+      "section": "massacres",
+      "id": "curr_004",
+      "slug": "unrwa-school-strikes",
+      "details": 7,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/mass-graves-discovery-at-nasser-hospital/",
+      "path": "/historical-events/massacres/mass-graves-discovery-at-nasser-hospital/",
+      "lang": "en",
+      "section": "massacres",
+      "id": "curr_005",
+      "slug": "mass-graves-discovery-at-nasser-hospital",
+      "details": 8,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/de/mass-graves-discovery-at-nasser-hospital/",
+      "path": "/historical-events/massacres/de/mass-graves-discovery-at-nasser-hospital/",
+      "lang": "de",
+      "section": "massacres",
+      "id": "curr_005",
+      "slug": "mass-graves-discovery-at-nasser-hospital",
+      "details": 8,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/ar/mass-graves-discovery-at-nasser-hospital/",
+      "path": "/historical-events/massacres/ar/mass-graves-discovery-at-nasser-hospital/",
+      "lang": "ar",
+      "section": "massacres",
+      "id": "curr_005",
+      "slug": "mass-graves-discovery-at-nasser-hospital",
+      "details": 8,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/al-shifa-hospital-siege/",
+      "path": "/historical-events/massacres/al-shifa-hospital-siege/",
+      "lang": "en",
+      "section": "massacres",
+      "id": "curr_006",
+      "slug": "al-shifa-hospital-siege",
+      "details": 8,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/de/al-shifa-hospital-siege/",
+      "path": "/historical-events/massacres/de/al-shifa-hospital-siege/",
+      "lang": "de",
+      "section": "massacres",
+      "id": "curr_006",
+      "slug": "al-shifa-hospital-siege",
+      "details": 8,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/ar/al-shifa-hospital-siege/",
+      "path": "/historical-events/massacres/ar/al-shifa-hospital-siege/",
+      "lang": "ar",
+      "section": "massacres",
+      "id": "curr_006",
+      "slug": "al-shifa-hospital-siege",
+      "details": 8,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/rafah-tent-camp-massacre/",
+      "path": "/historical-events/massacres/rafah-tent-camp-massacre/",
+      "lang": "en",
+      "section": "massacres",
+      "id": "curr_007",
+      "slug": "rafah-tent-camp-massacre",
+      "details": 8,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/de/rafah-tent-camp-massacre/",
+      "path": "/historical-events/massacres/de/rafah-tent-camp-massacre/",
+      "lang": "de",
+      "section": "massacres",
+      "id": "curr_007",
+      "slug": "rafah-tent-camp-massacre",
+      "details": 8,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/ar/rafah-tent-camp-massacre/",
+      "path": "/historical-events/massacres/ar/rafah-tent-camp-massacre/",
+      "lang": "ar",
+      "section": "massacres",
+      "id": "curr_007",
+      "slug": "rafah-tent-camp-massacre",
+      "details": 8,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/world-central-kitchen-workers-killing/",
+      "path": "/historical-events/massacres/world-central-kitchen-workers-killing/",
+      "lang": "en",
+      "section": "massacres",
+      "id": "curr_008",
+      "slug": "world-central-kitchen-workers-killing",
+      "details": 8,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/de/world-central-kitchen-workers-killing/",
+      "path": "/historical-events/massacres/de/world-central-kitchen-workers-killing/",
+      "lang": "de",
+      "section": "massacres",
+      "id": "curr_008",
+      "slug": "world-central-kitchen-workers-killing",
+      "details": 8,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/ar/world-central-kitchen-workers-killing/",
+      "path": "/historical-events/massacres/ar/world-central-kitchen-workers-killing/",
+      "lang": "ar",
+      "section": "massacres",
+      "id": "curr_008",
+      "slug": "world-central-kitchen-workers-killing",
+      "details": 8,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/gaza-city-systematic-destruction/",
+      "path": "/historical-events/massacres/gaza-city-systematic-destruction/",
+      "lang": "en",
+      "section": "massacres",
+      "id": "curr_009",
+      "slug": "gaza-city-systematic-destruction",
+      "details": 8,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/de/gaza-city-systematic-destruction/",
+      "path": "/historical-events/massacres/de/gaza-city-systematic-destruction/",
+      "lang": "de",
+      "section": "massacres",
+      "id": "curr_009",
+      "slug": "gaza-city-systematic-destruction",
+      "details": 8,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/ar/gaza-city-systematic-destruction/",
+      "path": "/historical-events/massacres/ar/gaza-city-systematic-destruction/",
+      "lang": "ar",
+      "section": "massacres",
+      "id": "curr_009",
+      "slug": "gaza-city-systematic-destruction",
+      "details": 8,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/starvation-genocide-northern-gaza-blockade/",
+      "path": "/historical-events/massacres/starvation-genocide-northern-gaza-blockade/",
+      "lang": "en",
+      "section": "massacres",
+      "id": "curr_010",
+      "slug": "starvation-genocide-northern-gaza-blockade",
+      "details": 9,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/de/starvation-genocide-northern-gaza-blockade/",
+      "path": "/historical-events/massacres/de/starvation-genocide-northern-gaza-blockade/",
+      "lang": "de",
+      "section": "massacres",
+      "id": "curr_010",
+      "slug": "starvation-genocide-northern-gaza-blockade",
+      "details": 9,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/ar/starvation-genocide-northern-gaza-blockade/",
+      "path": "/historical-events/massacres/ar/starvation-genocide-northern-gaza-blockade/",
+      "lang": "ar",
+      "section": "massacres",
+      "id": "curr_010",
+      "slug": "starvation-genocide-northern-gaza-blockade",
+      "details": 9,
       "indexable": true
     },
     {

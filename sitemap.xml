@@ -3,115 +3,101 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://palgenopedia.org/</loc>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://palgenopedia.org/historical-events/ethnic-cleansing/</loc>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://palgenopedia.org/historical-events/</loc>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://palgenopedia.org/historical-events/massacres/timeline.html</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
     <loc>https://palgenopedia.org/historical-events/testimonies/</loc>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://palgenopedia.org/hunger-crisis-stats.html</loc>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://palgenopedia.org/major-incidents-timeline.html</loc>
-    <lastmod>2026-08-25</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
+    <loc>https://palgenopedia.org/methodology.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://palgenopedia.org/volunteer.html</loc>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
     <loc>https://palgenopedia.org/war-crimes/children-killed/</loc>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://palgenopedia.org/war-crimes/children-starvation/</loc>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://palgenopedia.org/war-crimes/civilian-casualties/</loc>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://palgenopedia.org/war-crimes/</loc>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://palgenopedia.org/war-crimes/journalists-killed/</loc>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://palgenopedia.org/war-crimes/medical-personnel/</loc>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://palgenopedia.org/war-crimes/total-starvation/</loc>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://palgenopedia.org/data/events.json</loc>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://palgenopedia.org/data/events.ndjson</loc>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://palgenopedia.org/data/events.csv</loc>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://palgenopedia.org/llms.txt</loc>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://palgenopedia.org/llms-full.txt</loc>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
@@ -129,7 +115,6 @@
     <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/religious-sites/"/>
     <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/religious-sites/de/"/>
     <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/religious-sites/ar/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -147,7 +132,6 @@
     <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/religious-sites/"/>
     <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/religious-sites/de/"/>
     <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/religious-sites/ar/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -165,7 +149,6 @@
     <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/religious-sites/"/>
     <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/religious-sites/de/"/>
     <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/religious-sites/ar/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -183,7 +166,6 @@
     <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/religious-sites/"/>
     <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/religious-sites/de/"/>
     <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/religious-sites/ar/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -201,7 +183,6 @@
     <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/religious-sites/"/>
     <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/religious-sites/de/"/>
     <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/religious-sites/ar/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -219,7 +200,6 @@
     <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/religious-sites/"/>
     <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/religious-sites/de/"/>
     <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/religious-sites/ar/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -237,7 +217,6 @@
     <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/religious-sites/"/>
     <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/religious-sites/de/"/>
     <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/religious-sites/ar/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -255,7 +234,6 @@
     <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/religious-sites/"/>
     <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/religious-sites/de/"/>
     <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/religious-sites/ar/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -273,7 +251,6 @@
     <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/religious-sites/"/>
     <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/religious-sites/de/"/>
     <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/religious-sites/ar/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -291,7 +268,6 @@
     <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/religious-sites/"/>
     <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/religious-sites/de/"/>
     <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/religious-sites/ar/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -309,7 +285,6 @@
     <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/religious-sites/"/>
     <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/religious-sites/de/"/>
     <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/religious-sites/ar/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -327,7 +302,6 @@
     <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/religious-sites/"/>
     <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/religious-sites/de/"/>
     <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/religious-sites/ar/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -349,7 +323,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/statistics/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/resources/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/overview/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -371,7 +344,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/statistics/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/resources/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/overview/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -393,7 +365,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/statistics/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/resources/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/overview/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -415,7 +386,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/statistics/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/resources/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/overview/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -437,7 +407,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/statistics/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/resources/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/overview/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -459,7 +428,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/statistics/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/resources/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/overview/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -481,7 +449,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/statistics/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/resources/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/overview/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -503,7 +470,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/statistics/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/resources/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/overview/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -525,7 +491,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/statistics/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/resources/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/overview/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -547,7 +512,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/statistics/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/resources/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/overview/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -569,7 +533,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/statistics/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/resources/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/overview/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -591,7 +554,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/statistics/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/resources/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/overview/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -613,7 +575,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/statistics/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/resources/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/overview/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -635,7 +596,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/statistics/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/resources/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/overview/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -657,7 +617,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/statistics/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/resources/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/overview/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -667,7 +626,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/al-shifa-medizinkomplex/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/al-shifa-medical-complex/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/al-shifa-medical-complex/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -677,7 +635,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/al-shifa-medizinkomplex/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/al-shifa-medical-complex/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/al-shifa-medical-complex/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -687,7 +644,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/al-shifa-medizinkomplex/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/al-shifa-medical-complex/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/al-shifa-medical-complex/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -697,7 +653,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/kamal-adwan-krankenhaus/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/kamal-adwan-hospital/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/kamal-adwan-hospital/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -707,7 +662,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/kamal-adwan-krankenhaus/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/kamal-adwan-hospital/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/kamal-adwan-hospital/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -717,7 +671,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/kamal-adwan-krankenhaus/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/kamal-adwan-hospital/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/kamal-adwan-hospital/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -727,7 +680,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/nasser-medizinkomplex/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/nasser-medical-complex/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/nasser-medical-complex/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -737,7 +689,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/nasser-medizinkomplex/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/nasser-medical-complex/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/nasser-medical-complex/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -747,7 +698,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/nasser-medizinkomplex/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/nasser-medical-complex/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/nasser-medical-complex/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -757,7 +707,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/al-awda-krankenhaus/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/al-awda-hospital/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/al-awda-hospital/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -767,7 +716,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/al-awda-krankenhaus/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/al-awda-hospital/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/al-awda-hospital/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -777,7 +725,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/al-awda-krankenhaus/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/al-awda-hospital/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/al-awda-hospital/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -787,7 +734,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/al-awda-krankenhaus-nusseirat/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/al-awda-hospital-nusseirat/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/al-awda-hospital-nusseirat/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -797,7 +743,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/al-awda-krankenhaus-nusseirat/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/al-awda-hospital-nusseirat/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/al-awda-hospital-nusseirat/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -807,7 +752,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/al-awda-krankenhaus-nusseirat/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/al-awda-hospital-nusseirat/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/al-awda-hospital-nusseirat/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -817,7 +761,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/al-amal-krankenhaus/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/al-amal-hospital/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/al-amal-hospital/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -827,7 +770,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/al-amal-krankenhaus/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/al-amal-hospital/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/al-amal-hospital/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -837,7 +779,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/al-amal-krankenhaus/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/al-amal-hospital/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/al-amal-hospital/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -847,7 +788,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/al-aqsa-maertyrerkrankenhaus/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/al-aqsa-martyrs-hospital/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/al-aqsa-martyrs-hospital/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -857,7 +797,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/al-aqsa-maertyrerkrankenhaus/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/al-aqsa-martyrs-hospital/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/al-aqsa-martyrs-hospital/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -867,7 +806,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/al-aqsa-maertyrerkrankenhaus/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/al-aqsa-martyrs-hospital/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/al-aqsa-martyrs-hospital/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -877,7 +815,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/indonesisches-krankenhaus/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/indonesian-hospital/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/indonesian-hospital/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -887,7 +824,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/indonesisches-krankenhaus/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/indonesian-hospital/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/indonesian-hospital/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -897,7 +833,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/indonesisches-krankenhaus/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/indonesian-hospital/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/indonesian-hospital/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -907,7 +842,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/al-quds-krankenhaus/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/al-quds-hospital/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/al-quds-hospital/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -917,7 +851,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/al-quds-krankenhaus/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/al-quds-hospital/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/al-quds-hospital/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -927,7 +860,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/al-quds-krankenhaus/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/al-quds-hospital/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/al-quds-hospital/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -937,7 +869,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/al-ahli-arabisches-krankenhaus/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/al-ahli-arab-hospital/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/al-ahli-arab-hospital/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -947,7 +878,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/al-ahli-arabisches-krankenhaus/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/al-ahli-arab-hospital/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/al-ahli-arab-hospital/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -957,7 +887,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/al-ahli-arabisches-krankenhaus/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/al-ahli-arab-hospital/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/al-ahli-arab-hospital/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -967,7 +896,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/europaeisches-krankenhaus-gaza/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/gaza-european-hospital/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/gaza-european-hospital/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -977,7 +905,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/europaeisches-krankenhaus-gaza/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/gaza-european-hospital/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/gaza-european-hospital/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -987,7 +914,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/europaeisches-krankenhaus-gaza/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/gaza-european-hospital/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/gaza-european-hospital/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -997,7 +923,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/al-ranteesi-al-naser-kinderkrankenhaus/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/al-ranteesi-al-naser-paediatric-hospital/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/al-ranteesi-al-naser-paediatric-hospital/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1007,7 +932,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/al-ranteesi-al-naser-kinderkrankenhaus/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/al-ranteesi-al-naser-paediatric-hospital/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/al-ranteesi-al-naser-paediatric-hospital/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1017,7 +941,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/al-ranteesi-al-naser-kinderkrankenhaus/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/al-ranteesi-al-naser-paediatric-hospital/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/al-ranteesi-al-naser-paediatric-hospital/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1027,7 +950,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/muhammad-al-durrah-kinderkrankenhaus/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/muhammad-al-durrah-children-s-hospital/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/muhammad-al-durrah-children-s-hospital/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1037,7 +959,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/muhammad-al-durrah-kinderkrankenhaus/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/muhammad-al-durrah-children-s-hospital/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/muhammad-al-durrah-children-s-hospital/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1047,7 +968,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/muhammad-al-durrah-kinderkrankenhaus/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/muhammad-al-durrah-children-s-hospital/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/muhammad-al-durrah-children-s-hospital/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1057,7 +977,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/beit-hanoun-krankenhaus/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/beit-hanoun-hospital/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/beit-hanoun-hospital/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1067,7 +986,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/beit-hanoun-krankenhaus/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/beit-hanoun-hospital/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/beit-hanoun-hospital/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1077,7 +995,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/beit-hanoun-krankenhaus/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/beit-hanoun-hospital/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/beit-hanoun-hospital/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1087,7 +1004,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/sheikh-hamad-krankenhaus-fuer-rehabilitation-und-prothetik/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/sheikh-hamad-hospital-for-rehabilitation-and-prosthetics/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/sheikh-hamad-hospital-for-rehabilitation-and-prosthetics/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1097,7 +1013,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/sheikh-hamad-krankenhaus-fuer-rehabilitation-und-prothetik/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/sheikh-hamad-hospital-for-rehabilitation-and-prosthetics/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/sheikh-hamad-hospital-for-rehabilitation-and-prosthetics/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1107,7 +1022,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/sheikh-hamad-krankenhaus-fuer-rehabilitation-und-prothetik/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/sheikh-hamad-hospital-for-rehabilitation-and-prosthetics/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/sheikh-hamad-hospital-for-rehabilitation-and-prosthetics/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1117,7 +1031,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/al-karama-spezialkrankenhaus/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/al-karama-specialized-hospital/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/al-karama-specialized-hospital/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1127,7 +1040,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/al-karama-spezialkrankenhaus/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/al-karama-specialized-hospital/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/al-karama-specialized-hospital/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1137,7 +1049,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/al-karama-spezialkrankenhaus/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/al-karama-specialized-hospital/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/al-karama-specialized-hospital/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1147,7 +1058,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/internationales-augenkrankenhaus/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/international-eye-hospital/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/international-eye-hospital/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1157,7 +1067,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/internationales-augenkrankenhaus/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/international-eye-hospital/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/international-eye-hospital/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1167,7 +1076,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/internationales-augenkrankenhaus/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/international-eye-hospital/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/international-eye-hospital/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1177,7 +1085,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/muhammad-youssef-al-najjar-krankenhaus/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/muhammad-youssef-al-najjar-hospital/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/muhammad-youssef-al-najjar-hospital/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1187,7 +1094,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/muhammad-youssef-al-najjar-krankenhaus/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/muhammad-youssef-al-najjar-hospital/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/muhammad-youssef-al-najjar-hospital/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1197,7 +1103,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/muhammad-youssef-al-najjar-krankenhaus/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/muhammad-youssef-al-najjar-hospital/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/muhammad-youssef-al-najjar-hospital/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1207,7 +1112,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/wafaa-krankenhaus-fuer-medizinische-rehabilitation-und-spezialisierte-chirurgie/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/wafaa-medical-rehabilitation-and-specialized-surgery-hospital/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/wafaa-medical-rehabilitation-and-specialized-surgery-hospital/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1217,7 +1121,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/wafaa-krankenhaus-fuer-medizinische-rehabilitation-und-spezialisierte-chirurgie/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/wafaa-medical-rehabilitation-and-specialized-surgery-hospital/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/wafaa-medical-rehabilitation-and-specialized-surgery-hospital/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1227,7 +1130,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/wafaa-krankenhaus-fuer-medizinische-rehabilitation-und-spezialisierte-chirurgie/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/wafaa-medical-rehabilitation-and-specialized-surgery-hospital/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/wafaa-medical-rehabilitation-and-specialized-surgery-hospital/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1237,7 +1139,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/tuerkisches-freundschaftskrankenhaus/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/turkish-friendship-hospital/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/turkish-friendship-hospital/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1247,7 +1148,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/tuerkisches-freundschaftskrankenhaus/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/turkish-friendship-hospital/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/turkish-friendship-hospital/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1257,7 +1157,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/tuerkisches-freundschaftskrankenhaus/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/turkish-friendship-hospital/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/turkish-friendship-hospital/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1267,7 +1166,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/internationales-krankenhaus-al-helou/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/al-helou-international-hospital/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/al-helou-international-hospital/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1277,7 +1175,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/internationales-krankenhaus-al-helou/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/al-helou-international-hospital/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/al-helou-international-hospital/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1287,7 +1184,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/internationales-krankenhaus-al-helou/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/al-helou-international-hospital/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/al-helou-international-hospital/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1297,7 +1193,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/al-khair-krankenhaus/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/al-khair-hospital/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/al-khair-hospital/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1307,7 +1202,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/al-khair-krankenhaus/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/al-khair-hospital/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/al-khair-hospital/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1317,7 +1211,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/al-khair-krankenhaus/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/al-khair-hospital/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/al-khair-hospital/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1327,7 +1220,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/palaestinensisches-zentrum-fuer-medizinische-hilfe-und-rehabilitation-von-behinderten/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/palestine-medical-relief-center-for-the-rehabilitation-of-the-disabled/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/palestine-medical-relief-center-for-the-rehabilitation-of-the-disabled/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1337,7 +1229,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/palaestinensisches-zentrum-fuer-medizinische-hilfe-und-rehabilitation-von-behinderten/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/palestine-medical-relief-center-for-the-rehabilitation-of-the-disabled/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/palestine-medical-relief-center-for-the-rehabilitation-of-the-disabled/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1347,7 +1238,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/palaestinensisches-zentrum-fuer-medizinische-hilfe-und-rehabilitation-von-behinderten/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/palestine-medical-relief-center-for-the-rehabilitation-of-the-disabled/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/palestine-medical-relief-center-for-the-rehabilitation-of-the-disabled/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1357,7 +1247,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/patientenfreundevereinigung-krankenhaus/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/patient-friends-association-hospital/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/patient-friends-association-hospital/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1367,7 +1256,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/patientenfreundevereinigung-krankenhaus/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/patient-friends-association-hospital/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/patient-friends-association-hospital/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1377,7 +1265,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/patientenfreundevereinigung-krankenhaus/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/patient-friends-association-hospital/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/patient-friends-association-hospital/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1387,7 +1274,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/jordanisches-feldlazarett/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/jordanian-field-hospital/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/jordanian-field-hospital/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1397,7 +1283,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/jordanisches-feldlazarett/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/jordanian-field-hospital/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/jordanian-field-hospital/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1407,7 +1292,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/jordanisches-feldlazarett/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/jordanian-field-hospital/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/jordanian-field-hospital/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1417,7 +1301,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/jordanisches-feldlazarett-khan-yunis/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/jordanian-field-hospital-khan-yunis/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/jordanian-field-hospital-khan-yunis/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1427,7 +1310,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/jordanisches-feldlazarett-khan-yunis/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/jordanian-field-hospital-khan-yunis/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/jordanian-field-hospital-khan-yunis/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1437,7 +1319,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/jordanisches-feldlazarett-khan-yunis/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/jordanian-field-hospital-khan-yunis/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/jordanian-field-hospital-khan-yunis/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1447,7 +1328,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/feldlazarett-des-roten-kreuzes-rafah/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/red-cross-field-hospital-rafah/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/red-cross-field-hospital-rafah/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1457,7 +1337,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/feldlazarett-des-roten-kreuzes-rafah/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/red-cross-field-hospital-rafah/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/red-cross-field-hospital-rafah/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1467,7 +1346,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/feldlazarett-des-roten-kreuzes-rafah/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/red-cross-field-hospital-rafah/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/red-cross-field-hospital-rafah/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1477,7 +1355,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/feldlazarett-der-emirate/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/al-emirati-field-hospital/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/al-emirati-field-hospital/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1487,7 +1364,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/feldlazarett-der-emirate/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/al-emirati-field-hospital/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/al-emirati-field-hospital/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1497,7 +1373,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/feldlazarett-der-emirate/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/al-emirati-field-hospital/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/al-emirati-field-hospital/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1507,7 +1382,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/feldlazarett-kuwait/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/kuwait-field-hospital/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/kuwait-field-hospital/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1517,7 +1391,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/feldlazarett-kuwait/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/kuwait-field-hospital/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/kuwait-field-hospital/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1527,7 +1400,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/feldlazarett-kuwait/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/kuwait-field-hospital/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/kuwait-field-hospital/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1537,7 +1409,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/feldlazarett-des-international-medical-corps/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/international-medical-corps-field-hospital/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/international-medical-corps-field-hospital/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1547,7 +1418,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/feldlazarett-des-international-medical-corps/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/international-medical-corps-field-hospital/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/international-medical-corps-field-hospital/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1557,7 +1427,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/feldlazarett-des-international-medical-corps/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/international-medical-corps-field-hospital/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/international-medical-corps-field-hospital/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1567,7 +1436,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/unrwa-gesundheitszentrum/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/unrwa-health-centre/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/unrwa-health-centre/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1577,7 +1445,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/unrwa-gesundheitszentrum/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/unrwa-health-centre/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/unrwa-health-centre/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1587,7 +1454,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/unrwa-gesundheitszentrum/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/unrwa-health-centre/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/unrwa-health-centre/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1597,7 +1463,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/hausarztpraxis/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/primary-care-clinic/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/primary-care-clinic/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1607,7 +1472,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/hausarztpraxis/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/primary-care-clinic/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/primary-care-clinic/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1617,7 +1481,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/hausarztpraxis/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/primary-care-clinic/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/primary-care-clinic/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1627,7 +1490,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/msf-praesenz-01/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/msf-premise-01/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/msf-premise-01/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1637,7 +1499,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/msf-praesenz-01/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/msf-premise-01/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/msf-premise-01/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1647,7 +1508,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/msf-praesenz-01/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/msf-premise-01/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/msf-premise-01/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1657,7 +1517,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/msf-klinik/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/msf-clinic/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/msf-clinic/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1667,7 +1526,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/msf-klinik/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/msf-clinic/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/msf-clinic/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1677,7 +1535,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/msf-klinik/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/msf-clinic/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/msf-clinic/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1687,7 +1544,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/msf-notfallambulanz-khan-younis/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/msf-urgent-care-unit-khan-younis/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/msf-urgent-care-unit-khan-younis/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1697,7 +1553,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/msf-notfallambulanz-khan-younis/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/msf-urgent-care-unit-khan-younis/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/msf-urgent-care-unit-khan-younis/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1707,7 +1562,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/msf-notfallambulanz-khan-younis/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/msf-urgent-care-unit-khan-younis/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/msf-urgent-care-unit-khan-younis/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1717,7 +1571,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/noura-al-kaabi-spezialisiertes-dialysezentrum/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/noura-al-kaabi-specialist-dialysis-centre/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/noura-al-kaabi-specialist-dialysis-centre/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1727,7 +1580,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/noura-al-kaabi-spezialisiertes-dialysezentrum/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/noura-al-kaabi-specialist-dialysis-centre/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/noura-al-kaabi-specialist-dialysis-centre/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1737,7 +1589,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/noura-al-kaabi-spezialisiertes-dialysezentrum/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/noura-al-kaabi-specialist-dialysis-centre/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/noura-al-kaabi-specialist-dialysis-centre/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1747,7 +1598,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1757,7 +1607,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1767,7 +1616,276 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/"/>
-    <lastmod>2026-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://palgenopedia.org/historical-events/massacres/al-ahli-baptist-hospital-strike/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/historical-events/massacres/ar/al-ahli-baptist-hospital-strike/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/al-ahli-baptist-hospital-strike/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/al-ahli-baptist-hospital-strike/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/al-ahli-baptist-hospital-strike/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://palgenopedia.org/historical-events/massacres/de/al-ahli-baptist-hospital-strike/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/historical-events/massacres/ar/al-ahli-baptist-hospital-strike/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/al-ahli-baptist-hospital-strike/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/al-ahli-baptist-hospital-strike/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/al-ahli-baptist-hospital-strike/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://palgenopedia.org/historical-events/massacres/ar/al-ahli-baptist-hospital-strike/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/historical-events/massacres/ar/al-ahli-baptist-hospital-strike/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/al-ahli-baptist-hospital-strike/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/al-ahli-baptist-hospital-strike/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/al-ahli-baptist-hospital-strike/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://palgenopedia.org/historical-events/massacres/jabalia-refugee-camp-bombardment-first-strike/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/historical-events/massacres/ar/jabalia-refugee-camp-bombardment-first-strike/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/jabalia-refugee-camp-bombardment-first-strike/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/jabalia-refugee-camp-bombardment-first-strike/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/jabalia-refugee-camp-bombardment-first-strike/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://palgenopedia.org/historical-events/massacres/de/jabalia-refugee-camp-bombardment-first-strike/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/historical-events/massacres/ar/jabalia-refugee-camp-bombardment-first-strike/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/jabalia-refugee-camp-bombardment-first-strike/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/jabalia-refugee-camp-bombardment-first-strike/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/jabalia-refugee-camp-bombardment-first-strike/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://palgenopedia.org/historical-events/massacres/ar/jabalia-refugee-camp-bombardment-first-strike/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/historical-events/massacres/ar/jabalia-refugee-camp-bombardment-first-strike/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/jabalia-refugee-camp-bombardment-first-strike/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/jabalia-refugee-camp-bombardment-first-strike/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/jabalia-refugee-camp-bombardment-first-strike/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://palgenopedia.org/historical-events/massacres/flour-massacre-al-rashid-street/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/historical-events/massacres/ar/flour-massacre-al-rashid-street/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/flour-massacre-al-rashid-street/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/flour-massacre-al-rashid-street/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/flour-massacre-al-rashid-street/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://palgenopedia.org/historical-events/massacres/de/flour-massacre-al-rashid-street/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/historical-events/massacres/ar/flour-massacre-al-rashid-street/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/flour-massacre-al-rashid-street/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/flour-massacre-al-rashid-street/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/flour-massacre-al-rashid-street/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://palgenopedia.org/historical-events/massacres/ar/flour-massacre-al-rashid-street/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/historical-events/massacres/ar/flour-massacre-al-rashid-street/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/flour-massacre-al-rashid-street/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/flour-massacre-al-rashid-street/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/flour-massacre-al-rashid-street/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://palgenopedia.org/historical-events/massacres/unrwa-school-strikes/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/historical-events/massacres/ar/unrwa-school-strikes/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/unrwa-school-strikes/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/unrwa-school-strikes/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/unrwa-school-strikes/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://palgenopedia.org/historical-events/massacres/de/unrwa-school-strikes/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/historical-events/massacres/ar/unrwa-school-strikes/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/unrwa-school-strikes/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/unrwa-school-strikes/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/unrwa-school-strikes/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://palgenopedia.org/historical-events/massacres/ar/unrwa-school-strikes/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/historical-events/massacres/ar/unrwa-school-strikes/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/unrwa-school-strikes/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/unrwa-school-strikes/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/unrwa-school-strikes/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://palgenopedia.org/historical-events/massacres/mass-graves-discovery-at-nasser-hospital/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/historical-events/massacres/ar/mass-graves-discovery-at-nasser-hospital/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/mass-graves-discovery-at-nasser-hospital/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/mass-graves-discovery-at-nasser-hospital/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/mass-graves-discovery-at-nasser-hospital/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://palgenopedia.org/historical-events/massacres/de/mass-graves-discovery-at-nasser-hospital/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/historical-events/massacres/ar/mass-graves-discovery-at-nasser-hospital/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/mass-graves-discovery-at-nasser-hospital/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/mass-graves-discovery-at-nasser-hospital/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/mass-graves-discovery-at-nasser-hospital/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://palgenopedia.org/historical-events/massacres/ar/mass-graves-discovery-at-nasser-hospital/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/historical-events/massacres/ar/mass-graves-discovery-at-nasser-hospital/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/mass-graves-discovery-at-nasser-hospital/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/mass-graves-discovery-at-nasser-hospital/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/mass-graves-discovery-at-nasser-hospital/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://palgenopedia.org/historical-events/massacres/al-shifa-hospital-siege/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/historical-events/massacres/ar/al-shifa-hospital-siege/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/al-shifa-hospital-siege/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/al-shifa-hospital-siege/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/al-shifa-hospital-siege/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://palgenopedia.org/historical-events/massacres/de/al-shifa-hospital-siege/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/historical-events/massacres/ar/al-shifa-hospital-siege/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/al-shifa-hospital-siege/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/al-shifa-hospital-siege/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/al-shifa-hospital-siege/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://palgenopedia.org/historical-events/massacres/ar/al-shifa-hospital-siege/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/historical-events/massacres/ar/al-shifa-hospital-siege/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/al-shifa-hospital-siege/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/al-shifa-hospital-siege/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/al-shifa-hospital-siege/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://palgenopedia.org/historical-events/massacres/rafah-tent-camp-massacre/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/historical-events/massacres/ar/rafah-tent-camp-massacre/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/rafah-tent-camp-massacre/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/rafah-tent-camp-massacre/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/rafah-tent-camp-massacre/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://palgenopedia.org/historical-events/massacres/de/rafah-tent-camp-massacre/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/historical-events/massacres/ar/rafah-tent-camp-massacre/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/rafah-tent-camp-massacre/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/rafah-tent-camp-massacre/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/rafah-tent-camp-massacre/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://palgenopedia.org/historical-events/massacres/ar/rafah-tent-camp-massacre/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/historical-events/massacres/ar/rafah-tent-camp-massacre/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/rafah-tent-camp-massacre/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/rafah-tent-camp-massacre/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/rafah-tent-camp-massacre/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://palgenopedia.org/historical-events/massacres/world-central-kitchen-workers-killing/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/historical-events/massacres/ar/world-central-kitchen-workers-killing/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/world-central-kitchen-workers-killing/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/world-central-kitchen-workers-killing/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/world-central-kitchen-workers-killing/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://palgenopedia.org/historical-events/massacres/de/world-central-kitchen-workers-killing/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/historical-events/massacres/ar/world-central-kitchen-workers-killing/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/world-central-kitchen-workers-killing/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/world-central-kitchen-workers-killing/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/world-central-kitchen-workers-killing/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://palgenopedia.org/historical-events/massacres/ar/world-central-kitchen-workers-killing/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/historical-events/massacres/ar/world-central-kitchen-workers-killing/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/world-central-kitchen-workers-killing/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/world-central-kitchen-workers-killing/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/world-central-kitchen-workers-killing/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://palgenopedia.org/historical-events/massacres/gaza-city-systematic-destruction/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/historical-events/massacres/ar/gaza-city-systematic-destruction/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/gaza-city-systematic-destruction/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/gaza-city-systematic-destruction/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/gaza-city-systematic-destruction/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://palgenopedia.org/historical-events/massacres/de/gaza-city-systematic-destruction/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/historical-events/massacres/ar/gaza-city-systematic-destruction/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/gaza-city-systematic-destruction/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/gaza-city-systematic-destruction/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/gaza-city-systematic-destruction/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://palgenopedia.org/historical-events/massacres/ar/gaza-city-systematic-destruction/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/historical-events/massacres/ar/gaza-city-systematic-destruction/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/gaza-city-systematic-destruction/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/gaza-city-systematic-destruction/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/gaza-city-systematic-destruction/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://palgenopedia.org/historical-events/massacres/starvation-genocide-northern-gaza-blockade/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/historical-events/massacres/ar/starvation-genocide-northern-gaza-blockade/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/starvation-genocide-northern-gaza-blockade/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/starvation-genocide-northern-gaza-blockade/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/starvation-genocide-northern-gaza-blockade/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://palgenopedia.org/historical-events/massacres/de/starvation-genocide-northern-gaza-blockade/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/historical-events/massacres/ar/starvation-genocide-northern-gaza-blockade/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/starvation-genocide-northern-gaza-blockade/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/starvation-genocide-northern-gaza-blockade/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/starvation-genocide-northern-gaza-blockade/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://palgenopedia.org/historical-events/massacres/ar/starvation-genocide-northern-gaza-blockade/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/historical-events/massacres/ar/starvation-genocide-northern-gaza-blockade/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/starvation-genocide-northern-gaza-blockade/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/starvation-genocide-northern-gaza-blockade/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/starvation-genocide-northern-gaza-blockade/"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1777,7 +1895,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/deir-yassin/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/deir-yassin/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/deir-yassin/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1787,7 +1904,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/deir-yassin/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/deir-yassin/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/deir-yassin/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1797,7 +1913,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/deir-yassin/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/deir-yassin/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/deir-yassin/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1807,7 +1922,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/tantura/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/tantura/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/tantura/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1817,7 +1931,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/tantura/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/tantura/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/tantura/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1827,7 +1940,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/tantura/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/tantura/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/tantura/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1837,7 +1949,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/lydda-and-ramle/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/lydda-and-ramle/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/lydda-and-ramle/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1847,7 +1958,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/lydda-and-ramle/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/lydda-and-ramle/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/lydda-and-ramle/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1857,7 +1967,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/lydda-and-ramle/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/lydda-and-ramle/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/lydda-and-ramle/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1867,7 +1976,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/qibya/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/qibya/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/qibya/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1877,7 +1985,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/qibya/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/qibya/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/qibya/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1887,7 +1994,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/qibya/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/qibya/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/qibya/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1897,7 +2003,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/khan-yunis-massacre/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/khan-yunis-massacre/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/khan-yunis-massacre/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1907,7 +2012,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/khan-yunis-massacre/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/khan-yunis-massacre/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/khan-yunis-massacre/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1917,7 +2021,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/khan-yunis-massacre/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/khan-yunis-massacre/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/khan-yunis-massacre/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1927,7 +2030,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/six-day-war-al-naksa/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/six-day-war-al-naksa/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/six-day-war-al-naksa/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1937,7 +2039,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/six-day-war-al-naksa/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/six-day-war-al-naksa/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/six-day-war-al-naksa/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1947,7 +2048,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/six-day-war-al-naksa/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/six-day-war-al-naksa/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/six-day-war-al-naksa/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1957,7 +2057,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/sabra-and-shatila/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/sabra-and-shatila/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/sabra-and-shatila/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1967,7 +2066,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/sabra-and-shatila/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/sabra-and-shatila/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/sabra-and-shatila/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1977,7 +2075,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/sabra-and-shatila/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/sabra-and-shatila/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/sabra-and-shatila/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1987,7 +2084,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/first-intifada/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/first-intifada/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/first-intifada/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1997,7 +2093,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/first-intifada/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/first-intifada/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/first-intifada/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2007,7 +2102,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/first-intifada/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/first-intifada/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/first-intifada/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2017,7 +2111,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/cave-of-the-patriarchs-massacre/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/cave-of-the-patriarchs-massacre/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/cave-of-the-patriarchs-massacre/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2027,7 +2120,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/cave-of-the-patriarchs-massacre/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/cave-of-the-patriarchs-massacre/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/cave-of-the-patriarchs-massacre/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2037,7 +2129,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/cave-of-the-patriarchs-massacre/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/cave-of-the-patriarchs-massacre/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/cave-of-the-patriarchs-massacre/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2047,7 +2138,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/second-intifada/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/second-intifada/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/second-intifada/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2057,7 +2147,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/second-intifada/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/second-intifada/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/second-intifada/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2067,7 +2156,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/second-intifada/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/second-intifada/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/second-intifada/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2077,7 +2165,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/battle-of-jenin/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/battle-of-jenin/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/battle-of-jenin/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2087,7 +2174,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/battle-of-jenin/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/battle-of-jenin/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/battle-of-jenin/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2097,7 +2183,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/battle-of-jenin/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/battle-of-jenin/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/battle-of-jenin/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2107,7 +2192,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/operation-cast-lead/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/operation-cast-lead/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/operation-cast-lead/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2117,7 +2201,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/operation-cast-lead/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/operation-cast-lead/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/operation-cast-lead/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2127,7 +2210,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/operation-cast-lead/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/operation-cast-lead/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/operation-cast-lead/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2137,7 +2219,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/operation-pillar-of-defense/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/operation-pillar-of-defense/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/operation-pillar-of-defense/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2147,7 +2228,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/operation-pillar-of-defense/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/operation-pillar-of-defense/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/operation-pillar-of-defense/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2157,7 +2237,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/operation-pillar-of-defense/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/operation-pillar-of-defense/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/operation-pillar-of-defense/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2167,7 +2246,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/operation-protective-edge/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/operation-protective-edge/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/operation-protective-edge/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2177,7 +2255,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/operation-protective-edge/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/operation-protective-edge/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/operation-protective-edge/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2187,7 +2264,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/operation-protective-edge/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/operation-protective-edge/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/operation-protective-edge/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2197,7 +2273,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/great-march-of-return/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/great-march-of-return/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/great-march-of-return/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2207,7 +2282,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/great-march-of-return/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/great-march-of-return/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/great-march-of-return/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2217,7 +2291,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/great-march-of-return/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/great-march-of-return/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/great-march-of-return/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2227,7 +2300,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/operation-guardian-of-the-walls/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/operation-guardian-of-the-walls/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/operation-guardian-of-the-walls/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2237,7 +2309,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/operation-guardian-of-the-walls/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/operation-guardian-of-the-walls/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/operation-guardian-of-the-walls/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2247,7 +2318,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/operation-guardian-of-the-walls/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/operation-guardian-of-the-walls/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/operation-guardian-of-the-walls/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2257,7 +2327,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/west-bank-raids-20222023/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/west-bank-raids-20222023/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/west-bank-raids-20222023/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2267,7 +2336,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/west-bank-raids-20222023/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/west-bank-raids-20222023/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/west-bank-raids-20222023/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2277,7 +2345,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/west-bank-raids-20222023/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/historical-events/massacres/west-bank-raids-20222023/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/historical-events/massacres/west-bank-raids-20222023/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2299,7 +2366,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/statistics/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/resources/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/overview/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2321,7 +2387,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/statistics/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/resources/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/overview/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2343,7 +2408,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/statistics/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/resources/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/overview/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2365,7 +2429,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/statistics/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/resources/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/overview/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2387,7 +2450,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/statistics/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/resources/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/overview/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2409,7 +2471,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/statistics/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/resources/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/overview/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2431,7 +2492,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/statistics/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/resources/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/overview/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2453,7 +2513,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/statistics/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/resources/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/overview/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2475,7 +2534,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/statistics/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/resources/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/overview/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2497,7 +2555,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/statistics/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/resources/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/overview/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2519,7 +2576,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/statistics/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/resources/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/overview/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2541,7 +2597,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/statistics/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/resources/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/overview/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2551,7 +2606,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/grosse-omari-moschee/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/great-omari-mosque/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/great-omari-mosque/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2561,7 +2615,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/grosse-omari-moschee/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/great-omari-mosque/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/great-omari-mosque/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2571,7 +2624,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/grosse-omari-moschee/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/great-omari-mosque/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/great-omari-mosque/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2581,7 +2633,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/kirche-des-heiligen-porphyrius/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/church-of-saint-porphyrius/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/church-of-saint-porphyrius/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2591,7 +2642,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/kirche-des-heiligen-porphyrius/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/church-of-saint-porphyrius/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/church-of-saint-porphyrius/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2601,7 +2651,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/kirche-des-heiligen-porphyrius/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/church-of-saint-porphyrius/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/church-of-saint-porphyrius/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2611,7 +2660,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/kirche-der-heiligen-familie/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/holy-family-church/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/holy-family-church/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2621,7 +2669,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/kirche-der-heiligen-familie/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/holy-family-church/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/holy-family-church/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2631,7 +2678,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/kirche-der-heiligen-familie/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/holy-family-church/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/holy-family-church/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2641,7 +2687,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/katib-al-wilaya-moschee/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/katib-al-wilaya-mosque/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/katib-al-wilaya-mosque/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2651,7 +2696,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/katib-al-wilaya-moschee/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/katib-al-wilaya-mosque/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/katib-al-wilaya-mosque/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2661,7 +2705,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/katib-al-wilaya-moschee/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/katib-al-wilaya-mosque/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/katib-al-wilaya-mosque/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2671,7 +2714,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/sayed-al-haschim-moschee/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/sayed-al-hashim-mosque/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/sayed-al-hashim-mosque/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2681,7 +2723,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/sayed-al-haschim-moschee/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/sayed-al-hashim-mosque/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/sayed-al-hashim-mosque/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2691,7 +2732,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/sayed-al-haschim-moschee/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/sayed-al-hashim-mosque/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/sayed-al-hashim-mosque/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2701,7 +2741,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/khalid-bin-al-walid-moschee/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/khalid-bin-al-walid-mosque/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/khalid-bin-al-walid-mosque/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2711,7 +2750,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/khalid-bin-al-walid-moschee/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/khalid-bin-al-walid-mosque/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/khalid-bin-al-walid-mosque/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2721,7 +2759,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/khalid-bin-al-walid-moschee/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/khalid-bin-al-walid-mosque/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/khalid-bin-al-walid-mosque/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2731,7 +2768,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/al-hassan-moschee/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/al-hassan-mosque/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/al-hassan-mosque/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2741,7 +2777,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/al-hassan-moschee/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/al-hassan-mosque/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/al-hassan-mosque/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2751,7 +2786,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/al-hassan-moschee/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/al-hassan-mosque/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/al-hassan-mosque/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2761,7 +2795,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/al-gharbi-moschee/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/al-gharbi-mosque/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/al-gharbi-mosque/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2771,7 +2804,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/al-gharbi-moschee/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/al-gharbi-mosque/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/al-gharbi-mosque/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2781,7 +2813,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/al-gharbi-moschee/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/al-gharbi-mosque/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/al-gharbi-mosque/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2791,7 +2822,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/jaffa-moschee/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/jaffa-mosque/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/jaffa-mosque/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2801,7 +2831,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/jaffa-moschee/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/jaffa-mosque/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/jaffa-mosque/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2811,7 +2840,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/jaffa-moschee/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/jaffa-mosque/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/jaffa-mosque/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2821,7 +2849,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/shuhada-al-aqsa-moschee/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/shuhada-al-aqsa-mosque/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/shuhada-al-aqsa-mosque/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2831,7 +2858,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/shuhada-al-aqsa-moschee/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/shuhada-al-aqsa-mosque/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/shuhada-al-aqsa-mosque/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2841,7 +2867,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/shuhada-al-aqsa-moschee/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/shuhada-al-aqsa-mosque/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/shuhada-al-aqsa-mosque/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2851,7 +2876,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/zofor-domri-moschee/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/zofor-domri-mosque/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/zofor-domri-mosque/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2861,7 +2885,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/zofor-domri-moschee/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/zofor-domri-mosque/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/zofor-domri-mosque/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2871,7 +2894,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/zofor-domri-moschee/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/zofor-domri-mosque/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/zofor-domri-mosque/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2881,7 +2903,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/al-riad-moschee/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/al-riad-mosque/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/al-riad-mosque/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2891,7 +2912,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/al-riad-moschee/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/al-riad-mosque/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/al-riad-mosque/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2901,7 +2921,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/al-riad-moschee/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/al-riad-mosque/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/al-riad-mosque/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2911,7 +2930,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/ibn-marwan-moschee/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/ibn-marwan-mosque/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/ibn-marwan-mosque/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2921,7 +2939,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/ibn-othman-moschee/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/ibn-othman-mosque/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/ibn-othman-mosque/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2931,7 +2948,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/mahkamah-moschee/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/mahkamah-mosque/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/mahkamah-mosque/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2941,7 +2957,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/mahkamah-moschee/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/mahkamah-mosque/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/mahkamah-mosque/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2951,7 +2966,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/scheich-zakariyya-moschee/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/sheikh-zakariyya-mosque/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/sheikh-zakariyya-mosque/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2961,7 +2975,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/al-shamah-moschee/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/al-shamah-mosque/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/al-shamah-mosque/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2971,7 +2984,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/kloster-st-hilarion/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/st-hilarion-monastery/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/st-hilarion-monastery/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2981,7 +2993,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/kloster-st-hilarion/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/st-hilarion-monastery/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/st-hilarion-monastery/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2991,7 +3002,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/kloster-st-hilarion/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/st-hilarion-monastery/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/st-hilarion-monastery/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3001,7 +3011,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/gaza-baptistenkirche/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/gaza-baptist-church/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/gaza-baptist-church/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3011,7 +3020,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/gaza-baptistenkirche/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/gaza-baptist-church/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/gaza-baptist-church/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3021,7 +3029,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/gaza-baptistenkirche/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/gaza-baptist-church/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/gaza-baptist-church/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3043,7 +3050,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/statistics/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/resources/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/schools/overview/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3065,7 +3071,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/statistics/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/resources/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/schools/overview/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3087,7 +3092,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/statistics/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/resources/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/schools/overview/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3109,7 +3113,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/statistics/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/resources/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/schools/overview/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3131,7 +3134,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/statistics/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/resources/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/schools/overview/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3153,7 +3155,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/statistics/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/resources/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/schools/overview/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3175,7 +3176,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/statistics/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/resources/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/schools/overview/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3197,7 +3197,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/statistics/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/resources/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/schools/overview/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3219,7 +3218,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/statistics/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/resources/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/schools/overview/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3241,7 +3239,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/statistics/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/resources/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/schools/overview/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3263,7 +3260,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/statistics/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/resources/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/schools/overview/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3285,7 +3281,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/statistics/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/resources/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/schools/overview/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3295,7 +3290,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/al-tabaeen-schule/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/al-tabaeen-school/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/schools/al-tabaeen-school/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3305,7 +3299,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/al-tabaeen-schule/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/al-tabaeen-school/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/schools/al-tabaeen-school/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3315,7 +3308,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/al-tabaeen-schule/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/al-tabaeen-school/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/schools/al-tabaeen-school/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3325,7 +3317,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/al-nazla-schule/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/al-nazla-school/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/schools/al-nazla-school/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3335,7 +3326,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/al-nazla-schule/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/al-nazla-school/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/schools/al-nazla-school/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3345,7 +3335,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/al-nazla-schule/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/al-nazla-school/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/schools/al-nazla-school/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3367,7 +3356,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/statistics/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/resources/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/universities/overview/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3389,7 +3377,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/statistics/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/resources/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/universities/overview/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3411,7 +3398,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/statistics/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/resources/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/universities/overview/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3433,7 +3419,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/statistics/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/resources/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/universities/overview/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3455,7 +3440,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/statistics/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/resources/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/universities/overview/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3477,7 +3461,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/statistics/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/resources/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/universities/overview/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3499,7 +3482,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/statistics/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/resources/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/universities/overview/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3521,7 +3503,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/statistics/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/resources/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/universities/overview/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3543,7 +3524,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/statistics/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/resources/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/universities/overview/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3565,7 +3545,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/statistics/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/resources/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/universities/overview/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3587,7 +3566,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/statistics/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/resources/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/universities/overview/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3609,7 +3587,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/statistics/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/resources/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/universities/overview/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3619,7 +3596,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/gaza-universitaet/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/gaza-university/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/universities/gaza-university/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3629,7 +3605,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/gaza-universitaet/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/gaza-university/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/universities/gaza-university/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3639,7 +3614,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/gaza-universitaet/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/gaza-university/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/universities/gaza-university/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3649,7 +3623,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/islamische-universitaet-von-gaza/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/islamic-university-of-gaza/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/universities/islamic-university-of-gaza/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3659,7 +3632,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/islamische-universitaet-von-gaza/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/islamic-university-of-gaza/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/universities/islamic-university-of-gaza/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3669,7 +3641,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/islamische-universitaet-von-gaza/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/islamic-university-of-gaza/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/universities/islamic-university-of-gaza/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3679,7 +3650,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/israa-universitaet/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/israa-university/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/universities/israa-university/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3689,7 +3659,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/israa-universitaet/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/israa-university/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/universities/israa-university/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3699,7 +3668,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/israa-universitaet/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/israa-university/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/universities/israa-university/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3709,7 +3677,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/al-azhar-universitaet-gaza/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/al-azhar-university-gaza/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/universities/al-azhar-university-gaza/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3719,7 +3686,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/al-azhar-universitaet-gaza/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/al-azhar-university-gaza/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/universities/al-azhar-university-gaza/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3729,7 +3695,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/al-azhar-universitaet-gaza/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/al-azhar-university-gaza/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/universities/al-azhar-university-gaza/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3739,7 +3704,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/al-aqsa-universitaet/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/al-aqsa-university/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/universities/al-aqsa-university/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3749,7 +3713,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/al-aqsa-universitaet/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/al-aqsa-university/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/universities/al-aqsa-university/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3759,7 +3722,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/al-aqsa-universitaet/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/al-aqsa-university/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/universities/al-aqsa-university/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3769,7 +3731,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/universitaet-von-palaestina/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/university-of-palestine/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/universities/university-of-palestine/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3779,7 +3740,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/universitaet-von-palaestina/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/university-of-palestine/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/universities/university-of-palestine/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3789,7 +3749,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/universitaet-von-palaestina/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/university-of-palestine/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/universities/university-of-palestine/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3799,7 +3758,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/palaestinensisches-technisches-college/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/palestine-technical-college/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/universities/palestine-technical-college/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3809,7 +3767,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/palaestinensisches-technisches-college/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/palestine-technical-college/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/universities/palestine-technical-college/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3819,7 +3776,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/palaestinensisches-technisches-college/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/palestine-technical-college/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/universities/palestine-technical-college/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3829,7 +3785,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/university-college-of-applied-sciences-ucas/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/university-college-of-applied-sciences-ucas/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/universities/university-college-of-applied-sciences-ucas/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3839,7 +3794,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/university-college-of-applied-sciences-ucas/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/university-college-of-applied-sciences-ucas/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/universities/university-college-of-applied-sciences-ucas/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3849,7 +3803,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/university-college-of-applied-sciences-ucas/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/university-college-of-applied-sciences-ucas/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/universities/university-college-of-applied-sciences-ucas/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3859,7 +3812,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/al-quds-open-university-gaza/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/al-quds-open-university-gaza/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/universities/al-quds-open-university-gaza/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3869,7 +3821,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/al-quds-open-university-gaza/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/al-quds-open-university-gaza/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/universities/al-quds-open-university-gaza/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3879,7 +3830,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/al-quds-open-university-gaza/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/al-quds-open-university-gaza/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/universities/al-quds-open-university-gaza/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3889,7 +3839,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/arabische-hochschule-fuer-angewandte-wissenschaften/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/arab-college-for-applied-sciences/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/universities/arab-college-for-applied-sciences/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3899,7 +3848,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/arabische-hochschule-fuer-angewandte-wissenschaften/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/arab-college-for-applied-sciences/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/universities/arab-college-for-applied-sciences/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3909,7 +3857,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/arabische-hochschule-fuer-angewandte-wissenschaften/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/arab-college-for-applied-sciences/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/universities/arab-college-for-applied-sciences/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3919,7 +3866,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/palestine-college-fuer-krankenpflege-und-hebammenwesen/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/palestine-college-of-nursing-and-midwifery/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/universities/palestine-college-of-nursing-and-midwifery/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3929,7 +3875,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/palestine-college-fuer-krankenpflege-und-hebammenwesen/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/palestine-college-of-nursing-and-midwifery/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/universities/palestine-college-of-nursing-and-midwifery/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3939,7 +3884,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/palestine-college-fuer-krankenpflege-und-hebammenwesen/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/palestine-college-of-nursing-and-midwifery/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/universities/palestine-college-of-nursing-and-midwifery/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3949,7 +3893,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/gaza-sky-geeks-technologieinstitute/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/gaza-sky-geeks-technology-institutes/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/universities/gaza-sky-geeks-technology-institutes/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3959,7 +3902,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/gaza-sky-geeks-technologieinstitute/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/gaza-sky-geeks-technology-institutes/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/universities/gaza-sky-geeks-technology-institutes/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3969,7 +3911,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/gaza-sky-geeks-technologieinstitute/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/gaza-sky-geeks-technology-institutes/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/universities/gaza-sky-geeks-technology-institutes/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3979,7 +3920,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/al-aqsa-universitaet-khan-younis/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/al-aqsa-university-khan-younis/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/universities/al-aqsa-university-khan-younis/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3989,7 +3929,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/al-aqsa-universitaet-khan-younis/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/al-aqsa-university-khan-younis/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/universities/al-aqsa-university-khan-younis/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3999,7 +3938,6 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/al-aqsa-universitaet-khan-younis/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/al-aqsa-university-khan-younis/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/universities/al-aqsa-university-khan-younis/"/>
-    <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
