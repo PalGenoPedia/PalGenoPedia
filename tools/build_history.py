@@ -172,16 +172,21 @@ def warn_translation_gaps(d):
             if B.clean(r.get("event_id")) and B.clean(r.get("category"))]
     base_ids = {r["detail_id"] for r in base}
 
+    def tkey(r):
+        # the merge joins on _anchor (holds the base detail_id verbatim);
+        # the delta's own detail_id is a row-count formula that drifts.
+        return (r.get("_anchor") or "").strip() or (r.get("detail_id") or "").strip()
+
     for lang in ("de", "ar"):
         trans = rows("details_%s.csv" % lang)
         errors = sum(1 for r in trans
                      if any((v or "").strip().lower() in B.SHEET_ERRORS
-                            for k, v in r.items() if k != "detail_id"))
-        present = {r["detail_id"] for r in trans if r.get("detail_id") in base_ids}
+                            for k, v in r.items() if k not in ("detail_id", "_anchor")))
+        trans_ids = {tkey(r) for r in trans}
+        present = base_ids & trans_ids
         missing = len(base_ids - present)
         if errors or missing:
             by_ev = {}
-            trans_ids = {r["detail_id"] for r in trans}
             for r in base:
                 if r["detail_id"] not in trans_ids:
                     by_ev[r["event_id"]] = by_ev.get(r["event_id"], 0) + 1
