@@ -10,7 +10,7 @@ FAC-007,Indonesian Hospital,Indonesisches Krankenhaus,Allgemein,Geschlossen,,Fin
 FAC-008,Al-Quds Hospital,Al-Quds-Krankenhaus,Allgemein,Geschlossen,,Betrieben von PRCS
 FAC-009,Al Ahli Arab Hospital,Al-Ahli-Arabisches Krankenhaus,Allgemein,Teiloperation,,Auch bekannt als Al-Ahli Baptistenkrankenhaus
 FAC-010,Gaza European Hospital,Europäisches Krankenhaus Gaza,Allgemein / Überweisung,Geschlossen,,Hauptkrankenhaus für den südlichen Gazastreifen
-FAC-011,Al-Ranteesi Al-Naser Paediatric Hospital,Al-Ranteesi Al-Naser Kinderkrankenhaus,Pädiatrie,Geschlossen,,
+FAC-011,Dr Abdul Aziz Rantisi Children's Specialty Hospital,Dr. Abdul Aziz Rantisi Kinder-Spezialkrankenhaus,Pädiatrie,Geschlossen,,
 FAC-012,Muhammad Al-Durrah Children's Hospital,Muhammad Al-Durrah Kinderkrankenhaus,Pädiatrie,Geschlossen,,
 FAC-013,Beit Hanoun Hospital,Beit Hanoun Krankenhaus,Allgemein,Geschlossen,,
 FAC-014,Sheikh Hamad Hospital for Rehabilitation and Prosthetics,Sheikh Hamad Krankenhaus für Rehabilitation und Prothetik,Rehabilitation / Prothetik,Geschlossen,,
@@ -21,35 +21,35 @@ FAC-018,Muhammad Youssef Al-Najjar Hospital,Muhammad Youssef Al-Najjar Krankenha
 FAC-019,Wafaa Medical Rehabilitation and Specialized Surgery Hospital,Wafaa Krankenhaus für medizinische Rehabilitation und spezialisierte Chirurgie,Rehabilitation / Chirurgie,Teiloperation,,
 FAC-020,Al Sahaba Medical Complex,Al Sahaba Medizinkomplex,Allgemein,Teiloperation,,
 FAC-021,Khidma Aamma Hospital,Khidma Aamma Krankenhaus,Allgemein,,,
-FAC-022,Asdiqaa Hospital,Asdiqaa Krankenhaus,Allgemein,,,
-FAC-023,Turkish Friendship Hospital,Türkisches Freundschaftskrankenhaus,Onkologie / Spezialisiert,Geschlossen,,
-FAC-024,Al Helou International Hospital,Internationales Krankenhaus Al Helou,Allgemein,Teiloperation,,
-FAC-025,Al-Khair Hospital,Al-Khair-Krankenhaus,Allgemein,Geschlossen,,
-FAC-026,Yafa Hospital,Krankenhaus in Yafa,Allgemein,Teiloperation,,
-FAC-027,Palestine Medical Relief Center for the Rehabilitation of the Disabled,Palästinensisches Zentrum für medizinische Hilfe und Rehabilitation von Behinderten,Rehabilitation,,,
-FAC-028,Al Yaman Al Saeed Hospital,Al Yaman Al Saeed Krankenhaus,Allgemein,Geschlossen,,Befand sich zum Zeitpunkt der Zielerfassung im Bau.
-FAC-029,Patient Friends Association Hospital,Patientenfreundevereinigung Krankenhaus,Allgemein,Teiloperation,,
-FAC-030,Jordanian Field Hospital,Jordanisches Feldlazarett,Allgemein / Notfall,Operativ,,Betrieben von Jordan
-FAC-031,Jordanian Field Hospital - Khan Yunis,Jordanisches Feldlazarett - Khan Yunis,Allgemein / Notfall,,,"Betrieben von Jordan, Khan Yunis"
-FAC-032,Red Cross Field Hospital,Feldlazarett des Roten Kreuzes,Notfall,,,Betrieben vom IKRK
-FAC-033,Red Cross Field Hospital - Rafah,Feldlazarett des Roten Kreuzes – Rafah,Notfall,Operativ,,"Betrieben vom IKRK, Rafah"
-FAC-034,Al Emirati Field Hospital,Feldlazarett der Emirate,Allgemein / Notfall,Geschlossen,,Betrieben von den VAE
-FAC-035,Al Quds Field Hospital,Al-Quds-Feldlazarett,Allgemein / Notfall,,,Betrieben von PCRS
-FAC-036,Kuwait Field Hospital,Feldlazarett Kuwait,Allgemein / Notfall,Geschlossen,,Betrieben von Kuwait
-FAC-037,UAE Field Hospital,Feldlazarett der VAE,Allgemein / Notfall,,,Betrieben von den VAE
-FAC-038,International Medical Corps Field Hospital,Feldlazarett des International Medical Corps,Allgemein / Notfall,,,"Einrichtung mit 160 Betten, betrieben von IMC"
-FAC-039,UNRWA Health Centre,UNRWA-Gesundheitszentrum,Primärversorgung,,,"Betrieben von UNRWA. Vor dem Krieg gab es 22 UNRWA-Gesundheitszentren im Gazastreifen. Seit dem 7. Oktober 2023 änderte sich die Anzahl der in Betrieb befindlichen Zentren monatlich. Zusätzlich wurden temporäre Gesundheitszentren eingerichtet, um der gestiegenen Nachfrage gerecht zu werden. Während des Krieges entstanden fünf weitere Einrichtungen (insgesamt 27), von denen jedoch nicht alle in Betrieb waren."
-FAC-040,Primary Care Clinic,Hausarztpraxis,Primärversorgung,,,
-FAC-041,MSF Premise 01,MSF-Präsenz 01,Notfall / Trauma,,,Betrieben von MSF
-FAC-042,MSF Clinic,MSF-Klinik,Notfall / Trauma,,,Betrieben von MSF
-FAC-043,MSF Urgent Care Unit - Khan Younis,MSF-Notfallambulanz – Khan Younis,Notfall,,,Betrieben von MSF
-FAC-044,Noura Al-Kaabi Specialist Dialysis Centre,Noura Al-Kaabi Spezialisiertes Dialysezentrum,Dialyse / Nephrologie,,,
-FAC-045,Al-Zaytoun Medical Clinic,Medizinische Klinik Al-Zaytoun,Primärversorgung,Geschlossen,,
-FAC-046,Al-Qarara Medical Clinic,Al-Qarara-Klinik,Primärversorgung,,,
-FAC-047,Solidarity Polyclinic,Solidaritäts-Poliklinik,Primärversorgung,Geschlossen,,
-FAC-048,Algerian Military Hospital,Algerisches Militärkrankenhaus,Primärversorgung,Geschlossen,,
-FAC-049,Muscat Al-Qarara Health Centre,Al-Qarara-Gesundheitszentrum in Maskat,Primärversorgung,Geschlossen,,
-FAC-050,Al-Mawasi Clinic,Al-Mawasi-Klinik,Primärversorgung,,,
+FAC-022,Turkish Friendship Hospital,Türkisches Freundschaftskrankenhaus,Onkologie / Spezialisiert,Geschlossen,,
+FAC-023,Al Helou International Hospital,Internationales Krankenhaus Al Helou,Allgemein,Teiloperation,,
+FAC-024,Al-Khair Hospital,Al-Khair-Krankenhaus,Allgemein,Geschlossen,,
+FAC-025,Yafa Hospital,Krankenhaus in Yafa,Allgemein,Teiloperation,,
+FAC-026,Palestine Medical Relief Center for the Rehabilitation of the Disabled,Palästinensisches Zentrum für medizinische Hilfe und Rehabilitation von Behinderten,Rehabilitation,,,
+FAC-027,Al Yaman Al Saeed Hospital,Al Yaman Al Saeed Krankenhaus,Allgemein,Geschlossen,,Befand sich zum Zeitpunkt der Zielerfassung im Bau.
+FAC-028,Patient Friends Association Hospital,Patientenfreundevereinigung Krankenhaus,Allgemein,Teiloperation,,
+FAC-029,Jordanian Field Hospital,Jordanisches Feldlazarett,Allgemein / Notfall,Operativ,,Betrieben von Jordan
+FAC-030,Jordanian Field Hospital - Khan Yunis,Jordanisches Feldlazarett - Khan Yunis,Allgemein / Notfall,,,"Betrieben von Jordan, Khan Yunis"
+FAC-031,Red Cross Field Hospital,Feldlazarett des Roten Kreuzes,Notfall,,,Betrieben vom IKRK
+FAC-032,Red Cross Field Hospital - Rafah,Feldlazarett des Roten Kreuzes – Rafah,Notfall,Operativ,,"Betrieben vom IKRK, Rafah"
+FAC-033,Emirates Crescent Hospital,Emirates Crescent Krankenhaus,Allgemein / Notfall,Geschlossen,,Betrieben von den VAE
+FAC-034,Al Quds Field Hospital,Al-Quds-Feldlazarett,Allgemein / Notfall,Unbekannt,,Betrieben von PCRS
+FAC-035,Kuwait Specialty Hospital,Kuwait Spezialkrankenhaus,Allgemein / Notfall,Geschlossen,,Betrieben von Kuwait
+FAC-036,UAE Field Hospital,Feldlazarett der VAE,Allgemein / Notfall,Geschlossen,,Betrieben von den VAE
+FAC-037,International Medical Corps Field Hospital,Feldlazarett des International Medical Corps,Allgemein / Notfall,,,"Einrichtung mit 160 Betten, betrieben von IMC"
+FAC-038,UNRWA Health Centre,UNRWA-Gesundheitszentrum,Primärversorgung,,,"Betrieben von UNRWA. Vor dem Krieg gab es 22 UNRWA-Gesundheitszentren im Gazastreifen. Seit dem 7. Oktober 2023 änderte sich die Anzahl der in Betrieb befindlichen Zentren monatlich. Zusätzlich wurden temporäre Gesundheitszentren eingerichtet, um der gestiegenen Nachfrage gerecht zu werden. Während des Krieges entstanden fünf weitere Einrichtungen (insgesamt 27), von denen jedoch nicht alle in Betrieb waren."
+FAC-039,Primary Care Clinic,Hausarztpraxis,Primärversorgung,,,
+FAC-040,MSF Premise 01,MSF-Präsenz 01,Notfall / Trauma,,,Betrieben von MSF
+FAC-041,MSF Clinic,MSF-Klinik,Notfall / Trauma,,,Betrieben von MSF
+FAC-042,MSF Urgent Care Unit - Khan Younis,MSF-Notfallambulanz – Khan Younis,Notfall,,,Betrieben von MSF
+FAC-043,Noura Al-Kaabi Specialist Dialysis Centre,Noura Al-Kaabi Spezialisiertes Dialysezentrum,Dialyse / Nephrologie,,,
+FAC-044,Al-Zaytoun Medical Clinic,Medizinische Klinik Al-Zaytoun,Primärversorgung,Geschlossen,,
+FAC-045,Qararah Health Care Center,Qararah Gesundheitszentrum,Primärversorgung,,,
+FAC-046,Solidarity Polyclinic,Solidaritäts-Poliklinik,Primärversorgung,Geschlossen,,
+FAC-047,Algerian Specialized Hospital,Algerisches Spezialkrankenhaus,Primärversorgung,Geschlossen,,
+FAC-048,Muscat Al-Qarara Health Centre,Al-Qarara-Gesundheitszentrum in Maskat,Primärversorgung,Geschlossen,,
+FAC-049,Al-Mawasi Clinic,Al-Mawasi-Klinik,Primärversorgung,,,
+,,,,,,
 ,,,,,,
 ,,,,,,
 ,,,,,,
