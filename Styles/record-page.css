@@ -644,6 +644,46 @@ body[dir="rtl"] .rp-chart svg { direction: ltr; }
     color: var(--text-secondary, #64748b);
     font-style: italic;
 }
+.inc-archive-bar {
+    margin-top: 0.6rem;
+    padding: 0.5rem 0.7rem;
+    border: 1px solid var(--border-color, #e2e8f0);
+    border-inline-start: 3px solid var(--primary-red, #dc2626);
+    border-radius: 6px;
+    background: var(--bg-secondary, #f8fafc);
+}
+.inc-archive-bar .iab-h {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--text-secondary, #64748b);
+}
+.inc-archive-bar .iab-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.4rem;
+}
+.inc-archive-bar .iab-item {
+    font-size: 0.8rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 5px;
+    border: 1px solid var(--border-color, #e2e8f0);
+    background: var(--bg-primary, #fff);
+    color: var(--primary-red, #dc2626);
+    text-decoration: none;
+    word-break: break-word;
+}
+.inc-archive-bar a.iab-item:hover { background: var(--bg-secondary, #f1f5f9); }
+.inc-archive-bar .iab-pending {
+    color: var(--text-muted, #94a3b8);
+    border-style: dashed;
+    font-style: italic;
+}
+.inc-archive-bar .iab-pending em { font-style: normal; }
+
 .inc-modal-prov { margin-top: 1.2rem; font-size: 0.78rem; color: var(--text-muted, #94a3b8); }
 
 .inc-modal-nav {

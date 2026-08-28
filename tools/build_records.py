@@ -54,6 +54,38 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 MANIFEST = os.path.join(HERE, "_records_manifest.json")
 
+
+# url -> {"snap": <wayback url>|None, "pending": bool}, from tools/archive_links.py
+# (weekly Action, state in data/archived-links.json). Lets each incident show
+# whether we hold an independent copy of its web sources. "pending" = the URL is
+# queued for capture but the snapshot hasn't landed yet.
+def _load_archived():
+    p = os.path.join(ROOT, "data", "archived-links.json")
+    try:
+        d = json.load(open(p, encoding="utf-8"))
+    except Exception:
+        return {}
+    out = {}
+    for u, v in d.items():
+        if v.get("status") == "archived" and v.get("wayback"):
+            out[u] = {"snap": v["wayback"], "pending": False}
+        elif v.get("status") in ("requested", "failed", "new"):
+            out[u] = {"snap": None, "pending": True}
+    return out
+
+ARCHIVED = _load_archived()
+
+
+def archive_of(url):
+    """(snap_url, pending) for a source URL. Matches archive_links.py's own
+    normalisation (no trailing slash or #fragment). (None, False) when the URL
+    is not tracked at all."""
+    key = (url or "").strip().rstrip("/").split("#")[0]
+    e = ARCHIVED.get(key) or ARCHIVED.get(url)
+    if not e:
+        return None, False
+    return e["snap"], e["pending"]
+
 # ── what to build ────────────────────────────────────────────────────────
 # Pilot scope is hospitals. The other categories are the same shape - add an
 # entry here and re-run; no new code is needed.
@@ -153,6 +185,8 @@ T = {
         "incident_history": "Incident history",
         "no_incidents": "No incidents are documented for this facility yet.",
         "sources": "Sources",
+        "arch_some": "{k} of {n} web sources independently archived",
+        "arch_pending": "archiving pending",
         "killed": "killed", "injured": "injured",
         "hw_killed": "health workers killed", "hw_injured": "health workers injured",
         "type": "Type", "subtype": "Sub-type", "governorate": "Governorate",
@@ -245,6 +279,8 @@ T = {
         "incident_history": "Chronik der Vorfälle",
         "no_incidents": "Für diese Einrichtung sind bislang keine Vorfälle dokumentiert.",
         "sources": "Quellen",
+        "arch_some": "{k} von {n} Web-Quellen unabhängig archiviert",
+        "arch_pending": "Archivierung ausstehend",
         "killed": "getötet", "injured": "verletzt",
         "hw_killed": "getötete Beschäftigte im Gesundheitswesen",
         "hw_injured": "verletzte Beschäftigte im Gesundheitswesen",
@@ -338,6 +374,8 @@ T = {
         "incident_history": "سجل الحوادث",
         "no_incidents": "لا توجد حوادث موثّقة لهذه المنشأة حتى الآن.",
         "sources": "المصادر",
+        "arch_some": "تمت أرشفة {k} من {n} من مصادر الويب بشكل مستقل",
+        "arch_pending": "الأرشفة قيد الانتظار",
         "killed": "قتيلاً", "injured": "جريحاً",
         "hw_killed": "من الكوادر الصحية قتلى",
         "hw_injured": "من الكوادر الصحية جرحى",
@@ -572,6 +610,34 @@ def source_entries(inc):
                 continue
             out.append(("link", s) if s.startswith("http") else ("text", s))
     return out
+
+
+def archive_bar(srcs, t):
+    """A strip under the Sources list showing which cited web pages we hold an
+    independent Wayback copy of. Archived ones link to the snapshot; queued ones
+    are greyed with "archiving pending". Text-only sources have no URL to archive
+    and are not counted. Returns '' when no source URL is tracked yet."""
+    links = [s for k, s in srcs if k == "link"]
+    if not links:
+        return ""
+    items, n_arch = [], 0
+    for u in links:
+        snap, pending = archive_of(u)
+        host = re.sub(r"^https?://(www\.)?", "", u).split("/")[0]
+        if snap:
+            n_arch += 1
+            items.append(
+                '<a class="iab-item" href="%s" rel="nofollow noopener" target="_blank">'
+                '&#128368;&#65039; %s</a>' % (e(snap), e(host)))
+        elif pending:
+            items.append(
+                '<span class="iab-item iab-pending">&#8987; %s <em>(%s)</em></span>'
+                % (e(host), e(t["arch_pending"])))
+    if not items:
+        return ""
+    summary = t["arch_some"].format(k=n_arch, n=len(links))
+    return ('<div class="inc-archive-bar"><span class="iab-h">&#128368;&#65039; %s</span>'
+            '<div class="iab-items">%s</div></div>' % (e(summary), "".join(items)))
 
 
 def fmt_date(inc):
@@ -858,7 +924,7 @@ def head_common(title, desc, canonical, alts, img, robots, lang):
     # two-column body, sidebar, incident cards. Loading it rather than copying
     # it means the generated pages cannot drift from the interactive view.
     a('<link rel="stylesheet" href="/Pages/War_Crimes_Stats/shared.css?v=4">')
-    a('<link rel="stylesheet" href="/Styles/record-page.css?v=22">')
+    a('<link rel="stylesheet" href="/Styles/record-page.css?v=23">')
     return L
 
 
@@ -1576,6 +1642,9 @@ def incident_modal(inc, fac, lang, t, anchor, prev_a, next_a, pos, total, close_
             else:
                 a('<span class="inc-src-text">&#128220; %s</span>' % e(s))
         a("</div>")
+        bar = archive_bar(srcs, t)
+        if bar:
+            a(bar)
 
     vids = [(clean(inc.get("video_url")), t["watch_video"]),
             (clean(inc.get("archived_video")), t["archived_video"])]

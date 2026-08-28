@@ -319,9 +319,17 @@ Machine.
   `build-records.yml`'s trigger paths, so the pages rebuild to pick up new
   snapshots.
 
-`build_history.py` (`archived_badge()`) and `regenerate.py` read that file:
-each cited source in a generated page gets a small 🕰 link to its Wayback
-copy, and `data/events.json` sources carry an `archived_url`.
+Three generators read that file:
+
+- `build_history.py` (`archived_badge()`) — each cited source on a historical
+  massacre page gets a small 🕰 link to its Wayback copy;
+- `regenerate.py` — `data/events.json` sources carry an `archived_url`;
+- `build_records.py` (`archive_of()` / `archive_bar()`) — each incident modal on
+  a `/war-crimes/<section>/<slug>/` page gets an **"archived sources" strip**
+  under its Sources list: `{k} of {n} web sources independently archived`, each
+  archived source linking to its snapshot, queued ones greyed as *archiving
+  pending*. Text-only sources (no URL) aren't counted. The strip is absent until
+  at least one of the incident's source URLs is tracked.
 
 **Social media** (`x.com`, `facebook.com`, `instagram.com`, `tiktok.com`)
 usually captures as a login wall in Wayback — those entries are flagged
@@ -603,7 +611,7 @@ must be written with the Write tool, not piped through a heredoc.
 **Cache-busting.** Changed JS/CSS gets `?v=N` bumped everywhere it is
 referenced. Currently: `footer-init.js?v=6`, `header-component.js?v=5`,
 `partials/site-footer.html?v=6` (was `common-styles.html`),
-`dual-timeline-manager.js?v=6`, `timeline.css?v=1`, `record-page.css?v=21`,
+`dual-timeline-manager.js?v=6`, `timeline.css?v=1`, `record-page.css?v=23`,
 `record-page.js?v=5`. `transferSize: 0` in
 `performance.getEntriesByType('resource')` proves a stale cached asset.
 
