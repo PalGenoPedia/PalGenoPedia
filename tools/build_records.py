@@ -858,7 +858,7 @@ def head_common(title, desc, canonical, alts, img, robots, lang):
     # two-column body, sidebar, incident cards. Loading it rather than copying
     # it means the generated pages cannot drift from the interactive view.
     a('<link rel="stylesheet" href="/Pages/War_Crimes_Stats/shared.css?v=4">')
-    a('<link rel="stylesheet" href="/Styles/record-page.css?v=21">')
+    a('<link rel="stylesheet" href="/Styles/record-page.css?v=22">')
     return L
 
 

@@ -77,6 +77,21 @@ def rfc822(d):
 
 _HIST_URLS = _hist_urls()
 
+
+def _archived():
+    p = os.path.join(DATA, "archived-links.json")
+    if not os.path.exists(p):
+        return {}
+    try:
+        d = json.load(open(p, encoding="utf-8"))
+    except Exception:
+        return {}
+    return {u: v["wayback"] for u, v in d.items()
+            if v.get("status") == "archived" and v.get("wayback")}
+
+
+ARCHIVED = _archived()
+
 def detail_url(e):
     # every event now has a generated record page (build_history.py renders all
     # rows in events.csv); fall back to the timeline hash only if one is missing.
@@ -282,8 +297,10 @@ def load_events_from_csv():
             if k in seen:
                 continue
             seen.add(k)
+            url = link if link.startswith("http") else None
             sources.append({"source": s,
-                            "source_link": link if link.startswith("http") else None,
+                            "source_link": url,
+                            "archived_url": ARCHIVED.get((url or "").rstrip("/").split("#")[0]) if url else None,
                             "category": a_(d.get("category")) or None})
         war_crimes = [a_(d.get("heading_label")) for d in drows
                       if a_(d.get("category")) == "war_crime" and a_(d.get("heading_label"))]

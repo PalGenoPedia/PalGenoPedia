@@ -951,6 +951,13 @@ body[dir="rtl"] .rp-chart svg { direction: ltr; }
     text-decoration: none;
 }
 .rp-hist .rp-card-src a:hover { text-decoration: underline; }
+.rp-archived {
+    text-decoration: none;
+    margin-inline-start: 0.35rem;
+    opacity: 0.65;
+    font-size: 0.9em;
+}
+.rp-archived:hover { opacity: 1; }
 
 /* testimony — quote card with an accent rail */
 .rp-hist .rp-card--testimony {

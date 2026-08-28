@@ -33,6 +33,33 @@ MANIFEST = os.path.join(HERE, "_history_manifest.json")
 SRC = "Pages/Historical_Massacres"
 GROUP, SEG = "historical-events", "massacres"
 
+# url -> Wayback snapshot, from tools/archive_links.py (weekly Action). Used to
+# hang a small "archived" link off each cited source.
+def _load_archived():
+    p = os.path.join(ROOT, "data", "archived-links.json")
+    if not os.path.exists(p):
+        return {}
+    try:
+        d = json.load(open(p, encoding="utf-8"))
+    except Exception:
+        return {}
+    return {u: v["wayback"] for u, v in d.items()
+            if v.get("status") == "archived" and v.get("wayback")}
+
+ARCHIVED = _load_archived()
+
+
+def archived_badge(link):
+    """A tiny 🕰 link to the Wayback snapshot, or '' if the URL isn't archived.
+    Matches on the same normalisation archive_links.py stores (no trailing / or #)."""
+    key = (link or "").strip().rstrip("/").split("#")[0]
+    snap = ARCHIVED.get(key) or ARCHIVED.get(link)
+    if not snap:
+        return ""
+    return (' <a class="rp-archived" href="%s" rel="nofollow noopener" '
+            'target="_blank" title="Archived copy (Wayback Machine)">\U0001F570️</a>'
+            % B.e(snap))
+
 # The interactive archive stays where it is, beside the CSVs it reads. Its
 # #event/<id> anchors are indexed and linked from 404.html, so it keeps its
 # URL; these generated pages are an additional, canonical surface.
@@ -468,14 +495,15 @@ def render_event(ev, details, slugs, lang):
                 body = ""
             if cat == "source" and (body == head or body == src):
                 body = ""
+            arch = archived_badge(link) if link.startswith("http") else ""
             src_html = ""
             if src and src != head:
                 cited = ('<a href="%s" rel="nofollow noopener" target="_blank">%s</a>'
                          % (e(link), e(src))) if link.startswith("http") else e(src)
-                src_html = '<div class="rp-card-src">%s</div>' % cited
+                src_html = '<div class="rp-card-src">%s%s</div>' % (cited, arch)
             elif cat == "source" and link.startswith("http"):
                 src_html = ('<div class="rp-card-src"><a href="%s" rel="nofollow noopener" '
-                            'target="_blank">%s</a></div>' % (e(link), e(link)))
+                            'target="_blank">%s</a>%s</div>' % (e(link), e(link), arch))
 
             if cat == "testimony":
                 quote = '“%s”' % e(body) if body else ""

@@ -295,6 +295,39 @@ direct URL — see **Pages/ is now developer-only** below.
 
 ---
 
+## ⑥ Source-link archiving
+
+A separate workflow, `.github/workflows/archive-links.yml` — weekly cron +
+`workflow_dispatch` — snapshots every external source URL to the Wayback
+Machine.
+
+`tools/archive_links.py`:
+
+- collects every `http(s)` URL from `details.csv` (`source_link`), the
+  `*_incidents.csv` (`source_url_1/2`, `video_url`) and the `*-resources.csv`
+  (`url`) — ~600 unique;
+- for each: a fast **CDX** check (`web.archive.org/cdx/...`) — already
+  captured? record the snapshot. Otherwise **POST to Save Page Now**
+  (authenticated with the `IA_ACCESS` / `IA_SECRET` repo secrets — the
+  archive.org "S3-like" keys), *without* polling; the next run's CDX check
+  picks up the snapshot once it lands;
+- `--limit N` caps new submissions per run (default 50) so it converges over a
+  few weeks rather than hammering SPN;
+- writes **`data/archived-links.json`** — `{ "<url>": {status, ts, wayback,
+  social} }` — and commits it. This is in `build-records.yml`'s trigger paths,
+  so the pages rebuild to pick up new snapshots.
+
+`build_history.py` (`archived_badge()`) and `regenerate.py` read that file:
+each cited source in a generated page gets a small 🕰 link to its Wayback
+copy, and `data/events.json` sources carry an `archived_url`.
+
+**Social media** (`x.com`, `facebook.com`, `instagram.com`, `tiktok.com`)
+usually captures as a login wall in Wayback — those entries are flagged
+`"social": true` and the run prints a count; archive.today them by hand
+(no API — Cloudflare + CAPTCHA + it blocks datacenter IPs).
+
+---
+
 ## URL structure
 
 ```

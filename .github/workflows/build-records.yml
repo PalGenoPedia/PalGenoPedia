@@ -25,6 +25,8 @@ on:
       - 'tools/seo_inject.py'
       - 'js/record-page.js'
       - 'Styles/record-page.css'
+      - 'data/archived-links.json'
+      - 'partials/timeline-shell.html'
   workflow_dispatch:
 
 # Let a newer push supersede an in-flight run rather than racing it to commit.
