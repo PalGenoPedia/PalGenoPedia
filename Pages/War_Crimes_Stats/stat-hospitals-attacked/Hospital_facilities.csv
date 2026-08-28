@@ -10,7 +10,7 @@ FAC-007,Indonesian Hospital,Hospital,General Hospital,North Gaza,Beit Lahiya,31.
 FAC-008,Al-Quds Hospital,Hospital,General Hospital,Gaza,Gaza City,31.50565641,34.42975551,119,General,Operational,Closed,,Operated by PRCS,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrT56GAvwFXhdMJ9Z6TjMdOFlJp2JpTVYMAtJ22PsItNX_4RIA7qh6DSg&s=10,View Hospital
 FAC-009,Al Ahli Arab Hospital,Hospital,General Hospital,Gaza,Gaza City,31.50441341,34.46057526,43,General,Operational,Partial operation,,Also known as Al-Ahli Baptist Hospital,https://www.dooz.ps/wp-content/uploads/2023/12/Hospital-1.jpg,View Hospital
 FAC-010,Gaza European Hospital,Hospital,General Hospital,Khan Younis,Khan Younis,31.30321296,34.31924164,360,General / Referral,Operational,Closed,,Main referral hospital for southern Gaza,https://i0.wp.com/www.middleeastmonitor.com/wp-content/uploads/2025/05/AA-20250513-37940404-37940367-ISRAELI_ARMY_ATTACK_ON_THE_EUROPEAN_HOSPITAL_IN_KHAN_YUNIS-1.jpg?fit=920%2C613&ssl=1,View Hospital
-FAC-011,Al-Ranteesi Al-Naser Paediatric Hospital,Hospital,Paediatric Hospital,Gaza,Gaza City,31.53263706,34.45966061,210,Paediatric,Operational,Closed,,,,View Hospital
+FAC-011,Dr Abdul Aziz Rantisi Children's Specialty Hospital,Hospital,Paediatric Hospital,Gaza,Gaza City,31.53263706,34.45966061,210,Paediatric,Operational,Closed,,,,View Hospital
 FAC-012,Muhammad Al-Durrah Children's Hospital,Hospital,Paediatric Hospital,Gaza,Gaza City,31.51418912,34.47961236,100,Paediatric,Operational,Closed,,,,View Hospital
 FAC-013,Beit Hanoun Hospital,Hospital,General Hospital,North Gaza,Beit Hanoun,31.53463942,34.5086943,86,General,Operational,Closed,,,,View Hospital
 FAC-014,Sheikh Hamad Hospital for Rehabilitation and Prosthetics,Hospital,Rehabilitation Hospital,Gaza,Gaza City,31.54708947,34.45691575,100,Rehabilitation / Prosthetics,Operational,Closed,,,,View Hospital
@@ -21,35 +21,34 @@ FAC-018,Muhammad Youssef Al-Najjar Hospital,Hospital,General Hospital,Rafah,Rafa
 FAC-019,Wafaa Medical Rehabilitation and Specialized Surgery Hospital,Hospital,Specialized Hospital,Gaza,Gaza City,31.51315267,34.45213586,43,Rehabilitation / Surgery,Operational,Partial operation,,,,View Hospital
 FAC-020,Al Sahaba Medical Complex,Hospital,Medical Complex,Gaza,Gaza City,31.5172918,34.45957262,15,General,Operational,Partial operation,,,,View Hospital
 FAC-021,Khidma Aamma Hospital,Hospital,General Hospital,Gaza,Gaza City,,,,General,Operational,,,,,View Hospital
-FAC-022,Asdiqaa Hospital,Hospital,General Hospital,Gaza,Gaza City,,,,General,Operational,,,,,View Hospital
-FAC-023,Turkish Friendship Hospital,Hospital,Specialized Hospital,Gaza,Gaza City,31.47764767,34.41510105,272,Oncology / Specialized,Operational,Closed,,,,View Hospital
-FAC-024,Al Helou International Hospital,Hospital,General Hospital,Gaza,Gaza City,31.52483101,34.44683415,6,General,Operational,Partial operation,,,,View Hospital
-FAC-025,Al-Khair Hospital,Hospital,General Hospital,Khan Younis,Khan Younis,31.35412878,34.28044806,24,General,Operational,Closed,,,,View Hospital
-FAC-026,Yafa Hospital,Hospital,General Hospital,Khan Younis,Khan Younis,31.41789593,34.34437103,5,General,Operational,Partial operation,,,,View Hospital
-FAC-027,Palestine Medical Relief Center for the Rehabilitation of the Disabled,Hospital,Rehabilitation Center,Gaza,Gaza City,,,,Rehabilitation,Operational,,,,,View Hospital
-FAC-028,Al Yaman Al Saeed Hospital,Hospital,General Hospital,Gaza,Gaza City,,,,General,Under Construction,Closed,,Was under construction at time of targeting,,View Hospital
-FAC-029,Patient Friends Association Hospital,Hospital,General Hospital,Gaza,Nusseirat,31.51721866,34.44481073,19,General,Operational,Partial operation,,,,View Hospital
-FAC-030,Jordanian Field Hospital,Field Hospital,Field Hospital,Gaza,Gaza City,,,,General / Emergency,Operational,Operational,,Operated by Jordan,,View Hospital
-FAC-031,Jordanian Field Hospital - Khan Yunis,Field Hospital,Field Hospital,Khan Younis,Khan Younis,,,,General / Emergency,Operational,,,"Operated by Jordan, Khan Yunis",,View Hospital
-FAC-032,Red Cross Field Hospital,Field Hospital,Field Hospital,Gaza,Gaza City,,,,Emergency,Operational,,,Operated by ICRC,,View Hospital
-FAC-033,Red Cross Field Hospital - Rafah,Field Hospital,Field Hospital,Rafah,Rafah,,,,Emergency,Operational,Operational,,"Operated by ICRC, Rafah","https://assets.redcross.org.uk/82b1e254-5524-0172-0612-9ce813c7824c/739c1a41-498c-4ebd-818c-0d35a7db8ee2/RS48910-Israel-and-Occupied-Palestinian-Territory-Appeal-ICRC-Field-Hospital-in-Rafah-Gaza.jpg?w=735&h=413&fit=clip&rect=1,0,1918,1080&auto=format",View Hospital
-FAC-034,Al Emirati Field Hospital,Field Hospital,Field Hospital,Rafah,Rafah,31.30651675,34.2454233,38,General / Emergency,Operational,Closed,,Operated by UAE,,View Hospital
-FAC-035,Al Quds Field Hospital,Field Hospital,Field Hospital,Rafah,Rafah,,,,General / Emergency,Operational,,,Operated by PCRS,,View Hospital
-FAC-036,Kuwait Field Hospital,Field Hospital,Field Hospital,Rafah,Rafah,31.28816025,34.24914832,20,General / Emergency,Operational,Closed,,Operated by Kuwait,,View Hospital
-FAC-037,UAE Field Hospital,Field Hospital,Field Hospital,Rafah,Rafah,,,,General / Emergency,Operational,,,Operated by UAE,,View Hospital
-FAC-038,International Medical Corps Field Hospital,Field Hospital,Field Hospital,Rafah,Rafah,,,,General / Emergency,Operational,,,160-bed facility operated by IMC,,View Hospital
-FAC-039,UNRWA Health Centre,Clinic,Health Centre,Gaza,Gaza City,,,,Primary Care,Operational,,,"Operated by UNRWA. Pre war there were 22 UNRWA health centres throughout Gaza. Since 7 October 2023 the number of centres that were operational changed month to month. Additionally, temporary health centres were established to meet increased demand, with an additional 5 facilities set up throughout the war (total of 27), although not all were oparational.",,View Hospital
-FAC-040,Primary Care Clinic,Clinic,Primary Care Clinic,Gaza,Gaza City,,,,Primary Care,Operational,,,,,View Hospital
-FAC-041,MSF Premise 01,Clinic,MSF Facility,Gaza,Gaza City,,,,Emergency / Trauma,Operational,,,Operated by MSF,,View Hospital
-FAC-042,MSF Clinic,Clinic,MSF Facility,Gaza,Gaza City,,,,Emergency / Trauma,Operational,,,Operated by MSF,,View Hospital
-FAC-043,MSF Urgent Care Unit - Khan Younis,Clinic,MSF Facility,Khan Younis,Khan Younis,,,,Emergency,Operational,,,Operated by MSF,,View Hospital
-FAC-044,Noura Al-Kaabi Specialist Dialysis Centre,Clinic,Specialist Centre,Gaza,Gaza City,,,,Dialysis / Nephrology,Operational,,,,,View Hospital
-FAC-045,Al-Zaytoun Medical Clinic,Clinic,Medical Clinic,Gaza,Gaza City,,,,Primary Care,Operational,Closed,,,,View Hospital
-FAC-046,Al-Qarara Medical Clinic,Clinic,Medical Clinic,Khan Younis,Al Qarara,,,,Primary Care,Operational,,,,,View Hospital
-FAC-047,Solidarity Polyclinic,Clinic,Polyclinic,Deir al-Balah,Deir al-Balah,,,,Primary Care,Operational,Closed,,,,View Hospital
-FAC-048,Algerian Military Hospital,Hospital,General Hospital,Khan Younis,Khan Younis,31.32625315,34.3463425,45,Primary Care,Operational,Closed,,,,
-FAC-049,Muscat Al-Qarara Health Centre,Clinic,Medical Clinic,Khan Younis,Al Qarara,,,,Primary Care,Operational,Closed,,,https://x.com/AlbaloushiAmna/status/1739979096128639241,
-FAC-050,Al-Mawasi Clinic,Clinic,Medical Clinic,Khan Younis,Khan Younis,,,,Primary Care,Operational,,,,,
+FAC-022,Turkish Friendship Hospital,Hospital,Specialized Hospital,Gaza,Gaza City,31.47764767,34.41510105,272,Oncology / Specialized,Operational,Closed,,,,View Hospital
+FAC-023,Al Helou International Hospital,Hospital,General Hospital,Gaza,Gaza City,31.52483101,34.44683415,6,General,Operational,Partial operation,,,,View Hospital
+FAC-024,Al-Khair Hospital,Hospital,General Hospital,Khan Younis,Khan Younis,31.35412878,34.28044806,24,General,Operational,Closed,,,,View Hospital
+FAC-025,Yafa Hospital,Hospital,General Hospital,Khan Younis,Khan Younis,31.41789593,34.34437103,5,General,Operational,Partial operation,,,,View Hospital
+FAC-026,Palestine Medical Relief Center for the Rehabilitation of the Disabled,Hospital,Rehabilitation Center,Gaza,Gaza City,,,,Rehabilitation,Operational,,,,,View Hospital
+FAC-027,Al Yaman Al Saeed Hospital,Hospital,General Hospital,Gaza,Gaza City,31.536356,34.4962551,,General,Under Construction,Closed,,Was under construction at time of targeting,,View Hospital
+FAC-028,Patient Friends Association Hospital,Hospital,General Hospital,Gaza,Nusseirat,31.51721866,34.44481073,19,General,Operational,Partial operation,,,,View Hospital
+FAC-029,Jordanian Field Hospital,Field Hospital,Field Hospital,Gaza,Gaza City,,,,General / Emergency,Operational,Operational,,Operated by Jordan,,View Hospital
+FAC-030,Jordanian Field Hospital - Khan Yunis,Field Hospital,Field Hospital,Khan Younis,Khan Younis,,,,General / Emergency,Operational,,,"Operated by Jordan, Khan Yunis",,View Hospital
+FAC-031,Red Cross Field Hospital,Field Hospital,Field Hospital,Gaza,Gaza City,,,,Emergency,Operational,,,Operated by ICRC,,View Hospital
+FAC-032,Red Cross Field Hospital - Rafah,Field Hospital,Field Hospital,Rafah,Rafah,,,,Emergency,Operational,Operational,,"Operated by ICRC, Rafah","https://assets.redcross.org.uk/82b1e254-5524-0172-0612-9ce813c7824c/739c1a41-498c-4ebd-818c-0d35a7db8ee2/RS48910-Israel-and-Occupied-Palestinian-Territory-Appeal-ICRC-Field-Hospital-in-Rafah-Gaza.jpg?w=735&h=413&fit=clip&rect=1,0,1918,1080&auto=format",View Hospital
+FAC-033,Emirates Crescent Hospital,Field Hospital,Field Hospital,Rafah,Rafah,31.30651675,34.2454233,38,General / Emergency,Operational,Closed,,Operated by UAE,,View Hospital
+FAC-034,Al Quds Field Hospital,Field Hospital,Field Hospital,Rafah,Rafah,,,na,General / Emergency,Operational,Unknown,,Operated by PCRS,,View Hospital
+FAC-035,Kuwait Specialty Hospital,Field Hospital,Field Hospital,Rafah,Rafah,31.28816025,34.24914832,20,General / Emergency,Operational,Closed,,Operated by Kuwait,,View Hospital
+FAC-036,UAE Field Hospital,Field Hospital,Field Hospital,Rafah,Rafah,31.276651,34.256357,,General / Emergency,Operational,Closed,,Operated by UAE,,View Hospital
+FAC-037,International Medical Corps Field Hospital,Field Hospital,Field Hospital,Rafah,Rafah,,,,General / Emergency,Operational,,,160-bed facility operated by IMC,,View Hospital
+FAC-038,UNRWA Health Centre,Clinic,Health Centre,Gaza,Gaza City,,,,Primary Care,Operational,,,"Operated by UNRWA. Pre war there were 22 UNRWA health centres throughout Gaza. Since 7 October 2023 the number of centres that were operational changed month to month. Additionally, temporary health centres were established to meet increased demand, with an additional 5 facilities set up throughout the war (total of 27), although not all were oparational.",,View Hospital
+FAC-039,Primary Care Clinic,Clinic,Primary Care Clinic,Gaza,Gaza City,,,,Primary Care,Operational,,,,,View Hospital
+FAC-040,MSF Premise 01,Clinic,MSF Facility,Gaza,Gaza City,,,,Emergency / Trauma,Operational,,,Operated by MSF,,View Hospital
+FAC-041,MSF Clinic,Clinic,MSF Facility,Gaza,Gaza City,,,,Emergency / Trauma,Operational,,,Operated by MSF,,View Hospital
+FAC-042,MSF Urgent Care Unit - Khan Younis,Clinic,MSF Facility,Khan Younis,Khan Younis,,,,Emergency,Operational,,,Operated by MSF,,View Hospital
+FAC-043,Noura Al-Kaabi Specialist Dialysis Centre,Clinic,Specialist Centre,Gaza,Gaza City,,,,Dialysis / Nephrology,Operational,,,,,View Hospital
+FAC-044,Al-Zaytoun Medical Clinic,Clinic,Medical Clinic,Gaza,Gaza City,,,,Primary Care,Operational,Closed,,,,View Hospital
+FAC-045,Qararah Health Care Center,Clinic,Medical Clinic,Khan Younis,Al Qarara,,,,Primary Care,Operational,,,,,View Hospital
+FAC-046,Solidarity Polyclinic,Clinic,Polyclinic,Deir al-Balah,Deir al-Balah,,,,Primary Care,Operational,Closed,,,,View Hospital
+FAC-047,Algerian Specialized Hospital,Hospital,General Hospital,Khan Younis,Khan Younis,31.32625315,34.3463425,45,Primary Care,Operational,Closed,,,,
+FAC-048,Muscat Al-Qarara Health Centre,Clinic,Medical Clinic,Khan Younis,Al Qarara,,,,Primary Care,Operational,Closed,,,https://x.com/AlbaloushiAmna/status/1739979096128639241,
+FAC-049,Al-Mawasi Clinic,Clinic,Medical Clinic,Khan Younis,Khan Younis,,,,Primary Care,Operational,,,,,
 ,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,,
