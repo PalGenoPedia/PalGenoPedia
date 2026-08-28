@@ -195,6 +195,10 @@ def main():
         os.makedirs(os.path.dirname(STATE), exist_ok=True)
         with open(STATE, "w", encoding="utf-8", newline="\n") as fh:
             json.dump(dict(sorted(state.items())), fh, ensure_ascii=False, indent=1)
+        # Stable deduped feed for a future ArchiveBox job (see PIPELINE.md ⑥).
+        with open(os.path.join(ROOT, "data", "archive-queue.txt"), "w",
+                  encoding="utf-8", newline="\n") as fh:
+            fh.write("\n".join(urls) + "\n")
 
     tot = len(urls)
     arch = sum(1 for v in state.values() if v.get("status") == "archived")

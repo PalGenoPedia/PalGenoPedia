@@ -518,3 +518,31 @@ interactive Timeline / Map / List (was `timeline.html`) is now that URL.
 Verified locally: `/historical-events/massacres/` loads 17+10 events, sub-nav
 + mode selector work, no console errors, old URLs redirect, record pages'
 "Timeline" nav points here, all 3 languages generate.
+
+---
+
+## 14. Source-link archiving — applied 2026-08-29
+
+- `tools/archive_links.py` + `.github/workflows/archive-links.yml` (weekly cron
+  + dispatch): every external source URL in the CSVs → Wayback. CDX check for
+  existing captures, Save Page Now (authed via `IA_ACCESS`/`IA_SECRET` repo
+  secrets) for the rest, `--limit N`/run so it converges. State in
+  `data/archived-links.json`; deduped feed in `data/archive-queue.txt`.
+- `build_history.py` `archived_badge()` → 🕰 link per cited source;
+  `regenerate.py` adds `archived_url` to `data/events.json` sources.
+- `data/archived-links.json` + `partials/timeline-shell.html` added to
+  `build-records.yml` triggers; `record-page.css` `?v=22`.
+- Documented in `PIPELINE.md` ⑥ and `DEPLOY.md`.
+
+### Planned — full-text archiving (ArchiveBox), NOT scheduled
+
+Our own copies (screenshot / PDF / singlefile / WARC / media). The current
+layer is forward-compatible — see `PIPELINE.md` ⑥ "Planned". Additive:
+a new `archivebox.yml` workflow (Docker, on a VPS or a runner that restores
+state from object storage), fed by `data/archive-queue.txt`, artifacts on
+Cloudflare R2 / Backblaze B2 (free 10 GB, **not** this repo), results merged
+back into `data/archived-links.json` under new keys, `archived_badge()`
+extended to a short list. **Decide artifact storage before building.**
+
+Also still open: social-media posts (`x.com` etc.) need archive.today by hand —
+no API.

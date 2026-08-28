@@ -314,8 +314,10 @@ Machine.
 - `--limit N` caps new submissions per run (default 50) so it converges over a
   few weeks rather than hammering SPN;
 - writes **`data/archived-links.json`** — `{ "<url>": {status, ts, wayback,
-  social} }` — and commits it. This is in `build-records.yml`'s trigger paths,
-  so the pages rebuild to pick up new snapshots.
+  social} }` — and `data/archive-queue.txt` (the deduped URL list, for a
+  future ArchiveBox job), and commits them. `data/archived-links.json` is in
+  `build-records.yml`'s trigger paths, so the pages rebuild to pick up new
+  snapshots.
 
 `build_history.py` (`archived_badge()`) and `regenerate.py` read that file:
 each cited source in a generated page gets a small 🕰 link to its Wayback
@@ -325,6 +327,35 @@ copy, and `data/events.json` sources carry an `archived_url`.
 usually captures as a login wall in Wayback — those entries are flagged
 `"social": true` and the run prints a count; archive.today them by hand
 (no API — Cloudflare + CAPTCHA + it blocks datacenter IPs).
+
+### Planned — full-text / evidentiary archiving (ArchiveBox)
+
+Not built. The current layer stores *references* to third-party snapshots; a
+war-crimes archive eventually wants its **own** copies (screenshot, PDF,
+singlefile HTML, WARC, media). The design above is forward-compatible — this
+is additive, no rework:
+
+- **A new workflow** (`archivebox.yml`) running ArchiveBox in Docker, either on
+  a small always-on VPS or on a runner that restores the archive dir from
+  object storage each run.
+- **Input:** the same URL set. `archive_links.py` already writes
+  `data/archive-queue.txt` (deduped, one URL per line) on every run — ArchiveBox
+  can `archivebox add < data/archive-queue.txt` without touching Python.
+- **Artifact storage:** Cloudflare R2 or Backblaze B2 (free 10 GB) — **not**
+  this repo. This is the one decision to make before building it: it
+  determines whether the 🕰 links point at our copies or only at archive.org.
+- **Merge back:** read `archive/*/index.json` → add keys to
+  `data/archived-links.json` (`archivebox`, `archive_today`, `screenshot`, …).
+  The value shape is already a dict, so this doesn't break `archived_badge()`
+  or `regenerate.py`.
+- **Render:** extend `archived_badge()` (build_history.py) from one 🕰 link to a
+  short list — ~5 lines.
+- **Gotcha:** `archive_links.py` normalises URLs as `rstrip("/").split("#")[0]`;
+  ArchiveBox normalises differently. Whatever merges the two must key
+  consistently or lookups miss.
+- The `*_incidents.csv` sheets already carry `archived_resources` /
+  `archived_image` / `archived_video` columns for this, but writing back to
+  them needs the Sheets API — simpler to keep everything in the repo-side JSON.
 
 ---
 
