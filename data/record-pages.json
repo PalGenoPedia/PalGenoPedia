@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-27",
+ "generated": "2026-08-28",
  "sections": {
   "hospitals": {
    "FAC-000": {
@@ -58,9 +58,9 @@
     "ar": "/war-crimes/hospitals/ar/مستشفى-غزة-الأوروبي/"
    },
    "FAC-011": {
-    "en": "/war-crimes/hospitals/al-ranteesi-al-naser-paediatric-hospital/",
-    "de": "/war-crimes/hospitals/de/al-ranteesi-al-naser-kinderkrankenhaus/",
-    "ar": "/war-crimes/hospitals/ar/مستشفى-الرنتيسي-النصر-لطب-الأطفال/"
+    "en": "/war-crimes/hospitals/dr-abdul-aziz-rantisi-children-s-specialty-hospital/",
+    "de": "/war-crimes/hospitals/de/dr-abdul-aziz-rantisi-kinder-spezialkrankenhaus/",
+    "ar": "/war-crimes/hospitals/ar/مستشفى-الدكتور-عبد-العزيز-الرنتيسي-التخصصي-للأطفال/"
    },
    "FAC-012": {
     "en": "/war-crimes/hospitals/muhammad-al-durrah-children-s-hospital/",
@@ -110,152 +110,147 @@
    "FAC-021": {
     "en": "/war-crimes/hospitals/khidma-aamma-hospital/",
     "de": "/war-crimes/hospitals/de/khidma-aamma-krankenhaus/",
-    "ar": "/war-crimes/hospitals/ar/مستشفى-خيدما-أما/"
+    "ar": "/war-crimes/hospitals/ar/مستشفى-الخدمة-العامة/"
    },
    "FAC-022": {
-    "en": "/war-crimes/hospitals/asdiqaa-hospital/",
-    "de": "/war-crimes/hospitals/de/asdiqaa-krankenhaus/",
-    "ar": "/war-crimes/hospitals/ar/مستشفى-أصدقة/"
-   },
-   "FAC-023": {
     "en": "/war-crimes/hospitals/turkish-friendship-hospital/",
     "de": "/war-crimes/hospitals/de/tuerkisches-freundschaftskrankenhaus/",
-    "ar": "/war-crimes/hospitals/ar/مستشفى-الصداقة-التركية/"
+    "ar": "/war-crimes/hospitals/ar/مستشفؤ-الصداقة-التركي/"
    },
-   "FAC-024": {
+   "FAC-023": {
     "en": "/war-crimes/hospitals/al-helou-international-hospital/",
     "de": "/war-crimes/hospitals/de/internationales-krankenhaus-al-helou/",
     "ar": "/war-crimes/hospitals/ar/مستشفى-الحلو-الدولي/"
    },
-   "FAC-025": {
+   "FAC-024": {
     "en": "/war-crimes/hospitals/al-khair-hospital/",
     "de": "/war-crimes/hospitals/de/al-khair-krankenhaus/",
     "ar": "/war-crimes/hospitals/ar/مستشفى-الخير/"
    },
-   "FAC-026": {
+   "FAC-025": {
     "en": "/war-crimes/hospitals/yafa-hospital/",
     "de": "/war-crimes/hospitals/de/krankenhaus-in-yafa/",
     "ar": "/war-crimes/hospitals/ar/مستشفى-يافا/"
    },
-   "FAC-027": {
+   "FAC-026": {
     "en": "/war-crimes/hospitals/palestine-medical-relief-center-for-the-rehabilitation-of-the-disabled/",
     "de": "/war-crimes/hospitals/de/palaestinensisches-zentrum-fuer-medizinische-hilfe-und-rehabilitation-von-behinderten/",
     "ar": "/war-crimes/hospitals/ar/مركز-فلسطين-الطبي-للإغاثة-وإعادة-تأهيل-المعاقين/"
    },
-   "FAC-028": {
+   "FAC-027": {
     "en": "/war-crimes/hospitals/al-yaman-al-saeed-hospital/",
     "de": "/war-crimes/hospitals/de/al-yaman-al-saeed-krankenhaus/",
-    "ar": "/war-crimes/hospitals/ar/مستشفى-اليمان-السعيد/"
+    "ar": "/war-crimes/hospitals/ar/مستشفى-اليمن-السعيد/"
    },
-   "FAC-029": {
+   "FAC-028": {
     "en": "/war-crimes/hospitals/patient-friends-association-hospital/",
     "de": "/war-crimes/hospitals/de/patientenfreundevereinigung-krankenhaus/",
     "ar": "/war-crimes/hospitals/ar/جمعية-أصدقاء-المرضى-بالمستشفى/"
    },
-   "FAC-030": {
+   "FAC-029": {
     "en": "/war-crimes/hospitals/jordanian-field-hospital/",
     "de": "/war-crimes/hospitals/de/jordanisches-feldlazarett/",
     "ar": "/war-crimes/hospitals/ar/المستشفى-الميداني-الأردني/"
    },
-   "FAC-031": {
+   "FAC-030": {
     "en": "/war-crimes/hospitals/jordanian-field-hospital-khan-yunis/",
     "de": "/war-crimes/hospitals/de/jordanisches-feldlazarett-khan-yunis/",
     "ar": "/war-crimes/hospitals/ar/المستشفى-الميداني-الأردني-خان-يونس/"
    },
-   "FAC-032": {
+   "FAC-031": {
     "en": "/war-crimes/hospitals/red-cross-field-hospital/",
     "de": "/war-crimes/hospitals/de/feldlazarett-des-roten-kreuzes/",
     "ar": "/war-crimes/hospitals/ar/مستشفى-الصليب-الأحمر-الميداني/"
    },
-   "FAC-033": {
+   "FAC-032": {
     "en": "/war-crimes/hospitals/red-cross-field-hospital-rafah/",
     "de": "/war-crimes/hospitals/de/feldlazarett-des-roten-kreuzes-rafah/",
     "ar": "/war-crimes/hospitals/ar/مستشفى-الصليب-الأحمر-الميداني-رفح/"
    },
-   "FAC-034": {
-    "en": "/war-crimes/hospitals/al-emirati-field-hospital/",
-    "de": "/war-crimes/hospitals/de/feldlazarett-der-emirate/",
-    "ar": "/war-crimes/hospitals/ar/المستشفى-الميداني-الإماراتي/"
+   "FAC-033": {
+    "en": "/war-crimes/hospitals/emirates-crescent-hospital/",
+    "de": "/war-crimes/hospitals/de/emirates-crescent-krankenhaus/",
+    "ar": "/war-crimes/hospitals/ar/مستشفى-إميريتس-كريسنت/"
    },
-   "FAC-035": {
+   "FAC-034": {
     "en": "/war-crimes/hospitals/al-quds-field-hospital/",
     "de": "/war-crimes/hospitals/de/al-quds-feldlazarett/",
     "ar": "/war-crimes/hospitals/ar/مستشفى-القدس-الميداني/"
    },
-   "FAC-036": {
-    "en": "/war-crimes/hospitals/kuwait-field-hospital/",
-    "de": "/war-crimes/hospitals/de/feldlazarett-kuwait/",
-    "ar": "/war-crimes/hospitals/ar/مستشفى-الكويت-الميداني/"
+   "FAC-035": {
+    "en": "/war-crimes/hospitals/kuwait-specialty-hospital/",
+    "de": "/war-crimes/hospitals/de/kuwait-spezialkrankenhaus/",
+    "ar": "/war-crimes/hospitals/ar/مستشفى-الكويت-التخصصي/"
    },
-   "FAC-037": {
+   "FAC-036": {
     "en": "/war-crimes/hospitals/uae-field-hospital/",
     "de": "/war-crimes/hospitals/de/feldlazarett-der-vae/",
     "ar": "/war-crimes/hospitals/ar/مستشفى-ميداني-في-الإمارات-العربية-المتحدة/"
    },
-   "FAC-038": {
+   "FAC-037": {
     "en": "/war-crimes/hospitals/international-medical-corps-field-hospital/",
     "de": "/war-crimes/hospitals/de/feldlazarett-des-international-medical-corps/",
     "ar": "/war-crimes/hospitals/ar/مستشفى-ميداني-تابع-للهيئة-الطبية-الدولية/"
    },
-   "FAC-039": {
+   "FAC-038": {
     "en": "/war-crimes/hospitals/unrwa-health-centre/",
     "de": "/war-crimes/hospitals/de/unrwa-gesundheitszentrum/",
     "ar": "/war-crimes/hospitals/ar/مركز-الأونروا-الصحي/"
    },
-   "FAC-040": {
+   "FAC-039": {
     "en": "/war-crimes/hospitals/primary-care-clinic/",
     "de": "/war-crimes/hospitals/de/hausarztpraxis/",
     "ar": "/war-crimes/hospitals/ar/عيادة-الرعاية-الصحية-الأولية/"
    },
-   "FAC-041": {
+   "FAC-040": {
     "en": "/war-crimes/hospitals/msf-premise-01/",
     "de": "/war-crimes/hospitals/de/msf-praesenz-01/",
     "ar": "/war-crimes/hospitals/ar/فرضية-منظمة-أطباء-بلا-حدود-01/"
    },
-   "FAC-042": {
+   "FAC-041": {
     "en": "/war-crimes/hospitals/msf-clinic/",
     "de": "/war-crimes/hospitals/de/msf-klinik/",
     "ar": "/war-crimes/hospitals/ar/عيادة-أطباء-بلا-حدود/"
    },
-   "FAC-043": {
+   "FAC-042": {
     "en": "/war-crimes/hospitals/msf-urgent-care-unit-khan-younis/",
     "de": "/war-crimes/hospitals/de/msf-notfallambulanz-khan-younis/",
     "ar": "/war-crimes/hospitals/ar/وحدة-الرعاية-العاجلة-التابعة-لمنظمة-أطباء-بلا-حدود-خان-يونس/"
    },
-   "FAC-044": {
+   "FAC-043": {
     "en": "/war-crimes/hospitals/noura-al-kaabi-specialist-dialysis-centre/",
     "de": "/war-crimes/hospitals/de/noura-al-kaabi-spezialisiertes-dialysezentrum/",
     "ar": "/war-crimes/hospitals/ar/مركز-نورة-الكعبي-التخصصي-لغسيل-الكلى/"
    },
-   "FAC-045": {
+   "FAC-044": {
     "en": "/war-crimes/hospitals/al-zaytoun-medical-clinic/",
     "de": "/war-crimes/hospitals/de/medizinische-klinik-al-zaytoun/",
     "ar": "/war-crimes/hospitals/ar/عيادة-الزيتون-الطبية/"
    },
-   "FAC-046": {
-    "en": "/war-crimes/hospitals/al-qarara-medical-clinic/",
-    "de": "/war-crimes/hospitals/de/al-qarara-klinik/",
-    "ar": "/war-crimes/hospitals/ar/عيادة-القرار-الطبية/"
+   "FAC-045": {
+    "en": "/war-crimes/hospitals/qararah-health-care-center/",
+    "de": "/war-crimes/hospitals/de/qararah-gesundheitszentrum/",
+    "ar": "/war-crimes/hospitals/ar/مركز-قارة-للرعاية-الصحية/"
    },
-   "FAC-047": {
+   "FAC-046": {
     "en": "/war-crimes/hospitals/solidarity-polyclinic/",
     "de": "/war-crimes/hospitals/de/solidaritaets-poliklinik/",
     "ar": "/war-crimes/hospitals/ar/عيادة-التضامن-متعددة-التخصصات/"
    },
-   "FAC-048": {
-    "en": "/war-crimes/hospitals/algerian-military-hospital/",
-    "de": "/war-crimes/hospitals/de/algerisches-militaerkrankenhaus/",
-    "ar": "/war-crimes/hospitals/ar/المستشفى-العسكري-الجزائري/"
+   "FAC-047": {
+    "en": "/war-crimes/hospitals/algerian-specialized-hospital/",
+    "de": "/war-crimes/hospitals/de/algerisches-spezialkrankenhaus/",
+    "ar": "/war-crimes/hospitals/ar/مستشفى-الجزائر-التخصصي/"
    },
-   "FAC-049": {
+   "FAC-048": {
     "en": "/war-crimes/hospitals/muscat-al-qarara-health-centre/",
     "de": "/war-crimes/hospitals/de/al-qarara-gesundheitszentrum-in-maskat/",
     "ar": "/war-crimes/hospitals/ar/مركز-مسقط-القرارة-الصحي/"
    },
-   "FAC-050": {
+   "FAC-049": {
     "en": "/war-crimes/hospitals/al-mawasi-clinic/",
     "de": "/war-crimes/hospitals/de/al-mawasi-klinik/",
-    "ar": "/war-crimes/hospitals/ar/عيادة-المواسي/"
+    "ar": "/war-crimes/hospitals/ar/عيادة-المواصي/"
    }
   },
   "universities": {

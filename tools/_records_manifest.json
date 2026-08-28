@@ -1,6 +1,6 @@
 {
-  "generated": "2026-08-27",
-  "count": 405,
+  "generated": "2026-08-28",
+  "count": 402,
   "pages": [
     {
       "url": "https://palgenopedia.org/war-crimes/hospitals/al-shifa-medical-complex/",
@@ -333,32 +333,32 @@
       "indexable": true
     },
     {
-      "url": "https://palgenopedia.org/war-crimes/hospitals/al-ranteesi-al-naser-paediatric-hospital/",
-      "path": "/war-crimes/hospitals/al-ranteesi-al-naser-paediatric-hospital/",
+      "url": "https://palgenopedia.org/war-crimes/hospitals/dr-abdul-aziz-rantisi-children-s-specialty-hospital/",
+      "path": "/war-crimes/hospitals/dr-abdul-aziz-rantisi-children-s-specialty-hospital/",
       "lang": "en",
       "section": "hospitals",
       "id": "FAC-011",
-      "slug": "al-ranteesi-al-naser-paediatric-hospital",
+      "slug": "dr-abdul-aziz-rantisi-children-s-specialty-hospital",
       "incidents": 5,
       "indexable": true
     },
     {
-      "url": "https://palgenopedia.org/war-crimes/hospitals/de/al-ranteesi-al-naser-kinderkrankenhaus/",
-      "path": "/war-crimes/hospitals/de/al-ranteesi-al-naser-kinderkrankenhaus/",
+      "url": "https://palgenopedia.org/war-crimes/hospitals/de/dr-abdul-aziz-rantisi-kinder-spezialkrankenhaus/",
+      "path": "/war-crimes/hospitals/de/dr-abdul-aziz-rantisi-kinder-spezialkrankenhaus/",
       "lang": "de",
       "section": "hospitals",
       "id": "FAC-011",
-      "slug": "al-ranteesi-al-naser-kinderkrankenhaus",
+      "slug": "dr-abdul-aziz-rantisi-kinder-spezialkrankenhaus",
       "incidents": 5,
       "indexable": true
     },
     {
-      "url": "https://palgenopedia.org/war-crimes/hospitals/ar/%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89-%D8%A7%D9%84%D8%B1%D9%86%D8%AA%D9%8A%D8%B3%D9%8A-%D8%A7%D9%84%D9%86%D8%B5%D8%B1-%D9%84%D8%B7%D8%A8-%D8%A7%D9%84%D8%A3%D8%B7%D9%81%D8%A7%D9%84/",
-      "path": "/war-crimes/hospitals/ar/مستشفى-الرنتيسي-النصر-لطب-الأطفال/",
+      "url": "https://palgenopedia.org/war-crimes/hospitals/ar/%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89-%D8%A7%D9%84%D8%AF%D9%83%D8%AA%D9%88%D8%B1-%D8%B9%D8%A8%D8%AF-%D8%A7%D9%84%D8%B9%D8%B2%D9%8A%D8%B2-%D8%A7%D9%84%D8%B1%D9%86%D8%AA%D9%8A%D8%B3%D9%8A-%D8%A7%D9%84%D8%AA%D8%AE%D8%B5%D8%B5%D9%8A-%D9%84%D9%84%D8%A3%D8%B7%D9%81%D8%A7%D9%84/",
+      "path": "/war-crimes/hospitals/ar/مستشفى-الدكتور-عبد-العزيز-الرنتيسي-التخصصي-للأطفال/",
       "lang": "ar",
       "section": "hospitals",
       "id": "FAC-011",
-      "slug": "مستشفى-الرنتيسي-النصر-لطب-الأطفال",
+      "slug": "مستشفى-الدكتور-عبد-العزيز-الرنتيسي-التخصصي-للأطفال",
       "incidents": 5,
       "indexable": true
     },
@@ -653,42 +653,12 @@
       "indexable": false
     },
     {
-      "url": "https://palgenopedia.org/war-crimes/hospitals/ar/%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89-%D8%AE%D9%8A%D8%AF%D9%85%D8%A7-%D8%A3%D9%85%D8%A7/",
-      "path": "/war-crimes/hospitals/ar/مستشفى-خيدما-أما/",
+      "url": "https://palgenopedia.org/war-crimes/hospitals/ar/%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89-%D8%A7%D9%84%D8%AE%D8%AF%D9%85%D8%A9-%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%A9/",
+      "path": "/war-crimes/hospitals/ar/مستشفى-الخدمة-العامة/",
       "lang": "ar",
       "section": "hospitals",
       "id": "FAC-021",
-      "slug": "مستشفى-خيدما-أما",
-      "incidents": 0,
-      "indexable": false
-    },
-    {
-      "url": "https://palgenopedia.org/war-crimes/hospitals/asdiqaa-hospital/",
-      "path": "/war-crimes/hospitals/asdiqaa-hospital/",
-      "lang": "en",
-      "section": "hospitals",
-      "id": "FAC-022",
-      "slug": "asdiqaa-hospital",
-      "incidents": 0,
-      "indexable": false
-    },
-    {
-      "url": "https://palgenopedia.org/war-crimes/hospitals/de/asdiqaa-krankenhaus/",
-      "path": "/war-crimes/hospitals/de/asdiqaa-krankenhaus/",
-      "lang": "de",
-      "section": "hospitals",
-      "id": "FAC-022",
-      "slug": "asdiqaa-krankenhaus",
-      "incidents": 0,
-      "indexable": false
-    },
-    {
-      "url": "https://palgenopedia.org/war-crimes/hospitals/ar/%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89-%D8%A3%D8%B5%D8%AF%D9%82%D8%A9/",
-      "path": "/war-crimes/hospitals/ar/مستشفى-أصدقة/",
-      "lang": "ar",
-      "section": "hospitals",
-      "id": "FAC-022",
-      "slug": "مستشفى-أصدقة",
+      "slug": "مستشفى-الخدمة-العامة",
       "incidents": 0,
       "indexable": false
     },
@@ -697,7 +667,7 @@
       "path": "/war-crimes/hospitals/turkish-friendship-hospital/",
       "lang": "en",
       "section": "hospitals",
-      "id": "FAC-023",
+      "id": "FAC-022",
       "slug": "turkish-friendship-hospital",
       "incidents": 6,
       "indexable": true
@@ -707,18 +677,18 @@
       "path": "/war-crimes/hospitals/de/tuerkisches-freundschaftskrankenhaus/",
       "lang": "de",
       "section": "hospitals",
-      "id": "FAC-023",
+      "id": "FAC-022",
       "slug": "tuerkisches-freundschaftskrankenhaus",
       "incidents": 6,
       "indexable": true
     },
     {
-      "url": "https://palgenopedia.org/war-crimes/hospitals/ar/%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89-%D8%A7%D9%84%D8%B5%D8%AF%D8%A7%D9%82%D8%A9-%D8%A7%D9%84%D8%AA%D8%B1%D9%83%D9%8A%D8%A9/",
-      "path": "/war-crimes/hospitals/ar/مستشفى-الصداقة-التركية/",
+      "url": "https://palgenopedia.org/war-crimes/hospitals/ar/%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D8%A4-%D8%A7%D9%84%D8%B5%D8%AF%D8%A7%D9%82%D8%A9-%D8%A7%D9%84%D8%AA%D8%B1%D9%83%D9%8A/",
+      "path": "/war-crimes/hospitals/ar/مستشفؤ-الصداقة-التركي/",
       "lang": "ar",
       "section": "hospitals",
-      "id": "FAC-023",
-      "slug": "مستشفى-الصداقة-التركية",
+      "id": "FAC-022",
+      "slug": "مستشفؤ-الصداقة-التركي",
       "incidents": 6,
       "indexable": true
     },
@@ -727,7 +697,7 @@
       "path": "/war-crimes/hospitals/al-helou-international-hospital/",
       "lang": "en",
       "section": "hospitals",
-      "id": "FAC-024",
+      "id": "FAC-023",
       "slug": "al-helou-international-hospital",
       "incidents": 2,
       "indexable": true
@@ -737,7 +707,7 @@
       "path": "/war-crimes/hospitals/de/internationales-krankenhaus-al-helou/",
       "lang": "de",
       "section": "hospitals",
-      "id": "FAC-024",
+      "id": "FAC-023",
       "slug": "internationales-krankenhaus-al-helou",
       "incidents": 2,
       "indexable": true
@@ -747,7 +717,7 @@
       "path": "/war-crimes/hospitals/ar/مستشفى-الحلو-الدولي/",
       "lang": "ar",
       "section": "hospitals",
-      "id": "FAC-024",
+      "id": "FAC-023",
       "slug": "مستشفى-الحلو-الدولي",
       "incidents": 2,
       "indexable": true
@@ -757,7 +727,7 @@
       "path": "/war-crimes/hospitals/al-khair-hospital/",
       "lang": "en",
       "section": "hospitals",
-      "id": "FAC-025",
+      "id": "FAC-024",
       "slug": "al-khair-hospital",
       "incidents": 2,
       "indexable": true
@@ -767,7 +737,7 @@
       "path": "/war-crimes/hospitals/de/al-khair-krankenhaus/",
       "lang": "de",
       "section": "hospitals",
-      "id": "FAC-025",
+      "id": "FAC-024",
       "slug": "al-khair-krankenhaus",
       "incidents": 2,
       "indexable": true
@@ -777,7 +747,7 @@
       "path": "/war-crimes/hospitals/ar/مستشفى-الخير/",
       "lang": "ar",
       "section": "hospitals",
-      "id": "FAC-025",
+      "id": "FAC-024",
       "slug": "مستشفى-الخير",
       "incidents": 2,
       "indexable": true
@@ -787,7 +757,7 @@
       "path": "/war-crimes/hospitals/yafa-hospital/",
       "lang": "en",
       "section": "hospitals",
-      "id": "FAC-026",
+      "id": "FAC-025",
       "slug": "yafa-hospital",
       "incidents": 0,
       "indexable": false
@@ -797,7 +767,7 @@
       "path": "/war-crimes/hospitals/de/krankenhaus-in-yafa/",
       "lang": "de",
       "section": "hospitals",
-      "id": "FAC-026",
+      "id": "FAC-025",
       "slug": "krankenhaus-in-yafa",
       "incidents": 0,
       "indexable": false
@@ -807,7 +777,7 @@
       "path": "/war-crimes/hospitals/ar/مستشفى-يافا/",
       "lang": "ar",
       "section": "hospitals",
-      "id": "FAC-026",
+      "id": "FAC-025",
       "slug": "مستشفى-يافا",
       "incidents": 0,
       "indexable": false
@@ -817,7 +787,7 @@
       "path": "/war-crimes/hospitals/palestine-medical-relief-center-for-the-rehabilitation-of-the-disabled/",
       "lang": "en",
       "section": "hospitals",
-      "id": "FAC-027",
+      "id": "FAC-026",
       "slug": "palestine-medical-relief-center-for-the-rehabilitation-of-the-disabled",
       "incidents": 1,
       "indexable": true
@@ -827,7 +797,7 @@
       "path": "/war-crimes/hospitals/de/palaestinensisches-zentrum-fuer-medizinische-hilfe-und-rehabilitation-von-behinderten/",
       "lang": "de",
       "section": "hospitals",
-      "id": "FAC-027",
+      "id": "FAC-026",
       "slug": "palaestinensisches-zentrum-fuer-medizinische-hilfe-und-rehabilitation-von-behinderten",
       "incidents": 1,
       "indexable": true
@@ -837,7 +807,7 @@
       "path": "/war-crimes/hospitals/ar/مركز-فلسطين-الطبي-للإغاثة-وإعادة-تأهيل-المعاقين/",
       "lang": "ar",
       "section": "hospitals",
-      "id": "FAC-027",
+      "id": "FAC-026",
       "slug": "مركز-فلسطين-الطبي-للإغاثة-وإعادة-تأهيل-المعاقين",
       "incidents": 1,
       "indexable": true
@@ -847,7 +817,7 @@
       "path": "/war-crimes/hospitals/al-yaman-al-saeed-hospital/",
       "lang": "en",
       "section": "hospitals",
-      "id": "FAC-028",
+      "id": "FAC-027",
       "slug": "al-yaman-al-saeed-hospital",
       "incidents": 0,
       "indexable": false
@@ -857,18 +827,18 @@
       "path": "/war-crimes/hospitals/de/al-yaman-al-saeed-krankenhaus/",
       "lang": "de",
       "section": "hospitals",
-      "id": "FAC-028",
+      "id": "FAC-027",
       "slug": "al-yaman-al-saeed-krankenhaus",
       "incidents": 0,
       "indexable": false
     },
     {
-      "url": "https://palgenopedia.org/war-crimes/hospitals/ar/%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89-%D8%A7%D9%84%D9%8A%D9%85%D8%A7%D9%86-%D8%A7%D9%84%D8%B3%D8%B9%D9%8A%D8%AF/",
-      "path": "/war-crimes/hospitals/ar/مستشفى-اليمان-السعيد/",
+      "url": "https://palgenopedia.org/war-crimes/hospitals/ar/%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89-%D8%A7%D9%84%D9%8A%D9%85%D9%86-%D8%A7%D9%84%D8%B3%D8%B9%D9%8A%D8%AF/",
+      "path": "/war-crimes/hospitals/ar/مستشفى-اليمن-السعيد/",
       "lang": "ar",
       "section": "hospitals",
-      "id": "FAC-028",
-      "slug": "مستشفى-اليمان-السعيد",
+      "id": "FAC-027",
+      "slug": "مستشفى-اليمن-السعيد",
       "incidents": 0,
       "indexable": false
     },
@@ -877,7 +847,7 @@
       "path": "/war-crimes/hospitals/patient-friends-association-hospital/",
       "lang": "en",
       "section": "hospitals",
-      "id": "FAC-029",
+      "id": "FAC-028",
       "slug": "patient-friends-association-hospital",
       "incidents": 2,
       "indexable": true
@@ -887,7 +857,7 @@
       "path": "/war-crimes/hospitals/de/patientenfreundevereinigung-krankenhaus/",
       "lang": "de",
       "section": "hospitals",
-      "id": "FAC-029",
+      "id": "FAC-028",
       "slug": "patientenfreundevereinigung-krankenhaus",
       "incidents": 2,
       "indexable": true
@@ -897,7 +867,7 @@
       "path": "/war-crimes/hospitals/ar/جمعية-أصدقاء-المرضى-بالمستشفى/",
       "lang": "ar",
       "section": "hospitals",
-      "id": "FAC-029",
+      "id": "FAC-028",
       "slug": "جمعية-أصدقاء-المرضى-بالمستشفى",
       "incidents": 2,
       "indexable": true
@@ -907,7 +877,7 @@
       "path": "/war-crimes/hospitals/jordanian-field-hospital/",
       "lang": "en",
       "section": "hospitals",
-      "id": "FAC-030",
+      "id": "FAC-029",
       "slug": "jordanian-field-hospital",
       "incidents": 2,
       "indexable": true
@@ -917,7 +887,7 @@
       "path": "/war-crimes/hospitals/de/jordanisches-feldlazarett/",
       "lang": "de",
       "section": "hospitals",
-      "id": "FAC-030",
+      "id": "FAC-029",
       "slug": "jordanisches-feldlazarett",
       "incidents": 2,
       "indexable": true
@@ -927,7 +897,7 @@
       "path": "/war-crimes/hospitals/ar/المستشفى-الميداني-الأردني/",
       "lang": "ar",
       "section": "hospitals",
-      "id": "FAC-030",
+      "id": "FAC-029",
       "slug": "المستشفى-الميداني-الأردني",
       "incidents": 2,
       "indexable": true
@@ -937,7 +907,7 @@
       "path": "/war-crimes/hospitals/jordanian-field-hospital-khan-yunis/",
       "lang": "en",
       "section": "hospitals",
-      "id": "FAC-031",
+      "id": "FAC-030",
       "slug": "jordanian-field-hospital-khan-yunis",
       "incidents": 3,
       "indexable": true
@@ -947,7 +917,7 @@
       "path": "/war-crimes/hospitals/de/jordanisches-feldlazarett-khan-yunis/",
       "lang": "de",
       "section": "hospitals",
-      "id": "FAC-031",
+      "id": "FAC-030",
       "slug": "jordanisches-feldlazarett-khan-yunis",
       "incidents": 3,
       "indexable": true
@@ -957,7 +927,7 @@
       "path": "/war-crimes/hospitals/ar/المستشفى-الميداني-الأردني-خان-يونس/",
       "lang": "ar",
       "section": "hospitals",
-      "id": "FAC-031",
+      "id": "FAC-030",
       "slug": "المستشفى-الميداني-الأردني-خان-يونس",
       "incidents": 3,
       "indexable": true
@@ -967,7 +937,7 @@
       "path": "/war-crimes/hospitals/red-cross-field-hospital/",
       "lang": "en",
       "section": "hospitals",
-      "id": "FAC-032",
+      "id": "FAC-031",
       "slug": "red-cross-field-hospital",
       "incidents": 0,
       "indexable": false
@@ -977,7 +947,7 @@
       "path": "/war-crimes/hospitals/de/feldlazarett-des-roten-kreuzes/",
       "lang": "de",
       "section": "hospitals",
-      "id": "FAC-032",
+      "id": "FAC-031",
       "slug": "feldlazarett-des-roten-kreuzes",
       "incidents": 0,
       "indexable": false
@@ -987,7 +957,7 @@
       "path": "/war-crimes/hospitals/ar/مستشفى-الصليب-الأحمر-الميداني/",
       "lang": "ar",
       "section": "hospitals",
-      "id": "FAC-032",
+      "id": "FAC-031",
       "slug": "مستشفى-الصليب-الأحمر-الميداني",
       "incidents": 0,
       "indexable": false
@@ -997,7 +967,7 @@
       "path": "/war-crimes/hospitals/red-cross-field-hospital-rafah/",
       "lang": "en",
       "section": "hospitals",
-      "id": "FAC-033",
+      "id": "FAC-032",
       "slug": "red-cross-field-hospital-rafah",
       "incidents": 1,
       "indexable": true
@@ -1007,7 +977,7 @@
       "path": "/war-crimes/hospitals/de/feldlazarett-des-roten-kreuzes-rafah/",
       "lang": "de",
       "section": "hospitals",
-      "id": "FAC-033",
+      "id": "FAC-032",
       "slug": "feldlazarett-des-roten-kreuzes-rafah",
       "incidents": 1,
       "indexable": true
@@ -1017,47 +987,47 @@
       "path": "/war-crimes/hospitals/ar/مستشفى-الصليب-الأحمر-الميداني-رفح/",
       "lang": "ar",
       "section": "hospitals",
-      "id": "FAC-033",
+      "id": "FAC-032",
       "slug": "مستشفى-الصليب-الأحمر-الميداني-رفح",
       "incidents": 1,
       "indexable": true
     },
     {
-      "url": "https://palgenopedia.org/war-crimes/hospitals/al-emirati-field-hospital/",
-      "path": "/war-crimes/hospitals/al-emirati-field-hospital/",
+      "url": "https://palgenopedia.org/war-crimes/hospitals/emirates-crescent-hospital/",
+      "path": "/war-crimes/hospitals/emirates-crescent-hospital/",
       "lang": "en",
       "section": "hospitals",
-      "id": "FAC-034",
-      "slug": "al-emirati-field-hospital",
-      "incidents": 2,
-      "indexable": true
+      "id": "FAC-033",
+      "slug": "emirates-crescent-hospital",
+      "incidents": 0,
+      "indexable": false
     },
     {
-      "url": "https://palgenopedia.org/war-crimes/hospitals/de/feldlazarett-der-emirate/",
-      "path": "/war-crimes/hospitals/de/feldlazarett-der-emirate/",
+      "url": "https://palgenopedia.org/war-crimes/hospitals/de/emirates-crescent-krankenhaus/",
+      "path": "/war-crimes/hospitals/de/emirates-crescent-krankenhaus/",
       "lang": "de",
       "section": "hospitals",
-      "id": "FAC-034",
-      "slug": "feldlazarett-der-emirate",
-      "incidents": 2,
-      "indexable": true
+      "id": "FAC-033",
+      "slug": "emirates-crescent-krankenhaus",
+      "incidents": 0,
+      "indexable": false
     },
     {
-      "url": "https://palgenopedia.org/war-crimes/hospitals/ar/%D8%A7%D9%84%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89-%D8%A7%D9%84%D9%85%D9%8A%D8%AF%D8%A7%D9%86%D9%8A-%D8%A7%D9%84%D8%A5%D9%85%D8%A7%D8%B1%D8%A7%D8%AA%D9%8A/",
-      "path": "/war-crimes/hospitals/ar/المستشفى-الميداني-الإماراتي/",
+      "url": "https://palgenopedia.org/war-crimes/hospitals/ar/%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89-%D8%A5%D9%85%D9%8A%D8%B1%D9%8A%D8%AA%D8%B3-%D9%83%D8%B1%D9%8A%D8%B3%D9%86%D8%AA/",
+      "path": "/war-crimes/hospitals/ar/مستشفى-إميريتس-كريسنت/",
       "lang": "ar",
       "section": "hospitals",
-      "id": "FAC-034",
-      "slug": "المستشفى-الميداني-الإماراتي",
-      "incidents": 2,
-      "indexable": true
+      "id": "FAC-033",
+      "slug": "مستشفى-إميريتس-كريسنت",
+      "incidents": 0,
+      "indexable": false
     },
     {
       "url": "https://palgenopedia.org/war-crimes/hospitals/al-quds-field-hospital/",
       "path": "/war-crimes/hospitals/al-quds-field-hospital/",
       "lang": "en",
       "section": "hospitals",
-      "id": "FAC-035",
+      "id": "FAC-034",
       "slug": "al-quds-field-hospital",
       "incidents": 0,
       "indexable": false
@@ -1067,7 +1037,7 @@
       "path": "/war-crimes/hospitals/de/al-quds-feldlazarett/",
       "lang": "de",
       "section": "hospitals",
-      "id": "FAC-035",
+      "id": "FAC-034",
       "slug": "al-quds-feldlazarett",
       "incidents": 0,
       "indexable": false
@@ -1077,47 +1047,47 @@
       "path": "/war-crimes/hospitals/ar/مستشفى-القدس-الميداني/",
       "lang": "ar",
       "section": "hospitals",
-      "id": "FAC-035",
+      "id": "FAC-034",
       "slug": "مستشفى-القدس-الميداني",
       "incidents": 0,
       "indexable": false
     },
     {
-      "url": "https://palgenopedia.org/war-crimes/hospitals/kuwait-field-hospital/",
-      "path": "/war-crimes/hospitals/kuwait-field-hospital/",
+      "url": "https://palgenopedia.org/war-crimes/hospitals/kuwait-specialty-hospital/",
+      "path": "/war-crimes/hospitals/kuwait-specialty-hospital/",
       "lang": "en",
       "section": "hospitals",
-      "id": "FAC-036",
-      "slug": "kuwait-field-hospital",
-      "incidents": 6,
-      "indexable": true
+      "id": "FAC-035",
+      "slug": "kuwait-specialty-hospital",
+      "incidents": 0,
+      "indexable": false
     },
     {
-      "url": "https://palgenopedia.org/war-crimes/hospitals/de/feldlazarett-kuwait/",
-      "path": "/war-crimes/hospitals/de/feldlazarett-kuwait/",
+      "url": "https://palgenopedia.org/war-crimes/hospitals/de/kuwait-spezialkrankenhaus/",
+      "path": "/war-crimes/hospitals/de/kuwait-spezialkrankenhaus/",
       "lang": "de",
       "section": "hospitals",
-      "id": "FAC-036",
-      "slug": "feldlazarett-kuwait",
-      "incidents": 6,
-      "indexable": true
+      "id": "FAC-035",
+      "slug": "kuwait-spezialkrankenhaus",
+      "incidents": 0,
+      "indexable": false
     },
     {
-      "url": "https://palgenopedia.org/war-crimes/hospitals/ar/%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89-%D8%A7%D9%84%D9%83%D9%88%D9%8A%D8%AA-%D8%A7%D9%84%D9%85%D9%8A%D8%AF%D8%A7%D9%86%D9%8A/",
-      "path": "/war-crimes/hospitals/ar/مستشفى-الكويت-الميداني/",
+      "url": "https://palgenopedia.org/war-crimes/hospitals/ar/%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89-%D8%A7%D9%84%D9%83%D9%88%D9%8A%D8%AA-%D8%A7%D9%84%D8%AA%D8%AE%D8%B5%D8%B5%D9%8A/",
+      "path": "/war-crimes/hospitals/ar/مستشفى-الكويت-التخصصي/",
       "lang": "ar",
       "section": "hospitals",
-      "id": "FAC-036",
-      "slug": "مستشفى-الكويت-الميداني",
-      "incidents": 6,
-      "indexable": true
+      "id": "FAC-035",
+      "slug": "مستشفى-الكويت-التخصصي",
+      "incidents": 0,
+      "indexable": false
     },
     {
       "url": "https://palgenopedia.org/war-crimes/hospitals/uae-field-hospital/",
       "path": "/war-crimes/hospitals/uae-field-hospital/",
       "lang": "en",
       "section": "hospitals",
-      "id": "FAC-037",
+      "id": "FAC-036",
       "slug": "uae-field-hospital",
       "incidents": 0,
       "indexable": false
@@ -1127,7 +1097,7 @@
       "path": "/war-crimes/hospitals/de/feldlazarett-der-vae/",
       "lang": "de",
       "section": "hospitals",
-      "id": "FAC-037",
+      "id": "FAC-036",
       "slug": "feldlazarett-der-vae",
       "incidents": 0,
       "indexable": false
@@ -1137,7 +1107,7 @@
       "path": "/war-crimes/hospitals/ar/مستشفى-ميداني-في-الإمارات-العربية-المتحدة/",
       "lang": "ar",
       "section": "hospitals",
-      "id": "FAC-037",
+      "id": "FAC-036",
       "slug": "مستشفى-ميداني-في-الإمارات-العربية-المتحدة",
       "incidents": 0,
       "indexable": false
@@ -1147,7 +1117,7 @@
       "path": "/war-crimes/hospitals/international-medical-corps-field-hospital/",
       "lang": "en",
       "section": "hospitals",
-      "id": "FAC-038",
+      "id": "FAC-037",
       "slug": "international-medical-corps-field-hospital",
       "incidents": 1,
       "indexable": true
@@ -1157,7 +1127,7 @@
       "path": "/war-crimes/hospitals/de/feldlazarett-des-international-medical-corps/",
       "lang": "de",
       "section": "hospitals",
-      "id": "FAC-038",
+      "id": "FAC-037",
       "slug": "feldlazarett-des-international-medical-corps",
       "incidents": 1,
       "indexable": true
@@ -1167,7 +1137,7 @@
       "path": "/war-crimes/hospitals/ar/مستشفى-ميداني-تابع-للهيئة-الطبية-الدولية/",
       "lang": "ar",
       "section": "hospitals",
-      "id": "FAC-038",
+      "id": "FAC-037",
       "slug": "مستشفى-ميداني-تابع-للهيئة-الطبية-الدولية",
       "incidents": 1,
       "indexable": true
@@ -1177,7 +1147,7 @@
       "path": "/war-crimes/hospitals/unrwa-health-centre/",
       "lang": "en",
       "section": "hospitals",
-      "id": "FAC-039",
+      "id": "FAC-038",
       "slug": "unrwa-health-centre",
       "incidents": 62,
       "indexable": true
@@ -1187,7 +1157,7 @@
       "path": "/war-crimes/hospitals/de/unrwa-gesundheitszentrum/",
       "lang": "de",
       "section": "hospitals",
-      "id": "FAC-039",
+      "id": "FAC-038",
       "slug": "unrwa-gesundheitszentrum",
       "incidents": 62,
       "indexable": true
@@ -1197,7 +1167,7 @@
       "path": "/war-crimes/hospitals/ar/مركز-الأونروا-الصحي/",
       "lang": "ar",
       "section": "hospitals",
-      "id": "FAC-039",
+      "id": "FAC-038",
       "slug": "مركز-الأونروا-الصحي",
       "incidents": 62,
       "indexable": true
@@ -1207,7 +1177,7 @@
       "path": "/war-crimes/hospitals/primary-care-clinic/",
       "lang": "en",
       "section": "hospitals",
-      "id": "FAC-040",
+      "id": "FAC-039",
       "slug": "primary-care-clinic",
       "incidents": 1,
       "indexable": true
@@ -1217,7 +1187,7 @@
       "path": "/war-crimes/hospitals/de/hausarztpraxis/",
       "lang": "de",
       "section": "hospitals",
-      "id": "FAC-040",
+      "id": "FAC-039",
       "slug": "hausarztpraxis",
       "incidents": 1,
       "indexable": true
@@ -1227,7 +1197,7 @@
       "path": "/war-crimes/hospitals/ar/عيادة-الرعاية-الصحية-الأولية/",
       "lang": "ar",
       "section": "hospitals",
-      "id": "FAC-040",
+      "id": "FAC-039",
       "slug": "عيادة-الرعاية-الصحية-الأولية",
       "incidents": 1,
       "indexable": true
@@ -1237,7 +1207,7 @@
       "path": "/war-crimes/hospitals/msf-premise-01/",
       "lang": "en",
       "section": "hospitals",
-      "id": "FAC-041",
+      "id": "FAC-040",
       "slug": "msf-premise-01",
       "incidents": 1,
       "indexable": true
@@ -1247,7 +1217,7 @@
       "path": "/war-crimes/hospitals/de/msf-praesenz-01/",
       "lang": "de",
       "section": "hospitals",
-      "id": "FAC-041",
+      "id": "FAC-040",
       "slug": "msf-praesenz-01",
       "incidents": 1,
       "indexable": true
@@ -1257,7 +1227,7 @@
       "path": "/war-crimes/hospitals/ar/فرضية-منظمة-أطباء-بلا-حدود-01/",
       "lang": "ar",
       "section": "hospitals",
-      "id": "FAC-041",
+      "id": "FAC-040",
       "slug": "فرضية-منظمة-أطباء-بلا-حدود-01",
       "incidents": 1,
       "indexable": true
@@ -1267,7 +1237,7 @@
       "path": "/war-crimes/hospitals/msf-clinic/",
       "lang": "en",
       "section": "hospitals",
-      "id": "FAC-042",
+      "id": "FAC-041",
       "slug": "msf-clinic",
       "incidents": 1,
       "indexable": true
@@ -1277,7 +1247,7 @@
       "path": "/war-crimes/hospitals/de/msf-klinik/",
       "lang": "de",
       "section": "hospitals",
-      "id": "FAC-042",
+      "id": "FAC-041",
       "slug": "msf-klinik",
       "incidents": 1,
       "indexable": true
@@ -1287,7 +1257,7 @@
       "path": "/war-crimes/hospitals/ar/عيادة-أطباء-بلا-حدود/",
       "lang": "ar",
       "section": "hospitals",
-      "id": "FAC-042",
+      "id": "FAC-041",
       "slug": "عيادة-أطباء-بلا-حدود",
       "incidents": 1,
       "indexable": true
@@ -1297,7 +1267,7 @@
       "path": "/war-crimes/hospitals/msf-urgent-care-unit-khan-younis/",
       "lang": "en",
       "section": "hospitals",
-      "id": "FAC-043",
+      "id": "FAC-042",
       "slug": "msf-urgent-care-unit-khan-younis",
       "incidents": 1,
       "indexable": true
@@ -1307,7 +1277,7 @@
       "path": "/war-crimes/hospitals/de/msf-notfallambulanz-khan-younis/",
       "lang": "de",
       "section": "hospitals",
-      "id": "FAC-043",
+      "id": "FAC-042",
       "slug": "msf-notfallambulanz-khan-younis",
       "incidents": 1,
       "indexable": true
@@ -1317,7 +1287,7 @@
       "path": "/war-crimes/hospitals/ar/وحدة-الرعاية-العاجلة-التابعة-لمنظمة-أطباء-بلا-حدود-خان-يونس/",
       "lang": "ar",
       "section": "hospitals",
-      "id": "FAC-043",
+      "id": "FAC-042",
       "slug": "وحدة-الرعاية-العاجلة-التابعة-لمنظمة-أطباء-بلا-حدود-خان-يونس",
       "incidents": 1,
       "indexable": true
@@ -1327,7 +1297,7 @@
       "path": "/war-crimes/hospitals/noura-al-kaabi-specialist-dialysis-centre/",
       "lang": "en",
       "section": "hospitals",
-      "id": "FAC-044",
+      "id": "FAC-043",
       "slug": "noura-al-kaabi-specialist-dialysis-centre",
       "incidents": 1,
       "indexable": true
@@ -1337,7 +1307,7 @@
       "path": "/war-crimes/hospitals/de/noura-al-kaabi-spezialisiertes-dialysezentrum/",
       "lang": "de",
       "section": "hospitals",
-      "id": "FAC-044",
+      "id": "FAC-043",
       "slug": "noura-al-kaabi-spezialisiertes-dialysezentrum",
       "incidents": 1,
       "indexable": true
@@ -1347,7 +1317,7 @@
       "path": "/war-crimes/hospitals/ar/مركز-نورة-الكعبي-التخصصي-لغسيل-الكلى/",
       "lang": "ar",
       "section": "hospitals",
-      "id": "FAC-044",
+      "id": "FAC-043",
       "slug": "مركز-نورة-الكعبي-التخصصي-لغسيل-الكلى",
       "incidents": 1,
       "indexable": true
@@ -1357,7 +1327,7 @@
       "path": "/war-crimes/hospitals/al-zaytoun-medical-clinic/",
       "lang": "en",
       "section": "hospitals",
-      "id": "FAC-045",
+      "id": "FAC-044",
       "slug": "al-zaytoun-medical-clinic",
       "incidents": 0,
       "indexable": false
@@ -1367,7 +1337,7 @@
       "path": "/war-crimes/hospitals/de/medizinische-klinik-al-zaytoun/",
       "lang": "de",
       "section": "hospitals",
-      "id": "FAC-045",
+      "id": "FAC-044",
       "slug": "medizinische-klinik-al-zaytoun",
       "incidents": 0,
       "indexable": false
@@ -1377,38 +1347,38 @@
       "path": "/war-crimes/hospitals/ar/عيادة-الزيتون-الطبية/",
       "lang": "ar",
       "section": "hospitals",
-      "id": "FAC-045",
+      "id": "FAC-044",
       "slug": "عيادة-الزيتون-الطبية",
       "incidents": 0,
       "indexable": false
     },
     {
-      "url": "https://palgenopedia.org/war-crimes/hospitals/al-qarara-medical-clinic/",
-      "path": "/war-crimes/hospitals/al-qarara-medical-clinic/",
+      "url": "https://palgenopedia.org/war-crimes/hospitals/qararah-health-care-center/",
+      "path": "/war-crimes/hospitals/qararah-health-care-center/",
       "lang": "en",
       "section": "hospitals",
-      "id": "FAC-046",
-      "slug": "al-qarara-medical-clinic",
+      "id": "FAC-045",
+      "slug": "qararah-health-care-center",
       "incidents": 0,
       "indexable": false
     },
     {
-      "url": "https://palgenopedia.org/war-crimes/hospitals/de/al-qarara-klinik/",
-      "path": "/war-crimes/hospitals/de/al-qarara-klinik/",
+      "url": "https://palgenopedia.org/war-crimes/hospitals/de/qararah-gesundheitszentrum/",
+      "path": "/war-crimes/hospitals/de/qararah-gesundheitszentrum/",
       "lang": "de",
       "section": "hospitals",
-      "id": "FAC-046",
-      "slug": "al-qarara-klinik",
+      "id": "FAC-045",
+      "slug": "qararah-gesundheitszentrum",
       "incidents": 0,
       "indexable": false
     },
     {
-      "url": "https://palgenopedia.org/war-crimes/hospitals/ar/%D8%B9%D9%8A%D8%A7%D8%AF%D8%A9-%D8%A7%D9%84%D9%82%D8%B1%D8%A7%D8%B1-%D8%A7%D9%84%D8%B7%D8%A8%D9%8A%D8%A9/",
-      "path": "/war-crimes/hospitals/ar/عيادة-القرار-الطبية/",
+      "url": "https://palgenopedia.org/war-crimes/hospitals/ar/%D9%85%D8%B1%D9%83%D8%B2-%D9%82%D8%A7%D8%B1%D8%A9-%D9%84%D9%84%D8%B1%D8%B9%D8%A7%D9%8A%D8%A9-%D8%A7%D9%84%D8%B5%D8%AD%D9%8A%D8%A9/",
+      "path": "/war-crimes/hospitals/ar/مركز-قارة-للرعاية-الصحية/",
       "lang": "ar",
       "section": "hospitals",
-      "id": "FAC-046",
-      "slug": "عيادة-القرار-الطبية",
+      "id": "FAC-045",
+      "slug": "مركز-قارة-للرعاية-الصحية",
       "incidents": 0,
       "indexable": false
     },
@@ -1417,7 +1387,7 @@
       "path": "/war-crimes/hospitals/solidarity-polyclinic/",
       "lang": "en",
       "section": "hospitals",
-      "id": "FAC-047",
+      "id": "FAC-046",
       "slug": "solidarity-polyclinic",
       "incidents": 0,
       "indexable": false
@@ -1427,7 +1397,7 @@
       "path": "/war-crimes/hospitals/de/solidaritaets-poliklinik/",
       "lang": "de",
       "section": "hospitals",
-      "id": "FAC-047",
+      "id": "FAC-046",
       "slug": "solidaritaets-poliklinik",
       "incidents": 0,
       "indexable": false
@@ -1437,38 +1407,38 @@
       "path": "/war-crimes/hospitals/ar/عيادة-التضامن-متعددة-التخصصات/",
       "lang": "ar",
       "section": "hospitals",
-      "id": "FAC-047",
+      "id": "FAC-046",
       "slug": "عيادة-التضامن-متعددة-التخصصات",
       "incidents": 0,
       "indexable": false
     },
     {
-      "url": "https://palgenopedia.org/war-crimes/hospitals/algerian-military-hospital/",
-      "path": "/war-crimes/hospitals/algerian-military-hospital/",
+      "url": "https://palgenopedia.org/war-crimes/hospitals/algerian-specialized-hospital/",
+      "path": "/war-crimes/hospitals/algerian-specialized-hospital/",
       "lang": "en",
       "section": "hospitals",
-      "id": "FAC-048",
-      "slug": "algerian-military-hospital",
+      "id": "FAC-047",
+      "slug": "algerian-specialized-hospital",
       "incidents": 0,
       "indexable": false
     },
     {
-      "url": "https://palgenopedia.org/war-crimes/hospitals/de/algerisches-militaerkrankenhaus/",
-      "path": "/war-crimes/hospitals/de/algerisches-militaerkrankenhaus/",
+      "url": "https://palgenopedia.org/war-crimes/hospitals/de/algerisches-spezialkrankenhaus/",
+      "path": "/war-crimes/hospitals/de/algerisches-spezialkrankenhaus/",
       "lang": "de",
       "section": "hospitals",
-      "id": "FAC-048",
-      "slug": "algerisches-militaerkrankenhaus",
+      "id": "FAC-047",
+      "slug": "algerisches-spezialkrankenhaus",
       "incidents": 0,
       "indexable": false
     },
     {
-      "url": "https://palgenopedia.org/war-crimes/hospitals/ar/%D8%A7%D9%84%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89-%D8%A7%D9%84%D8%B9%D8%B3%D9%83%D8%B1%D9%8A-%D8%A7%D9%84%D8%AC%D8%B2%D8%A7%D8%A6%D8%B1%D9%8A/",
-      "path": "/war-crimes/hospitals/ar/المستشفى-العسكري-الجزائري/",
+      "url": "https://palgenopedia.org/war-crimes/hospitals/ar/%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89-%D8%A7%D9%84%D8%AC%D8%B2%D8%A7%D8%A6%D8%B1-%D8%A7%D9%84%D8%AA%D8%AE%D8%B5%D8%B5%D9%8A/",
+      "path": "/war-crimes/hospitals/ar/مستشفى-الجزائر-التخصصي/",
       "lang": "ar",
       "section": "hospitals",
-      "id": "FAC-048",
-      "slug": "المستشفى-العسكري-الجزائري",
+      "id": "FAC-047",
+      "slug": "مستشفى-الجزائر-التخصصي",
       "incidents": 0,
       "indexable": false
     },
@@ -1477,7 +1447,7 @@
       "path": "/war-crimes/hospitals/muscat-al-qarara-health-centre/",
       "lang": "en",
       "section": "hospitals",
-      "id": "FAC-049",
+      "id": "FAC-048",
       "slug": "muscat-al-qarara-health-centre",
       "incidents": 0,
       "indexable": false
@@ -1487,7 +1457,7 @@
       "path": "/war-crimes/hospitals/de/al-qarara-gesundheitszentrum-in-maskat/",
       "lang": "de",
       "section": "hospitals",
-      "id": "FAC-049",
+      "id": "FAC-048",
       "slug": "al-qarara-gesundheitszentrum-in-maskat",
       "incidents": 0,
       "indexable": false
@@ -1497,7 +1467,7 @@
       "path": "/war-crimes/hospitals/ar/مركز-مسقط-القرارة-الصحي/",
       "lang": "ar",
       "section": "hospitals",
-      "id": "FAC-049",
+      "id": "FAC-048",
       "slug": "مركز-مسقط-القرارة-الصحي",
       "incidents": 0,
       "indexable": false
@@ -1507,7 +1477,7 @@
       "path": "/war-crimes/hospitals/al-mawasi-clinic/",
       "lang": "en",
       "section": "hospitals",
-      "id": "FAC-050",
+      "id": "FAC-049",
       "slug": "al-mawasi-clinic",
       "incidents": 0,
       "indexable": false
@@ -1517,18 +1487,18 @@
       "path": "/war-crimes/hospitals/de/al-mawasi-klinik/",
       "lang": "de",
       "section": "hospitals",
-      "id": "FAC-050",
+      "id": "FAC-049",
       "slug": "al-mawasi-klinik",
       "incidents": 0,
       "indexable": false
     },
     {
-      "url": "https://palgenopedia.org/war-crimes/hospitals/ar/%D8%B9%D9%8A%D8%A7%D8%AF%D8%A9-%D8%A7%D9%84%D9%85%D9%88%D8%A7%D8%B3%D9%8A/",
-      "path": "/war-crimes/hospitals/ar/عيادة-المواسي/",
+      "url": "https://palgenopedia.org/war-crimes/hospitals/ar/%D8%B9%D9%8A%D8%A7%D8%AF%D8%A9-%D8%A7%D9%84%D9%85%D9%88%D8%A7%D8%B5%D9%8A/",
+      "path": "/war-crimes/hospitals/ar/عيادة-المواصي/",
       "lang": "ar",
       "section": "hospitals",
-      "id": "FAC-050",
-      "slug": "عيادة-المواسي",
+      "id": "FAC-049",
+      "slug": "عيادة-المواصي",
       "incidents": 0,
       "indexable": false
     },
@@ -1824,7 +1794,7 @@
       "section": "universities",
       "id": "FAC-004",
       "slug": "al-aqsa-university",
-      "incidents": 8,
+      "incidents": 7,
       "indexable": true
     },
     {
@@ -1834,7 +1804,7 @@
       "section": "universities",
       "id": "FAC-004",
       "slug": "al-aqsa-universitaet",
-      "incidents": 8,
+      "incidents": 7,
       "indexable": true
     },
     {
@@ -1844,7 +1814,7 @@
       "section": "universities",
       "id": "FAC-004",
       "slug": "جامعة-الأقصى",
-      "incidents": 8,
+      "incidents": 7,
       "indexable": true
     },
     {
