@@ -160,7 +160,8 @@ def load():
     # did exactly this). `_anchor` holds the base id verbatim — join on that.
     for lang in ("de", "ar"):
         B.merge_translations(events, B.read_csv(os.path.join(d, "events_%s.csv" % lang)), "id", trans_key="_anchor")
-        B.merge_translations(details, B.read_csv(os.path.join(d, "details_%s.csv" % lang)), "detail_id", trans_key="_anchor")
+        B.merge_translations(details, B.read_csv(os.path.join(d, "details_%s.csv" % lang)), "detail_id", trans_key="_anchor",
+                             key2="event_id", trans_key2="event_id")
 
     by_event = {}
     for r in details:

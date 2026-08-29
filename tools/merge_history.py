@@ -44,12 +44,19 @@ def _row_fns(fname, header):
 
     ei = header.index("event_id") if "event_id" in header else -1
     di = header.index("detail_id") if "detail_id" in header else -1
+    ai = header.index("_anchor") if "_anchor" in header else -1
     def ev(row):
         return row[ei].strip() if 0 <= ei < len(row) else ""
     def dt(row):
         return row[di].strip() if 0 <= di < len(row) else ""
+    def an(row):
+        return row[ai].strip() if 0 <= ai < len(row) else ""
+    # translation rows are only usable if BOTH event_id and _anchor resolve —
+    # build_history joins on (event_id, _anchor). A translation file has an
+    # _anchor column; the base details.csv does not (ai == -1) so that check
+    # is skipped there.
     return (lambda row: ev(row) + "|" + dt(row),
-            lambda row: _looks_broken(ev(row)))
+            lambda row: _looks_broken(ev(row)) or (ai != -1 and _looks_broken(an(row))))
 
 
 def _read(path):

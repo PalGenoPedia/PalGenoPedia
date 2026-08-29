@@ -572,23 +572,38 @@ def read_csv(path):
         return [r for r in csv.DictReader(fh)]
 
 
-def merge_translations(base, trans, key, trans_key=None):
+def merge_translations(base, trans, key, trans_key=None, key2=None, trans_key2=None):
     """Copy _de/_ar suffixed columns from the delta CSV onto the base rows.
 
     trans_key lets the delta CSV be joined on a different column than the base
     (e.g. base row keyed on `detail_id`, delta keyed on `_anchor` which holds
     the base id verbatim — the delta's own `detail_id` is a row-count formula
-    that drifts once the row counts diverge)."""
+    that drifts once the row counts diverge).
+
+    key2 / trans_key2 add a second column to the match, for when the first key
+    is not unique on its own — the historical `detail_id` restarts per workbook
+    (pre/ and recent/ both from DET-001), so details join on
+    (event_id, detail_id) ↔ (event_id, _anchor)."""
     if not trans:
         return
     tk = trans_key or key
+    tk2 = trans_key2 or key2
+
+    def bkey(r):
+        k = (r.get(key) or "").strip()
+        return (k, (r.get(key2) or "").strip()) if key2 else k
+
+    def tkey(r):
+        k = (r.get(tk) or "").strip() or (r.get(key) or "").strip()
+        return (k, (r.get(tk2) or "").strip()) if key2 else k
+
     idx = {}
     for r in trans:
-        k = (r.get(tk) or "").strip() or (r.get(key) or "").strip()
-        if k:
+        k = tkey(r)
+        if (k[0] if key2 else k):
             idx[k] = r
     for rec in base:
-        t = idx.get((rec.get(key) or "").strip())
+        t = idx.get(bkey(rec))
         if not t:
             continue
         for col, val in t.items():
