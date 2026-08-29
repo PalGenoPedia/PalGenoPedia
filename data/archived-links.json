@@ -1,0 +1,300 @@
+{
+ "http://ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-157": {
+  "status": "requested",
+  "social": false,
+  "requested": "2026-08-29"
+ },
+ "http://www.palestinercs.org": {
+  "status": "failed",
+  "social": false,
+  "error": "<urlopen error timed out>",
+  "checked": "2026-08-29"
+ },
+ "https://abcnews.com/International/hundreds-killed-strike-gaza-hospital-gaza-health-ministry/story?id=104049667": {
+  "status": "requested",
+  "social": false,
+  "requested": "2026-08-29"
+ },
+ "https://abcnews.go.com/International/state-hospitals-gaza-israel-hamas-war-hits-1/story?id=114495894": {
+  "status": "failed",
+  "social": false,
+  "error": "<urlopen error timed out>",
+  "checked": "2026-08-29"
+ },
+ "https://afedj.org/ahli-hospital-struck-by-rocket-fire": {
+  "status": "requested",
+  "social": false,
+  "requested": "2026-08-29"
+ },
+ "https://aje.io/53epb7?update=2577183": {
+  "status": "failed",
+  "social": false,
+  "error": "<urlopen error timed out>",
+  "checked": "2026-08-29"
+ },
+ "https://aje.io/5g3kdw?update=2667643": {
+  "status": "requested",
+  "social": false,
+  "requested": "2026-08-29"
+ },
+ "https://aje.io/5g3kdw?update=2668497": {
+  "status": "failed",
+  "social": false,
+  "error": "<urlopen error timed out>",
+  "checked": "2026-08-29"
+ },
+ "https://aje.io/5g3kdw?update=2669254": {
+  "status": "failed",
+  "social": false,
+  "error": "<urlopen error _ssl.c:993: The handshake operation timed out>",
+  "checked": "2026-08-29"
+ },
+ "https://aje.io/6ly68o?update=2640692": {
+  "status": "requested",
+  "social": false,
+  "requested": "2026-08-29"
+ },
+ "https://aje.io/av8a82?update=2660721": {
+  "status": "failed",
+  "social": false,
+  "error": "<urlopen error timed out>",
+  "checked": "2026-08-29"
+ },
+ "https://aje.io/av8a82?update=2662702": {
+  "status": "requested",
+  "social": false,
+  "requested": "2026-08-29"
+ },
+ "https://aje.io/bj3a9f?update=2644385": {
+  "status": "failed",
+  "social": false,
+  "error": "<urlopen error timed out>",
+  "checked": "2026-08-29"
+ },
+ "https://aje.io/i37ezs?update=2664531": {
+  "status": "requested",
+  "social": false,
+  "requested": "2026-08-29"
+ },
+ "https://aje.io/i37ezs?update=2665759": {
+  "status": "failed",
+  "social": false,
+  "error": "<urlopen error timed out>",
+  "checked": "2026-08-29"
+ },
+ "https://aje.io/trvz4m?update=2582688": {
+  "status": "requested",
+  "social": false,
+  "requested": "2026-08-29"
+ },
+ "https://aje.io/trvz4m?update=2583195": {
+  "status": "failed",
+  "social": false,
+  "error": "<urlopen error timed out>",
+  "checked": "2026-08-29"
+ },
+ "https://anglicanalliance.org/palm-sunday-air-strikes-against-al-ahli-hospital-in-gaza-city": {
+  "status": "archived",
+  "social": false,
+  "ts": "20260207012830",
+  "checked": "2026-08-29",
+  "wayback": "https://web.archive.org/web/20260207012830/https://anglicanalliance.org/palm-sunday-air-strikes-against-al-ahli-hospital-in-gaza-city"
+ },
+ "https://apnews.com/article/israel-palestinians-hamas-war-hospital-rocket-gaza-8bc239d2efe0cff3998b2154d9220a83": {
+  "status": "archived",
+  "social": false,
+  "ts": "20260728081135",
+  "checked": "2026-08-29",
+  "wayback": "https://web.archive.org/web/20260728081135/https://apnews.com/article/israel-palestinians-hamas-war-hospital-rocket-gaza-8bc239d2efe0cff3998b2154d9220a83"
+ },
+ "https://arabi21.com/story/1568264/%D8%A7%D9%84%D8%A7%D8%AD%D8%AA%D9%84%D8%A7%D9%84-%D9%8A%D9%82%D8%AA%D8%AD%D9%85-%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89-%D8%BA%D8%B1%D8%A8-%D8%AE%D8%A7%D9%86%D9%8A%D9%88%D9%86%D8%B3-%D9%88%D9%8A%D8%AD%D8%AA%D8%AC%D8%B2-%D8%A7%D9%84%D8%B7%D9%88%D8%A7%D9%82%D9%85-%D8%A7%D9%84%D8%B7%D8%A8%D9%8A%D8%A9-%D8%B4%D8%A7%D9%87%D8%AF": {
+  "status": "archived",
+  "social": false,
+  "ts": "20260828223720",
+  "checked": "2026-08-29",
+  "wayback": "https://web.archive.org/web/20260828223720/https://arabi21.com/story/1568264/%D8%A7%D9%84%D8%A7%D8%AD%D8%AA%D9%84%D8%A7%D9%84-%D9%8A%D9%82%D8%AA%D8%AD%D9%85-%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89-%D8%BA%D8%B1%D8%A8-%D8%AE%D8%A7%D9%86%D9%8A%D9%88%D9%86%D8%B3-%D9%88%D9%8A%D8%AD%D8%AA%D8%AC%D8%B2-%D8%A7%D9%84%D8%B7%D9%88%D8%A7%D9%82%D9%85-%D8%A7%D9%84%D8%B7%D8%A8%D9%8A%D8%A9-%D8%B4%D8%A7%D9%87%D8%AF"
+ },
+ "https://arablit.org/wp-content/uploads/2023/12/English-.pdf": {
+  "status": "archived",
+  "social": false,
+  "ts": "20260824184422",
+  "checked": "2026-08-29",
+  "wayback": "https://web.archive.org/web/20260824184422/https://arablit.org/wp-content/uploads/2023/12/English-.pdf"
+ },
+ "https://ccas.georgetown.edu/ccas-newsmagazine/scholasticide-in-gaza": {
+  "status": "requested",
+  "social": false,
+  "requested": "2026-08-29"
+ },
+ "https://cnewa.org/gaza-christian-hospital-hit-by-missile": {
+  "status": "failed",
+  "social": false,
+  "error": "<urlopen error timed out>",
+  "checked": "2026-08-29"
+ },
+ "https://cpj.org": {
+  "status": "archived",
+  "social": false,
+  "ts": "20260825080336",
+  "checked": "2026-08-29",
+  "wayback": "https://web.archive.org/web/20260825080336/https://cpj.org"
+ },
+ "https://docs.un.org/en/A/HRC/59/26": {
+  "status": "archived",
+  "social": false,
+  "ts": "20260802131435",
+  "checked": "2026-08-29",
+  "wayback": "https://web.archive.org/web/20260802131435/https://docs.un.org/en/A/HRC/59/26"
+ },
+ "https://edition.cnn.com/interactive/2024/01/middleeast/gaza-hospitals-destruction-investigation-intl-cmd": {
+  "status": "archived",
+  "social": false,
+  "ts": "20260826233625",
+  "checked": "2026-08-29",
+  "wayback": "https://web.archive.org/web/20260826233625/https://edition.cnn.com/interactive/2024/01/middleeast/gaza-hospitals-destruction-investigation-intl-cmd"
+ },
+ "https://en.topwar.ru/229568-cahal-razbombil-palestinskij-universitet-al-azhar-v-gaze.html": {
+  "status": "requested",
+  "social": false,
+  "requested": "2026-08-29"
+ },
+ "https://en.wikipedia.org/wiki/1948_Palestinian_expulsion_from_Lydda_and_Ramle": {
+  "status": "failed",
+  "social": false,
+  "error": "<urlopen error timed out>",
+  "checked": "2026-08-29"
+ },
+ "https://en.wikipedia.org/wiki/Al-Shifa_Hospital_siege": {
+  "status": "requested",
+  "social": false,
+  "requested": "2026-08-29"
+ },
+ "https://en.wikipedia.org/wiki/Attacks_on_health_facilities_during_the_Gaza_war": {
+  "status": "archived",
+  "social": false,
+  "ts": "20260823221645",
+  "checked": "2026-08-29",
+  "wayback": "https://web.archive.org/web/20260823221645/https://en.wikipedia.org/wiki/Attacks_on_health_facilities_during_the_Gaza_war"
+ },
+ "https://en.wikipedia.org/wiki/Israeli_incursions_in_the_West_Bank_during_the_Gaza_war": {
+  "status": "archived",
+  "social": false,
+  "ts": "20260822132701",
+  "checked": "2026-08-29",
+  "wayback": "https://web.archive.org/web/20260822132701/https://en.wikipedia.org/wiki/Israeli_incursions_in_the_West_Bank_during_the_Gaza_war"
+ },
+ "https://en.wikipedia.org/wiki/January_2023_Jenin_incursion": {
+  "status": "archived",
+  "social": false,
+  "ts": "20260112124818",
+  "checked": "2026-08-29",
+  "wayback": "https://web.archive.org/web/20260112124818/https://en.wikipedia.org/wiki/January_2023_Jenin_incursion"
+ },
+ "https://en.wikipedia.org/wiki/July_2023_Jenin_incursion": {
+  "status": "failed",
+  "social": false,
+  "error": "<urlopen error timed out>",
+  "checked": "2026-08-29"
+ },
+ "https://en.wikipedia.org/wiki/Kamal_Adwan_Hospital_sieges": {
+  "status": "archived",
+  "social": false,
+  "ts": "20260818014816",
+  "checked": "2026-08-29",
+  "wayback": "https://web.archive.org/web/20260818014816/https://en.wikipedia.org/wiki/Kamal_Adwan_Hospital_sieges"
+ },
+ "https://en.wikipedia.org/wiki/List_of_hospitals_in_the_State_of_Palestine": {
+  "status": "requested",
+  "social": false,
+  "requested": "2026-08-29"
+ },
+ "https://en.wikipedia.org/wiki/Moroccan_Quarter": {
+  "status": "archived",
+  "social": false,
+  "ts": "20260717214904",
+  "checked": "2026-08-29",
+  "wayback": "https://web.archive.org/web/20260717214904/https://en.wikipedia.org/wiki/Moroccan_Quarter"
+ },
+ "https://en.wikipedia.org/wiki/Moshe_Dayan": {
+  "status": "failed",
+  "social": false,
+  "error": "<urlopen error timed out>",
+  "checked": "2026-08-29"
+ },
+ "https://en.wikipedia.org/wiki/Six-Day_War": {
+  "status": "requested",
+  "social": false,
+  "requested": "2026-08-29"
+ },
+ "https://en.wikipedia.org/wiki/Timeline_of_the_Gaza_Strip_healthcare_collapse": {
+  "status": "failed",
+  "social": false,
+  "error": "<urlopen error timed out>",
+  "checked": "2026-08-29"
+ },
+ "https://english.alarabiya.net/News/middle-east/2023/10/11/Israel-strikes-Islamic-University-in-Gaza": {
+  "status": "archived",
+  "social": false,
+  "ts": "20250617055259",
+  "checked": "2026-08-29",
+  "wayback": "https://web.archive.org/web/20250617055259/https://english.alarabiya.net/News/middle-east/2023/10/11/Israel-strikes-Islamic-University-in-Gaza"
+ },
+ "https://english.wafa.ps/Pages/Details/128189": {
+  "status": "archived",
+  "social": false,
+  "ts": "20260828224648",
+  "checked": "2026-08-29",
+  "wayback": "https://web.archive.org/web/20260828224648/https://english.wafa.ps/Pages/Details/128189"
+ },
+ "https://english.wafa.ps/Pages/Details/133561": {
+  "status": "archived",
+  "social": false,
+  "ts": "20260828224655",
+  "checked": "2026-08-29",
+  "wayback": "https://web.archive.org/web/20260828224655/https://english.wafa.ps/Pages/Details/133561"
+ },
+ "https://english.wafa.ps/Pages/Details/140358": {
+  "status": "archived",
+  "social": false,
+  "ts": "20260519000318",
+  "checked": "2026-08-29",
+  "wayback": "https://web.archive.org/web/20260519000318/https://english.wafa.ps/Pages/Details/140358"
+ },
+ "https://english.wafa.ps/Pages/Details/140465": {
+  "status": "requested",
+  "social": false,
+  "requested": "2026-08-29"
+ },
+ "https://english.wafa.ps/Pages/Details/141208": {
+  "status": "failed",
+  "social": false,
+  "error": "<urlopen error timed out>",
+  "checked": "2026-08-29"
+ },
+ "https://english.wafa.ps/Pages/Details/141209": {
+  "status": "archived",
+  "social": false,
+  "ts": "20260520074129",
+  "checked": "2026-08-29",
+  "wayback": "https://web.archive.org/web/20260520074129/https://english.wafa.ps/Pages/Details/141209"
+ },
+ "https://english.wafa.ps/Pages/Details/141767": {
+  "status": "archived",
+  "social": false,
+  "ts": "20260828224945",
+  "checked": "2026-08-29",
+  "wayback": "https://web.archive.org/web/20260828224945/https://english.wafa.ps/Pages/Details/141767"
+ },
+ "https://english.wafa.ps/Pages/Details/142688": {
+  "status": "archived",
+  "social": false,
+  "ts": "20260828225057",
+  "checked": "2026-08-29",
+  "wayback": "https://web.archive.org/web/20260828225057/https://english.wafa.ps/Pages/Details/142688"
+ },
+ "https://english.wafa.ps/Pages/Details/160970": {
+  "status": "requested",
+  "social": false,
+  "requested": "2026-08-29"
+ }
+}
