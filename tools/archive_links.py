@@ -40,6 +40,7 @@ captures as a login wall — the entry still records, flagged `social: true`,
 so a human can archive.today those by hand.
 """
 import csv, glob, json, os, re, sys, time, datetime, urllib.parse, urllib.request
+import concurrent.futures as _cf
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
@@ -161,49 +162,69 @@ def main():
     started = time.time()
     stopped_early = 0
 
-    for n, url in enumerate(urls, 1):
-        if n % 25 == 0:
-            print("  ... %d/%d" % (n, len(urls)), flush=True)
-        if budget and time.time() - started > budget:
-            stopped_early = len(urls) - n + 1
-            print("  time budget (%ds) reached at %d/%d — writing progress, "
-                  "the rest carries to the next run" % (budget, n, len(urls)), flush=True)
-            break
+    for url in urls:
         e = state.setdefault(url, {"status": "new"})
         host = urllib.parse.urlparse(url).netloc.lower().lstrip("www.")
         e["social"] = any(host == s or host.endswith("." + s) for s in SOCIAL)
 
-        if e.get("status") == "archived" and e.get("checked", "") >= stale_before:
-            skipped += 1
-            continue
+    # ── phase 1: CDX confirm, threaded ──────────────────────────────────────
+    # The CDX endpoint is the bottleneck (one IP, a few hundred sequential
+    # calls -> heavy throttling). A small worker pool turns a multi-hour pass
+    # into a ~20-40 min one. Save Page Now stays serial (phase 2) - it is
+    # rate-limited per account and concurrency just gets you 429s.
+    to_check = [u for u in urls
+                if not (state[u].get("status") == "archived"
+                        and state[u].get("checked", "") >= stale_before)]
+    skipped = len(urls) - len(to_check)
+    print("  phase 1: CDX-confirming %d url(s) (%d already fresh) with %d workers"
+          % (len(to_check), skipped, 6), flush=True)
 
-        ts = cdx_latest(url)
-        time.sleep(0.4)
-        if ts:
-            e.update(status="archived", ts=ts, checked=TODAY,
-                     wayback="https://web.archive.org/web/%s/%s" % (ts, url))
-            e.pop("requested", None)
-            confirmed += 1
-            continue
+    done = 0
+    with _cf.ThreadPoolExecutor(max_workers=6) as ex:
+        futs = {ex.submit(cdx_latest, u): u for u in to_check}
+        for fut in _cf.as_completed(futs):
+            u, e = futs[fut], state[futs[fut]]
+            done += 1
+            if done % 50 == 0:
+                print("  ... %d/%d" % (done, len(to_check)), flush=True)
+            try:
+                ts = fut.result()
+            except Exception as exc:
+                e.update(status=e.get("status", "new"),
+                         error=str(exc)[:200], checked=TODAY)
+                failed += 1
+                continue
+            if ts:
+                e.update(status="archived", ts=ts, checked=TODAY,
+                         wayback="https://web.archive.org/web/%s/%s" % (ts, u))
+                e.pop("requested", None)
+                e.pop("error", None)
+                confirmed += 1
 
-        # no capture yet — request one (respecting --limit)
+    # ── phase 2: submit the still-unarchived to Save Page Now, serial ───────
+    pending_save = [u for u in urls if state[u].get("status") not in ("archived",)]
+    for u in pending_save:
         if saved >= limit:
-            e.setdefault("status", "new")
-            continue
+            break
+        if budget and time.time() - started > budget:
+            stopped_early = len(pending_save) - saved
+            print("  time budget (%ds) reached — %d submit(s) done, rest next run"
+                  % (budget, saved), flush=True)
+            break
+        e = state[u]
         if check:
-            print("  would save:", url)
+            print("  would save:", u)
             saved += 1
             continue
         try:
-            res = save_now(url, auth)
-            if res.get("job_id") or res.get("url"):
-                e.update(status="requested", requested=TODAY)
-            else:
-                e.update(status="requested", requested=TODAY, last_response=res)
+            res = save_now(u, auth)
+            e.update(status="requested", requested=TODAY)
+            if not (res.get("job_id") or res.get("url")):
+                e["last_response"] = res
             saved += 1
             time.sleep(4 if auth else 8)
-        except Exception as ex:
-            e.update(status="failed", error=str(ex)[:200], checked=TODAY)
+        except Exception as exc:
+            e.update(status="failed", error=str(exc)[:200], checked=TODAY)
             failed += 1
             time.sleep(2)
 
