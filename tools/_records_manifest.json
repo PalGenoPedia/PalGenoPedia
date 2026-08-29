@@ -339,7 +339,7 @@
       "section": "hospitals",
       "id": "FAC-011",
       "slug": "dr-abdul-aziz-rantisi-children-s-specialty-hospital",
-      "incidents": 5,
+      "incidents": 6,
       "indexable": true
     },
     {
@@ -349,7 +349,7 @@
       "section": "hospitals",
       "id": "FAC-011",
       "slug": "dr-abdul-aziz-rantisi-kinder-spezialkrankenhaus",
-      "incidents": 5,
+      "incidents": 6,
       "indexable": true
     },
     {
@@ -359,7 +359,7 @@
       "section": "hospitals",
       "id": "FAC-011",
       "slug": "مستشفى-الدكتور-عبد-العزيز-الرنتيسي-التخصصي-للأطفال",
-      "incidents": 5,
+      "incidents": 6,
       "indexable": true
     },
     {
@@ -759,8 +759,8 @@
       "section": "hospitals",
       "id": "FAC-025",
       "slug": "yafa-hospital",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 1,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/hospitals/de/krankenhaus-in-yafa/",
@@ -769,8 +769,8 @@
       "section": "hospitals",
       "id": "FAC-025",
       "slug": "krankenhaus-in-yafa",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 1,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/hospitals/ar/%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89-%D9%8A%D8%A7%D9%81%D8%A7/",
@@ -779,8 +779,8 @@
       "section": "hospitals",
       "id": "FAC-025",
       "slug": "مستشفى-يافا",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 1,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/hospitals/palestine-medical-relief-center-for-the-rehabilitation-of-the-disabled/",
@@ -1089,8 +1089,8 @@
       "section": "hospitals",
       "id": "FAC-036",
       "slug": "uae-field-hospital",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 2,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/hospitals/de/feldlazarett-der-vae/",
@@ -1099,8 +1099,8 @@
       "section": "hospitals",
       "id": "FAC-036",
       "slug": "feldlazarett-der-vae",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 2,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/hospitals/ar/%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89-%D9%85%D9%8A%D8%AF%D8%A7%D9%86%D9%8A-%D9%81%D9%8A-%D8%A7%D9%84%D8%A5%D9%85%D8%A7%D8%B1%D8%A7%D8%AA-%D8%A7%D9%84%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9-%D8%A7%D9%84%D9%85%D8%AA%D8%AD%D8%AF%D8%A9/",
@@ -1109,8 +1109,8 @@
       "section": "hospitals",
       "id": "FAC-036",
       "slug": "مستشفى-ميداني-في-الإمارات-العربية-المتحدة",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 2,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/hospitals/international-medical-corps-field-hospital/",

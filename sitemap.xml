@@ -1210,6 +1210,33 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://palgenopedia.org/war-crimes/hospitals/yafa-hospital/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89-%D9%8A%D8%A7%D9%81%D8%A7/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/krankenhaus-in-yafa/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/yafa-hospital/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/yafa-hospital/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://palgenopedia.org/war-crimes/hospitals/de/krankenhaus-in-yafa/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89-%D9%8A%D8%A7%D9%81%D8%A7/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/krankenhaus-in-yafa/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/yafa-hospital/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/yafa-hospital/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://palgenopedia.org/war-crimes/hospitals/ar/%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89-%D9%8A%D8%A7%D9%81%D8%A7/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89-%D9%8A%D8%A7%D9%81%D8%A7/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/krankenhaus-in-yafa/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/yafa-hospital/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/yafa-hospital/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://palgenopedia.org/war-crimes/hospitals/palestine-medical-relief-center-for-the-rehabilitation-of-the-disabled/</loc>
     <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/%D9%85%D8%B1%D9%83%D8%B2-%D9%81%D9%84%D8%B3%D8%B7%D9%8A%D9%86-%D8%A7%D9%84%D8%B7%D8%A8%D9%8A-%D9%84%D9%84%D8%A5%D8%BA%D8%A7%D8%AB%D8%A9-%D9%88%D8%A5%D8%B9%D8%A7%D8%AF%D8%A9-%D8%AA%D8%A3%D9%87%D9%8A%D9%84-%D8%A7%D9%84%D9%85%D8%B9%D8%A7%D9%82%D9%8A%D9%86/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/palaestinensisches-zentrum-fuer-medizinische-hilfe-und-rehabilitation-von-behinderten/"/>
@@ -1341,6 +1368,33 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/feldlazarett-des-roten-kreuzes-rafah/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/red-cross-field-hospital-rafah/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/red-cross-field-hospital-rafah/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://palgenopedia.org/war-crimes/hospitals/uae-field-hospital/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89-%D9%85%D9%8A%D8%AF%D8%A7%D9%86%D9%8A-%D9%81%D9%8A-%D8%A7%D9%84%D8%A5%D9%85%D8%A7%D8%B1%D8%A7%D8%AA-%D8%A7%D9%84%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9-%D8%A7%D9%84%D9%85%D8%AA%D8%AD%D8%AF%D8%A9/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/feldlazarett-der-vae/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/uae-field-hospital/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/uae-field-hospital/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://palgenopedia.org/war-crimes/hospitals/de/feldlazarett-der-vae/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89-%D9%85%D9%8A%D8%AF%D8%A7%D9%86%D9%8A-%D9%81%D9%8A-%D8%A7%D9%84%D8%A5%D9%85%D8%A7%D8%B1%D8%A7%D8%AA-%D8%A7%D9%84%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9-%D8%A7%D9%84%D9%85%D8%AA%D8%AD%D8%AF%D8%A9/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/feldlazarett-der-vae/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/uae-field-hospital/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/uae-field-hospital/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://palgenopedia.org/war-crimes/hospitals/ar/%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89-%D9%85%D9%8A%D8%AF%D8%A7%D9%86%D9%8A-%D9%81%D9%8A-%D8%A7%D9%84%D8%A5%D9%85%D8%A7%D8%B1%D8%A7%D8%AA-%D8%A7%D9%84%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9-%D8%A7%D9%84%D9%85%D8%AA%D8%AD%D8%AF%D8%A9/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89-%D9%85%D9%8A%D8%AF%D8%A7%D9%86%D9%8A-%D9%81%D9%8A-%D8%A7%D9%84%D8%A5%D9%85%D8%A7%D8%B1%D8%A7%D8%AA-%D8%A7%D9%84%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9-%D8%A7%D9%84%D9%85%D8%AA%D8%AD%D8%AF%D8%A9/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/feldlazarett-der-vae/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/uae-field-hospital/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/uae-field-hospital/"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
