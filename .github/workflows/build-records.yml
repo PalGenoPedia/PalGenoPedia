@@ -17,9 +17,11 @@ on:
     branches: [main]
     paths:
       - 'Pages/War_Crimes_Stats/**/*.csv'
-      - 'Pages/Historical_Massacres/*.csv'
+      - 'Pages/Historical_Massacres/pre/*.csv'
+      - 'Pages/Historical_Massacres/recent/*.csv'
       - 'tools/build_records.py'
       - 'tools/build_history.py'
+      - 'tools/merge_history.py'
       - 'tools/build_sitemap.py'
       - 'tools/regenerate.py'
       - 'tools/seo_inject.py'
@@ -58,6 +60,12 @@ jobs:
 
       - name: Generate record pages
         run: python tools/build_records.py
+
+      # Historical data lives in two workbooks: pre/ (Nakba→2022) + recent/
+      # (Oct 2023→). Concatenate them into the flat Pages/Historical_Massacres/
+      # *.csv that build_history.py / regenerate.py / archive_links.py read.
+      - name: Merge historical CSVs (pre + recent)
+        run: python tools/merge_history.py
 
       - name: Generate historical event pages
         run: python tools/build_history.py

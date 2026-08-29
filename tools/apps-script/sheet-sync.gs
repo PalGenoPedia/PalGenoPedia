@@ -37,20 +37,39 @@ const EXPORT_TZ = 'Europe/Istanbul';
 
 const SPREADSHEETS = [
 
-  // ── HISTORICAL MASSACRES ──────────────────────────────────
+  // ── HISTORICAL MASSACRES — pre-2023-10-07 (Nakba 1948 → 2022) ──
+  // "Historical Events" workbook.
   {
     id: '1fTNCpO6vhsRZz_OrHNs7b4B7aVotfcA0XH8yygybkPo',
     sheets: {
-      'Events': 'Pages/Historical_Massacres/events.csv',
-      'Details': 'Pages/Historical_Massacres/details.csv',
+      'Events': 'Pages/Historical_Massacres/pre/events.csv',
+      'Details': 'Pages/Historical_Massacres/pre/details.csv',
     },
     translationSheets: {
-      'Events_ar': 'Pages/Historical_Massacres/events_ar.csv',
-      'Events_de': 'Pages/Historical_Massacres/events_de.csv',
-      'Details_ar': 'Pages/Historical_Massacres/details_ar.csv',
-      'Details_de': 'Pages/Historical_Massacres/details_de.csv',
+      'Events_ar': 'Pages/Historical_Massacres/pre/events_ar.csv',
+      'Events_de': 'Pages/Historical_Massacres/pre/events_de.csv',
+      'Details_ar': 'Pages/Historical_Massacres/pre/details_ar.csv',
+      'Details_de': 'Pages/Historical_Massacres/pre/details_de.csv',
     },
   },
+
+  // ── HISTORICAL MASSACRES — current genocide (Oct 2023 →) ───────
+  // "Historical Events (Ongoing)" workbook. Same 6-tab structure.
+  {
+    id: '1Wtn0bzCfUGv8KaLGv01Ogzw7blkRXyuq6J114y7KbyY',
+    sheets: {
+      'Events': 'Pages/Historical_Massacres/recent/events.csv',
+      'Details': 'Pages/Historical_Massacres/recent/details.csv',
+    },
+    translationSheets: {
+      'Events_ar': 'Pages/Historical_Massacres/recent/events_ar.csv',
+      'Events_de': 'Pages/Historical_Massacres/recent/events_de.csv',
+      'Details_ar': 'Pages/Historical_Massacres/recent/details_ar.csv',
+      'Details_de': 'Pages/Historical_Massacres/recent/details_de.csv',
+    },
+  },
+  // tools/merge_history.py (a build-records.yml step) then concatenates pre/ +
+  // recent/ into the flat Pages/Historical_Massacres/*.csv the generators read.
 
   // ── HOSPITALS ─────────────────────────────────────────────
   {

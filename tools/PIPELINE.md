@@ -62,13 +62,13 @@ translation JSON) plus the redirect stubs.
 Each workbook also holds four translation tabs: `<base>_de` and `<base>_ar`
 for both facilities and incidents.
 
-A fifth workbook holds the historical + current-genocide events, on a
-different data model — see **⑤ Historical events** below. It **is** in the
-Apps Script `SPREADSHEETS` config now and syncs like the rest.
+Two more workbooks hold the mass-atrocity events on a different data model,
+split by era — see **③ → The historical workbooks** and **⑤** below.
 
-| section | spreadsheet ID | events tab | details tab |
-|---|---|---|---|
-| Historical events | `1fTNCpO6vhsRZz_OrHNs7b4B7aVotfcA0XH8yygybkPo` | `Events` | `Details` |
+| section | spreadsheet ID | events tab | details tab | → |
+|---|---|---|---|---|
+| Historical Events (pre 2023-10-07) | `1fTNCpO6vhsRZz_OrHNs7b4B7aVotfcA0XH8yygybkPo` | `Events` | `Details` | `pre/` |
+| Historical Events (Ongoing) | `1Wtn0bzCfUGv8KaLGv01Ogzw7blkRXyuq6J114y7KbyY` | `Events` | `Details` | `recent/` |
 
 **Two spelling traps, both load-bearing:**
 
@@ -189,13 +189,29 @@ blanked-out `NEW_TOKEN` const, never a committed value.
 When the sync goes quiet, run `debugToken()`: `GET repo -> 200` = fine,
 `401` = expired PAT, `404` = fine-grained token not granted this repo.
 
-### The historical workbook
+### The historical workbooks — two, split by era
 
-`id: '1fTNCpO6vhsRZz_OrHNs7b4B7aVotfcA0XH8yygybkPo'` — tabs `Events` / `Details`
-(+ `_ar` / `_de`, joined on `_anchor` by `build_history.py`). It's the first
-block in `sheet-sync.gs`'s `SPREADSHEETS`. Editing it + `syncAll()` publishes
-the generated event pages, the timeline, **and** `data/events.json` + feeds +
-JSON-LD (see ④).
+Same 6-tab structure (`Events` / `Details` + `_ar` / `_de`, joined on `_anchor`
+by `build_history.py`; columns include `submission_id` / `added_by` /
+`reviewed_by`):
+
+| workbook | id | syncs to |
+|---|---|---|
+| Historical Events | `1fTNCpO6vhsRZz_OrHNs7b4B7aVotfcA0XH8yygybkPo` | `Pages/Historical_Massacres/pre/*.csv` — `hist*`, Nakba 1948 → 2022 |
+| Historical Events (Ongoing) | `1Wtn0bzCfUGv8KaLGv01Ogzw7blkRXyuq6J114y7KbyY` | `Pages/Historical_Massacres/recent/*.csv` — `curr_*`, Oct 2023 → |
+
+**`tools/merge_history.py`** (a `build-records.yml` step, before
+`build_history.py`) concatenates `pre/` + `recent/` → the flat
+`Pages/Historical_Massacres/*.csv` — pre rows then recent rows, deduped only on
+**non-empty** `id` / `detail_id` (so translation rows with `#REF!` / blank keys
+survive). `build_history.py`, `regenerate.py` and `archive_links.py` all read
+the flat files, unchanged; the flat files are generated + committed by the
+Action — edit the sheets, not them.
+
+Volunteers submit/edit via the portal's **Historical War Crimes** area (new →
+the Ongoing workbook; edits → whichever `era` holds the row). Editing either +
+`syncAll()` publishes the event pages, the timeline, **and** `data/events.json`
++ feeds + JSON-LD (see ④).
 
 ---
 
