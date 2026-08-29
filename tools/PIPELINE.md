@@ -295,15 +295,25 @@ direct URL — see **Pages/ is now developer-only** below.
 
 ---
 
-## ⑥ Source-link archiving
+## ⑥ Source & media archiving
 
 A separate workflow, `.github/workflows/archive-links.yml` — weekly cron,
-a `push` trigger on `data/archive-policy.json`, and `workflow_dispatch` —
-snapshots source URLs to the Wayback Machine. **It is opt-in per domain.**
+a `push` trigger on `data/archive-policy.json` / `data/media-policy.json`, and
+`workflow_dispatch` — snapshots URLs to the Wayback Machine. **Opt-in per
+domain.**
+
+### URL roles
+
+| role | from | policy file |
+|---|---|---|
+| `primary` | `source_url_1`, historical `source_link` | `data/archive-policy.json` |
+| `secondary` | `source_url_2` (comma-split), `*-resources.csv` `url` | `data/archive-policy.json` |
+| `video` | `video_url` | `data/media-policy.json` |
+| `image` | `image_url` | `data/media-policy.json` |
 
 ### The per-domain policy
 
-`data/archive-policy.json` (committed by the volunteer portal — see below):
+Both policy files (committed by the volunteer portal — see below) share a shape:
 
 ```
 { "version": 1, "updated": "...", "updated_by": "...",
@@ -311,38 +321,37 @@ snapshots source URLs to the Wayback Machine. **It is opt-in per domain.**
                              "method":   "wayback|archivetoday|archivebox|manual" } } }
 ```
 
-Domain key = lowercase host, leading `www.` stripped (`domain_of()` in
-`archive_links.py`). A domain with **no rule = skip**.
+Domain key = lowercase host, leading `www.` stripped (`domain_of()`). A domain
+with **no rule = skip**. Sources and media are separate namespaces — a domain
+can be `wayback` for articles and `manual` for the images it hosts.
 
 ### `tools/archive_links.py`
 
-- **`collect_urls()`** — every `http(s)` URL from `details.csv` (`source_link`),
-  the `*_incidents.csv` (`source_url_1/2`, `video_url`) and the
-  `*-resources.csv` (`url`). ~625 unique, ~145 distinct domains.
-- **`--domains-only`** — (re)write **`data/source-domains.json`**
-  (`{ generated, domains: { "<domain>": {count, sample, archived, pending,
+- **`collect_sources()`** → `{url: primary|secondary}`,
+  **`collect_media()`** → `{url: video|image}` — ~575 source + ~110 media URLs.
+- **`--domains-only`** — (re)write **`data/source-domains.json`** and
+  **`data/media-domains.json`** (`{ generated, domains: { "<domain>":
+  {count, sample, primary/secondary or video/image, archived, pending,
   deferred} } }`) and exit. No network. `build-records.yml` runs this on every
-  CSV change so the portal dashboard always has a current list.
+  CSV change so both dashboards stay current.
 - **`--policy-only`** (the weekly run) — only touches a domain with a rule:
-  - `method: wayback`, priority `high`/`normal` → the CDX + Save Page Now flow
-    below, **high domains first**.
+  - `method: wayback`, priority `high`/`normal` → the CDX + Save Page Now flow,
+    **ordered**: high-primary, high-secondary, normal-primary, normal-secondary,
+    then media (high, normal). Primary sources are captured soonest.
   - other methods → recorded `status: "deferred", method: <m>` (no network) and
     listed in **`data/archive-deferred.txt`** (grouped `# archivetoday` /
     `# archivebox` / `# manual`) for the ArchiveBox layer.
   - `skip` / no rule → left untouched.
 - **no `--policy-only`** (manual `workflow_dispatch` with `mode: full`) — every
-  URL gets the Wayback flow, ignoring the policy. The escape hatch for a full
-  sweep.
-- Wayback flow: **CDX** check (`web.archive.org/cdx/...`, threaded, 6 workers) —
-  already captured? record it. Otherwise serial **POST to Save Page Now**
-  (auth via `IA_ACCESS` / `IA_SECRET` repo secrets), no polling — next run's
-  CDX picks the snapshot up. `--limit N` caps new submissions/run;
-  `--time-budget S` stops cleanly and commits progress.
+  URL gets the Wayback flow, ignoring both policies. Full-sweep escape hatch.
+- Wayback flow: **CDX** check (threaded, 6 workers) — captured? record it.
+  Otherwise serial **POST to Save Page Now** (auth via `IA_ACCESS` /
+  `IA_SECRET`), no polling — next run's CDX picks the snapshot up. `--limit N`
+  caps new submissions/run; `--time-budget S` stops cleanly.
 - Writes `data/archived-links.json` (`{ "<url>": {status, ts, wayback, method,
-  social} }`), `data/archive-queue.txt`, `data/archive-deferred.txt`,
-  `data/source-domains.json`. The commit step stages all four
-  (`if: always()` + `continue-on-error` on the archive step, so a killed run
-  still persists).
+  social} }`), `data/archive-queue.txt` (sources), `data/media-queue.txt`,
+  `data/archive-deferred.txt`, and both `*-domains.json`. Commit step
+  (`if: always()` + `continue-on-error` on the archive step) stages them all.
 
 ### Consumers
 
@@ -359,12 +368,14 @@ Domain key = lowercase host, leading `www.` stripped (`domain_of()` in
 
 ### The dashboard (volunteer portal)
 
-Editors/admins set the policy at `contribute.palgenopedia.org` → **Archive
-priorities**. The portal's Apps Script reads `data/source-domains.json` (raw
-GitHub) for the domain list, and commits `data/archive-policy.json` back to
-this repo via the Contents API (fine-grained PAT in the portal's Script
-Properties — repo `PalGenoPedia/PalGenoPedia` scope, contents:write). A commit
-there fires this workflow. See `PalGenoPedia-Volunteers/README.md`.
+Editors/admins set the rules at `contribute.palgenopedia.org` →
+**Archive priorities** (sources) and **Media archiving** (`video_url` /
+`image_url`). The portal's Apps Script reads `data/source-domains.json` /
+`data/media-domains.json` for the domain lists and commits
+`data/archive-policy.json` / `data/media-policy.json` back via the Contents API
+(fine-grained PAT in the portal's Script Properties — `PalGenoPedia/PalGenoPedia`
+scope, contents:write). A commit there fires this workflow. See
+`PalGenoPedia-Volunteers/README.md`.
 
 **Social media** (`x.com`, `facebook.com`, …) is flagged `"social": true`;
 Wayback gets a login wall for those, so set their domains to `archivetoday`

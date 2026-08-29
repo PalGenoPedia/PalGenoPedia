@@ -1,75 +1,68 @@
 #!/usr/bin/env python3
 """
-archive_links.py — snapshot curated source URLs to the Wayback Machine.
+archive_links.py — snapshot curated source & media URLs to the Wayback Machine.
 
 READS   Pages/Historical_Massacres/details.csv        (source_link)
-        Pages/War_Crimes_Stats/**/*_incidents.csv      (source_url_1/2, video_url)
+        Pages/War_Crimes_Stats/**/*_incidents.csv      (source_url_1/2, video_url, image_url)
         Pages/War_Crimes_Stats/**/*-resources.csv       (url)
-        data/archive-policy.json                        per-domain rules (see below)
+        data/archive-policy.json   per-domain rules for article/report sources
+        data/media-policy.json     per-domain rules for video_url / image_url
 WRITES  data/archived-links.json    per-URL state   { "<url>": {...} }
-        data/source-domains.json    domain inventory the portal dashboard reads
-        data/archive-queue.txt      every URL, deduped (future ArchiveBox feed)
+        data/source-domains.json    source-domain inventory (dashboard reads it)
+        data/media-domains.json     media-domain inventory (media dashboard reads it)
+        data/archive-queue.txt      every source URL, deduped (ArchiveBox feed)
+        data/media-queue.txt        every media URL, deduped
         data/archive-deferred.txt   URLs whose domain needs a non-Wayback method
 
-── Per-domain policy ────────────────────────────────────────────────────────
-`data/archive-policy.json` is maintained by editors in the volunteer portal
-(contribute.palgenopedia.org → "Archive priorities"). Shape:
+── URL roles ───────────────────────────────────────────────────────────────
+  primary    source_url_1, and historical source_link — the main citation
+  secondary  source_url_2 (comma-separated), and *-resources.csv urls
+  video      video_url        }  media — its own policy file, its own dashboard,
+  image     image_url         }  usually needs ArchiveBox/manual, not Wayback
+
+── Per-domain policy ───────────────────────────────────────────────────────
+Both policy files share a shape, maintained by editors in the volunteer portal:
 
   { "version": 1, "updated": "...", "updated_by": "...",
     "domains": { "<domain>": { "priority": "high|normal|skip",
                                "method":   "wayback|archivetoday|archivebox|manual" } } }
 
-`--policy-only` (the weekly workflow) touches a URL only when its domain has a
-rule with priority high/normal. method "wayback" → the CDX + Save Page Now
-flow below, high domains first. Any other method → recorded as `deferred`
-(status only, no network) and written to archive-deferred.txt for the planned
-ArchiveBox / archive.today layer. A domain with no rule, or priority "skip",
-is left completely alone — archiving is opt-in per domain.
+`--policy-only` (the weekly run) touches a URL only when its domain has a rule
+with priority high/normal. method "wayback" → the CDX + Save Page Now flow,
+ordered: high-primary, high-secondary, normal-primary, normal-secondary, then
+media (high, normal). Any other method → recorded `deferred` (status only, no
+network) and written to archive-deferred.txt for the ArchiveBox / archive.today
+layer. A domain with no rule, or priority "skip", is left alone.
 
 Without `--policy-only` every collected URL gets the Wayback flow (a full
-sweep, still available from a manual `workflow_dispatch`).
-
-── Per URL (Wayback flow) ──────────────────────────────────────────────────
-  1. CDX check — http://web.archive.org/cdx/search/cdx — already captured?
-     (fast, no auth, run through a small thread pool). If so, record it.
-  2. Otherwise POST to Save Page Now (https://web.archive.org/save/), serial.
-     With IA_ACCESS / IA_SECRET this is authenticated (higher rate limit). We
-     do NOT poll — the next run's CDX check picks the snapshot up once it lands.
-
-State (`status`):
-  archived  — a capture exists; `wayback` is the snapshot URL, `ts` its 14-digit
-              timestamp, `checked` the date we last confirmed it
-  requested — a /save/ was submitted; `requested` is the date
-  deferred  — domain method is not Wayback; `method` says which layer owns it
-  failed    — the submit errored; retried next run
+sweep, from a manual `workflow_dispatch` with mode=full).
 
 Usage:
   python tools/archive_links.py [--policy-only] [--domains-only]
                                [--limit N] [--stale-days D]
                                [--time-budget S] [--sample N] [--check]
-    --policy-only  obey data/archive-policy.json (opt-in per domain). The
-                   scheduled workflow uses this.
-    --domains-only just (re)write data/source-domains.json and exit. No network.
-                   Run on every CSV change so the portal always has a fresh list.
-    --limit        max NEW /save/ submissions this run (default 50). `--limit 0`
-                   = CDX-confirm only, submit nothing.
-    --stale-days   re-confirm an `archived` entry only if older than this
-                   (default 180). Snapshots don't disappear, so this is rare.
-    --time-budget  stop the loop cleanly after S seconds and write progress;
-                   the URLs not reached carry to the next run.
-    --sample N     only look at the first N URLs (local testing).
-    --check        report what would happen, write nothing.
+    --policy-only  obey archive-policy.json + media-policy.json (opt-in per domain)
+    --domains-only just (re)write the two *-domains.json inventories and exit
+    --limit        max NEW /save/ submissions this run (default 50)
+    --stale-days   re-confirm an archived entry only if older than this (180)
+    --time-budget  stop the loop after S seconds and write progress
+    --sample N     only look at the first N URLs (local testing)
+    --check        report what would happen, write nothing
 """
 import csv, glob, json, os, re, sys, time, datetime, urllib.parse, urllib.request
 import concurrent.futures as _cf
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
-STATE = os.path.join(ROOT, "data", "archived-links.json")
-POLICY_FILE = os.path.join(ROOT, "data", "archive-policy.json")
-DOMAINS_FILE = os.path.join(ROOT, "data", "source-domains.json")
-QUEUE_FILE = os.path.join(ROOT, "data", "archive-queue.txt")
-DEFERRED_FILE = os.path.join(ROOT, "data", "archive-deferred.txt")
+DATA = os.path.join(ROOT, "data")
+STATE = os.path.join(DATA, "archived-links.json")
+POLICY_FILE = os.path.join(DATA, "archive-policy.json")
+MEDIA_POLICY_FILE = os.path.join(DATA, "media-policy.json")
+SOURCE_DOMAINS_FILE = os.path.join(DATA, "source-domains.json")
+MEDIA_DOMAINS_FILE = os.path.join(DATA, "media-domains.json")
+QUEUE_FILE = os.path.join(DATA, "archive-queue.txt")
+MEDIA_QUEUE_FILE = os.path.join(DATA, "media-queue.txt")
+DEFERRED_FILE = os.path.join(DATA, "archive-deferred.txt")
 TODAY = datetime.date.today().isoformat()
 
 CDX = "http://web.archive.org/cdx/search/cdx"
@@ -85,10 +78,14 @@ SOCIAL = ("x.com", "twitter.com", "facebook.com", "fb.com", "instagram.com",
 SKIP_HOSTS = ("web.archive.org", "archive.org", "archive.ph", "archive.today",
               "palgenopedia.org", "localhost")
 
+INCIDENTS_GLOB = os.path.join(ROOT, "Pages/War_Crimes_Stats/**/*_incidents.csv")
+RESOURCES_GLOB = os.path.join(ROOT, "Pages/War_Crimes_Stats/**/*-resources.csv")
+DETAILS_CSV = os.path.join(ROOT, "Pages", "Historical_Massacres", "details.csv")
+
 
 def domain_of(url):
     """Registrable-ish host: lowercase netloc with a leading `www.` removed.
-    Matches the key the portal dashboard and archive-policy.json use."""
+    The key archive-policy.json / media-policy.json and the dashboards use."""
     h = urllib.parse.urlparse(url).netloc.lower()
     return h[4:] if h.startswith("www.") else h
 
@@ -98,43 +95,68 @@ def _is_social(url):
     return any(h == s or h.endswith("." + s) for s in SOCIAL)
 
 
-def collect_urls():
-    urls = set()
-
-    def add(val):
-        for u in re.split(r"[\s;,]+", (val or "").strip()):
-            u = u.strip().rstrip("/").split("#")[0]
-            if not u.lower().startswith(("http://", "https://")):
-                continue
-            host = domain_of(u)
-            if any(host == h or host.endswith("." + h) for h in SKIP_HOSTS):
-                continue
-            urls.add(u)
-
-    def rows(path):
-        with open(path, encoding="utf-8-sig", newline="") as fh:
-            return list(csv.DictReader(fh))
-
-    p = os.path.join(ROOT, "Pages", "Historical_Massacres", "details.csv")
-    if os.path.exists(p):
-        for r in rows(p):
-            add(r.get("source_link"))
-    for f in glob.glob(os.path.join(ROOT, "Pages/War_Crimes_Stats/**/*_incidents.csv"), recursive=True):
-        for r in rows(f):
-            add(r.get("source_url_1")); add(r.get("source_url_2")); add(r.get("video_url"))
-    for f in glob.glob(os.path.join(ROOT, "Pages/War_Crimes_Stats/**/*-resources.csv"), recursive=True):
-        for r in rows(f):
-            add(r.get("url"))
-    return sorted(urls)
+def _urls(val):
+    """Split one cell into clean http(s) URLs, dropping our own / archive hosts."""
+    out = []
+    for u in re.split(r"[\s;,]+", (val or "").strip()):
+        u = u.strip().rstrip("/").split("#")[0]
+        if not u.lower().startswith(("http://", "https://")):
+            continue
+        h = domain_of(u)
+        if any(h == s or h.endswith("." + s) for s in SKIP_HOSTS):
+            continue
+        out.append(u)
+    return out
 
 
-def collect_domains(urls=None):
-    """{domain: {count, sample}} over every collected URL."""
-    inv = {}
-    for u in (urls if urls is not None else collect_urls()):
-        e = inv.setdefault(domain_of(u), {"count": 0, "sample": u})
-        e["count"] += 1
-    return inv
+def _rows(path):
+    with open(path, encoding="utf-8-sig", newline="") as fh:
+        return list(csv.DictReader(fh))
+
+
+def collect_sources():
+    """{url: 'primary'|'secondary'}. source_url_1 and the historical source_link
+    are primary; source_url_2 and resource-list urls are secondary. If a URL is
+    cited both ways, primary wins."""
+    role = {}
+
+    def add(val, r):
+        for u in _urls(val):
+            if r == "primary" or u not in role:
+                role[u] = r
+
+    if os.path.exists(DETAILS_CSV):
+        for row in _rows(DETAILS_CSV):
+            add(row.get("source_link"), "primary")
+    for f in glob.glob(INCIDENTS_GLOB, recursive=True):
+        for row in _rows(f):
+            add(row.get("source_url_1"), "primary")
+            add(row.get("source_url_2"), "secondary")
+    for f in glob.glob(RESOURCES_GLOB, recursive=True):
+        for row in _rows(f):
+            add(row.get("url"), "secondary")
+    return role
+
+
+def collect_media():
+    """{url: 'video'|'image'} from the incident sheets' video_url / image_url."""
+    kind = {}
+
+    def add(val, k):
+        for u in _urls(val):
+            if k == "video" or u not in kind:
+                kind[u] = k
+
+    for f in glob.glob(INCIDENTS_GLOB, recursive=True):
+        for row in _rows(f):
+            add(row.get("video_url"), "video")
+            add(row.get("image_url"), "image")
+    return kind
+
+
+def collect_all():
+    """sorted list of every URL we track (sources + media), for queue + prune."""
+    return sorted(set(collect_sources()) | set(collect_media()))
 
 
 def load_state():
@@ -146,11 +168,11 @@ def load_state():
     return {}
 
 
-def load_policy():
-    """{domain: {"priority","method"}} from data/archive-policy.json, {} if absent.
-    Unknown priority/method values are coerced to safe defaults."""
+def load_policy(path):
+    """{domain: {"priority","method"}} from a policy file, {} if absent.
+    Unknown values coerced to safe defaults."""
     try:
-        raw = json.load(open(POLICY_FILE, encoding="utf-8")).get("domains", {})
+        raw = json.load(open(path, encoding="utf-8")).get("domains", {})
     except Exception:
         return {}
     out = {}
@@ -164,21 +186,30 @@ def load_policy():
     return out
 
 
-def write_domains(state, urls=None):
-    inv = collect_domains(urls)
-    for u, v in state.items():
+def write_inventory(path, rolemap, state, role_keys):
+    """Write a *-domains.json: one row per domain in `rolemap` with its URL
+    count, a per-role breakdown, a sample URL, and live archived/pending/deferred
+    counts taken from `state` restricted to this map's URLs."""
+    inv = {}
+    for u, rv in rolemap.items():
         d = domain_of(u)
-        if d not in inv:
-            continue
-        st = v.get("status")
-        inv[d]["archived"] = inv[d].get("archived", 0) + (st == "archived")
-        inv[d]["pending"] = inv[d].get("pending", 0) + (st == "requested")
-        inv[d]["deferred"] = inv[d].get("deferred", 0) + (st == "deferred")
-    for d in inv:
-        for k in ("archived", "pending", "deferred"):
-            inv[d].setdefault(k, 0)
+        e = inv.get(d)
+        if e is None:
+            e = inv[d] = {"count": 0, "sample": u, "archived": 0,
+                          "pending": 0, "deferred": 0}
+            for k in role_keys:
+                e[k] = 0
+        e["count"] += 1
+        e[rv] = e.get(rv, 0) + 1
+        st = state.get(u, {}).get("status")
+        if st == "archived":
+            e["archived"] += 1
+        elif st == "requested":
+            e["pending"] += 1
+        elif st == "deferred":
+            e["deferred"] += 1
     payload = {"generated": TODAY, "domains": dict(sorted(inv.items()))}
-    with open(DOMAINS_FILE, "w", encoding="utf-8", newline="\n") as fh:
+    with open(path, "w", encoding="utf-8", newline="\n") as fh:
         json.dump(payload, fh, ensure_ascii=False, indent=1)
     return len(inv)
 
@@ -209,9 +240,9 @@ def _get(url, headers=None, data=None, timeout=45):
 def cdx_latest(url):
     """Most recent capture timestamp, or None (no capture *or* the API failed).
 
-    The CDX endpoint throttles hard under a few hundred sequential requests, so
-    a short timeout with a couple of backoff retries beats one long hang — a
-    30s stall per URL is what turned the seeding run into a 4-hour job."""
+    Short timeout + a couple of backoff retries: the CDX endpoint throttles hard
+    under a few hundred sequential requests and a 30s stall per URL is what
+    turned the seeding run into a 4-hour job."""
     q = "%s?url=%s&output=json&limit=-1&fl=timestamp,statuscode&filter=statuscode:200" % (
         CDX, urllib.parse.quote(url, safe=""))
     for attempt in range(3):
@@ -237,7 +268,7 @@ def save_now(url, auth):
         return {"raw_status": code}
 
 
-def _arg(args, name, default):
+def _argv_int(args, name, default):
     for i, a in enumerate(args):
         if a == name and i + 1 < len(args):
             return int(args[i + 1])
@@ -249,25 +280,34 @@ def main():
     check = "--check" in args
     domains_only = "--domains-only" in args
     policy_only = "--policy-only" in args
-    limit = _arg(args, "--limit", 50)
-    stale = _arg(args, "--stale-days", 180)
-    sample = _arg(args, "--sample", 0)
-    budget = _arg(args, "--time-budget", 0)   # seconds; 0 = no limit
+    limit = _argv_int(args, "--limit", 50)
+    stale = _argv_int(args, "--stale-days", 180)
+    sample = _argv_int(args, "--sample", 0)
+    budget = _argv_int(args, "--time-budget", 0)   # seconds; 0 = no limit
 
     state = load_state()
+    sources = collect_sources()
+    media = collect_media()
+    all_urls = sorted(set(sources) | set(media))
+    if sample:
+        all_urls = all_urls[:sample]
+        keep = set(all_urls)
+        sources = {u: r for u, r in sources.items() if u in keep}
+        media = {u: k for u, k in media.items() if u in keep}
 
-    # ── --domains-only: refresh the portal's inventory and stop ─────────────
+    # drop state for URLs no longer cited anywhere
+    live = set(all_urls)
+    for dead in [u for u in state if u not in live]:
+        del state[dead]
+
+    # ── --domains-only: refresh both inventories and stop ──────────────────
     if domains_only:
-        urls = collect_urls()
-        # drop state for URLs no longer in any CSV so the counts stay honest
-        live = set(urls)
-        for dead in [u for u in state if u not in live]:
-            del state[dead]
-        n = write_domains(state, urls)
+        n1 = write_inventory(SOURCE_DOMAINS_FILE, sources, state, ("primary", "secondary"))
+        n2 = write_inventory(MEDIA_DOMAINS_FILE, media, state, ("video", "image"))
         if not check:
             with open(STATE, "w", encoding="utf-8", newline="\n") as fh:
                 json.dump(dict(sorted(state.items())), fh, ensure_ascii=False, indent=1)
-        print("archive_links: wrote data/source-domains.json — %d domains" % n)
+        print("archive_links: wrote source-domains.json (%d) + media-domains.json (%d)" % (n1, n2))
         return
 
     access = os.environ.get("IA_ACCESS", "").strip()
@@ -276,53 +316,60 @@ def main():
     if not auth:
         print("  note: no IA_ACCESS / IA_SECRET — Save Page Now runs unauthenticated (lower rate limit)")
 
-    urls = collect_urls()
-    if sample:
-        urls = urls[:sample]
+    for u in all_urls:
+        e = state.setdefault(u, {"status": "new"})
+        e["social"] = _is_social(u)
 
-    for url in urls:
-        e = state.setdefault(url, {"status": "new"})
-        e["social"] = _is_social(url)
-
-    # ── decide the Wayback work set ────────────────────────────────────────
-    policy = load_policy() if policy_only else {}
+    # ── decide the Wayback work set (ordered) ──────────────────────────────
     deferred_now = 0
     if policy_only:
-        high, normal, deferred = [], [], []
-        for u in urls:
-            rule = policy.get(domain_of(u))
+        pol_src = load_policy(POLICY_FILE)
+        pol_med = load_policy(MEDIA_POLICY_FILE)
+        tiers = {"hp": [], "hs": [], "np": [], "ns": [], "mh": [], "mn": []}
+        deferred = []
+
+        for u, rolev in sources.items():
+            rule = pol_src.get(domain_of(u))
             if not rule or rule["priority"] == "skip":
                 continue
-            if rule["method"] == "wayback":
-                (high if rule["priority"] == "high" else normal).append(u)
-            else:
+            if rule["method"] != "wayback":
                 deferred.append((u, rule["method"]))
-        work = high + normal
+                continue
+            key = ("h" if rule["priority"] == "high" else "n") + ("p" if rolev == "primary" else "s")
+            tiers[key].append(u)
+
+        for u in media:
+            rule = pol_med.get(domain_of(u))
+            if not rule or rule["priority"] == "skip":
+                continue
+            if rule["method"] != "wayback":
+                deferred.append((u, rule["method"]))
+                continue
+            tiers["mh" if rule["priority"] == "high" else "mn"].append(u)
+
+        work = (tiers["hp"] + tiers["hs"] + tiers["np"] + tiers["ns"]
+                + tiers["mh"] + tiers["mn"])
         for u, meth in deferred:
             state[u].update(status="deferred", method=meth, checked=TODAY)
             state[u].pop("error", None)
             state[u].pop("last_response", None)
         deferred_now = len(deferred)
-        n_skip = len(policy) - len({domain_of(u) for u in work} |
-                                   {domain_of(u) for u, _ in deferred})
-        print("  policy: %d domain(s) configured — %d wayback url(s) "
-              "(%d high / %d normal), %d deferred to other methods, "
-              "%d configured domain(s) set to skip; every other domain untouched"
-              % (len(policy), len(work), len(high), len(normal),
-                 deferred_now, max(n_skip, 0)), flush=True)
+        print("  policy: sources %d/%d domains configured, media %d — "
+              "%d wayback url(s) [%dh-pri %dh-sec %dn-pri %dn-sec / media %dh %dn], "
+              "%d deferred to other methods"
+              % (len(pol_src), len({domain_of(u) for u in sources}), len(pol_med),
+                 len(work), len(tiers["hp"]), len(tiers["hs"]), len(tiers["np"]),
+                 len(tiers["ns"]), len(tiers["mh"]), len(tiers["mn"]), deferred_now),
+              flush=True)
     else:
-        work = urls
+        work = all_urls
 
     stale_before = (datetime.date.today() - datetime.timedelta(days=stale)).isoformat()
     saved = confirmed = skipped = failed = 0
     started = time.time()
     stopped_early = 0
 
-    # ── phase 1: CDX confirm, threaded ─────────────────────────────────────
-    # The CDX endpoint is the bottleneck (one IP, a few hundred sequential
-    # calls -> heavy throttling). A small worker pool turns a multi-hour pass
-    # into a ~20-40 min one. Save Page Now stays serial (phase 2) - it is
-    # rate-limited per account and concurrency just gets you 429s.
+    # ── phase 1: CDX confirm, threaded ────────────────────────────────────
     to_check = [u for u in work
                 if not (state[u].get("status") == "archived"
                         and state[u].get("checked", "") >= stale_before)]
@@ -353,7 +400,7 @@ def main():
                     e.pop("error", None)
                     confirmed += 1
 
-    # ── phase 2: submit the still-unarchived to Save Page Now, serial ──────
+    # ── phase 2: submit the still-unarchived to Save Page Now, serial ─────
     pending_save = [u for u in work if state[u].get("status") != "archived"]
     for u in pending_save:
         if saved >= limit:
@@ -380,30 +427,29 @@ def main():
             failed += 1
             time.sleep(2)
 
-    # prune entries whose URL no longer appears in any CSV
-    live = set(urls)
-    for dead in [u for u in state if u not in live]:
-        del state[dead]
-
     if not check:
-        os.makedirs(os.path.dirname(STATE), exist_ok=True)
+        os.makedirs(DATA, exist_ok=True)
         with open(STATE, "w", encoding="utf-8", newline="\n") as fh:
             json.dump(dict(sorted(state.items())), fh, ensure_ascii=False, indent=1)
         with open(QUEUE_FILE, "w", encoding="utf-8", newline="\n") as fh:
-            fh.write("\n".join(urls) + "\n")
+            fh.write("\n".join(sorted(sources)) + "\n")
+        with open(MEDIA_QUEUE_FILE, "w", encoding="utf-8", newline="\n") as fh:
+            fh.write("\n".join(sorted(media)) + "\n")
         write_deferred(state)
-        write_domains(state, urls)
+        write_inventory(SOURCE_DOMAINS_FILE, sources, state, ("primary", "secondary"))
+        write_inventory(MEDIA_DOMAINS_FILE, media, state, ("video", "image"))
 
-    tot = len(urls)
+    tot = len(all_urls)
     arch = sum(1 for v in state.values() if v.get("status") == "archived")
     pend = sum(1 for v in state.values() if v.get("status") == "requested")
     defr = sum(1 for v in state.values() if v.get("status") == "deferred")
     soc = sum(1 for v in state.values()
               if v.get("social") and v.get("status") not in ("archived", "deferred"))
-    print("archive_links: %d urls — %d archived, %d pending, %d deferred, %d not-yet — "
-          "this run: +%d confirmed, %d submitted, %d failed, %d fresh-skip"
-          % (tot, arch, pend, defr, tot - arch - pend - defr,
-             confirmed, saved, failed, skipped))
+    print("archive_links: %d urls (%d source, %d media) — %d archived, %d pending, "
+          "%d deferred, %d not-yet — this run: +%d confirmed, %d submitted, "
+          "%d failed, %d fresh-skip"
+          % (tot, len(sources), len(media), arch, pend, defr,
+             tot - arch - pend - defr, confirmed, saved, failed, skipped))
     if soc:
         print("  %d social-media link(s) not covered by a policy method — "
               "set their domains to archivetoday in the portal" % soc)

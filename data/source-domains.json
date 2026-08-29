@@ -6,1008 +6,1251 @@
    "sample": "https://www.972mag.com/al-ahli-hospital-gaza-blast/\"\"https://prc.org.uk/upload/library/files/Alahli-Hospital-MassacreEN.pdf",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 0,
+   "secondary": 3
   },
   "aa.com.tr": {
    "count": 9,
-   "sample": "https://www.aa.com.tr/ar/إسرائيل/صحة-غزة-الجيش-الإسرائيلي-يعاود-اقتحام-مشفى-ناصر-ويقتل-23-وسط-القطاع-/3145343",
+   "sample": "https://www.aa.com.tr/en/middle-east/palestine-27-years-since-ibrahimi-mosque-massacre/2156877",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 4,
+   "secondary": 5
   },
   "abcnews.com": {
    "count": 1,
    "sample": "https://abcnews.com/International/hundreds-killed-strike-gaza-hospital-gaza-health-ministry/story?id=104049667",
    "archived": 0,
    "pending": 1,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 0,
+   "secondary": 1
   },
   "abcnews.go.com": {
    "count": 1,
    "sample": "https://abcnews.go.com/International/state-hospitals-gaza-israel-hamas-war-hits-1/story?id=114495894",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 0,
+   "secondary": 1
   },
   "adalah.org": {
    "count": 1,
    "sample": "https://www.adalah.org",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 1,
+   "secondary": 0
   },
   "addameer.org": {
    "count": 1,
    "sample": "https://www.addameer.org",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 1,
+   "secondary": 0
   },
   "afedj.org": {
    "count": 1,
    "sample": "https://afedj.org/ahli-hospital-struck-by-rocket-fire",
    "archived": 0,
    "pending": 1,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 0,
+   "secondary": 1
   },
   "aje.io": {
    "count": 12,
    "sample": "https://aje.io/53epb7?update=2577183",
    "archived": 0,
    "pending": 5,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 2,
+   "secondary": 10
   },
   "alarabiya.net": {
    "count": 1,
    "sample": "https://www.alarabiya.net/arab-and-world/2024/04/23/الأمم-المتحدة-تحقق-في-العثور-على-أكثر-من-300-جثة-في-مقبرتين-جماعيتين-بغزة",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 0,
+   "secondary": 1
   },
   "aljazeera.com": {
    "count": 17,
-   "sample": "https://www.aljazeera.com",
+   "sample": "https://www.aljazeera.com/features/2022/1/27/tantura-a-film-about-a-massacre-israel-didnt-want-you-to-see",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 10,
+   "secondary": 7
   },
   "aljazeera.net": {
    "count": 5,
    "sample": "https://www.aljazeera.net/news/2024/1/22/مغردون-سيناريو-الشفاء-يتكرر-في-مجمع",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 0,
+   "secondary": 5
   },
   "amnesty.org": {
    "count": 2,
    "sample": "https://www.amnesty.org",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 2,
+   "secondary": 0
   },
   "anglicanalliance.org": {
    "count": 1,
    "sample": "https://anglicanalliance.org/palm-sunday-air-strikes-against-al-ahli-hospital-in-gaza-city",
    "archived": 1,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 0,
+   "secondary": 1
   },
   "anglicannews.org": {
    "count": 1,
    "sample": "https://www.anglicannews.org/news/2023/10/anglican-run-al-ahli-arab-hospital-in-gaza-damaged-by-israeli-rocket-fire-as-conflict-continues.aspx",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 1,
+   "secondary": 0
   },
   "apnews.com": {
    "count": 1,
    "sample": "https://apnews.com/article/israel-palestinians-hamas-war-hospital-rocket-gaza-8bc239d2efe0cff3998b2154d9220a83",
    "archived": 1,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 0,
+   "secondary": 1
   },
   "arabi21.com": {
    "count": 1,
    "sample": "https://arabi21.com/story/1568264/%D8%A7%D9%84%D8%A7%D8%AD%D8%AA%D9%84%D8%A7%D9%84-%D9%8A%D9%82%D8%AA%D8%AD%D9%85-%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89-%D8%BA%D8%B1%D8%A8-%D8%AE%D8%A7%D9%86%D9%8A%D9%88%D9%86%D8%B3-%D9%88%D9%8A%D8%AD%D8%AA%D8%AC%D8%B2-%D8%A7%D9%84%D8%B7%D9%88%D8%A7%D9%82%D9%85-%D8%A7%D9%84%D8%B7%D8%A8%D9%8A%D8%A9-%D8%B4%D8%A7%D9%87%D8%AF",
    "archived": 1,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 0,
+   "secondary": 1
   },
   "arablit.org": {
    "count": 1,
    "sample": "https://arablit.org/wp-content/uploads/2023/12/English-.pdf",
    "archived": 1,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 1,
+   "secondary": 0
   },
   "bbc.co.uk": {
    "count": 2,
    "sample": "https://www.bbc.co.uk/news/world-middle-east-67144061",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 0,
+   "secondary": 2
   },
   "bbc.com": {
    "count": 3,
-   "sample": "https://www.bbc.com/news/articles/cx2jvx3yjg3o",
+   "sample": "https://www.bbc.com/news/world-middle-east-68705765",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 2,
+   "secondary": 1
   },
   "breakingthesilence.org.il": {
    "count": 1,
    "sample": "https://www.breakingthesilence.org.il",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 1,
+   "secondary": 0
   },
   "britannica.com": {
    "count": 2,
-   "sample": "https://www.britannica.com/event/intifada-Palestinian-movement",
+   "sample": "https://www.britannica.com/topic/intifada",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 2,
+   "secondary": 0
   },
   "btselem.org": {
    "count": 7,
    "sample": "https://www.btselem.org",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 7,
+   "secondary": 0
   },
   "cambridge.org": {
    "count": 1,
    "sample": "https://www.cambridge.org/core/books/birth-of-the-palestinian-refugee-problem-revisited/4A0958EED322D2FAC1D245128A1D44CB",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 1,
+   "secondary": 0
   },
   "cbc.ca": {
    "count": 3,
    "sample": "https://www.cbc.ca/news/world/al-ahli-hospital-strike-gaza-1.6999842",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 0,
+   "secondary": 3
   },
   "ccas.georgetown.edu": {
    "count": 1,
    "sample": "https://ccas.georgetown.edu/ccas-newsmagazine/scholasticide-in-gaza",
    "archived": 0,
    "pending": 1,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 0,
+   "secondary": 1
   },
   "cfr.org": {
    "count": 1,
    "sample": "https://www.cfr.org/timeline/israeli-palestinian-conflict",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 1,
+   "secondary": 0
   },
   "churchtimes.co.uk": {
    "count": 1,
    "sample": "https://www.churchtimes.co.uk/articles/2025/17-april/news/world/church-leaders-condemn-latest-strikes-on-al-ahli-hospital-in-gaza",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 0,
+   "secondary": 1
   },
   "cnewa.org": {
    "count": 1,
    "sample": "https://cnewa.org/gaza-christian-hospital-hit-by-missile",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 1,
+   "secondary": 0
   },
   "cnn.com": {
    "count": 1,
    "sample": "https://www.cnn.com/2024/01/30/middleeast/idf-khan-younis-hospital-intl",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 0,
+   "secondary": 1
   },
   "cpj.org": {
    "count": 1,
    "sample": "https://cpj.org",
    "archived": 1,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 1,
+   "secondary": 0
   },
   "dci-palestine.org": {
    "count": 1,
    "sample": "https://www.dci-palestine.org",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 1,
+   "secondary": 0
   },
   "democracynow.org": {
    "count": 1,
    "sample": "https://www.democracynow.org/2021/7/30/investigation_israel_war_crimes_palestine",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 1,
+   "secondary": 0
   },
   "docs.un.org": {
    "count": 1,
    "sample": "https://docs.un.org/en/A/HRC/59/26",
    "archived": 1,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 1,
+   "secondary": 0
   },
   "doctorswithoutborders.org": {
    "count": 3,
    "sample": "https://www.doctorswithoutborders.org",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
-  },
-  "dropsitenews.com": {
-   "count": 1,
-   "sample": "https://www.dropsitenews.com/p/gaza-schools-university-reopen-education-israeli-attacks",
-   "archived": 0,
-   "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 1,
+   "secondary": 2
   },
   "edition.cnn.com": {
    "count": 1,
    "sample": "https://edition.cnn.com/interactive/2024/01/middleeast/gaza-hospitals-destruction-investigation-intl-cmd",
    "archived": 1,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 0,
+   "secondary": 1
   },
   "en.topwar.ru": {
    "count": 1,
    "sample": "https://en.topwar.ru/229568-cahal-razbombil-palestinskij-universitet-al-azhar-v-gaze.html",
    "archived": 0,
    "pending": 1,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 0,
+   "secondary": 1
   },
   "en.wikipedia.org": {
    "count": 12,
    "sample": "https://en.wikipedia.org/wiki/1948_Palestinian_expulsion_from_Lydda_and_Ramle",
    "archived": 5,
    "pending": 3,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 7,
+   "secondary": 5
   },
   "english.alarabiya.net": {
    "count": 1,
    "sample": "https://english.alarabiya.net/News/middle-east/2023/10/11/Israel-strikes-Islamic-University-in-Gaza",
    "archived": 1,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 0,
+   "secondary": 1
   },
   "english.wafa.ps": {
    "count": 9,
    "sample": "https://english.wafa.ps/Pages/Details/128189",
    "archived": 6,
    "pending": 2,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 3,
+   "secondary": 6
   },
   "episcopalnewsservice.org": {
    "count": 1,
    "sample": "https://episcopalnewsservice.org/2025/08/18/al-ahli-hospital-in-gaza-city-suffers-damage-from-fire-set-by-outlaws-attack-by-idf-drone",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 0,
+   "secondary": 1
   },
   "euromedmonitor.org": {
    "count": 1,
    "sample": "https://www.euromedmonitor.org/en/article/6163/Israel%E2%80%99s-demolition-of-educational-institutions",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 1,
+   "secondary": 0
   },
   "facebook.com": {
-   "count": 29,
-   "sample": "https://www.facebook.com/Kuwait.hos/posts/pfbid02UT99WXiQEfkXFR9pR8fG6dgnuxoGqqCvJJvBspML6FQHmKn1fX2BY93Tnh2FACTJl",
+   "count": 20,
+   "sample": "https://www.facebook.com/trtworld/videos/israels-narrative-of-al-ahli-arab-hospital-attack-a-closer-look/716457469813692",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 4,
+   "secondary": 16
   },
   "forensic-architecture.org": {
-   "count": 2,
+   "count": 1,
    "sample": "https://forensic-architecture.org/investigation/israeli-disinformation-al-ahli-hospital",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 1,
+   "secondary": 0
   },
   "france24.com": {
    "count": 1,
    "sample": "https://www.france24.com/en/middle-east/20231018-what-we-know-about-the-deadly-blast-at-gaza-city-s-al-ahli-hospital",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 0,
+   "secondary": 1
   },
   "gazaeducationsector.palestine-studies.org": {
    "count": 4,
-   "sample": "https://gazaeducationsector.palestine-studies.org/en/node/3518",
+   "sample": "https://gazaeducationsector.palestine-studies.org/en/node/3526",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 3,
+   "secondary": 1
   },
   "gazahcsector.palestine-studies.org": {
    "count": 3,
-   "sample": "https://gazahcsector.palestine-studies.org/en/node/5",
+   "sample": "https://gazahcsector.palestine-studies.org/en/node/77",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 1,
+   "secondary": 2
   },
   "genocide.live": {
-   "count": 3,
-   "sample": "https://genocide.live/14500",
+   "count": 2,
+   "sample": "https://genocide.live/uploads/debunk-idf-claims-about-terror-tunnel-in-sheikh-hamad-hospital-1",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 1,
+   "secondary": 1
   },
   "gov.il": {
    "count": 1,
    "sample": "https://www.gov.il",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 1,
+   "secondary": 0
   },
   "haaretz.com": {
    "count": 4,
-   "sample": "https://www.haaretz.com",
+   "sample": "https://www.haaretz.com/israel-news/2022-01-20/ty-article-magazine/.premium/tantura-the-massacre-at-the-heart-of-the-nakba-that-israelis-refuse-to-recogn/0000017f-e2a5-d7b2-a77f-e2a7ccb30000",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 4,
+   "secondary": 0
   },
   "hebronrc.ps": {
    "count": 1,
    "sample": "https://www.hebronrc.ps/en/node/27",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 1,
+   "secondary": 0
   },
   "history.state.gov": {
    "count": 2,
-   "sample": "https://history.state.gov",
+   "sample": "https://history.state.gov/historicaldocuments/frus1952-54v09p1/d689",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 2,
+   "secondary": 0
   },
   "hrw.org": {
    "count": 10,
    "sample": "https://www.hrw.org",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 9,
+   "secondary": 1
   },
   "i24news.tv": {
    "count": 1,
    "sample": "https://www.i24news.tv/en/news/israel-at-war/1702035523-idf-destroys-hamas-linked-facilities-at-gaza-s-al-azhar-university",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 0,
+   "secondary": 1
   },
   "icc-cpi.int": {
    "count": 1,
    "sample": "https://www.icc-cpi.int/resource-library/documents/rs-eng.pdf",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 0,
+   "secondary": 1
   },
   "icj-cij.org": {
    "count": 1,
    "sample": "https://www.icj-cij.org",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 1,
+   "secondary": 0
   },
   "icrc.org": {
    "count": 3,
    "sample": "https://www.icrc.org",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 2,
+   "secondary": 1
   },
   "idf.il": {
-   "count": 3,
+   "count": 2,
    "sample": "https://www.idf.il",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 2,
+   "secondary": 0
   },
   "ifrc.org": {
    "count": 2,
    "sample": "https://www.ifrc.org/article/ifrc-statement-closure-al-amal-hospital-gaza",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 0,
+   "secondary": 2
   },
   "imemc.org": {
    "count": 1,
    "sample": "https://imemc.org/article/israel-detonates-last-university-in-gaza",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 1,
+   "secondary": 0
   },
   "imeu.org": {
    "count": 2,
    "sample": "https://imeu.org",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 2,
+   "secondary": 0
   },
   "independent.com.mt": {
    "count": 1,
    "sample": "https://www.independent.com.mt/articles/2023-10-17/world-news/As-Biden-heads-to-Israel-and-Jordan-aid-is-held-up-for-a-Gaza-on-the-verge-of-total-collapse-6736255671",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 1,
+   "secondary": 0
   },
   "indy100.com": {
    "count": 1,
    "sample": "https://www.indy100.com/news/israel-bomb-hospital-gaza-hamas",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 0,
+   "secondary": 1
   },
   "insecurityinsight.org": {
    "count": 1,
    "sample": "https://insecurityinsight.org/wp-content/uploads/2024/04/27.-09-22-April-2024-Attacks-on-Health-Care-in-Israel-and-the-oPt.pdf",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 0,
+   "secondary": 1
   },
   "inss.org.il": {
    "count": 1,
    "sample": "https://www.inss.org.il/wp-content/uploads/sites/2/systemfiles/(FILE)1190277272.pdf",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
-  },
-  "instagram.com": {
-   "count": 4,
-   "sample": "https://www.instagram.com/p/C2Zp3Gjt9gc/?utm_source=ig_embed&utm_campaign=embed_video_watch_again",
-   "archived": 0,
-   "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 1,
+   "secondary": 0
   },
   "itv.com": {
    "count": 1,
    "sample": "https://www.itv.com/watch/news/what-we-know-about-the-strike-on-gazas-al-ahli-arab-hospital/znspkw3",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 0,
+   "secondary": 1
   },
   "jacobin.com": {
    "count": 1,
    "sample": "https://jacobin.com/2023/02/ibrahimi-mosque-massacre-anniversary-kahanism-hebron-itamar-ben-gvir-israel-far-right",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 1,
+   "secondary": 0
   },
   "jewishvirtuallibrary.org": {
    "count": 1,
    "sample": "https://www.jewishvirtuallibrary.org/first-intifada",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 1,
+   "secondary": 0
   },
   "jstor.org": {
    "count": 1,
    "sample": "https://www.jstor.org/stable/4327250",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 1,
+   "secondary": 0
   },
   "kuwaittimes.com": {
    "count": 1,
    "sample": "https://kuwaittimes.com/uploads/pdf/2024/06/09/kt_pdf-20240609-1.pdf?ts=221032",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 1,
+   "secondary": 0
   },
   "lemonde.fr": {
    "count": 1,
    "sample": "https://www.lemonde.fr/en/international/article/2023/10/19/gaza-hospital-what-detailed-image-analysis-reveals-about-deadly-al-ahli-arab-hospital-blast_6189013_4.html",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 0,
+   "secondary": 1
   },
   "liberationnews.org": {
    "count": 1,
    "sample": "https://liberationnews.org/debunking-israels-lies-about-the-bombing-of-al-ahli-arab-hospital-in-gaza",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 0,
+   "secondary": 1
   },
   "librarianswithpalestine.org": {
    "count": 1,
    "sample": "https://librarianswithpalestine.org/wp-content/uploads/2024/02/LAP-Gaza-Report-2024.pdf",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 0,
+   "secondary": 1
   },
   "map.org.uk": {
    "count": 1,
    "sample": "https://www.map.org.uk",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 1,
+   "secondary": 0
   },
   "merip.org": {
    "count": 1,
    "sample": "https://merip.org/2015/10/operation-protective-edge",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 1,
+   "secondary": 0
   },
   "mesana.org": {
    "count": 1,
    "sample": "https://mesana.org/advocacy/committee-on-academic-freedom/2024/01/25/letter-condemning-the-devastating-military-campaign-in-gaza",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 0,
+   "secondary": 1
   },
   "mezan.org": {
    "count": 1,
    "sample": "https://www.mezan.org/en",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 1,
+   "secondary": 0
   },
   "mfa.gov.il": {
    "count": 3,
-   "sample": "https://mfa.gov.il",
+   "sample": "https://www.mfa.gov.il/mfa/foreignpolicy/mfadocuments/yearbook6/pages/104%20report%20of%20the%20commission%20of%20inquiry%20into%20the%20e.aspx",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 3,
+   "secondary": 0
   },
   "michiganpublic.org": {
    "count": 1,
    "sample": "https://www.michiganpublic.org/2023-10-18/heres-the-available-evidence-of-what-happened-at-al-ahli-arab-hospital-in-gaza",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 0,
+   "secondary": 1
   },
   "middleeasteye.net": {
    "count": 4,
-   "sample": "https://www.middleeasteye.net/explainer-gaza-israel-palestine-war-university-destroy",
+   "sample": "https://www.middleeasteye.net/news/palestine-west-bank-deadliest-year-second-intifada",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 2,
+   "secondary": 2
   },
   "middleeastmonitor.com": {
    "count": 2,
-   "sample": "https://www.middleeastmonitor.com/20200414-we-must-never-forget-israels-massacre-in-jenin",
+   "sample": "https://www.middleeastmonitor.com/20210227-the-massacre-of-ibrahimi-mosque",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 2,
+   "secondary": 0
   },
   "mirror.co.uk": {
    "count": 1,
    "sample": "https://www.mirror.co.uk/news/world-news/rafah-hospital-gaza-out-service-32904752",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 0,
+   "secondary": 1
   },
   "moh.gov.ps": {
    "count": 1,
    "sample": "https://www.moh.gov.ps",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 1,
+   "secondary": 0
   },
   "mohe.pna.ps": {
    "count": 1,
    "sample": "https://www.mohe.pna.ps/news?p=articles&news=8954",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 1,
+   "secondary": 0
   },
   "mondoweiss.net": {
    "count": 2,
-   "sample": "https://mondoweiss.net/2023/12/operation-al-aqsa-flood-day-58-israel-kills-700-in-gaza-over-24-hours-as-palestinians-get-forced-further-south-toward-egypt",
+   "sample": "https://mondoweiss.net/2025/04/israel-just-bombed-the-last-operational-hospital-in-northern-gaza-again",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 1,
+   "secondary": 1
   },
   "msf.org": {
    "count": 1,
    "sample": "https://www.msf.org/strikes-raids-and-incursions-year-relentless-attacks-healthcare-palestine",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 0,
+   "secondary": 1
   },
   "muslimaid.org": {
    "count": 1,
    "sample": "https://www.muslimaid.org/media-centre/blog/muslim-aid-condemns-al-ahli-hospital-bombing-in-gaza",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 0,
+   "secondary": 1
   },
   "muslimnetwork.tv": {
    "count": 2,
-   "sample": "https://www.muslimnetwork.tv/israeli-forces-bomb-hospital-in-gazas-khan-younis",
+   "sample": "https://www.muslimnetwork.tv/several-killed-in-israeli-airstrike-in-gaza-strips-khan-younis",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 0,
+   "secondary": 2
   },
   "nationalarchives.gov.uk": {
    "count": 1,
    "sample": "https://www.nationalarchives.gov.uk",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 1,
+   "secondary": 0
   },
   "nbcnews.com": {
    "count": 1,
    "sample": "https://www.nbcnews.com/specials/gaza-universities-destroyed-israel-military-war/index.html",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 0,
+   "secondary": 1
   },
   "newarab.com": {
    "count": 1,
    "sample": "https://www.newarab.com/news/israeli-strike-destroys-northern-gazas-last-remaining-hospital",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 0,
+   "secondary": 1
   },
   "news.un.org": {
    "count": 3,
-   "sample": "https://news.un.org/en/story/2024/01/1145317",
+   "sample": "https://news.un.org/en/story/2025/04/1162191",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 0,
+   "secondary": 3
   },
   "npr.org": {
    "count": 1,
    "sample": "https://www.npr.org/2023/10/19/1207173798/fake-accounts-old-videos-and-rumors-fuel-chaos-around-gaza-hospital-explosion",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 0,
+   "secondary": 1
   },
   "nytimes.com": {
    "count": 2,
-   "sample": "https://www.nytimes.com/2024/05/23/world/middleeast/israeli-forces-raided-a-major-hospital-in-northern-gaza-forcing-patients-and-staff-to-evacuate.html",
+   "sample": "https://www.nytimes.com/2025/04/15/world/middleeast/gaza-hospital-israel-military.html",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 1,
+   "secondary": 1
   },
   "ochaopt.org": {
    "count": 121,
-   "sample": "http://ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-157",
+   "sample": "https://www.ochaopt.org/content/eight-years-after-2008-2009-cast-lead-hostilities-gaza-lack-accountability-persists",
    "archived": 0,
    "pending": 1,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 113,
+   "secondary": 8
   },
   "ohchr.org": {
    "count": 10,
-   "sample": "https://www.ohchr.org",
+   "sample": "https://www.ohchr.org/en/hr-bodies/hrc/special-sessions/session9/fact-finding-mission",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 7,
+   "secondary": 3
   },
   "palestine-studies.org": {
    "count": 4,
    "sample": "https://www.palestine-studies.org",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 4,
+   "secondary": 0
   },
   "palestinercs.org": {
    "count": 6,
    "sample": "http://www.palestinercs.org",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 3,
+   "secondary": 3
   },
   "palquest.org": {
    "count": 3,
    "sample": "https://www.palquest.org/en/highlight/21194/deir-yasin-massacre-9-april-1948",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 3,
+   "secondary": 0
   },
   "pbs.org": {
    "count": 1,
    "sample": "https://www.pbs.org/wnet/women-war-and-peace/uncategorized/what-you-need-to-know-about-the-1987-intifada",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 1,
+   "secondary": 0
   },
   "pcbs.gov.ps": {
    "count": 1,
    "sample": "https://www.pcbs.gov.ps",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 1,
+   "secondary": 0
   },
   "pchrgaza.org": {
    "count": 2,
-   "sample": "https://pchrgaza.org/al-awda-hospital-bombed-israeli-occupation-forces-bomb-last-functioning-hospital-in-northern-gaza-denying-hundreds-of-thousands-access-to-healthcare/",
+   "sample": "https://www.pchrgaza.org",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 2,
+   "secondary": 0
   },
   "peacenow.org.il": {
    "count": 1,
    "sample": "https://peacenow.org.il",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 1,
+   "secondary": 0
   },
   "phr.org.il": {
    "count": 1,
    "sample": "https://www.phr.org.il/en",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 1,
+   "secondary": 0
   },
   "pjs.ps": {
    "count": 1,
    "sample": "https://pjs.ps/ar/page-3325.html",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 0,
+   "secondary": 1
   },
   "pmc.ncbi.nlm.nih.gov": {
    "count": 1,
    "sample": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11002345",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 0,
+   "secondary": 1
   },
   "qou.edu": {
    "count": 1,
    "sample": "https://www.qou.edu/en/viewCmsContentDtlEn.do?contentId=82184",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 1,
+   "secondary": 0
   },
   "reliefweb.int": {
    "count": 4,
-   "sample": "https://reliefweb.int/report/occupied-palestinian-territory/humanitarian-response-report-no-32024-february-17-21-2024-2400-enar",
+   "sample": "https://reliefweb.int/report/occupied-palestinian-territory/palestine-red-crescent-society-calls-international-community-provide-protection-its-headquarters-and-medical-and-ems-teams-khan-yunis-enar?_gl=1*gdoink*_ga*NTAxNTI1MzAwLjE3NzM3Njg1NDA.*_ga_E60ZNX2F68*czE3NzUwNjU5MzckbzckZzEkdDE3NzUwNjkyNDUkajYwJGwwJGgw",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 0,
+   "secondary": 4
   },
   "remix.aljazeera.com": {
    "count": 1,
    "sample": "https://remix.aljazeera.com/aje/PalestineRemix/stories-from-the-intifada.html",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 1,
+   "secondary": 0
   },
   "reuters.com": {
    "count": 2,
    "sample": "https://www.reuters.com/world/middle-east/israeli-missiles-strike-gaza-hospital-patients-evacuated-2025-04-13",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 0,
+   "secondary": 2
   },
   "reutersconnect.com": {
    "count": 1,
    "sample": "https://www.reutersconnect.com/item/israeli-forces-target-al-awda-hospital-in-gaza/dGFnOnJldXRlcnMuY29tLDIwMjU6bmV3c21sX01UMUFOQURMMDAwUUowUzZK",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 1,
+   "secondary": 0
   },
   "scholarsatrisk.org": {
    "count": 3,
-   "sample": "https://www.scholarsatrisk.org/report/2023-10-19-university-college-of-applied-sciences-gaza",
+   "sample": "https://www.scholarsatrisk.org/report/2023-11-06-al-azhar-niversity/",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 1,
+   "secondary": 2
   },
   "smh.com.au": {
    "count": 1,
    "sample": "https://www.smh.com.au/world/middle-east/hamas-says-hundreds-killed-in-israeli-airstrike-on-gaza-city-hospital-20231018-p5ed3n.html",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 0,
+   "secondary": 1
   },
   "t.me": {
-   "count": 8,
-   "sample": "https://t.me/MOHMediaGaza/4818",
+   "count": 6,
+   "sample": "https://t.me/QudsN/406731",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 0,
+   "secondary": 6
   },
   "terrorism-info.org.il": {
    "count": 2,
-   "sample": "https://www.terrorism-info.org.il",
+   "sample": "https://www.terrorism-info.org.il/en/escalation-from-the-gaza-strip-operation-guardian-of-the-walls-summary",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 2,
+   "secondary": 0
   },
   "theelders.org": {
    "count": 1,
    "sample": "https://www.theelders.org",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 1,
+   "secondary": 0
   },
   "theguardian.com": {
-   "count": 7,
+   "count": 6,
    "sample": "https://www.theguardian.com/world/2023/dec/01/hospital-damage-in-gaza-during-israeli-offensive-a-visual-investigation",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 2,
+   "secondary": 4
   },
   "thenationalnews.com": {
    "count": 1,
    "sample": "https://www.thenationalnews.com/mena/2024/03/01/gaza-israel-universities-war",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
-  },
-  "therealnews.com": {
-   "count": 1,
-   "sample": "https://therealnews.com/israel-destroyed-my-university-where-is-the-outrage",
-   "archived": 0,
-   "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 1,
+   "secondary": 0
   },
   "threadreaderapp.com": {
    "count": 1,
    "sample": "https://threadreaderapp.com/thread/1793700811870290179.html",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 0,
+   "secondary": 1
   },
   "timesofisrael.com": {
    "count": 3,
-   "sample": "https://www.timesofisrael.com/idf-opens-probe-after-social-media-posts-show-troops-burning-quran-other-books-in-gaza",
+   "sample": "https://www.timesofisrael.com/liveblog_entry/un-chief-deeply-alarmed-by-idf-strike-on-gaza-hospital-on-sunday",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 1,
+   "secondary": 2
   },
   "trtarabi.com": {
    "count": 1,
    "sample": "https://www.trtarabi.com/article/15629669",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 1,
+   "secondary": 0
   },
   "ucc.org": {
    "count": 1,
    "sample": "https://www.ucc.org/destruction-of-ucc-partners-clinic-university-in-gaza-during-holy-week-testifies-to-horrors-of-ongoing-crisis",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 0,
+   "secondary": 1
   },
   "un.org": {
    "count": 13,
-   "sample": "https://www.un.org",
+   "sample": "https://www.un.org/unispal/document/auto-insert-177183",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 11,
+   "secondary": 2
   },
   "universityworldnews.com": {
    "count": 1,
    "sample": "https://www.universityworldnews.com/post.php?story=20231012162739531",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 0,
+   "secondary": 1
   },
   "unocha.org": {
-   "count": 25,
-   "sample": "https://www.unocha.org/media-centre/gaza-al-amal-hospital-2-january-2024",
+   "count": 24,
+   "sample": "https://www.unocha.org/publications/report/occupied-palestinian-territory/humanitarian-situation-update-302-gaza-strip-enarhe",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 19,
+   "secondary": 5
   },
   "unpacked.media": {
    "count": 1,
    "sample": "https://unpacked.media/unpacking-the-gaza-hospital-blast-and-the-misinformation-that-followed",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 0,
+   "secondary": 1
   },
   "unrwa.org": {
    "count": 55,
    "sample": "https://www.unrwa.org",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
-  },
-  "uploads.guim.co.uk": {
-   "count": 2,
-   "sample": "https://uploads.guim.co.uk/2023/11/23/Rantisi.mp4",
-   "archived": 0,
-   "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 51,
+   "secondary": 4
   },
   "uspg.org.uk": {
    "count": 1,
    "sample": "https://uspg.org.uk/news/palm-sunday-gaza-statement",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 0,
+   "secondary": 1
   },
   "visionscarto.net": {
    "count": 2,
-   "sample": "https://www.visionscarto.net/Libraries-Al-Quds-Open-University",
+   "sample": "https://www.visionscarto.net/nehru-library-english",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 1,
+   "secondary": 1
   },
   "voices.uchicago.edu": {
    "count": 1,
    "sample": "https://voices.uchicago.edu/scholasticide/timeline",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 1,
+   "secondary": 0
   },
   "wafa.ps": {
    "count": 1,
    "sample": "https://www.wafa.ps/Pages/Details/90325",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 0,
+   "secondary": 1
   },
   "warwingsdaily.com": {
    "count": 1,
    "sample": "https://warwingsdaily.com/wars/the-first-intifada-1987-1993",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 1,
+   "secondary": 0
   },
   "washingtonpost.com": {
    "count": 1,
    "sample": "https://www.washingtonpost.com/world/2023/12/21/al-shifa-hospital-gaza",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 0,
+   "secondary": 1
   },
   "web.facebook.com": {
-   "count": 5,
+   "count": 2,
    "sample": "https://web.facebook.com/MOHGaza1994/posts/719695030335442/?paipv=0&eav=AfZ3LS8Ew4JEex2-xFikshDGpuI7tmn9TvAQmUTb7IN1I77ZLW1IzCyEQnQ1m8T91us&_rdc=1&_rdr",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 0,
+   "secondary": 2
   },
   "who.int": {
    "count": 3,
    "sample": "https://www.who.int",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 1,
+   "secondary": 2
   },
   "wsj.com": {
    "count": 2,
-   "sample": "https://www.wsj.com/livecoverage/israel-hamas-war-gaza-strip-2023-11-04/card/palestinian-health-group-says-15-killed-in-israeli-attack-on-ambulance-convoy-5tPTa8OuT1Fak7a9xzW4",
+   "sample": "https://www.wsj.com/world/middle-east/what-we-know-about-the-gaza-hospital-blast-b238a40d",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 0,
+   "secondary": 2
   },
   "wsws.org": {
    "count": 1,
    "sample": "https://www.wsws.org/en/articles/2025/04/14/ftkr-a14.html",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 0,
+   "secondary": 1
   },
   "x.com": {
-   "count": 62,
-   "sample": "https://x.com/AJEnglish/status/1748435156816257196",
+   "count": 50,
+   "sample": "https://x.com/PalestineRCS/status/1731771874009297338",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
-  },
-  "youtu.be": {
-   "count": 1,
-   "sample": "https://youtu.be/WsL80OgCeRs",
-   "archived": 0,
-   "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 4,
+   "secondary": 46
   },
   "youtube.com": {
-   "count": 15,
-   "sample": "https://www.youtube.com/shorts/mokk_-u50m4",
+   "count": 4,
+   "sample": "https://www.youtube.com/watch?v=ou8_UMrX4yk",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 0,
+   "secondary": 4
   },
   "zochrot.org": {
    "count": 2,
-   "sample": "https://www.zochrot.org",
+   "sample": "https://www.zochrot.org/villages/village_details/49106/en",
    "archived": 0,
    "pending": 0,
-   "deferred": 0
+   "deferred": 0,
+   "primary": 2,
+   "secondary": 0
   }
  }
 }

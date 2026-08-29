@@ -19,7 +19,8 @@ on:
   push:
     branches: [main]
     paths:
-      - 'data/archive-policy.json'   # an editor changed the policy → re-run
+      - 'data/archive-policy.json'   # an editor changed a policy → re-run
+      - 'data/media-policy.json'
   workflow_dispatch:
     inputs:
       mode:
@@ -77,8 +78,8 @@ jobs:
 
           # Stage first: these files are new (untracked) on the very first run,
           # and `git diff` is blind to untracked files — check the index.
-          git add data/archived-links.json data/archive-queue.txt \
-                  data/archive-deferred.txt data/source-domains.json 2>/dev/null || true
+          git add data/archived-links.json data/archive-queue.txt data/media-queue.txt \
+                  data/archive-deferred.txt data/source-domains.json data/media-domains.json 2>/dev/null || true
           if git diff --cached --quiet; then
             echo "No archive changes."
             exit 0

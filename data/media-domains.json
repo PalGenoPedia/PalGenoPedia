@@ -1,0 +1,302 @@
+{
+ "generated": "2026-08-29",
+ "domains": {
+  "aje.io": {
+   "count": 2,
+   "sample": "https://aje.io/av8a82?update=2660721",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "video": 1,
+   "image": 1
+  },
+  "aljazeera.com": {
+   "count": 5,
+   "sample": "https://www.aljazeera.com/wp-content/uploads/2024/04/AFP__20240408__34NT7MH__v1__HighRes__PalestinianIsraelConflict-1712614597.jpg?resize=770%2C513&quality=80",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "video": 3,
+   "image": 2
+  },
+  "doctorswithoutborders.org": {
+   "count": 1,
+   "sample": "https://www.doctorswithoutborders.org/sites/default/files/styles/large_image_large_mobile_480x320/public/20250520_NasserHospital_06.jpeg?itok=ckF-k4v2",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "video": 0,
+   "image": 1
+  },
+  "dropsitenews.com": {
+   "count": 1,
+   "sample": "https://www.dropsitenews.com/p/gaza-schools-university-reopen-education-israeli-attacks",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "video": 1,
+   "image": 0
+  },
+  "english.palinfo.com": {
+   "count": 1,
+   "sample": "https://english.palinfo.com/news/2025/04/23/337937",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "video": 0,
+   "image": 1
+  },
+  "facebook.com": {
+   "count": 16,
+   "sample": "https://www.facebook.com/reel/318143097856794",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "video": 11,
+   "image": 5
+  },
+  "forensic-architecture.org": {
+   "count": 1,
+   "sample": "https://forensic-architecture.org/investigation/when-it-stopped-being-a-war",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "video": 1,
+   "image": 0
+  },
+  "gazacultrualsector.palestine-studies.org": {
+   "count": 2,
+   "sample": "https://gazacultrualsector.palestine-studies.org/en/node/4653",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "video": 0,
+   "image": 2
+  },
+  "genocide.live": {
+   "count": 1,
+   "sample": "https://genocide.live/224",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "video": 1,
+   "image": 0
+  },
+  "gettyimages.nl": {
+   "count": 1,
+   "sample": "https://www.gettyimages.nl/fotos/al-shifa-ziekenhuis",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "video": 0,
+   "image": 1
+  },
+  "i.guim.co.uk": {
+   "count": 2,
+   "sample": "https://i.guim.co.uk/img/media/00764394cb9b7bd106c5101ef5da1d81eae8db55/0_0_1800_1080/master/1800.jpg?width=1900&dpr=1&s=none&crop=none",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "video": 0,
+   "image": 2
+  },
+  "idf.il": {
+   "count": 1,
+   "sample": "https://www.idf.il/en/mini-sites/idf-press-releases-israel-at-war/october-23-pr/why-did-the-idf-strike-the-islamic-university-in-gaza",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "video": 1,
+   "image": 0
+  },
+  "ilkha.com": {
+   "count": 1,
+   "sample": "https://www.ilkha.com/english/world/israeli-artillery-targets-gazas-al-durrah-children-s-hospital-severely-damaging-icu-453723",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "video": 0,
+   "image": 1
+  },
+  "images.wafa.ps": {
+   "count": 1,
+   "sample": "https://images.wafa.ps/album/Details/13756",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "video": 0,
+   "image": 1
+  },
+  "images.wsj.net": {
+   "count": 1,
+   "sample": "https://images.wsj.net/im-881424?width=620&height=413&pixel_ratio=1.5",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "video": 0,
+   "image": 1
+  },
+  "instagram.com": {
+   "count": 7,
+   "sample": "https://www.instagram.com/p/C2Zp3Gjt9gc/?utm_source=ig_embed&utm_campaign=embed_video_watch_again",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "video": 4,
+   "image": 3
+  },
+  "middleeasteye.net": {
+   "count": 1,
+   "sample": "https://www.middleeasteye.net/explainer-gaza-israel-palestine-war-university-destroy",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "video": 0,
+   "image": 1
+  },
+  "middleeastmonitor.com": {
+   "count": 1,
+   "sample": "https://www.middleeastmonitor.com/20231106-israeli-air-strikes-target-gazas-al-azhar-university",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "video": 0,
+   "image": 1
+  },
+  "nbcnews.com": {
+   "count": 1,
+   "sample": "https://www.nbcnews.com/specials/gaza-universities-destroyed-israel-military-war/index.html",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "video": 1,
+   "image": 0
+  },
+  "pchrgaza.org": {
+   "count": 1,
+   "sample": "https://pchrgaza.org/wp-content/uploads/2025/05/8xBvv.jpg",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "video": 0,
+   "image": 1
+  },
+  "reuters.com": {
+   "count": 1,
+   "sample": "https://www.reuters.com/world/middle-east/israeli-strikes-kill-two-gaza-destroy-medicine-storage-warehouses-2026-08-01",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "video": 0,
+   "image": 1
+  },
+  "reutersconnect.com": {
+   "count": 1,
+   "sample": "https://www.reutersconnect.com/item/smoke-rises-from-the-islamic-university-building-in-gaza-city/dGFnOnJldXRlcnMuY29tLDIwMjU6bmV3c21sX1JDMlJSR0FNMEY3Tw",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "video": 0,
+   "image": 1
+  },
+  "t.me": {
+   "count": 2,
+   "sample": "https://t.me/QudsN/368852",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "video": 2,
+   "image": 0
+  },
+  "theguardian.com": {
+   "count": 2,
+   "sample": "https://www.theguardian.com/world/2023/dec/01/hospital-damage-in-gaza-during-israeli-offensive-a-visual-investigation",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "video": 1,
+   "image": 1
+  },
+  "thenationalnews.com": {
+   "count": 1,
+   "sample": "https://www.thenationalnews.com/mena/2024/03/01/gaza-israel-universities-war",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "video": 0,
+   "image": 1
+  },
+  "therealnews.com": {
+   "count": 1,
+   "sample": "https://therealnews.com/israel-destroyed-my-university-where-is-the-outrage",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "video": 1,
+   "image": 0
+  },
+  "unocha.org": {
+   "count": 1,
+   "sample": "https://www.unocha.org/media-centre/gaza-al-amal-hospital-2-january-2024",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "video": 1,
+   "image": 0
+  },
+  "unrwa.org": {
+   "count": 1,
+   "sample": "https://www.unrwa.org/resources/reports/unrwa-situation-report-115-situation-gaza-strip-and-west-bank-including-east-Jerusalem",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "video": 0,
+   "image": 1
+  },
+  "uploads.guim.co.uk": {
+   "count": 2,
+   "sample": "https://uploads.guim.co.uk/2023/11/23/Rantisi.mp4",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "video": 2,
+   "image": 0
+  },
+  "web.facebook.com": {
+   "count": 3,
+   "sample": "https://web.facebook.com/watch/?v=1566031537325544",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "video": 3,
+   "image": 0
+  },
+  "x.com": {
+   "count": 31,
+   "sample": "https://x.com/PalestineRCS/status/1731771874009297338",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "video": 20,
+   "image": 11
+  },
+  "youtu.be": {
+   "count": 1,
+   "sample": "https://youtu.be/WsL80OgCeRs",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "video": 1,
+   "image": 0
+  },
+  "youtube.com": {
+   "count": 14,
+   "sample": "https://www.youtube.com/watch?v=BEwbCRtSem8",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "video": 13,
+   "image": 1
+  }
+ }
+}
