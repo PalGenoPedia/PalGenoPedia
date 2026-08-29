@@ -138,8 +138,18 @@ def collect_sources():
     return role
 
 
+GALLERY_CSV = os.path.join(ROOT, "Pages", "Historical_Massacres", "gallery.csv")
+
+
 def collect_media():
-    """{url: 'video'|'image'} from the incident sheets' video_url / image_url."""
+    """{url: 'video'|'image'}.
+
+    - facility incident sheets: video_url / image_url
+    - historical events: image_url / video_url columns on details.csv IF present,
+      and Pages/Historical_Massacres/gallery.csv (the planned Event gallery —
+      `url` + `type`) when it exists. Both are no-ops until those columns/files
+      are added.
+    """
     kind = {}
 
     def add(val, k):
@@ -151,6 +161,18 @@ def collect_media():
         for row in _rows(f):
             add(row.get("video_url"), "video")
             add(row.get("image_url"), "image")
+
+    if os.path.exists(DETAILS_CSV):
+        for row in _rows(DETAILS_CSV):
+            add(row.get("video_url"), "video")
+            add(row.get("image_url"), "image")
+
+    if os.path.exists(GALLERY_CSV):
+        for row in _rows(GALLERY_CSV):
+            u = (row.get("url") or "").strip()
+            t = (row.get("type") or row.get("media_type") or "").strip().lower()
+            add(u, "video" if t.startswith("vid") else "image")
+
     return kind
 
 

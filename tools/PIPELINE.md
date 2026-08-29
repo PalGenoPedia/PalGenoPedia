@@ -314,10 +314,16 @@ domain.**
 
 | role | from | policy file |
 |---|---|---|
-| `primary` | `source_url_1`, historical `source_link` | `data/archive-policy.json` |
+| `primary` | `source_url_1`; historical `details.csv` `source_link` (pre + current) | `data/archive-policy.json` |
 | `secondary` | `source_url_2` (comma-split), `*-resources.csv` `url` | `data/archive-policy.json` |
-| `video` | `video_url` | `data/media-policy.json` |
-| `image` | `image_url` | `data/media-policy.json` |
+| `video` | `video_url`; historical `gallery.csv` `type=video` | `data/media-policy.json` |
+| `image` | `image_url`; historical `gallery.csv` `type=image` | `data/media-policy.json` |
+
+Historical event sources already flow in (via the merged `details.csv`).
+Historical **media** is a forward hook: `collect_media()` also reads
+`image_url` / `video_url` off `details.csv` and a
+`Pages/Historical_Massacres/gallery.csv` (`url` + `type`) — both no-ops until
+the planned **Event gallery** adds those.
 
 ### The per-domain policy
 
