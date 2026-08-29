@@ -141,69 +141,61 @@ on `_anchor`, not by typing into the derived sheet.
 
 ## ③ Export: Apps Script → GitHub
 
-Lives in the **Hospitals** workbook's bound Apps Script project.
+**`tools/apps-script/sheet-sync.gs`** — the single canonical sync script. Paste
+it into ONE Apps Script project (bound to any of the workbooks, or standalone);
+it covers **all** the sheets: Historical Massacres, Hospitals, Universities,
+Schools, Religious Sites, plus placeholders for Water / Power / Media /
+Shelters. It replaces the earlier separate "Historical Events" and "War Crimes
+Stats" projects — delete their triggers so nothing double-pushes.
 
 | function | role |
 |---|---|
-| `syncAll()` | walks the `SPREADSHEETS` config, exports every tab, pushes each |
-| `sheetToCsv(sheet)` | full export, all columns |
-| `sheetToCsvFiltered(sheet)` | translation tabs; drops `(English — reference)` columns |
-| `pushToGitHub(path, csv)` | one commit per file via the Contents API |
+| `syncAll()` | walks `SPREADSHEETS`, exports every tab, pushes each, logs a pass/fail tally |
+| `checkSetup()` | verifies the token + that every configured tab exists |
+| `debugToken()` / `storeToken()` / `clearToken()` | token in Script Properties |
+| `sheetToCsv` / `sheetToCsvFiltered` | full export / translation tabs (drops `(English — reference)` cols) |
+| `pushToGitHub(path, csv)` | one commit per file via the Contents API — **reads and logs every response code** |
 
-Repo-side helpers in `tools/apps-script/`:
+Other files in `tools/apps-script/`:
 
-- `assign-uids.gs` — write-once `uid` column, counter in Script Properties.
-  Not currently applied.
-- `github-sync-fix.gs` — `testGitHubAuth()` plus a `pushToGitHub` that throws
-  on a failed write.
+- `assign-uids.gs` — write-once `uid` column, counter in Script Properties. Not
+  currently applied.
+- `github-sync-fix.gs` — the historical fix note that led to `sheet-sync.gs`;
+  kept for context.
+
+### Dates
+
+`cellToCsvValue_()` takes a Date cell from the sheet's **displayed** text when
+that's already ISO (`yyyy-mm-dd`), else formats the raw value in `EXPORT_TZ`
+(a per-file constant — set it to each workbook's `File → Settings → Time zone`,
+`Europe/Istanbul` today). This is the fix for date cells exporting a day off
+when the Apps Script project's zone differs from the spreadsheet's.
 
 ### The silent-failure trap
 
 The original `pushToGitHub` set `muteHttpExceptions: true` and never read the
-PUT's response code. When the PAT expired on 2026-07-07, `syncAll()` kept
+PUT response code. When the PAT expired on 2026-07-07, `syncAll()` kept
 reporting "Execution completed" while writing nothing — **seven weeks of green
-ticks over a dead sync.** Use the version in `github-sync-fix.gs`, which
-throws.
+ticks over a dead sync.** `sheet-sync.gs` logs every GET/PUT code and returns
+a pass/fail count.
 
 ### Token
 
 A fine-grained PAT with **Contents: Read and write** on
 `PalGenoPedia/PalGenoPedia`. Store it in **Project Settings → Script
-Properties** as `GITHUB_TOKEN` — never in the code. (A `storeToken()` function
-with a hardcoded token existed and should stay deleted.)
+Properties** as `GITHUB_TOKEN` — `storeToken()` writes it there once from a
+blanked-out `NEW_TOKEN` const, never a committed value.
 
-Tokens expire. When the sync goes quiet, run `testGitHubAuth()` first:
+When the sync goes quiet, run `debugToken()`: `GET repo -> 200` = fine,
+`401` = expired PAT, `404` = fine-grained token not granted this repo.
 
-```
-GET /user  -> 200  authenticated as PalGenoPedia
-GET /repos/PalGenoPedia/PalGenoPedia -> 200  push permission: true
-```
+### The historical workbook
 
-`401` = expired. `200 /user` + `404` repo = fine-grained token not granted
-this repo.
-
-### The historical workbook (in the sync since 2026-08-27)
-
-One block in `SPREADSHEETS`, on the same Hospitals Apps Script project:
-
-```javascript
-  {
-    id: '1fTNCpO6vhsRZz_OrHNs7b4B7aVotfcA0XH8yygybkPo',
-    sheets: {
-      'Events':  'Pages/Historical_Massacres/events.csv',
-      'Details': 'Pages/Historical_Massacres/details.csv',
-    },
-    translationSheets: {
-      'Events_de':  'Pages/Historical_Massacres/events_de.csv',
-      'Events_ar':  'Pages/Historical_Massacres/events_ar.csv',
-      'Details_de': 'Pages/Historical_Massacres/details_de.csv',
-      'Details_ar': 'Pages/Historical_Massacres/details_ar.csv',
-    }
-  },
-```
-
-Editing that sheet + `syncAll()` now publishes the generated event pages, the
-timeline, **and** `data/events.json` + the feeds + JSON-LD (see ④).
+`id: '1fTNCpO6vhsRZz_OrHNs7b4B7aVotfcA0XH8yygybkPo'` — tabs `Events` / `Details`
+(+ `_ar` / `_de`, joined on `_anchor` by `build_history.py`). It's the first
+block in `sheet-sync.gs`'s `SPREADSHEETS`. Editing it + `syncAll()` publishes
+the generated event pages, the timeline, **and** `data/events.json` + feeds +
+JSON-LD (see ④).
 
 ---
 
