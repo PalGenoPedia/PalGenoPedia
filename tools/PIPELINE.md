@@ -208,10 +208,15 @@ survive). `build_history.py`, `regenerate.py` and `archive_links.py` all read
 the flat files, unchanged; the flat files are generated + committed by the
 Action — edit the sheets, not them.
 
-Volunteers submit/edit via the portal's **Historical War Crimes** area (new →
-the Ongoing workbook; edits → whichever `era` holds the row). Editing either +
-`syncAll()` publishes the event pages, the timeline, **and** `data/events.json`
-+ feeds + JSON-LD (see ④).
+Volunteers submit/edit via the portal's **Historical Events** area, which forks
+into two pages — *Current Genocide* (`era: "recent"` → Ongoing workbook) and
+*Historical War Crimes* (`era: "pre"` → Historical workbook). Each page lists
+that workbook's events; picking one opens a per-event page showing the saved
+`Events` row plus its `Details` rows, with an **add-only** form that appends new
+`Details` rows (`war_crime` / `source` / `testimony` / `casualty`). "+ Document
+a new event" writes a fresh `Events` row (+ first `Details`). Editors also edit
+the `Events` fields in place. Editing either workbook + `syncAll()` publishes the
+event pages, the timeline, **and** `data/events.json` + feeds + JSON-LD (see ④).
 
 ---
 
