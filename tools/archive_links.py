@@ -22,12 +22,18 @@ State (`status`):
   failed    — the submit errored; retried next run
 
 Usage:
-  python tools/archive_links.py [--limit N] [--stale-days D] [--check]
-    --limit       max NEW /save/ submissions this run (default 50). CDX checks
-                  are cheap and always run for every URL.
-    --stale-days  re-confirm an `archived` entry only if older than this
-                  (default 180). Snapshots don't disappear, so this is rare.
-    --check       report what would happen, write nothing.
+  python tools/archive_links.py [--limit N] [--stale-days D]
+                               [--time-budget S] [--sample N] [--check]
+    --limit        max NEW /save/ submissions this run (default 50). `--limit 0`
+                   = CDX-confirm only, submit nothing (fast, good for a first
+                   pass). CDX checks always run for every URL reached.
+    --stale-days   re-confirm an `archived` entry only if older than this
+                   (default 180). Snapshots don't disappear, so this is rare.
+    --time-budget  stop the loop cleanly after S seconds and write progress;
+                   the URLs not reached carry to the next run (state is keyed
+                   per URL, so nothing is redone). 0 = no limit (default).
+    --sample N     only look at the first N URLs (local testing).
+    --check        report what would happen, write nothing.
 
 Social media (x.com, facebook.com, instagram.com, tiktok.com) frequently
 captures as a login wall — the entry still records, flagged `social: true`,
@@ -90,16 +96,21 @@ def _get(url, headers=None, data=None, timeout=45):
 
 
 def cdx_latest(url):
-    """Most recent capture (timestamp, statuscode) or None."""
+    """Most recent capture timestamp, or None (no capture *or* the API failed).
+
+    The CDX endpoint throttles hard under a few hundred sequential requests, so
+    a short timeout with a couple of backoff retries beats one long hang — a
+    30s stall per URL is what turned the seeding run into a 4-hour job."""
     q = "%s?url=%s&output=json&limit=-1&fl=timestamp,statuscode&filter=statuscode:200" % (
         CDX, urllib.parse.quote(url, safe=""))
-    try:
-        code, body = _get(q, timeout=30)
-        rows = json.loads(body) if body.strip() else []
-        if len(rows) >= 2:                       # [header, row]
-            return rows[-1][0]                   # timestamp
-    except Exception:
-        pass
+    for attempt in range(3):
+        try:
+            code, body = _get(q, timeout=12)
+            rows = json.loads(body) if body.strip() else []
+            return rows[-1][0] if len(rows) >= 2 else None   # [header, row]
+        except Exception:
+            if attempt < 2:
+                time.sleep(1.5 * (attempt + 1))
     return None
 
 
@@ -121,6 +132,7 @@ def main():
     limit = 50
     stale = 180
     sample = 0
+    budget = 0            # seconds; 0 = no limit
     for i, a in enumerate(args):
         if a == "--limit" and i + 1 < len(args):
             limit = int(args[i + 1])
@@ -128,6 +140,8 @@ def main():
             stale = int(args[i + 1])
         if a == "--sample" and i + 1 < len(args):
             sample = int(args[i + 1])
+        if a == "--time-budget" and i + 1 < len(args):
+            budget = int(args[i + 1])
 
     access = os.environ.get("IA_ACCESS", "").strip()
     secret = os.environ.get("IA_SECRET", "").strip()
@@ -144,10 +158,17 @@ def main():
         urls = urls[:sample]
     stale_before = (datetime.date.today() - datetime.timedelta(days=stale)).isoformat()
     saved = confirmed = skipped = failed = 0
+    started = time.time()
+    stopped_early = 0
 
     for n, url in enumerate(urls, 1):
         if n % 25 == 0:
             print("  ... %d/%d" % (n, len(urls)), flush=True)
+        if budget and time.time() - started > budget:
+            stopped_early = len(urls) - n + 1
+            print("  time budget (%ds) reached at %d/%d — writing progress, "
+                  "the rest carries to the next run" % (budget, n, len(urls)), flush=True)
+            break
         e = state.setdefault(url, {"status": "new"})
         host = urllib.parse.urlparse(url).netloc.lower().lstrip("www.")
         e["social"] = any(host == s or host.endswith("." + s) for s in SOCIAL)
@@ -209,6 +230,8 @@ def main():
           % (tot, arch, pend, tot - arch - pend, confirmed, saved, failed, skipped))
     if soc:
         print("  %d social-media links still unarchived — archive.today these by hand" % soc)
+    if stopped_early:
+        print("  %d url(s) not reached this run (time budget) — next run continues" % stopped_early)
 
 
 if __name__ == "__main__":
