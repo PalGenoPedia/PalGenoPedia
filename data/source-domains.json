@@ -7,6 +7,32 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.972mag.com/al-ahli-hospital-gaza-blast/\"\"https://prc.org.uk/upload/library/files/Alahli-Hospital-MassacreEN.pdf",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.972mag.com/gaza-academia-destruction-universities",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.972mag.com/search/?q=unrwa+Rafah%2C+July+15%2C+2024",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 0,
    "secondary": 3
   },
@@ -16,6 +42,80 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.aa.com.tr/en/middle-east/israeli-army-destroys-2-buildings-of-al-aqsa-university-in-gaza-city/3129434",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.aa.com.tr/en/middle-east/israeli-artillery-targets-nasser-medical-complex-gaza-health-ministry/3086410",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.aa.com.tr/en/middle-east/israeli-warplanes-target-hospital-in-central-gaza/3674854",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.aa.com.tr/en/middle-east/palestine-27-years-since-ibrahimi-mosque-massacre/2156877",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.aa.com.tr/ar/إسرائيل/صحة-غزة-الجيش-الإسرائيلي-يعاود-اقتحام-مشفى-ناصر-ويقتل-23-وسط-القطاع-/3145343",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.aa.com.tr/ar/إسرائيل/صحة-غزة-نفاد-أدوية-بمستشفى-ناصر-المحاصر-ودفن-شهداء-في-ساحتها/3120896",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.aa.com.tr/ar/إسرائيل/قصف-إسرائيلي-يستهدف-مستشفى-الرنتيسي-للأطفال-في-غزة/3049177",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.aa.com.tr/ar/الدول-العربية/صحة-غزة-حياة-آلاف-المرضى-والنازحين-بمجمع-ناصر-في-خطر-شديد-/3129335",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.aa.com.tr/en/middle-east/israeli-attacks-force-gaza-city-s-only-eye-hospital-children-s-facility-out-of-service/3694853",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 4,
    "secondary": 5
   },
@@ -25,6 +125,16 @@
    "archived": 0,
    "pending": 1,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://abcnews.com/International/hundreds-killed-strike-gaza-hospital-gaza-health-ministry/story?id=104049667",
+     "role": "secondary",
+     "status": "requested",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 0,
    "secondary": 1
   },
@@ -34,6 +144,16 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://abcnews.go.com/International/state-hospitals-gaza-israel-hamas-war-hits-1/story?id=114495894",
+     "role": "secondary",
+     "status": "failed",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 0,
    "secondary": 1
   },
@@ -43,6 +163,16 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.adalah.org",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 1,
    "secondary": 0
   },
@@ -52,6 +182,16 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.addameer.org",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 1,
    "secondary": 0
   },
@@ -61,6 +201,16 @@
    "archived": 0,
    "pending": 1,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://afedj.org/ahli-hospital-struck-by-rocket-fire",
+     "role": "secondary",
+     "status": "requested",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 0,
    "secondary": 1
   },
@@ -70,6 +220,104 @@
    "archived": 0,
    "pending": 5,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://aje.io/av8a82?update=2660721",
+     "role": "primary",
+     "status": "failed",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://aje.io/i37ezs?update=2665759",
+     "role": "primary",
+     "status": "failed",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://aje.io/53epb7?update=2577183",
+     "role": "secondary",
+     "status": "failed",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://aje.io/5g3kdw?update=2667643",
+     "role": "secondary",
+     "status": "requested",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://aje.io/5g3kdw?update=2668497",
+     "role": "secondary",
+     "status": "failed",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://aje.io/5g3kdw?update=2669254",
+     "role": "secondary",
+     "status": "failed",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://aje.io/6ly68o?update=2640692",
+     "role": "secondary",
+     "status": "requested",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://aje.io/av8a82?update=2662702",
+     "role": "secondary",
+     "status": "requested",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://aje.io/bj3a9f?update=2644385",
+     "role": "secondary",
+     "status": "failed",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://aje.io/i37ezs?update=2664531",
+     "role": "secondary",
+     "status": "requested",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://aje.io/trvz4m?update=2582688",
+     "role": "secondary",
+     "status": "requested",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://aje.io/trvz4m?update=2583195",
+     "role": "secondary",
+     "status": "failed",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 2,
    "secondary": 10
   },
@@ -79,6 +327,16 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.alarabiya.net/arab-and-world/2024/04/23/الأمم-المتحدة-تحقق-في-العثور-على-أكثر-من-300-جثة-في-مقبرتين-جماعيتين-بغزة",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 0,
    "secondary": 1
   },
@@ -88,6 +346,144 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.aljazeera.com",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.aljazeera.com/features/2022/1/27/tantura-a-film-about-a-massacre-israel-didnt-want-you-to-see",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.aljazeera.com/gallery/2023/12/8/history-illustrated-the-first-intifada-against-israel",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.aljazeera.com/news/2016/2/26/remembering-the-ibrahimi-mosque-massacre",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.aljazeera.com/news/2023/1/26/why-israeli-raids-killed-many-palestinians-this-year-explainer",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.aljazeera.com/news/2023/2/22/israeli-forces-kill-palestinians-in-nablus-raid",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.aljazeera.com/news/2024/1/24/how-israel-has-destroyed-gazas-schools-and-universities",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.aljazeera.com/news/2024/12/24/gaza-appeals-for-help-as-israeli-army-attacks-key-hospitals",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.aljazeera.com/news/2026/8/1/israeli-strikes-kill-four-across-gaza-destroy-medical-supply-warehouse\"",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.aljazeera.com/video/newsfeed/2023/12/20/israeli-strike-hits-during-live-report-near-hospital-in-rafah",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.aljazeera.com/gallery/2023/10/17/photos-an-israeli-air-raid-on-al-ahli-arab-hospital-kills-an-estimated-500",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.aljazeera.com/news/2023/10/19/what-hit-ahli-hospital-in-gaza",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.aljazeera.com/news/2023/11/13/patients-are-dying-what-we-know-about-gaza-hospitals-under-israeli-siege",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.aljazeera.com/news/2023/11/15/israeli-forces-raid-gazas-al-shifa-hospital-in-targeted-operation",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.aljazeera.com/news/2024/5/28/rafah-residents-face-further-danger-as-israel-hits-citys-two-hospitals",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.aljazeera.com/news/2025/4/13/timeline-israels-attacks-on-hospitals-throughout-its-war-on-gaza",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.aljazeera.com/news/liveblog/2023/11/10/israel-hamas-war-live-fears-grow-for-palestinians-at-gaza-hospitals",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 10,
    "secondary": 7
   },
@@ -97,6 +493,48 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.aljazeera.net/news/2024/1/22/مغردون-سيناريو-الشفاء-يتكرر-في-مجمع",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.aljazeera.net/news/2024/2/11/الاحتلال-يستولي-على-مفاتيح-سيارات",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.aljazeera.net/news/2024/2/14/الاحتلال-يجبر-النازحين-على-إخلاء-مجمع-2",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.aljazeera.net/news/2024/2/25/مستشفى-ناصر",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.aljazeera.net/video/2024/1/29/دفن-35-شهيدا-بمقابر-جماعية-داخل-مجمع",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 0,
    "secondary": 5
   },
@@ -106,6 +544,24 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.amnesty.org",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.amnesty.org/en/wp-content/uploads/2021/06/mde150152009en.pdf",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 2,
    "secondary": 0
   },
@@ -115,6 +571,16 @@
    "archived": 1,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://anglicanalliance.org/palm-sunday-air-strikes-against-al-ahli-hospital-in-gaza-city",
+     "role": "secondary",
+     "status": "archived",
+     "snap": "https://web.archive.org/web/20260207012830/https://anglicanalliance.org/palm-sunday-air-strikes-against-al-ahli-hospital-in-gaza-city",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 0,
    "secondary": 1
   },
@@ -124,6 +590,16 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.anglicannews.org/news/2023/10/anglican-run-al-ahli-arab-hospital-in-gaza-damaged-by-israeli-rocket-fire-as-conflict-continues.aspx",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 1,
    "secondary": 0
   },
@@ -133,6 +609,16 @@
    "archived": 1,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://apnews.com/article/israel-palestinians-hamas-war-hospital-rocket-gaza-8bc239d2efe0cff3998b2154d9220a83",
+     "role": "secondary",
+     "status": "archived",
+     "snap": "https://web.archive.org/web/20260728081135/https://apnews.com/article/israel-palestinians-hamas-war-hospital-rocket-gaza-8bc239d2efe0cff3998b2154d9220a83",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 0,
    "secondary": 1
   },
@@ -142,6 +628,16 @@
    "archived": 1,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://arabi21.com/story/1568264/%D8%A7%D9%84%D8%A7%D8%AD%D8%AA%D9%84%D8%A7%D9%84-%D9%8A%D9%82%D8%AA%D8%AD%D9%85-%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89-%D8%BA%D8%B1%D8%A8-%D8%AE%D8%A7%D9%86%D9%8A%D9%88%D9%86%D8%B3-%D9%88%D9%8A%D8%AD%D8%AA%D8%AC%D8%B2-%D8%A7%D9%84%D8%B7%D9%88%D8%A7%D9%82%D9%85-%D8%A7%D9%84%D8%B7%D8%A8%D9%8A%D8%A9-%D8%B4%D8%A7%D9%87%D8%AF",
+     "role": "secondary",
+     "status": "archived",
+     "snap": "https://web.archive.org/web/20260828223720/https://arabi21.com/story/1568264/%D8%A7%D9%84%D8%A7%D8%AD%D8%AA%D9%84%D8%A7%D9%84-%D9%8A%D9%82%D8%AA%D8%AD%D9%85-%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89-%D8%BA%D8%B1%D8%A8-%D8%AE%D8%A7%D9%86%D9%8A%D9%88%D9%86%D8%B3-%D9%88%D9%8A%D8%AD%D8%AA%D8%AC%D8%B2-%D8%A7%D9%84%D8%B7%D9%88%D8%A7%D9%82%D9%85-%D8%A7%D9%84%D8%B7%D8%A8%D9%8A%D8%A9-%D8%B4%D8%A7%D9%87%D8%AF",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 0,
    "secondary": 1
   },
@@ -151,6 +647,16 @@
    "archived": 1,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://arablit.org/wp-content/uploads/2023/12/English-.pdf",
+     "role": "primary",
+     "status": "archived",
+     "snap": "https://web.archive.org/web/20260824184422/https://arablit.org/wp-content/uploads/2023/12/English-.pdf",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 1,
    "secondary": 0
   },
@@ -160,6 +666,24 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.bbc.co.uk/news/world-middle-east-67144061",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.bbc.co.uk/news/world-middle-east-67216929",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 0,
    "secondary": 2
   },
@@ -169,6 +693,32 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.bbc.com/news/world-middle-east-67401064",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.bbc.com/news/world-middle-east-68705765",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.bbc.com/news/articles/cx2jvx3yjg3o",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 2,
    "secondary": 1
   },
@@ -178,6 +728,16 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.breakingthesilence.org.il",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 1,
    "secondary": 0
   },
@@ -187,6 +747,24 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.britannica.com/event/intifada-Palestinian-movement",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.britannica.com/topic/intifada",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 2,
    "secondary": 0
   },
@@ -196,6 +774,64 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.btselem.org",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.btselem.org/download/201305_pillar_of_defense_operation_eng.pdf",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.btselem.org/gaza_strip/20190330_gaza_march_of_return",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.btselem.org/gaza_strip/gaza_201407_operation",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.btselem.org/statistics",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.btselem.org/statistics/fatalities/after-cast-lead/by-date-of-event",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.btselem.org/statistics/first_intifada_tables",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 7,
    "secondary": 0
   },
@@ -205,6 +841,16 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.cambridge.org/core/books/birth-of-the-palestinian-refugee-problem-revisited/4A0958EED322D2FAC1D245128A1D44CB",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 1,
    "secondary": 0
   },
@@ -214,6 +860,32 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.cbc.ca/news/world/al-ahli-hospital-strike-gaza-1.6999842",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.cbc.ca/news/world/gaza-al-ahli-hospital-patients-evacuated-israeli-strike-1.7510471",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.cbc.ca/news/world/gaza-al-ahli-hospital-patients-evacuated-israeli-strike-1.7510471-katz",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 0,
    "secondary": 3
   },
@@ -223,6 +895,16 @@
    "archived": 0,
    "pending": 1,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://ccas.georgetown.edu/ccas-newsmagazine/scholasticide-in-gaza",
+     "role": "secondary",
+     "status": "requested",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 0,
    "secondary": 1
   },
@@ -232,6 +914,16 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.cfr.org/timeline/israeli-palestinian-conflict",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 1,
    "secondary": 0
   },
@@ -241,6 +933,16 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.churchtimes.co.uk/articles/2025/17-april/news/world/church-leaders-condemn-latest-strikes-on-al-ahli-hospital-in-gaza",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 0,
    "secondary": 1
   },
@@ -250,6 +952,16 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://cnewa.org/gaza-christian-hospital-hit-by-missile",
+     "role": "primary",
+     "status": "failed",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 1,
    "secondary": 0
   },
@@ -259,6 +971,16 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.cnn.com/2024/01/30/middleeast/idf-khan-younis-hospital-intl",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 0,
    "secondary": 1
   },
@@ -268,6 +990,16 @@
    "archived": 1,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://cpj.org",
+     "role": "primary",
+     "status": "archived",
+     "snap": "https://web.archive.org/web/20260825080336/https://cpj.org",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 1,
    "secondary": 0
   },
@@ -277,6 +1009,16 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.dci-palestine.org",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 1,
    "secondary": 0
   },
@@ -286,6 +1028,16 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.democracynow.org/2021/7/30/investigation_israel_war_crimes_palestine",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 1,
    "secondary": 0
   },
@@ -295,6 +1047,16 @@
    "archived": 1,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://docs.un.org/en/A/HRC/59/26",
+     "role": "primary",
+     "status": "archived",
+     "snap": "https://web.archive.org/web/20260802131435/https://docs.un.org/en/A/HRC/59/26",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 1,
    "secondary": 0
   },
@@ -304,6 +1066,32 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.doctorswithoutborders.org",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.doctorswithoutborders.org/latest/nasser-hospital-collapses-cutting-access-health-care-southern-gaza",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.doctorswithoutborders.org/latest/palestinians-gaza-are-being-deliberately-asphyxiated-israeli-forces",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 1,
    "secondary": 2
   },
@@ -313,6 +1101,16 @@
    "archived": 1,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://edition.cnn.com/interactive/2024/01/middleeast/gaza-hospitals-destruction-investigation-intl-cmd",
+     "role": "secondary",
+     "status": "archived",
+     "snap": "https://web.archive.org/web/20260826233625/https://edition.cnn.com/interactive/2024/01/middleeast/gaza-hospitals-destruction-investigation-intl-cmd",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 0,
    "secondary": 1
   },
@@ -322,6 +1120,16 @@
    "archived": 0,
    "pending": 1,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://en.topwar.ru/229568-cahal-razbombil-palestinskij-universitet-al-azhar-v-gaze.html",
+     "role": "secondary",
+     "status": "requested",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 0,
    "secondary": 1
   },
@@ -331,6 +1139,104 @@
    "archived": 5,
    "pending": 3,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://en.wikipedia.org/wiki/1948_Palestinian_expulsion_from_Lydda_and_Ramle",
+     "role": "primary",
+     "status": "failed",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://en.wikipedia.org/wiki/Israeli_incursions_in_the_West_Bank_during_the_Gaza_war",
+     "role": "primary",
+     "status": "archived",
+     "snap": "https://web.archive.org/web/20260822132701/https://en.wikipedia.org/wiki/Israeli_incursions_in_the_West_Bank_during_the_Gaza_war",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://en.wikipedia.org/wiki/January_2023_Jenin_incursion",
+     "role": "primary",
+     "status": "archived",
+     "snap": "https://web.archive.org/web/20260112124818/https://en.wikipedia.org/wiki/January_2023_Jenin_incursion",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://en.wikipedia.org/wiki/July_2023_Jenin_incursion",
+     "role": "primary",
+     "status": "failed",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://en.wikipedia.org/wiki/Moroccan_Quarter",
+     "role": "primary",
+     "status": "archived",
+     "snap": "https://web.archive.org/web/20260717214904/https://en.wikipedia.org/wiki/Moroccan_Quarter",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://en.wikipedia.org/wiki/Moshe_Dayan",
+     "role": "primary",
+     "status": "failed",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://en.wikipedia.org/wiki/Six-Day_War",
+     "role": "primary",
+     "status": "requested",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://en.wikipedia.org/wiki/Al-Shifa_Hospital_siege",
+     "role": "secondary",
+     "status": "requested",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://en.wikipedia.org/wiki/Attacks_on_health_facilities_during_the_Gaza_war",
+     "role": "secondary",
+     "status": "archived",
+     "snap": "https://web.archive.org/web/20260823221645/https://en.wikipedia.org/wiki/Attacks_on_health_facilities_during_the_Gaza_war",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://en.wikipedia.org/wiki/Kamal_Adwan_Hospital_sieges",
+     "role": "secondary",
+     "status": "archived",
+     "snap": "https://web.archive.org/web/20260818014816/https://en.wikipedia.org/wiki/Kamal_Adwan_Hospital_sieges",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://en.wikipedia.org/wiki/List_of_hospitals_in_the_State_of_Palestine",
+     "role": "secondary",
+     "status": "requested",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://en.wikipedia.org/wiki/Timeline_of_the_Gaza_Strip_healthcare_collapse",
+     "role": "secondary",
+     "status": "failed",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 7,
    "secondary": 5
   },
@@ -340,6 +1246,16 @@
    "archived": 1,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://english.alarabiya.net/News/middle-east/2023/10/11/Israel-strikes-Islamic-University-in-Gaza",
+     "role": "secondary",
+     "status": "archived",
+     "snap": "https://web.archive.org/web/20250617055259/https://english.alarabiya.net/News/middle-east/2023/10/11/Israel-strikes-Islamic-University-in-Gaza",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 0,
    "secondary": 1
   },
@@ -349,6 +1265,80 @@
    "archived": 6,
    "pending": 2,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://english.wafa.ps/Pages/Details/128189",
+     "role": "primary",
+     "status": "archived",
+     "snap": "https://web.archive.org/web/20260828224648/https://english.wafa.ps/Pages/Details/128189",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://english.wafa.ps/Pages/Details/133561",
+     "role": "primary",
+     "status": "archived",
+     "snap": "https://web.archive.org/web/20260828224655/https://english.wafa.ps/Pages/Details/133561",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://english.wafa.ps/Pages/Details/160970",
+     "role": "primary",
+     "status": "requested",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://english.wafa.ps/Pages/Details/140358",
+     "role": "secondary",
+     "status": "archived",
+     "snap": "https://web.archive.org/web/20260519000318/https://english.wafa.ps/Pages/Details/140358",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://english.wafa.ps/Pages/Details/140465",
+     "role": "secondary",
+     "status": "requested",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://english.wafa.ps/Pages/Details/141208",
+     "role": "secondary",
+     "status": "failed",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://english.wafa.ps/Pages/Details/141209",
+     "role": "secondary",
+     "status": "archived",
+     "snap": "https://web.archive.org/web/20260520074129/https://english.wafa.ps/Pages/Details/141209",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://english.wafa.ps/Pages/Details/141767",
+     "role": "secondary",
+     "status": "archived",
+     "snap": "https://web.archive.org/web/20260828224945/https://english.wafa.ps/Pages/Details/141767",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://english.wafa.ps/Pages/Details/142688",
+     "role": "secondary",
+     "status": "archived",
+     "snap": "https://web.archive.org/web/20260828225057/https://english.wafa.ps/Pages/Details/142688",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 3,
    "secondary": 6
   },
@@ -358,6 +1348,16 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://episcopalnewsservice.org/2025/08/18/al-ahli-hospital-in-gaza-city-suffers-damage-from-fire-set-by-outlaws-attack-by-idf-drone",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 0,
    "secondary": 1
   },
@@ -367,6 +1367,16 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.euromedmonitor.org/en/article/6163/Israel%E2%80%99s-demolition-of-educational-institutions",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 1,
    "secondary": 0
   },
@@ -376,6 +1386,168 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.facebook.com/MOHGaza1994/videos/%D9%88%D8%B2%D8%A7%D8%B1%D8%A9-%D8%A7%D9%84%D8%B5%D8%AD%D8%A9-%D8%A7%D9%84%D9%81%D9%84%D8%B3%D8%B7%D9%8A%D9%86%D9%8A%D8%A9-%D8%BA%D8%B2%D8%A9%D8%AC%D8%A7%D9%86%D8%A8-%D9%85%D9%86-%D8%AC%D9%88%D9%84%D8%A9-%D8%AA%D9%81%D9%82%D8%AF%D9%8A%D8%A9-%D9%84%D9%88%D9%83%D9%8A%D9%84-%D8%A7%D9%84%D9%88%D8%B2%D8%A7%D8%B1%D8%A9-%D8%AF%D9%8A%D9%88%D8%B3%D9%81-%D8%A3%D8%A8%D9%88-%D8%A7%D9%84%D8%B1%D9%8A%D8%B4-%D9%88%D8%A7%D9%84%D9%88/2393418047659817/%D8%A7%D9%84%D9%81%D9%84%D8%B3%D8%B7%D9%8A%D9%86%D9%8A%D8%A9-%D8%BA%D8%B2%D8%A9%D8%AC%D8%A7%D9%86%D8%A8-%D9%85%D9%86-%D8%AC%D9%88%D9%84%D8%A9-%D8%AA%D9%81%D9%82%D8%AF%D9%8A%D8%A9-%D9%84%D9%88%D9%83%D9%8A%D9%84-%D8%A7%D9%84%D9%88%D8%B2%D8%A7%D8%B1%D8%A9-%D8%AF%D9%8A%D9%88%D8%B3%D9%81-%D8%A3%D8%A8%D9%88-%D8%A7%D9%84%D8%B1%D9%8A%D8%B4-%D9%88%D8%A7%D9%84%D9%88/2393418047659817",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.facebook.com/mitri.raheb/videos/dar-al-kalima-university-gaza-training-center-once-a-place-for-of-creativity-and/361211246253057",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.facebook.com/reel/957102225874566",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.facebook.com/watch/?mibextid=wwXIfr&v=1413109099886187&rdid=ytko1E4P1B3ytfsz",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.facebook.com/Kuwait.hos/posts/pfbid02UT99WXiQEfkXFR9pR8fG6dgnuxoGqqCvJJvBspML6FQHmKn1fX2BY93Tnh2FACTJl",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.facebook.com/PalestineRCS/posts/pfbid01EfXUZ7srCh64fDRyWHRgcj4GXSWr1GAzeBr4Nn2A9GbtjvYWv6UE6sChfyB9Jt4l",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.facebook.com/PalestineRCS/posts/pfbid029zP2Mq4etR2FiMf6XozjYCnvSNHdXsXwuo8RNwTFLmaWU8Y7xUPvfGe31i9xUEiLl",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.facebook.com/PalestineRCS/posts/pfbid02VAMjWdR1PPR7wodbBKMWe6xtK5rXCB9pViYBZJ29D8Kc2CfQWiCpijipRhEE7dLYl",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.facebook.com/PalestineRCS/posts/pfbid02XXXUKBMwREdoMkP9S7WVcEaSuKNuyVrukBWHfop4bDZDaMQJksmHn42ZqjbsAZZml",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.facebook.com/PalestineRCS/posts/pfbid02XmcahKisBJwp4RQnkG36t1xQqAH3idcNtBnkiQ4bqSyLJTLvEHY7m2QPnkarUtkil",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.facebook.com/PalestineRCS/posts/pfbid02fK6gvPzTD5c27oqbPk9du1WMNBSovyQmpyfQQSSWHanzCMwB9eVHG1hAFDsXLYm3l",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.facebook.com/PalestineRCS/posts/pfbid02jbYxoU1jFSfnYi7JpQ99qdEfLEN5ZFbtw2Vi9iMKYxWK5MoPWhULP7kiaAmgASVtl",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.facebook.com/PalestineRCS/posts/pfbid02xkWCvt9k23T3g2rmpqe1DYJe6V6VcbtMt6gZazjYBzkaYaRPvYuoXGGbSysyMVdyl",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.facebook.com/PalestineRCS/posts/pfbid032Z7GCGiVKq9sLLPLKGkcgVQEdYxJVAprW4LKCQyQZUUhb6MPqrZWYzsuRYyjy65il",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.facebook.com/PalestineRCS/posts/pfbid0xvt4DqkyB8o8pnPUTgiz3kU83yGv6qi9nNWu3Xr7gNrGNQtYEJCYovA97cR6SPGl",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.facebook.com/awdaps/photos/urgent-appeal-issued-by-al-awda-health-and-community-associationdate-may-22-2025/670980945567955",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.facebook.com/reel/318143097856794",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.facebook.com/trtworld/videos/israels-narrative-of-al-ahli-arab-hospital-attack-a-closer-look/716457469813692",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.facebook.com/watch/?mibextid=wwXIfr&v=694104496360241&rdid=9lbhotKwTSimO6cr",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.facebook.com/watch/?v=1366316280923065",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 4,
    "secondary": 16
   },
@@ -385,6 +1557,16 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://forensic-architecture.org/investigation/israeli-disinformation-al-ahli-hospital",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 1,
    "secondary": 0
   },
@@ -394,6 +1576,16 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.france24.com/en/middle-east/20231018-what-we-know-about-the-deadly-blast-at-gaza-city-s-al-ahli-hospital",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 0,
    "secondary": 1
   },
@@ -403,6 +1595,40 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://gazaeducationsector.palestine-studies.org/en/node/3518",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://gazaeducationsector.palestine-studies.org/en/node/3526",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://gazaeducationsector.palestine-studies.org/sites/default/files/pdf/public_records/Rabaia%26Habash_Destruction%20of%20Higher%20Education%20%28educide%29%20in%20the%20Gaza%20Strip_Assessment%20and%20Support%20mechanisms.pdf",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://gazaeducationsector.palestine-studies.org/en/node/4004",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 3,
    "secondary": 1
   },
@@ -412,6 +1638,32 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://gazahcsector.palestine-studies.org/en/node/76",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://gazahcsector.palestine-studies.org/en/node/5",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://gazahcsector.palestine-studies.org/en/node/77",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 1,
    "secondary": 2
   },
@@ -421,6 +1673,24 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://genocide.live/14500",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://genocide.live/uploads/debunk-idf-claims-about-terror-tunnel-in-sheikh-hamad-hospital-1",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 1,
    "secondary": 1
   },
@@ -430,6 +1700,16 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.gov.il",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 1,
    "secondary": 0
   },
@@ -439,6 +1719,40 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.haaretz.com",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.haaretz.com/israel-news/2022-01-20/ty-article-magazine/.premium/tantura-the-massacre-at-the-heart-of-the-nakba-that-israelis-refuse-to-recogn/0000017f-e2a5-d7b2-a77f-e2a7ccb30000",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.haaretz.com/israel-news/2025-09-14/ty-article/.premium/idf-strikes-four-more-high-rises-in-gaza-city-as-netanyahu-tells-residents-to-leave/00000199-494e-d700-a5fd-ff6f74b40000",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.haaretz.com/news/diplomacy-defense/as-idf-strike-kills-entire-family-in-gaza-israel-is-starting-to-get-into-trouble-1.478879",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 4,
    "secondary": 0
   },
@@ -448,6 +1762,16 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.hebronrc.ps/en/node/27",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 1,
    "secondary": 0
   },
@@ -457,6 +1781,24 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://history.state.gov",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://history.state.gov/historicaldocuments/frus1952-54v09p1/d689",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 2,
    "secondary": 0
   },
@@ -466,6 +1808,88 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.hrw.org",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.hrw.org/news/2002/05/02/israel/occupied-territories-jenin-war-crimes-investigation-needed",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.hrw.org/news/2002/08/01/un-jenin-report",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.hrw.org/news/2021/07/27/gaza-apparent-war-crimes-during-may-fighting",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.hrw.org/news/2022/10/11/submission-universal-periodic-review-israel",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.hrw.org/report/2002/05/02/jenin/idf-military-operations",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.hrw.org/report/2009/08/13/white-flag-deaths/killings-palestinian-civilians-during-operation-cast-lead",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.hrw.org/report/2021/04/27/threshold-crossed/israeli-authorities-and-crimes-apartheid-and-persecution",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.hrw.org/reports/2002/israel3/israel0502-05.htm",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.hrw.org/news/2023/11/26/gaza-findings-october-17-al-ahli-hospital-explosion",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 9,
    "secondary": 1
   },
@@ -475,6 +1899,16 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.i24news.tv/en/news/israel-at-war/1702035523-idf-destroys-hamas-linked-facilities-at-gaza-s-al-azhar-university",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 0,
    "secondary": 1
   },
@@ -484,6 +1918,16 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.icc-cpi.int/resource-library/documents/rs-eng.pdf",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 0,
    "secondary": 1
   },
@@ -493,6 +1937,16 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.icj-cij.org",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 1,
    "secondary": 0
   },
@@ -502,6 +1956,32 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.icrc.org",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.icrc.org/en/doc/resources/documents/news-release/2009-and-earlier/palestine-news-070109.htm",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.icrc.org/en/doc/war-and-law/treaties-customary-law/geneva-conventions/overview-geneva-conventions.htm",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 2,
    "secondary": 1
   },
@@ -511,6 +1991,24 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.idf.il",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.idf.il/en/mini-sites/wars-and-operations/operation-guardian-of-the-walls/operation-guardian-of-the-walls-1",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 2,
    "secondary": 0
   },
@@ -520,6 +2018,24 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.ifrc.org/article/ifrc-statement-closure-al-amal-hospital-gaza",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ifrc.org/press-release/ifrc-condemns-attack-palestine-red-crescent-headquarters-khan-younis-and-killing",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 0,
    "secondary": 2
   },
@@ -529,6 +2045,16 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://imemc.org/article/israel-detonates-last-university-in-gaza",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 1,
    "secondary": 0
   },
@@ -538,6 +2064,24 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://imeu.org",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://imeu.org/article/50-days-of-death-destruction-israels-operation-protective-edge",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 2,
    "secondary": 0
   },
@@ -547,6 +2091,16 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.independent.com.mt/articles/2023-10-17/world-news/As-Biden-heads-to-Israel-and-Jordan-aid-is-held-up-for-a-Gaza-on-the-verge-of-total-collapse-6736255671",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 1,
    "secondary": 0
   },
@@ -556,6 +2110,16 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.indy100.com/news/israel-bomb-hospital-gaza-hamas",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 0,
    "secondary": 1
   },
@@ -565,6 +2129,16 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://insecurityinsight.org/wp-content/uploads/2024/04/27.-09-22-April-2024-Attacks-on-Health-Care-in-Israel-and-the-oPt.pdf",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 0,
    "secondary": 1
   },
@@ -574,6 +2148,16 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.inss.org.il/wp-content/uploads/sites/2/systemfiles/(FILE)1190277272.pdf",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 1,
    "secondary": 0
   },
@@ -583,6 +2167,16 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.itv.com/watch/news/what-we-know-about-the-strike-on-gazas-al-ahli-arab-hospital/znspkw3",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 0,
    "secondary": 1
   },
@@ -592,6 +2186,16 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://jacobin.com/2023/02/ibrahimi-mosque-massacre-anniversary-kahanism-hebron-itamar-ben-gvir-israel-far-right",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 1,
    "secondary": 0
   },
@@ -601,6 +2205,16 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.jewishvirtuallibrary.org/first-intifada",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 1,
    "secondary": 0
   },
@@ -610,6 +2224,16 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.jstor.org/stable/4327250",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 1,
    "secondary": 0
   },
@@ -619,6 +2243,16 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://kuwaittimes.com/uploads/pdf/2024/06/09/kt_pdf-20240609-1.pdf?ts=221032",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 1,
    "secondary": 0
   },
@@ -628,6 +2262,16 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.lemonde.fr/en/international/article/2023/10/19/gaza-hospital-what-detailed-image-analysis-reveals-about-deadly-al-ahli-arab-hospital-blast_6189013_4.html",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 0,
    "secondary": 1
   },
@@ -637,6 +2281,16 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://liberationnews.org/debunking-israels-lies-about-the-bombing-of-al-ahli-arab-hospital-in-gaza",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 0,
    "secondary": 1
   },
@@ -646,6 +2300,16 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://librarianswithpalestine.org/wp-content/uploads/2024/02/LAP-Gaza-Report-2024.pdf",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 0,
    "secondary": 1
   },
@@ -655,6 +2319,16 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.map.org.uk",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 1,
    "secondary": 0
   },
@@ -664,6 +2338,16 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://merip.org/2015/10/operation-protective-edge",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 1,
    "secondary": 0
   },
@@ -673,6 +2357,16 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://mesana.org/advocacy/committee-on-academic-freedom/2024/01/25/letter-condemning-the-devastating-military-campaign-in-gaza",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 0,
    "secondary": 1
   },
@@ -682,6 +2376,16 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.mezan.org/en",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 1,
    "secondary": 0
   },
@@ -691,6 +2395,32 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://mfa.gov.il",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.mfa.gov.il",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.mfa.gov.il/mfa/foreignpolicy/mfadocuments/yearbook6/pages/104%20report%20of%20the%20commission%20of%20inquiry%20into%20the%20e.aspx",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 3,
    "secondary": 0
   },
@@ -700,6 +2430,16 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.michiganpublic.org/2023-10-18/heres-the-available-evidence-of-what-happened-at-al-ahli-arab-hospital-in-gaza",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 0,
    "secondary": 1
   },
@@ -709,6 +2449,40 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.middleeasteye.net/explainer-gaza-israel-palestine-war-university-destroy",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.middleeasteye.net/news/palestine-west-bank-deadliest-year-second-intifada",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.middleeasteye.net/news/israeli-strikes-ahli-baptist-hospital-gaza-city-kills-journalists",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.middleeasteye.net/news/war-gaza-israel-killing-academics-educide-campaigners-say",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 2,
    "secondary": 2
   },
@@ -718,6 +2492,24 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.middleeastmonitor.com/20200414-we-must-never-forget-israels-massacre-in-jenin",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.middleeastmonitor.com/20210227-the-massacre-of-ibrahimi-mosque",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 2,
    "secondary": 0
   },
@@ -727,6 +2519,16 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.mirror.co.uk/news/world-news/rafah-hospital-gaza-out-service-32904752",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 0,
    "secondary": 1
   },
@@ -736,6 +2538,16 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.moh.gov.ps",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 1,
    "secondary": 0
   },
@@ -745,6 +2557,16 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.mohe.pna.ps/news?p=articles&news=8954",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 1,
    "secondary": 0
   },
@@ -754,6 +2576,24 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://mondoweiss.net/2023/12/operation-al-aqsa-flood-day-58-israel-kills-700-in-gaza-over-24-hours-as-palestinians-get-forced-further-south-toward-egypt",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://mondoweiss.net/2025/04/israel-just-bombed-the-last-operational-hospital-in-northern-gaza-again",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 1,
    "secondary": 1
   },
@@ -763,6 +2603,16 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.msf.org/strikes-raids-and-incursions-year-relentless-attacks-healthcare-palestine",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 0,
    "secondary": 1
   },
@@ -772,6 +2622,16 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.muslimaid.org/media-centre/blog/muslim-aid-condemns-al-ahli-hospital-bombing-in-gaza",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 0,
    "secondary": 1
   },
@@ -781,6 +2641,24 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.muslimnetwork.tv/israeli-forces-bomb-hospital-in-gazas-khan-younis",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.muslimnetwork.tv/several-killed-in-israeli-airstrike-in-gaza-strips-khan-younis",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 0,
    "secondary": 2
   },
@@ -790,6 +2668,16 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.nationalarchives.gov.uk",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 1,
    "secondary": 0
   },
@@ -799,6 +2687,16 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.nbcnews.com/specials/gaza-universities-destroyed-israel-military-war/index.html",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 0,
    "secondary": 1
   },
@@ -808,6 +2706,16 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.newarab.com/news/israeli-strike-destroys-northern-gazas-last-remaining-hospital",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 0,
    "secondary": 1
   },
@@ -817,6 +2725,32 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://news.un.org/en/story/2024/01/1145317",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://news.un.org/en/story/2024/05/1150016",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://news.un.org/en/story/2025/04/1162191",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 0,
    "secondary": 3
   },
@@ -826,6 +2760,16 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.npr.org/2023/10/19/1207173798/fake-accounts-old-videos-and-rumors-fuel-chaos-around-gaza-hospital-explosion",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 0,
    "secondary": 1
   },
@@ -835,6 +2779,24 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.nytimes.com/2024/05/23/world/middleeast/israeli-forces-raided-a-major-hospital-in-northern-gaza-forcing-patients-and-staff-to-evacuate.html",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.nytimes.com/2025/04/15/world/middleeast/gaza-hospital-israel-military.html",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 1,
    "secondary": 1
   },
@@ -844,6 +2806,976 @@
    "archived": 0,
    "pending": 1,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "http://ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-157",
+     "role": "primary",
+     "status": "requested",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/ar/content/humanitarian-situation-update-273-gaza-strip",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/eight-years-after-2008-2009-cast-lead-hostilities-gaza-lack-accountability-persists",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-100",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-101",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-102",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-103",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-104",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-106",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-107",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-108",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-117",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-119",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-12",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-121",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-122",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-123",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-129",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-131",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-141",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-147",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-149",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-163",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-166",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-168",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-169",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-170",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-171",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-172",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-23",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-24",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-24\"https://edition.cnn.com/interactive/2024/01/middleeast/gaza-hospitals-destruction-investigation-intl-cmd/\"",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-25",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-26",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-27",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-28",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-29",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-30",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-34",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-35",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-36",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-37",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-38",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-39",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-40",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-40\"https://www.bbc.co.uk/news/live/world-middle-east-67400490\"\"https://www.bbc.co.uk/news/world-middle-east-67424064\"",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-41",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-41\"\"https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-42\"\"https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-43\"",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-45",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-46",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-47",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-48",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-5",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-59",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-61",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-63",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-66",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-67",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-68",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-69",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-70",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-71",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-72",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-76",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-77",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-79",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-8",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-81",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-82",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-83",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-84",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-9",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-95",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-97",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/humanitarian-situation-update-174-gaza-strip",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/humanitarian-situation-update-176-gaza-strip",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/humanitarian-situation-update-179-gaza-strip",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/humanitarian-situation-update-187-gaza-strip",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/humanitarian-situation-update-188-gaza-strip",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/humanitarian-situation-update-203-gaza-strip",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/humanitarian-situation-update-209-gaza-strip",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/humanitarian-situation-update-214-gaza-strip",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/humanitarian-situation-update-231-gaza-strip",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/humanitarian-situation-update-233-gaza-strip",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/humanitarian-situation-update-235-gaza-strip",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/humanitarian-situation-update-239-gaza-strip",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/humanitarian-situation-update-241-gaza-strip",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/humanitarian-situation-update-243-gaza-strip",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/humanitarian-situation-update-245-gaza-strip",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/humanitarian-situation-update-247-gaza-strip",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/humanitarian-situation-update-249-gaza-strip",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/humanitarian-situation-update-251-gaza-strip",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/humanitarian-situation-update-275-gaza-strip",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/humanitarian-situation-update-278-gaza-strip",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/humanitarian-situation-update-280-gaza-strip",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/humanitarian-situation-update-280-gaza-strip2",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/humanitarian-situation-update-284-gaza-strip",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/humanitarian-situation-update-288-gaza-strip",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/humanitarian-situation-update-290-gaza-strip",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/humanitarian-situation-update-292-gaza-strip",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/humanitarian-situation-update-294-gaza-strip",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/humanitarian-situation-update-296-gaza-strip",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/humanitarian-situation-update-300-gaza-strip",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/humanitarian-situation-update-304-gaza-strip",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/humanitarian-situation-update-311-gaza-strip",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/humanitarian-situation-update-315-gaza-strip",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/humanitarian-situation-update-317-gaza-strip",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/humanitarian-situation-update-321-gaza-strip",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/humanitarian-situation-update-323-gaza-strip",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/humanitarian-situation-update-327-gaza-strip",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/key-figures-2014-hostilities",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/poc/16-29-may-2023",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://ochaopt.org",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-114",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-115",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-116",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-118",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-120",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-132",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-142",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 113,
    "secondary": 8
   },
@@ -853,6 +3785,88 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.ohchr.org",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ohchr.org/en/hr-bodies/hrc/co-i-gaza-conflict/report-co-i-gaza",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ohchr.org/en/hr-bodies/hrc/co-i-gaza-protests/index",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ohchr.org/en/hr-bodies/hrc/special-sessions/session9/fact-finding-mission",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ohchr.org/en/press-releases/2019/02/israeli-snipers-shot-children-and-journalists-gaza-protests-un-inquiry-finds",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ohchr.org/en/press-releases/2023/10/civilians-are-primary-victims-increased-violence-israel-and-occupied",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ohchr.org/en/press-releases/2024/12/pattern-israeli-attacks-gaza-hospitals-raises-grave-concerns-report",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ohchr.org/en/documents/reports/thematic-report-attacks-hospitals-during-escalation-hostilities-gaza-7-october",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ohchr.org/en/press-releases/2023/10/gaza-un-experts-decry-bombing-hospitals-and-schools-crimes-against-humanity",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ohchr.org/sites/default/files/documents/countries/opt/20241231-attacks-hospitals-gaza-en.pdf",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 7,
    "secondary": 3
   },
@@ -862,6 +3876,40 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.palestine-studies.org",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.palestine-studies.org/en/node/1652605",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.palestine-studies.org/en/node/1657540",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.palestine-studies.org/fr/node/1654680",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 4,
    "secondary": 0
   },
@@ -871,6 +3919,56 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "http://www.palestinercs.org",
+     "role": "primary",
+     "status": "failed",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.palestinercs.org",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.palestinercs.org/public/files/image/2023/News/latestresponse23012023/en%20242%202023.pdf",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.palestinercs.org/public/files/image/2023/News/latestresponse23012023/PRCS%20%20OR%20%20146.pdf",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.palestinercs.org/public/files/image/2023/News/latestresponse23012023/PRCS%20%20OR%20%20158.pdf",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.palestinercs.org/public/files/image/2024/statements/en%20Al%20Amal%20Hospital%20statement%2004012024.pdf",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 3,
    "secondary": 3
   },
@@ -880,6 +3978,32 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.palquest.org/en/highlight/21194/deir-yasin-massacre-9-april-1948",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.palquest.org/en/highlight/24073/lydda-9-13-july-1948",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.palquest.org/en/highlight/29773/first-intifada-1987-1993",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 3,
    "secondary": 0
   },
@@ -889,6 +4013,16 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.pbs.org/wnet/women-war-and-peace/uncategorized/what-you-need-to-know-about-the-1987-intifada",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 1,
    "secondary": 0
   },
@@ -898,6 +4032,16 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.pcbs.gov.ps",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 1,
    "secondary": 0
   },
@@ -907,6 +4051,24 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://pchrgaza.org/al-awda-hospital-bombed-israeli-occupation-forces-bomb-last-functioning-hospital-in-northern-gaza-denying-hundreds-of-thousands-access-to-healthcare/",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.pchrgaza.org",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 2,
    "secondary": 0
   },
@@ -916,6 +4078,16 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://peacenow.org.il",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 1,
    "secondary": 0
   },
@@ -925,6 +4097,16 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.phr.org.il/en",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 1,
    "secondary": 0
   },
@@ -934,6 +4116,16 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://pjs.ps/ar/page-3325.html",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 0,
    "secondary": 1
   },
@@ -943,6 +4135,16 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11002345",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 0,
    "secondary": 1
   },
@@ -952,6 +4154,16 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.qou.edu/en/viewCmsContentDtlEn.do?contentId=82184",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 1,
    "secondary": 0
   },
@@ -961,6 +4173,40 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://reliefweb.int/report/occupied-palestinian-territory/humanitarian-response-report-no-32024-february-17-21-2024-2400-enar",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://reliefweb.int/report/occupied-palestinian-territory/ifrc-three-palestine-red-crescent-members-killed-unacceptable",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://reliefweb.int/report/occupied-palestinian-territory/msf-doctors-killed-strike-al-awda-hospital-northern-gaza-enar",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://reliefweb.int/report/occupied-palestinian-territory/palestine-red-crescent-society-calls-international-community-provide-protection-its-headquarters-and-medical-and-ems-teams-khan-yunis-enar?_gl=1*gdoink*_ga*NTAxNTI1MzAwLjE3NzM3Njg1NDA.*_ga_E60ZNX2F68*czE3NzUwNjU5MzckbzckZzEkdDE3NzUwNjkyNDUkajYwJGwwJGgw",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 0,
    "secondary": 4
   },
@@ -970,6 +4216,16 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://remix.aljazeera.com/aje/PalestineRemix/stories-from-the-intifada.html",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 1,
    "secondary": 0
   },
@@ -979,6 +4235,24 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.reuters.com/world/middle-east/israeli-missiles-strike-gaza-hospital-patients-evacuated-2025-04-13",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.reuters.com/world/middle-east/israeli-strikes-kill-two-gaza-destroy-medicine-storage-warehouses-2026-08-01",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 0,
    "secondary": 2
   },
@@ -988,6 +4262,16 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.reutersconnect.com/item/israeli-forces-target-al-awda-hospital-in-gaza/dGFnOnJldXRlcnMuY29tLDIwMjU6bmV3c21sX01UMUFOQURMMDAwUUowUzZK",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 1,
    "secondary": 0
   },
@@ -997,6 +4281,32 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.scholarsatrisk.org/report/2023-10-19-university-college-of-applied-sciences-gaza",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.scholarsatrisk.org/report/2023-11-06-al-azhar-niversity/",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.scholarsatrisk.org/report/2023-11-06-al-azhar-university/",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 1,
    "secondary": 2
   },
@@ -1006,6 +4316,16 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.smh.com.au/world/middle-east/hamas-says-hundreds-killed-in-israeli-airstrike-on-gaza-city-hospital-20231018-p5ed3n.html",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 0,
    "secondary": 1
   },
@@ -1015,6 +4335,56 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://t.me/MOHMediaGaza/4818",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://t.me/MOHMediaGaza/4846",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://t.me/MOHMediaGaza/4978",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://t.me/MOHMediaGaza/5015",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://t.me/MOHMediaGaza/5054",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://t.me/QudsN/406731",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 0,
    "secondary": 6
   },
@@ -1024,6 +4394,24 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.terrorism-info.org.il",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.terrorism-info.org.il/en/escalation-from-the-gaza-strip-operation-guardian-of-the-walls-summary",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 2,
    "secondary": 0
   },
@@ -1033,6 +4421,16 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.theelders.org",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 1,
    "secondary": 0
   },
@@ -1042,6 +4440,56 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.theguardian.com/world/2023/dec/01/hospital-damage-in-gaza-during-israeli-offensive-a-visual-investigation",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.theguardian.com/world/2023/dec/31/israeli-airstrikes-kill-dozens-in-gaza-netanyahu-hamas",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.theguardian.com/world/2024/jan/23/us-calls-on-israel-to-protect-staff-and-patients-as-military-reportedly-storms-gaza-hospital",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.theguardian.com/world/2025/apr/13/gaza-city-hospital-hit-ahli-baptist-civil-defence-agency-israel-intensifies-military-operations",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.theguardian.com/world/gallery/2026/mar/09/a-giant-cat-and-a-back-to-the-future-reunion-photos-of-the-day-monday?CMP=share_btn_url",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.theguardian.com/world/video/2023/oct/18/gaza-footage-shows-ahli-arab-hospital-blast-video",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 2,
    "secondary": 4
   },
@@ -1051,6 +4499,16 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.thenationalnews.com/mena/2024/03/01/gaza-israel-universities-war",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 1,
    "secondary": 0
   },
@@ -1060,6 +4518,16 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://threadreaderapp.com/thread/1793700811870290179.html",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 0,
    "secondary": 1
   },
@@ -1069,6 +4537,32 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.timesofisrael.com/idf-opens-probe-after-social-media-posts-show-troops-burning-quran-other-books-in-gaza",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.timesofisrael.com/liveblog_entry/un-chief-deeply-alarmed-by-idf-strike-on-gaza-hospital-on-sunday",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.timesofisrael.com/senior-idf-officer-censured-over-demolition-of-gaza-university-without-approval",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 1,
    "secondary": 2
   },
@@ -1078,6 +4572,16 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.trtarabi.com/article/15629669",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 1,
    "secondary": 0
   },
@@ -1087,6 +4591,16 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.ucc.org/destruction-of-ucc-partners-clinic-university-in-gaza-during-holy-week-testifies-to-horrors-of-ongoing-crisis",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 0,
    "secondary": 1
   },
@@ -1096,6 +4610,112 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.un.org",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.un.org/sg/en/content/sg/statement/2021-05-12/secretary-generals-remarks-the-general-assembly-the-situation-the-middle-east-delivered",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.un.org/unispal",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.un.org/unispal/document/auto-insert-177183",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.un.org/unispal/document/auto-insert-185919",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.un.org/unispal/document/auto-insert-187399",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.un.org/unispal/document/auto-insert-188596",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.un.org/unispal/document/auto-insert-201184",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.un.org/unispal/document/commission-of-inquiry-on-2018-protests-in-opt-final-report-a-hrc-40-74-advance-unedited",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.un.org/unispal/wp-content/uploads/2015/06/cb361dbaf1526e5785257e6c004b1e94_20150622%20--%20OHCHR%20Report%20on%20Palestine%20%5BA_HRC_CRP_4%5D.pdf",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.un.org/unispal/wp-content/uploads/2024/12/20241231-attacks-hospitals-gaza-en.pdf",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.un.org/sg/en/content/highlight/2024-03-04.html",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.un.org/unispal/document/thematic-report-attacks-on-hospitals-31dec24",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 11,
    "secondary": 2
   },
@@ -1105,6 +4725,16 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.universityworldnews.com/post.php?story=20231012162739531",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 0,
    "secondary": 1
   },
@@ -1114,6 +4744,200 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.unocha.org/publications/report/occupied-palestinian-territory/hostilities-gaza-strip-and-israel-flash-update-168",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unocha.org/publications/report/occupied-palestinian-territory/hostilities-gaza-strip-and-israel-flash-update-290",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unocha.org/publications/report/occupied-palestinian-territory/hostilities-gaza-strip-and-israel-flash-update-39",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unocha.org/publications/report/occupied-palestinian-territory/hostilities-gaza-strip-and-israel-flash-update-43",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unocha.org/publications/report/occupied-palestinian-territory/hostilities-gaza-strip-and-israel-flash-update-46",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unocha.org/publications/report/occupied-palestinian-territory/hostilities-gaza-strip-and-israel-flash-update-48",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unocha.org/publications/report/occupied-palestinian-territory/hostilities-gaza-strip-and-israel-flash-update-62",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unocha.org/publications/report/occupied-palestinian-territory/hostilities-gaza-strip-and-israel-flash-update-64",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unocha.org/publications/report/occupied-palestinian-territory/hostilities-gaza-strip-and-israel-flash-update-65",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unocha.org/publications/report/occupied-palestinian-territory/hostilities-gaza-strip-and-israel-flash-update-68",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unocha.org/publications/report/occupied-palestinian-territory/hostilities-gaza-strip-and-israel-flash-update-87",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unocha.org/publications/report/occupied-palestinian-territory/humanitarian-situation-update-245-gaza-strip",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unocha.org/publications/report/occupied-palestinian-territory/humanitarian-situation-update-249-gaza-strip",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unocha.org/publications/report/occupied-palestinian-territory/humanitarian-situation-update-251-gaza-strip-enarhe",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unocha.org/publications/report/occupied-palestinian-territory/humanitarian-situation-update-292-gaza-strip",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unocha.org/publications/report/occupied-palestinian-territory/humanitarian-situation-update-297-gaza-strip",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unocha.org/publications/report/occupied-palestinian-territory/humanitarian-situation-update-302-gaza-strip-enarhe",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unocha.org/publications/report/occupied-palestinian-territory/humanitarian-situation-update-323-gaza-strip",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unocha.org/publications/report/occupied-palestinian-territory/humanitarian-situation-update-326-gaza-strip",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unocha.org/publications/report/occupied-palestinian-territory/gaza-humanitarian-response-update-22-december-2024-4-january-2025",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unocha.org/publications/report/occupied-palestinian-territory/hostilities-gaza-strip-and-israel-flash-update-143",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unocha.org/publications/report/occupied-palestinian-territory/hostilities-gaza-strip-and-israel-flash-update-144-enarhe",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unocha.org/publications/report/occupied-palestinian-territory/hostilities-gaza-strip-and-israel-flash-update-145",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unocha.org/publications/report/occupied-palestinian-territory/hostilities-gaza-strip-and-israel-flash-update-146-enarhe",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 19,
    "secondary": 5
   },
@@ -1123,6 +4947,16 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://unpacked.media/unpacking-the-gaza-hospital-blast-and-the-misinformation-that-followed",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 0,
    "secondary": 1
   },
@@ -1132,6 +4966,448 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.unrwa.org",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unrwa.org/palestine-refugees",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unrwa.org/resources/reports/unrwa-situation-report-10-gaza-strip-and-west-bank-including-east-jerusalem",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unrwa.org/resources/reports/unrwa-situation-report-104-situation-gaza-strip-and-west-bank-including-east-Jerusalem",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unrwa.org/resources/reports/unrwa-situation-report-106-situation-gaza-strip-and-west-bank-including-east-Jerusalem",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unrwa.org/resources/reports/unrwa-situation-report-107-situation-gaza-strip-and-west-bank-including-east-Jerusalem",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unrwa.org/resources/reports/unrwa-situation-report-108-situation-gaza-strip-and-west-bank-including-east-Jerusalem",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unrwa.org/resources/reports/unrwa-situation-report-111-situation-gaza-strip-and-west-bank-including-east-Jerusalem",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unrwa.org/resources/reports/unrwa-situation-report-112-situation-gaza-strip-and-west-bank-including-east-Jerusalem",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unrwa.org/resources/reports/unrwa-situation-report-124-situation-gaza-strip-and-west-bank-including-east-Jerusalem",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unrwa.org/resources/reports/unrwa-situation-report-128-situation-gaza-strip-and-west-bank-including-east-Jerusalem",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unrwa.org/resources/reports/unrwa-situation-report-142-situation-gaza-strip-and-west-bank-including-east-jerusalem",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unrwa.org/resources/reports/unrwa-situation-report-145-situation-gaza-strip-and-west-bank-including-east-jerusalem",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unrwa.org/resources/reports/unrwa-situation-report-147-situation-gaza-strip-and-west-bank-including-east-jerusalem",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unrwa.org/resources/reports/unrwa-situation-report-155-situation-gaza-strip-and-west-bank-including-east-jerusalem",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unrwa.org/resources/reports/unrwa-situation-report-156-situation-gaza-strip-and-west-bank-including-east-jerusalem",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unrwa.org/resources/reports/unrwa-situation-report-165-situation-gaza-strip-and-west-bank-including-east-jerusalem",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unrwa.org/resources/reports/unrwa-situation-report-166-situation-gaza-strip-and-west-bank-including-east-jerusalem",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unrwa.org/resources/reports/unrwa-situation-report-171-situation-gaza-strip-and-west-bank-including-east-jerusalem",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unrwa.org/resources/reports/unrwa-situation-report-172-situation-gaza-strip-and-west-bank-including-east-jerusalem",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unrwa.org/resources/reports/unrwa-situation-report-175-situation-gaza-strip-and-west-bank-including-east-jerusalem",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unrwa.org/resources/reports/unrwa-situation-report-178-situation-gaza-strip-and-west-bank-including-east-jerusalem",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unrwa.org/resources/reports/unrwa-situation-report-183-situation-gaza-strip-and-west-bank-including-east-jerusalem",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unrwa.org/resources/reports/unrwa-situation-report-184-situation-gaza-strip-and-west-bank-including-east-jerusalem",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unrwa.org/resources/reports/unrwa-situation-report-188-situation-gaza-strip-and-west-bank-including-east-jerusalem",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unrwa.org/resources/reports/unrwa-situation-report-189-situation-gaza-strip-and-west-bank-including-east-jerusalem",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unrwa.org/resources/reports/unrwa-situation-report-193-situation-gaza-strip-and-west-bank-including-east-jerusalem",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unrwa.org/resources/reports/unrwa-situation-report-201-situation-gaza-strip-and-west-bank-including-east-jerusalem",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unrwa.org/resources/reports/unrwa-situation-report-207-situation-gaza-strip-and-west-bank-including-east-jerusalem",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unrwa.org/resources/reports/unrwa-situation-report-208-situation-gaza-strip-and-west-bank-including-east-jerusalem",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unrwa.org/resources/reports/unrwa-situation-report-215-humanitarian-crisis-gaza-strip-and-occupied-west-bank",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unrwa.org/resources/reports/unrwa-situation-report-218-humanitarian-crisis-gaza-strip-and-occupied-west-bank",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unrwa.org/resources/reports/unrwa-situation-report-221-humanitarian-crisis-gaza-strip-and-occupied-west-bank",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unrwa.org/resources/reports/unrwa-situation-report-28-situation-gaza-strip-and-west-bank-including-east-Jerusalem",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unrwa.org/resources/reports/unrwa-situation-report-29-situation-gaza-strip-and-west-bank-including-east-Jerusalem",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unrwa.org/resources/reports/unrwa-situation-report-3-situation-gaza-strip",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unrwa.org/resources/reports/unrwa-situation-report-38-situation-gaza-strip-and-west-bank-including-east-Jerusalem",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unrwa.org/resources/reports/unrwa-situation-report-44-situation-gaza-strip-and-west-bank-including-east-Jerusalem",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unrwa.org/resources/reports/unrwa-situation-report-47-situation-gaza-strip-and-west-bank-including-east-Jerusalem",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unrwa.org/resources/reports/unrwa-situation-report-48-situation-gaza-strip-and-west-bank-including-east-Jerusalem",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unrwa.org/resources/reports/unrwa-situation-report-5-situation-gaza-strip",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unrwa.org/resources/reports/unrwa-situation-report-50-situation-gaza-strip-and-west-bank-including-east-Jerusalem",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unrwa.org/resources/reports/unrwa-situation-report-63-situation-gaza-strip-and-west-bank-including-east-0",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unrwa.org/resources/reports/unrwa-situation-report-66-situation-gaza-strip-and-west-bank-including-east-Jerusalem",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unrwa.org/resources/reports/unrwa-situation-report-67-situation-gaza-strip-and-west-bank-including-east-Jerusalem",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unrwa.org/resources/reports/unrwa-situation-report-69-situation-gaza-strip-and-west-bank-including-east-Jerusalem",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unrwa.org/resources/reports/unrwa-situation-report-70-situation-gaza-strip-and-west-bank-including-east-Jerusalem",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unrwa.org/resources/reports/unrwa-situation-report-72-situation-gaza-strip-and-west-bank-including-east-Jerusalem",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unrwa.org/resources/reports/unrwa-situation-report-77-situation-gaza-strip-and-west-bank-including-east-Jerusalem",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unrwa.org/resources/reports/unrwa-situation-report-79-situation-gaza-strip-and-west-bank-including-east-Jerusalem",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unrwa.org/resources/reports/unrwa-situation-report-86-situation-gaza-strip-and-west-bank-including-east-Jerusalem",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unrwa.org/resources/reports/unrwa-situation-report-109-situation-gaza-strip-and-west-bank-including-east-Jerusalem",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unrwa.org/resources/reports/unrwa-situation-report-110-situation-gaza-strip-and-west-bank-including-east-Jerusalem",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unrwa.org/resources/reports/unrwa-situation-report-202-situation-gaza-strip-and-west-bank-including-east-jerusalem",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.unrwa.org/resources/reports/unrwa-situation-report-49-situation-gaza-strip-and-west-bank-including-east-Jerusalem",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 51,
    "secondary": 4
   },
@@ -1141,6 +5417,16 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://uspg.org.uk/news/palm-sunday-gaza-statement",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 0,
    "secondary": 1
   },
@@ -1150,6 +5436,24 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.visionscarto.net/Libraries-Al-Quds-Open-University",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.visionscarto.net/nehru-library-english",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 1,
    "secondary": 1
   },
@@ -1159,6 +5463,16 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://voices.uchicago.edu/scholasticide/timeline",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 1,
    "secondary": 0
   },
@@ -1168,6 +5482,16 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.wafa.ps/Pages/Details/90325",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 0,
    "secondary": 1
   },
@@ -1177,6 +5501,16 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://warwingsdaily.com/wars/the-first-intifada-1987-1993",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 1,
    "secondary": 0
   },
@@ -1186,6 +5520,16 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.washingtonpost.com/world/2023/12/21/al-shifa-hospital-gaza",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 0,
    "secondary": 1
   },
@@ -1195,6 +5539,24 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://web.facebook.com/MOHGaza1994/posts/719695030335442/?paipv=0&eav=AfZ3LS8Ew4JEex2-xFikshDGpuI7tmn9TvAQmUTb7IN1I77ZLW1IzCyEQnQ1m8T91us&_rdc=1&_rdr",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://web.facebook.com/watch/?v=1179911253807453",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 0,
    "secondary": 2
   },
@@ -1204,6 +5566,32 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.who.int",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.who.int/news/item/06-04-2024-six-months-of-war-leave-al-shifa-hospital-in-ruins--who-mission-report",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.who.int/news/item/22-05-2025-health-system-at-breaking-point-as-hostilities-further-intensify--who-warns",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 1,
    "secondary": 2
   },
@@ -1213,6 +5601,24 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.wsj.com/livecoverage/israel-hamas-war-gaza-strip-2023-11-04/card/palestinian-health-group-says-15-killed-in-israeli-attack-on-ambulance-convoy-5tPTa8OuT1Fak7a9xzW4",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.wsj.com/world/middle-east/what-we-know-about-the-gaza-hospital-blast-b238a40d",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 0,
    "secondary": 2
   },
@@ -1222,6 +5628,16 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.wsws.org/en/articles/2025/04/14/ftkr-a14.html",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 0,
    "secondary": 1
   },
@@ -1231,6 +5647,408 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://x.com/PalestineRCS/status/1731034803468693535",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://x.com/PalestineRCS/status/1731771874009297338",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://x.com/PalestineRCS/status/1737422394602471892",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://x.com/PalestineRCS/status/1758443176707178754",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://x.com/DrTedros/status/1742297186614816836/video/2",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://x.com/DrTedros/status/1774477221278765248?s=20",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://x.com/DrTedros/status/1932146182673019239",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://x.com/DrTedros/status/1968373487711748470",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://x.com/IDF/status/1772176376197521626",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://x.com/Israel_katz/status/1967210017008013424?s=20",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://x.com/MSF/status/1758107841297105037",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://x.com/MiddleEastEye/status/1728473137300320383?s=20",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://x.com/PalestineRCS/status/1733070757310144906",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://x.com/PalestineRCS/status/1733883435800744331",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://x.com/PalestineRCS/status/1737787660834386214",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://x.com/PalestineRCS/status/1738908991281918312",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://x.com/PalestineRCS/status/1739977947417821346?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1739977947417821346%7Ctwgr%5E860b5b6fb1f5d1bcaf8c822d2d4e085e0ac7dd89%7Ctwcon%5Es1_&ref_url=https%3A%2F%2Fwww.aljazeera.com%2Fnews%2Fliveblog%2F2023%2F12%2F27%2Fisrael-hamas-war-live-israel-vows-to-intensify-gaza-fighting",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://x.com/PalestineRCS/status/1740276619775021118?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1740276619775021118%7Ctwgr%5Eb7173b761bd84219a948f3ebd8e3c415a4fd9e3a%7Ctwcon%5Es1_&ref_url=https%3A%2F%2Fwww.aljazeera.com%2Fnews%2Fliveblog%2F2023%2F12%2F28%2Fisrael-hamas-war-live-israel-kills-palestinians-in-central-gaza-attacks",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://x.com/PalestineRCS/status/1740372039507099684/photo/1",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://x.com/PalestineRCS/status/1742261949562232883",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://x.com/PalestineRCS/status/1749749183643283740?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1749749183643283740%7Ctwgr%5E9072b36b3601ebade08ebe058902c1203b1cf717%7Ctwcon%5Es1_&ref_url=https%3A%2F%2Fwww.aljazeera.com%2Fnews%2Fliveblog%2F2024%2F1%2F23%2Fisraels-war-on-gaza-ground-shaking-in-hospital-amid-israeli-attacks",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://x.com/PalestineRCS/status/1750142580384223677?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1750142580384223677%7Ctwgr%5E67caef9006690d62f8df1733f131f6d16502ae8e%7Ctwcon%5Es1_&ref_url=https%3A%2F%2Fwww.aljazeera.com%2Fnews%2Fliveblog%2F2024%2F1%2F24%2Fisraels-war-on-gaza-live-14-killed-as-israel-hits-two-homes-in-jabalia",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://x.com/PalestineRCS/status/1750192020776186166?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1750192020776186166%7Ctwgr%5E67caef9006690d62f8df1733f131f6d16502ae8e%7Ctwcon%5Es1_&ref_url=https%3A%2F%2Fwww.aljazeera.com%2Fnews%2Fliveblog%2F2024%2F1%2F24%2Fisraels-war-on-gaza-live-14-killed-as-israel-hits-two-homes-in-jabalia",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://x.com/PalestineRCS/status/1750223196589064604?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1750223196589064604%7Ctwgr%5E67caef9006690d62f8df1733f131f6d16502ae8e%7Ctwcon%5Es1_&ref_url=https%3A%2F%2Fwww.aljazeera.com%2Fnews%2Fliveblog%2F2024%2F1%2F24%2Fisraels-war-on-gaza-live-14-killed-as-israel-hits-two-homes-in-jabalia",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://x.com/PalestineRCS/status/1750502791296995678?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1750502791296995678%7Ctwgr%5Edebb2eb1b186cbff46156291450d86e8e7a56cc8%7Ctwcon%5Es1_&ref_url=https%3A%2F%2Fwww.aljazeera.com%2Fnews%2Fliveblog%2F2024%2F1%2F25%2Fisraels-war-on-gaza-live-israel-kills-9-in-un-shelter-sparking-outrage",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://x.com/PalestineRCS/status/1752355885832110114?s=20",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://x.com/PalestineRCS/status/1752617466042163322",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://x.com/PalestineRCS/status/1752681313109172282?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1752681313109172282%7Ctwgr%5Ea789729772131ee94d6ff8ac3d7cf1e4cab87495%7Ctwcon%5Es1_&ref_url=https%3A%2F%2Fwww.aljazeera.com%2Fnews%2Fliveblog%2F2024%2F1%2F31%2Fisraels-war-on-gaza-live-severe-hunger-in-gaza-as-aid-trucks-surrounded",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://x.com/PalestineRCS/status/1752760526252200009?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1752760526252200009%7Ctwgr%5Ea789729772131ee94d6ff8ac3d7cf1e4cab87495%7Ctwcon%5Es1_&ref_url=https%3A%2F%2Fwww.aljazeera.com%2Fnews%2Fliveblog%2F2024%2F1%2F31%2Fisraels-war-on-gaza-live-severe-hunger-in-gaza-as-aid-trucks-surrounded",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://x.com/PalestineRCS/status/1752782168357548065?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1752782168357548065%7Ctwgr%5Ea789729772131ee94d6ff8ac3d7cf1e4cab87495%7Ctwcon%5Es1_&ref_url=https%3A%2F%2Fwww.aljazeera.com%2Fnews%2Fliveblog%2F2024%2F1%2F31%2Fisraels-war-on-gaza-live-severe-hunger-in-gaza-as-aid-trucks-surrounded",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://x.com/PalestineRCS/status/1753037664704409856",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://x.com/PalestineRCS/status/1753413275511927158",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://x.com/PalestineRCS/status/1753849364030599188",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://x.com/PalestineRCS/status/1755929388036595958",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://x.com/PalestineRCS/status/1756054550513861032",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://x.com/PalestineRCS/status/1757913574431920631?s=20",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://x.com/PalestineRCS/status/1758428788541587659",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://x.com/PalestineRCS/status/1758853332926353605?s=20",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://x.com/PalestineRCS/status/1759115199854850395?s=20",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://x.com/PalestineRCS/status/1759489970178338896",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://x.com/PalestineRCS/status/1759577522528764227",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://x.com/PalestineRCS/status/1759982450933944757?s=20",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://x.com/PalestineRCS/status/1771842738457116737",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://x.com/PalestineRCS/status/1772223582417965154?s=20",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://x.com/PalestineRCS/status/1772374518058680709?s=20",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://x.com/PalestineRCS/status/1772625220915888309",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://x.com/PalestineRCS/status/1827343615989104963",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://x.com/QudsNen/status/1738849466965221428",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://x.com/UNLazzarini/status/1907486323553734859",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://x.com/ytirawi/status/1789942261209325757?s=46&fbclid=IwZXh0bgNhZW0CMTAAAR3j1RdjkSsbE9GV1GA9V5aEyAkGwqGc-FMhED5EGzZOcazau1nfvQL8kZw_aem_ZmFrZWR1bW15MTZieXRlcw",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 4,
    "secondary": 46
   },
@@ -1240,6 +6058,40 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.youtube.com/shorts/vTwuTkzTCwU",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.youtube.com/watch?v=E4rltTvrt_c",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.youtube.com/watch?v=Lu7V04EDcXU&t=27s",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.youtube.com/watch?v=ou8_UMrX4yk",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 0,
    "secondary": 4
   },
@@ -1249,6 +6101,24 @@
    "archived": 0,
    "pending": 0,
    "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.zochrot.org",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.zochrot.org/villages/village_details/49106/en",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
    "primary": 2,
    "secondary": 0
   }

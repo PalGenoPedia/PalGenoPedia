@@ -188,26 +188,37 @@ def load_policy(path):
 
 def write_inventory(path, rolemap, state, role_keys):
     """Write a *-domains.json: one row per domain in `rolemap` with its URL
-    count, a per-role breakdown, a sample URL, and live archived/pending/deferred
-    counts taken from `state` restricted to this map's URLs."""
+    count, a per-role breakdown, live archived/pending/deferred counts (from
+    `state`, restricted to this map's URLs), and the full `urls` list — each
+    `{u, role, status, snap, method}` — so the dashboard can expand a domain."""
+    primary_role = role_keys[0]
     inv = {}
     for u, rv in rolemap.items():
         d = domain_of(u)
         e = inv.get(d)
         if e is None:
             e = inv[d] = {"count": 0, "sample": u, "archived": 0,
-                          "pending": 0, "deferred": 0}
+                          "pending": 0, "deferred": 0, "urls": []}
             for k in role_keys:
                 e[k] = 0
         e["count"] += 1
         e[rv] = e.get(rv, 0) + 1
-        st = state.get(u, {}).get("status")
-        if st == "archived":
+        st = state.get(u, {})
+        s = st.get("status") or "new"
+        if s == "archived":
             e["archived"] += 1
-        elif st == "requested":
+        elif s == "requested":
             e["pending"] += 1
-        elif st == "deferred":
+        elif s == "deferred":
             e["deferred"] += 1
+        e["urls"].append({
+            "u": u, "role": rv, "status": s,
+            "snap": st.get("wayback") or "",
+            "method": st.get("method") or "",
+            "manual": bool(st.get("manual")),
+        })
+    for e in inv.values():
+        e["urls"].sort(key=lambda x: (x["role"] != primary_role, x["u"]))
     payload = {"generated": TODAY, "domains": dict(sorted(inv.items()))}
     with open(path, "w", encoding="utf-8", newline="\n") as fh:
         json.dump(payload, fh, ensure_ascii=False, indent=1)
@@ -329,6 +340,8 @@ def main():
         deferred = []
 
         for u, rolev in sources.items():
+            if state[u].get("manual"):       # a human recorded a snapshot — leave it
+                continue
             rule = pol_src.get(domain_of(u))
             if not rule or rule["priority"] == "skip":
                 continue
@@ -339,6 +352,8 @@ def main():
             tiers[key].append(u)
 
         for u in media:
+            if state[u].get("manual"):
+                continue
             rule = pol_med.get(domain_of(u))
             if not rule or rule["priority"] == "skip":
                 continue
@@ -362,7 +377,7 @@ def main():
                  len(tiers["ns"]), len(tiers["mh"]), len(tiers["mn"]), deferred_now),
               flush=True)
     else:
-        work = all_urls
+        work = [u for u in all_urls if not state[u].get("manual")]
 
     stale_before = (datetime.date.today() - datetime.timedelta(days=stale)).isoformat()
     saved = confirmed = skipped = failed = 0
@@ -371,8 +386,9 @@ def main():
 
     # ── phase 1: CDX confirm, threaded ────────────────────────────────────
     to_check = [u for u in work
-                if not (state[u].get("status") == "archived"
-                        and state[u].get("checked", "") >= stale_before)]
+                if not state[u].get("manual")
+                and not (state[u].get("status") == "archived"
+                         and state[u].get("checked", "") >= stale_before)]
     skipped = len(work) - len(to_check)
 
     if not check:

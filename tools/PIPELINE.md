@@ -332,8 +332,9 @@ can be `wayback` for articles and `manual` for the images it hosts.
 - **`--domains-only`** — (re)write **`data/source-domains.json`** and
   **`data/media-domains.json`** (`{ generated, domains: { "<domain>":
   {count, sample, primary/secondary or video/image, archived, pending,
-  deferred} } }`) and exit. No network. `build-records.yml` runs this on every
-  CSV change so both dashboards stay current.
+  deferred, urls: [{u, role, status, snap, method, manual}] } } }`) and exit.
+  No network. `build-records.yml` runs this on every CSV change so both
+  dashboards — including their per-domain URL expander — stay current.
 - **`--policy-only`** (the weekly run) — only touches a domain with a rule:
   - `method: wayback`, priority `high`/`normal` → the CDX + Save Page Now flow,
     **ordered**: high-primary, high-secondary, normal-primary, normal-secondary,
@@ -352,6 +353,12 @@ can be `wayback` for articles and `manual` for the images it hosts.
   social} }`), `data/archive-queue.txt` (sources), `data/media-queue.txt`,
   `data/archive-deferred.txt`, and both `*-domains.json`. Commit step
   (`if: always()` + `continue-on-error` on the archive step) stages them all.
+- **Manual snapshots.** An editor can paste a hand-made archive.today / Wayback
+  URL from the dashboard's per-domain expander — the portal writes
+  `{status: "archived", wayback: <url>, method: "manual", manual: true,
+  manual_by: <email>}` into `data/archived-links.json`. `archive_links.py`
+  **skips any `manual` entry entirely** (no CDX, no re-queue, no deferred), so a
+  human decision is never overwritten by a run.
 
 ### Consumers
 
