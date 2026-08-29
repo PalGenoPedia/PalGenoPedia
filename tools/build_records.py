@@ -930,7 +930,7 @@ def head_common(title, desc, canonical, alts, img, robots, lang):
     # two-column body, sidebar, incident cards. Loading it rather than copying
     # it means the generated pages cannot drift from the interactive view.
     a('<link rel="stylesheet" href="/Pages/War_Crimes_Stats/shared.css?v=4">')
-    a('<link rel="stylesheet" href="/Styles/record-page.css?v=24">')
+    a('<link rel="stylesheet" href="/Styles/record-page.css?v=25">')
     return L
 
 
@@ -1845,13 +1845,19 @@ def render(cfg, fac, incidents, lang, slugs, t):
                 a('<div class="detail-inc-cas">%s</div>' % "".join(cas))
             srcs = source_entries(i)
             if srcs:
-                links = " ".join(
-                    '<a class="inc-src-link" href="%s" rel="nofollow noopener" target="_blank">&#128279; %s</a>'
-                    % (e(s), e(re.sub(r"^https?://(www\.)?", "", s).split("/")[0].split(".")[0][:22]))
-                    if kind == "link" else
-                    '<span class="inc-src-text">&#128220; %s</span>' % e(s[:40])
-                    for kind, s in srcs[:8])
-                a('<div class="detail-inc-src"><strong>%s:</strong> %s</div>' % (e(t["sources"]), links))
+                parts = []
+                for kind, s in srcs[:8]:
+                    if kind == "link":
+                        parts.append(
+                            '<span class="inc-src-pair"><a class="inc-src-link" href="%s" '
+                            'rel="nofollow noopener" target="_blank">&#128279; %s</a>%s</span>'
+                            % (e(s),
+                               e(re.sub(r"^https?://(www\.)?", "", s).split("/")[0].split(".")[0][:22]),
+                               archived_link(s, t)))
+                    else:
+                        parts.append('<span class="inc-src-text">&#128220; %s</span>' % e(s[:40]))
+                a('<div class="detail-inc-src"><strong>%s:</strong> %s</div>'
+                  % (e(t["sources"]), " ".join(parts)))
             # Opens the :target dialog below. A link, not a handler, so it works
             # without scripting and the incident gets a shareable URL.
             a('<a class="inc-open" href="#%s">%s &rarr;</a>' % (anchors[_n], e(t["view_incident"])))

@@ -307,12 +307,16 @@ body { margin: 0; }
 }
 .cas-chip.injured { background: #fff7ed; color: #ea580c; }
 .cas-chip.hw { background: #eff6ff; color: #0284c7; }
-.detail-inc-src { font-size: 0.82rem; color: var(--text-secondary); }
+.detail-inc-src {
+    font-size: 0.82rem; color: var(--text-secondary);
+    display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem;
+}
 .inc-src-link {
     display: inline-block; margin-inline-end: 0.5rem;
     color: var(--primary-red, #dc2626); text-decoration: none;
 }
 .inc-src-link:hover { text-decoration: underline; }
+.detail-inc-src .inc-src-pair .inc-src-link { margin-inline-end: 0; }
 /* Cited but not a URL - a name or outlet noted in the source without a link.
    Shown as plain attributed text, never as an href, so it isn't mistaken for
    a working link. */

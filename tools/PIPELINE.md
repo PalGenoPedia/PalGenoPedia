@@ -325,10 +325,11 @@ Three generators read that file:
   massacre page gets a small 🕰 link to its Wayback copy;
 - `regenerate.py` — `data/events.json` sources carry an `archived_url`;
 - `build_records.py` (`archive_of()` / `archived_link()` / `archive_bar()`) —
-  in each incident modal on a `/war-crimes/<section>/<slug>/` page, every web
-  source in the Sources list gets an inline marker beside it: a 🕰 link to our
-  Wayback snapshot, or a greyed ⏳ *archiving pending* while the capture is
-  queued. A one-line caption under the list totals it up
+  on every `/war-crimes/<section>/<slug>/` page — both the incident cards in
+  the list and the incident modal — each web source gets an inline marker
+  beside it: a 🕰 link to our Wayback snapshot, or a greyed ⏳ *archiving
+  pending* while the capture is queued. In the modal a one-line caption totals
+  it up
   (`{k} of {n} web sources independently archived`). Text-only sources (no URL)
   aren't counted; nothing shows until at least one of the incident's source
   URLs is tracked.
@@ -613,7 +614,7 @@ must be written with the Write tool, not piped through a heredoc.
 **Cache-busting.** Changed JS/CSS gets `?v=N` bumped everywhere it is
 referenced. Currently: `footer-init.js?v=6`, `header-component.js?v=5`,
 `partials/site-footer.html?v=6` (was `common-styles.html`),
-`dual-timeline-manager.js?v=6`, `timeline.css?v=1`, `record-page.css?v=24`,
+`dual-timeline-manager.js?v=6`, `timeline.css?v=1`, `record-page.css?v=25`,
 `record-page.js?v=5`. `transferSize: 0` in
 `performance.getEntriesByType('resource')` proves a stale cached asset.
 
