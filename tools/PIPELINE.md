@@ -297,47 +297,79 @@ direct URL — see **Pages/ is now developer-only** below.
 
 ## ⑥ Source-link archiving
 
-A separate workflow, `.github/workflows/archive-links.yml` — weekly cron +
-`workflow_dispatch` — snapshots every external source URL to the Wayback
-Machine.
+A separate workflow, `.github/workflows/archive-links.yml` — weekly cron,
+a `push` trigger on `data/archive-policy.json`, and `workflow_dispatch` —
+snapshots source URLs to the Wayback Machine. **It is opt-in per domain.**
 
-`tools/archive_links.py`:
+### The per-domain policy
 
-- collects every `http(s)` URL from `details.csv` (`source_link`), the
-  `*_incidents.csv` (`source_url_1/2`, `video_url`) and the `*-resources.csv`
-  (`url`) — ~600 unique;
-- for each: a fast **CDX** check (`web.archive.org/cdx/...`) — already
-  captured? record the snapshot. Otherwise **POST to Save Page Now**
-  (authenticated with the `IA_ACCESS` / `IA_SECRET` repo secrets — the
-  archive.org "S3-like" keys), *without* polling; the next run's CDX check
-  picks up the snapshot once it lands;
-- `--limit N` caps new submissions per run (default 50) so it converges over a
-  few weeks rather than hammering SPN;
-- writes **`data/archived-links.json`** — `{ "<url>": {status, ts, wayback,
-  social} }` — and `data/archive-queue.txt` (the deduped URL list, for a
-  future ArchiveBox job), and commits them. `data/archived-links.json` is in
-  `build-records.yml`'s trigger paths, so the pages rebuild to pick up new
-  snapshots.
+`data/archive-policy.json` (committed by the volunteer portal — see below):
 
-Three generators read that file:
+```
+{ "version": 1, "updated": "...", "updated_by": "...",
+  "domains": { "<domain>": { "priority": "high|normal|skip",
+                             "method":   "wayback|archivetoday|archivebox|manual" } } }
+```
 
-- `build_history.py` (`archived_badge()`) — each cited source on a historical
-  massacre page gets a small 🕰 link to its Wayback copy;
-- `regenerate.py` — `data/events.json` sources carry an `archived_url`;
+Domain key = lowercase host, leading `www.` stripped (`domain_of()` in
+`archive_links.py`). A domain with **no rule = skip**.
+
+### `tools/archive_links.py`
+
+- **`collect_urls()`** — every `http(s)` URL from `details.csv` (`source_link`),
+  the `*_incidents.csv` (`source_url_1/2`, `video_url`) and the
+  `*-resources.csv` (`url`). ~625 unique, ~145 distinct domains.
+- **`--domains-only`** — (re)write **`data/source-domains.json`**
+  (`{ generated, domains: { "<domain>": {count, sample, archived, pending,
+  deferred} } }`) and exit. No network. `build-records.yml` runs this on every
+  CSV change so the portal dashboard always has a current list.
+- **`--policy-only`** (the weekly run) — only touches a domain with a rule:
+  - `method: wayback`, priority `high`/`normal` → the CDX + Save Page Now flow
+    below, **high domains first**.
+  - other methods → recorded `status: "deferred", method: <m>` (no network) and
+    listed in **`data/archive-deferred.txt`** (grouped `# archivetoday` /
+    `# archivebox` / `# manual`) for the ArchiveBox layer.
+  - `skip` / no rule → left untouched.
+- **no `--policy-only`** (manual `workflow_dispatch` with `mode: full`) — every
+  URL gets the Wayback flow, ignoring the policy. The escape hatch for a full
+  sweep.
+- Wayback flow: **CDX** check (`web.archive.org/cdx/...`, threaded, 6 workers) —
+  already captured? record it. Otherwise serial **POST to Save Page Now**
+  (auth via `IA_ACCESS` / `IA_SECRET` repo secrets), no polling — next run's
+  CDX picks the snapshot up. `--limit N` caps new submissions/run;
+  `--time-budget S` stops cleanly and commits progress.
+- Writes `data/archived-links.json` (`{ "<url>": {status, ts, wayback, method,
+  social} }`), `data/archive-queue.txt`, `data/archive-deferred.txt`,
+  `data/source-domains.json`. The commit step stages all four
+  (`if: always()` + `continue-on-error` on the archive step, so a killed run
+  still persists).
+
+### Consumers
+
+- `build_history.py` (`archived_badge()`) — 🕰 link on each cited historical
+  source that has a Wayback copy.
+- `regenerate.py` — `data/events.json` sources carry `archived_url`.
 - `build_records.py` (`archive_of()` / `archived_link()` / `archive_bar()`) —
-  on every `/war-crimes/<section>/<slug>/` page — both the incident cards in
-  the list and the incident modal — each web source gets an inline marker
-  beside it: a 🕰 link to our Wayback snapshot, or a greyed ⏳ *archiving
-  pending* while the capture is queued. In the modal a one-line caption totals
-  it up
-  (`{k} of {n} web sources independently archived`). Text-only sources (no URL)
-  aren't counted; nothing shows until at least one of the incident's source
-  URLs is tracked.
+  on every `/war-crimes/<section>/<slug>/` page (incident cards **and** modal),
+  each web source gets an inline marker: 🕰 link to the Wayback snapshot; greyed
+  ⏳ *archiving pending* while queued; greyed 🕰 *queued for archive.today /
+  ArchiveBox* when the domain's method isn't Wayback. The modal adds a one-line
+  `{k} of {n} web sources independently archived` caption. Nothing shows until a
+  source URL is tracked.
 
-**Social media** (`x.com`, `facebook.com`, `instagram.com`, `tiktok.com`)
-usually captures as a login wall in Wayback — those entries are flagged
-`"social": true` and the run prints a count; archive.today them by hand
-(no API — Cloudflare + CAPTCHA + it blocks datacenter IPs).
+### The dashboard (volunteer portal)
+
+Editors/admins set the policy at `contribute.palgenopedia.org` → **Archive
+priorities**. The portal's Apps Script reads `data/source-domains.json` (raw
+GitHub) for the domain list, and commits `data/archive-policy.json` back to
+this repo via the Contents API (fine-grained PAT in the portal's Script
+Properties — repo `PalGenoPedia/PalGenoPedia` scope, contents:write). A commit
+there fires this workflow. See `PalGenoPedia-Volunteers/README.md`.
+
+**Social media** (`x.com`, `facebook.com`, …) is flagged `"social": true`;
+Wayback gets a login wall for those, so set their domains to `archivetoday`
+in the dashboard (that route has no API — Cloudflare + CAPTCHA — so it stays
+`deferred` until the ArchiveBox layer or a human handles it).
 
 ### Planned — full-text / evidentiary archiving (ArchiveBox)
 
@@ -349,9 +381,11 @@ is additive, no rework:
 - **A new workflow** (`archivebox.yml`) running ArchiveBox in Docker, either on
   a small always-on VPS or on a runner that restores the archive dir from
   object storage each run.
-- **Input:** the same URL set. `archive_links.py` already writes
-  `data/archive-queue.txt` (deduped, one URL per line) on every run — ArchiveBox
-  can `archivebox add < data/archive-queue.txt` without touching Python.
+- **Input:** `data/archive-deferred.txt` — the URLs whose domain the dashboard
+  routed to `archivebox` / `archivetoday` / `manual`, grouped by method.
+  `archivebox add < <(grep -A9999 '^# archivebox' data/archive-deferred.txt)`.
+  (`data/archive-queue.txt` still holds the full deduped set if you want
+  everything.)
 - **Artifact storage:** Cloudflare R2 or Backblaze B2 (free 10 GB) — **not**
   this repo. This is the one decision to make before building it: it
   determines whether the 🕰 links point at our copies or only at archive.org.

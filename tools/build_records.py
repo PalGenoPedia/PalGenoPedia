@@ -55,10 +55,14 @@ ROOT = os.path.dirname(HERE)
 MANIFEST = os.path.join(HERE, "_records_manifest.json")
 
 
-# url -> {"snap": <wayback url>|None, "pending": bool}, from tools/archive_links.py
-# (weekly Action, state in data/archived-links.json). Lets each incident show
-# whether we hold an independent copy of its web sources. "pending" = the URL is
-# queued for capture but the snapshot hasn't landed yet.
+# url -> {"snap", "pending", "deferred"}, from tools/archive_links.py (state in
+# data/archived-links.json). Lets each incident show whether we hold an
+# independent copy of its web sources. "pending" = queued for a Wayback capture
+# that hasn't landed; "deferred" = the domain's policy method isn't Wayback
+# (archive.today / ArchiveBox / manual — that layer owns it).
+_METHOD_LABEL = {"archivetoday": "archive.today", "archivebox": "ArchiveBox",
+                 "manual": "manual archiving", "wayback": "the Wayback Machine"}
+
 def _load_archived():
     p = os.path.join(ROOT, "data", "archived-links.json")
     try:
@@ -67,24 +71,28 @@ def _load_archived():
         return {}
     out = {}
     for u, v in d.items():
-        if v.get("status") == "archived" and v.get("wayback"):
-            out[u] = {"snap": v["wayback"], "pending": False}
-        elif v.get("status") in ("requested", "failed", "new"):
-            out[u] = {"snap": None, "pending": True}
+        st = v.get("status")
+        if st == "archived" and v.get("wayback"):
+            out[u] = {"snap": v["wayback"], "pending": False, "deferred": None}
+        elif st == "deferred":
+            out[u] = {"snap": None, "pending": False,
+                      "deferred": v.get("method", "manual")}
+        elif st in ("requested", "failed", "new"):
+            out[u] = {"snap": None, "pending": True, "deferred": None}
     return out
 
 ARCHIVED = _load_archived()
 
 
 def archive_of(url):
-    """(snap_url, pending) for a source URL. Matches archive_links.py's own
-    normalisation (no trailing slash or #fragment). (None, False) when the URL
-    is not tracked at all."""
+    """(snap_url, pending, deferred_method) for a source URL. Matches
+    archive_links.py's own normalisation (no trailing slash or #fragment).
+    (None, False, None) when the URL is not tracked at all."""
     key = (url or "").strip().rstrip("/").split("#")[0]
     e = ARCHIVED.get(key) or ARCHIVED.get(url)
     if not e:
-        return None, False
-    return e["snap"], e["pending"]
+        return None, False, None
+    return e["snap"], e["pending"], e["deferred"]
 
 # ── what to build ────────────────────────────────────────────────────────
 # Pilot scope is hospitals. The other categories are the same shape - add an
@@ -188,6 +196,7 @@ T = {
         "arch_some": "{k} of {n} web sources independently archived",
         "arch_pending": "archiving pending",
         "arch_copy": "archived",
+        "arch_deferred": "queued for {m}",
         "killed": "killed", "injured": "injured",
         "hw_killed": "health workers killed", "hw_injured": "health workers injured",
         "type": "Type", "subtype": "Sub-type", "governorate": "Governorate",
@@ -283,6 +292,7 @@ T = {
         "arch_some": "{k} von {n} Web-Quellen unabhängig archiviert",
         "arch_pending": "Archivierung ausstehend",
         "arch_copy": "archiviert",
+        "arch_deferred": "vorgemerkt für {m}",
         "killed": "getötet", "injured": "verletzt",
         "hw_killed": "getötete Beschäftigte im Gesundheitswesen",
         "hw_injured": "verletzte Beschäftigte im Gesundheitswesen",
@@ -379,6 +389,7 @@ T = {
         "arch_some": "تمت أرشفة {k} من {n} من مصادر الويب بشكل مستقل",
         "arch_pending": "الأرشفة قيد الانتظار",
         "arch_copy": "نسخة مؤرشفة",
+        "arch_deferred": "بانتظار {m}",
         "killed": "قتيلاً", "injured": "جريحاً",
         "hw_killed": "من الكوادر الصحية قتلى",
         "hw_injured": "من الكوادر الصحية جرحى",
@@ -616,16 +627,21 @@ def source_entries(inc):
 
 
 def archived_link(url, t):
-    """Inline marker shown right after a source link in the modal: a 🕰 link to
-    our Wayback snapshot, or a greyed ⏳ 'archiving pending' when the capture is
-    queued but hasn't landed. '' when the URL isn't tracked."""
-    snap, pending = archive_of(url)
+    """Inline marker shown right after a source link: a 🕰 link to our Wayback
+    snapshot; a greyed ⏳ 'archiving pending' while a capture is queued; or a
+    greyed 🕰 'queued for <method>' when the domain's policy routes it to
+    archive.today / ArchiveBox / manual. '' when the URL isn't tracked."""
+    snap, pending, deferred = archive_of(url)
     if snap:
         return (' <a class="inc-src-arch" href="%s" rel="nofollow noopener" target="_blank">'
                 '&#128368;&#65039; %s</a>' % (e(snap), e(t["arch_copy"])))
     if pending:
         return (' <span class="inc-src-arch inc-src-arch--pending">&#8987; %s</span>'
                 % e(t["arch_pending"]))
+    if deferred:
+        lbl = _METHOD_LABEL.get(deferred, deferred)
+        return (' <span class="inc-src-arch inc-src-arch--pending">&#128368;&#65039; %s</span>'
+                % e(t["arch_deferred"].format(m=lbl)))
     return ""
 
 

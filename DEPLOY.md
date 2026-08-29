@@ -92,10 +92,12 @@ print('stray legacy links:', len(re.findall(r'(Pages/Current_Genocide|major-inci
   `Dataset`. `ClaimReview` deliberately omitted. Verification status is a
   `PropertyValue`.
 
-- **Source archiving.** `.github/workflows/archive-links.yml` (weekly) snapshots
-  every source URL to the Wayback Machine — `tools/archive_links.py`, state in
-  `data/archived-links.json`. Each source in `data/events.json` carries an
-  `archived_url`; generated pages show a 🕰 link. Needs repo secrets
-  `IA_ACCESS` / `IA_SECRET`. Social-media links usually fail (login wall) and
-  are flagged `social: true`. See `PIPELINE.md` ⑥ — including the planned
-  ArchiveBox layer for our own full-text copies.
+- **Source archiving.** `.github/workflows/archive-links.yml` (weekly, and on a
+  `data/archive-policy.json` push) snapshots source URLs to the Wayback Machine
+  — `tools/archive_links.py`, state in `data/archived-links.json`. It is
+  **opt-in per domain**: editors curate `data/archive-policy.json` from the
+  volunteer portal ("Archive priorities"), setting each source domain's
+  priority + method. `data/source-domains.json` (refreshed by `build-records.yml`)
+  is the domain list the dashboard reads. Each source in `data/events.json`
+  carries `archived_url`; generated pages show a 🕰 link. Needs repo secrets
+  `IA_ACCESS` / `IA_SECRET`. See `PIPELINE.md` ⑥.

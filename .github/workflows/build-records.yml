@@ -78,6 +78,11 @@ jobs:
       - name: Rebuild sitemap
         run: python tools/build_sitemap.py
 
+      # Keep the archive dashboard's domain inventory in step with the CSVs,
+      # independent of the (policy-driven, weekly) archive run. No network.
+      - name: Refresh source-domain inventory
+        run: python tools/archive_links.py --domains-only
+
       - name: Commit if anything changed
         run: |
           git config user.name  "github-actions[bot]"
