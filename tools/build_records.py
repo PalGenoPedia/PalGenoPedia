@@ -572,6 +572,13 @@ def read_csv(path):
         return [r for r in csv.DictReader(fh)]
 
 
+# Cache-bust version for /js/record-page.js. ONE constant: record pages, section
+# indexes and tab pages all load the same file, and when they disagreed (v=5 on
+# 60 pages, v=4 on 342) a returning visitor got the new script on some pages and
+# a cached old one on the rest. Bump this in the same commit that edits the JS.
+RECORD_JS_V = 6
+
+
 def merge_translations(base, trans, key, trans_key=None, key2=None, trans_key2=None):
     """Copy _de/_ar suffixed columns from the delta CSV onto the base rows.
 
@@ -594,7 +601,13 @@ def merge_translations(base, trans, key, trans_key=None, key2=None, trans_key2=N
         return (k, (r.get(key2) or "").strip()) if key2 else k
 
     def tkey(r):
-        k = (r.get(tk) or "").strip() or (r.get(key) or "").strip()
+        # NO fallback to r[key]. When trans_key is None, tk IS key and a
+        # fallback would be a no-op; when trans_key was given it names an
+        # anchor column, and a blank anchor means "this row cannot be joined",
+        # not "use the delta's own id". The delta's own detail_id/id is the
+        # row-count formula that drifts — falling back to it is precisely how
+        # a row gets another event's language stamped onto it.
+        k = (r.get(tk) or "").strip()
         return (k, (r.get(tk2) or "").strip()) if key2 else k
 
     idx = {}
@@ -733,12 +746,31 @@ def warn_orphan_incidents(cfg, facilities, incidents, by_fac):
             for r in read_csv(os.path.join(ROOT, cfg["dir"], cfg["facilities"] + ".csv"))
             if not is_blank(r.get("id"))}
     orphan_ids = sorted(i for i in all_ids if i not in real)
-    dropped = sum(len(by_fac[i]) for i in orphan_ids) + len(by_fac.get("", []))
+    orphan_rows = [r for i in orphan_ids for r in by_fac[i]] + by_fac.get("", [])
+    dropped = len(orphan_rows)
     if dropped:
         detail = ", ".join('"%s"' % i for i in orphan_ids[:4]) or "blank facility_id"
         print("  WARNING: %d of %d incident(s) dropped - facility_id matches no"
               % (dropped, len(incidents)))
         print("           facility in %s.csv: %s" % (cfg["facilities"], detail))
+        # Name every dropped row. The count alone is not actionable: fixing this
+        # means adding a facility row (or correcting a name) in the Sheet, and
+        # that needs the incident_id and the facility_name it failed to match.
+        for r in sorted(orphan_rows, key=lambda x: clean(x.get("incident_id"))):
+            print("             %-8s %-46s %s"
+                  % (clean(r.get("incident_id")),
+                     clean(r.get("facility_name")) or "(blank facility_name)",
+                     clean(r.get("starting_date"))))
+        # Surface it on the Actions run page too. A WARNING that only exists in
+        # the middle of a 300-line build log is a WARNING nobody reads, and this
+        # one means documented incidents are missing from the published site.
+        if os.environ.get("GITHUB_ACTIONS"):
+            print("::warning title=%d %s incident(s) not published::%s"
+                  % (dropped, cfg["key"],
+                     "facility_id matches no row in %s.csv - %s. Add the missing "
+                     "facility (or fix the name) in the Sheet."
+                     % (cfg["facilities"],
+                        ", ".join(clean(r.get("incident_id")) for r in orphan_rows))))
     filtered = sorted(i for i in all_ids if i in real and i not in known)
     if filtered:
         print("  (%d incident(s) belong to facilities filtered out by type)"
@@ -1165,7 +1197,7 @@ def page_footer(cfg, lang, t):
       '<a href="/data/events.csv">events.csv</a> &middot; <a href="/llms.txt">llms.txt</a></p>')
     a("</div>")
     a("</div>")
-    a('<script src="/js/record-page.js?v=5" defer></script>')
+    a('<script src="/js/record-page.js?v=%d" defer></script>' % RECORD_JS_V)
     a("</body>")
     a("</html>")
     return L
@@ -1950,7 +1982,7 @@ def render(cfg, fac, incidents, lang, slugs, t):
     # is complete without it; this only saves the script hard-coding English.
     a('<script>window.RP_LABELS=%s;</script>'
       % json.dumps({"all": t["all"], "types": t["type_labels"]}, ensure_ascii=False))
-    a('<script src="/js/record-page.js?v=4" defer></script>')
+    a('<script src="/js/record-page.js?v=%d" defer></script>' % RECORD_JS_V)
     a("</body>")
     a("</html>")
     return CRLF.join(L) + CRLF, substantive
@@ -2034,7 +2066,7 @@ def render_index(cfg, entries, lang, t):
     a("</div>")
     a("</div>")
 
-    a('<script src="/js/record-page.js?v=4" defer></script>')
+    a('<script src="/js/record-page.js?v=%d" defer></script>' % RECORD_JS_V)
     a("</body>")
     a("</html>")
     return CRLF.join(L) + CRLF

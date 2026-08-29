@@ -1,0 +1,7 @@
+{
+ "version": 1,
+ "updated": "",
+ "updated_by": "",
+ "_comment": "Per-domain archiving rules for source URLs, maintained by editors at contribute.palgenopedia.org. Written by the portal's Apps Script via the GitHub Contents API; read by tools/archive_links.py --policy-only. A domain with no rule here is skipped. Do not hand-edit: the portal overwrites this file wholesale.",
+ "domains": {}
+}

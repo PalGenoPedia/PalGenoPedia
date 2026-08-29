@@ -70,6 +70,16 @@ split by era — see **③ → The historical workbooks** and **⑤** below.
 | Historical Events (pre 2023-10-07) | `1fTNCpO6vhsRZz_OrHNs7b4B7aVotfcA0XH8yygybkPo` | `Events` | `Details` | `pre/` |
 | Historical Events (Ongoing) | `1Wtn0bzCfUGv8KaLGv01Ogzw7blkRXyuq6J114y7KbyY` | `Events` | `Details` | `recent/` |
 
+> **These spreadsheet IDs are public.** This file is committed to a no-build
+> Pages repo, so it is served verbatim at
+> `https://palgenopedia.org/tools/PIPELINE.md`, and the volunteer portal's
+> `Code.gs` carried the same IDs in its public git history before it was
+> gitignored (see `PalGenoPedia-Volunteers/README.md` → *Known exposures and
+> accepted risks*). A Sheets ID is not a credential — but that makes each
+> workbook's **sharing setting** the only control there is. Every one of the
+> seven must stay *restricted*, never "Anyone with the link". Re-check after
+> copying a workbook or adding a section.
+
 **Two spelling traps, both load-bearing:**
 
 - The religious tab is spelled **`Religous`** (missing the `i`). The export
@@ -564,6 +574,23 @@ mirroring the timeline modal.
 
 > Both CSVs export thousands of blank padding rows. A row counts only when it
 > has the required keys (`id` for events, `event_id` + `category` for details).
+
+### Nothing gates a submission before it publishes
+
+`build_history.py` `load()` keeps a detail row when it has an `event_id` and a
+`category`. That is the whole filter. `reviewed_by` exists on both tabs, is
+written by nobody and read by nothing — so a `Details` row a volunteer appends
+through the portal (`add_hist_details`, which needs only the allow-list, not
+the editor role) is live on the site at the next `syncAll()` + build, and flows
+straight into `data/events.json`, `feed.xml`/`feed.rss` and the JSON-LD that
+`robots.txt` actively invites GPTBot / ClaudeBot / CCBot to ingest.
+
+That is the intended MVP trust model — **the allow-list is the review** — not
+an oversight. Content is escaped through `B.e()` everywhere, so the exposure is
+editorial, not injection. If a pre-publication gate is ever wanted, the hook is
+a `reviewed_by` filter here and in `regenerate.py`; turning it on with the
+column empty would unpublish all ~1,370 existing detail rows, so it needs a
+backfill in the same change.
 
 ### Translation differs from the facility sheets
 

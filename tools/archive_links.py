@@ -95,10 +95,22 @@ def _is_social(url):
     return any(h == s or h.endswith("." + s) for s in SOCIAL)
 
 
+# EXTRACT urls rather than split on separators. Splitting only on whitespace,
+# ";" and "," left ~20 cells where two URLs are glued by a stray quote
+# (`.../blast/""https://prc.org.uk/...`) as a single bogus "URL" that was
+# POSTed to Save Page Now, counted against a real domain in the inventory, and
+# could never archive. A findall keeps every genuinely-separated URL exactly as
+# before, and additionally recovers the second URL out of a glued pair. Note the
+# character class still permits ":" and "/", so a wrapped
+# web.archive.org/web/<ts>/http://... stays ONE match and is dropped by
+# SKIP_HOSTS below, unchanged.
+URL_RE = re.compile(r"""https?://[^\s;,"'<>|]+""")
+
+
 def _urls(val):
-    """Split one cell into clean http(s) URLs, dropping our own / archive hosts."""
+    """Every clean http(s) URL in one cell, dropping our own / archive hosts."""
     out = []
-    for u in re.split(r"[\s;,]+", (val or "").strip()):
+    for u in URL_RE.findall(val or ""):
         u = u.strip().rstrip("/").split("#")[0]
         if not u.lower().startswith(("http://", "https://")):
             continue
@@ -328,10 +340,22 @@ def main():
         sources = {u: r for u, r in sources.items() if u in keep}
         media = {u: k for u, k in media.items() if u in keep}
 
-    # drop state for URLs no longer cited anywhere
+    # Drop state for URLs no longer cited anywhere — EXCEPT the ones an editor
+    # recorded by hand from the dashboard. A source_link edited in the Sheet
+    # (a typo fix, a swapped outlet) changes the key, and without this the very
+    # next CSV push would silently delete a snapshot a human went and found.
+    # Machine-derived state is cheap to rebuild; a manual entry is not.
     live = set(all_urls)
+    orphan_manual = 0
     for dead in [u for u in state if u not in live]:
+        if state[dead].get("manual"):
+            orphan_manual += 1
+            continue
         del state[dead]
+    if orphan_manual:
+        print("  note: %d manual snapshot(s) kept for URLs no longer cited in "
+              "any CSV — a source link may have been edited in the Sheet"
+              % orphan_manual)
 
     # ── --domains-only: refresh both inventories and stop ──────────────────
     if domains_only:
@@ -358,6 +382,20 @@ def main():
     if policy_only:
         pol_src = load_policy(POLICY_FILE)
         pol_med = load_policy(MEDIA_POLICY_FILE)
+        # Archiving is opt-in per domain, so "no rules" is a legitimate state —
+        # but it is indistinguishable from a broken/absent policy file, and it
+        # means this run will do nothing at all. Say which it is, every time.
+        if not pol_src and not pol_med:
+            missing = [f for f in (POLICY_FILE, MEDIA_POLICY_FILE)
+                       if not os.path.exists(f)]
+            print("  WARNING: no archiving policy is in effect — this run will "
+                  "not archive anything.")
+            if missing:
+                print("           %s does not exist in the repo yet."
+                      % ", ".join(os.path.relpath(f, ROOT) for f in missing))
+            print("           Set each source domain's priority + method in the "
+                  "volunteer portal (Archive priorities / Media archiving); "
+                  "domains with no rule are skipped by design.")
         tiers = {"hp": [], "hs": [], "np": [], "ns": [], "mh": [], "mn": []}
         deferred = []
 
