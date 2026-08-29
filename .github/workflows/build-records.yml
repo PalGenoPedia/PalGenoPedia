@@ -110,9 +110,22 @@ jobs:
           feed.rss, sitemap, injected SEO blocks). Do not edit the generated
           files by hand - the next run overwrites them."
 
-          # Another push may have landed while this run was building.
-          git pull --rebase origin main
-          git push origin HEAD:main
+          # syncAll() fires ~36 commits back-to-back, each triggering this
+          # workflow; even with cancel-in-progress the survivor races the tail
+          # of that flood and loses the push. Our commit only touches generated
+          # output (flat Historical_Massacres/*.csv, data/, HTML) — disjoint
+          # from the sync's pre/ recent/ War_Crimes_Stats/ — so the rebase is
+          # clean; it's just the fetch→push window. Retry it; if it truly can't
+          # land, exit 0 — the next sync-triggered run regenerates the same
+          # output from the same CSVs.
+          for i in $(seq 1 6); do
+            git fetch origin main
+            git rebase origin/main || { git rebase --abort || true; echo "rebase clash on attempt $i"; sleep 15; continue; }
+            git push origin HEAD:main && { echo "pushed (attempt $i)"; exit 0; }
+            echo "attempt $i lost the race; retrying in 15s"; sleep 15
+          done
+          echo "::warning::build could not push after 6 tries — next run will pick it up"
+          exit 0
 
       - name: Summary
         if: always()
