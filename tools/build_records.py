@@ -187,6 +187,7 @@ T = {
         "sources": "Sources",
         "arch_some": "{k} of {n} web sources independently archived",
         "arch_pending": "archiving pending",
+        "arch_copy": "archived",
         "killed": "killed", "injured": "injured",
         "hw_killed": "health workers killed", "hw_injured": "health workers injured",
         "type": "Type", "subtype": "Sub-type", "governorate": "Governorate",
@@ -281,6 +282,7 @@ T = {
         "sources": "Quellen",
         "arch_some": "{k} von {n} Web-Quellen unabhängig archiviert",
         "arch_pending": "Archivierung ausstehend",
+        "arch_copy": "archiviert",
         "killed": "getötet", "injured": "verletzt",
         "hw_killed": "getötete Beschäftigte im Gesundheitswesen",
         "hw_injured": "verletzte Beschäftigte im Gesundheitswesen",
@@ -376,6 +378,7 @@ T = {
         "sources": "المصادر",
         "arch_some": "تمت أرشفة {k} من {n} من مصادر الويب بشكل مستقل",
         "arch_pending": "الأرشفة قيد الانتظار",
+        "arch_copy": "نسخة مؤرشفة",
         "killed": "قتيلاً", "injured": "جريحاً",
         "hw_killed": "من الكوادر الصحية قتلى",
         "hw_injured": "من الكوادر الصحية جرحى",
@@ -612,32 +615,35 @@ def source_entries(inc):
     return out
 
 
+def archived_link(url, t):
+    """Inline marker shown right after a source link in the modal: a 🕰 link to
+    our Wayback snapshot, or a greyed ⏳ 'archiving pending' when the capture is
+    queued but hasn't landed. '' when the URL isn't tracked."""
+    snap, pending = archive_of(url)
+    if snap:
+        return (' <a class="inc-src-arch" href="%s" rel="nofollow noopener" target="_blank">'
+                '&#128368;&#65039; %s</a>' % (e(snap), e(t["arch_copy"])))
+    if pending:
+        return (' <span class="inc-src-arch inc-src-arch--pending">&#8987; %s</span>'
+                % e(t["arch_pending"]))
+    return ""
+
+
 def archive_bar(srcs, t):
-    """A strip under the Sources list showing which cited web pages we hold an
-    independent Wayback copy of. Archived ones link to the snapshot; queued ones
-    are greyed with "archiving pending". Text-only sources have no URL to archive
-    and are not counted. Returns '' when no source URL is tracked yet."""
+    """One-line caption under the Sources list: how many of the cited web pages
+    we hold an independent Wayback copy of. The per-source 🕰 links (see
+    archived_link) carry the detail. Text-only sources have no URL and aren't
+    counted. '' until at least one source URL is tracked."""
     links = [s for k, s in srcs if k == "link"]
     if not links:
         return ""
-    items, n_arch = [], 0
-    for u in links:
-        snap, pending = archive_of(u)
-        host = re.sub(r"^https?://(www\.)?", "", u).split("/")[0]
-        if snap:
-            n_arch += 1
-            items.append(
-                '<a class="iab-item" href="%s" rel="nofollow noopener" target="_blank">'
-                '&#128368;&#65039; %s</a>' % (e(snap), e(host)))
-        elif pending:
-            items.append(
-                '<span class="iab-item iab-pending">&#8987; %s <em>(%s)</em></span>'
-                % (e(host), e(t["arch_pending"])))
-    if not items:
+    n_arch = sum(1 for u in links if archive_of(u)[0])
+    n_track = sum(1 for u in links if any(archive_of(u)))
+    if not n_track:
         return ""
     summary = t["arch_some"].format(k=n_arch, n=len(links))
-    return ('<div class="inc-archive-bar"><span class="iab-h">&#128368;&#65039; %s</span>'
-            '<div class="iab-items">%s</div></div>' % (e(summary), "".join(items)))
+    return ('<div class="inc-archive-bar"><span class="iab-h">&#128368;&#65039; %s</span></div>'
+            % e(summary))
 
 
 def fmt_date(inc):
@@ -924,7 +930,7 @@ def head_common(title, desc, canonical, alts, img, robots, lang):
     # two-column body, sidebar, incident cards. Loading it rather than copying
     # it means the generated pages cannot drift from the interactive view.
     a('<link rel="stylesheet" href="/Pages/War_Crimes_Stats/shared.css?v=4">')
-    a('<link rel="stylesheet" href="/Styles/record-page.css?v=23">')
+    a('<link rel="stylesheet" href="/Styles/record-page.css?v=24">')
     return L
 
 
@@ -1637,8 +1643,10 @@ def incident_modal(inc, fac, lang, t, anchor, prev_a, next_a, pos, total, close_
         a('<h3 class="inc-modal-h">%s</h3><div class="inc-modal-links">' % e(t["sources"]))
         for kind, s in srcs:
             if kind == "link":
-                a('<a href="%s" rel="nofollow noopener" target="_blank">&#128279; %s</a>'
-                  % (e(s), e(re.sub(r"^https?://(www\.)?", "", s).split("/")[0])))
+                a('<span class="inc-src-pair"><a href="%s" rel="nofollow noopener" target="_blank">'
+                  '&#128279; %s</a>%s</span>'
+                  % (e(s), e(re.sub(r"^https?://(www\.)?", "", s).split("/")[0]),
+                     archived_link(s, t)))
             else:
                 a('<span class="inc-src-text">&#128220; %s</span>' % e(s))
         a("</div>")

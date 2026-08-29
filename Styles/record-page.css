@@ -625,7 +625,7 @@ body[dir="rtl"] .rp-chart svg { direction: ltr; }
 .inc-modal-cas .v.killed, .inc-modal-cas .v.injured { color: var(--primary-red, #dc2626); }
 .inc-modal-cas .v.hw { color: var(--accent-blue, #0284c7); }
 .inc-modal-cas .l { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-secondary, #64748b); }
-.inc-modal-links { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+.inc-modal-links { display: flex; flex-wrap: wrap; gap: 0.45rem; align-items: center; }
 .inc-modal-links a {
     font-size: 0.82rem;
     padding: 0.28rem 0.6rem;
@@ -636,6 +636,22 @@ body[dir="rtl"] .rp-chart svg { direction: ltr; }
     word-break: break-word;
 }
 .inc-modal-links a:hover { background: var(--bg-secondary, #f8fafc); }
+.inc-src-pair { display: inline-flex; align-items: center; gap: 0.3rem; }
+.inc-src-arch {
+    font-size: 0.72rem;
+    padding: 0.18rem 0.4rem;
+    border-radius: 5px;
+    border: 1px solid var(--border-color, #e2e8f0);
+    color: var(--text-secondary, #64748b) !important;
+    text-decoration: none;
+    white-space: nowrap;
+}
+a.inc-src-arch:hover { background: var(--bg-secondary, #f8fafc); }
+.inc-src-arch--pending {
+    border-style: dashed;
+    color: var(--text-muted, #94a3b8) !important;
+    font-style: italic;
+}
 .inc-modal-links .inc-src-text {
     font-size: 0.82rem;
     padding: 0.28rem 0.6rem;
@@ -645,44 +661,19 @@ body[dir="rtl"] .rp-chart svg { direction: ltr; }
     font-style: italic;
 }
 .inc-archive-bar {
-    margin-top: 0.6rem;
-    padding: 0.5rem 0.7rem;
-    border: 1px solid var(--border-color, #e2e8f0);
+    margin-top: 0.5rem;
+    padding: 0.4rem 0.6rem;
     border-inline-start: 3px solid var(--primary-red, #dc2626);
-    border-radius: 6px;
     background: var(--bg-secondary, #f8fafc);
+    border-radius: 4px;
 }
 .inc-archive-bar .iab-h {
-    display: block;
-    font-size: 0.75rem;
+    font-size: 0.72rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.04em;
     color: var(--text-secondary, #64748b);
 }
-.inc-archive-bar .iab-items {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.4rem;
-    margin-top: 0.4rem;
-}
-.inc-archive-bar .iab-item {
-    font-size: 0.8rem;
-    padding: 0.2rem 0.5rem;
-    border-radius: 5px;
-    border: 1px solid var(--border-color, #e2e8f0);
-    background: var(--bg-primary, #fff);
-    color: var(--primary-red, #dc2626);
-    text-decoration: none;
-    word-break: break-word;
-}
-.inc-archive-bar a.iab-item:hover { background: var(--bg-secondary, #f1f5f9); }
-.inc-archive-bar .iab-pending {
-    color: var(--text-muted, #94a3b8);
-    border-style: dashed;
-    font-style: italic;
-}
-.inc-archive-bar .iab-pending em { font-style: normal; }
 
 .inc-modal-prov { margin-top: 1.2rem; font-size: 0.78rem; color: var(--text-muted, #94a3b8); }
 
