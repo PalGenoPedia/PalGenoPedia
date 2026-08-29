@@ -3,7 +3,7 @@
  "domains": {
   "972mag.com": {
    "count": 3,
-   "sample": "https://www.972mag.com/al-ahli-hospital-gaza-blast/\"\"https://prc.org.uk/upload/library/files/Alahli-Hospital-MassacreEN.pdf",
+   "sample": "https://www.972mag.com/gaza-academia-destruction-universities",
    "archived": 0,
    "pending": 0,
    "deferred": 0,
@@ -372,7 +372,7 @@
   },
   "facebook.com": {
    "count": 20,
-   "sample": "https://www.facebook.com/trtworld/videos/israels-narrative-of-al-ahli-arab-hospital-attack-a-closer-look/716457469813692",
+   "sample": "https://www.facebook.com/mitri.raheb/videos/dar-al-kalima-university-gaza-training-center-once-a-place-for-of-creativity-and/361211246253057",
    "archived": 0,
    "pending": 0,
    "deferred": 0,
@@ -417,7 +417,7 @@
   },
   "genocide.live": {
    "count": 2,
-   "sample": "https://genocide.live/uploads/debunk-idf-claims-about-terror-tunnel-in-sheikh-hamad-hospital-1",
+   "sample": "https://genocide.live/14500",
    "archived": 0,
    "pending": 0,
    "deferred": 0,
@@ -750,7 +750,7 @@
   },
   "mondoweiss.net": {
    "count": 2,
-   "sample": "https://mondoweiss.net/2025/04/israel-just-bombed-the-last-operational-hospital-in-northern-gaza-again",
+   "sample": "https://mondoweiss.net/2023/12/operation-al-aqsa-flood-day-58-israel-kills-700-in-gaza-over-24-hours-as-palestinians-get-forced-further-south-toward-egypt",
    "archived": 0,
    "pending": 0,
    "deferred": 0,
@@ -1038,7 +1038,7 @@
   },
   "theguardian.com": {
    "count": 6,
-   "sample": "https://www.theguardian.com/world/2023/dec/01/hospital-damage-in-gaza-during-israeli-offensive-a-visual-investigation",
+   "sample": "https://www.theguardian.com/world/2023/dec/31/israeli-airstrikes-kill-dozens-in-gaza-netanyahu-hamas",
    "archived": 0,
    "pending": 0,
    "deferred": 0,
@@ -1065,7 +1065,7 @@
   },
   "timesofisrael.com": {
    "count": 3,
-   "sample": "https://www.timesofisrael.com/liveblog_entry/un-chief-deeply-alarmed-by-idf-strike-on-gaza-hospital-on-sunday",
+   "sample": "https://www.timesofisrael.com/idf-opens-probe-after-social-media-posts-show-troops-burning-quran-other-books-in-gaza",
    "archived": 0,
    "pending": 0,
    "deferred": 0,
@@ -1227,7 +1227,7 @@
   },
   "x.com": {
    "count": 50,
-   "sample": "https://x.com/PalestineRCS/status/1731771874009297338",
+   "sample": "https://x.com/ytirawi/status/1789942261209325757?s=46&fbclid=IwZXh0bgNhZW0CMTAAAR3j1RdjkSsbE9GV1GA9V5aEyAkGwqGc-FMhED5EGzZOcazau1nfvQL8kZw_aem_ZmFrZWR1bW15MTZieXRlcw",
    "archived": 0,
    "pending": 0,
    "deferred": 0,
@@ -1236,7 +1236,7 @@
   },
   "youtube.com": {
    "count": 4,
-   "sample": "https://www.youtube.com/watch?v=ou8_UMrX4yk",
+   "sample": "https://www.youtube.com/shorts/vTwuTkzTCwU",
    "archived": 0,
    "pending": 0,
    "deferred": 0,
