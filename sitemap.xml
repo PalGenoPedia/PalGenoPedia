@@ -98,520 +98,28 @@
   </url>
   <url>
     <loc>https://palgenopedia.org/war-crimes/hospitals/</loc>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/hospitals/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/hospitals/de/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/hospitals/ar/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/universities/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/universities/de/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/universities/ar/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/schools/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/schools/de/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/schools/ar/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/religious-sites/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/religious-sites/de/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/religious-sites/ar/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://palgenopedia.org/war-crimes/hospitals/de/</loc>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/hospitals/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/hospitals/de/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/hospitals/ar/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/universities/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/universities/de/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/universities/ar/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/schools/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/schools/de/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/schools/ar/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/religious-sites/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/religious-sites/de/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/religious-sites/ar/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://palgenopedia.org/war-crimes/hospitals/ar/</loc>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/hospitals/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/hospitals/de/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/hospitals/ar/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/universities/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/universities/de/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/universities/ar/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/schools/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/schools/de/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/schools/ar/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/religious-sites/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/religious-sites/de/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/religious-sites/ar/"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://palgenopedia.org/war-crimes/universities/</loc>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/hospitals/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/hospitals/de/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/hospitals/ar/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/universities/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/universities/de/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/universities/ar/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/schools/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/schools/de/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/schools/ar/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/religious-sites/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/religious-sites/de/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/religious-sites/ar/"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://palgenopedia.org/war-crimes/universities/de/</loc>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/hospitals/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/hospitals/de/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/hospitals/ar/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/universities/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/universities/de/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/universities/ar/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/schools/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/schools/de/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/schools/ar/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/religious-sites/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/religious-sites/de/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/religious-sites/ar/"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://palgenopedia.org/war-crimes/universities/ar/</loc>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/hospitals/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/hospitals/de/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/hospitals/ar/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/universities/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/universities/de/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/universities/ar/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/schools/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/schools/de/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/schools/ar/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/religious-sites/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/religious-sites/de/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/religious-sites/ar/"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://palgenopedia.org/war-crimes/schools/</loc>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/hospitals/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/hospitals/de/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/hospitals/ar/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/universities/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/universities/de/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/universities/ar/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/schools/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/schools/de/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/schools/ar/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/religious-sites/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/religious-sites/de/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/religious-sites/ar/"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://palgenopedia.org/war-crimes/schools/de/</loc>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/hospitals/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/hospitals/de/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/hospitals/ar/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/universities/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/universities/de/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/universities/ar/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/schools/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/schools/de/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/schools/ar/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/religious-sites/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/religious-sites/de/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/religious-sites/ar/"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://palgenopedia.org/war-crimes/schools/ar/</loc>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/hospitals/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/hospitals/de/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/hospitals/ar/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/universities/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/universities/de/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/universities/ar/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/schools/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/schools/de/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/schools/ar/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/religious-sites/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/religious-sites/de/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/religious-sites/ar/"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://palgenopedia.org/war-crimes/religious-sites/</loc>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/hospitals/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/hospitals/de/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/hospitals/ar/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/universities/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/universities/de/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/universities/ar/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/schools/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/schools/de/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/schools/ar/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/religious-sites/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/religious-sites/de/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/religious-sites/ar/"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://palgenopedia.org/war-crimes/religious-sites/de/</loc>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/hospitals/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/hospitals/de/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/hospitals/ar/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/universities/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/universities/de/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/universities/ar/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/schools/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/schools/de/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/schools/ar/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/religious-sites/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/religious-sites/de/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/religious-sites/ar/"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://palgenopedia.org/war-crimes/religious-sites/ar/</loc>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/hospitals/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/hospitals/de/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/hospitals/ar/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/universities/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/universities/de/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/universities/ar/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/schools/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/schools/de/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/schools/ar/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/religious-sites/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/religious-sites/de/"/>
-    <xhtml:link rel="alternate" hreflang="" href="https://palgenopedia.org/war-crimes/religious-sites/ar/"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://palgenopedia.org/war-crimes/hospitals/overview/</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/overview/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/resources/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/overview/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/resources/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/overview/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/resources/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/overview/"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://palgenopedia.org/war-crimes/hospitals/incidents/</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/overview/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/resources/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/overview/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/resources/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/overview/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/resources/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/overview/"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://palgenopedia.org/war-crimes/hospitals/timeline/</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/overview/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/resources/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/overview/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/resources/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/overview/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/resources/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/overview/"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://palgenopedia.org/war-crimes/hospitals/statistics/</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/overview/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/resources/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/overview/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/resources/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/overview/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/resources/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/overview/"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://palgenopedia.org/war-crimes/hospitals/resources/</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/overview/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/resources/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/overview/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/resources/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/overview/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/resources/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/overview/"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://palgenopedia.org/war-crimes/hospitals/de/overview/</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/overview/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/resources/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/overview/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/resources/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/overview/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/resources/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/overview/"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://palgenopedia.org/war-crimes/hospitals/de/incidents/</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/overview/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/resources/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/overview/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/resources/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/overview/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/resources/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/overview/"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://palgenopedia.org/war-crimes/hospitals/de/timeline/</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/overview/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/resources/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/overview/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/resources/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/overview/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/resources/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/overview/"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://palgenopedia.org/war-crimes/hospitals/de/statistics/</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/overview/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/resources/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/overview/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/resources/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/overview/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/resources/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/overview/"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://palgenopedia.org/war-crimes/hospitals/de/resources/</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/overview/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/resources/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/overview/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/resources/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/overview/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/resources/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/overview/"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://palgenopedia.org/war-crimes/hospitals/ar/overview/</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/overview/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/resources/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/overview/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/resources/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/overview/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/resources/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/overview/"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://palgenopedia.org/war-crimes/hospitals/ar/incidents/</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/overview/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/resources/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/overview/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/resources/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/overview/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/resources/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/overview/"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://palgenopedia.org/war-crimes/hospitals/ar/timeline/</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/overview/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/resources/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/overview/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/resources/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/overview/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/resources/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/overview/"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://palgenopedia.org/war-crimes/hospitals/ar/statistics/</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/overview/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/resources/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/overview/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/resources/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/overview/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/resources/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/overview/"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://palgenopedia.org/war-crimes/hospitals/ar/resources/</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/overview/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/resources/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/overview/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/resources/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/overview/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/resources/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/overview/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1588,6 +1096,87 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://palgenopedia.org/war-crimes/hospitals/incidents/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/incidents/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/incidents/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/incidents/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/incidents/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://palgenopedia.org/war-crimes/hospitals/de/incidents/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/incidents/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/incidents/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/incidents/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/incidents/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://palgenopedia.org/war-crimes/hospitals/ar/incidents/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/incidents/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/incidents/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/incidents/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/incidents/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://palgenopedia.org/war-crimes/hospitals/resources/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/resources/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/resources/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/resources/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/resources/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://palgenopedia.org/war-crimes/hospitals/de/resources/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/resources/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/resources/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/resources/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/resources/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://palgenopedia.org/war-crimes/hospitals/ar/resources/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/resources/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/resources/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/resources/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/resources/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://palgenopedia.org/war-crimes/hospitals/timeline/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/timeline/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/timeline/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/timeline/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/timeline/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://palgenopedia.org/war-crimes/hospitals/de/timeline/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/timeline/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/timeline/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/timeline/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/timeline/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://palgenopedia.org/war-crimes/hospitals/ar/timeline/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/timeline/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/timeline/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/timeline/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/timeline/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://palgenopedia.org/historical-events/massacres/</loc>
     <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/historical-events/massacres/ar/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/historical-events/massacres/de/"/>
@@ -2344,254 +1933,29 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://palgenopedia.org/war-crimes/religious-sites/overview/</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/overview/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/resources/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/overview/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/resources/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/overview/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/resources/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/overview/"/>
+    <loc>https://palgenopedia.org/war-crimes/religious-sites/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://palgenopedia.org/war-crimes/religious-sites/incidents/</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/overview/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/resources/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/overview/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/resources/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/overview/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/resources/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/overview/"/>
+    <loc>https://palgenopedia.org/war-crimes/religious-sites/de/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://palgenopedia.org/war-crimes/religious-sites/timeline/</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/overview/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/resources/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/overview/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/resources/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/overview/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/resources/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/overview/"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://palgenopedia.org/war-crimes/religious-sites/statistics/</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/overview/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/resources/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/overview/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/resources/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/overview/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/resources/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/overview/"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://palgenopedia.org/war-crimes/religious-sites/de/overview/</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/overview/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/resources/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/overview/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/resources/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/overview/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/resources/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/overview/"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://palgenopedia.org/war-crimes/religious-sites/de/incidents/</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/overview/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/resources/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/overview/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/resources/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/overview/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/resources/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/overview/"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://palgenopedia.org/war-crimes/religious-sites/de/timeline/</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/overview/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/resources/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/overview/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/resources/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/overview/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/resources/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/overview/"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://palgenopedia.org/war-crimes/religious-sites/de/statistics/</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/overview/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/resources/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/overview/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/resources/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/overview/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/resources/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/overview/"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://palgenopedia.org/war-crimes/religious-sites/ar/overview/</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/overview/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/resources/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/overview/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/resources/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/overview/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/resources/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/overview/"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://palgenopedia.org/war-crimes/religious-sites/ar/incidents/</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/overview/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/resources/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/overview/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/resources/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/overview/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/resources/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/overview/"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://palgenopedia.org/war-crimes/religious-sites/ar/timeline/</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/overview/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/resources/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/overview/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/resources/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/overview/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/resources/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/overview/"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://palgenopedia.org/war-crimes/religious-sites/ar/statistics/</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/overview/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/resources/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/overview/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/resources/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/overview/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/resources/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/overview/"/>
+    <loc>https://palgenopedia.org/war-crimes/religious-sites/ar/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3028,254 +2392,83 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://palgenopedia.org/war-crimes/schools/overview/</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/overview/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/resources/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/overview/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/resources/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/overview/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/resources/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/schools/overview/"/>
+    <loc>https://palgenopedia.org/war-crimes/religious-sites/incidents/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/incidents/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/incidents/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/incidents/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/incidents/"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://palgenopedia.org/war-crimes/schools/incidents/</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/overview/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/resources/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/overview/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/resources/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/overview/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/resources/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/schools/overview/"/>
+    <loc>https://palgenopedia.org/war-crimes/religious-sites/de/incidents/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/incidents/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/incidents/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/incidents/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/incidents/"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://palgenopedia.org/war-crimes/schools/timeline/</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/overview/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/resources/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/overview/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/resources/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/overview/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/resources/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/schools/overview/"/>
+    <loc>https://palgenopedia.org/war-crimes/religious-sites/ar/incidents/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/incidents/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/incidents/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/incidents/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/incidents/"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://palgenopedia.org/war-crimes/schools/statistics/</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/overview/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/resources/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/overview/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/resources/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/overview/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/resources/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/schools/overview/"/>
+    <loc>https://palgenopedia.org/war-crimes/religious-sites/timeline/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/timeline/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/timeline/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/timeline/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/timeline/"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://palgenopedia.org/war-crimes/schools/de/overview/</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/overview/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/resources/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/overview/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/resources/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/overview/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/resources/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/schools/overview/"/>
+    <loc>https://palgenopedia.org/war-crimes/religious-sites/de/timeline/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/timeline/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/timeline/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/timeline/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/timeline/"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://palgenopedia.org/war-crimes/schools/de/incidents/</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/overview/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/resources/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/overview/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/resources/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/overview/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/resources/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/schools/overview/"/>
+    <loc>https://palgenopedia.org/war-crimes/religious-sites/ar/timeline/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/timeline/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/timeline/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/timeline/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/timeline/"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://palgenopedia.org/war-crimes/schools/de/timeline/</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/overview/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/resources/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/overview/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/resources/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/overview/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/resources/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/schools/overview/"/>
+    <loc>https://palgenopedia.org/war-crimes/schools/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/schools/"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://palgenopedia.org/war-crimes/schools/de/statistics/</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/overview/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/resources/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/overview/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/resources/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/overview/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/resources/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/schools/overview/"/>
+    <loc>https://palgenopedia.org/war-crimes/schools/de/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/schools/"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://palgenopedia.org/war-crimes/schools/ar/overview/</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/overview/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/resources/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/overview/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/resources/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/overview/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/resources/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/schools/overview/"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://palgenopedia.org/war-crimes/schools/ar/incidents/</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/overview/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/resources/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/overview/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/resources/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/overview/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/resources/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/schools/overview/"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://palgenopedia.org/war-crimes/schools/ar/timeline/</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/overview/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/resources/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/overview/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/resources/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/overview/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/resources/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/schools/overview/"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://palgenopedia.org/war-crimes/schools/ar/statistics/</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/overview/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/resources/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/overview/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/resources/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/overview/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/resources/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/schools/overview/"/>
+    <loc>https://palgenopedia.org/war-crimes/schools/ar/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/schools/"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3334,254 +2527,83 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://palgenopedia.org/war-crimes/universities/overview/</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/universities/ar/overview/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/universities/ar/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/universities/ar/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/universities/ar/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/universities/ar/resources/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/overview/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/resources/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/overview/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/resources/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/universities/overview/"/>
+    <loc>https://palgenopedia.org/war-crimes/schools/incidents/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/incidents/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/incidents/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/incidents/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/schools/incidents/"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://palgenopedia.org/war-crimes/universities/incidents/</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/universities/ar/overview/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/universities/ar/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/universities/ar/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/universities/ar/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/universities/ar/resources/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/overview/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/resources/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/overview/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/resources/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/universities/overview/"/>
+    <loc>https://palgenopedia.org/war-crimes/schools/de/incidents/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/incidents/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/incidents/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/incidents/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/schools/incidents/"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://palgenopedia.org/war-crimes/universities/timeline/</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/universities/ar/overview/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/universities/ar/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/universities/ar/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/universities/ar/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/universities/ar/resources/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/overview/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/resources/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/overview/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/resources/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/universities/overview/"/>
+    <loc>https://palgenopedia.org/war-crimes/schools/ar/incidents/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/incidents/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/incidents/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/incidents/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/schools/incidents/"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://palgenopedia.org/war-crimes/universities/statistics/</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/universities/ar/overview/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/universities/ar/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/universities/ar/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/universities/ar/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/universities/ar/resources/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/overview/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/resources/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/overview/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/resources/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/universities/overview/"/>
+    <loc>https://palgenopedia.org/war-crimes/schools/timeline/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/timeline/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/timeline/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/timeline/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/schools/timeline/"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://palgenopedia.org/war-crimes/universities/de/overview/</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/universities/ar/overview/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/universities/ar/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/universities/ar/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/universities/ar/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/universities/ar/resources/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/overview/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/resources/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/overview/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/resources/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/universities/overview/"/>
+    <loc>https://palgenopedia.org/war-crimes/schools/de/timeline/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/timeline/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/timeline/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/timeline/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/schools/timeline/"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://palgenopedia.org/war-crimes/universities/de/incidents/</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/universities/ar/overview/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/universities/ar/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/universities/ar/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/universities/ar/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/universities/ar/resources/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/overview/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/resources/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/overview/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/resources/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/universities/overview/"/>
+    <loc>https://palgenopedia.org/war-crimes/schools/ar/timeline/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/timeline/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/timeline/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/timeline/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/schools/timeline/"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://palgenopedia.org/war-crimes/universities/de/timeline/</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/universities/ar/overview/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/universities/ar/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/universities/ar/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/universities/ar/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/universities/ar/resources/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/overview/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/resources/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/overview/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/resources/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/universities/overview/"/>
+    <loc>https://palgenopedia.org/war-crimes/universities/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/universities/ar/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/universities/"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://palgenopedia.org/war-crimes/universities/de/statistics/</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/universities/ar/overview/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/universities/ar/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/universities/ar/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/universities/ar/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/universities/ar/resources/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/overview/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/resources/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/overview/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/resources/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/universities/overview/"/>
+    <loc>https://palgenopedia.org/war-crimes/universities/de/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/universities/ar/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/universities/"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://palgenopedia.org/war-crimes/universities/ar/overview/</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/universities/ar/overview/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/universities/ar/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/universities/ar/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/universities/ar/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/universities/ar/resources/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/overview/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/resources/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/overview/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/resources/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/universities/overview/"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://palgenopedia.org/war-crimes/universities/ar/incidents/</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/universities/ar/overview/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/universities/ar/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/universities/ar/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/universities/ar/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/universities/ar/resources/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/overview/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/resources/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/overview/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/resources/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/universities/overview/"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://palgenopedia.org/war-crimes/universities/ar/timeline/</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/universities/ar/overview/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/universities/ar/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/universities/ar/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/universities/ar/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/universities/ar/resources/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/overview/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/resources/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/overview/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/resources/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/universities/overview/"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://palgenopedia.org/war-crimes/universities/ar/statistics/</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/universities/ar/overview/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/universities/ar/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/universities/ar/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/universities/ar/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/universities/ar/resources/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/overview/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/resources/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/overview/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/incidents/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/timeline/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/statistics/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/resources/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/universities/overview/"/>
+    <loc>https://palgenopedia.org/war-crimes/universities/ar/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/universities/ar/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/universities/"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -3933,6 +2955,60 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/al-aqsa-universitaet-khan-younis/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/al-aqsa-university-khan-younis/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/universities/al-aqsa-university-khan-younis/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://palgenopedia.org/war-crimes/universities/incidents/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/universities/ar/incidents/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/incidents/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/incidents/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/universities/incidents/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://palgenopedia.org/war-crimes/universities/de/incidents/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/universities/ar/incidents/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/incidents/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/incidents/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/universities/incidents/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://palgenopedia.org/war-crimes/universities/ar/incidents/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/universities/ar/incidents/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/incidents/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/incidents/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/universities/incidents/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://palgenopedia.org/war-crimes/universities/timeline/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/universities/ar/timeline/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/timeline/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/timeline/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/universities/timeline/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://palgenopedia.org/war-crimes/universities/de/timeline/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/universities/ar/timeline/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/timeline/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/timeline/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/universities/timeline/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://palgenopedia.org/war-crimes/universities/ar/timeline/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/universities/ar/timeline/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/universities/de/timeline/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/universities/timeline/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/universities/timeline/"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
