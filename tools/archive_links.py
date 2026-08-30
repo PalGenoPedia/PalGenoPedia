@@ -53,6 +53,8 @@ import csv, glob, json, os, re, sys, time, datetime, urllib.parse, urllib.reques
 import concurrent.futures as _cf
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, HERE)
+from urlkey import url_key   # the one definition of "the same URL"
 ROOT = os.path.dirname(HERE)
 DATA = os.path.join(ROOT, "data")
 STATE = os.path.join(DATA, "archived-links.json")
@@ -111,7 +113,7 @@ def _urls(val):
     """Every clean http(s) URL in one cell, dropping our own / archive hosts."""
     out = []
     for u in URL_RE.findall(val or ""):
-        u = u.strip().rstrip("/").split("#")[0]
+        u = url_key(u)
         if not u.lower().startswith(("http://", "https://")):
             continue
         h = domain_of(u)
@@ -359,11 +361,22 @@ def main():
 
     # ── --domains-only: refresh both inventories and stop ──────────────────
     if domains_only:
+        # Inventories only - this mode does NOT write data/archived-links.json.
+        # Two reasons. (1) build-records.yml runs it on every CSV push, and
+        # archived-links.json is one of that workflow's own trigger paths, so
+        # writing it here fired a second, pointless build every single time.
+        # (2) the write would persist the prune above, and pruning is the
+        # archive workflow's job, not a side effect of rebuilding pages. The
+        # inventories read `state` for their archived/pending/deferred counts;
+        # they never needed it saved back.
+        if check:
+            print("archive_links --check --domains-only: would write "
+                  "source-domains.json (%d domains) + media-domains.json (%d)"
+                  % (len({domain_of(u) for u in sources}),
+                     len({domain_of(u) for u in media})))
+            return
         n1 = write_inventory(SOURCE_DOMAINS_FILE, sources, state, ("primary", "secondary"))
         n2 = write_inventory(MEDIA_DOMAINS_FILE, media, state, ("video", "image"))
-        if not check:
-            with open(STATE, "w", encoding="utf-8", newline="\n") as fh:
-                json.dump(dict(sorted(state.items())), fh, ensure_ascii=False, indent=1)
         print("archive_links: wrote source-domains.json (%d) + media-domains.json (%d)" % (n1, n2))
         return
 
@@ -463,6 +476,18 @@ def main():
                 done += 1
                 if done % 50 == 0:
                     print("  ... %d/%d" % (done, len(to_check)), flush=True)
+                # The budget used to guard only phase 2. CDX throttles hard, and
+                # 6 workers x 3 retries x 12s over ~600 URLs can burn the whole
+                # allowance before a single Save Page Now submission goes out, so
+                # a throttled run would spend everything confirming and archive
+                # nothing new. Stop collecting here and leave phase 2 a slice;
+                # results already in `state` are kept and written.
+                if budget and time.time() - started > budget * CDX_BUDGET_SHARE:
+                    print("  time budget: stopping CDX at %d/%d, rest next run"
+                          % (done, len(to_check)), flush=True)
+                    for f2 in futs:
+                        f2.cancel()
+                    break
                 try:
                     ts = fut.result()
                 except Exception as exc:

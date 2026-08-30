@@ -51,6 +51,10 @@ CRLF = chr(13) + chr(10)
 RTL = ("ar",)
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, HERE)
+# One definition of "the same URL", shared with archive_links.py and, via
+# `B.url_key`, with build_history.py and regenerate.py. See tools/urlkey.py.
+from urlkey import url_key
 ROOT = os.path.dirname(HERE)
 MANIFEST = os.path.join(HERE, "_records_manifest.json")
 
@@ -88,7 +92,7 @@ def archive_of(url):
     """(snap_url, pending, deferred_method) for a source URL. Matches
     archive_links.py's own normalisation (no trailing slash or #fragment).
     (None, False, None) when the URL is not tracked at all."""
-    key = (url or "").strip().rstrip("/").split("#")[0]
+    key = url_key(url)
     e = ARCHIVED.get(key) or ARCHIVED.get(url)
     if not e:
         return None, False, None
@@ -579,6 +583,69 @@ def read_csv(path):
 RECORD_JS_V = 6
 
 
+DASH_SEP = " — "
+ELLIPSIS = "…"
+TITLE_MAX = 60
+# A name clipped shorter than this no longer identifies the record; past it we
+# would rather overshoot TITLE_MAX than emit an anonymous title.
+MIN_NAME = 28
+HARD_MAX = 75
+
+
+def fit_title(title, limit=TITLE_MAX):
+    """Trim an assembled "Name - Qualifier | Site" title to SERP width.
+
+    Google renders roughly 580px of title, about 60 characters. Past that it
+    truncates - or rewrites the title wholesale, which throws away the brand
+    suffix and any control over the wording. 96 of 356 indexed titles were over
+    the line, the longest at 114 characters, entirely because some facility
+    names are very long.
+
+    Value is dropped from the least useful end first:
+      1. the " - Qualifier" segment, redundant with both the breadcrumb and the
+         URL,
+      2. then the leading name, shortened at a word boundary.
+    The " | Site" brand suffix is always kept - it is the part a Google rewrite
+    would have discarded.
+    """
+    if len(title) <= limit:
+        return title
+    head, sep, brand = title.rpartition(" | ")
+    if not sep:
+        head, brand = title, ""
+    tail = (" | " + brand) if brand else ""
+    # Shorten the NAME first and keep the qualifier. Dropping the qualifier is
+    # cheap-looking but expensive: on the event pages it is the localised
+    # section label, and event_name has no translated column - so it is the only
+    # token that differs between the EN, DE and AR variants of one event.
+    # Dropping it gave three URLs one identical title.
+    name, sep2, qual = head.rpartition(DASH_SEP)
+    if not sep2:
+        name, qual = head, ""
+    keep = (DASH_SEP + qual if qual else "") + tail
+    # A name clipped below MIN_NAME stops identifying the record, so when the
+    # qualifier squeezes it that far we let the title run past `limit` instead.
+    # Overshooting by a few characters costs some truncation in the SERP; losing
+    # the name or the qualifier costs the whole point of the title.
+    room = max(limit - len(keep) - 1, MIN_NAME)
+    out = _clip(name, room) + keep
+    if len(out) <= HARD_MAX:
+        return out
+    # Pathological: qualifier + brand alone blow the hard cap. Only here does
+    # dropping the qualifier win.
+    return _clip(name, max(limit - len(tail) - 1, MIN_NAME)) + tail
+
+
+def _clip(s, room):
+    """`s` shortened to `room` characters at a word boundary, with an ellipsis."""
+    if len(s) <= room:
+        return s
+    cut = s[:room]
+    if " " in cut:
+        cut = cut.rsplit(" ", 1)[0]
+    return cut.rstrip(" ,;:-") + ELLIPSIS
+
+
 def merge_translations(base, trans, key, trans_key=None, key2=None, trans_key2=None):
     """Copy _de/_ar suffixed columns from the delta CSV onto the base rows.
 
@@ -652,6 +719,27 @@ def source_entries(inc):
                 continue
             out.append(("link", s) if s.startswith("http") else ("text", s))
     return out
+
+
+# Media cells (image_url / video_url / archived_*) hold a comma-separated list
+# just as often as source_url_1/2 do — archive_links.py already splits them and
+# tracks each URL separately. Rendering the raw cell gave <img src="a , b"> (a
+# broken image, and a broken og:image) and <a href="a , b"> (a dead link).
+# Same extraction rule as tools/archive_links.py and tools/build_history.py.
+MEDIA_URL_RE = re.compile(r"""https?://[^\s;,"'<>|]+""")
+
+
+def media_urls(cell):
+    """Every http(s) URL in one media cell, in order."""
+    return MEDIA_URL_RE.findall(cell or "")
+
+
+def first_url(cell):
+    """The first http(s) URL in a cell, or "" — a drop-in for a raw cell that
+    was about to be used as a single src/href. Every caller already guards on
+    .startswith("http"), so "" behaves exactly as a non-URL cell did."""
+    u = media_urls(cell)
+    return u[0] if u else ""
 
 
 def archived_link(url, t):
@@ -812,6 +900,20 @@ def load_previous_slugs():
     return out
 
 
+def record_digest(f):
+    """Four hex chars derived from a record's own identifying fields.
+
+    A last-resort slug disambiguator that survives the sheet renumbering. `id`
+    does not: it is a formula counting non-blank rows, so deleting a row above
+    slides every id below it onto a different record - and a slug built from
+    one would silently move a live URL. Name, place and coordinates move only
+    when the record itself is edited, which is the moment a URL *should* move.
+    """
+    seed = "|".join(clean(f.get(k)) for k in
+                    ("name", "governorate", "area", "type", "lat", "lng"))
+    return hashlib.sha1(seed.encode("utf-8")).hexdigest()[:4]
+
+
 def assign_slugs(cfg, facilities, previous, reslug):
     """{record_id: {lang: slug}} - unique within a section and language."""
     out, taken = {}, {lang: set() for lang in LANGS}
@@ -825,14 +927,30 @@ def assign_slugs(cfg, facilities, previous, reslug):
                 out[fid][lang] = prev
                 taken[lang].add(prev)
                 continue
-            base = slugify_lang(get_field(f, "name", lang) or f.get("name"), lang) or slugify(uid or fid)
+            base = (slugify_lang(get_field(f, "name", lang) or f.get("name"), lang)
+                    or slugify(uid) or record_digest(f))
             s = base
             # A facility must never take a path segment a tab page owns, or the
             # two would fight for the same URL.
             if s in taken[lang] or s in RESERVED_SLUGS:
-                # Disambiguated with the uid, not the id - a suffix built from
-                # FAC-### would be baked into the URL and then renumber.
-                s = "%s-%s" % (base, slugify(uid or fid))
+                # Disambiguate from the RECORD, never from `id`. The old code
+                # fell back to `slugify(uid or fid)`, and no sheet carries a uid
+                # today - so in practice it baked FAC-### into the URL, which is
+                # a row number that renumbers. Try the record's own place first
+                # (readable and stable), then a digest of its identifying
+                # fields. Both move only when the record itself is edited.
+                for extra in (slugify(uid),
+                              slugify_lang(get_field(f, "area", lang) or f.get("area"), lang),
+                              slugify_lang(get_field(f, "governorate", lang) or f.get("governorate"), lang),
+                              record_digest(f)):
+                    if not extra:
+                        continue
+                    cand = "%s-%s" % (base, extra)
+                    if cand not in taken[lang] and cand not in RESERVED_SLUGS:
+                        s = cand
+                        break
+                else:
+                    s = "%s-%s" % (base, record_digest(f))
             taken[lang].add(s)
             out[fid][lang] = s
     return out
@@ -904,7 +1022,7 @@ def build_jsonld(cfg, fac, incidents, lang, slugs, name, intro, t):
         node["geo"] = {"@type": "GeoCoordinates", "latitude": lat, "longitude": lng}
     except Exception:
         pass
-    img = clean(fac.get("Image_url")) or clean(fac.get("image_url"))
+    img = first_url(clean(fac.get("Image_url")) or clean(fac.get("image_url")))
     if img.startswith("http"):
         node["image"] = img
     if place:
@@ -1150,15 +1268,26 @@ def tab_path(cfg, kind, lang):
     return section_index_path(cfg, lang) + kind + "/"
 
 
-def section_tabs(cfg, lang, t, active):
+def section_tabs(cfg, lang, t, active, full=True):
     """The tab row, shared by every page in a section.
 
     These are real links to real pages now, not hash routes into the
     interactive hub - which is the whole point of generating them.
     `active` is one of TAB_KINDS, "records", or None.
+
+    full=False drops the tabs in SITEMAP_SKIP. Used on the ~330 individual
+    facility record pages, which between them accounted for 1,650 of the 2,130
+    internal links into tab pages - 77% of them. Sending that much of the
+    section's internal linking at a page that canonicalises to the section
+    index (`overview`) or that we have asked Google not to crawl (`statistics`)
+    is spend with nothing on the other end. The section index and the tab pages
+    themselves still carry the complete row, so nothing becomes unreachable and
+    a reader one click away still sees every view.
     """
     out = [(url_quote(section_index_path(cfg, lang)), cfg["label"][lang], True, active == "records")]
     for kind in TAB_KINDS:
+        if not full and kind in SITEMAP_SKIP:
+            continue
         out.append((url_quote(tab_path(cfg, kind, lang)),
                     t["tab_" + kind], kind == "overview", active == kind))
     return out
@@ -1390,37 +1519,71 @@ def section_resources(cfg):
     return [r for r in read_csv(path) if clean(r.get("resource_title"))]
 
 
+# The five tabs are not equivalent, so they are not treated equivalently.
+#
+# CANONICAL_TO_INDEX - the tab whose content genuinely duplicates the section
+# index. /hospitals/overview/ opens with the same headline, the same sentence
+# and the same stat strip as /hospitals/ and shares 59% of its vocabulary with
+# it, against 43 words of its own. It stays live and linked for readers; it just
+# stops claiming to be a separate document.
+#
+# SITEMAP_SKIP - tabs that stay indexable and linked but are not worth asking
+# Google to crawl. `statistics` renders 67 words around a few charts; there is
+# nothing there to rank. A sitemap should only list URLs you want indexed.
+#
+# `incidents` is deliberately in neither set: 830 words, 88% of them unique to
+# it, the strongest page in a section.
+CANONICAL_TO_INDEX = ("overview",)
+SITEMAP_SKIP = ("overview", "statistics")
+
+
 def render_tab(cfg, kind, facilities, by_fac, slug_map, lang, t):
     """One of the five section tab pages."""
     label = cfg["label"][lang]
     rows = collect(cfg, facilities, by_fac, lang)
-    canonical = BASE_URL + url_quote(tab_path(cfg, kind, lang))
-    alts = [(l2, BASE_URL + url_quote(tab_path(cfg, kind, l2))) for l2 in LANGS]
-    alts.append(("x-default", BASE_URL + url_quote(tab_path(cfg, kind, "en"))))
+    self_url = BASE_URL + url_quote(tab_path(cfg, kind, lang))
+    if kind in CANONICAL_TO_INDEX:
+        # Point at the section index, and emit NO hreflang: annotations belong
+        # on canonical URLs, and the index already carries its own reciprocal
+        # set. Leaving them here would advertise a language cluster of pages
+        # that all canonicalise somewhere else.
+        canonical = BASE_URL + url_quote(section_index_path(cfg, lang))
+        alts = []
+    else:
+        canonical = self_url
+        alts = [(l2, BASE_URL + url_quote(tab_path(cfg, kind, l2))) for l2 in LANGS]
+        alts.append(("x-default", BASE_URL + url_quote(tab_path(cfg, kind, "en"))))
 
     tot_inc = len(rows)
     tot_killed = sum(r["killed"] for r in rows)
     tot_injured = sum(r["injured"] for r in rows)
     tot_hw = sum(r["hw"] for r in rows)
 
-    title = t["tabpage_title_" + kind].format(section=label, site=SITE)
+    title = fit_title(t["tabpage_title_" + kind].format(section=label, site=SITE))
     desc = t["tabpage_desc_" + kind].format(section=label.lower(), n=len(facilities), i=tot_inc)
     h1 = t["tabpage_h1_" + kind].format(section=label)
 
-    jsonld = [{
-        "@context": "https://schema.org", "@type": "CollectionPage",
-        "@id": canonical + "#page", "url": canonical, "name": title,
-        "description": desc, "inLanguage": lang,
-        "isPartOf": {"@id": BASE_URL + "/#website"},
-    }, {
+    jsonld = []
+    if kind not in CANONICAL_TO_INDEX:
+        # A page that canonicalises elsewhere should not also assert its own
+        # CollectionPage identity - the section index already owns that, and two
+        # documents claiming to be the same collection is the confusion the
+        # canonical was added to remove. The breadcrumb stays: it describes where
+        # the URL sits, which is true either way.
+        jsonld.append({
+            "@context": "https://schema.org", "@type": "CollectionPage",
+            "@id": canonical + "#page", "url": canonical, "name": title,
+            "description": desc, "inLanguage": lang,
+            "isPartOf": {"@id": BASE_URL + "/#website"},
+        })
+    jsonld.append({
         "@context": "https://schema.org", "@type": "BreadcrumbList",
         "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": t["home"], "item": BASE_URL + "/"},
             {"@type": "ListItem", "position": 2, "name": label,
              "item": BASE_URL + url_quote(section_index_path(cfg, lang))},
-            {"@type": "ListItem", "position": 3, "name": h1, "item": canonical},
-        ]},
-    ]
+            {"@type": "ListItem", "position": 3, "name": h1, "item": self_url},
+        ]})
 
     # A tab with nothing in it is a thin page. The resources tab renders an
     # empty state until a <section>-resources.csv exists, and asking Google to
@@ -1654,7 +1817,7 @@ def incident_modal(inc, fac, lang, t, anchor, prev_a, next_a, pos, total, close_
     iid = clean(inc.get("incident_id"))
     fname = get_field(fac, "name", lang) or clean(fac.get("name"))
     place = ", ".join([x for x in [clean(fac.get("area")), clean(fac.get("governorate"))] if x])
-    img = clean(inc.get("image_url")) or clean(inc.get("archived_image"))
+    img = first_url(clean(inc.get("image_url")) or clean(inc.get("archived_image")))
 
     a('<div class="inc-modal" id="%s" role="dialog" aria-labelledby="%s-t" tabindex="-1">' % (anchor, anchor))
     a('<a class="inc-modal-scrim" href="%s" aria-label="%s" tabindex="-1"></a>' % (close_href, e(t["close"])))
@@ -1717,9 +1880,13 @@ def incident_modal(inc, fac, lang, t, anchor, prev_a, next_a, pos, total, close_
         if bar:
             a(bar)
 
-    vids = [(clean(inc.get("video_url")), t["watch_video"]),
-            (clean(inc.get("archived_video")), t["archived_video"])]
-    vids = [v for v in vids if v[0].startswith("http")]
+    # One cell can hold several videos; each gets its own link, numbered after
+    # the first so the label still reads as one source group.
+    vids = []
+    for cell, lbl in ((clean(inc.get("video_url")), t["watch_video"]),
+                      (clean(inc.get("archived_video")), t["archived_video"])):
+        for i, url in enumerate(media_urls(cell), start=1):
+            vids.append((url, lbl if i == 1 else "%s [%d]" % (lbl, i)))
     if vids:
         a('<h3 class="inc-modal-h">%s</h3><div class="inc-modal-links">' % e(t["video_evidence"]))
         for url, lbl in vids:
@@ -1756,7 +1923,7 @@ def render(cfg, fac, incidents, lang, slugs, t):
     post = get_field(fac, "post_war_status", lang)
     pre = clean(fac.get("pre_war_status"))
     place = ", ".join([x for x in [clean(fac.get("area")), clean(fac.get("governorate"))] if x])
-    img = clean(fac.get("Image_url")) or clean(fac.get("image_url"))
+    img = first_url(clean(fac.get("Image_url")) or clean(fac.get("image_url")))
     beds = clean(fac.get("beds_pre_war"))
 
     killed = sum(num(i.get("civilians_killed")) for i in incidents)
@@ -1786,7 +1953,7 @@ def render(cfg, fac, incidents, lang, slugs, t):
     alts_rel = [(l2, url_quote(rel_url(cfg, slugs, l2))) for l2 in LANGS]
     index_href = url_quote(section_index_path(cfg, lang))
 
-    title = "%s \u2014 %s | %s" % (name, section_label, SITE)
+    title = fit_title("%s \u2014 %s | %s" % (name, section_label, SITE))
     desc = intro[:150].rstrip() + ("\u2026" if len(intro) > 150 else "") if intro else \
         t["meta_tpl"].format(name=name, place=place or "Gaza", n=len(incidents))
 
@@ -1809,7 +1976,7 @@ def render(cfg, fac, incidents, lang, slugs, t):
     # since a record page sits inside it.
     L.extend(page_subheader(name, subtitle, index_href,
                             t["back_to"].format(section=section_label),
-                            section_tabs(cfg, lang, t, "records")))
+                            section_tabs(cfg, lang, t, "records", full=False)))
 
     # ── hero ──
     a('<div class="detail-hero"><div class="detail-hero-inner">')
@@ -1879,7 +2046,7 @@ def render(cfg, fac, incidents, lang, slugs, t):
             d_short = get_field(i, "description", lang)
             d_full = get_field(i, "full_discription", lang)
             a('<article class="detail-inc-card type-%s">' % cls)
-            iimg = clean(i.get("image_url")) or clean(i.get("archived_image"))
+            iimg = first_url(clean(i.get("image_url")) or clean(i.get("archived_image")))
             if iimg.startswith("http"):
                 a('<img class="detail-inc-img" src="%s" alt="%s" loading="lazy" referrerpolicy="no-referrer">' % (e(iimg), e(result or attack or name)))
             a('<div class="detail-inc-body">')
@@ -2005,7 +2172,7 @@ def render_index(cfg, entries, lang, t):
 
     total_inc = sum(x["incidents"] for x in entries)
     total_killed = sum(x["killed"] for x in entries)
-    title = t["index_title"].format(section=section_label, site=SITE)
+    title = fit_title(t["index_title"].format(section=section_label, site=SITE))
     desc = t["index_desc"].format(n=len(entries), section=section_label.lower(), i=total_inc)
 
     L = head_common(title, desc, canonical, alts, OG_IMAGE,
@@ -2144,8 +2311,13 @@ def main():
                     manifest.append({"url": BASE_URL + url_quote(tp), "path": tp,
                                      "lang": lang, "section": key, "id": "",
                                      "slug": kind, "incidents": 0,
-                                     "indexable": not (kind == "resources"
-                                                       and not section_resources(cfg)),
+                                     # Out of the sitemap when the tab
+                                     # canonicalises elsewhere, is too thin to
+                                     # rank, or has nothing in it yet. All three
+                                     # stay served, linked and followable.
+                                     "indexable": (kind not in SITEMAP_SKIP
+                                                   and not (kind == "resources"
+                                                            and not section_resources(cfg))),
                                      "kind": "tab"})
 
         # ── section index: /hospitals/ and its language variants ──
@@ -2162,7 +2334,7 @@ def main():
                         "name": get_field(fac, "name", lang) or clean(fac.get("name")) or slugs[lang],
                         "place": ", ".join([x for x in [clean(fac.get("area")),
                                                         clean(fac.get("governorate"))] if x]),
-                        "img": clean(fac.get("Image_url")) or clean(fac.get("image_url")),
+                        "img": first_url(clean(fac.get("Image_url")) or clean(fac.get("image_url"))),
                         "incidents": len(incs),
                         "killed": sum(num(i.get("civilians_killed")) for i in incs),
                         "path": rel_url(cfg, slugs, lang),
@@ -2180,7 +2352,7 @@ def main():
                 # keep the RAW path here: it must compare equal to the path on
                 # disk, which is unencoded UTF-8. Only the absolute URL is
                 # percent-encoded.
-                index_urls.append((BASE_URL + url_quote(ipath), ipath))
+                index_urls.append((BASE_URL + url_quote(ipath), ipath, lang, key))
 
         # remove pages for records that no longer exist
         if not check:
@@ -2212,10 +2384,18 @@ def main():
             print("    %s" % m["path"])
         return
 
-    for u, raw in index_urls:
-        manifest.append({"url": u, "path": raw, "lang": "",
-                         "section": "_index", "id": "", "slug": "",
-                         "incidents": 0, "indexable": True})
+    # lang and section are load-bearing, not decoration: build_sitemap.py groups
+    # a page's language variants by (section, id or slug) and emits one
+    # <xhtml:link hreflang> per variant. These entries used to carry lang="" and
+    # section="_index" for every section, so all twelve section indexes landed in
+    # ONE group - and /war-crimes/hospitals/ advertised the universities, schools
+    # and religious-sites indexes as its own language alternates, twelve of them,
+    # every one with hreflang="". The pages' own <head> was right; the sitemap
+    # contradicted it, which is how Google decides to ignore hreflang entirely.
+    for u, raw, lang, key in index_urls:
+        manifest.append({"url": u, "path": raw, "lang": lang,
+                         "section": key, "id": "", "slug": "",
+                         "incidents": 0, "indexable": True, "kind": "index"})
 
     with open(MANIFEST, "w", encoding="utf-8", newline="\n") as fh:
         json.dump({"generated": datetime.date.today().isoformat(),

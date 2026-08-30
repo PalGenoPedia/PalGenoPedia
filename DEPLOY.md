@@ -4,7 +4,7 @@ The machine-readable layer (`data/`, the feeds, the JSON-LD) that crawlers and
 LLM ingestors read. See `tools/PIPELINE.md` for the whole build; this file
 covers just this layer.
 
-Last verified: 2026-08-28.
+Last verified: 2026-08-30.
 
 ---
 
@@ -91,6 +91,29 @@ print('stray legacy links:', len(re.findall(r'(Pages/Current_Genocide|major-inci
 - **Schema choices.** Per-event = `schema.org/Article`. Collection =
   `Dataset`. `ClaimReview` deliberately omitted. Verification status is a
   `PropertyValue`.
+
+  Since 2026-08-30 the **generated pages agree with this file.** They used to
+  disagree: `build_history.py` emitted a top-level `Event` per event page and
+  `build_records.py` a top-level `Hospital` / `School` / `CollegeOrUniversity` /
+  `PlaceOfWorship` per facility page, while this layer already emitted `Article`
+  for the same records. Both now emit **`Article` + `about`**, with the event or
+  the facility as the described entity.
+
+  Two things that markup was actually claiming, and no longer does:
+
+  - the event pages carried `eventStatus: EventScheduled` plus
+    `eventAttendanceMode: OfflineEventAttendanceMode` — the exact shape Google's
+    Events rich result consumes, i.e. an in-person event at that place on that
+    date going ahead as scheduled. It was the only `EventScheduled` on the site
+    (81 blocks against 1,095 `EventHappened`). Site-wide it is now 1,176 / 0.
+  - the facility pages carried `areaServed`, a service-area claim about
+    institutions that were destroyed. Dropped.
+
+  Nothing was lost: none of those types produced a rich result for this content.
+  `BreadcrumbList` is what Google actually renders here, and it is untouched at
+  484 blocks. `about` is also the property knowledge-graph and LLM ingestion
+  pipelines read to bind a document to an entity, which matters given
+  `robots.txt` invites GPTBot / ClaudeBot / CCBot by name.
 
 - **Source archiving.** `.github/workflows/archive-links.yml` (weekly, and on a
   `data/archive-policy.json` push) snapshots source URLs to the Wayback Machine

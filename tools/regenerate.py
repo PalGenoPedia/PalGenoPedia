@@ -17,7 +17,7 @@ here is derived. `verification_status` is hardcoded "verified"; casualty min/max
 are parsed from the raw strings; `period` is by date (>= 2023-10-07 = current).
 Run after build_history.py so the manifest URLs are current.
 """
-import json, os, sys, re, datetime
+import io, json, os, sys, re, datetime
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import build_records as B
@@ -223,7 +223,7 @@ def write_feeds(events):
         atom.append(f"    <summary>{escape(item_body(e))}</summary>")
         atom.append("  </entry>")
     atom.append("</feed>")
-    with open(os.path.join(DEP, "feed.xml"), "w", encoding="utf-8") as f:
+    with _out(os.path.join(DEP, "feed.xml"), encoding="utf-8") as f:
         f.write("\n".join(atom) + "\n")
     # RSS
     rss = ['<?xml version="1.0" encoding="UTF-8"?>']
@@ -249,7 +249,7 @@ def write_feeds(events):
         rss.append("    </item>")
     rss.append("  </channel>")
     rss.append("</rss>")
-    with open(os.path.join(DEP, "feed.rss"), "w", encoding="utf-8") as f:
+    with _out(os.path.join(DEP, "feed.rss"), encoding="utf-8") as f:
         f.write("\n".join(rss) + "\n")
 
 def parse_range(raw):
@@ -300,7 +300,7 @@ def load_events_from_csv():
             url = link if link.startswith("http") else None
             sources.append({"source": s,
                             "source_link": url,
-                            "archived_url": ARCHIVED.get((url or "").rstrip("/").split("#")[0]) if url else None,
+                            "archived_url": ARCHIVED.get(B.url_key(url)) if url else None,
                             "category": a_(d.get("category")) or None})
         war_crimes = [a_(d.get("heading_label")) for d in drows
                       if a_(d.get("category")) == "war_crime" and a_(d.get("heading_label"))]
@@ -368,6 +368,47 @@ def flat_row(e):
     return buf.getvalue().rstrip("\n")
 
 
+# ── --check ───────────────────────────────────────────────────────────────
+# This script used to accept --check silently and write anyway, which is worse
+# than rejecting the flag: `python tools/regenerate.py --check` looked like a
+# dry run and wasn't. One context manager stands in for open(...,"w"): in check
+# mode it collects the bytes and diffs them against what is on disk instead of
+# replacing it, so every output is covered without touching the eleven call
+# sites' bodies.
+CHECK = False
+_CHANGED = []
+
+
+class _out:
+    def __init__(self, path, mode="w", encoding="utf-8", newline=None):
+        self.path, self.encoding, self.newline = path, encoding, newline
+        self._buf = io.StringIO()
+        self._fh = None
+
+    def __enter__(self):
+        if CHECK:
+            return self._buf
+        self._fh = open(self.path, "w", encoding=self.encoding, newline=self.newline)
+        return self._fh
+
+    def __exit__(self, *exc):
+        if self._fh is not None:
+            return self._fh.__exit__(*exc)
+        new = self._buf.getvalue()
+        # No newline juggling: with newline="" nothing is translated on write,
+        # and reading back with the same newline= setting round-trips exactly;
+        # with newline=None the write translates to os.linesep and the read
+        # translates it back. Comparing like for like is enough either way.
+        try:
+            with open(self.path, encoding=self.encoding, newline=self.newline) as fh:
+                same = fh.read() == new
+        except OSError:
+            same = False
+        if not same:
+            _CHANGED.append(os.path.relpath(self.path, ROOT))
+        return False
+
+
 def main():
     ensure(JLD); ensure(EMB)
     events = load_events_from_csv()
@@ -381,14 +422,14 @@ def main():
                    "current": sum(1 for e in events if e["period"] == "current")},
         "events": events,
     }
-    with open(os.path.join(DATA, "events.json"), "w", encoding="utf-8") as f:
+    with _out(os.path.join(DATA, "events.json"), encoding="utf-8") as f:
         json.dump(bundle, f, ensure_ascii=False, indent=2)
     # flat CSV + ndjson exports
-    with open(os.path.join(DATA, "events.csv"), "w", encoding="utf-8", newline="") as f:
+    with _out(os.path.join(DATA, "events.csv"), encoding="utf-8", newline="") as f:
         f.write(",".join(FLAT_COLS) + "\n")
         for e in events:
             f.write(flat_row(e) + "\n")
-    with open(os.path.join(DATA, "events.ndjson"), "w", encoding="utf-8") as f:
+    with _out(os.path.join(DATA, "events.ndjson"), encoding="utf-8") as f:
         for e in events:
             f.write(json.dumps(e, ensure_ascii=False) + "\n")
 
@@ -397,30 +438,41 @@ def main():
 
     # per-event jsonld
     for e, a in zip(events, articles):
-        with open(os.path.join(JLD, f"{e['id']}.jsonld"), "w", encoding="utf-8") as f:
+        with _out(os.path.join(JLD, f"{e['id']}.jsonld"), encoding="utf-8") as f:
             json.dump(a, f, ensure_ascii=False, indent=2)
     # combined graph
     combined = {"@context": "https://schema.org", "@graph": [dataset] + articles}
-    with open(os.path.join(DATA, "events.jsonld"), "w", encoding="utf-8") as f:
+    with _out(os.path.join(DATA, "events.jsonld"), encoding="utf-8") as f:
         json.dump(combined, f, ensure_ascii=False, indent=2)
     # dataset standalone
-    with open(os.path.join(DATA, "dataset.jsonld"), "w", encoding="utf-8") as f:
+    with _out(os.path.join(DATA, "dataset.jsonld"), encoding="utf-8") as f:
         json.dump(dataset, f, ensure_ascii=False, indent=2)
     # embed snippets
     for e, a in zip(events, articles):
         block = '<script type="application/ld+json">\n' + json.dumps(a, ensure_ascii=False, indent=2) + '\n</script>\n'
-        with open(os.path.join(EMB, f"{e['id']}.html"), "w", encoding="utf-8") as f:
+        with _out(os.path.join(EMB, f"{e['id']}.html"), encoding="utf-8") as f:
             f.write(block)
     ds_block = '<script type="application/ld+json">\n' + json.dumps(dataset, ensure_ascii=False, indent=2) + '\n</script>\n'
-    with open(os.path.join(EMB, "dataset.html"), "w", encoding="utf-8") as f:
+    with _out(os.path.join(EMB, "dataset.html"), encoding="utf-8") as f:
         f.write(ds_block)
     gr_block = '<script type="application/ld+json">\n' + json.dumps(combined, ensure_ascii=False, indent=2) + '\n</script>\n'
-    with open(os.path.join(EMB, "events-graph.html"), "w", encoding="utf-8") as f:
+    with _out(os.path.join(EMB, "events-graph.html"), encoding="utf-8") as f:
         f.write(gr_block)
 
     write_feeds(events)
+    if CHECK:
+        print("regenerate --check: %d generated file(s) would change" % len(_CHANGED))
+        for rel in sorted(_CHANGED):
+            print("  " + rel)
+        sys.exit(1 if _CHANGED else 0)
     print("OK: %d events from events.csv -> data/events.json + .csv + .ndjson, "
           "JSON-LD, feed.xml, feed.rss" % len(events))
 
+
 if __name__ == "__main__":
+    KNOWN = {"--check"}
+    unknown = [a for a in sys.argv[1:] if a not in KNOWN]
+    if unknown:
+        sys.exit("regenerate.py: unknown option(s): %s (only --check)" % " ".join(unknown))
+    CHECK = "--check" in sys.argv[1:]
     main()

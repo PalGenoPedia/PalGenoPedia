@@ -1,0 +1,14 @@
+# Vendored third-party libraries: byte-identical to what cdnjs publishes.
+#
+# Leaflet, leaflet.markercluster, PapaParse and Chart.js were vendored on
+# 2026-08-30 (previously loaded from cdnjs.cloudflare.com on every page view).
+# Each file was verified against the SHA-512 that cdnjs publishes for that exact
+# version, so anyone can re-verify a checkout against upstream:
+#
+#   curl -s "https://api.cdnjs.com/libraries/leaflet/1.9.4?fields=sri"
+#   sha512sum js/vendor/leaflet-1.9.4.min.js   # compare, base64-encoded
+#
+# That check only works if the bytes never change. core.autocrlf would rewrite
+# the line endings of these text files on checkout and break it, so: hands off.
+js/vendor/**       -text
+Styles/vendor/**   -text

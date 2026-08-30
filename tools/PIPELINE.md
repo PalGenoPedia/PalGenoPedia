@@ -3,7 +3,7 @@
 How data gets from a Google Sheet to an indexed page. Written as handoff
 context — paste it into a new session before asking for changes.
 
-Last verified: 2026-08-28.
+Last verified: 2026-08-30.
 
 ---
 
@@ -135,7 +135,7 @@ readability helper, not a key.
 
 **The historical workbook is different — its translation tabs DO drift, and
 `_anchor` IS the join key there.** `Events_de` / `Details_de` (and `_ar`)
-carry a self-counting `id` / `detail_id` formula that fell ~28 rows behind the
+carry a self-counting `detail_id` formula that fell ~28 rows behind the
 base once the 80 current-genocide detail rows were added — base `DET-1291`
 then matched a delta row holding the translation of `DET-1256`, and current
 events briefly showed German text from unrelated events. Those tabs carry an
@@ -238,18 +238,30 @@ Fires on push to `main` touching:
 
 ```
 Pages/War_Crimes_Stats/**/*.csv
-Pages/Historical_Massacres/*.csv
+Pages/Historical_Massacres/pre/*.csv        ← the ERA dirs, not the flat files
+Pages/Historical_Massacres/recent/*.csv        (those are this job's own output)
+Pages/Historical_Massacres/gallery.csv      ← forward hook, no file yet
 tools/build_records.py   tools/build_history.py   tools/build_sitemap.py
-tools/regenerate.py      tools/seo_inject.py
+tools/merge_history.py   tools/regenerate.py      tools/seo_inject.py
+tools/archive_links.py   ← the job runs it (--domains-only)
 js/record-page.js        Styles/record-page.css
+data/archived-links.json partials/timeline-shell.html
 ```
 
-Runs the five generators **in this order** (each reads the previous one's
-output), then commits everything back to `main`:
+Runs **six** steps in this order (each reads the previous one's output), then
+commits everything back to `main`:
 
 ```
-build_records.py  →  build_history.py  →  regenerate.py  →  seo_inject.py  →  build_sitemap.py
+build_records.py → merge_history.py → build_history.py → regenerate.py
+                 → seo_inject.py → build_sitemap.py
+                 → archive_links.py --domains-only   (inventories only, no network)
 ```
+
+`merge_history.py` is the step that turns `pre/` + `recent/` into the flat
+`Pages/Historical_Massacres/*.csv` everything downstream reads. It **fails the
+build** rather than publish a partial set: an era directory that exists must
+supply all six files with real rows, and no flat file may keep under half the
+rows it already had (`--allow-shrink` overrides a deliberate deletion).
 
 `concurrency: cancel-in-progress: true` — a sync makes many commits and each
 fires the workflow; only the last matters, every run is a full regeneration.
@@ -272,9 +284,13 @@ python tools/build_records.py && python tools/build_history.py && \
 python tools/regenerate.py && python tools/seo_inject.py && python tools/build_sitemap.py
 ```
 
-`--check` reports without writing (`build_records`, `build_history`,
-`seo_inject`). `--reslug` forces new slugs (breaks live URLs). `--only <section>`
-limits `build_records`.
+`--check` reports without writing, on **every** generator now —
+`build_records`, `merge_history`, `build_history`, `regenerate`, `seo_inject`,
+`build_sitemap`, `archive_links`. It exits non-zero when something would change,
+so it works in a pre-commit hook. `regenerate.py` and `build_sitemap.py` used to
+accept the flag and write anyway; both now also reject unknown options rather
+than ignoring them. `--reslug` forces new slugs (breaks live URLs).
+`--only <section>` limits `build_records`.
 
 **`data/events.json` is an OUTPUT.** It used to be the hand-maintained
 canonical source. Since 2026-08-27 the CSVs are canonical and `regenerate.py`
@@ -351,7 +367,10 @@ Both policy files (committed by the volunteer portal — see below) share a shap
 ```
 
 Domain key = lowercase host, leading `www.` stripped (`domain_of()`). A domain
-with **no rule = skip**. Sources and media are separate namespaces — a domain
+with **no rule = skip**, and so is a domain whose rule is unreadable: since
+2026-08-30 `load_policy()` coerces an unrecognised `priority` or `method` to
+`skip` rather than to `normal`/`wayback`. On an opt-in system a half-written
+rule must not read as an instruction to start archiving. Sources and media are separate namespaces — a domain
 can be `wayback` for articles and `manual` for the images it hosts.
 
 ### `tools/archive_links.py`
@@ -362,8 +381,12 @@ can be `wayback` for articles and `manual` for the images it hosts.
   **`data/media-domains.json`** (`{ generated, domains: { "<domain>":
   {count, sample, primary/secondary or video/image, archived, pending,
   deferred, urls: [{u, role, status, snap, method, manual}] } } }`) and exit.
-  No network. `build-records.yml` runs this on every CSV change so both
-  dashboards — including their per-domain URL expander — stay current.
+  No network, and (since 2026-08-30) it **no longer writes
+  `data/archived-links.json`**: that file is one of `build-records.yml`'s own
+  trigger paths, so writing it fired a second, pointless build on every run —
+  and persisting the stale-state prune was never a page rebuild's job.
+  `build-records.yml` runs this on every CSV change so both dashboards —
+  including their per-domain URL expander — stay current.
 - **`--policy-only`** (the weekly run) — only touches a domain with a rule:
   - `method: wayback`, priority `high`/`normal` → the CDX + Save Page Now flow,
     **ordered**: high-primary, high-secondary, normal-primary, normal-secondary,
@@ -377,7 +400,10 @@ can be `wayback` for articles and `manual` for the images it hosts.
 - Wayback flow: **CDX** check (threaded, 6 workers) — captured? record it.
   Otherwise serial **POST to Save Page Now** (auth via `IA_ACCESS` /
   `IA_SECRET`), no polling — next run's CDX picks the snapshot up. `--limit N`
-  caps new submissions/run; `--time-budget S` stops cleanly.
+  caps new submissions/run; `--time-budget S` stops cleanly — and since
+  2026-08-30 it covers **both** phases: CDX gets 60% of the allowance
+  (`CDX_BUDGET_SHARE`) and then stops, so a throttled run can no longer spend
+  the whole budget confirming and submit nothing new.
 - Writes `data/archived-links.json` (`{ "<url>": {status, ts, wayback, method,
   social} }`), `data/archive-queue.txt` (sources), `data/media-queue.txt`,
   `data/archive-deferred.txt`, and both `*-domains.json`. Commit step
@@ -387,7 +413,10 @@ can be `wayback` for articles and `manual` for the images it hosts.
   `{status: "archived", wayback: <url>, method: "manual", manual: true,
   manual_by: <email>}` into `data/archived-links.json`. `archive_links.py`
   **skips any `manual` entry entirely** (no CDX, no re-queue, no deferred), so a
-  human decision is never overwritten by a run.
+  human decision is never overwritten by a run. The stale-state prune exempts
+  them too — editing a `source_link` in the Sheet changes the key, and until
+  2026-08-30 the next CSV push silently deleted the snapshot an editor had gone
+  and found.
 
 ### Consumers
 
@@ -442,7 +471,14 @@ is additive, no rework:
   or `regenerate.py`.
 - **Render:** extend `archived_badge()` (build_history.py) from one 🕰 link to a
   short list — ~5 lines.
-- **Gotcha:** `archive_links.py` normalises URLs as `rstrip("/").split("#")[0]`;
+- **The key.** `tools/urlkey.py` `url_key()` is the single definition of "the
+  same URL" — `strip()`, `rstrip("/")`, drop the `#fragment`, touch nothing
+  else. `archive_links.py` (writer) and `build_records.py` / `build_history.py` /
+  `regenerate.py` (readers) all import it; there used to be four copy-pasted
+  expressions with three different behaviours. The portal's `setArchivedUrl`
+  keeps a hand-written copy because it is JavaScript — if the rule changes,
+  change it there too.
+- **Gotcha:** `url_key()` normalises URLs as `rstrip("/").split("#")[0]`;
   ArchiveBox normalises differently. Whatever merges the two must key
   consistently or lookups miss.
 - The `*_incidents.csv` sheets already carry `archived_resources` /
@@ -529,7 +565,7 @@ Incident deep links: `…/<slug>/#incident-2025-08-02-artillery-shelling`
 | religious-sites | ~20 | ~25 | ~75 | ~60 |
 | massacres | **27 events** (17 historical + 10 current-genocide) | ~1,370 details | 84 event pages + 3 timeline index pages | all |
 
-`sitemap.xml`: ~367 URLs (14 static, 5 data files, ~348 record pages) —
+`sitemap.xml`: 361 URLs (14 static, 5 data files, 342 record pages) —
 excludes the `NOINDEX_PATHS` entries under `Pages/` and every redirect stub.
 Exact counts shift with the CSVs; the build prints them.
 
@@ -639,10 +675,11 @@ and an internal link is what a human or crawler actually finds by browsing:
 - **`noindex, follow`** added via `NOINDEX_PATHS` (kept in sync between
   `tools/seo_inject.py` and `tools/build_sitemap.py`) for the pages that stay
   live at their old URL with no replacement page of their own:
-  `Pages/Historical_Massacres/massacres.html`,
-  `Pages/nakba_villages_map.html`, and four `Pages/War_Crimes_Stats/stat-*`
-  pages (hospitals-attacked, religious-sites, schools-destroyed,
-  universities-damaged).
+  `Pages/Historical_Massacres/massacres.html` and four
+  `Pages/War_Crimes_Stats/stat-*` pages (hospitals-attacked, religious-sites,
+  schools-destroyed, universities-damaged) — five paths, and the two lists are
+  identical. (`Pages/nakba_villages_map.html` was on this list until the file
+  itself was deleted; it is not in either `NOINDEX_PATHS` any more.)
 - **Sitemap exclusion** for the same set, via the same `NOINDEX_PATHS` guard
   in `build_sitemap.py`'s `served_static()`.
 

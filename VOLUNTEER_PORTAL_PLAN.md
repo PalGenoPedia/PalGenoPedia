@@ -1,10 +1,21 @@
 # Volunteer Contribution Portal — architecture plan
 
-> Not built yet. A login-gated subdomain where volunteers document incidents
-> through a structured form instead of editing Google Sheets directly, with
+> **BUILT AND LIVE at `contribute.palgenopedia.org`** since 2026-08-26; all
+> three phases below have shipped. This file is kept as the *design rationale*
+> — why the shape is what it is — not as a to-do list. The authoritative
+> description of what actually exists is
+> `PalGenoPedia-Volunteers/README.md`, and the pipeline it feeds is
+> `tools/PIPELINE.md` ③ and ⑤.
+>
+> Originally written 2026-08-24 as planning-only. Statuses updated 2026-08-30.
+> Where the built system diverged from this plan, the divergence is called out
+> inline — see **Why Apps Script Web App over a custom backend** (identity) and
+> **Phased rollout** (all phases shipped).
+>
+> A login-gated subdomain where volunteers document incidents through a
+> structured form instead of editing Google Sheets directly, with
 > duplicate-checking and live facility counts — every submission lands in the
-> same sheets the existing review process already uses. Planning only, dated
-> 2026-08-24.
+> same sheets the existing review process already uses.
 
 ---
 
@@ -22,6 +33,13 @@
 7. On submit, the data is added to the correct Google Sheet automatically.
 8. A separate volunteer reviews it afterward, directly in the Sheet —
    unchanged from today.
+
+> **Note on step 8 as built:** review is *after publication*, not before it.
+> Nothing gates a submitted row — `build_history.py` and `build_records.py`
+> publish on the next sync, and the `reviewed_by` column is written by nobody
+> and read by nothing. The allow-list is the review. See `tools/PIPELINE.md` ⑤,
+> "Nothing gates a submission before it publishes", for what turning a real
+> gate on would cost.
 
 ---
 
@@ -50,6 +68,17 @@ The Apps Script route reuses infrastructure and lessons already paid for.
 system to build, store, or leak — and `Session.getActiveUser().getEmail()`
 gives a verified identity for free that maps straight onto the existing
 `added_by` column.
+
+> **DIVERGENCE — this half did not survive contact.** The built portal deploys
+> with **Access: Anyone** and verifies a Google ID token itself, in
+> `verifyIdToken()`, against `oauth2.googleapis.com/tokeninfo` (checking `aud`
+> against the OAuth client ID and `email_verified`), then looks the email up in
+> the allow-list. `Session.getActiveUser()` only works when the browser
+> navigates directly to the `script.google.com` URL; called cross-origin by
+> `fetch()` from the GitHub Pages origin, an auth-gated deployment answers with
+> a Google login *page*, which `fetch` cannot read across origins. The identity
+> check is still hard and still server-side — it just isn't the platform's.
+> See the portal README, "How it works".
 
 Reconsider this only if the project later needs SSO, multiple review tiers,
 or non-Google volunteers — not before.
@@ -167,19 +196,19 @@ prerequisite for including Massacres in the portal, not a portal-side task.
 
 ## Phased rollout
 
-**Phase 1 — MVP, Hospitals only.** Single schema, most existing incident
+**Phase 1 — MVP, Hospitals only. SHIPPED 2026-08-26.** Single schema, most existing incident
 volume, best test bed. Google OAuth allow-list, Apps Script Web App, passive
 duplicate list (journey step 4), append-only writes, unchanged manual
 review. Ship this, use it for a few weeks before extending.
 
-**Phase 2 — Universities, Schools, Religious Sites.** Same schema as
+**Phase 2 — Universities, Schools, Religious Sites. SHIPPED 2026-08-27.** Same schema as
 Hospitals, just parameterized by section — mostly config, not new code.
 Schools specifically is where this has the most leverage: it's the section
 sitting at a 19% indexable ratio for lack of incident data, per the SEO
 audit — volunteer-submitted incidents are the direct fix for that, once
 reviewed and synced.
 
-**Phase 3 — Massacres, plus the active duplicate-warning check.** Requires
+**Phase 3 — Massacres. SHIPPED 2026-08-29** (as "Historical Events", split into two era workbooks; the active duplicate-warning check is still not built)**.** Requires
 the `SPREADSHEETS` sync gap closed first and its own form template for the
 category-based schema. Also the point to add the smarter client-side
 duplicate warning from journey step 5, once there's usage data on how often
@@ -199,21 +228,22 @@ This is the same three-part pattern the SEO audit's fix for `Pages/` already
 established for this exact site: a sitemap entry says "crawl this,"
 `noindex` says "don't index this," and a link is what a crawler actually
 finds by browsing. A login-gated portal on a separate subdomain fails all
-three by construction, but each is worth enforcing explicitly:
+three by construction, but each is worth enforcing explicitly. **All five were
+verified in place on 2026-08-30:**
 
-- [ ] Every portal page requires a valid session before rendering any
+- [x] Every portal page requires a valid session before rendering any
       content — a crawler without volunteer credentials gets nothing to
       index, full stop. This alone is stronger than any control below.
-- [ ] A separate `robots.txt` at the subdomain root (robots.txt is
+- [x] A separate `robots.txt` at the subdomain root (robots.txt is
       per-origin, so the main site's doesn't cover it) with `Disallow: /`.
-- [ ] `<meta name="robots" content="noindex, nofollow">` on every portal
+- [x] `<meta name="robots" content="noindex, nofollow">` on every portal
       page, as defense-in-depth in case a page is ever reached without auth
       by mistake.
-- [ ] No link to the subdomain from any indexed page on the main site — if
+- [x] No link to the subdomain from any indexed page on the main site — if
       volunteers need to find it, that's an email, a Discord pin, or a link
       from the already-noindexed developer-only pages, never the footer or
       nav.
-- [ ] The subdomain never appears in the main site's `sitemap.xml` — it
+- [x] The subdomain never appears in the main site's `sitemap.xml` — it
       wouldn't by default, since `build_sitemap.py` only scans this
       repository, but worth confirming nobody adds it later "for
       completeness."

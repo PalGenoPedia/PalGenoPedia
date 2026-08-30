@@ -21,6 +21,7 @@ on:
     paths:
       - 'data/archive-policy.json'   # an editor changed a policy → re-run
       - 'data/media-policy.json'
+      - 'tools/archive_links.py'     # the archiver itself changed
   workflow_dispatch:
     inputs:
       mode:

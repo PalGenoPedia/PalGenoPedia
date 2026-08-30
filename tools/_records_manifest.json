@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-29",
+  "generated": "2026-08-30",
   "count": 402,
   "pages": [
     {
@@ -1510,7 +1510,7 @@
       "id": "",
       "slug": "overview",
       "incidents": 0,
-      "indexable": true,
+      "indexable": false,
       "kind": "tab"
     },
     {
@@ -1543,7 +1543,7 @@
       "id": "",
       "slug": "statistics",
       "incidents": 0,
-      "indexable": true,
+      "indexable": false,
       "kind": "tab"
     },
     {
@@ -1565,7 +1565,7 @@
       "id": "",
       "slug": "overview",
       "incidents": 0,
-      "indexable": true,
+      "indexable": false,
       "kind": "tab"
     },
     {
@@ -1598,7 +1598,7 @@
       "id": "",
       "slug": "statistics",
       "incidents": 0,
-      "indexable": true,
+      "indexable": false,
       "kind": "tab"
     },
     {
@@ -1620,7 +1620,7 @@
       "id": "",
       "slug": "overview",
       "incidents": 0,
-      "indexable": true,
+      "indexable": false,
       "kind": "tab"
     },
     {
@@ -1653,7 +1653,7 @@
       "id": "",
       "slug": "statistics",
       "incidents": 0,
-      "indexable": true,
+      "indexable": false,
       "kind": "tab"
     },
     {
@@ -2065,7 +2065,7 @@
       "id": "",
       "slug": "overview",
       "incidents": 0,
-      "indexable": true,
+      "indexable": false,
       "kind": "tab"
     },
     {
@@ -2098,7 +2098,7 @@
       "id": "",
       "slug": "statistics",
       "incidents": 0,
-      "indexable": true,
+      "indexable": false,
       "kind": "tab"
     },
     {
@@ -2120,7 +2120,7 @@
       "id": "",
       "slug": "overview",
       "incidents": 0,
-      "indexable": true,
+      "indexable": false,
       "kind": "tab"
     },
     {
@@ -2153,7 +2153,7 @@
       "id": "",
       "slug": "statistics",
       "incidents": 0,
-      "indexable": true,
+      "indexable": false,
       "kind": "tab"
     },
     {
@@ -2175,7 +2175,7 @@
       "id": "",
       "slug": "overview",
       "incidents": 0,
-      "indexable": true,
+      "indexable": false,
       "kind": "tab"
     },
     {
@@ -2208,7 +2208,7 @@
       "id": "",
       "slug": "statistics",
       "incidents": 0,
-      "indexable": true,
+      "indexable": false,
       "kind": "tab"
     },
     {
@@ -3040,7 +3040,7 @@
       "id": "",
       "slug": "overview",
       "incidents": 0,
-      "indexable": true,
+      "indexable": false,
       "kind": "tab"
     },
     {
@@ -3073,7 +3073,7 @@
       "id": "",
       "slug": "statistics",
       "incidents": 0,
-      "indexable": true,
+      "indexable": false,
       "kind": "tab"
     },
     {
@@ -3095,7 +3095,7 @@
       "id": "",
       "slug": "overview",
       "incidents": 0,
-      "indexable": true,
+      "indexable": false,
       "kind": "tab"
     },
     {
@@ -3128,7 +3128,7 @@
       "id": "",
       "slug": "statistics",
       "incidents": 0,
-      "indexable": true,
+      "indexable": false,
       "kind": "tab"
     },
     {
@@ -3150,7 +3150,7 @@
       "id": "",
       "slug": "overview",
       "incidents": 0,
-      "indexable": true,
+      "indexable": false,
       "kind": "tab"
     },
     {
@@ -3183,7 +3183,7 @@
       "id": "",
       "slug": "statistics",
       "incidents": 0,
-      "indexable": true,
+      "indexable": false,
       "kind": "tab"
     },
     {
@@ -3805,7 +3805,7 @@
       "id": "",
       "slug": "overview",
       "incidents": 0,
-      "indexable": true,
+      "indexable": false,
       "kind": "tab"
     },
     {
@@ -3838,7 +3838,7 @@
       "id": "",
       "slug": "statistics",
       "incidents": 0,
-      "indexable": true,
+      "indexable": false,
       "kind": "tab"
     },
     {
@@ -3860,7 +3860,7 @@
       "id": "",
       "slug": "overview",
       "incidents": 0,
-      "indexable": true,
+      "indexable": false,
       "kind": "tab"
     },
     {
@@ -3893,7 +3893,7 @@
       "id": "",
       "slug": "statistics",
       "incidents": 0,
-      "indexable": true,
+      "indexable": false,
       "kind": "tab"
     },
     {
@@ -3915,7 +3915,7 @@
       "id": "",
       "slug": "overview",
       "incidents": 0,
-      "indexable": true,
+      "indexable": false,
       "kind": "tab"
     },
     {
@@ -3948,7 +3948,7 @@
       "id": "",
       "slug": "statistics",
       "incidents": 0,
-      "indexable": true,
+      "indexable": false,
       "kind": "tab"
     },
     {
@@ -3965,122 +3965,134 @@
     {
       "url": "https://palgenopedia.org/war-crimes/hospitals/",
       "path": "/war-crimes/hospitals/",
-      "lang": "",
-      "section": "_index",
+      "lang": "en",
+      "section": "hospitals",
       "id": "",
       "slug": "",
       "incidents": 0,
-      "indexable": true
+      "indexable": true,
+      "kind": "index"
     },
     {
       "url": "https://palgenopedia.org/war-crimes/hospitals/de/",
       "path": "/war-crimes/hospitals/de/",
-      "lang": "",
-      "section": "_index",
+      "lang": "de",
+      "section": "hospitals",
       "id": "",
       "slug": "",
       "incidents": 0,
-      "indexable": true
+      "indexable": true,
+      "kind": "index"
     },
     {
       "url": "https://palgenopedia.org/war-crimes/hospitals/ar/",
       "path": "/war-crimes/hospitals/ar/",
-      "lang": "",
-      "section": "_index",
+      "lang": "ar",
+      "section": "hospitals",
       "id": "",
       "slug": "",
       "incidents": 0,
-      "indexable": true
+      "indexable": true,
+      "kind": "index"
     },
     {
       "url": "https://palgenopedia.org/war-crimes/universities/",
       "path": "/war-crimes/universities/",
-      "lang": "",
-      "section": "_index",
+      "lang": "en",
+      "section": "universities",
       "id": "",
       "slug": "",
       "incidents": 0,
-      "indexable": true
+      "indexable": true,
+      "kind": "index"
     },
     {
       "url": "https://palgenopedia.org/war-crimes/universities/de/",
       "path": "/war-crimes/universities/de/",
-      "lang": "",
-      "section": "_index",
+      "lang": "de",
+      "section": "universities",
       "id": "",
       "slug": "",
       "incidents": 0,
-      "indexable": true
+      "indexable": true,
+      "kind": "index"
     },
     {
       "url": "https://palgenopedia.org/war-crimes/universities/ar/",
       "path": "/war-crimes/universities/ar/",
-      "lang": "",
-      "section": "_index",
+      "lang": "ar",
+      "section": "universities",
       "id": "",
       "slug": "",
       "incidents": 0,
-      "indexable": true
+      "indexable": true,
+      "kind": "index"
     },
     {
       "url": "https://palgenopedia.org/war-crimes/schools/",
       "path": "/war-crimes/schools/",
-      "lang": "",
-      "section": "_index",
+      "lang": "en",
+      "section": "schools",
       "id": "",
       "slug": "",
       "incidents": 0,
-      "indexable": true
+      "indexable": true,
+      "kind": "index"
     },
     {
       "url": "https://palgenopedia.org/war-crimes/schools/de/",
       "path": "/war-crimes/schools/de/",
-      "lang": "",
-      "section": "_index",
+      "lang": "de",
+      "section": "schools",
       "id": "",
       "slug": "",
       "incidents": 0,
-      "indexable": true
+      "indexable": true,
+      "kind": "index"
     },
     {
       "url": "https://palgenopedia.org/war-crimes/schools/ar/",
       "path": "/war-crimes/schools/ar/",
-      "lang": "",
-      "section": "_index",
+      "lang": "ar",
+      "section": "schools",
       "id": "",
       "slug": "",
       "incidents": 0,
-      "indexable": true
+      "indexable": true,
+      "kind": "index"
     },
     {
       "url": "https://palgenopedia.org/war-crimes/religious-sites/",
       "path": "/war-crimes/religious-sites/",
-      "lang": "",
-      "section": "_index",
+      "lang": "en",
+      "section": "religious-sites",
       "id": "",
       "slug": "",
       "incidents": 0,
-      "indexable": true
+      "indexable": true,
+      "kind": "index"
     },
     {
       "url": "https://palgenopedia.org/war-crimes/religious-sites/de/",
       "path": "/war-crimes/religious-sites/de/",
-      "lang": "",
-      "section": "_index",
+      "lang": "de",
+      "section": "religious-sites",
       "id": "",
       "slug": "",
       "incidents": 0,
-      "indexable": true
+      "indexable": true,
+      "kind": "index"
     },
     {
       "url": "https://palgenopedia.org/war-crimes/religious-sites/ar/",
       "path": "/war-crimes/religious-sites/ar/",
-      "lang": "",
-      "section": "_index",
+      "lang": "ar",
+      "section": "religious-sites",
       "id": "",
       "slug": "",
       "incidents": 0,
-      "indexable": true
+      "indexable": true,
+      "kind": "index"
     }
   ]
 }

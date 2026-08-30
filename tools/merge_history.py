@@ -153,6 +153,11 @@ def _merge_one(fname, check):
             seen.add(k)
         out.append(row)
 
+    # CRLF on purpose, matching the pre/ and recent/ files this concatenates
+    # (Google Sheets exports CRLF, and cells can hold bare CRs inside quotes).
+    # NOTE: the repo has no .gitattributes, so this is the only thing keeping
+    # the flat files consistent with their sources - do not 'tidy' it to LF
+    # without normalising pre/ and recent/ too.
     buf = io.StringIO()
     w = csv.writer(buf, lineterminator="\r\n")
     w.writerow(header)

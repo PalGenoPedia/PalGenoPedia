@@ -21,7 +21,7 @@ Usage
   python tools/build_history.py --check    report, write nothing
   python tools/build_history.py --reslug   re-derive slugs (breaks live URLs)
 """
-import json, os, sys, datetime
+import json, os, re, sys, datetime
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import build_records as B
@@ -49,10 +49,38 @@ def _load_archived():
 ARCHIVED = _load_archived()
 
 
+# ~20 of the ~500 historical `source_link` cells hold two or three URLs joined
+# by a comma or a semicolon ("https://cpj.org/; https://www.un.org/unispal/..."),
+# exactly like the facility sheets' source_url_1/2 that build_records.py's
+# source_entries() already splits. Rendering the raw cell as one href produced a
+# dead link on the page AND a archive lookup that could never match, because
+# archive_links.py tracks each of those URLs separately.
+# Same extraction rule as tools/archive_links.py and tools/build_records.py.
+SOURCE_URL_RE = re.compile(r"""https?://[^\s;,"'<>|]+""")
+
+
+def source_links(cell):
+    """Every http(s) URL in one source_link cell, in order."""
+    return SOURCE_URL_RE.findall(cell or "")
+
+
+def cited_source(label, links):
+    """`label` linked to its first URL, with any extra URLs appended as [2],
+    [3]... Each carries its own archive badge. No URLs -> plain escaped text."""
+    if not links:
+        return B.e(label)
+    parts = ['<a href="%s" rel="nofollow noopener" target="_blank">%s</a>%s'
+             % (B.e(links[0]), B.e(label), archived_badge(links[0]))]
+    for i, u in enumerate(links[1:], start=2):
+        parts.append('<a href="%s" rel="nofollow noopener" target="_blank">[%d]</a>%s'
+                     % (B.e(u), i, archived_badge(u)))
+    return " ".join(parts)
+
+
 def archived_badge(link):
     """A tiny 🕰 link to the Wayback snapshot, or '' if the URL isn't archived.
     Matches on the same normalisation archive_links.py stores (no trailing / or #)."""
-    key = (link or "").strip().rstrip("/").split("#")[0]
+    key = B.url_key(link)
     snap = ARCHIVED.get(key) or ARCHIVED.get(link)
     if not snap:
         return ""
@@ -198,34 +226,66 @@ def warn_translation_gaps(d):
 
     base = [r for r in rows("details.csv")
             if B.clean(r.get("event_id")) and B.clean(r.get("category"))]
-    base_ids = {r["detail_id"] for r in base}
+
+    # The COMPOUND key, matching the join in load(). detail_id restarts at
+    # DET-001 in each era workbook, so keying on it alone collapses the 80
+    # current-genocide rows onto the 1,290 historical ones (1,370 rows -> 1,290
+    # keys), and a curr_* row can then never be reported, because a
+    # same-numbered hist row always covers for it.
+    def bkey(r):
+        return ((r.get("detail_id") or "").strip(), (r.get("event_id") or "").strip())
 
     def tkey(r):
-        # the merge joins on _anchor (holds the base detail_id verbatim);
+        # The merge joins on _anchor (it holds the base detail_id verbatim);
         # the delta's own detail_id is a row-count formula that drifts.
-        return (r.get("_anchor") or "").strip() or (r.get("detail_id") or "").strip()
+        return ((r.get("_anchor") or "").strip(), (r.get("event_id") or "").strip())
 
     for lang in ("de", "ar"):
         trans = rows("details_%s.csv" % lang)
         errors = sum(1 for r in trans
                      if any((v or "").strip().lower() in B.SHEET_ERRORS
                             for k, v in r.items() if k not in ("detail_id", "_anchor")))
-        trans_ids = {tkey(r) for r in trans}
-        present = base_ids & trans_ids
-        missing = len(base_ids - present)
-        if errors or missing:
-            by_ev = {}
-            for r in base:
-                if r["detail_id"] not in trans_ids:
-                    by_ev[r["event_id"]] = by_ev.get(r["event_id"], 0) + 1
+        by_key = {}
+        for r in trans:
+            by_key.setdefault(tkey(r), r)
+
+        # Two failures needing two different fixes: no delta row at all (a
+        # formula that stopped generating rows) versus a delta row present with
+        # an empty cell where the base has text (GOOGLETRANSLATE never filled
+        # it). The old check saw only the first, and on a collapsed key could
+        # not attribute it to an era. Count per COLUMN, and only where the base
+        # has something to translate - an empty translation of an empty cell is
+        # correct, not a gap.
+        missing = 0
+        by_ev_missing, by_ev_blank = {}, {}
+        untranslated = {"heading_label": 0, "content": 0}
+        for r in base:
+            ev = (r.get("event_id") or "").strip()
+            t = by_key.get(bkey(r))
+            if t is None:
+                missing += 1
+                by_ev_missing[ev] = by_ev_missing.get(ev, 0) + 1
+                continue
+            for col in untranslated:
+                if (r.get(col) or "").strip() and not (t.get("%s_%s" % (col, lang)) or "").strip():
+                    untranslated[col] += 1
+                    by_ev_blank[ev] = by_ev_blank.get(ev, 0) + 1
+        gaps = sum(untranslated.values())
+        if errors or missing or gaps:
             print("  WARNING: details_%s.csv - %d cell(s) are broken formulas "
-                  "(#REF! etc), %d row(s) have no translation at all"
-                  % (lang, errors, missing))
-            if by_ev:
-                print("           missing rows by event: %s"
-                      % ", ".join("%s=%d" % kv for kv in sorted(by_ev.items())))
-            print("           both fall back to English; the formula itself needs "
-                  "fixing in the sheet.")
+                  "(#REF! etc), %d row(s) have no delta row at all, %d cell(s) "
+                  "are empty where the base has text (%s)"
+                  % (lang, errors, missing, gaps,
+                     ", ".join("%s_%s=%d" % (c, lang, n)
+                               for c, n in sorted(untranslated.items()) if n)))
+            if by_ev_missing:
+                print("           no delta row, by event: %s"
+                      % ", ".join("%s=%d" % kv for kv in sorted(by_ev_missing.items())))
+            if by_ev_blank:
+                print("           untranslated cells by event: %s"
+                      % ", ".join("%s=%d" % kv for kv in sorted(by_ev_blank.items())))
+            print("           all of these fall back to English; the formulas "
+                  "themselves need fixing in the sheet.")
 
     # value/time have no _de or _ar column in the sheet at all - not a broken
     # row, a column that was never added. Report it once, sized, so it does
@@ -428,7 +488,7 @@ def render_event(ev, details, slugs, lang):
     alts.append(("x-default", abs_url(slugs["en"], "en")))
     alts_rel = [(l2, B.url_quote(rel_url(slugs[l2], l2))) for l2 in B.LANGS]
 
-    title = "%s — %s | %s" % (name, LABEL[lang], B.SITE)
+    title = B.fit_title("%s — %s | %s" % (name, LABEL[lang], B.SITE))
     desc = (paras[0][:155] if paras else
             "%s, %s. %s" % (name, event_date(ev), etype))[:158]
 
@@ -496,15 +556,12 @@ def render_event(ev, details, slugs, lang):
                 body = ""
             if cat == "source" and (body == head or body == src):
                 body = ""
-            arch = archived_badge(link) if link.startswith("http") else ""
+            links = source_links(link)
             src_html = ""
             if src and src != head:
-                cited = ('<a href="%s" rel="nofollow noopener" target="_blank">%s</a>'
-                         % (e(link), e(src))) if link.startswith("http") else e(src)
-                src_html = '<div class="rp-card-src">%s%s</div>' % (cited, arch)
-            elif cat == "source" and link.startswith("http"):
-                src_html = ('<div class="rp-card-src"><a href="%s" rel="nofollow noopener" '
-                            'target="_blank">%s</a>%s</div>' % (e(link), e(link), arch))
+                src_html = '<div class="rp-card-src">%s</div>' % cited_source(src, links)
+            elif cat == "source" and links:
+                src_html = '<div class="rp-card-src">%s</div>' % cited_source(links[0], links)
 
             if cat == "testimony":
                 quote = '“%s”' % e(body) if body else ""
@@ -573,7 +630,7 @@ def _static_list(events, slug_map, lang):
 
 def render_index(events, by_event, slug_map, lang):
     canonical = B.BASE_URL + B.url_quote(section_index_path(lang))
-    title = "%s | %s" % (INDEX_TITLE[lang], B.SITE)
+    title = B.fit_title("%s | %s" % (INDEX_TITLE[lang], B.SITE))
     desc = INDEX_DESC[lang].format(n=len(events))
     ev_sorted = sorted(events, key=lambda x: B.clean(x.get("date_start")))
 
