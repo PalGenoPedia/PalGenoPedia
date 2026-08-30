@@ -1510,7 +1510,7 @@
       "id": "",
       "slug": "overview",
       "incidents": 0,
-      "indexable": false,
+      "indexable": true,
       "kind": "tab"
     },
     {
@@ -1543,7 +1543,7 @@
       "id": "",
       "slug": "statistics",
       "incidents": 0,
-      "indexable": false,
+      "indexable": true,
       "kind": "tab"
     },
     {
@@ -1565,7 +1565,7 @@
       "id": "",
       "slug": "overview",
       "incidents": 0,
-      "indexable": false,
+      "indexable": true,
       "kind": "tab"
     },
     {
@@ -1598,7 +1598,7 @@
       "id": "",
       "slug": "statistics",
       "incidents": 0,
-      "indexable": false,
+      "indexable": true,
       "kind": "tab"
     },
     {
@@ -1620,7 +1620,7 @@
       "id": "",
       "slug": "overview",
       "incidents": 0,
-      "indexable": false,
+      "indexable": true,
       "kind": "tab"
     },
     {
@@ -1653,7 +1653,7 @@
       "id": "",
       "slug": "statistics",
       "incidents": 0,
-      "indexable": false,
+      "indexable": true,
       "kind": "tab"
     },
     {
@@ -2065,7 +2065,7 @@
       "id": "",
       "slug": "overview",
       "incidents": 0,
-      "indexable": false,
+      "indexable": true,
       "kind": "tab"
     },
     {
@@ -2098,7 +2098,7 @@
       "id": "",
       "slug": "statistics",
       "incidents": 0,
-      "indexable": false,
+      "indexable": true,
       "kind": "tab"
     },
     {
@@ -2120,7 +2120,7 @@
       "id": "",
       "slug": "overview",
       "incidents": 0,
-      "indexable": false,
+      "indexable": true,
       "kind": "tab"
     },
     {
@@ -2153,7 +2153,7 @@
       "id": "",
       "slug": "statistics",
       "incidents": 0,
-      "indexable": false,
+      "indexable": true,
       "kind": "tab"
     },
     {
@@ -2175,7 +2175,7 @@
       "id": "",
       "slug": "overview",
       "incidents": 0,
-      "indexable": false,
+      "indexable": true,
       "kind": "tab"
     },
     {
@@ -2208,7 +2208,7 @@
       "id": "",
       "slug": "statistics",
       "incidents": 0,
-      "indexable": false,
+      "indexable": true,
       "kind": "tab"
     },
     {
@@ -3040,7 +3040,7 @@
       "id": "",
       "slug": "overview",
       "incidents": 0,
-      "indexable": false,
+      "indexable": true,
       "kind": "tab"
     },
     {
@@ -3073,7 +3073,7 @@
       "id": "",
       "slug": "statistics",
       "incidents": 0,
-      "indexable": false,
+      "indexable": true,
       "kind": "tab"
     },
     {
@@ -3095,7 +3095,7 @@
       "id": "",
       "slug": "overview",
       "incidents": 0,
-      "indexable": false,
+      "indexable": true,
       "kind": "tab"
     },
     {
@@ -3128,7 +3128,7 @@
       "id": "",
       "slug": "statistics",
       "incidents": 0,
-      "indexable": false,
+      "indexable": true,
       "kind": "tab"
     },
     {
@@ -3150,7 +3150,7 @@
       "id": "",
       "slug": "overview",
       "incidents": 0,
-      "indexable": false,
+      "indexable": true,
       "kind": "tab"
     },
     {
@@ -3183,7 +3183,7 @@
       "id": "",
       "slug": "statistics",
       "incidents": 0,
-      "indexable": false,
+      "indexable": true,
       "kind": "tab"
     },
     {
@@ -3805,7 +3805,7 @@
       "id": "",
       "slug": "overview",
       "incidents": 0,
-      "indexable": false,
+      "indexable": true,
       "kind": "tab"
     },
     {
@@ -3838,7 +3838,7 @@
       "id": "",
       "slug": "statistics",
       "incidents": 0,
-      "indexable": false,
+      "indexable": true,
       "kind": "tab"
     },
     {
@@ -3860,7 +3860,7 @@
       "id": "",
       "slug": "overview",
       "incidents": 0,
-      "indexable": false,
+      "indexable": true,
       "kind": "tab"
     },
     {
@@ -3893,7 +3893,7 @@
       "id": "",
       "slug": "statistics",
       "incidents": 0,
-      "indexable": false,
+      "indexable": true,
       "kind": "tab"
     },
     {
@@ -3915,7 +3915,7 @@
       "id": "",
       "slug": "overview",
       "incidents": 0,
-      "indexable": false,
+      "indexable": true,
       "kind": "tab"
     },
     {
@@ -3948,7 +3948,7 @@
       "id": "",
       "slug": "statistics",
       "incidents": 0,
-      "indexable": false,
+      "indexable": true,
       "kind": "tab"
     },
     {
