@@ -1268,26 +1268,23 @@ def tab_path(cfg, kind, lang):
     return section_index_path(cfg, lang) + kind + "/"
 
 
-def section_tabs(cfg, lang, t, active, full=True):
+def section_tabs(cfg, lang, t, active, kinds=None):
     """The tab row, shared by every page in a section.
 
     These are real links to real pages now, not hash routes into the
     interactive hub - which is the whole point of generating them.
     `active` is one of TAB_KINDS, "records", or None.
 
-    full=False drops the tabs in SITEMAP_SKIP. Used on the ~330 individual
-    facility record pages, which between them accounted for 1,650 of the 2,130
-    internal links into tab pages - 77% of them. Sending that much of the
-    section's internal linking at a page that canonicalises to the section
-    index (`overview`) or that we have asked Google not to crawl (`statistics`)
-    is spend with nothing on the other end. The section index and the tab pages
-    themselves still carry the complete row, so nothing becomes unreachable and
-    a reader one click away still sees every view.
+    `kinds` selects which tabs appear; None means all of TAB_KINDS. Facility
+    record pages pass RECORD_TABS, so they show the section index plus Overview
+    and nothing else. Those ~330 pages accounted for 1,650 of the 2,130 internal
+    links into tab pages - 77% of them - and a record page's job is to be the
+    record, not to re-offer five aggregate views of its section. The section
+    index and the tab pages keep the complete row, so nothing is unreachable and
+    every view stays one click away.
     """
     out = [(url_quote(section_index_path(cfg, lang)), cfg["label"][lang], True, active == "records")]
-    for kind in TAB_KINDS:
-        if not full and kind in SITEMAP_SKIP:
-            continue
+    for kind in (TAB_KINDS if kinds is None else kinds):
         out.append((url_quote(tab_path(cfg, kind, lang)),
                     t["tab_" + kind], kind == "overview", active == kind))
     return out
@@ -1519,22 +1516,39 @@ def section_resources(cfg):
     return [r for r in read_csv(path) if clean(r.get("resource_title"))]
 
 
-# The five tabs are not equivalent, so they are not treated equivalently.
+# All five tabs are separate documents and are indexed as such.
 #
-# CANONICAL_TO_INDEX - the tab whose content genuinely duplicates the section
-# index. /hospitals/overview/ opens with the same headline, the same sentence
-# and the same stat strip as /hospitals/ and shares 59% of its vocabulary with
-# it, against 43 words of its own. It stays live and linked for readers; it just
-# stops claiming to be a separate document.
+# An earlier pass canonicalised `overview` to the section index and dropped
+# `statistics` from the sitemap, on a measurement that counted distinct words
+# across the WHOLE page. That metric was dominated by the shared chrome - the
+# nav, the tab row, the stat strip, the footer - and it scores a chart-driven
+# page as almost empty, because SVG contributes no extractable words. Comparing
+# MAIN CONTENT only tells the real story:
 #
-# SITEMAP_SKIP - tabs that stay indexable and linked but are not worth asking
-# Google to crawl. `statistics` renders 67 words around a few charts; there is
-# nothing there to rank. A sitemap should only list URLs you want indexed.
+#   /hospitals/    50 facility cards,  0 charts, 0 tables   - a directory
+#   /overview/      0 cards,           3 charts, 1 table    - Summary, attacks
+#                                                             over time, by type,
+#                                                             by governorate,
+#                                                             most targeted
+#   /incidents/    47,917 chars grouped by attack type
+#   /timeline/     21,020 chars grouped by year
+#   /statistics/    4 tables of the same breakdowns overview draws as charts
+#   /resources/     the section's source list
 #
-# `incidents` is deliberately in neither set: 830 words, 88% of them unique to
-# it, the strongest page in a section.
-CANONICAL_TO_INDEX = ("overview",)
-SITEMAP_SKIP = ("overview", "statistics")
+# There is no structural overlap between the index and overview whatsoever. Both
+# sets are therefore empty; the machinery below is kept because the distinction
+# it draws is real and may be wanted for a tab that genuinely does duplicate one
+# day. Do not repopulate either without measuring main content, not page text.
+CANONICAL_TO_INDEX = ()
+SITEMAP_SKIP = ()
+
+# Which tabs a FACILITY RECORD page shows, besides the section-index link that
+# always leads the row. The section index and the tab pages themselves keep the
+# complete five-tab row; only the ~330 record pages are trimmed, and they are
+# where the volume is - they accounted for 1,650 of the 2,130 internal links
+# into tab pages. A reader on a record page is one click from every other view
+# via the section index.
+RECORD_TABS = ("overview",)
 
 
 def render_tab(cfg, kind, facilities, by_fac, slug_map, lang, t):
@@ -1976,7 +1990,7 @@ def render(cfg, fac, incidents, lang, slugs, t):
     # since a record page sits inside it.
     L.extend(page_subheader(name, subtitle, index_href,
                             t["back_to"].format(section=section_label),
-                            section_tabs(cfg, lang, t, "records", full=False)))
+                            section_tabs(cfg, lang, t, "records", kinds=RECORD_TABS)))
 
     # ── hero ──
     a('<div class="detail-hero"><div class="detail-hero-inner">')

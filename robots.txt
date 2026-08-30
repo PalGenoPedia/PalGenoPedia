@@ -27,5 +27,10 @@ Sitemap: https://palgenopedia.org/sitemap.xml
 # format error; the file is still published at /llms.txt, just not announced
 # from here.
 
-# Crawl-delay to be polite to shared hosting
-Crawl-delay: 1
+# No Crawl-delay. It used to sit here as the last line of the file, which per
+# the robots.txt grouping rules bound it to the User-agent: CCBot group alone -
+# not globally, as its old comment ("to be polite to shared hosting") implied.
+# So the one thing it actually did was rate-limit Common Crawl, which is one of
+# the crawlers this file exists to invite. There is also no shared hosting to be
+# polite to: this is GitHub Pages, behind a CDN. Google ignores the directive
+# entirely.

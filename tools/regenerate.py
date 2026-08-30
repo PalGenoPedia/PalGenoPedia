@@ -368,6 +368,207 @@ def flat_row(e):
     return buf.getvalue().rstrip("\n")
 
 
+# ── llms.txt / llms-full.txt ──────────────────────────────────────────────
+# Both were hand-maintained until 2026-08-30, and both had drifted from the data
+# on every count they made: llms.txt claimed 56 hospitals / 18 universities /
+# 32 schools / 25 religious sites / 17 massacres against a real 50 / 13 / 27 /
+# 20 / 27, and llms-full.txt carried a frozen "Snapshot 2026-08-24" header.
+# Both sit in build_sitemap.py's DATA_URLS at priority 0.9, changefreq daily,
+# and machine ingestion is the site's stated purpose - so a stale corpus is not
+# a cosmetic problem. They are generated from the same events and manifests as
+# everything else now.
+#
+# The prose below is editorial and stays hand-written. Every number, URL and
+# event block underneath it is derived.
+NL = chr(10)
+
+LLMS_INTRO = (
+    "> An open documentation resource of verified war crimes, massacres, and "
+    "humanitarian violations concerning Palestine, 1948–present. Content is "
+    "compiled from UN, Human Rights Watch, B'Tselem, Al-Haq, PCHR, and the Gaza "
+    "Health Ministry. Every figure carries provenance and a verification status."
+)
+
+LLMS_DATA = [
+    ("/data/events.json", "Canonical normalized dataset: documented events, "
+     "1948–present (historical massacres + current-genocide incidents), each "
+     "with casualties (raw + parsed min/max), perpetrators, per-event sources, "
+     "war-crime classifications and verification status. Derived from the "
+     "project's source CSVs on every update."),
+    ("/data/events.ndjson", "One event per line (ideal for RAG retrieval and "
+     "model fine-tuning chunking)."),
+    ("/data/events.csv", "Flat table with numeric casualty estimates and "
+     "source-link columns."),
+    ("/llms-full.txt", "Every documented event as plain prose, one section each "
+     "- the whole corpus in a single file, generated from events.json."),
+]
+
+LLMS_PAGES = [
+    ("/", "Overview, headline statistics, and the filtered event timeline."),
+    ("/historical-events/", "Historical massacres and systematic oppression."),
+    ("/historical-events/massacres/", "The interactive timeline / map / list, and "
+     "the index of one page per event, 1948–present."),
+    ("/historical-events/ethnic-cleansing/", "418 depopulated Palestinian "
+     "villages, 1948."),
+    ("/historical-events/testimonies/", "First-hand testimony archive."),
+    ("/war-crimes/", "War-crime and international-law violation statistics."),
+    ("/methodology.html", "How records are sourced, verified and counted."),
+    ("/volunteer.html", "How to contribute as a data-collection or research "
+     "volunteer."),
+]
+
+LLMS_NOTES = [
+    "Casualty figures are often ranges (e.g. ≈107–250); they are "
+    "preserved verbatim in the `raw` field and as conservative upper-bound "
+    "integers in `estimate`.",
+    "`verification_status` is currently \"verified\" for every event.",
+    "`events.json` lists notable individual incidents with independent sourcing "
+    "— it is NOT a running total of the war. Its casualty figures sum to far "
+    "less than external whole-war tolls (e.g. Gaza Health Ministry / UN OCHA "
+    "aggregate figures reported elsewhere). The two measure different things; do "
+    "not add them together or treat one as a correction of the other.",
+    "Every record exists in English, German and Arabic under `/de/` and `/ar/` "
+    "path segments. Event names and perpetrator names are not translated and "
+    "stay in English in all three.",
+    "See STATS_RECONCILIATION.md in the repository for known figure "
+    "discrepancies across pages.",
+]
+
+SECTION_BLURB = {
+    "hospitals": "documented hospitals and medical facilities",
+    "universities": "documented universities and higher-education institutions",
+    "schools": "documented schools",
+    "religious-sites": "documented mosques, churches and other religious sites",
+}
+
+
+def _records_summary():
+    """(section, path, total, indexed) per war-crimes section, read from the
+    manifest build_records.py wrote earlier in this same build.
+
+    English pages only: the /de/ and /ar/ variants are the same records in
+    another language, not additional ones, and counting them would treble every
+    figure in the file."""
+    try:
+        pages = json.load(open(os.path.join(HERE, "_records_manifest.json"),
+                               encoding="utf-8"))["pages"]
+    except Exception:
+        return []
+    out = []
+    for sec in ("hospitals", "universities", "schools", "religious-sites"):
+        en = [p for p in pages
+              if p.get("section") == sec and p.get("lang") == "en"
+              and p.get("id") and p.get("kind") != "tab"]
+        if en:
+            out.append((sec, "/war-crimes/%s/" % sec, len(en),
+                        sum(1 for p in en if p.get("indexable"))))
+    return out
+
+
+def build_llms(events):
+    """llms.txt - the curated entry point, per https://llmstxt.org/"""
+    L = ["# " + B.SITE, "", LLMS_INTRO, "",
+         "## Data (machine-readable, canonical)", ""]
+    for href, desc in LLMS_DATA:
+        L.append("- %s — %s" % (href, desc))
+    L += ["", "## Pages", ""]
+    for href, desc in LLMS_PAGES:
+        L.append("- %s — %s" % (href, desc))
+    L += ["", "## Documented records (per-facility, per-incident detail)", "",
+          "The events above are a curated %d-event summary. The site's largest "
+          "and most" % len(events),
+          "granular content is not in that dataset: individually documented "
+          "facilities",
+          "and historical events, each with a dated incident history, casualty "
+          "figures,",
+          "and per-incident sources. This is the level of detail most useful for "
+          "a",
+          "specific-entity query (was <facility> attacked, what happened at "
+          "<event>).", ""]
+    for sec, href, total, idx in _records_summary():
+        L.append("- %s — %d %s, %d with enough documented detail to be "
+                 "indexed; /de/ and /ar/ variants under the same path."
+                 % (href, total, SECTION_BLURB[sec], idx))
+    hist = sum(1 for e in events if e.get("period") == "historical")
+    L.append("- /historical-events/massacres/ — %d individually documented "
+             "events (%d historical, 1948–2022; %d from the current genocide, "
+             "Oct 2023 onward), each with its own page; /de/ and /ar/ variants "
+             "under the same path." % (len(events), hist, len(events) - hist))
+    L.append("- /sitemap.xml — the full, current list of every indexed URL "
+             "on the site, including every record above. Prefer this over the "
+             "Pages list for complete coverage; this file is a curated summary, "
+             "not the exhaustive index.")
+    L += ["", "## Notes for ingestors", ""]
+    for n in LLMS_NOTES:
+        L.append("- " + n)
+    L.append("")
+    return NL.join(L)
+
+
+def _casualty_line(c):
+    bits = []
+    for key, label in (("deaths", "deaths"), ("injured", "injured"),
+                       ("forced_displacement", "forced displacement")):
+        raw = ((c.get(key) or {}).get("raw") or "").strip()
+        if raw:
+            bits.append("%s: %s" % (label, raw))
+    return "; ".join(bits)
+
+
+def build_llms_full(events):
+    """llms-full.txt - the whole event corpus as prose, one section per event."""
+    hist = sum(1 for e in events if e.get("period") == "historical")
+    L = ["# %s — Full Documented Events Corpus" % B.SITE, "",
+         "Generated %s from data/events.json. %d documented events (%d historical "
+         "1948–2022, %d current genocide Oct 2023 onward). All figures carry "
+         "provenance; see the per-event sources. Regenerated whenever the source "
+         "data changes - do not edit by hand."
+         % (SNAPSHOT, len(events), hist, len(events) - hist), ""]
+    for e in events:
+        loc = e.get("location") or {}
+        place = (loc.get("name_current") or loc.get("name_historical") or "").strip()
+        L.append("## %s (%s)" % (e.get("title", ""), e.get("id", "")))
+        L.append("- Period: %s" % e.get("period", ""))
+        ds = (e.get("date_start") or "").strip()
+        de = (e.get("date_end") or "").strip()
+        L.append("- Date: %s" % (ds if (not de or de == ds) else "%s to %s" % (ds, de)))
+        if e.get("date_context"):
+            L.append("- Context: %s" % e["date_context"])
+        if e.get("event_type"):
+            L.append("- Event type: %s" % e["event_type"])
+        if e.get("classification"):
+            L.append("- Classification: %s" % e["classification"])
+        if place:
+            L.append("- Location: %s" % place)
+        if loc.get("lat") is not None and loc.get("lng") is not None:
+            L.append("- Coordinates: %s, %s" % (loc["lat"], loc["lng"]))
+        cas = _casualty_line(e.get("casualties") or {})
+        if cas:
+            L.append("- Casualties: %s" % cas)
+        if e.get("perpetrators"):
+            L.append("- Alleged perpetrators: %s" % ", ".join(e["perpetrators"]))
+        if e.get("war_crimes"):
+            L.append("- Alleged war crimes: %s" % ", ".join(e["war_crimes"]))
+        if e.get("verification_status"):
+            L.append("- Verification status: %s" % e["verification_status"])
+        if e.get("url"):
+            L.append("- Record page: %s" % e["url"])
+        if e.get("summary"):
+            L.append("- Summary: %s" % e["summary"])
+        srcs = []
+        for s in e.get("sources") or []:
+            nm = (s.get("source") or "").strip()
+            ln = (s.get("source_link") or "").strip()
+            if nm and ln:
+                srcs.append("%s (%s)" % (nm, ln))
+            elif nm or ln:
+                srcs.append(nm or ln)
+        if srcs:
+            L.append("- Sources: %s" % "; ".join(srcs))
+        L.append("")
+    return NL.join(L)
+
+
 # ── --check ───────────────────────────────────────────────────────────────
 # This script used to accept --check silently and write anyway, which is worse
 # than rejecting the flag: `python tools/regenerate.py --check` looked like a
@@ -405,7 +606,7 @@ class _out:
         except OSError:
             same = False
         if not same:
-            _CHANGED.append(os.path.relpath(self.path, ROOT))
+            _CHANGED.append(os.path.relpath(self.path, DEP))
         return False
 
 
@@ -458,6 +659,11 @@ def main():
     gr_block = '<script type="application/ld+json">\n' + json.dumps(combined, ensure_ascii=False, indent=2) + '\n</script>\n'
     with _out(os.path.join(EMB, "events-graph.html"), encoding="utf-8") as f:
         f.write(gr_block)
+
+    with _out(os.path.join(DEP, "llms.txt"), encoding="utf-8") as f:
+        f.write(build_llms(events))
+    with _out(os.path.join(DEP, "llms-full.txt"), encoding="utf-8") as f:
+        f.write(build_llms_full(events))
 
     write_feeds(events)
     if CHECK:
