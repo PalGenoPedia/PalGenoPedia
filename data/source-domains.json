@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-29",
+ "generated": "2026-08-30",
  "domains": {
   "972mag.com": {
    "count": 3,
@@ -9,7 +9,7 @@
    "deferred": 0,
    "urls": [
     {
-     "u": "https://www.972mag.com/al-ahli-hospital-gaza-blast/\"\"https://prc.org.uk/upload/library/files/Alahli-Hospital-MassacreEN.pdf",
+     "u": "https://www.972mag.com/al-ahli-hospital-gaza-blast",
      "role": "secondary",
      "status": "new",
      "snap": "",
@@ -341,7 +341,7 @@
    "secondary": 1
   },
   "aljazeera.com": {
-   "count": 17,
+   "count": 18,
    "sample": "https://www.aljazeera.com/features/2022/1/27/tantura-a-film-about-a-massacre-israel-didnt-want-you-to-see",
    "archived": 0,
    "pending": 0,
@@ -412,7 +412,7 @@
      "manual": false
     },
     {
-     "u": "https://www.aljazeera.com/news/2026/8/1/israeli-strikes-kill-four-across-gaza-destroy-medical-supply-warehouse\"",
+     "u": "https://www.aljazeera.com/news/2026/8/1/israeli-strikes-kill-four-across-gaza-destroy-medical-supply-warehouse",
      "role": "primary",
      "status": "new",
      "snap": "",
@@ -482,10 +482,18 @@
      "snap": "",
      "method": "",
      "manual": false
+    },
+    {
+     "u": "https://www.aljazeera.com/news/longform/2024/4/18/satellite-images-reveal-israeli-destruction-of-hospitals-in-gaza",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
     }
    ],
    "primary": 10,
-   "secondary": 7
+   "secondary": 8
   },
   "aljazeera.net": {
    "count": 5,
@@ -661,12 +669,28 @@
    "secondary": 0
   },
   "bbc.co.uk": {
-   "count": 2,
+   "count": 4,
    "sample": "https://www.bbc.co.uk/news/world-middle-east-67144061",
    "archived": 0,
    "pending": 0,
    "deferred": 0,
    "urls": [
+    {
+     "u": "https://www.bbc.co.uk/news/live/world-middle-east-67400490",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.bbc.co.uk/news/world-middle-east-67424064",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
     {
      "u": "https://www.bbc.co.uk/news/world-middle-east-67144061",
      "role": "secondary",
@@ -684,7 +708,7 @@
      "manual": false
     }
    ],
-   "primary": 0,
+   "primary": 2,
    "secondary": 2
   },
   "bbc.com": {
@@ -1104,9 +1128,47 @@
    "urls": [
     {
      "u": "https://edition.cnn.com/interactive/2024/01/middleeast/gaza-hospitals-destruction-investigation-intl-cmd",
-     "role": "secondary",
+     "role": "primary",
      "status": "archived",
      "snap": "https://web.archive.org/web/20260826233625/https://edition.cnn.com/interactive/2024/01/middleeast/gaza-hospitals-destruction-investigation-intl-cmd",
+     "method": "",
+     "manual": false
+    }
+   ],
+   "primary": 1,
+   "secondary": 0
+  },
+  "electronicintifada.net": {
+   "count": 1,
+   "sample": "https://electronicintifada.net/content/right-education-will-remain-under-threat-gaza/47466?utm_source=EI+readers&utm_campaign=e07301a25d-RSS_EMAIL_CAMPAIGN&utm_medium=email&utm_term=0_e802a7602d-e07301a25d-299323212",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "urls": [
+    {
+     "u": "https://electronicintifada.net/content/right-education-will-remain-under-threat-gaza/47466?utm_source=EI+readers&utm_campaign=e07301a25d-RSS_EMAIL_CAMPAIGN&utm_medium=email&utm_term=0_e802a7602d-e07301a25d-299323212",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
+   "primary": 1,
+   "secondary": 0
+  },
+  "en.safa.news": {
+   "count": 1,
+   "sample": "https://en.safa.news/post/4170/Gaza-s-Last-Pediatric-Hospital-Destroyed-in-Israeli-Strike",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "urls": [
+    {
+     "u": "https://en.safa.news/post/4170/Gaza-s-Last-Pediatric-Hospital-Destroyed-in-Israeli-Strike",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
      "method": "",
      "manual": false
     }
@@ -3064,14 +3126,6 @@
      "manual": false
     },
     {
-     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-24\"https://edition.cnn.com/interactive/2024/01/middleeast/gaza-hospitals-destruction-investigation-intl-cmd/\"",
-     "role": "primary",
-     "status": "new",
-     "snap": "",
-     "method": "",
-     "manual": false
-    },
-    {
      "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-25",
      "role": "primary",
      "status": "new",
@@ -3176,14 +3230,6 @@
      "manual": false
     },
     {
-     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-40\"https://www.bbc.co.uk/news/live/world-middle-east-67400490\"\"https://www.bbc.co.uk/news/world-middle-east-67424064\"",
-     "role": "primary",
-     "status": "new",
-     "snap": "",
-     "method": "",
-     "manual": false
-    },
-    {
      "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-41",
      "role": "primary",
      "status": "new",
@@ -3192,7 +3238,15 @@
      "manual": false
     },
     {
-     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-41\"\"https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-42\"\"https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-43\"",
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-42",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-43",
      "role": "primary",
      "status": "new",
      "snap": "",
@@ -3401,6 +3455,14 @@
     },
     {
      "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-97",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/humanitarian-situation-report-7-august-2026",
      "role": "primary",
      "status": "new",
      "snap": "",
@@ -4138,6 +4200,25 @@
    "urls": [
     {
      "u": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11002345",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
+   "primary": 0,
+   "secondary": 1
+  },
+  "prc.org.uk": {
+   "count": 1,
+   "sample": "https://prc.org.uk/upload/library/files/Alahli-Hospital-MassacreEN.pdf",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "urls": [
+    {
+     "u": "https://prc.org.uk/upload/library/files/Alahli-Hospital-MassacreEN.pdf",
      "role": "secondary",
      "status": "new",
      "snap": "",
