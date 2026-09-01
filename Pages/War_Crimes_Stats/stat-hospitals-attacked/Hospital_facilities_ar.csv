@@ -2,7 +2,7 @@ id,_anchor,name_ar,specialization_ar,post_war_status_ar,introduction_ar,introduc
 FAC-000,Al-Shifa Medical Complex,مجمع الشفاء الطبي,عام / متعدد التخصصات,عملية جزئية,,,
 FAC-001,Kamal Adwan Hospital,مستشفى كمال عدوان,عام,مغلق,,,
 FAC-002,Nasser Medical Complex,مجمع ناصر الطبي,عام / متعدد التخصصات,عملية جزئية,,,
-FAC-003,Al-Awda Hospital,مستشفى العودة,متعدد التخصصات / طب التوليد,مغلق,,,
+FAC-003,Al-Awda Hospital,مستشفى العودة,متعدد التخصصات / طب التوليد,عملية جزئية,,,
 FAC-004,Al-Awda Hospital - Nusseirat,مستشفى العودة - النصيرة,عام,عملية جزئية,,,فرع في مخيم النصيرات
 FAC-005,Al-Amal Hospital,مستشفى الأمل,عام,عملية جزئية,,,
 FAC-006,Al-Aqsa Martyrs Hospital,مستشفى شهداء الأقصى,عام,عملية جزئية,,,
@@ -13,7 +13,7 @@ FAC-010,Gaza European Hospital,مستشفى غزة الأوروبي,عام / إ�
 FAC-011,Dr Abdul Aziz Rantisi Children's Specialty Hospital,مستشفى الدكتور عبد العزيز الرنتيسي التخصصي للأطفال,طب الأطفال,مغلق,,,
 FAC-012,Muhammad Al-Durrah Children's Hospital,مستشفى محمد الدرة للأطفال,طب الأطفال,مغلق,,,
 FAC-013,Beit Hanoun Hospital,مستشفى بيت حانون,عام,مغلق,,,
-FAC-014,Sheikh Hamad Hospital for Rehabilitation and Prosthetics,مستشفى الشيخ حمد للتأهيل والأطراف الصناعية,إعادة التأهيل / الأطراف الاصطناعية,مغلق,,,
+FAC-014,Sheikh Hamad Hospital for Rehabilitation and Prosthetics,مستشفى الشيخ حمد للتأهيل والأطراف الصناعية,إعادة التأهيل / الأطراف الاصطناعية,عملية جزئية,,,
 FAC-015,Al Karama Specialized Hospital,مستشفى الكرامة التخصصي,متخصص,مغلق,,,
 FAC-016,Gaza Psychiatric Hospital,مستشفى غزة للأمراض النفسية,الطب النفسي,مغلق,,,
 FAC-017,International Eye Hospital,مستشفى العيون الدولي,طب العيون,عملية جزئية,,,
@@ -29,7 +29,7 @@ FAC-026,Palestine Medical Relief Center for the Rehabilitation of the Disabled,�
 FAC-027,Al Yaman Al Saeed Hospital,مستشفى اليمن السعيد,عام,مغلق,,,كان قيد الإنشاء وقت الاستهداف
 FAC-028,Patient Friends Association Hospital,جمعية أصدقاء المرضى بالمستشفى,عام,عملية جزئية,,,
 FAC-029,Jordanian Field Hospital,المستشفى الميداني الأردني,عام / طوارئ,تشغيلي,,,تشغلها الأردن
-FAC-030,Jordanian Field Hospital - Khan Yunis,المستشفى الميداني الأردني - خان يونس,عام / طوارئ,,,,خان يونس، تديرها الأردن
+FAC-030,Jordanian Field Hospital - Khan Yunis,المستشفى الميداني الأردني - خان يونس,عام / طوارئ,,,,خان يونس، تديره الأردن
 FAC-031,Red Cross Field Hospital,مستشفى الصليب الأحمر الميداني,طارئ,,,,تشغلها اللجنة الدولية للصليب الأحمر
 FAC-032,Red Cross Field Hospital - Rafah,مستشفى الصليب الأحمر الميداني - رفح,طارئ,تشغيلي,,,تديرها اللجنة الدولية للصليب الأحمر، رفح
 FAC-033,Emirates Crescent Hospital,مستشفى إميريتس كريسنت,عام / طوارئ,مغلق,,,تشغلها دولة الإمارات العربية المتحدة
