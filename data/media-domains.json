@@ -1,6 +1,25 @@
 {
- "generated": "2026-08-31",
+ "generated": "2026-09-01",
  "domains": {
+  "aa.com.tr": {
+   "count": 1,
+   "sample": "https://www.aa.com.tr/en/middle-east/israeli-army-admits-to-targeting-buraq-school-in-gaza/3050977",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.aa.com.tr/en/middle-east/israeli-army-admits-to-targeting-buraq-school-in-gaza/3050977",
+     "role": "image",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
+   "video": 0,
+   "image": 1
+  },
   "aje.io": {
    "count": 2,
    "sample": "https://aje.io/av8a82?update=2660721",
@@ -440,6 +459,25 @@
    "video": 0,
    "image": 2
   },
+  "i0.wp.com": {
+   "count": 1,
+   "sample": "https://i0.wp.com/www.middleeastmonitor.com/wp-content/uploads/2023/11/AA-20231107-32720621-32720610-ISRAELI_ATTACKS_CONTINUE_ON_ITS_32ND_DAY_IN_GAZA.jpg?fit=920%2C613&ssl=1",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "urls": [
+    {
+     "u": "https://i0.wp.com/www.middleeastmonitor.com/wp-content/uploads/2023/11/AA-20231107-32720621-32720610-ISRAELI_ATTACKS_CONTINUE_ON_ITS_32ND_DAY_IN_GAZA.jpg?fit=920%2C613&ssl=1",
+     "role": "image",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
+   "video": 0,
+   "image": 1
+  },
   "idf.il": {
    "count": 1,
    "sample": "https://www.idf.il/en/mini-sites/idf-press-releases-israel-at-war/october-23-pr/why-did-the-idf-strike-the-islamic-university-in-gaza",
@@ -603,7 +641,7 @@
    "image": 0
   },
   "middleeasteye.net": {
-   "count": 1,
+   "count": 2,
    "sample": "https://www.middleeasteye.net/explainer-gaza-israel-palestine-war-university-destroy",
    "archived": 0,
    "pending": 0,
@@ -616,10 +654,18 @@
      "snap": "",
      "method": "",
      "manual": false
+    },
+    {
+     "u": "https://www.middleeasteye.net/sites/default/files/styles/full_width/public/2023-11/dead%20bodies.jpg.webp?itok=WO4Ucmvq",
+     "role": "image",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
     }
    ],
    "video": 0,
-   "image": 1
+   "image": 2
   },
   "middleeastmonitor.com": {
    "count": 1,
@@ -1206,7 +1252,7 @@
    "image": 0
   },
   "youtube.com": {
-   "count": 16,
+   "count": 17,
    "sample": "https://www.youtube.com/shorts/S_sjK5KPPMg",
    "archived": 0,
    "pending": 0,
@@ -1333,6 +1379,14 @@
      "manual": false
     },
     {
+     "u": "https://www.youtube.com/watch?v=sGTpzP2Ozeo",
+     "role": "video",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
      "u": "https://www.youtube.com/shorts/S_sjK5KPPMg",
      "role": "image",
      "status": "new",
@@ -1341,7 +1395,7 @@
      "manual": false
     }
    ],
-   "video": 15,
+   "video": 16,
    "image": 1
   }
  }

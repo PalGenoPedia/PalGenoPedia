@@ -2446,6 +2446,33 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://palgenopedia.org/war-crimes/religious-sites/abu-salim-mosque/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/%D9%85%D8%B3%D8%AC%D8%AF-%D8%A3%D8%A8%D9%88-%D8%B3%D8%A7%D9%84%D9%85/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/abu-salim-moschee/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/abu-salim-mosque/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/abu-salim-mosque/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://palgenopedia.org/war-crimes/religious-sites/de/abu-salim-moschee/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/%D9%85%D8%B3%D8%AC%D8%AF-%D8%A3%D8%A8%D9%88-%D8%B3%D8%A7%D9%84%D9%85/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/abu-salim-moschee/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/abu-salim-mosque/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/abu-salim-mosque/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://palgenopedia.org/war-crimes/religious-sites/ar/%D9%85%D8%B3%D8%AC%D8%AF-%D8%A3%D8%A8%D9%88-%D8%B3%D8%A7%D9%84%D9%85/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/%D9%85%D8%B3%D8%AC%D8%AF-%D8%A3%D8%A8%D9%88-%D8%B3%D8%A7%D9%84%D9%85/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/abu-salim-moschee/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/abu-salim-mosque/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/abu-salim-mosque/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://palgenopedia.org/war-crimes/religious-sites/incidents/</loc>
     <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/incidents/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/incidents/"/>
@@ -2577,6 +2604,33 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/schools/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://palgenopedia.org/war-crimes/schools/al-buraq-school/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/%D9%85%D8%AF%D8%B1%D8%B3%D8%A9-%D8%A7%D9%84%D8%A8%D8%B1%D8%A7%D9%82/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/al-buraq-schule/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/al-buraq-school/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/schools/al-buraq-school/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://palgenopedia.org/war-crimes/schools/de/al-buraq-schule/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/%D9%85%D8%AF%D8%B1%D8%B3%D8%A9-%D8%A7%D9%84%D8%A8%D8%B1%D8%A7%D9%82/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/al-buraq-schule/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/al-buraq-school/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/schools/al-buraq-school/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://palgenopedia.org/war-crimes/schools/ar/%D9%85%D8%AF%D8%B1%D8%B3%D8%A9-%D8%A7%D9%84%D8%A8%D8%B1%D8%A7%D9%82/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/%D9%85%D8%AF%D8%B1%D8%B3%D8%A9-%D8%A7%D9%84%D8%A8%D8%B1%D8%A7%D9%82/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/al-buraq-schule/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/al-buraq-school/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/schools/al-buraq-school/"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

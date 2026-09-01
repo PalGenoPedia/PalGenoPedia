@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-31",
+ "generated": "2026-09-01",
  "domains": {
   "972mag.com": {
    "count": 3,
@@ -37,7 +37,7 @@
    "secondary": 3
   },
   "aa.com.tr": {
-   "count": 9,
+   "count": 10,
    "sample": "https://www.aa.com.tr/en/middle-east/palestine-27-years-since-ibrahimi-mosque-massacre/2156877",
    "archived": 0,
    "pending": 0,
@@ -108,6 +108,14 @@
      "manual": false
     },
     {
+     "u": "https://www.aa.com.tr/en/middle-east/israeli-army-admits-to-targeting-buraq-school-in-gaza/3050977",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
      "u": "https://www.aa.com.tr/en/middle-east/israeli-attacks-force-gaza-city-s-only-eye-hospital-children-s-facility-out-of-service/3694853",
      "role": "secondary",
      "status": "new",
@@ -117,7 +125,7 @@
     }
    ],
    "primary": 4,
-   "secondary": 5
+   "secondary": 6
   },
   "abcnews.com": {
    "count": 1,
@@ -341,7 +349,7 @@
    "secondary": 1
   },
   "aljazeera.com": {
-   "count": 18,
+   "count": 19,
    "sample": "https://www.aljazeera.com/features/2022/1/27/tantura-a-film-about-a-massacre-israel-didnt-want-you-to-see",
    "archived": 0,
    "pending": 0,
@@ -381,6 +389,14 @@
     },
     {
      "u": "https://www.aljazeera.com/news/2023/1/26/why-israeli-raids-killed-many-palestinians-this-year-explainer",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.aljazeera.com/news/2023/11/10/gaza-hospital-says-received-50-bodies-after-strikes-on-school",
      "role": "primary",
      "status": "new",
      "snap": "",
@@ -492,7 +508,7 @@
      "manual": false
     }
    ],
-   "primary": 10,
+   "primary": 11,
    "secondary": 8
   },
   "aljazeera.net": {
@@ -2506,7 +2522,7 @@
    "secondary": 1
   },
   "middleeasteye.net": {
-   "count": 4,
+   "count": 5,
    "sample": "https://www.middleeasteye.net/news/palestine-west-bank-deadliest-year-second-intifada",
    "archived": 0,
    "pending": 0,
@@ -2523,6 +2539,14 @@
     {
      "u": "https://www.middleeasteye.net/news/palestine-west-bank-deadliest-year-second-intifada",
      "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.middleeasteye.net/live-update/israeli-strike-al-buraq-school-kills-20-says-health-ministry",
+     "role": "secondary",
      "status": "new",
      "snap": "",
      "method": "",
@@ -2546,10 +2570,10 @@
     }
    ],
    "primary": 2,
-   "secondary": 2
+   "secondary": 3
   },
   "middleeastmonitor.com": {
-   "count": 2,
+   "count": 3,
    "sample": "https://www.middleeastmonitor.com/20210227-the-massacre-of-ibrahimi-mosque",
    "archived": 0,
    "pending": 0,
@@ -2570,10 +2594,18 @@
      "snap": "",
      "method": "",
      "manual": false
+    },
+    {
+     "u": "https://www.middleeastmonitor.com/20231111-gaza-50-martyred-inside-al-buraq-school-following-missile-artillery-bombardment",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
     }
    ],
    "primary": 2,
-   "secondary": 0
+   "secondary": 1
   },
   "mirror.co.uk": {
    "count": 1,

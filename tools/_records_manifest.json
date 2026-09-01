@@ -1,6 +1,6 @@
 {
-  "generated": "2026-08-31",
-  "count": 402,
+  "generated": "2026-09-01",
+  "count": 405,
   "pages": [
     {
       "url": "https://palgenopedia.org/war-crimes/hospitals/al-shifa-medical-complex/",
@@ -1453,12 +1453,12 @@
       "indexable": false
     },
     {
-      "url": "https://palgenopedia.org/war-crimes/hospitals/de/gesundheitszentrum-maskat-al-qarara/",
-      "path": "/war-crimes/hospitals/de/gesundheitszentrum-maskat-al-qarara/",
+      "url": "https://palgenopedia.org/war-crimes/hospitals/de/al-qarara-gesundheitszentrum-in-maskat/",
+      "path": "/war-crimes/hospitals/de/al-qarara-gesundheitszentrum-in-maskat/",
       "lang": "de",
       "section": "hospitals",
       "id": "FAC-048",
-      "slug": "gesundheitszentrum-maskat-al-qarara",
+      "slug": "al-qarara-gesundheitszentrum-in-maskat",
       "incidents": 0,
       "indexable": false
     },
@@ -2319,8 +2319,8 @@
       "section": "schools",
       "id": "FAC-003",
       "slug": "al-buraq-school",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 1,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/schools/de/al-buraq-schule/",
@@ -2329,8 +2329,8 @@
       "section": "schools",
       "id": "FAC-003",
       "slug": "al-buraq-schule",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 1,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/schools/ar/%D9%85%D8%AF%D8%B1%D8%B3%D8%A9-%D8%A7%D9%84%D8%A8%D8%B1%D8%A7%D9%82/",
@@ -2339,8 +2339,8 @@
       "section": "schools",
       "id": "FAC-003",
       "slug": "مدرسة-البراق",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 1,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/schools/al-falah-school/",
@@ -3795,6 +3795,36 @@
       "id": "FAC-019",
       "slug": "كنيسة-غزة-المعمدانية",
       "incidents": 0,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/war-crimes/religious-sites/abu-salim-mosque/",
+      "path": "/war-crimes/religious-sites/abu-salim-mosque/",
+      "lang": "en",
+      "section": "religious-sites",
+      "id": "FAC-022",
+      "slug": "abu-salim-mosque",
+      "incidents": 1,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/war-crimes/religious-sites/de/abu-salim-moschee/",
+      "path": "/war-crimes/religious-sites/de/abu-salim-moschee/",
+      "lang": "de",
+      "section": "religious-sites",
+      "id": "FAC-022",
+      "slug": "abu-salim-moschee",
+      "incidents": 1,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/war-crimes/religious-sites/ar/%D9%85%D8%B3%D8%AC%D8%AF-%D8%A3%D8%A8%D9%88-%D8%B3%D8%A7%D9%84%D9%85/",
+      "path": "/war-crimes/religious-sites/ar/مسجد-أبو-سالم/",
+      "lang": "ar",
+      "section": "religious-sites",
+      "id": "FAC-022",
+      "slug": "مسجد-أبو-سالم",
+      "incidents": 1,
       "indexable": true
     },
     {

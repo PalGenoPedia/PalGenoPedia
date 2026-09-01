@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-31",
+ "generated": "2026-09-01",
  "sections": {
   "hospitals": {
    "FAC-000": {
@@ -244,7 +244,7 @@
    },
    "FAC-048": {
     "en": "/war-crimes/hospitals/muscat-al-qarara-health-centre/",
-    "de": "/war-crimes/hospitals/de/gesundheitszentrum-maskat-al-qarara/",
+    "de": "/war-crimes/hospitals/de/al-qarara-gesundheitszentrum-in-maskat/",
     "ar": "/war-crimes/hospitals/ar/مركز-مسقط-القرارة-الصحي/"
    },
    "FAC-049": {
@@ -557,6 +557,11 @@
     "en": "/war-crimes/religious-sites/gaza-baptist-church/",
     "de": "/war-crimes/religious-sites/de/gaza-baptistenkirche/",
     "ar": "/war-crimes/religious-sites/ar/كنيسة-غزة-المعمدانية/"
+   },
+   "FAC-022": {
+    "en": "/war-crimes/religious-sites/abu-salim-mosque/",
+    "de": "/war-crimes/religious-sites/de/abu-salim-moschee/",
+    "ar": "/war-crimes/religious-sites/ar/مسجد-أبو-سالم/"
    }
   }
  }
