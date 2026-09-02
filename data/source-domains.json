@@ -37,7 +37,7 @@
    "secondary": 3
   },
   "aa.com.tr": {
-   "count": 10,
+   "count": 11,
    "sample": "https://www.aa.com.tr/en/middle-east/palestine-27-years-since-ibrahimi-mosque-massacre/2156877",
    "archived": 0,
    "pending": 0,
@@ -122,10 +122,18 @@
      "snap": "",
      "method": "",
      "manual": false
+    },
+    {
+     "u": "https://www.aa.com.tr/en/middle-east/scores-of-palestinians-dead-wounded-from-israeli-bombing-of-gaza-school-sheltering-displaced-people/3056793",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
     }
    ],
    "primary": 4,
-   "secondary": 6
+   "secondary": 7
   },
   "abcnews.com": {
    "count": 1,
@@ -338,6 +346,25 @@
    "urls": [
     {
      "u": "https://www.alarabiya.net/arab-and-world/2024/04/23/الأمم-المتحدة-تحقق-في-العثور-على-أكثر-من-300-جثة-في-مقبرتين-جماعيتين-بغزة",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
+   "primary": 0,
+   "secondary": 1
+  },
+  "alhaq.org": {
+   "count": 1,
+   "sample": "https://www.alhaq.org/FAI-Unit/23717.html",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.alhaq.org/FAI-Unit/23717.html",
      "role": "secondary",
      "status": "new",
      "snap": "",
@@ -1881,12 +1908,20 @@
    "secondary": 0
   },
   "hrw.org": {
-   "count": 10,
+   "count": 11,
    "sample": "https://www.hrw.org",
    "archived": 0,
    "pending": 0,
    "deferred": 0,
    "urls": [
+    {
+     "u": "http://hrw.org/news/2025/08/07/gaza-israeli-school-strikes-magnify-civilian-peril",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
     {
      "u": "https://www.hrw.org",
      "role": "primary",
@@ -1968,7 +2003,7 @@
      "manual": false
     }
    ],
-   "primary": 9,
+   "primary": 10,
    "secondary": 1
   },
   "i24news.tv": {
@@ -2847,6 +2882,25 @@
    ],
    "primary": 0,
    "secondary": 3
+  },
+  "news24.com": {
+   "count": 1,
+   "sample": "https://www.news24.com/world/israel-kills-17-in-gaza-as-hamas-faces-countdown-to-accept-us-ceasefire-plan-20251001-0819",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.news24.com/world/israel-kills-17-in-gaza-as-hamas-faces-countdown-to-accept-us-ceasefire-plan-20251001-0819",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
+   "primary": 0,
+   "secondary": 1
   },
   "npr.org": {
    "count": 1,
@@ -4007,6 +4061,25 @@
    "primary": 4,
    "secondary": 0
   },
+  "palestinechronicle.com": {
+   "count": 1,
+   "sample": "https://www.palestinechronicle.com/al-tabaeen-school-massacre-is-part-of-zionist-script-to-annihilate-palestinians-with-us-support",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.palestinechronicle.com/al-tabaeen-school-massacre-is-part-of-zionist-script-to-annihilate-palestinians-with-us-support",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
+   "primary": 0,
+   "secondary": 1
+  },
   "palestinercs.org": {
    "count": 6,
    "sample": "http://www.palestinercs.org",
@@ -4718,7 +4791,7 @@
    "secondary": 1
   },
   "un.org": {
-   "count": 13,
+   "count": 14,
    "sample": "https://www.un.org/unispal/document/auto-insert-177183",
    "archived": 0,
    "pending": 0,
@@ -4797,6 +4870,14 @@
      "manual": false
     },
     {
+     "u": "https://www.un.org/unispal/document/ohchr-condemns-pr-10aug24",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
      "u": "https://www.un.org/unispal/wp-content/uploads/2015/06/cb361dbaf1526e5785257e6c004b1e94_20150622%20--%20OHCHR%20Report%20on%20Palestine%20%5BA_HRC_CRP_4%5D.pdf",
      "role": "primary",
      "status": "new",
@@ -4829,7 +4910,7 @@
      "manual": false
     }
    ],
-   "primary": 11,
+   "primary": 12,
    "secondary": 2
   },
   "universityworldnews.com": {

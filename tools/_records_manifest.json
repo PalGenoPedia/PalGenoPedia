@@ -2349,8 +2349,8 @@
       "section": "schools",
       "id": "FAC-004",
       "slug": "al-falah-school",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 1,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/schools/de/al-falah-schule/",
@@ -2359,8 +2359,8 @@
       "section": "schools",
       "id": "FAC-004",
       "slug": "al-falah-schule",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 1,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/schools/ar/%D9%85%D8%AF%D8%B1%D8%B3%D8%A9-%D8%A7%D9%84%D9%81%D9%84%D8%A7%D8%AD/",
@@ -2369,8 +2369,8 @@
       "section": "schools",
       "id": "FAC-004",
       "slug": "مدرسة-الفلاح",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 1,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/schools/al-tabaeen-school/",
@@ -2379,7 +2379,7 @@
       "section": "schools",
       "id": "FAC-005",
       "slug": "al-tabaeen-school",
-      "incidents": 2,
+      "incidents": 3,
       "indexable": true
     },
     {
@@ -2389,7 +2389,7 @@
       "section": "schools",
       "id": "FAC-005",
       "slug": "al-tabaeen-schule",
-      "incidents": 2,
+      "incidents": 3,
       "indexable": true
     },
     {
@@ -2399,7 +2399,7 @@
       "section": "schools",
       "id": "FAC-005",
       "slug": "مدرسة-التابعين",
-      "incidents": 2,
+      "incidents": 3,
       "indexable": true
     },
     {

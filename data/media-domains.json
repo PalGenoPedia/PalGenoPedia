@@ -432,6 +432,25 @@
    "video": 0,
    "image": 1
   },
+  "hrw.org": {
+   "count": 1,
+   "sample": "https://www.hrw.org/sites/default/files/media_2025/08/202508mena_palestine_Al-Zeitoun%20C%20school.jpg",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.hrw.org/sites/default/files/media_2025/08/202508mena_palestine_Al-Zeitoun%20C%20school.jpg",
+     "role": "image",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
+   "video": 0,
+   "image": 1
+  },
   "i.guim.co.uk": {
    "count": 2,
    "sample": "https://i.guim.co.uk/img/media/4b508e514dcf4439b3390cd674b1243e3f3d3e44/0_0_7917_4753/master/7917.jpg?width=1900&dpr=1&s=none&crop=none",
@@ -555,7 +574,7 @@
    "image": 1
   },
   "instagram.com": {
-   "count": 7,
+   "count": 8,
    "sample": "https://www.instagram.com/timesofgaza/p/Czq4eVeIza2",
    "archived": 0,
    "pending": 0,
@@ -594,6 +613,14 @@
      "manual": false
     },
     {
+     "u": "https://www.instagram.com/reels/DPRASOOkppd",
+     "role": "video",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
      "u": "https://www.instagram.com/p/C0mfNM-SLhi/?img_index=7",
      "role": "image",
      "status": "new",
@@ -618,7 +645,7 @@
      "manual": false
     }
    ],
-   "video": 4,
+   "video": 5,
    "image": 3
   },
   "media.un.org": {
@@ -714,6 +741,25 @@
    "urls": [
     {
      "u": "https://news.sky.com/story/israeli-air-strike-hits-gaza-hospital-13347901",
+     "role": "image",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
+   "video": 0,
+   "image": 1
+  },
+  "palestinechronicle.com": {
+   "count": 1,
+   "sample": "https://www.palestinechronicle.com/wp-content/uploads/2024/08/Tabaeen_Massacre1_QNN.png",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.palestinechronicle.com/wp-content/uploads/2024/08/Tabaeen_Massacre1_QNN.png",
      "role": "image",
      "status": "new",
      "snap": "",
@@ -1252,7 +1298,7 @@
    "image": 0
   },
   "youtube.com": {
-   "count": 17,
+   "count": 18,
    "sample": "https://www.youtube.com/shorts/S_sjK5KPPMg",
    "archived": 0,
    "pending": 0,
@@ -1300,6 +1346,14 @@
     },
     {
      "u": "https://www.youtube.com/watch?v=GDppabLoCcg",
+     "role": "video",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.youtube.com/watch?v=HfpZA_3J3Y4",
      "role": "video",
      "status": "new",
      "snap": "",
@@ -1395,7 +1449,7 @@
      "manual": false
     }
    ],
-   "video": 16,
+   "video": 17,
    "image": 1
   }
  }
