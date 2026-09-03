@@ -1,6 +1,6 @@
 # PalGenoPedia — Full Documented Events Corpus
 
-Generated 2026-09-02 from data/events.json. 27 documented events (17 historical 1948–2022, 10 current genocide Oct 2023 onward). All figures carry provenance; see the per-event sources. Regenerated whenever the source data changes - do not edit by hand.
+Generated 2026-09-03 from data/events.json. 27 documented events (17 historical 1948–2022, 10 current genocide Oct 2023 onward). All figures carry provenance; see the per-event sources. Regenerated whenever the source data changes - do not edit by hand.
 
 ## Deir Yassin (hist001)
 - Period: historical
