@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-03",
+ "generated": "2026-09-04",
  "domains": {
   "aa.com.tr": {
    "count": 1,
@@ -49,7 +49,7 @@
   },
   "aljazeera.com": {
    "count": 6,
-   "sample": "https://www.aljazeera.com/wp-content/uploads/2024/04/AFP__20240408__34NT7MH__v1__HighRes__PalestinianIsraelConflict-1712614597.jpg?resize=770%2C513&quality=80",
+   "sample": "https://www.aljazeera.com/wp-content/uploads/2024/05/AA-20240525-34677288-34677276-ISRAELI_ARMY_ATTACKED_A_SCHOOL_WHERE_PALESTINIANS_TOOK_REFUGE_ON_GAZA-1716643168.jpg?resize=570%2C380&quality=80",
    "archived": 0,
    "pending": 0,
    "deferred": 0,
@@ -575,7 +575,7 @@
   },
   "instagram.com": {
    "count": 8,
-   "sample": "https://www.instagram.com/timesofgaza/p/Czq4eVeIza2",
+   "sample": "https://www.instagram.com/reels/DPRASOOkppd",
    "archived": 0,
    "pending": 0,
    "deferred": 0,
@@ -669,7 +669,7 @@
   },
   "middleeasteye.net": {
    "count": 2,
-   "sample": "https://www.middleeasteye.net/explainer-gaza-israel-palestine-war-university-destroy",
+   "sample": "https://www.middleeasteye.net/sites/default/files/styles/full_width/public/2023-11/dead%20bodies.jpg.webp?itok=WO4Ucmvq",
    "archived": 0,
    "pending": 0,
    "deferred": 0,
@@ -1299,7 +1299,7 @@
   },
   "youtube.com": {
    "count": 18,
-   "sample": "https://www.youtube.com/shorts/S_sjK5KPPMg",
+   "sample": "https://www.youtube.com/watch?v=E4rltTvrt_c",
    "archived": 0,
    "pending": 0,
    "deferred": 0,
