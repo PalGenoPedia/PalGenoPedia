@@ -30,7 +30,7 @@ specific-entity query (was <facility> attacked, what happened at <event>).
 
 - /war-crimes/hospitals/ — 50 documented hospitals and medical facilities, 36 with enough documented detail to be indexed; /de/ and /ar/ variants under the same path.
 - /war-crimes/universities/ — 13 documented universities and higher-education institutions, 13 with enough documented detail to be indexed; /de/ and /ar/ variants under the same path.
-- /war-crimes/schools/ — 27 documented schools, 4 with enough documented detail to be indexed; /de/ and /ar/ variants under the same path.
+- /war-crimes/schools/ — 27 documented schools, 5 with enough documented detail to be indexed; /de/ and /ar/ variants under the same path.
 - /war-crimes/religious-sites/ — 21 documented mosques, churches and other religious sites, 16 with enough documented detail to be indexed; /de/ and /ar/ variants under the same path.
 - /historical-events/massacres/ — 27 individually documented events (17 historical, 1948–2022; 10 from the current genocide, Oct 2023 onward), each with its own page; /de/ and /ar/ variants under the same path.
 - /sitemap.xml — the full, current list of every indexed URL on the site, including every record above. Prefer this over the Pages list for complete coverage; this file is a curated summary, not the exhaustive index.

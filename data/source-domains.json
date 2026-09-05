@@ -1365,7 +1365,7 @@
    "secondary": 1
   },
   "english.wafa.ps": {
-   "count": 9,
+   "count": 10,
    "sample": "https://english.wafa.ps/Pages/Details/128189",
    "archived": 6,
    "pending": 2,
@@ -1442,10 +1442,18 @@
      "snap": "https://web.archive.org/web/20260828225057/https://english.wafa.ps/Pages/Details/142688",
      "method": "",
      "manual": false
+    },
+    {
+     "u": "https://english.wafa.ps/Pages/Details/157256",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
     }
    ],
    "primary": 3,
-   "secondary": 6
+   "secondary": 7
   },
   "episcopalnewsservice.org": {
    "count": 1,
@@ -4213,7 +4221,7 @@
    "secondary": 0
   },
   "pchrgaza.org": {
-   "count": 2,
+   "count": 3,
    "sample": "https://www.pchrgaza.org",
    "archived": 0,
    "pending": 0,
@@ -4221,6 +4229,14 @@
    "urls": [
     {
      "u": "https://pchrgaza.org/al-awda-hospital-bombed-israeli-occupation-forces-bomb-last-functioning-hospital-in-northern-gaza-denying-hundreds-of-thousands-access-to-healthcare/",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://pchrgaza.org/ongoing-genocide-in-gaza-israeli-occupation-forces-target-displaced-peoples-tents-and-shelters-and-exterminate-entire-families",
      "role": "primary",
      "status": "new",
      "snap": "",
@@ -4236,7 +4252,7 @@
      "manual": false
     }
    ],
-   "primary": 2,
+   "primary": 3,
    "secondary": 0
   },
   "peacenow.org.il": {
