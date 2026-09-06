@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-05",
+ "generated": "2026-09-06",
  "domains": {
   "aa.com.tr": {
    "count": 1,
@@ -48,7 +48,7 @@
    "image": 1
   },
   "aljazeera.com": {
-   "count": 6,
+   "count": 11,
    "sample": "https://www.aljazeera.com/wp-content/uploads/2024/05/AA-20240525-34677288-34677276-ISRAELI_ARMY_ATTACKED_A_SCHOOL_WHERE_PALESTINIANS_TOOK_REFUGE_ON_GAZA-1716643168.jpg?resize=570%2C380&quality=80",
    "archived": 0,
    "pending": 0,
@@ -71,6 +71,14 @@
      "manual": false
     },
     {
+     "u": "https://www.aljazeera.com/news/2024/6/6/israel-bombs-unrwa-school-in-gaza-kills-32-displaced-palestinians",
+     "role": "video",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
      "u": "https://www.aljazeera.com/video/newsfeed/2023/12/20/israeli-strike-hits-during-live-report-near-hospital-in-rafah",
      "role": "video",
      "status": "new",
@@ -79,7 +87,31 @@
      "manual": false
     },
     {
+     "u": "https://www.aljazeera.com/wp-content/uploads/2024/07/SV_Al-Awda-school-attacked_WIDE-THUMB-CLEAN-1720602600.jpg?resize=730%2C410&quality=80",
+     "role": "video",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
      "u": "https://www.aljazeera.com/news/2025/4/13/israeli-forces-bomb-al-ahli-hospital-in-gaza-forcing-patients-to-flee",
+     "role": "image",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.aljazeera.com/wp-content/uploads/2023/11/AP23322521081052-1700331546.jpg?resize=770%2C513&quality=80",
+     "role": "image",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.aljazeera.com/wp-content/uploads/2023/11/AP23326386505591-1700751528.jpg?resize=770%2C513&quality=80",
      "role": "image",
      "status": "new",
      "snap": "",
@@ -101,10 +133,18 @@
      "snap": "",
      "method": "",
      "manual": false
+    },
+    {
+     "u": "https://www.aljazeera.com/wp-content/uploads/2024/07/2024-07-10T070053Z_1301028142_RC27S8A681D5_RTRMADP_3_ISRAEL-PALESTINIANS-1720603173.jpg?fit=1170%2C780&quality=80",
+     "role": "image",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
     }
    ],
-   "video": 3,
-   "image": 3
+   "video": 5,
+   "image": 6
   },
   "anglicannews.org": {
    "count": 1,
@@ -134,6 +174,25 @@
    "urls": [
     {
      "u": "https://anglicanoverseasaid.org.au/2025/04/14/palm-sunday-bombing-of-al-ahli-arab-hospital-in-gaza",
+     "role": "image",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
+   "video": 0,
+   "image": 1
+  },
+  "assets.maestronewsroom.com": {
+   "count": 1,
+   "sample": "https://assets.maestronewsroom.com/media/30f6532d-717b-4366-9158-9c455299fcd9/arabnews-import/2024/07/4453971-233189269.jpg",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "urls": [
+    {
+     "u": "https://assets.maestronewsroom.com/media/30f6532d-717b-4366-9158-9c455299fcd9/arabnews-import/2024/07/4453971-233189269.jpg",
      "role": "image",
      "status": "new",
      "snap": "",
@@ -201,9 +260,28 @@
    "video": 0,
    "image": 1
   },
+  "english.wafa.ps": {
+   "count": 1,
+   "sample": "https://english.wafa.ps/image/NewsThumbImg/Default/a7c73a7b-1d14-4aa3-85b1-280f89bf284a.jpeg",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "urls": [
+    {
+     "u": "https://english.wafa.ps/image/NewsThumbImg/Default/a7c73a7b-1d14-4aa3-85b1-280f89bf284a.jpeg",
+     "role": "image",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
+   "video": 0,
+   "image": 1
+  },
   "facebook.com": {
-   "count": 17,
-   "sample": "https://www.facebook.com/AJA.Egypt/videos/1339154640139148",
+   "count": 18,
+   "sample": "https://www.facebook.com/trtworld/videos/horrific-footage-shows-the-aftermath-of-an-israeli-air-strike-on-fahmi-al-jarjaw/734328589265567",
    "archived": 0,
    "pending": 0,
    "deferred": 0,
@@ -281,6 +359,14 @@
      "manual": false
     },
     {
+     "u": "https://www.facebook.com/trtworld/videos/horrific-footage-shows-the-aftermath-of-an-israeli-air-strike-on-fahmi-al-jarjaw/734328589265567",
+     "role": "video",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
      "u": "https://www.facebook.com/watch/?v=1024226265315856",
      "role": "video",
      "status": "new",
@@ -345,7 +431,7 @@
      "manual": false
     }
    ],
-   "video": 11,
+   "video": 12,
    "image": 6
   },
   "forensic-architecture.org": {
@@ -452,8 +538,8 @@
    "image": 1
   },
   "i.guim.co.uk": {
-   "count": 2,
-   "sample": "https://i.guim.co.uk/img/media/4b508e514dcf4439b3390cd674b1243e3f3d3e44/0_0_7917_4753/master/7917.jpg?width=1900&dpr=1&s=none&crop=none",
+   "count": 4,
+   "sample": "https://i.guim.co.uk/img/media/72b9ba0421f33ad2b016ba5db10672e89fbafe99/0_336_5669_3401/master/5669.jpg?width=620&dpr=1&s=none&crop=none",
    "archived": 0,
    "pending": 0,
    "deferred": 0,
@@ -473,10 +559,26 @@
      "snap": "",
      "method": "",
      "manual": false
+    },
+    {
+     "u": "https://i.guim.co.uk/img/media/72b9ba0421f33ad2b016ba5db10672e89fbafe99/0_336_5669_3401/master/5669.jpg?width=620&dpr=1&s=none&crop=none",
+     "role": "image",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://i.guim.co.uk/img/media/d988e97017b54e64be37289ad38744683b373c1f/786_0_4420_3536/master/4420.jpg?width=620&dpr=1&s=none&crop=none",
+     "role": "image",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
     }
    ],
    "video": 0,
-   "image": 2
+   "image": 4
   },
   "i0.wp.com": {
    "count": 1,
@@ -574,7 +676,7 @@
    "image": 1
   },
   "instagram.com": {
-   "count": 8,
+   "count": 10,
    "sample": "https://www.instagram.com/reels/DPRASOOkppd",
    "archived": 0,
    "pending": 0,
@@ -613,6 +715,14 @@
      "manual": false
     },
     {
+     "u": "https://www.instagram.com/reels/DLZwVr8qT31",
+     "role": "video",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
      "u": "https://www.instagram.com/reels/DPRASOOkppd",
      "role": "video",
      "status": "new",
@@ -622,6 +732,14 @@
     },
     {
      "u": "https://www.instagram.com/p/C0mfNM-SLhi/?img_index=7",
+     "role": "image",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.instagram.com/p/DAyvVAhveoB",
      "role": "image",
      "status": "new",
      "snap": "",
@@ -645,8 +763,46 @@
      "manual": false
     }
    ],
-   "video": 5,
-   "image": 3
+   "video": 6,
+   "image": 4
+  },
+  "maktoobmedia.com": {
+   "count": 1,
+   "sample": "https://maktoobmedia.com/media/img/800/uploads/2023/12/IMG_6336-1.jpeg.webp",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "urls": [
+    {
+     "u": "https://maktoobmedia.com/media/img/800/uploads/2023/12/IMG_6336-1.jpeg.webp",
+     "role": "image",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
+   "video": 0,
+   "image": 1
+  },
+  "media.pnn.ps": {
+   "count": 1,
+   "sample": "https://media.pnn.ps/english/storage/images/news/2024/1728553093-444655513.jpeg",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "urls": [
+    {
+     "u": "https://media.pnn.ps/english/storage/images/news/2024/1728553093-444655513.jpeg",
+     "role": "image",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
+   "video": 0,
+   "image": 1
   },
   "media.un.org": {
    "count": 1,
@@ -733,12 +889,20 @@
    "image": 0
   },
   "news.sky.com": {
-   "count": 1,
-   "sample": "https://news.sky.com/story/israeli-air-strike-hits-gaza-hospital-13347901",
+   "count": 2,
+   "sample": "https://news.sky.com/video/the-aftermath-of-the-missile-strike-on-school-in-gaza-13185969",
    "archived": 0,
    "pending": 0,
    "deferred": 0,
    "urls": [
+    {
+     "u": "https://news.sky.com/video/the-aftermath-of-the-missile-strike-on-school-in-gaza-13185969",
+     "role": "video",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
     {
      "u": "https://news.sky.com/story/israeli-air-strike-hits-gaza-hospital-13347901",
      "role": "image",
@@ -748,7 +912,7 @@
      "manual": false
     }
    ],
-   "video": 0,
+   "video": 1,
    "image": 1
   },
   "palestinechronicle.com": {
@@ -1306,12 +1470,20 @@
    "image": 0
   },
   "youtube.com": {
-   "count": 19,
+   "count": 23,
    "sample": "https://www.youtube.com/watch?v=E4rltTvrt_c",
    "archived": 0,
    "pending": 0,
    "deferred": 0,
    "urls": [
+    {
+     "u": "https://www.youtube.com/shorts/XjOuKWpzqFQ",
+     "role": "video",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
     {
      "u": "https://www.youtube.com/shorts/mokk_-u50m4",
      "role": "video",
@@ -1401,6 +1573,14 @@
      "manual": false
     },
     {
+     "u": "https://www.youtube.com/watch?v=OzEqTOo_2MQ",
+     "role": "video",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
      "u": "https://www.youtube.com/watch?v=P0lf-Mwk-v0&t=3s",
      "role": "video",
      "status": "new",
@@ -1418,6 +1598,14 @@
     },
     {
      "u": "https://www.youtube.com/watch?v=cySrQNecEQg",
+     "role": "video",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.youtube.com/watch?v=iV_Fyov1wvQ",
      "role": "video",
      "status": "new",
      "snap": "",
@@ -1457,6 +1645,14 @@
      "manual": false
     },
     {
+     "u": "https://www.youtube.com/watch?v=yspylXsoDf8",
+     "role": "video",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
      "u": "https://www.youtube.com/shorts/S_sjK5KPPMg",
      "role": "image",
      "status": "new",
@@ -1465,7 +1661,7 @@
      "manual": false
     }
    ],
-   "video": 18,
+   "video": 22,
    "image": 1
   }
  }

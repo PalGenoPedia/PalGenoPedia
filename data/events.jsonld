@@ -8,8 +8,8 @@
       "name": "PalGenoPedia Documented Events Dataset",
       "description": "Open documentation of verified war crimes, massacres, and humanitarian violations concerning Palestine, 1948–present. Every figure carries provenance and a verification status. Canonical machine-readable source for PalGenoPedia.",
       "url": "https://palgenopedia.org/data/events.json",
-      "datePublished": "2026-09-05",
-      "dateModified": "2026-09-05",
+      "datePublished": "2026-09-06",
+      "dateModified": "2026-09-06",
       "inLanguage": "en",
       "creator": {
         "@type": "Organization",
@@ -180,7 +180,7 @@
       "headline": "Deir Yassin",
       "url": "https://palgenopedia.org/historical-events/massacres/deir-yassin/",
       "datePublished": "1948-04-09",
-      "dateModified": "2026-09-05",
+      "dateModified": "2026-09-06",
       "inLanguage": "en",
       "about": {
         "@type": "Event",
@@ -379,7 +379,7 @@
       "headline": "Tantura",
       "url": "https://palgenopedia.org/historical-events/massacres/tantura/",
       "datePublished": "1948-05-22",
-      "dateModified": "2026-09-05",
+      "dateModified": "2026-09-06",
       "inLanguage": "en",
       "about": {
         "@type": "Event",
@@ -697,7 +697,7 @@
       "headline": "Lydda and Ramle",
       "url": "https://palgenopedia.org/historical-events/massacres/lydda-and-ramle/",
       "datePublished": "1948-07-09",
-      "dateModified": "2026-09-05",
+      "dateModified": "2026-09-06",
       "inLanguage": "en",
       "about": {
         "@type": "Event",
@@ -933,7 +933,7 @@
       "headline": "Qibya",
       "url": "https://palgenopedia.org/historical-events/massacres/qibya/",
       "datePublished": "1953-10-14",
-      "dateModified": "2026-09-05",
+      "dateModified": "2026-09-06",
       "inLanguage": "en",
       "about": {
         "@type": "Event",
@@ -1175,7 +1175,7 @@
       "headline": "Khan Yunis Massacre",
       "url": "https://palgenopedia.org/historical-events/massacres/khan-yunis-massacre/",
       "datePublished": "1956-11-03",
-      "dateModified": "2026-09-05",
+      "dateModified": "2026-09-06",
       "inLanguage": "en",
       "about": {
         "@type": "Event",
@@ -1434,7 +1434,7 @@
       "headline": "Six-Day War / Al-Naksa",
       "url": "https://palgenopedia.org/historical-events/massacres/six-day-war-al-naksa/",
       "datePublished": "1967-06-05",
-      "dateModified": "2026-09-05",
+      "dateModified": "2026-09-06",
       "inLanguage": "en",
       "about": {
         "@type": "Event",
@@ -1726,7 +1726,7 @@
       "headline": "Sabra and Shatila",
       "url": "https://palgenopedia.org/historical-events/massacres/sabra-and-shatila/",
       "datePublished": "1982-09-16",
-      "dateModified": "2026-09-05",
+      "dateModified": "2026-09-06",
       "inLanguage": "en",
       "about": {
         "@type": "Event",
@@ -2047,7 +2047,7 @@
       "headline": "First Intifada",
       "url": "https://palgenopedia.org/historical-events/massacres/first-intifada/",
       "datePublished": "1987-12-08",
-      "dateModified": "2026-09-05",
+      "dateModified": "2026-09-06",
       "inLanguage": "en",
       "about": {
         "@type": "Event",
@@ -2433,7 +2433,7 @@
       "headline": "Cave of the Patriarchs Massacre",
       "url": "https://palgenopedia.org/historical-events/massacres/cave-of-the-patriarchs-massacre/",
       "datePublished": "1994-02-25",
-      "dateModified": "2026-09-05",
+      "dateModified": "2026-09-06",
       "inLanguage": "en",
       "about": {
         "@type": "Event",
@@ -2742,7 +2742,7 @@
       "headline": "Second Intifada",
       "url": "https://palgenopedia.org/historical-events/massacres/second-intifada/",
       "datePublished": "2000-09-28",
-      "dateModified": "2026-09-05",
+      "dateModified": "2026-09-06",
       "inLanguage": "en",
       "about": {
         "@type": "Event",
@@ -3126,7 +3126,7 @@
       "headline": "Battle of Jenin",
       "url": "https://palgenopedia.org/historical-events/massacres/battle-of-jenin/",
       "datePublished": "2002-04-03",
-      "dateModified": "2026-09-05",
+      "dateModified": "2026-09-06",
       "inLanguage": "en",
       "about": {
         "@type": "Event",
@@ -3522,7 +3522,7 @@
       "headline": "Operation Cast Lead",
       "url": "https://palgenopedia.org/historical-events/massacres/operation-cast-lead/",
       "datePublished": "2008-12-27",
-      "dateModified": "2026-09-05",
+      "dateModified": "2026-09-06",
       "inLanguage": "en",
       "about": {
         "@type": "Event",
@@ -3913,7 +3913,7 @@
       "headline": "Operation Pillar of Defense",
       "url": "https://palgenopedia.org/historical-events/massacres/operation-pillar-of-defense/",
       "datePublished": "2012-11-14",
-      "dateModified": "2026-09-05",
+      "dateModified": "2026-09-06",
       "inLanguage": "en",
       "about": {
         "@type": "Event",
@@ -4266,7 +4266,7 @@
       "headline": "Operation Protective Edge",
       "url": "https://palgenopedia.org/historical-events/massacres/operation-protective-edge/",
       "datePublished": "2014-07-07",
-      "dateModified": "2026-09-05",
+      "dateModified": "2026-09-06",
       "inLanguage": "en",
       "about": {
         "@type": "Event",
@@ -4690,7 +4690,7 @@
       "headline": "Great March of Return",
       "url": "https://palgenopedia.org/historical-events/massacres/great-march-of-return/",
       "datePublished": "2018-03-30",
-      "dateModified": "2026-09-05",
+      "dateModified": "2026-09-06",
       "inLanguage": "en",
       "about": {
         "@type": "Event",
@@ -5164,7 +5164,7 @@
       "headline": "Operation Guardian of the Walls",
       "url": "https://palgenopedia.org/historical-events/massacres/operation-guardian-of-the-walls/",
       "datePublished": "2021-05-10",
-      "dateModified": "2026-09-05",
+      "dateModified": "2026-09-06",
       "inLanguage": "en",
       "about": {
         "@type": "Event",
@@ -5584,7 +5584,7 @@
       "headline": "West Bank Raids 2022–2023",
       "url": "https://palgenopedia.org/historical-events/massacres/west-bank-raids-20222023/",
       "datePublished": "2022-01-01",
-      "dateModified": "2026-09-05",
+      "dateModified": "2026-09-06",
       "inLanguage": "en",
       "about": {
         "@type": "Event",
@@ -5931,7 +5931,7 @@
       "headline": "UNRWA School Strikes",
       "url": "https://palgenopedia.org/historical-events/massacres/unrwa-school-strikes/",
       "datePublished": "2023-10-15",
-      "dateModified": "2026-09-05",
+      "dateModified": "2026-09-06",
       "inLanguage": "en",
       "about": {
         "@type": "Event",
@@ -6034,7 +6034,7 @@
       "headline": "Al-Ahli Baptist Hospital Strike",
       "url": "https://palgenopedia.org/historical-events/massacres/al-ahli-baptist-hospital-strike/",
       "datePublished": "2023-10-17",
-      "dateModified": "2026-09-05",
+      "dateModified": "2026-09-06",
       "inLanguage": "en",
       "about": {
         "@type": "Event",
@@ -6145,7 +6145,7 @@
       "headline": "Gaza City Systematic Destruction",
       "url": "https://palgenopedia.org/historical-events/massacres/gaza-city-systematic-destruction/",
       "datePublished": "2023-10-27",
-      "dateModified": "2026-09-05",
+      "dateModified": "2026-09-06",
       "inLanguage": "en",
       "about": {
         "@type": "Event",
@@ -6256,7 +6256,7 @@
       "headline": "Jabalia Refugee Camp Bombardment (First Strike)",
       "url": "https://palgenopedia.org/historical-events/massacres/jabalia-refugee-camp-bombardment-first-strike/",
       "datePublished": "2023-10-31",
-      "dateModified": "2026-09-05",
+      "dateModified": "2026-09-06",
       "inLanguage": "en",
       "about": {
         "@type": "Event",
@@ -6367,7 +6367,7 @@
       "headline": "Al-Shifa Hospital Siege",
       "url": "https://palgenopedia.org/historical-events/massacres/al-shifa-hospital-siege/",
       "datePublished": "2023-11-11",
-      "dateModified": "2026-09-05",
+      "dateModified": "2026-09-06",
       "inLanguage": "en",
       "about": {
         "@type": "Event",
@@ -6478,7 +6478,7 @@
       "headline": "Flour Massacre - Al-Rashid Street",
       "url": "https://palgenopedia.org/historical-events/massacres/flour-massacre-al-rashid-street/",
       "datePublished": "2024-02-29",
-      "dateModified": "2026-09-05",
+      "dateModified": "2026-09-06",
       "inLanguage": "en",
       "about": {
         "@type": "Event",
@@ -6589,7 +6589,7 @@
       "headline": "World Central Kitchen Workers Killing",
       "url": "https://palgenopedia.org/historical-events/massacres/world-central-kitchen-workers-killing/",
       "datePublished": "2024-04-01",
-      "dateModified": "2026-09-05",
+      "dateModified": "2026-09-06",
       "inLanguage": "en",
       "about": {
         "@type": "Event",
@@ -6700,7 +6700,7 @@
       "headline": "Mass Graves Discovery at Nasser Hospital",
       "url": "https://palgenopedia.org/historical-events/massacres/mass-graves-discovery-at-nasser-hospital/",
       "datePublished": "2024-04-22",
-      "dateModified": "2026-09-05",
+      "dateModified": "2026-09-06",
       "inLanguage": "en",
       "about": {
         "@type": "Event",
@@ -6811,7 +6811,7 @@
       "headline": "Rafah Tent Camp Massacre",
       "url": "https://palgenopedia.org/historical-events/massacres/rafah-tent-camp-massacre/",
       "datePublished": "2024-05-26",
-      "dateModified": "2026-09-05",
+      "dateModified": "2026-09-06",
       "inLanguage": "en",
       "about": {
         "@type": "Event",
@@ -6922,7 +6922,7 @@
       "headline": "Starvation Genocide - Northern Gaza Blockade",
       "url": "https://palgenopedia.org/historical-events/massacres/starvation-genocide-northern-gaza-blockade/",
       "datePublished": "2024-10-01",
-      "dateModified": "2026-09-05",
+      "dateModified": "2026-09-06",
       "inLanguage": "en",
       "about": {
         "@type": "Event",

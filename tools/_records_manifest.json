@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-05",
+  "generated": "2026-09-06",
   "count": 405,
   "pages": [
     {
@@ -189,7 +189,7 @@
       "section": "hospitals",
       "id": "FAC-006",
       "slug": "al-aqsa-martyrs-hospital",
-      "incidents": 7,
+      "incidents": 9,
       "indexable": true
     },
     {
@@ -199,7 +199,7 @@
       "section": "hospitals",
       "id": "FAC-006",
       "slug": "al-aqsa-maertyrerkrankenhaus",
-      "incidents": 7,
+      "incidents": 9,
       "indexable": true
     },
     {
@@ -209,7 +209,7 @@
       "section": "hospitals",
       "id": "FAC-006",
       "slug": "مستشفى-شهداء-الأقصى",
-      "incidents": 7,
+      "incidents": 9,
       "indexable": true
     },
     {
@@ -2229,8 +2229,8 @@
       "section": "schools",
       "id": "FAC-000",
       "slug": "al-fakhoora-school",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 1,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/schools/de/al-fakhoora-schule/",
@@ -2239,8 +2239,8 @@
       "section": "schools",
       "id": "FAC-000",
       "slug": "al-fakhoora-schule",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 1,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/schools/ar/%D9%85%D8%AF%D8%B1%D8%B3%D8%A9-%D8%A7%D9%84%D9%81%D8%AE%D9%88%D8%B1%D8%A9/",
@@ -2249,8 +2249,8 @@
       "section": "schools",
       "id": "FAC-000",
       "slug": "مدرسة-الفخورة",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 1,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/schools/abu-hussein-school-girls/",
@@ -2259,8 +2259,8 @@
       "section": "schools",
       "id": "FAC-001",
       "slug": "abu-hussein-school-girls",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 1,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/schools/de/abu-hussein-schule-maedchen/",
@@ -2269,8 +2269,8 @@
       "section": "schools",
       "id": "FAC-001",
       "slug": "abu-hussein-schule-maedchen",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 1,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/schools/ar/%D9%85%D8%AF%D8%B1%D8%B3%D8%A9-%D8%A3%D8%A8%D9%88-%D8%AD%D8%B3%D9%8A%D9%86-%D9%84%D9%84%D8%A8%D9%86%D8%A7%D8%AA/",
@@ -2279,8 +2279,8 @@
       "section": "schools",
       "id": "FAC-001",
       "slug": "مدرسة-أبو-حسين-للبنات",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 1,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/schools/osama-bin-zaid-school/",
@@ -2289,8 +2289,8 @@
       "section": "schools",
       "id": "FAC-002",
       "slug": "osama-bin-zaid-school",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 1,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/schools/de/osama-bin-zaid-schule/",
@@ -2299,8 +2299,8 @@
       "section": "schools",
       "id": "FAC-002",
       "slug": "osama-bin-zaid-schule",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 1,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/schools/ar/%D9%85%D8%AF%D8%B1%D8%B3%D8%A9-%D8%A3%D8%B3%D8%A7%D9%85%D8%A9-%D8%A8%D9%86-%D8%B2%D9%8A%D8%AF/",
@@ -2309,8 +2309,8 @@
       "section": "schools",
       "id": "FAC-002",
       "slug": "مدرسة-أسامة-بن-زيد",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 1,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/schools/al-buraq-school/",
@@ -2529,8 +2529,8 @@
       "section": "schools",
       "id": "FAC-010",
       "slug": "al-sardi-school",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 1,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/schools/de/al-sardi-schule/",
@@ -2539,8 +2539,8 @@
       "section": "schools",
       "id": "FAC-010",
       "slug": "al-sardi-schule",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 1,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/schools/ar/%D9%85%D8%AF%D8%B1%D8%B3%D8%A9-%D8%A7%D9%84%D8%B3%D8%B1%D8%AF%D9%8A/",
@@ -2549,8 +2549,8 @@
       "section": "schools",
       "id": "FAC-010",
       "slug": "مدرسة-السردي",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 1,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/schools/al-jawni-school/",
@@ -2559,8 +2559,8 @@
       "section": "schools",
       "id": "FAC-011",
       "slug": "al-jawni-school",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 1,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/schools/de/al-jawni-schule/",
@@ -2569,8 +2569,8 @@
       "section": "schools",
       "id": "FAC-011",
       "slug": "al-jawni-schule",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 1,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/schools/ar/%D9%85%D8%AF%D8%B1%D8%B3%D8%A9-%D8%A7%D9%84%D8%AC%D8%A7%D9%88%D9%86%D9%8A/",
@@ -2579,8 +2579,8 @@
       "section": "schools",
       "id": "FAC-011",
       "slug": "مدرسة-الجاوني",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 1,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/schools/al-awda-school/",
@@ -2589,8 +2589,8 @@
       "section": "schools",
       "id": "FAC-012",
       "slug": "al-awda-school",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 1,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/schools/de/al-awda-schule/",
@@ -2599,8 +2599,8 @@
       "section": "schools",
       "id": "FAC-012",
       "slug": "al-awda-schule",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 1,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/schools/ar/%D9%85%D8%AF%D8%B1%D8%B3%D8%A9-%D8%A7%D9%84%D8%B9%D9%88%D8%AF%D8%A9/",
@@ -2609,8 +2609,8 @@
       "section": "schools",
       "id": "FAC-012",
       "slug": "مدرسة-العودة",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 1,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/schools/khadija-girls-school/",
@@ -2619,8 +2619,8 @@
       "section": "schools",
       "id": "FAC-013",
       "slug": "khadija-girls-school",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 1,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/schools/de/khadija-maedchenschule/",
@@ -2629,8 +2629,8 @@
       "section": "schools",
       "id": "FAC-013",
       "slug": "khadija-maedchenschule",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 1,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/schools/ar/%D9%85%D8%AF%D8%B1%D8%B3%D8%A9-%D8%AE%D8%AF%D9%8A%D8%AC%D8%A9-%D9%84%D9%84%D8%A8%D9%86%D8%A7%D8%AA/",
@@ -2639,8 +2639,8 @@
       "section": "schools",
       "id": "FAC-013",
       "slug": "مدرسة-خديجة-للبنات",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 1,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/schools/rufaida-girls-high-school/",
@@ -2649,8 +2649,8 @@
       "section": "schools",
       "id": "FAC-014",
       "slug": "rufaida-girls-high-school",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 1,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/schools/de/rufaida-maedchengymnasium/",
@@ -2659,8 +2659,8 @@
       "section": "schools",
       "id": "FAC-014",
       "slug": "rufaida-maedchengymnasium",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 1,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/schools/ar/%D9%85%D8%AF%D8%B1%D8%B3%D8%A9-%D8%B1%D9%88%D9%81%D9%8A%D8%AF%D8%A7-%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%88%D9%8A%D8%A9-%D9%84%D9%84%D8%A8%D9%86%D8%A7%D8%AA/",
@@ -2669,8 +2669,8 @@
       "section": "schools",
       "id": "FAC-014",
       "slug": "مدرسة-روفيدا-الثانوية-للبنات",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 1,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/schools/holy-family-school/",
@@ -2709,8 +2709,8 @@
       "section": "schools",
       "id": "FAC-016",
       "slug": "shadia-abu-ghazala-school",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 1,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/schools/de/shadia-abu-ghazala-schule/",
@@ -2719,8 +2719,8 @@
       "section": "schools",
       "id": "FAC-016",
       "slug": "shadia-abu-ghazala-schule",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 1,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/schools/ar/%D9%85%D8%AF%D8%B1%D8%B3%D8%A9-%D8%B4%D8%A7%D8%AF%D9%8A%D8%A9-%D8%A3%D8%A8%D9%88-%D8%BA%D8%B2%D8%A7%D9%84%D8%A9/",
@@ -2729,8 +2729,8 @@
       "section": "schools",
       "id": "FAC-016",
       "slug": "مدرسة-شادية-أبو-غزالة",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 1,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/schools/fahmi-al-jarjawi-school/",
@@ -2739,8 +2739,8 @@
       "section": "schools",
       "id": "FAC-017",
       "slug": "fahmi-al-jarjawi-school",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 1,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/schools/de/fahmi-al-jarjawi-schule/",
@@ -2749,8 +2749,8 @@
       "section": "schools",
       "id": "FAC-017",
       "slug": "fahmi-al-jarjawi-schule",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 1,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/schools/ar/%D9%85%D8%AF%D8%B1%D8%B3%D8%A9-%D9%81%D9%87%D9%85%D9%8A-%D8%A7%D9%84%D8%AC%D8%B1%D8%AC%D8%A7%D9%88%D9%8A/",
@@ -2759,8 +2759,8 @@
       "section": "schools",
       "id": "FAC-017",
       "slug": "مدرسة-فهمي-الجرجاوي",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 1,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/schools/al-farabi-school/",
@@ -2799,8 +2799,8 @@
       "section": "schools",
       "id": "FAC-019",
       "slug": "ibn-rushd-school",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 1,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/schools/de/ibn-rushd-schule/",
@@ -2809,8 +2809,8 @@
       "section": "schools",
       "id": "FAC-019",
       "slug": "ibn-rushd-schule",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 1,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/schools/ar/%D9%85%D8%AF%D8%B1%D8%B3%D8%A9-%D8%A7%D8%A8%D9%86-%D8%B1%D8%B4%D8%AF/",
@@ -2819,8 +2819,8 @@
       "section": "schools",
       "id": "FAC-019",
       "slug": "مدرسة-ابن-رشد",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 1,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/schools/fatima-bint-asad-school/",

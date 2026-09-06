@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>PalGenoPedia — Documented Events</title>
   <id>https://palgenopedia.org/data/events.json</id>
-  <updated>2026-09-05T00:00:00Z</updated>
+  <updated>2026-09-06T00:00:00Z</updated>
   <link rel="self" href="https://palgenopedia.org/feed.xml"/>
   <link rel="alternate" href="https://palgenopedia.org/historical-events/massacres/"/>
   <subtitle>Documented war crimes, massacres, and humanitarian violations concerning Palestine, 1948–present. Generated from the canonical /data/events.json (27 events).</subtitle>
@@ -13,7 +13,7 @@
     <link rel="alternate" href="https://palgenopedia.org/historical-events/massacres/starvation-genocide-northern-gaza-blockade/"/>
     <id>https://palgenopedia.org/data/events.json#curr_010</id>
     <published>2024-10-01T00:00:00Z</published>
-    <updated>2026-09-05T00:00:00Z</updated>
+    <updated>2026-09-06T00:00:00Z</updated>
     <category term="Starvation Warfare"/>
     <category term="verification:verified"/>
     <summary>Starvation Genocide - Northern Gaza Blockade — Starvation Warfare (verified).
@@ -29,7 +29,7 @@ Sources: UN Special Rapporteurs; World Food Programme; Human Rights Watch; Genoc
     <link rel="alternate" href="https://palgenopedia.org/historical-events/massacres/rafah-tent-camp-massacre/"/>
     <id>https://palgenopedia.org/data/events.json#curr_007</id>
     <published>2024-05-26T00:00:00Z</published>
-    <updated>2026-09-05T00:00:00Z</updated>
+    <updated>2026-09-06T00:00:00Z</updated>
     <category term="Massacre"/>
     <category term="verification:verified"/>
     <summary>Rafah Tent Camp Massacre — Massacre (verified).
@@ -45,7 +45,7 @@ Sources: UN OCHA; Gaza Health Ministry; Human Rights Watch; Video evidence</summ
     <link rel="alternate" href="https://palgenopedia.org/historical-events/massacres/mass-graves-discovery-at-nasser-hospital/"/>
     <id>https://palgenopedia.org/data/events.json#curr_005</id>
     <published>2024-04-22T00:00:00Z</published>
-    <updated>2026-09-05T00:00:00Z</updated>
+    <updated>2026-09-06T00:00:00Z</updated>
     <category term="Mass Graves"/>
     <category term="verification:verified"/>
     <summary>Mass Graves Discovery at Nasser Hospital — Mass Graves (verified).
@@ -61,7 +61,7 @@ Sources: Gaza Civil Defense; UN OCHA; Human Rights Watch; Euro-Med Human Rights 
     <link rel="alternate" href="https://palgenopedia.org/historical-events/massacres/world-central-kitchen-workers-killing/"/>
     <id>https://palgenopedia.org/data/events.json#curr_008</id>
     <published>2024-04-01T00:00:00Z</published>
-    <updated>2026-09-05T00:00:00Z</updated>
+    <updated>2026-09-06T00:00:00Z</updated>
     <category term="Aid Workers Killing"/>
     <category term="verification:verified"/>
     <summary>World Central Kitchen Workers Killing — Aid Workers Killing (verified).
@@ -77,7 +77,7 @@ Sources: World Central Kitchen Statement; UN Security Council; Human Rights Watc
     <link rel="alternate" href="https://palgenopedia.org/historical-events/massacres/flour-massacre-al-rashid-street/"/>
     <id>https://palgenopedia.org/data/events.json#curr_003</id>
     <published>2024-02-29T00:00:00Z</published>
-    <updated>2026-09-05T00:00:00Z</updated>
+    <updated>2026-09-06T00:00:00Z</updated>
     <category term="Massacre"/>
     <category term="verification:verified"/>
     <summary>Flour Massacre - Al-Rashid Street — Massacre (verified).
@@ -93,7 +93,7 @@ Sources: UN OCHA; Gaza Health Ministry; Euro-Med Human Rights Monitor; Video evi
     <link rel="alternate" href="https://palgenopedia.org/historical-events/massacres/al-shifa-hospital-siege/"/>
     <id>https://palgenopedia.org/data/events.json#curr_006</id>
     <published>2023-11-11T00:00:00Z</published>
-    <updated>2026-09-05T00:00:00Z</updated>
+    <updated>2026-09-06T00:00:00Z</updated>
     <category term="Hospital Siege"/>
     <category term="verification:verified"/>
     <summary>Al-Shifa Hospital Siege — Hospital Siege (verified).
@@ -109,7 +109,7 @@ Sources: WHO; UN OCHA; Human Rights Watch; Doctors Without Borders</summary>
     <link rel="alternate" href="https://palgenopedia.org/historical-events/massacres/jabalia-refugee-camp-bombardment-first-strike/"/>
     <id>https://palgenopedia.org/data/events.json#curr_002</id>
     <published>2023-10-31T00:00:00Z</published>
-    <updated>2026-09-05T00:00:00Z</updated>
+    <updated>2026-09-06T00:00:00Z</updated>
     <category term="Refugee Camp Attack"/>
     <category term="verification:verified"/>
     <summary>Jabalia Refugee Camp Bombardment (First Strike) — Refugee Camp Attack (verified).
@@ -125,7 +125,7 @@ Sources: UN OCHA; Human Rights Watch; Gaza Civil Defense; Multiple news agencies
     <link rel="alternate" href="https://palgenopedia.org/historical-events/massacres/gaza-city-systematic-destruction/"/>
     <id>https://palgenopedia.org/data/events.json#curr_009</id>
     <published>2023-10-27T00:00:00Z</published>
-    <updated>2026-09-05T00:00:00Z</updated>
+    <updated>2026-09-06T00:00:00Z</updated>
     <category term="Urban Destruction"/>
     <category term="verification:verified"/>
     <summary>Gaza City Systematic Destruction — Urban Destruction (verified).
@@ -141,7 +141,7 @@ Sources: UN OCHA; Satellite imagery analysis; Human Rights Watch; UN Satellite C
     <link rel="alternate" href="https://palgenopedia.org/historical-events/massacres/al-ahli-baptist-hospital-strike/"/>
     <id>https://palgenopedia.org/data/events.json#curr_001</id>
     <published>2023-10-17T00:00:00Z</published>
-    <updated>2026-09-05T00:00:00Z</updated>
+    <updated>2026-09-06T00:00:00Z</updated>
     <category term="Hospital Attack"/>
     <category term="verification:verified"/>
     <summary>Al-Ahli Baptist Hospital Strike — Hospital Attack (verified).
@@ -157,7 +157,7 @@ Sources: Gaza Health Ministry; Human Rights Watch Investigation; UN OCHA; Multip
     <link rel="alternate" href="https://palgenopedia.org/historical-events/massacres/unrwa-school-strikes/"/>
     <id>https://palgenopedia.org/data/events.json#curr_004</id>
     <published>2023-10-15T00:00:00Z</published>
-    <updated>2026-09-05T00:00:00Z</updated>
+    <updated>2026-09-06T00:00:00Z</updated>
     <category term="Protected Site Attack"/>
     <category term="verification:verified"/>
     <summary>UNRWA School Strikes — Protected Site Attack (verified).
@@ -173,7 +173,7 @@ Sources: UNRWA Official Statements; UN Secretary-General Reports; Human Rights W
     <link rel="alternate" href="https://palgenopedia.org/historical-events/massacres/west-bank-raids-20222023/"/>
     <id>https://palgenopedia.org/data/events.json#hist017</id>
     <published>2022-01-01T00:00:00Z</published>
-    <updated>2026-09-05T00:00:00Z</updated>
+    <updated>2026-09-06T00:00:00Z</updated>
     <category term="Military Raids / Systematic Killings"/>
     <category term="verification:verified"/>
     <summary>West Bank Raids 2022–2023 — Military Raids / Systematic Killings (verified).
@@ -189,7 +189,7 @@ Sources: Middle East Eye Comprehensive Analysis (https://www.middleeasteye.net/n
     <link rel="alternate" href="https://palgenopedia.org/historical-events/massacres/operation-guardian-of-the-walls/"/>
     <id>https://palgenopedia.org/data/events.json#hist016</id>
     <published>2021-05-10T00:00:00Z</published>
-    <updated>2026-09-05T00:00:00Z</updated>
+    <updated>2026-09-06T00:00:00Z</updated>
     <category term="Military Operation"/>
     <category term="verification:verified"/>
     <summary>Operation Guardian of the Walls — Military Operation (verified).
@@ -205,7 +205,7 @@ Sources: Human Rights Watch Report; UN OCHA Statistics (https://www.hrw.org/news
     <link rel="alternate" href="https://palgenopedia.org/historical-events/massacres/great-march-of-return/"/>
     <id>https://palgenopedia.org/data/events.json#hist015</id>
     <published>2018-03-30T00:00:00Z</published>
-    <updated>2026-09-05T00:00:00Z</updated>
+    <updated>2026-09-06T00:00:00Z</updated>
     <category term="Mass Killings / Protest Suppression"/>
     <category term="verification:verified"/>
     <summary>Great March of Return — Mass Killings / Protest Suppression (verified).
@@ -221,7 +221,7 @@ Sources: UN Commission Report A/HRC/40/74; B'Tselem Comprehensive Statistics (ht
     <link rel="alternate" href="https://palgenopedia.org/historical-events/massacres/operation-protective-edge/"/>
     <id>https://palgenopedia.org/data/events.json#hist014</id>
     <published>2014-07-07T00:00:00Z</published>
-    <updated>2026-09-05T00:00:00Z</updated>
+    <updated>2026-09-06T00:00:00Z</updated>
     <category term="Military Operation"/>
     <category term="verification:verified"/>
     <summary>Operation Protective Edge — Military Operation (verified).
@@ -237,7 +237,7 @@ Sources: UN Commission of Inquiry Report A/HRC/29/52 (https://www.un.org/unispal
     <link rel="alternate" href="https://palgenopedia.org/historical-events/massacres/operation-pillar-of-defense/"/>
     <id>https://palgenopedia.org/data/events.json#hist013</id>
     <published>2012-11-14T00:00:00Z</published>
-    <updated>2026-09-05T00:00:00Z</updated>
+    <updated>2026-09-06T00:00:00Z</updated>
     <category term="Military Operation, Airstrikes, Civilian Casualties"/>
     <category term="verification:verified"/>
     <summary>Operation Pillar of Defense — Military Operation, Airstrikes, Civilian Casualties (verified).
@@ -253,7 +253,7 @@ Sources: B'Tselem Report (May 2013), pp. 9-11 (https://www.btselem.org/download/
     <link rel="alternate" href="https://palgenopedia.org/historical-events/massacres/operation-cast-lead/"/>
     <id>https://palgenopedia.org/data/events.json#hist012</id>
     <published>2008-12-27T00:00:00Z</published>
-    <updated>2026-09-05T00:00:00Z</updated>
+    <updated>2026-09-06T00:00:00Z</updated>
     <category term="Military Operation"/>
     <category term="verification:verified"/>
     <summary>Operation Cast Lead — Military Operation (verified).
@@ -269,7 +269,7 @@ Sources: Palestinian Centre for Human Rights; B'Tselem; UN OCHA (https://www.pch
     <link rel="alternate" href="https://palgenopedia.org/historical-events/massacres/battle-of-jenin/"/>
     <id>https://palgenopedia.org/data/events.json#hist011</id>
     <published>2002-04-03T00:00:00Z</published>
-    <updated>2026-09-05T00:00:00Z</updated>
+    <updated>2026-09-06T00:00:00Z</updated>
     <category term="Military Operation / Urban Warfare"/>
     <category term="verification:verified"/>
     <summary>Battle of Jenin — Military Operation / Urban Warfare (verified).
@@ -285,7 +285,7 @@ Sources: Human Rights Watch - Jenin Report (https://www.hrw.org/report/2002/05/0
     <link rel="alternate" href="https://palgenopedia.org/historical-events/massacres/second-intifada/"/>
     <id>https://palgenopedia.org/data/events.json#hist010</id>
     <published>2000-09-28T00:00:00Z</published>
-    <updated>2026-09-05T00:00:00Z</updated>
+    <updated>2026-09-06T00:00:00Z</updated>
     <category term="Armed Uprising / Mass Casualties"/>
     <category term="verification:verified"/>
     <summary>Second Intifada — Armed Uprising / Mass Casualties (verified).
@@ -301,7 +301,7 @@ Sources: B'Tselem - Second Intifada Fatalities (https://www.btselem.org/statisti
     <link rel="alternate" href="https://palgenopedia.org/historical-events/massacres/cave-of-the-patriarchs-massacre/"/>
     <id>https://palgenopedia.org/data/events.json#hist009</id>
     <published>1994-02-25T00:00:00Z</published>
-    <updated>2026-09-05T00:00:00Z</updated>
+    <updated>2026-09-06T00:00:00Z</updated>
     <category term="Massacre / Mass Shooting"/>
     <category term="verification:verified"/>
     <summary>Cave of the Patriarchs Massacre — Massacre / Mass Shooting (verified).
@@ -317,7 +317,7 @@ Sources: Institute for Palestine Studies (https://www.palestine-studies.org/en/n
     <link rel="alternate" href="https://palgenopedia.org/historical-events/massacres/first-intifada/"/>
     <id>https://palgenopedia.org/data/events.json#hist008</id>
     <published>1987-12-08T00:00:00Z</published>
-    <updated>2026-09-05T00:00:00Z</updated>
+    <updated>2026-09-06T00:00:00Z</updated>
     <category term="Mass Casualties / Uprising"/>
     <category term="verification:verified"/>
     <summary>First Intifada — Mass Casualties / Uprising (verified).
@@ -333,7 +333,7 @@ Sources: B'Tselem - First Intifada Fatalities; Al Jazeera - Intifada Documentati
     <link rel="alternate" href="https://palgenopedia.org/historical-events/massacres/sabra-and-shatila/"/>
     <id>https://palgenopedia.org/data/events.json#hist007</id>
     <published>1982-09-16T00:00:00Z</published>
-    <updated>2026-09-05T00:00:00Z</updated>
+    <updated>2026-09-06T00:00:00Z</updated>
     <category term="Massacre"/>
     <category term="verification:verified"/>
     <summary>Sabra and Shatila — Massacre (verified).
@@ -349,7 +349,7 @@ Sources: Lebanese Government Commission Report (1982-83) (https://www.un.org/uni
     <link rel="alternate" href="https://palgenopedia.org/historical-events/massacres/six-day-war-al-naksa/"/>
     <id>https://palgenopedia.org/data/events.json#hist006</id>
     <published>1967-06-05T00:00:00Z</published>
-    <updated>2026-09-05T00:00:00Z</updated>
+    <updated>2026-09-06T00:00:00Z</updated>
     <category term="Mass Displacement"/>
     <category term="verification:verified"/>
     <summary>Six-Day War / Al-Naksa — Mass Displacement (verified).
@@ -365,7 +365,7 @@ Sources: UNRWA - Registered Refugees from 1967 (https://www.unrwa.org/palestine-
     <link rel="alternate" href="https://palgenopedia.org/historical-events/massacres/khan-yunis-massacre/"/>
     <id>https://palgenopedia.org/data/events.json#hist005</id>
     <published>1956-11-03T00:00:00Z</published>
-    <updated>2026-09-05T00:00:00Z</updated>
+    <updated>2026-09-06T00:00:00Z</updated>
     <category term="Massacre"/>
     <category term="verification:verified"/>
     <summary>Khan Yunis Massacre — Massacre (verified).
@@ -381,7 +381,7 @@ Sources: UNRWA Special Report to UN General Assembly (A/3512) (https://www.un.or
     <link rel="alternate" href="https://palgenopedia.org/historical-events/massacres/qibya/"/>
     <id>https://palgenopedia.org/data/events.json#hist004</id>
     <published>1953-10-14T00:00:00Z</published>
-    <updated>2026-09-05T00:00:00Z</updated>
+    <updated>2026-09-06T00:00:00Z</updated>
     <category term="Massacre"/>
     <category term="verification:verified"/>
     <summary>Qibya — Massacre (verified).
@@ -397,7 +397,7 @@ Sources: UN Security Council Report S/3113 (1953) (https://www.un.org/unispal/do
     <link rel="alternate" href="https://palgenopedia.org/historical-events/massacres/lydda-and-ramle/"/>
     <id>https://palgenopedia.org/data/events.json#hist003</id>
     <published>1948-07-09T00:00:00Z</published>
-    <updated>2026-09-05T00:00:00Z</updated>
+    <updated>2026-09-06T00:00:00Z</updated>
     <category term="Massacre, Forced Expulsion, Death March"/>
     <category term="verification:verified"/>
     <summary>Lydda and Ramle — Massacre, Forced Expulsion, Death March (verified).
@@ -413,7 +413,7 @@ Sources: Morris, Benny. 'Operation Dani and the Palestinian Exodus from Lydda an
     <link rel="alternate" href="https://palgenopedia.org/historical-events/massacres/tantura/"/>
     <id>https://palgenopedia.org/data/events.json#hist002</id>
     <published>1948-05-22T00:00:00Z</published>
-    <updated>2026-09-05T00:00:00Z</updated>
+    <updated>2026-09-06T00:00:00Z</updated>
     <category term="Massacre"/>
     <category term="verification:verified"/>
     <summary>Tantura — Massacre (verified).
@@ -429,7 +429,7 @@ Sources: Katz, Teddy. MA Thesis (1998) - Based on 140+ interviews (https://www.h
     <link rel="alternate" href="https://palgenopedia.org/historical-events/massacres/deir-yassin/"/>
     <id>https://palgenopedia.org/data/events.json#hist001</id>
     <published>1948-04-09T00:00:00Z</published>
-    <updated>2026-09-05T00:00:00Z</updated>
+    <updated>2026-09-06T00:00:00Z</updated>
     <category term="Massacre"/>
     <category term="verification:verified"/>
     <summary>Deir Yassin — Massacre (verified).

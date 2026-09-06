@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-05",
+ "generated": "2026-09-06",
  "domains": {
   "972mag.com": {
    "count": 3,
@@ -37,12 +37,28 @@
    "secondary": 3
   },
   "aa.com.tr": {
-   "count": 11,
+   "count": 13,
    "sample": "https://www.aa.com.tr/en/middle-east/palestine-27-years-since-ibrahimi-mosque-massacre/2156877",
    "archived": 0,
    "pending": 0,
    "deferred": 0,
    "urls": [
+    {
+     "u": "https://www.aa.com.tr/en/middle-east/30-killed-100-injured-in-israeli-strike-on-un-run-school-in-gaza/3063142",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.aa.com.tr/en/middle-east/dozens-killed-wounded-as-israel-bombs-school-housing-displaced-people-in-northern-gaza/3043048",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
     {
      "u": "https://www.aa.com.tr/en/middle-east/israeli-army-destroys-2-buildings-of-al-aqsa-university-in-gaza-city/3129434",
      "role": "primary",
@@ -132,7 +148,7 @@
      "manual": false
     }
    ],
-   "primary": 4,
+   "primary": 6,
    "secondary": 7
   },
   "abcnews.com": {
@@ -165,6 +181,25 @@
      "u": "https://abcnews.go.com/International/state-hospitals-gaza-israel-hamas-war-hits-1/story?id=114495894",
      "role": "secondary",
      "status": "failed",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
+   "primary": 0,
+   "secondary": 1
+  },
+  "actionaid.org.uk": {
+   "count": 1,
+   "sample": "https://www.actionaid.org.uk/latest-news/khadija-girls-school-gaza",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.actionaid.org.uk/latest-news/khadija-girls-school-gaza",
+     "role": "secondary",
+     "status": "new",
      "snap": "",
      "method": "",
      "manual": false
@@ -376,7 +411,7 @@
    "secondary": 1
   },
   "aljazeera.com": {
-   "count": 19,
+   "count": 26,
    "sample": "https://www.aljazeera.com/features/2022/1/27/tantura-a-film-about-a-massacre-israel-didnt-want-you-to-see",
    "archived": 0,
    "pending": 0,
@@ -399,7 +434,31 @@
      "manual": false
     },
     {
+     "u": "https://www.aljazeera.com/features/2023/12/26/classroom-massacre-survivors-say-israel-executed-innocents-in-gaza-school",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
      "u": "https://www.aljazeera.com/gallery/2023/12/8/history-illustrated-the-first-intifada-against-israel",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.aljazeera.com/gallery/2024/10/6/deadly-israeli-strike-on-gaza-mosque-turned-shelter",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.aljazeera.com/gallery/2024/7/10/deadly-israeli-strike-on-school-turned-shelter-in-southern-gaza",
      "role": "primary",
      "status": "new",
      "snap": "",
@@ -431,6 +490,14 @@
      "manual": false
     },
     {
+     "u": "https://www.aljazeera.com/news/2023/11/18/israeli-forces-strike-al-fakhoora-school-in-northern-gaza",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
      "u": "https://www.aljazeera.com/news/2023/2/22/israeli-forces-kill-palestinians-in-nablus-raid",
      "role": "primary",
      "status": "new",
@@ -448,6 +515,22 @@
     },
     {
      "u": "https://www.aljazeera.com/news/2024/12/24/gaza-appeals-for-help-as-israeli-army-attacks-key-hospitals",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.aljazeera.com/news/2024/6/6/israel-bombs-unrwa-school-in-gaza-kills-32-displaced-palestinians",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.aljazeera.com/news/2025/5/26/israel-kills-dozens-overnight-bombed-people-as-they-slept-in-school",
      "role": "primary",
      "status": "new",
      "snap": "",
@@ -503,6 +586,14 @@
      "manual": false
     },
     {
+     "u": "https://www.aljazeera.com/news/2023/11/23/dozens-killed-in-israeli-attack-on-un-school-in-gaza-ahead-of-truce",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
      "u": "https://www.aljazeera.com/news/2024/5/28/rafah-residents-face-further-danger-as-israel-hits-citys-two-hospitals",
      "role": "secondary",
      "status": "new",
@@ -535,8 +626,8 @@
      "manual": false
     }
    ],
-   "primary": 11,
-   "secondary": 8
+   "primary": 17,
+   "secondary": 9
   },
   "aljazeera.net": {
    "count": 5,
@@ -710,6 +801,25 @@
    ],
    "primary": 1,
    "secondary": 0
+  },
+  "arabnews.com": {
+   "count": 1,
+   "sample": "https://www.arabnews.com/middle-east/hamas-in-gaza-says-16-killed-in-strike-on-un-school-2544836",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.arabnews.com/middle-east/hamas-in-gaza-says-16-killed-in-strike-on-un-school-2544836",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
+   "primary": 0,
+   "secondary": 1
   },
   "bbc.co.uk": {
    "count": 4,
@@ -1182,12 +1292,20 @@
    "secondary": 0
   },
   "electronicintifada.net": {
-   "count": 1,
-   "sample": "https://electronicintifada.net/content/right-education-will-remain-under-threat-gaza/47466?utm_source=EI+readers&utm_campaign=e07301a25d-RSS_EMAIL_CAMPAIGN&utm_medium=email&utm_term=0_e802a7602d-e07301a25d-299323212",
+   "count": 2,
+   "sample": "https://electronicintifada.net/content/endless-trauma-israel-bombs-another-school/49356",
    "archived": 0,
    "pending": 0,
    "deferred": 0,
    "urls": [
+    {
+     "u": "https://electronicintifada.net/content/endless-trauma-israel-bombs-another-school/49356",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
     {
      "u": "https://electronicintifada.net/content/right-education-will-remain-under-threat-gaza/47466?utm_source=EI+readers&utm_campaign=e07301a25d-RSS_EMAIL_CAMPAIGN&utm_medium=email&utm_term=0_e802a7602d-e07301a25d-299323212",
      "role": "primary",
@@ -1197,7 +1315,7 @@
      "manual": false
     }
    ],
-   "primary": 1,
+   "primary": 2,
    "secondary": 0
   },
   "en.safa.news": {
@@ -1494,8 +1612,8 @@
    "secondary": 0
   },
   "facebook.com": {
-   "count": 20,
-   "sample": "https://www.facebook.com/mitri.raheb/videos/dar-al-kalima-university-gaza-training-center-once-a-place-for-of-creativity-and/361211246253057",
+   "count": 21,
+   "sample": "https://www.facebook.com/voiceofthecape/posts/trigger-warning-a-journalist-in-the-jabalia-refugee-camp-in-the-gaza-strip-abdul/739174581571429",
    "archived": 0,
    "pending": 0,
    "deferred": 0,
@@ -1645,6 +1763,14 @@
      "manual": false
     },
     {
+     "u": "https://www.facebook.com/voiceofthecape/posts/trigger-warning-a-journalist-in-the-jabalia-refugee-camp-in-the-gaza-strip-abdul/739174581571429",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
      "u": "https://www.facebook.com/watch/?mibextid=wwXIfr&v=694104496360241&rdid=9lbhotKwTSimO6cr",
      "role": "secondary",
      "status": "new",
@@ -1662,7 +1788,7 @@
     }
    ],
    "primary": 4,
-   "secondary": 16
+   "secondary": 17
   },
   "forensic-architecture.org": {
    "count": 1,
@@ -2545,6 +2671,25 @@
    "primary": 3,
    "secondary": 0
   },
+  "mfa.gov.tr": {
+   "count": 1,
+   "sample": "https://www.mfa.gov.tr/no_-296_-israil-in-gazze-deki-al-fakhoora-okuluna-yonelik-saldirisi-hk.en.mfa",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.mfa.gov.tr/no_-296_-israil-in-gazze-deki-al-fakhoora-okuluna-yonelik-saldirisi-hk.en.mfa",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
+   "primary": 0,
+   "secondary": 1
+  },
   "michiganpublic.org": {
    "count": 1,
    "sample": "https://www.michiganpublic.org/2023-10-18/heres-the-available-evidence-of-what-happened-at-al-ahli-arab-hospital-in-gaza",
@@ -2565,7 +2710,7 @@
    "secondary": 1
   },
   "middleeasteye.net": {
-   "count": 5,
+   "count": 6,
    "sample": "https://www.middleeasteye.net/news/palestine-west-bank-deadliest-year-second-intifada",
    "archived": 0,
    "pending": 0,
@@ -2573,6 +2718,14 @@
    "urls": [
     {
      "u": "https://www.middleeasteye.net/explainer-gaza-israel-palestine-war-university-destroy",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.middleeasteye.net/news/israel-strike-central-gaza-girls-school-kills-palestinians",
      "role": "primary",
      "status": "new",
      "snap": "",
@@ -2612,7 +2765,7 @@
      "manual": false
     }
    ],
-   "primary": 2,
+   "primary": 3,
    "secondary": 3
   },
   "middleeastmonitor.com": {
@@ -4332,12 +4485,20 @@
    "secondary": 1
   },
   "prc.org.uk": {
-   "count": 1,
-   "sample": "https://prc.org.uk/upload/library/files/Alahli-Hospital-MassacreEN.pdf",
+   "count": 2,
+   "sample": "https://prc.org.uk/en/news/6009/another-gaza-school-hit-amid-deadly-israeli-bombing",
    "archived": 0,
    "pending": 0,
    "deferred": 0,
    "urls": [
+    {
+     "u": "https://prc.org.uk/en/news/6009/another-gaza-school-hit-amid-deadly-israeli-bombing",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
     {
      "u": "https://prc.org.uk/upload/library/files/Alahli-Hospital-MassacreEN.pdf",
      "role": "secondary",
@@ -4348,7 +4509,7 @@
     }
    ],
    "primary": 0,
-   "secondary": 1
+   "secondary": 2
   },
   "qou.edu": {
    "count": 1,
@@ -4637,8 +4798,8 @@
    "secondary": 0
   },
   "theguardian.com": {
-   "count": 6,
-   "sample": "https://www.theguardian.com/world/2023/dec/31/israeli-airstrikes-kill-dozens-in-gaza-netanyahu-hamas",
+   "count": 7,
+   "sample": "https://www.theguardian.com/world/article/2024/jul/10/a-game-of-football-a-boom-then-scattered-bodies-video-shows-moment-of-israel-strike-on-gaza-school",
    "archived": 0,
    "pending": 0,
    "deferred": 0,
@@ -4676,6 +4837,14 @@
      "manual": false
     },
     {
+     "u": "https://www.theguardian.com/world/article/2024/jul/10/a-game-of-football-a-boom-then-scattered-bodies-video-shows-moment-of-israel-strike-on-gaza-school",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
      "u": "https://www.theguardian.com/world/gallery/2026/mar/09/a-giant-cat-and-a-back-to-the-future-reunion-photos-of-the-day-monday?CMP=share_btn_url",
      "role": "secondary",
      "status": "new",
@@ -4693,7 +4862,7 @@
     }
    ],
    "primary": 2,
-   "secondary": 4
+   "secondary": 5
   },
   "thenationalnews.com": {
    "count": 1,
