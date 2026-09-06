@@ -12,7 +12,7 @@ DET-1335,DET-010,curr_002,Angriffe auf Zivilisten,
 DET-1336,DET-011,curr_002,Kollektivbestrafung,
 DET-1337,DET-012,curr_002,Zerstörung von Wohnhäusern,
 DET-1338,DET-013,curr_002,,UN OCHA
-DET-1339,DET-014,curr_002,,Human Rights Watch
+DET-1339,DET-014,curr_002,,Menschenrechtsbeobachtung
 DET-1340,DET-015,curr_002,,Zivilschutz im Gazastreifen
 DET-1341,DET-016,curr_002,,Mehrere Nachrichtenagenturen
 DET-1342,DET-017,curr_003,Angriffe auf Zivilisten,
@@ -29,14 +29,14 @@ DET-1352,DET-027,curr_004,Angriffe auf Vertriebene,
 DET-1353,DET-028,curr_004,Zivile Opfer,
 DET-1354,DET-029,curr_004,,Offizielle Stellungnahmen des UNRWA
 DET-1355,DET-030,curr_004,,Berichte des UN-Generalsekretärs
-DET-1356,DET-031,curr_004,,Human Rights Watch
+DET-1356,DET-031,curr_004,,Menschenrechtsbeobachtung
 DET-1357,DET-032,curr_005,Außergerichtliche Hinrichtungen,
 DET-1358,DET-033,curr_005,Schändung der Toten,
 DET-1359,DET-034,curr_005,Verschwindenlassen,
 DET-1360,DET-035,curr_005,Kriegsverbrechen,
 DET-1361,DET-036,curr_005,,Zivilschutz im Gazastreifen
 DET-1362,DET-037,curr_005,,UN OCHA
-DET-1363,DET-038,curr_005,,Human Rights Watch
+DET-1363,DET-038,curr_005,,Menschenrechtsbeobachtung
 DET-1364,DET-039,curr_005,,EuroMed Menschenrechtsmonitor
 DET-1365,DET-040,curr_006,Angriff auf medizinische Einrichtung,
 DET-1366,DET-041,curr_006,Verweigerung der medizinischen Versorgung,
@@ -44,7 +44,7 @@ DET-1367,DET-042,curr_006,Ziel: Geschützte Website,
 DET-1368,DET-043,curr_006,Zivile Todesopfer,
 DET-1369,DET-044,curr_006,,WER
 DET-1370,DET-045,curr_006,,UN OCHA
-DET-1371,DET-046,curr_006,,Human Rights Watch
+DET-1371,DET-046,curr_006,,Menschenrechtsbeobachtung
 DET-1372,DET-047,curr_006,,Ärzte ohne Grenzen
 DET-1373,DET-048,curr_007,Zielpersonen,
 DET-1374,DET-049,curr_007,Unverhältnismäßige Gewalt,
@@ -52,7 +52,7 @@ DET-1375,DET-050,curr_007,Zivile Todesopfer,
 DET-1376,DET-051,curr_007,Einsatz von Brandwaffen,
 DET-1377,DET-052,curr_007,,UN OCHA
 DET-1378,DET-053,curr_007,,Gesundheitsministerium des Gazastreifens
-DET-1379,DET-054,curr_007,,Human Rights Watch
+DET-1379,DET-054,curr_007,,Menschenrechtsbeobachtung
 DET-1380,DET-055,curr_007,,Videobeweis
 DET-1381,DET-056,curr_008,Hilfsorganisationen ins Visier nehmen,
 DET-1382,DET-057,curr_008,Zielerfassung deutlich gekennzeichneter Fahrzeuge,
@@ -60,7 +60,7 @@ DET-1383,DET-058,curr_008,Kriegsverbrechen,
 DET-1384,DET-059,curr_008,Behinderung humanitärer Hilfe,
 DET-1385,DET-060,curr_008,,Erklärung der Weltzentralen Küche
 DET-1386,DET-061,curr_008,,UN-Sicherheitsrat
-DET-1387,DET-062,curr_008,,Human Rights Watch
+DET-1387,DET-062,curr_008,,Menschenrechtsbeobachtung
 DET-1388,DET-063,curr_008,,Mehrere Regierungen
 DET-1389,DET-064,curr_009,Kollektivbestrafung,
 DET-1390,DET-065,curr_009,Zerstörung ziviler Infrastruktur,
@@ -68,7 +68,7 @@ DET-1391,DET-066,curr_009,erzwungene Verschiebung,
 DET-1392,DET-067,curr_009,Kriegsverbrechen,
 DET-1393,DET-068,curr_009,,UN OCHA
 DET-1394,DET-069,curr_009,,Satellitenbildanalyse
-DET-1395,DET-070,curr_009,,Human Rights Watch
+DET-1395,DET-070,curr_009,,Menschenrechtsbeobachtung
 DET-1396,DET-071,curr_009,,UN-Satellitenzentrum
 DET-1397,DET-072,curr_010,Hunger als Kriegswaffe,
 DET-1398,DET-073,curr_010,Völkermord,
@@ -77,7 +77,7 @@ DET-1400,DET-075,curr_010,Verbrechen gegen die Menschlichkeit,
 DET-1401,DET-076,curr_010,Verweigerung humanitärer Hilfe,
 DET-1402,DET-077,curr_010,,UN-Sonderberichterstatter
 DET-1403,DET-078,curr_010,,Welternährungsprogramm
-DET-1404,DET-079,curr_010,,Human Rights Watch
+DET-1404,DET-079,curr_010,,Menschenrechtsbeobachtung
 DET-1405,DET-080,curr_010,,Genozid-Watch
 DET-1406,,,,
 DET-1407,,,,
