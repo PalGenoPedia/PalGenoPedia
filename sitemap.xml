@@ -2339,25 +2339,18 @@
   </url>
   <url>
     <loc>https://palgenopedia.org/war-crimes/religious-sites/de/ibn-marwan-moschee/</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/%D9%85%D8%B3%D8%AC%D8%AF-%D8%A7%D8%A8%D9%86-%D9%85%D8%B1%D9%88%D8%A7%D9%86/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/ibn-marwan-moschee/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/ibn-marwan-mosque/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/ibn-marwan-mosque/"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://palgenopedia.org/war-crimes/religious-sites/de/ibn-othman-moschee/</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/%D9%85%D8%B3%D8%AC%D8%AF-%D8%A7%D8%A8%D9%86-%D8%B9%D8%AB%D9%85%D8%A7%D9%86/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/ibn-othman-moschee/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/ibn-othman-mosque/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/ibn-othman-mosque/"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://palgenopedia.org/war-crimes/religious-sites/mahkamah-mosque/</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/%D9%85%D8%B3%D8%AC%D8%AF-%D8%A7%D9%84%D9%85%D8%AD%D9%83%D9%85%D8%A9/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/mahkamah-moschee/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/mahkamah-mosque/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/mahkamah-mosque/"/>
@@ -2366,7 +2359,6 @@
   </url>
   <url>
     <loc>https://palgenopedia.org/war-crimes/religious-sites/de/mahkamah-moschee/</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/%D9%85%D8%B3%D8%AC%D8%AF-%D8%A7%D9%84%D9%85%D8%AD%D9%83%D9%85%D8%A9/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/mahkamah-moschee/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/mahkamah-mosque/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/mahkamah-mosque/"/>
@@ -2375,19 +2367,13 @@
   </url>
   <url>
     <loc>https://palgenopedia.org/war-crimes/religious-sites/de/scheich-zakariyya-moschee/</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/%D9%85%D8%B3%D8%AC%D8%AF-%D8%A7%D9%84%D8%B4%D9%8A%D8%AE-%D8%B2%D9%83%D8%B1%D9%8A%D8%A7/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/scheich-zakariyya-moschee/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/sheikh-zakariyya-mosque/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/sheikh-zakariyya-mosque/"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://palgenopedia.org/war-crimes/religious-sites/de/al-shamah-moschee/</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/%D9%85%D8%B3%D8%AC%D8%AF-%D8%A7%D9%84%D8%B4%D8%A7%D9%85%D8%A9/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/al-shamah-moschee/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/al-shamah-mosque/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/al-shamah-mosque/"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

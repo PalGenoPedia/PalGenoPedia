@@ -160,19 +160,25 @@ def main(check=False):
             groups.setdefault((p["section"], p["id"] or p.get("slug", "")), []).append(p)
         for key in sorted(groups):
             variants = groups[key]
+            # Only indexable variants take part in the hreflang cluster. A stub
+            # carries <meta robots noindex>, so naming it as another page's
+            # hreflang alternate (or as x-default) points Google at a URL it is
+            # told not to index - an inconsistency that makes it discount the
+            # whole annotation set and shows up in Search Console as "Excluded
+            # by noindex". The stub stays served and followable; it just is not
+            # advertised as a language of anything.
+            idx_variants = [v for v in variants if v.get("indexable", True)]
             # One URL per hreflang value, or none at all. A duplicate or blank
             # hreflang invalidates the whole annotation set for the cluster, so
             # emitting nothing is strictly better than emitting something wrong.
-            alts = [(v["lang"], v["url"]) for v in sorted(variants, key=lambda x: x["lang"])
+            alts = [(v["lang"], v["url"]) for v in sorted(idx_variants, key=lambda x: x["lang"])
                     if v.get("lang")]
             if len(alts) != len({lg for lg, _ in alts}):
                 alts = []
-            en = next((v for v in variants if v["lang"] == "en"), None)
+            en = next((v for v in idx_variants if v["lang"] == "en"), None)
             if alts and en:
                 alts.append(("x-default", en["url"]))
-            for v in variants:
-                if not v.get("indexable", True):
-                    continue          # stub: served, deliberately not listed
+            for v in idx_variants:
                 entry(v["url"], "0.7", "monthly", alts)
                 n_rec += 1
 
