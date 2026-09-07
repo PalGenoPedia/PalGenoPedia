@@ -1,4 +1,8 @@
 {
+ "http://hrw.org/news/2025/08/07/gaza-israeli-school-strikes-magnify-civilian-peril": {
+  "status": "new",
+  "social": false
+ },
  "http://ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-157": {
   "status": "requested",
   "social": false,
@@ -125,6 +129,10 @@
   "checked": "2026-08-29",
   "wayback": "https://web.archive.org/web/20260824184422/https://arablit.org/wp-content/uploads/2023/12/English-.pdf"
  },
+ "https://assets.maestronewsroom.com/media/30f6532d-717b-4366-9158-9c455299fcd9/arabnews-import/2024/07/4453971-233189269.jpg": {
+  "status": "new",
+  "social": false
+ },
  "https://ccas.georgetown.edu/ccas-newsmagazine/scholasticide-in-gaza": {
   "status": "requested",
   "social": false,
@@ -156,6 +164,10 @@
   "ts": "20260826233625",
   "checked": "2026-08-29",
   "wayback": "https://web.archive.org/web/20260826233625/https://edition.cnn.com/interactive/2024/01/middleeast/gaza-hospitals-destruction-investigation-intl-cmd"
+ },
+ "https://electronicintifada.net/content/endless-trauma-israel-bombs-another-school/49356": {
+  "status": "new",
+  "social": false
  },
  "https://electronicintifada.net/content/right-education-will-remain-under-threat-gaza/47466?utm_source=EI+readers&utm_campaign=e07301a25d-RSS_EMAIL_CAMPAIGN&utm_medium=email&utm_term=0_e802a7602d-e07301a25d-299323212": {
   "status": "new",
@@ -308,10 +320,18 @@
   "checked": "2026-08-29",
   "wayback": "https://web.archive.org/web/20260828225057/https://english.wafa.ps/Pages/Details/142688"
  },
+ "https://english.wafa.ps/Pages/Details/157256": {
+  "status": "new",
+  "social": false
+ },
  "https://english.wafa.ps/Pages/Details/160970": {
   "status": "requested",
   "social": false,
   "requested": "2026-08-29"
+ },
+ "https://english.wafa.ps/image/NewsThumbImg/Default/a7c73a7b-1d14-4aa3-85b1-280f89bf284a.jpeg": {
+  "status": "new",
+  "social": false
  },
  "https://episcopalnewsservice.org/2025/08/18/al-ahli-hospital-in-gaza-city-suffers-damage-from-fire-set-by-outlaws-attack-by-idf-drone": {
   "status": "new",
@@ -389,6 +409,18 @@
   "status": "new",
   "social": false
  },
+ "https://i.guim.co.uk/img/media/72b9ba0421f33ad2b016ba5db10672e89fbafe99/0_336_5669_3401/master/5669.jpg?width=620&dpr=1&s=none&crop=none": {
+  "status": "new",
+  "social": false
+ },
+ "https://i.guim.co.uk/img/media/d988e97017b54e64be37289ad38744683b373c1f/786_0_4420_3536/master/4420.jpg?width=620&dpr=1&s=none&crop=none": {
+  "status": "new",
+  "social": false
+ },
+ "https://i0.wp.com/www.middleeastmonitor.com/wp-content/uploads/2023/11/AA-20231107-32720621-32720610-ISRAELI_ATTACKS_CONTINUE_ON_ITS_32ND_DAY_IN_GAZA.jpg?fit=920%2C613&ssl=1": {
+  "status": "new",
+  "social": false
+ },
  "https://images.wafa.ps/album/Details/13756": {
   "status": "new",
   "social": false
@@ -429,6 +461,14 @@
   "status": "new",
   "social": false
  },
+ "https://maktoobmedia.com/media/img/800/uploads/2023/12/IMG_6336-1.jpeg.webp": {
+  "status": "new",
+  "social": false
+ },
+ "https://media.pnn.ps/english/storage/images/news/2024/1728553093-444655513.jpeg": {
+  "status": "new",
+  "social": false
+ },
  "https://media.un.org/unifeed/en/asset/d336/d3360571": {
   "status": "new",
   "social": false
@@ -457,6 +497,10 @@
   "status": "new",
   "social": false
  },
+ "https://news.sky.com/video/the-aftermath-of-the-missile-strike-on-school-in-gaza-13185969": {
+  "status": "new",
+  "social": false
+ },
  "https://news.un.org/en/story/2024/01/1145317": {
   "status": "new",
   "social": false
@@ -477,6 +521,14 @@
   "status": "new",
   "social": false
  },
+ "https://pchrgaza.org/ongoing-genocide-in-gaza-israeli-occupation-forces-target-displaced-peoples-tents-and-shelters-and-exterminate-entire-families": {
+  "status": "new",
+  "social": false
+ },
+ "https://pchrgaza.org/wp-content/uploads/2025/05/120525_JABALIA_OASH_0122-scaled.jpg": {
+  "status": "new",
+  "social": false
+ },
  "https://pchrgaza.org/wp-content/uploads/2025/05/8xBvv.jpg": {
   "status": "new",
   "social": false
@@ -490,6 +542,10 @@
   "social": false
  },
  "https://pmc.ncbi.nlm.nih.gov/articles/PMC11002345": {
+  "status": "new",
+  "social": false
+ },
+ "https://prc.org.uk/en/news/6009/another-gaza-school-hit-amid-deadly-israeli-bombing": {
   "status": "new",
   "social": false
  },
@@ -629,6 +685,18 @@
   "status": "new",
   "social": false
  },
+ "https://www.aa.com.tr/en/middle-east/30-killed-100-injured-in-israeli-strike-on-un-run-school-in-gaza/3063142": {
+  "status": "new",
+  "social": false
+ },
+ "https://www.aa.com.tr/en/middle-east/dozens-killed-wounded-as-israel-bombs-school-housing-displaced-people-in-northern-gaza/3043048": {
+  "status": "new",
+  "social": false
+ },
+ "https://www.aa.com.tr/en/middle-east/israeli-army-admits-to-targeting-buraq-school-in-gaza/3050977": {
+  "status": "new",
+  "social": false
+ },
  "https://www.aa.com.tr/en/middle-east/israeli-army-destroys-2-buildings-of-al-aqsa-university-in-gaza-city/3129434": {
   "status": "new",
   "social": false
@@ -649,6 +717,14 @@
   "status": "new",
   "social": false
  },
+ "https://www.aa.com.tr/en/middle-east/scores-of-palestinians-dead-wounded-from-israeli-bombing-of-gaza-school-sheltering-displaced-people/3056793": {
+  "status": "new",
+  "social": false
+ },
+ "https://www.actionaid.org.uk/latest-news/khadija-girls-school-gaza": {
+  "status": "new",
+  "social": false
+ },
  "https://www.adalah.org": {
   "status": "new",
   "social": false
@@ -661,6 +737,10 @@
   "status": "new",
   "social": false
  },
+ "https://www.alhaq.org/FAI-Unit/23717.html": {
+  "status": "new",
+  "social": false
+ },
  "https://www.aljazeera.com": {
   "status": "new",
   "social": false
@@ -669,11 +749,23 @@
   "status": "new",
   "social": false
  },
+ "https://www.aljazeera.com/features/2023/12/26/classroom-massacre-survivors-say-israel-executed-innocents-in-gaza-school": {
+  "status": "new",
+  "social": false
+ },
  "https://www.aljazeera.com/gallery/2023/10/17/photos-an-israeli-air-raid-on-al-ahli-arab-hospital-kills-an-estimated-500": {
   "status": "new",
   "social": false
  },
  "https://www.aljazeera.com/gallery/2023/12/8/history-illustrated-the-first-intifada-against-israel": {
+  "status": "new",
+  "social": false
+ },
+ "https://www.aljazeera.com/gallery/2024/10/6/deadly-israeli-strike-on-gaza-mosque-turned-shelter": {
+  "status": "new",
+  "social": false
+ },
+ "https://www.aljazeera.com/gallery/2024/7/10/deadly-israeli-strike-on-school-turned-shelter-in-southern-gaza": {
   "status": "new",
   "social": false
  },
@@ -689,11 +781,23 @@
   "status": "new",
   "social": false
  },
+ "https://www.aljazeera.com/news/2023/11/10/gaza-hospital-says-received-50-bodies-after-strikes-on-school": {
+  "status": "new",
+  "social": false
+ },
  "https://www.aljazeera.com/news/2023/11/13/patients-are-dying-what-we-know-about-gaza-hospitals-under-israeli-siege": {
   "status": "new",
   "social": false
  },
  "https://www.aljazeera.com/news/2023/11/15/israeli-forces-raid-gazas-al-shifa-hospital-in-targeted-operation": {
+  "status": "new",
+  "social": false
+ },
+ "https://www.aljazeera.com/news/2023/11/18/israeli-forces-strike-al-fakhoora-school-in-northern-gaza": {
+  "status": "new",
+  "social": false
+ },
+ "https://www.aljazeera.com/news/2023/11/23/dozens-killed-in-israeli-attack-on-un-school-in-gaza-ahead-of-truce": {
   "status": "new",
   "social": false
  },
@@ -713,11 +817,19 @@
   "status": "new",
   "social": false
  },
+ "https://www.aljazeera.com/news/2024/6/6/israel-bombs-unrwa-school-in-gaza-kills-32-displaced-palestinians": {
+  "status": "new",
+  "social": false
+ },
  "https://www.aljazeera.com/news/2025/4/13/israeli-forces-bomb-al-ahli-hospital-in-gaza-forcing-patients-to-flee": {
   "status": "new",
   "social": false
  },
  "https://www.aljazeera.com/news/2025/4/13/timeline-israels-attacks-on-hospitals-throughout-its-war-on-gaza": {
+  "status": "new",
+  "social": false
+ },
+ "https://www.aljazeera.com/news/2025/5/26/israel-kills-dozens-overnight-bombed-people-as-they-slept-in-school": {
   "status": "new",
   "social": false
  },
@@ -737,11 +849,27 @@
   "status": "new",
   "social": false
  },
+ "https://www.aljazeera.com/wp-content/uploads/2023/11/AP23322521081052-1700331546.jpg?resize=770%2C513&quality=80": {
+  "status": "new",
+  "social": false
+ },
+ "https://www.aljazeera.com/wp-content/uploads/2023/11/AP23326386505591-1700751528.jpg?resize=770%2C513&quality=80": {
+  "status": "new",
+  "social": false
+ },
  "https://www.aljazeera.com/wp-content/uploads/2024/04/AFP__20240408__34NT7MH__v1__HighRes__PalestinianIsraelConflict-1712614597.jpg?resize=770%2C513&quality=80": {
   "status": "new",
   "social": false
  },
  "https://www.aljazeera.com/wp-content/uploads/2024/05/AA-20240525-34677288-34677276-ISRAELI_ARMY_ATTACKED_A_SCHOOL_WHERE_PALESTINIANS_TOOK_REFUGE_ON_GAZA-1716643168.jpg?resize=570%2C380&quality=80": {
+  "status": "new",
+  "social": false
+ },
+ "https://www.aljazeera.com/wp-content/uploads/2024/07/2024-07-10T070053Z_1301028142_RC27S8A681D5_RTRMADP_3_ISRAEL-PALESTINIANS-1720603173.jpg?fit=1170%2C780&quality=80": {
+  "status": "new",
+  "social": false
+ },
+ "https://www.aljazeera.com/wp-content/uploads/2024/07/SV_Al-Awda-school-attacked_WIDE-THUMB-CLEAN-1720602600.jpg?resize=730%2C410&quality=80": {
   "status": "new",
   "social": false
  },
@@ -774,6 +902,10 @@
   "social": false
  },
  "https://www.anglicannews.org/news/2023/10/anglican-run-al-ahli-arab-hospital-in-gaza-damaged-by-israeli-rocket-fire-as-conflict-continues.aspx": {
+  "status": "new",
+  "social": false
+ },
+ "https://www.arabnews.com/middle-east/hamas-in-gaza-says-16-killed-in-strike-on-un-school-2544836": {
   "status": "new",
   "social": false
  },
@@ -1017,7 +1149,15 @@
   "status": "new",
   "social": true
  },
+ "https://www.facebook.com/trtworld/videos/horrific-footage-shows-the-aftermath-of-an-israeli-air-strike-on-fahmi-al-jarjaw/734328589265567": {
+  "status": "new",
+  "social": true
+ },
  "https://www.facebook.com/trtworld/videos/israels-narrative-of-al-ahli-arab-hospital-attack-a-closer-look/716457469813692": {
+  "status": "new",
+  "social": true
+ },
+ "https://www.facebook.com/voiceofthecape/posts/trigger-warning-a-journalist-in-the-jabalia-refugee-camp-in-the-gaza-strip-abdul/739174581571429": {
   "status": "new",
   "social": true
  },
@@ -1113,6 +1253,10 @@
   "status": "new",
   "social": false
  },
+ "https://www.hrw.org/sites/default/files/media_2025/08/202508mena_palestine_Al-Zeitoun%20C%20school.jpg": {
+  "status": "new",
+  "social": false
+ },
  "https://www.i24news.tv/en/news/israel-at-war/1702035523-idf-destroys-hamas-linked-facilities-at-gaza-s-al-azhar-university": {
   "status": "new",
   "social": false
@@ -1185,6 +1329,10 @@
   "status": "new",
   "social": true
  },
+ "https://www.instagram.com/p/DAyvVAhveoB": {
+  "status": "new",
+  "social": true
+ },
  "https://www.instagram.com/p/DOlb9jIjSFY": {
   "status": "new",
   "social": true
@@ -1194,6 +1342,14 @@
   "social": true
  },
  "https://www.instagram.com/reels/C1vQ1YcInsv": {
+  "status": "new",
+  "social": true
+ },
+ "https://www.instagram.com/reels/DLZwVr8qT31": {
+  "status": "new",
+  "social": true
+ },
+ "https://www.instagram.com/reels/DPRASOOkppd": {
   "status": "new",
   "social": true
  },
@@ -1233,11 +1389,23 @@
   "status": "new",
   "social": false
  },
+ "https://www.mfa.gov.tr/no_-296_-israil-in-gazze-deki-al-fakhoora-okuluna-yonelik-saldirisi-hk.en.mfa": {
+  "status": "new",
+  "social": false
+ },
  "https://www.michiganpublic.org/2023-10-18/heres-the-available-evidence-of-what-happened-at-al-ahli-arab-hospital-in-gaza": {
   "status": "new",
   "social": false
  },
  "https://www.middleeasteye.net/explainer-gaza-israel-palestine-war-university-destroy": {
+  "status": "new",
+  "social": false
+ },
+ "https://www.middleeasteye.net/live-update/israeli-strike-al-buraq-school-kills-20-says-health-ministry": {
+  "status": "new",
+  "social": false
+ },
+ "https://www.middleeasteye.net/news/israel-strike-central-gaza-girls-school-kills-palestinians": {
   "status": "new",
   "social": false
  },
@@ -1253,6 +1421,10 @@
   "status": "new",
   "social": false
  },
+ "https://www.middleeasteye.net/sites/default/files/styles/full_width/public/2023-11/dead%20bodies.jpg.webp?itok=WO4Ucmvq": {
+  "status": "new",
+  "social": false
+ },
  "https://www.middleeastmonitor.com/20200414-we-must-never-forget-israels-massacre-in-jenin": {
   "status": "new",
   "social": false
@@ -1262,6 +1434,10 @@
   "social": false
  },
  "https://www.middleeastmonitor.com/20231106-israeli-air-strikes-target-gazas-al-azhar-university": {
+  "status": "new",
+  "social": false
+ },
+ "https://www.middleeastmonitor.com/20231111-gaza-50-martyred-inside-al-buraq-school-following-missile-artillery-bombardment": {
   "status": "new",
   "social": false
  },
@@ -1302,6 +1478,10 @@
   "social": false
  },
  "https://www.newarab.com/news/israeli-strike-destroys-northern-gazas-last-remaining-hospital": {
+  "status": "new",
+  "social": false
+ },
+ "https://www.news24.com/world/israel-kills-17-in-gaza-as-hamas-faces-countdown-to-accept-us-ceasefire-plan-20251001-0819": {
   "status": "new",
   "social": false
  },
@@ -1849,6 +2029,14 @@
   "status": "new",
   "social": false
  },
+ "https://www.palestinechronicle.com/al-tabaeen-school-massacre-is-part-of-zionist-script-to-annihilate-palestinians-with-us-support": {
+  "status": "new",
+  "social": false
+ },
+ "https://www.palestinechronicle.com/wp-content/uploads/2024/08/Tabaeen_Massacre1_QNN.png": {
+  "status": "new",
+  "social": false
+ },
  "https://www.palestinercs.org": {
   "status": "new",
   "social": false
@@ -1961,6 +2149,10 @@
   "status": "new",
   "social": false
  },
+ "https://www.theguardian.com/world/article/2024/jul/10/a-game-of-football-a-boom-then-scattered-bodies-video-shows-moment-of-israel-strike-on-gaza-school": {
+  "status": "new",
+  "social": false
+ },
  "https://www.theguardian.com/world/gallery/2026/mar/09/a-giant-cat-and-a-back-to-the-future-reunion-photos-of-the-day-monday?CMP=share_btn_url": {
   "status": "new",
   "social": false
@@ -2034,6 +2226,10 @@
   "social": false
  },
  "https://www.un.org/unispal/document/commission-of-inquiry-on-2018-protests-in-opt-final-report-a-hrc-40-74-advance-unedited": {
+  "status": "new",
+  "social": false
+ },
+ "https://www.un.org/unispal/document/ohchr-condemns-pr-10aug24": {
   "status": "new",
   "social": false
  },
@@ -2421,7 +2617,15 @@
   "status": "new",
   "social": false
  },
+ "https://www.youtube.com/shorts/XjOuKWpzqFQ": {
+  "status": "new",
+  "social": false
+ },
  "https://www.youtube.com/shorts/mokk_-u50m4": {
+  "status": "new",
+  "social": false
+ },
+ "https://www.youtube.com/shorts/ms78Zoj0HDU": {
   "status": "new",
   "social": false
  },
@@ -2449,6 +2653,10 @@
   "status": "new",
   "social": false
  },
+ "https://www.youtube.com/watch?v=HfpZA_3J3Y4": {
+  "status": "new",
+  "social": false
+ },
  "https://www.youtube.com/watch?v=K4z1ejgMT1c": {
   "status": "new",
   "social": false
@@ -2465,6 +2673,10 @@
   "status": "new",
   "social": false
  },
+ "https://www.youtube.com/watch?v=OzEqTOo_2MQ": {
+  "status": "new",
+  "social": false
+ },
  "https://www.youtube.com/watch?v=P0lf-Mwk-v0&t=3s": {
   "status": "new",
   "social": false
@@ -2477,6 +2689,10 @@
   "status": "new",
   "social": false
  },
+ "https://www.youtube.com/watch?v=iV_Fyov1wvQ": {
+  "status": "new",
+  "social": false
+ },
  "https://www.youtube.com/watch?v=ou8_UMrX4yk": {
   "status": "new",
   "social": false
@@ -2486,6 +2702,14 @@
   "social": false
  },
  "https://www.youtube.com/watch?v=rt2QPl1lm5o&t=60s": {
+  "status": "new",
+  "social": false
+ },
+ "https://www.youtube.com/watch?v=sGTpzP2Ozeo": {
+  "status": "new",
+  "social": false
+ },
+ "https://www.youtube.com/watch?v=yspylXsoDf8": {
   "status": "new",
   "social": false
  },
