@@ -538,14 +538,22 @@
    "image": 1
   },
   "i.guim.co.uk": {
-   "count": 4,
-   "sample": "https://i.guim.co.uk/img/media/72b9ba0421f33ad2b016ba5db10672e89fbafe99/0_336_5669_3401/master/5669.jpg?width=620&dpr=1&s=none&crop=none",
+   "count": 5,
+   "sample": "https://i.guim.co.uk/img/media/2199567ae0910bbaa5efee299ab5d28227a13ad5/0_255_6720_4032/master/6720.jpg?width=620&dpr=1&s=none&crop=none",
    "archived": 0,
    "pending": 0,
    "deferred": 0,
    "urls": [
     {
      "u": "https://i.guim.co.uk/img/media/00764394cb9b7bd106c5101ef5da1d81eae8db55/0_0_1800_1080/master/1800.jpg?width=1900&dpr=1&s=none&crop=none",
+     "role": "image",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://i.guim.co.uk/img/media/2199567ae0910bbaa5efee299ab5d28227a13ad5/0_255_6720_4032/master/6720.jpg?width=620&dpr=1&s=none&crop=none",
      "role": "image",
      "status": "new",
      "snap": "",
@@ -578,7 +586,7 @@
     }
    ],
    "video": 0,
-   "image": 4
+   "image": 5
   },
   "i0.wp.com": {
    "count": 1,
@@ -676,7 +684,7 @@
    "image": 1
   },
   "instagram.com": {
-   "count": 10,
+   "count": 11,
    "sample": "https://www.instagram.com/reels/DPRASOOkppd",
    "archived": 0,
    "pending": 0,
@@ -731,6 +739,14 @@
      "manual": false
     },
     {
+     "u": "https://www.instagram.com/reels/DbBfGoSMRa4",
+     "role": "video",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
      "u": "https://www.instagram.com/p/C0mfNM-SLhi/?img_index=7",
      "role": "image",
      "status": "new",
@@ -763,7 +779,7 @@
      "manual": false
     }
    ],
-   "video": 6,
+   "video": 7,
    "image": 4
   },
   "maktoobmedia.com": {
@@ -824,7 +840,7 @@
    "image": 0
   },
   "middleeasteye.net": {
-   "count": 2,
+   "count": 3,
    "sample": "https://www.middleeasteye.net/sites/default/files/styles/full_width/public/2023-11/dead%20bodies.jpg.webp?itok=WO4Ucmvq",
    "archived": 0,
    "pending": 0,
@@ -832,6 +848,14 @@
    "urls": [
     {
      "u": "https://www.middleeasteye.net/explainer-gaza-israel-palestine-war-university-destroy",
+     "role": "image",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.middleeasteye.net/sites/default/files/000_C2MJ6MP.jpg",
      "role": "image",
      "status": "new",
      "snap": "",
@@ -848,7 +872,7 @@
     }
    ],
    "video": 0,
-   "image": 2
+   "image": 3
   },
   "middleeastmonitor.com": {
    "count": 1,

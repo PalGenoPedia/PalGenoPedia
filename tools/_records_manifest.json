@@ -189,7 +189,7 @@
       "section": "hospitals",
       "id": "FAC-006",
       "slug": "al-aqsa-martyrs-hospital",
-      "incidents": 9,
+      "incidents": 8,
       "indexable": true
     },
     {
@@ -199,7 +199,7 @@
       "section": "hospitals",
       "id": "FAC-006",
       "slug": "al-aqsa-maertyrerkrankenhaus",
-      "incidents": 9,
+      "incidents": 8,
       "indexable": true
     },
     {
@@ -209,7 +209,7 @@
       "section": "hospitals",
       "id": "FAC-006",
       "slug": "مستشفى-شهداء-الأقصى",
-      "incidents": 9,
+      "incidents": 8,
       "indexable": true
     },
     {
@@ -819,8 +819,8 @@
       "section": "hospitals",
       "id": "FAC-027",
       "slug": "al-yaman-al-saeed-hospital",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 1,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/hospitals/de/al-yaman-al-saeed-krankenhaus/",
@@ -829,8 +829,8 @@
       "section": "hospitals",
       "id": "FAC-027",
       "slug": "al-yaman-al-saeed-krankenhaus",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 1,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/hospitals/ar/%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89-%D8%A7%D9%84%D9%8A%D9%85%D9%86-%D8%A7%D9%84%D8%B3%D8%B9%D9%8A%D8%AF/",
@@ -839,8 +839,8 @@
       "section": "hospitals",
       "id": "FAC-027",
       "slug": "مستشفى-اليمن-السعيد",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 1,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/hospitals/patient-friends-association-hospital/",

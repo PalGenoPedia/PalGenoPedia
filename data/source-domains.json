@@ -1483,7 +1483,7 @@
    "secondary": 1
   },
   "english.wafa.ps": {
-   "count": 10,
+   "count": 11,
    "sample": "https://english.wafa.ps/Pages/Details/128189",
    "archived": 6,
    "pending": 2,
@@ -1568,10 +1568,18 @@
      "snap": "",
      "method": "",
      "manual": false
+    },
+    {
+     "u": "https://english.wafa.ps/Pages/Details/172775",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
     }
    ],
    "primary": 3,
-   "secondary": 7
+   "secondary": 8
   },
   "episcopalnewsservice.org": {
    "count": 1,
@@ -2710,7 +2718,7 @@
    "secondary": 1
   },
   "middleeasteye.net": {
-   "count": 6,
+   "count": 7,
    "sample": "https://www.middleeasteye.net/news/palestine-west-bank-deadliest-year-second-intifada",
    "archived": 0,
    "pending": 0,
@@ -2718,6 +2726,14 @@
    "urls": [
     {
      "u": "https://www.middleeasteye.net/explainer-gaza-israel-palestine-war-university-destroy",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.middleeasteye.net/live-blog/live-blog-update/israel-kills-two-strike-gaza-hospital-one-killed-targeting-electric-bike",
      "role": "primary",
      "status": "new",
      "snap": "",
@@ -2765,7 +2781,7 @@
      "manual": false
     }
    ],
-   "primary": 3,
+   "primary": 4,
    "secondary": 3
   },
   "middleeastmonitor.com": {
