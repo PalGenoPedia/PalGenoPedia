@@ -22,11 +22,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://palgenopedia.org/hunger-crisis-stats.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://palgenopedia.org/methodology.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -50,6 +45,11 @@
     <loc>https://palgenopedia.org/war-crimes/civilian-casualties/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://palgenopedia.org/war-crimes/hunger-crisis/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://palgenopedia.org/war-crimes/</loc>

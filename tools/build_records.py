@@ -32,7 +32,7 @@ Usage
   python tools/build_records.py --only hospitals
   python tools/build_records.py --check         report, write nothing
 """
-import csv, json, os, re, sys, html, hashlib, unicodedata, datetime
+import csv, json, os, re, sys, html, hashlib, unicodedata, datetime, urllib.parse
 
 # Slugs include Arabic script (de/ar record paths). A Windows console defaults
 # stdout to the system codepage (cp1252), not UTF-8, so printing one crashes
@@ -220,6 +220,8 @@ T = {
         'watch_video': 'Watch video',
         'archived_video': 'Archived video',
         'video_evidence': 'Video evidence',
+        'media_evidence': 'Photo & video evidence',
+        'view_image': 'View photo at source',
         'recorded_by': 'Recorded by',
         'prev_incident': 'Previous',
         'next_incident': 'Next',
@@ -246,7 +248,7 @@ T = {
         'tabpage_desc_incidents': 'The complete register of {i} documented incidents at {section} in Gaza, grouped by type of attack, each linked to the facility it struck.',
         'tabpage_desc_timeline': 'All {i} documented attacks on {section} in Gaza in chronological order, year by year, with casualties and sources.',
         'tabpage_desc_statistics': 'Aggregate figures for {i} documented incidents at {n} {section}: totals by governorate, by type of attack, by year, and casualties.',
-        'tabpage_desc_resources': 'Reports, investigations and primary sources documenting attacks on {section} in Gaza.',
+        'tabpage_desc_resources': 'Reports, investigations and primary sources documenting attacks on {section} in Gaza, collected alongside the incident records they support.',
         'ov_summary': 'Summary',
         'ov_most_targeted': 'Most heavily targeted',
         'st_by_governorate': 'Incidents by governorate',
@@ -259,7 +261,7 @@ T = {
         'undated': 'Undated',
         'no_resources': 'No sources are catalogued for this section yet.',
         'type_labels': {'airstrike': 'Airstrike', 'direct': 'Direct attack', 'siege': 'Siege', 'invasion': 'Invasion / ground assault', 'indirect': 'Nearby / indirect', 'access': 'Access restricted', 'unidentified': 'Unspecified'},
-        'nav': {'nav.warCrimes': '⚖️ War Crimes', 'nav.hungerCrisis': '🍽️ Hunger Crisis', 'nav.historical': '📜 History', 'nav.timeline': '📋 Timeline', 'nav.joinUs': '🤝 Join Us'},
+        'nav': {'nav.warCrimes': '⚖️ War Crimes', 'nav.historical': '📜 History', 'nav.timeline': '📋 Timeline', 'nav.joinUs': '🤝 Join Us'},
         'total_incidents': 'Total incidents',
         'civilians_injured': 'Civilians injured',
         'hw_killed_short': 'Health workers killed',
@@ -317,6 +319,8 @@ T = {
         'watch_video': 'Video ansehen',
         'archived_video': 'Archiviertes Video',
         'video_evidence': 'Videobelege',
+        'media_evidence': 'Foto- und Videobelege',
+        'view_image': 'Foto an der Quelle ansehen',
         'recorded_by': 'Erfasst von',
         'prev_incident': 'Zurück',
         'next_incident': 'Weiter',
@@ -340,10 +344,10 @@ T = {
         'tabpage_title_statistics': 'Angriffsstatistik {section}, Gaza | {site}',
         'tabpage_title_resources': 'Quellen und Berichte zu {section} in Gaza | {site}',
         'tabpage_desc_overview': '{n} dokumentierte {section} mit {i} erfassten Vorfällen. Kennzahlen, die am stärksten betroffenen Einrichtungen und der Weg zu den Einzelnachweisen.',
-        'tabpage_desc_incidents': 'Das vollständige Verzeichnis von {i} dokumentierten Vorfällen an {section} in Gaza, nach Angriffsart gegliedert und jeweils mit der betroffenen Einrichtung verknüpft.',
+        'tabpage_desc_incidents': 'Alle {i} dokumentierten Vorfälle an {section} in Gaza, nach Angriffsart gegliedert und jeweils mit der betroffenen Einrichtung verknüpft.',
         'tabpage_desc_timeline': 'Alle {i} dokumentierten Angriffe auf {section} in Gaza in chronologischer Reihenfolge, Jahr für Jahr, mit Opferzahlen und Quellen.',
         'tabpage_desc_statistics': 'Aggregierte Zahlen zu {i} dokumentierten Vorfällen an {n} {section}: nach Gouvernement, nach Angriffsart, nach Jahr sowie Opferzahlen.',
-        'tabpage_desc_resources': 'Berichte, Untersuchungen und Primärquellen zu Angriffen auf {section} in Gaza.',
+        'tabpage_desc_resources': 'Berichte, Untersuchungen und Primärquellen zu Angriffen auf {section} in Gaza, gesammelt neben den Vorfallsberichten, die sie belegen.',
         'ov_summary': 'Zusammenfassung',
         'ov_most_targeted': 'Am stärksten betroffen',
         'st_by_governorate': 'Vorfälle nach Gouvernement',
@@ -356,7 +360,7 @@ T = {
         'undated': 'Ohne Datum',
         'no_resources': 'Für diesen Bereich sind noch keine Quellen erfasst.',
         'type_labels': {'airstrike': 'Luftangriff', 'direct': 'Direkter Angriff', 'siege': 'Belagerung', 'invasion': 'Invasion / Bodenangriff', 'indirect': 'Umfeld / indirekt', 'access': 'Zugang verwehrt', 'unidentified': 'Nicht angegeben'},
-        'nav': {'nav.warCrimes': '⚖️ Kriegsverbrechen', 'nav.hungerCrisis': '🍽️ Hungerkrise', 'nav.historical': '📜 Geschichte', 'nav.timeline': '📋 Zeitleiste', 'nav.joinUs': '🤝 Mitmachen'},
+        'nav': {'nav.warCrimes': '⚖️ Kriegsverbrechen', 'nav.historical': '📜 Geschichte', 'nav.timeline': '📋 Zeitleiste', 'nav.joinUs': '🤝 Mitmachen'},
         'total_incidents': 'Vorfälle insgesamt',
         'civilians_injured': 'Verletzte Zivilisten',
         'hw_killed_short': 'Getötete Gesundheitskräfte',
@@ -416,6 +420,8 @@ T = {
         'watch_video': 'مشاهدة الفيديو',
         'archived_video': 'فيديو مؤرشف',
         'video_evidence': 'أدلة مصورة',
+        'media_evidence': 'أدلة مصورة',
+        'view_image': 'عرض الصورة في المصدر',
         'recorded_by': 'وثّقها',
         'prev_incident': 'السابق',
         'next_incident': 'التالي',
@@ -442,7 +448,7 @@ T = {
         'tabpage_desc_incidents': 'السجل الكامل لـ {i} حادثة موثّقة في {section} بغزة، مصنّفة حسب نوع الهجوم ومرتبطة بالمنشأة المستهدفة.',
         'tabpage_desc_timeline': 'جميع الهجمات الموثّقة على {section} في غزة، البالغ عددها {i}، مرتبة زمنياً سنة بسنة مع الضحايا والمصادر.',
         'tabpage_desc_statistics': 'أرقام مجمّعة لـ {i} حادثة موثّقة في {n} من {section}: حسب المحافظة ونوع الهجوم والسنة، إضافة إلى الضحايا.',
-        'tabpage_desc_resources': 'تقارير وتحقيقات ومصادر أولية توثّق الهجمات على {section} في غزة.',
+        'tabpage_desc_resources': 'تقارير وتحقيقات ومصادر أولية توثّق الهجمات على {section} في غزة، جُمعت إلى جانب سجلات الحوادث التي تستند إليها.',
         'ov_summary': 'ملخّص',
         'ov_most_targeted': 'الأكثر استهدافاً',
         'st_by_governorate': 'الحوادث حسب المحافظة',
@@ -455,7 +461,7 @@ T = {
         'undated': 'بلا تاريخ',
         'no_resources': 'لم تُسجَّل مصادر لهذا القسم بعد.',
         'type_labels': {'airstrike': 'غارة جوية', 'direct': 'استهداف مباشر', 'siege': 'حصار', 'invasion': 'اجتياح / هجوم بري', 'indirect': 'محيط / غير مباشر', 'access': 'منع الوصول', 'unidentified': 'غير محدد'},
-        'nav': {'nav.warCrimes': '⚖️ جرائم حرب', 'nav.hungerCrisis': '🍽️ أزمة الجوع', 'nav.historical': '📜 التاريخ', 'nav.timeline': '📋 الجدول الزمني', 'nav.joinUs': '🤝 انضم إلينا'},
+        'nav': {'nav.warCrimes': '⚖️ جرائم حرب', 'nav.historical': '📜 التاريخ', 'nav.timeline': '📋 الجدول الزمني', 'nav.joinUs': '🤝 انضم إلينا'},
         'total_incidents': 'إجمالي الحوادث',
         'civilians_injured': 'المدنيون الجرحى',
         'hw_killed_short': 'الكوادر الصحية القتلى',
@@ -590,6 +596,10 @@ TITLE_MAX = 60
 # would rather overshoot TITLE_MAX than emit an anonymous title.
 MIN_NAME = 28
 HARD_MAX = 75
+# Meta description bounds. Google shows roughly 155-160 characters; under ~70 a
+# description reads as a fragment and is usually replaced by page text.
+DESC_MIN = 70
+DESC_MAX = 160
 
 
 def fit_title(title, limit=TITLE_MAX):
@@ -634,6 +644,24 @@ def fit_title(title, limit=TITLE_MAX):
     # Pathological: qualifier + brand alone blow the hard cap. Only here does
     # dropping the qualifier win.
     return _clip(name, max(limit - len(tail) - 1, MIN_NAME)) + tail
+
+
+def running_label(label, lang):
+    """A section label as it reads mid-sentence: lowercased, except in German,
+    where nouns keep their capital ("51 dokumentierte Krankenhäuser")."""
+    return label if lang == "de" else label.lower()
+
+
+def fit_desc(s):
+    """`s` brought under DESC_MAX: whole trailing sentences go first (the
+    "{n} recorded incident(s)." count is the least useful part), and only
+    if that would leave less than DESC_MIN is it clipped mid-sentence."""
+    while len(s) > DESC_MAX and ". " in s:
+        head = s.rsplit(". ", 1)[0] + "."
+        if len(head) < DESC_MIN:
+            break
+        s = head
+    return _clip(s, DESC_MAX - 1)
 
 
 def _clip(s, room):
@@ -740,6 +768,60 @@ def first_url(cell):
     .startswith("http"), so "" behaves exactly as a non-URL cell did."""
     u = media_urls(cell)
     return u[0] if u else ""
+
+
+# image_url is typed by hand, and a large share of its values are not images at
+# all but the page the photo was found on - an X / Facebook / Instagram post, a
+# news article, an archive.org details page. <img src> of an HTML page renders
+# a broken-image icon on the record (32 distinct URLs, ~105 <img> tags across
+# EN/DE/AR on 2026-09-10) and a dead og:image in every share card. Signed
+# Facebook / Instagram CDN links ARE images, but carry an `oe=` expiry (hex
+# epoch) after which the CDN answers 403 - one such og:image died on
+# 2026-07-08. A page URL is still evidence, so the modal lists it as a link;
+# an expired signed URL points at nothing and is dropped.
+IMAGE_EXT_RE = re.compile(r"\.(?:jpe?g|png|webp|avif|gif|svg)$", re.I)
+# Image CDNs whose URLs carry no file extension.
+IMAGE_HOSTS = ("gstatic.com", "images.wsj.net", "fmcdn.alqaheranews.net",
+               "upload.wikimedia.org", "pbs.twimg.com", "fbcdn.net",
+               "cdninstagram.com")
+# Midnight UTC after the build day: a signed link that dies before then is
+# already dead for most of the time the page is live. Day-granular, so two
+# builds on one day still produce identical output.
+TODAY_EPOCH = int(datetime.datetime.combine(
+    datetime.date.today() + datetime.timedelta(days=1), datetime.time(),
+    tzinfo=datetime.timezone.utc).timestamp())
+
+
+def image_kind(url):
+    """"image" if `url` can be an <img src>, "expired" for a signed CDN link
+    past its `oe=` expiry, else "page"."""
+    p = urllib.parse.urlsplit(url)
+    q = urllib.parse.parse_qs(p.query)
+    try:
+        if int(q["oe"][0], 16) < TODAY_EPOCH:
+            return "expired"
+    except (KeyError, ValueError):
+        pass
+    if IMAGE_EXT_RE.search(p.path):
+        return "image"
+    # e.g. euromedmonitor.org/img.php?src=unrwa-gaza-24.jpg
+    if any(IMAGE_EXT_RE.search(v) for vs in q.values() for v in vs):
+        return "image"
+    return "image" if p.netloc.lower().endswith(IMAGE_HOSTS) else "page"
+
+
+def pick_image(*cells):
+    """(first displayable image URL or "", [non-image media URLs, in order])
+    across the given media cells - image_url first, then archived_image."""
+    img, pages = "", []
+    for cell in cells:
+        for u in media_urls(cell):
+            kind = image_kind(u)
+            if kind == "image":
+                img = img or u
+            elif kind == "page" and u not in pages:
+                pages.append(u)
+    return img, pages
 
 
 def archived_link(url, t):
@@ -1022,7 +1104,7 @@ def build_jsonld(cfg, fac, incidents, lang, slugs, name, intro, t):
         node["geo"] = {"@type": "GeoCoordinates", "latitude": lat, "longitude": lng}
     except Exception:
         pass
-    img = first_url(clean(fac.get("Image_url")) or clean(fac.get("image_url")))
+    img = pick_image(clean(fac.get("Image_url")) or clean(fac.get("image_url")))[0]
     if img.startswith("http"):
         node["image"] = img
     if place:
@@ -1141,9 +1223,10 @@ ATTACK_CLASSES = (
 
 # Root-absolute so the same markup works at every depth
 # (/war-crimes/hospitals/x/ and /war-crimes/hospitals/de/x/).
+# Mirrors mainNav() in js/header-component.js. No Hunger Crisis entry: that page
+# lives inside the war-crimes section (/war-crimes/hunger-crisis/).
 SITE_NAV = (
     ("/war-crimes/", "nav.warCrimes", "\u2696\ufe0f War Crimes", True),
-    ("/hunger-crisis-stats.html", "nav.hungerCrisis", "\U0001F37D\ufe0f Hunger Crisis", False),
     ("/historical-events/", "nav.historical", "\U0001F4DC History", False),
     ("/historical-events/massacres/", "nav.timeline", "\U0001F4CB Timeline", False),
     ("/volunteer.html", "nav.joinUs", "\U0001F91D Join Us", False),
@@ -1574,7 +1657,8 @@ def render_tab(cfg, kind, facilities, by_fac, slug_map, lang, t):
     tot_hw = sum(r["hw"] for r in rows)
 
     title = fit_title(t["tabpage_title_" + kind].format(section=label, site=SITE))
-    desc = t["tabpage_desc_" + kind].format(section=label.lower(), n=len(facilities), i=tot_inc)
+    desc = fit_desc(t["tabpage_desc_" + kind].format(section=running_label(label, lang),
+                                                      n=len(facilities), i=tot_inc))
     h1 = t["tabpage_h1_" + kind].format(section=label)
 
     jsonld = []
@@ -1727,6 +1811,9 @@ def render_tab(cfg, kind, facilities, by_fac, slug_map, lang, t):
         if not res:
             a('<div class="empty-detail"><strong>%s</strong></div>' % e(t["no_resources"]))
         else:
+            # Every other tab opens its body with an h2; without one here the
+            # footer's h3 followed the page h1 directly (h1 -> h3 skip).
+            a('<h2 class="detail-section-title">%s (%d)</h2>' % (e(t["tab_resources"]), len(res)))
             a('<div class="detail-incidents">')
             for r in res:
                 url = clean(r.get("url"))
@@ -1831,7 +1918,7 @@ def incident_modal(inc, fac, lang, t, anchor, prev_a, next_a, pos, total, close_
     iid = clean(inc.get("incident_id"))
     fname = get_field(fac, "name", lang) or clean(fac.get("name"))
     place = ", ".join([x for x in [clean(fac.get("area")), clean(fac.get("governorate"))] if x])
-    img = first_url(clean(inc.get("image_url")) or clean(inc.get("archived_image")))
+    img, img_pages = pick_image(clean(inc.get("image_url")), clean(inc.get("archived_image")))
 
     a('<div class="inc-modal" id="%s" role="dialog" aria-labelledby="%s-t" tabindex="-1">' % (anchor, anchor))
     a('<a class="inc-modal-scrim" href="%s" aria-label="%s" tabindex="-1"></a>' % (close_href, e(t["close"])))
@@ -1856,7 +1943,9 @@ def incident_modal(inc, fac, lang, t, anchor, prev_a, next_a, pos, total, close_
       % (e(fname), (" \u2014 " + e(place)) if place else ""))
 
     if img.startswith("http"):
-        a('<img class="inc-modal-img" src="%s" alt="%s" loading="lazy" referrerpolicy="no-referrer">'
+        # height:auto in record-page.css - the attributes reserve a 16:9 box
+        # until the image arrives, instead of a zero-height one.
+        a('<img class="inc-modal-img" src="%s" alt="%s" width="1200" height="675" loading="lazy" referrerpolicy="no-referrer">'
           % (e(img), e(result or fname)))
 
     if full and full != desc:
@@ -1901,8 +1990,15 @@ def incident_modal(inc, fac, lang, t, anchor, prev_a, next_a, pos, total, close_
                       (clean(inc.get("archived_video")), t["archived_video"])):
         for i, url in enumerate(media_urls(cell), start=1):
             vids.append((url, lbl if i == 1 else "%s [%d]" % (lbl, i)))
-    if vids:
-        a('<h3 class="inc-modal-h">%s</h3><div class="inc-modal-links">' % e(t["video_evidence"]))
+    # image_url cells that name the post/article a photo is on rather than the
+    # photo itself (see pick_image) - linked, since they cannot be embedded.
+    photos = [(url, t["view_image"] if i == 1 else "%s [%d]" % (t["view_image"], i))
+              for i, url in enumerate(img_pages, start=1)]
+    if vids or photos:
+        a('<h3 class="inc-modal-h">%s</h3><div class="inc-modal-links">'
+          % e(t["media_evidence"] if photos else t["video_evidence"]))
+        for url, lbl in photos:
+            a('<a href="%s" rel="nofollow noopener" target="_blank">&#128247; %s</a>' % (e(url), e(lbl)))
         for url, lbl in vids:
             a('<a href="%s" rel="nofollow noopener" target="_blank">&#127909; %s</a>' % (e(url), e(lbl)))
         a("</div>")
@@ -1937,7 +2033,7 @@ def render(cfg, fac, incidents, lang, slugs, t):
     post = get_field(fac, "post_war_status", lang)
     pre = clean(fac.get("pre_war_status"))
     place = ", ".join([x for x in [clean(fac.get("area")), clean(fac.get("governorate"))] if x])
-    img = first_url(clean(fac.get("Image_url")) or clean(fac.get("image_url")))
+    img = pick_image(clean(fac.get("Image_url")) or clean(fac.get("image_url")))[0]
     beds = clean(fac.get("beds_pre_war"))
 
     killed = sum(num(i.get("civilians_killed")) for i in incidents)
@@ -1968,8 +2064,14 @@ def render(cfg, fac, incidents, lang, slugs, t):
     index_href = url_quote(section_index_path(cfg, lang))
 
     title = fit_title("%s \u2014 %s | %s" % (name, section_label, SITE))
-    desc = intro[:150].rstrip() + ("\u2026" if len(intro) > 150 else "") if intro else \
-        t["meta_tpl"].format(name=name, place=place or "Gaza", n=len(incidents))
+    summary = t["meta_tpl"].format(name=name, place=place or "Gaza", n=len(incidents))
+    if len(intro) >= DESC_MIN:
+        desc = intro[:150].rstrip() + ("\u2026" if len(intro) > 150 else "")
+    else:
+        # A one-line intro ("One of the territory's oldest places of worship")
+        # is too thin to earn the snippet, and a long facility name blows the
+        # template past DESC_MAX - so pad the first, clip the second.
+        desc = fit_desc((intro.rstrip(" .") + ". " if intro else "") + summary)
 
     L = head_common(title, desc, canonical, alts,
                     img if img.startswith("http") else OG_IMAGE, robots, lang)
@@ -2014,7 +2116,7 @@ def render(cfg, fac, incidents, lang, slugs, t):
     a("</div>")
     if img.startswith("http"):
         a('<div class="detail-fac-img-wrap">')
-        a('<img class="detail-fac-img" src="%s" alt="%s" loading="lazy" referrerpolicy="no-referrer">' % (e(img), e(name)))
+        a('<img class="detail-fac-img" src="%s" alt="%s" width="260" height="320" loading="lazy" referrerpolicy="no-referrer">' % (e(img), e(name)))
         a('<div class="detail-fac-img-caption">&#128247; %s</div>' % e(name))
         a("</div>")
     a('<div class="detail-hero-facts">')
@@ -2060,9 +2162,9 @@ def render(cfg, fac, incidents, lang, slugs, t):
             d_short = get_field(i, "description", lang)
             d_full = get_field(i, "full_discription", lang)
             a('<article class="detail-inc-card type-%s">' % cls)
-            iimg = first_url(clean(i.get("image_url")) or clean(i.get("archived_image")))
+            iimg = pick_image(clean(i.get("image_url")), clean(i.get("archived_image")))[0]
             if iimg.startswith("http"):
-                a('<img class="detail-inc-img" src="%s" alt="%s" loading="lazy" referrerpolicy="no-referrer">' % (e(iimg), e(result or attack or name)))
+                a('<img class="detail-inc-img" src="%s" alt="%s" width="640" height="200" loading="lazy" referrerpolicy="no-referrer">' % (e(iimg), e(result or attack or name)))
             a('<div class="detail-inc-body">')
             a('<div class="detail-inc-meta">')
             dt = fmt_date(i)
@@ -2187,7 +2289,7 @@ def render_index(cfg, entries, lang, t):
     total_inc = sum(x["incidents"] for x in entries)
     total_killed = sum(x["killed"] for x in entries)
     title = fit_title(t["index_title"].format(section=section_label, site=SITE))
-    desc = t["index_desc"].format(n=len(entries), section=section_label.lower(), i=total_inc)
+    desc = t["index_desc"].format(n=len(entries), section=running_label(section_label, lang), i=total_inc)
 
     L = head_common(title, desc, canonical, alts, OG_IMAGE,
                     "index, follow, max-image-preview:large, max-snippet:-1", lang)
@@ -2228,7 +2330,7 @@ def render_index(cfg, entries, lang, t):
     for x in sorted(entries, key=lambda z: (-z["incidents"], z["name"])):
         a('<a class="card rec-card%s" href="%s">' % ("" if x["indexable"] else " is-stub", url_quote(x["path"])))
         if x["img"].startswith("http"):
-            a('<img class="fac-card-img" src="%s" alt="%s" loading="lazy" referrerpolicy="no-referrer">' % (e(x["img"]), e(x["name"])))
+            a('<img class="fac-card-img" src="%s" alt="%s" width="400" height="160" loading="lazy" referrerpolicy="no-referrer">' % (e(x["img"]), e(x["name"])))
         a('<div class="card-header"><h3 class="card-title">%s</h3></div>' % e(x["name"]))
         if x["place"]:
             a('<div class="card-sub">&#128205; %s</div>' % e(x["place"]))
@@ -2348,7 +2450,7 @@ def main():
                         "name": get_field(fac, "name", lang) or clean(fac.get("name")) or slugs[lang],
                         "place": ", ".join([x for x in [clean(fac.get("area")),
                                                         clean(fac.get("governorate"))] if x]),
-                        "img": first_url(clean(fac.get("Image_url")) or clean(fac.get("image_url"))),
+                        "img": pick_image(clean(fac.get("Image_url")) or clean(fac.get("image_url")))[0],
                         "incidents": len(incs),
                         "killed": sum(num(i.get("civilians_killed")) for i in incs),
                         "path": rel_url(cfg, slugs, lang),

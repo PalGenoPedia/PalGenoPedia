@@ -59,24 +59,24 @@ MANIFESTS = [os.path.join(HERE, '_records_manifest.json'),
 # Pages that are collections of documented records rather than prose
 SECTION_OF = {
     'war-crimes/index.html': ('War Crimes Statistics', None),
-    'hunger-crisis-stats.html': ('Hunger Crisis Statistics', None),
+    'war-crimes/hunger-crisis/index.html': ('Hunger Crisis Statistics', None),
     'historical-events/index.html': ('Historical Events', None),
     'volunteer.html': ('Volunteer', None),
 }
 BREADCRUMB_PARENT = {
-    # The two hunger-crisis detail pages live under /war-crimes/ (matching the
-    # four API-driven stat pages already there) but are topically children of
-    # the Hunger Crisis hub, not the War Crimes one. These two exact paths
-    # must be matched before the generic 'war-crimes/' prefix below, or that
-    # prefix would win and mislabel their breadcrumb.
-    'war-crimes/total-starvation/': ('Hunger Crisis Statistics', '/hunger-crisis-stats.html'),
-    'war-crimes/children-starvation/': ('Hunger Crisis Statistics', '/hunger-crisis-stats.html'),
+    # The two starvation detail pages are children of the Hunger Crisis page,
+    # which is itself a child of the War Crimes hub (breadcrumb() walks up:
+    # Home > War Crimes > Hunger Crisis > page). These two exact paths must be
+    # matched before the generic 'war-crimes/' prefix below, or that prefix
+    # would win and skip the Hunger Crisis level.
+    'war-crimes/total-starvation/': ('Hunger Crisis Statistics', '/war-crimes/hunger-crisis/'),
+    'war-crimes/children-starvation/': ('Hunger Crisis Statistics', '/war-crimes/hunger-crisis/'),
     # The four API-driven stat pages moved out of Pages/War_Crimes_Stats/ and
     # into /war-crimes/, alongside the generated record sections. They are
     # still children of the war-crimes hub, so they keep its crumb.
     'war-crimes/': ('War Crimes Statistics', '/war-crimes/'),
     'Pages/War_Crimes_Stats/': ('War Crimes Statistics', '/war-crimes/'),
-    'Pages/Hunger_Crisis/': ('Hunger Crisis Statistics', '/hunger-crisis-stats.html'),
+    'Pages/Hunger_Crisis/': ('Hunger Crisis Statistics', '/war-crimes/hunger-crisis/'),
     # The hub and the ethnic-cleansing page moved into /historical-events/;
     # the massacres archive stays beside its CSVs. All three are children
     # of the same hub, so they share its crumb.
@@ -307,19 +307,33 @@ def event_items(events, period=None, limit=None):
     return items
 
 
-def breadcrumb(rel, title):
-    crumbs = [{"@type": "ListItem", "position": 1, "name": "Home", "item": BASE + "/"}]
-    pos = 2
+def breadcrumb_parent(rel):
+    """(label, href) of the first BREADCRUMB_PARENT entry whose prefix `rel`
+    falls under, or None."""
     for prefix, (label, href) in BREADCRUMB_PARENT.items():
         # A section hub matches its own prefix. Without this it would appear
         # twice in its own trail, as parent and as self.
         if href == page_href(rel):
-            break
+            continue
         if rel.startswith(prefix):
-            crumbs.append({"@type": "ListItem", "position": pos, "name": label, "item": BASE + href})
-            pos += 1
+            return label, href
+    return None
+
+
+def breadcrumb(rel, title):
+    # Walk parent -> grandparent: a parent is itself a served page and may sit
+    # inside a section (total-starvation -> hunger-crisis -> war-crimes).
+    trail, cur = [], rel
+    while len(trail) < 4:
+        parent = breadcrumb_parent(cur)
+        if not parent:
             break
-    crumbs.append({"@type": "ListItem", "position": pos, "name": title, "item": BASE + page_href(rel)})
+        trail.insert(0, parent)
+        cur = parent[1].lstrip('/') + ('index.html' if parent[1].endswith('/') else '')
+    crumbs = [{"@type": "ListItem", "position": 1, "name": "Home", "item": BASE + "/"}]
+    for label, href in trail:
+        crumbs.append({"@type": "ListItem", "position": len(crumbs) + 1, "name": label, "item": BASE + href})
+    crumbs.append({"@type": "ListItem", "position": len(crumbs) + 1, "name": title, "item": BASE + page_href(rel)})
     return {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": crumbs}
 
 

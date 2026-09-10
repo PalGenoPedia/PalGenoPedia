@@ -12,7 +12,7 @@ Last reviewed: 2026-08-28.
 |---|---|---|---|
 | Per-incident death sum | `data/events.json` (27 documented events), the massacres timeline stat strip | ~28K | Sum of the **individually documented** incidents. NOT a war total — these are notable incidents with independent sourcing. |
 | War-crimes hub casualty cards | `/war-crimes/` — live Tech-for-Palestine API | current | Whole-war figures, fetched live, cached fallback. |
-| Hunger-crisis page | `/hunger-crisis-stats.html` — hardcoded | — | Hand-maintained, edit in the page. |
+| Hunger-crisis page | `/war-crimes/hunger-crisis/` — hardcoded | — | Hand-maintained, edit in the page. |
 | Home-page hero | `index.html` JS facts array | ~21K | Hardcoded, has drifted from everything else. |
 
 ## Current state
@@ -31,5 +31,5 @@ Last reviewed: 2026-08-28.
 - The **home-page hero** (`index.html`) hardcodes ~21K. It should be computed
   from `data/events.json` (or the API) at render time, with an `as_of` date,
   so it cannot drift. Not done.
-- `hunger-crisis-stats.html` numbers are hand-maintained.
+- `war-crimes/hunger-crisis/index.html` numbers are hand-maintained.
 - No single "as of" date surfaced on the aggregate figures.

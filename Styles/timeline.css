@@ -17,10 +17,23 @@
     margin-bottom: 1rem;
 }
 
+/* h2 on the generated massacres index (heading order: h1 -> h2), h3 wherever
+   the older markup still uses it. */
+.mode-selector-header h2,
 .mode-selector-header h3 {
     color: var(--text-primary);
     font-size: 1.2rem;
     margin: 0;
+}
+
+/* The map legend title is an h3 on the massacres index (was h4, which skipped
+   a level). Same look as shared-styles.css `.map-legend h4` - whose top margin
+   the global reset zeroes. */
+.map-legend h3 {
+    margin-top: 0;
+    margin-bottom: var(--spacing-sm);
+    font-size: 0.9rem;
+    color: var(--text-primary);
 }
 
 .mode-buttons {

@@ -205,6 +205,14 @@ Recommendation, in line with "keep updatable CSV as the source":
 
 ## 5. MERGE C — fold hunger into its own top-level section
 
+> **Superseded 2026-09-10 — done the other way round.** Hunger went *into* the
+> war-crimes section instead of out of it: `hunger-crisis-stats.html` →
+> `/war-crimes/hunger-crisis/` (redirect stub at the old URL), the Hunger
+> Crisis header link was **removed** (not added) from `header-component.js`,
+> `build_records.py` `SITE_NAV` and `volunteer.html`, and the war-crimes hub's
+> hunger block stays as the entry point. See `tools/PIPELINE.md` → URL
+> structure. The plan below is kept for history only.
+
 - Move `hunger-crisis-stats.html` → `/hunger-crisis/index.html`
   (hand-authored, stays hand-authored). Redirect stub at the old URL.
 - Add the **Hunger Crisis** nav link (missing today).

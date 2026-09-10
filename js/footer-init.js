@@ -106,7 +106,7 @@ console.log('🔧 Universal Footer Initializer loading...');
             // Versioned like every other changed asset: the footer's nav links moved
             // with the stat pages, and a browser holding the previous copy would keep
             // serving the old ones. Bump on any edit to the partial.
-            const footerPartialPath = `${rootPath}partials/site-footer.html?v=6`;
+            const footerPartialPath = `${rootPath}partials/site-footer.html?v=7`;
 
             console.log(`🔍 Loading footer from: ${footerPartialPath}`);
 

@@ -16,7 +16,8 @@
  *   </script>
  *
  * Modes:
- *   'main'      — index.html nav: War Crimes | Hunger Crisis | History | Timeline | Join Us
+ *   'main'      — index.html nav: War Crimes | History | Timeline | Join Us
+ *                 (Hunger Crisis lives inside War Crimes at /war-crimes/hunger-crisis/.)
  *   'stat-page' — inner-page nav: ← Back to Main | Overview | Categories | Legal | Resources
  *                 Active tab is driven by data-view buttons (handled by the page's own JS).
  */
@@ -42,9 +43,9 @@
         const filename = window.location.pathname.split('/').pop() || 'index.html';
         // The war-crimes hub is a directory index, so there is no filename to
         // match - test the path instead. Kept ahead of the filename checks
-        // because every page under /war-crimes/ belongs to this section.
+        // because every page under /war-crimes/ belongs to this section -
+        // including /war-crimes/hunger-crisis/, which has no nav link of its own.
         if (/^\/war-crimes(\/|$)/.test(window.location.pathname)) return 'war-crimes';
-        if (filename === 'hunger-crisis-stats.html')           return 'hunger-crisis';
         if (/^\/historical-events\/ethnic-cleansing(\/|$)/.test(window.location.pathname)) return 'ethnic-cleansing';
         if (/\/historical-events\/massacres\/(index\.html)?$/.test(window.location.pathname)) return 'timeline';
         if (/^\/historical-events(\/|$)/.test(window.location.pathname)) return 'historical';
@@ -56,7 +57,6 @@
     /** Human-readable title shown in the sub-header for each page. */
     const PAGE_TITLES = {
         'war-crimes':        '⚖️ War Crimes Statistics',
-        'hunger-crisis':     '🍽️ Hunger Crisis Statistics',
         'historical':        '📜 Historical Events',
         'timeline':          '📋 Current Timeline',
         'ethnic-cleansing':  '🏘️ Ethnic Cleansing Documentation',
@@ -70,6 +70,9 @@
     const mode       = cfg.mode || 'main';           // 'main' | 'stat-page'
     const activePage = cfg.activePage || detectActivePage();
     const subNav     = cfg.subNav || null;           // 'timeline' | null
+    // Sub-header label. Defaults to the section's title; a page inside a
+    // section (e.g. /war-crimes/hunger-crisis/) can name itself instead.
+    const pageTitle  = cfg.title || PAGE_TITLES[activePage] || '';
 
     /* ── nav HTML builders ───────────────────────────────────── */
 
@@ -82,8 +85,6 @@
         return `
             <a href="${rootPath('war-crimes/')}"${activeIf('war-crimes')}
                data-i18n="common.nav.warCrimes">⚖️ War Crimes</a>
-            <a href="${rootPath('hunger-crisis-stats.html')}"${activeIf('hunger-crisis')}
-               data-i18n="common.nav.hungerCrisis">🍽️ Hunger Crisis</a>
             <a href="${rootPath('historical-events/')}"${activeIf('historical')}
                data-i18n="common.nav.historical">📜 History</a>
             <a href="${rootPath('historical-events/massacres/')}"${activeIf('timeline')}
@@ -111,7 +112,7 @@
 
     /** Sub-header bar rendered below the main header for the timeline page. */
     function timelineSubNavHTML() {
-        const title = PAGE_TITLES[activePage] || '';
+        const title = pageTitle;
         return `
 <div class="sub-header">
     <div class="container">
@@ -130,7 +131,7 @@
 
     /** Sub-header bar for stat pages (Overview / Categories / Legal / Resources / Hunger Data). */
     function statPageSubNavHTML() {
-        const title = PAGE_TITLES[activePage] || '';
+        const title = pageTitle;
         return `
 <div class="sub-header">
     <div class="container">

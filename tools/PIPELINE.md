@@ -45,7 +45,7 @@ written in.
 `data/`, the feeds and the sitemap are regenerated from the CSVs by the
 Action and must never be hand-edited — the next run overwrites them. The
 hand-authored surfaces are a fixed ~19-page set (the two hubs, the six
-war-crimes stat pages, hunger-crisis-stats, methodology, volunteer, 404, the
+war-crimes stat pages, war-crimes/hunger-crisis, methodology, volunteer, 404, the
 translation JSON) plus the redirect stubs.
 
 ---
@@ -499,22 +499,29 @@ is additive, no rework:
 /war-crimes/<section>/de/{tab}/               tabs per language
 ```
 
-Plus six hand-authored, API-driven pages sharing the same scheme (and one
-more hand-authored surface, `/hunger-crisis-stats.html`, reached from the
-nav's Hunger Crisis link):
+Plus six hand-authored, API-driven pages sharing the same scheme, and the
+hand-authored hunger dashboard above the last two:
 
 ```
 /war-crimes/civilian-casualties/     /war-crimes/journalists-killed/
 /war-crimes/children-killed/         /war-crimes/medical-personnel/
+/war-crimes/hunger-crisis/           hunger dashboard (was /hunger-crisis-stats.html)
 /war-crimes/total-starvation/        /war-crimes/children-starvation/
 ```
 
 Each keeps its own data at `<page>/data/`. The last two moved from
 `Pages/Hunger_Crisis/` on 2026-08-24; `children-starvation/data/` is shared
-by both pages (not split per-page) because both read from it. Their
-breadcrumb parent is overridden in `seo_inject.py`'s `BREADCRUMB_PARENT` to
-"Hunger Crisis Statistics" ahead of the generic `war-crimes/` entry — URL
-folder and topical parent aren't the same thing here.
+by both pages (not split per-page) because both read from it, and so does
+`/war-crimes/hunger-crisis/`.
+
+**Hunger is part of the war-crimes section, not a section of its own (since
+2026-09-10).** `/hunger-crisis-stats.html` moved to `/war-crimes/hunger-crisis/`
+and is a redirect stub; the header nav (`header-component.js` `mainNav()`,
+`build_records.py` `SITE_NAV`, `volunteer.html`) has no Hunger Crisis link —
+the page is reached from the war-crimes hub's hunger block and the footer's
+Hunger Crisis Stats column, and highlights *War Crimes* in the nav. Breadcrumbs
+nest: `seo_inject.py` `breadcrumb()` walks `BREADCRUMB_PARENT` upward, so the
+two starvation pages read Home › War Crimes › Hunger Crisis › page.
 
 And the historical half:
 
@@ -747,9 +754,9 @@ as bytes, remember the ending, restore it on write.
 must be written with the Write tool, not piped through a heredoc.
 
 **Cache-busting.** Changed JS/CSS gets `?v=N` bumped everywhere it is
-referenced. Currently: `footer-init.js?v=6`, `header-component.js?v=5`,
-`partials/site-footer.html?v=6` (was `common-styles.html`),
-`dual-timeline-manager.js?v=6`, `timeline.css?v=1`, `record-page.css?v=25`,
+referenced. Currently: `footer-init.js?v=7`, `header-component.js?v=6`,
+`partials/site-footer.html?v=7` (was `common-styles.html`),
+`dual-timeline-manager.js?v=6`, `timeline.css?v=2`, `record-page.css?v=25`,
 `record-page.js?v=5`. `transferSize: 0` in
 `performance.getEntriesByType('resource')` proves a stale cached asset.
 
