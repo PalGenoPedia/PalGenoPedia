@@ -4794,6 +4794,25 @@
    "primary": 2,
    "secondary": 0
   },
+  "thecradle.co": {
+   "count": 1,
+   "sample": "https://thecradle.co/articles/israel-bombs-palestinian-families-in-northern-gaza-school",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "urls": [
+    {
+     "u": "https://thecradle.co/articles/israel-bombs-palestinian-families-in-northern-gaza-school",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
+   "primary": 1,
+   "secondary": 0
+  },
   "theelders.org": {
    "count": 1,
    "sample": "https://www.theelders.org",

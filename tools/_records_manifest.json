@@ -1453,12 +1453,12 @@
       "indexable": false
     },
     {
-      "url": "https://palgenopedia.org/war-crimes/hospitals/de/gesundheitszentrum-maskat-al-qarara/",
-      "path": "/war-crimes/hospitals/de/gesundheitszentrum-maskat-al-qarara/",
+      "url": "https://palgenopedia.org/war-crimes/hospitals/de/al-qarara-gesundheitszentrum-in-maskat/",
+      "path": "/war-crimes/hospitals/de/al-qarara-gesundheitszentrum-in-maskat/",
       "lang": "de",
       "section": "hospitals",
       "id": "FAC-048",
-      "slug": "gesundheitszentrum-maskat-al-qarara",
+      "slug": "al-qarara-gesundheitszentrum-in-maskat",
       "incidents": 0,
       "indexable": false
     },
@@ -2499,8 +2499,8 @@
       "section": "schools",
       "id": "FAC-009",
       "slug": "an-nazla-elementary-school",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 1,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/schools/de/an-nazla-grundschule/",
@@ -2509,8 +2509,8 @@
       "section": "schools",
       "id": "FAC-009",
       "slug": "an-nazla-grundschule",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 1,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/schools/ar/%D9%85%D8%AF%D8%B1%D8%B3%D8%A9-%D8%A7%D9%84%D9%86%D8%A7%D8%B2%D9%84%D8%A7-%D8%A7%D9%84%D8%A7%D8%A8%D8%AA%D8%AF%D8%A7%D8%A6%D9%8A%D8%A9/",
@@ -2519,8 +2519,8 @@
       "section": "schools",
       "id": "FAC-009",
       "slug": "مدرسة-النازلا-الابتدائية",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 1,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/schools/al-sardi-school/",

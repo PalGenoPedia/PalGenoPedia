@@ -958,6 +958,25 @@
    "video": 0,
    "image": 1
   },
+  "pbs.twimg.com": {
+   "count": 1,
+   "sample": "https://pbs.twimg.com/media/GObfy7jWEAAUEzd?format=png&name=360x360",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "urls": [
+    {
+     "u": "https://pbs.twimg.com/media/GObfy7jWEAAUEzd?format=png&name=360x360",
+     "role": "image",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
+   "video": 0,
+   "image": 1
+  },
   "pchrgaza.org": {
    "count": 2,
    "sample": "https://pchrgaza.org/wp-content/uploads/2025/05/120525_JABALIA_OASH_0122-scaled.jpg",
@@ -1494,7 +1513,7 @@
    "image": 0
   },
   "youtube.com": {
-   "count": 23,
+   "count": 24,
    "sample": "https://www.youtube.com/watch?v=E4rltTvrt_c",
    "archived": 0,
    "pending": 0,
@@ -1669,6 +1688,14 @@
      "manual": false
     },
     {
+     "u": "https://www.youtube.com/watch?v=sHnYI6iqNl0",
+     "role": "video",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
      "u": "https://www.youtube.com/watch?v=yspylXsoDf8",
      "role": "video",
      "status": "new",
@@ -1685,7 +1712,7 @@
      "manual": false
     }
    ],
-   "video": 22,
+   "video": 23,
    "image": 1
   }
  }
