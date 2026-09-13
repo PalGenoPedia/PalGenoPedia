@@ -684,7 +684,7 @@
    "image": 1
   },
   "instagram.com": {
-   "count": 11,
+   "count": 13,
    "sample": "https://www.instagram.com/reels/DPRASOOkppd",
    "archived": 0,
    "pending": 0,
@@ -716,6 +716,14 @@
     },
     {
      "u": "https://www.instagram.com/reels/C1vQ1YcInsv",
+     "role": "video",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.instagram.com/reels/C5syQPmC0Va",
      "role": "video",
      "status": "new",
      "snap": "",
@@ -763,6 +771,14 @@
      "manual": false
     },
     {
+     "u": "https://www.instagram.com/p/DOTELwsAua3/?img_index=3",
+     "role": "image",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
      "u": "https://www.instagram.com/p/DOlb9jIjSFY",
      "role": "image",
      "status": "new",
@@ -779,8 +795,8 @@
      "manual": false
     }
    ],
-   "video": 7,
-   "image": 4
+   "video": 8,
+   "image": 5
   },
   "maktoobmedia.com": {
    "count": 1,
@@ -978,12 +994,20 @@
    "image": 1
   },
   "pchrgaza.org": {
-   "count": 2,
+   "count": 3,
    "sample": "https://pchrgaza.org/wp-content/uploads/2025/05/120525_JABALIA_OASH_0122-scaled.jpg",
    "archived": 0,
    "pending": 0,
    "deferred": 0,
    "urls": [
+    {
+     "u": "https://pchrgaza.org/wp-content/uploads/2025/01/140125_Dair_El-Balah_OSH_1_0014-scaled.jpg",
+     "role": "image",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
     {
      "u": "https://pchrgaza.org/wp-content/uploads/2025/05/120525_JABALIA_OASH_0122-scaled.jpg",
      "role": "image",
@@ -1002,7 +1026,7 @@
     }
    ],
    "video": 0,
-   "image": 2
+   "image": 3
   },
   "reuters.com": {
    "count": 1,
@@ -1198,6 +1222,25 @@
    ],
    "video": 2,
    "image": 0
+  },
+  "vaticannews.va": {
+   "count": 1,
+   "sample": "https://www.vaticannews.va/content/dam/vaticannews/agenzie/images/afp/2024/07/07/18/1720370881360.jpg/_jcr_content/renditions/cq5dam.thumbnail.cropped.750.422.jpeg",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.vaticannews.va/content/dam/vaticannews/agenzie/images/afp/2024/07/07/18/1720370881360.jpg/_jcr_content/renditions/cq5dam.thumbnail.cropped.750.422.jpeg",
+     "role": "image",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
+   "video": 0,
+   "image": 1
   },
   "web.facebook.com": {
    "count": 3,
@@ -1513,7 +1556,7 @@
    "image": 0
   },
   "youtube.com": {
-   "count": 24,
+   "count": 26,
    "sample": "https://www.youtube.com/watch?v=E4rltTvrt_c",
    "archived": 0,
    "pending": 0,
@@ -1553,6 +1596,14 @@
     },
     {
      "u": "https://www.youtube.com/shorts/w2jEf9LoR-0",
+     "role": "video",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.youtube.com/watch?v=0EgM2KbzvUI",
      "role": "video",
      "status": "new",
      "snap": "",
@@ -1656,6 +1707,14 @@
      "manual": false
     },
     {
+     "u": "https://www.youtube.com/watch?v=l9fIl1r0oRE",
+     "role": "video",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
      "u": "https://www.youtube.com/watch?v=ou8_UMrX4yk",
      "role": "video",
      "status": "new",
@@ -1712,7 +1771,7 @@
      "manual": false
     }
    ],
-   "video": 23,
+   "video": 25,
    "image": 1
   }
  }

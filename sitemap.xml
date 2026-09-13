@@ -2393,8 +2393,29 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://palgenopedia.org/war-crimes/religious-sites/de/scheich-zakariyya-moschee/</loc>
+    <loc>https://palgenopedia.org/war-crimes/religious-sites/sheikh-zakariyya-mosque/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/%D9%85%D8%B3%D8%AC%D8%AF-%D8%A7%D9%84%D8%B4%D9%8A%D8%AE-%D8%B2%D9%83%D8%B1%D9%8A%D8%A7/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/scheich-zakariyya-moschee/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/sheikh-zakariyya-mosque/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/sheikh-zakariyya-mosque/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://palgenopedia.org/war-crimes/religious-sites/de/scheich-zakariyya-moschee/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/%D9%85%D8%B3%D8%AC%D8%AF-%D8%A7%D9%84%D8%B4%D9%8A%D8%AE-%D8%B2%D9%83%D8%B1%D9%8A%D8%A7/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/scheich-zakariyya-moschee/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/sheikh-zakariyya-mosque/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/sheikh-zakariyya-mosque/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://palgenopedia.org/war-crimes/religious-sites/ar/%D9%85%D8%B3%D8%AC%D8%AF-%D8%A7%D9%84%D8%B4%D9%8A%D8%AE-%D8%B2%D9%83%D8%B1%D9%8A%D8%A7/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/%D9%85%D8%B3%D8%AC%D8%AF-%D8%A7%D9%84%D8%B4%D9%8A%D8%AE-%D8%B2%D9%83%D8%B1%D9%8A%D8%A7/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/scheich-zakariyya-moschee/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/sheikh-zakariyya-mosque/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/sheikh-zakariyya-mosque/"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2945,6 +2966,33 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://palgenopedia.org/war-crimes/schools/holy-family-school/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/%D9%85%D8%AF%D8%B1%D8%B3%D8%A9-%D8%A7%D9%84%D8%B9%D8%A7%D8%A6%D9%84%D8%A9-%D8%A7%D9%84%D9%85%D9%82%D8%AF%D8%B3%D8%A9/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/holy-family-schule/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/holy-family-school/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/schools/holy-family-school/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://palgenopedia.org/war-crimes/schools/de/holy-family-schule/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/%D9%85%D8%AF%D8%B1%D8%B3%D8%A9-%D8%A7%D9%84%D8%B9%D8%A7%D8%A6%D9%84%D8%A9-%D8%A7%D9%84%D9%85%D9%82%D8%AF%D8%B3%D8%A9/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/holy-family-schule/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/holy-family-school/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/schools/holy-family-school/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://palgenopedia.org/war-crimes/schools/ar/%D9%85%D8%AF%D8%B1%D8%B3%D8%A9-%D8%A7%D9%84%D8%B9%D8%A7%D8%A6%D9%84%D8%A9-%D8%A7%D9%84%D9%85%D9%82%D8%AF%D8%B3%D8%A9/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/%D9%85%D8%AF%D8%B1%D8%B3%D8%A9-%D8%A7%D9%84%D8%B9%D8%A7%D8%A6%D9%84%D8%A9-%D8%A7%D9%84%D9%85%D9%82%D8%AF%D8%B3%D8%A9/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/holy-family-schule/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/holy-family-school/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/schools/holy-family-school/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://palgenopedia.org/war-crimes/schools/shadia-abu-ghazala-school/</loc>
     <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/%D9%85%D8%AF%D8%B1%D8%B3%D8%A9-%D8%B4%D8%A7%D8%AF%D9%8A%D8%A9-%D8%A3%D8%A8%D9%88-%D8%BA%D8%B2%D8%A7%D9%84%D8%A9/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/shadia-abu-ghazala-schule/"/>
@@ -2995,6 +3043,33 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/fahmi-al-jarjawi-schule/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/fahmi-al-jarjawi-school/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/schools/fahmi-al-jarjawi-school/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://palgenopedia.org/war-crimes/schools/al-farabi-school/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/%D9%85%D8%AF%D8%B1%D8%B3%D8%A9-%D8%A7%D9%84%D9%81%D8%A7%D8%B1%D8%A7%D8%A8%D9%8A/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/al-farabi-schule/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/al-farabi-school/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/schools/al-farabi-school/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://palgenopedia.org/war-crimes/schools/de/al-farabi-schule/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/%D9%85%D8%AF%D8%B1%D8%B3%D8%A9-%D8%A7%D9%84%D9%81%D8%A7%D8%B1%D8%A7%D8%A8%D9%8A/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/al-farabi-schule/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/al-farabi-school/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/schools/al-farabi-school/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://palgenopedia.org/war-crimes/schools/ar/%D9%85%D8%AF%D8%B1%D8%B3%D8%A9-%D8%A7%D9%84%D9%81%D8%A7%D8%B1%D8%A7%D8%A8%D9%8A/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/schools/ar/%D9%85%D8%AF%D8%B1%D8%B3%D8%A9-%D8%A7%D9%84%D9%81%D8%A7%D8%B1%D8%A7%D8%A8%D9%8A/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/schools/de/al-farabi-schule/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/schools/al-farabi-school/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/schools/al-farabi-school/"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

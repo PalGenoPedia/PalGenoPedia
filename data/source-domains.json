@@ -37,7 +37,7 @@
    "secondary": 3
   },
   "aa.com.tr": {
-   "count": 13,
+   "count": 14,
    "sample": "https://www.aa.com.tr/en/middle-east/palestine-27-years-since-ibrahimi-mosque-massacre/2156877",
    "archived": 0,
    "pending": 0,
@@ -69,6 +69,14 @@
     },
     {
      "u": "https://www.aa.com.tr/en/middle-east/israeli-artillery-targets-nasser-medical-complex-gaza-health-ministry/3086410",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.aa.com.tr/en/middle-east/israeli-strikes-kill-43-palestinians-mostly-displaced-persons-children-across-war-battered-gaza/3680421",
      "role": "primary",
      "status": "new",
      "snap": "",
@@ -148,7 +156,7 @@
      "manual": false
     }
    ],
-   "primary": 6,
+   "primary": 7,
    "secondary": 7
   },
   "abcnews.com": {
@@ -1031,6 +1039,25 @@
    "primary": 1,
    "secondary": 0
   },
+  "caritas.org": {
+   "count": 1,
+   "sample": "https://www.caritas.org/gaza/emergency/raids-against-the-holy-family-school-at-al-remal-in-gaza",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.caritas.org/gaza/emergency/raids-against-the-holy-family-school-at-al-remal-in-gaza",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
+   "primary": 1,
+   "secondary": 0
+  },
   "cbc.ca": {
    "count": 3,
    "sample": "https://www.cbc.ca/news/world/al-ahli-hospital-strike-gaza-1.6999842",
@@ -1475,6 +1502,44 @@
      "role": "secondary",
      "status": "archived",
      "snap": "https://web.archive.org/web/20250617055259/https://english.alarabiya.net/News/middle-east/2023/10/11/Israel-strikes-Islamic-University-in-Gaza",
+     "method": "",
+     "manual": false
+    }
+   ],
+   "primary": 0,
+   "secondary": 1
+  },
+  "english.almayadeen.net": {
+   "count": 1,
+   "sample": "https://english.almayadeen.net/latestnews/2024/5/20/al-mayadeen-s-correspondent--israeli-raid-on-sheikh-zakaria",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "urls": [
+    {
+     "u": "https://english.almayadeen.net/latestnews/2024/5/20/al-mayadeen-s-correspondent--israeli-raid-on-sheikh-zakaria",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
+   "primary": 0,
+   "secondary": 1
+  },
+  "english.palinfo.com": {
+   "count": 1,
+   "sample": "https://english.palinfo.com/news/2025/09/07/347281",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "urls": [
+    {
+     "u": "https://english.palinfo.com/news/2025/09/07/347281",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
      "method": "",
      "manual": false
     }
@@ -1940,6 +2005,25 @@
    ],
    "primary": 1,
    "secondary": 1
+  },
+  "gigaza.org": {
+   "count": 1,
+   "sample": "https://gigaza.org/en/war-damage/sheikh-zakaria-mosque-gaza",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "urls": [
+    {
+     "u": "https://gigaza.org/en/war-damage/sheikh-zakaria-mosque-gaza",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
+   "primary": 1,
+   "secondary": 0
   },
   "gov.il": {
    "count": 1,
@@ -4390,7 +4474,7 @@
    "secondary": 0
   },
   "pchrgaza.org": {
-   "count": 3,
+   "count": 4,
    "sample": "https://www.pchrgaza.org",
    "archived": 0,
    "pending": 0,
@@ -4398,6 +4482,14 @@
    "urls": [
     {
      "u": "https://pchrgaza.org/al-awda-hospital-bombed-israeli-occupation-forces-bomb-last-functioning-hospital-in-northern-gaza-denying-hundreds-of-thousands-access-to-healthcare/",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://pchrgaza.org/israeli-occupation-forces-persist-in-genocide-by-bombing-houses-and-shelters-over-its-residents",
      "role": "primary",
      "status": "new",
      "snap": "",
@@ -4421,7 +4513,7 @@
      "manual": false
     }
    ],
-   "primary": 3,
+   "primary": 4,
    "secondary": 0
   },
   "peacenow.org.il": {
@@ -5834,6 +5926,25 @@
    "urls": [
     {
      "u": "https://uspg.org.uk/news/palm-sunday-gaza-statement",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
+   "primary": 0,
+   "secondary": 1
+  },
+  "vaticannews.va": {
+   "count": 1,
+   "sample": "https://www.vaticannews.va/en/church/news/2024-07/patriarchate-jerusalem-decries-raid-on-catholic-school-in-gaza.html",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.vaticannews.va/en/church/news/2024-07/patriarchate-jerusalem-decries-raid-on-catholic-school-in-gaza.html",
      "role": "secondary",
      "status": "new",
      "snap": "",

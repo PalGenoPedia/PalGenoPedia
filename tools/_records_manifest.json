@@ -2679,8 +2679,8 @@
       "section": "schools",
       "id": "FAC-015",
       "slug": "holy-family-school",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 1,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/schools/de/holy-family-schule/",
@@ -2689,8 +2689,8 @@
       "section": "schools",
       "id": "FAC-015",
       "slug": "holy-family-schule",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 1,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/schools/ar/%D9%85%D8%AF%D8%B1%D8%B3%D8%A9-%D8%A7%D9%84%D8%B9%D8%A7%D8%A6%D9%84%D8%A9-%D8%A7%D9%84%D9%85%D9%82%D8%AF%D8%B3%D8%A9/",
@@ -2699,8 +2699,8 @@
       "section": "schools",
       "id": "FAC-015",
       "slug": "مدرسة-العائلة-المقدسة",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 1,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/schools/shadia-abu-ghazala-school/",
@@ -2769,8 +2769,8 @@
       "section": "schools",
       "id": "FAC-018",
       "slug": "al-farabi-school",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 2,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/schools/de/al-farabi-schule/",
@@ -2779,8 +2779,8 @@
       "section": "schools",
       "id": "FAC-018",
       "slug": "al-farabi-schule",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 2,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/schools/ar/%D9%85%D8%AF%D8%B1%D8%B3%D8%A9-%D8%A7%D9%84%D9%81%D8%A7%D8%B1%D8%A7%D8%A8%D9%8A/",
@@ -2789,8 +2789,8 @@
       "section": "schools",
       "id": "FAC-018",
       "slug": "مدرسة-الفارابي",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 2,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/schools/ibn-rushd-school/",
@@ -3684,8 +3684,8 @@
       "section": "religious-sites",
       "id": "FAC-016",
       "slug": "sheikh-zakariyya-mosque",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 1,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/religious-sites/de/scheich-zakariyya-moschee/",
@@ -3694,7 +3694,7 @@
       "section": "religious-sites",
       "id": "FAC-016",
       "slug": "scheich-zakariyya-moschee",
-      "incidents": 0,
+      "incidents": 1,
       "indexable": true
     },
     {
@@ -3704,8 +3704,8 @@
       "section": "religious-sites",
       "id": "FAC-016",
       "slug": "مسجد-الشيخ-زكريا",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 1,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/religious-sites/al-shamah-mosque/",
