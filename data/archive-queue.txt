@@ -42,6 +42,8 @@ https://en.wikipedia.org/wiki/Moshe_Dayan
 https://en.wikipedia.org/wiki/Six-Day_War
 https://en.wikipedia.org/wiki/Timeline_of_the_Gaza_Strip_healthcare_collapse
 https://english.alarabiya.net/News/middle-east/2023/10/11/Israel-strikes-Islamic-University-in-Gaza
+https://english.almayadeen.net/latestnews/2024/5/20/al-mayadeen-s-correspondent--israeli-raid-on-sheikh-zakaria
+https://english.palinfo.com/news/2025/09/07/347281
 https://english.wafa.ps/Pages/Details/128189
 https://english.wafa.ps/Pages/Details/133561
 https://english.wafa.ps/Pages/Details/140358
@@ -52,6 +54,7 @@ https://english.wafa.ps/Pages/Details/141767
 https://english.wafa.ps/Pages/Details/142688
 https://english.wafa.ps/Pages/Details/157256
 https://english.wafa.ps/Pages/Details/160970
+https://english.wafa.ps/Pages/Details/172775
 https://episcopalnewsservice.org/2025/08/18/al-ahli-hospital-in-gaza-city-suffers-damage-from-fire-set-by-outlaws-attack-by-idf-drone
 https://forensic-architecture.org/investigation/israeli-disinformation-al-ahli-hospital
 https://gazaeducationsector.palestine-studies.org/en/node/3518
@@ -63,6 +66,7 @@ https://gazahcsector.palestine-studies.org/en/node/76
 https://gazahcsector.palestine-studies.org/en/node/77
 https://genocide.live/14500
 https://genocide.live/uploads/debunk-idf-claims-about-terror-tunnel-in-sheikh-hamad-hospital-1
+https://gigaza.org/en/war-damage/sheikh-zakaria-mosque-gaza
 https://history.state.gov
 https://history.state.gov/historicaldocuments/frus1952-54v09p1/d689
 https://imemc.org/article/israel-detonates-last-university-in-gaza
@@ -83,6 +87,7 @@ https://news.un.org/en/story/2024/05/1150016
 https://news.un.org/en/story/2025/04/1162191
 https://ochaopt.org
 https://pchrgaza.org/al-awda-hospital-bombed-israeli-occupation-forces-bomb-last-functioning-hospital-in-northern-gaza-denying-hundreds-of-thousands-access-to-healthcare/
+https://pchrgaza.org/israeli-occupation-forces-persist-in-genocide-by-bombing-houses-and-shelters-over-its-residents
 https://pchrgaza.org/ongoing-genocide-in-gaza-israeli-occupation-forces-target-displaced-peoples-tents-and-shelters-and-exterminate-entire-families
 https://peacenow.org.il
 https://pjs.ps/ar/page-3325.html
@@ -100,6 +105,7 @@ https://t.me/MOHMediaGaza/4978
 https://t.me/MOHMediaGaza/5015
 https://t.me/MOHMediaGaza/5054
 https://t.me/QudsN/406731
+https://thecradle.co/articles/israel-bombs-palestinian-families-in-northern-gaza-school
 https://threadreaderapp.com/thread/1793700811870290179.html
 https://unpacked.media/unpacking-the-gaza-hospital-blast-and-the-misinformation-that-followed
 https://uspg.org.uk/news/palm-sunday-gaza-statement
@@ -120,6 +126,7 @@ https://www.aa.com.tr/en/middle-east/israeli-army-admits-to-targeting-buraq-scho
 https://www.aa.com.tr/en/middle-east/israeli-army-destroys-2-buildings-of-al-aqsa-university-in-gaza-city/3129434
 https://www.aa.com.tr/en/middle-east/israeli-artillery-targets-nasser-medical-complex-gaza-health-ministry/3086410
 https://www.aa.com.tr/en/middle-east/israeli-attacks-force-gaza-city-s-only-eye-hospital-children-s-facility-out-of-service/3694853
+https://www.aa.com.tr/en/middle-east/israeli-strikes-kill-43-palestinians-mostly-displaced-persons-children-across-war-battered-gaza/3680421
 https://www.aa.com.tr/en/middle-east/israeli-warplanes-target-hospital-in-central-gaza/3674854
 https://www.aa.com.tr/en/middle-east/palestine-27-years-since-ibrahimi-mosque-massacre/2156877
 https://www.aa.com.tr/en/middle-east/scores-of-palestinians-dead-wounded-from-israeli-bombing-of-gaza-school-sheltering-displaced-people/3056793
@@ -181,6 +188,7 @@ https://www.btselem.org/statistics
 https://www.btselem.org/statistics/fatalities/after-cast-lead/by-date-of-event
 https://www.btselem.org/statistics/first_intifada_tables
 https://www.cambridge.org/core/books/birth-of-the-palestinian-refugee-problem-revisited/4A0958EED322D2FAC1D245128A1D44CB
+https://www.caritas.org/gaza/emergency/raids-against-the-holy-family-school-at-al-remal-in-gaza
 https://www.cbc.ca/news/world/al-ahli-hospital-strike-gaza-1.6999842
 https://www.cbc.ca/news/world/gaza-al-ahli-hospital-patients-evacuated-israeli-strike-1.7510471
 https://www.cbc.ca/news/world/gaza-al-ahli-hospital-patients-evacuated-israeli-strike-1.7510471-katz
@@ -255,6 +263,7 @@ https://www.mfa.gov.il/mfa/foreignpolicy/mfadocuments/yearbook6/pages/104%20repo
 https://www.mfa.gov.tr/no_-296_-israil-in-gazze-deki-al-fakhoora-okuluna-yonelik-saldirisi-hk.en.mfa
 https://www.michiganpublic.org/2023-10-18/heres-the-available-evidence-of-what-happened-at-al-ahli-arab-hospital-in-gaza
 https://www.middleeasteye.net/explainer-gaza-israel-palestine-war-university-destroy
+https://www.middleeasteye.net/live-blog/live-blog-update/israel-kills-two-strike-gaza-hospital-one-killed-targeting-electric-bike
 https://www.middleeasteye.net/live-update/israeli-strike-al-buraq-school-kills-20-says-health-ministry
 https://www.middleeasteye.net/news/israel-strike-central-gaza-girls-school-kills-palestinians
 https://www.middleeasteye.net/news/israeli-strikes-ahli-baptist-hospital-gaza-city-kills-journalists
@@ -541,6 +550,7 @@ https://www.unrwa.org/resources/reports/unrwa-situation-report-72-situation-gaza
 https://www.unrwa.org/resources/reports/unrwa-situation-report-77-situation-gaza-strip-and-west-bank-including-east-Jerusalem
 https://www.unrwa.org/resources/reports/unrwa-situation-report-79-situation-gaza-strip-and-west-bank-including-east-Jerusalem
 https://www.unrwa.org/resources/reports/unrwa-situation-report-86-situation-gaza-strip-and-west-bank-including-east-Jerusalem
+https://www.vaticannews.va/en/church/news/2024-07/patriarchate-jerusalem-decries-raid-on-catholic-school-in-gaza.html
 https://www.visionscarto.net/Libraries-Al-Quds-Open-University
 https://www.visionscarto.net/nehru-library-english
 https://www.wafa.ps/Pages/Details/90325

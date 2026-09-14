@@ -263,7 +263,15 @@
   "checked": "2026-08-29",
   "wayback": "https://web.archive.org/web/20250617055259/https://english.alarabiya.net/News/middle-east/2023/10/11/Israel-strikes-Islamic-University-in-Gaza"
  },
+ "https://english.almayadeen.net/latestnews/2024/5/20/al-mayadeen-s-correspondent--israeli-raid-on-sheikh-zakaria": {
+  "status": "new",
+  "social": false
+ },
  "https://english.palinfo.com/news/2025/04/23/337937": {
+  "status": "new",
+  "social": false
+ },
+ "https://english.palinfo.com/news/2025/09/07/347281": {
   "status": "new",
   "social": false
  },
@@ -329,6 +337,10 @@
   "social": false,
   "requested": "2026-08-29"
  },
+ "https://english.wafa.ps/Pages/Details/172775": {
+  "status": "new",
+  "social": false
+ },
  "https://english.wafa.ps/image/NewsThumbImg/Default/a7c73a7b-1d14-4aa3-85b1-280f89bf284a.jpeg": {
   "status": "new",
   "social": false
@@ -393,6 +405,10 @@
   "status": "new",
   "social": false
  },
+ "https://gigaza.org/en/war-damage/sheikh-zakaria-mosque-gaza": {
+  "status": "new",
+  "social": false
+ },
  "https://history.state.gov": {
   "status": "new",
   "social": false
@@ -402,6 +418,10 @@
   "social": false
  },
  "https://i.guim.co.uk/img/media/00764394cb9b7bd106c5101ef5da1d81eae8db55/0_0_1800_1080/master/1800.jpg?width=1900&dpr=1&s=none&crop=none": {
+  "status": "new",
+  "social": false
+ },
+ "https://i.guim.co.uk/img/media/2199567ae0910bbaa5efee299ab5d28227a13ad5/0_255_6720_4032/master/6720.jpg?width=620&dpr=1&s=none&crop=none": {
   "status": "new",
   "social": false
  },
@@ -517,11 +537,23 @@
   "status": "new",
   "social": false
  },
+ "https://pbs.twimg.com/media/GObfy7jWEAAUEzd?format=png&name=360x360": {
+  "status": "new",
+  "social": false
+ },
  "https://pchrgaza.org/al-awda-hospital-bombed-israeli-occupation-forces-bomb-last-functioning-hospital-in-northern-gaza-denying-hundreds-of-thousands-access-to-healthcare/": {
   "status": "new",
   "social": false
  },
+ "https://pchrgaza.org/israeli-occupation-forces-persist-in-genocide-by-bombing-houses-and-shelters-over-its-residents": {
+  "status": "new",
+  "social": false
+ },
  "https://pchrgaza.org/ongoing-genocide-in-gaza-israeli-occupation-forces-target-displaced-peoples-tents-and-shelters-and-exterminate-entire-families": {
+  "status": "new",
+  "social": false
+ },
+ "https://pchrgaza.org/wp-content/uploads/2025/01/140125_Dair_El-Balah_OSH_1_0014-scaled.jpg": {
   "status": "new",
   "social": false
  },
@@ -602,6 +634,10 @@
   "social": false
  },
  "https://t.me/QudsN/406731": {
+  "status": "new",
+  "social": false
+ },
+ "https://thecradle.co/articles/israel-bombs-palestinian-families-in-northern-gaza-school": {
   "status": "new",
   "social": false
  },
@@ -706,6 +742,10 @@
   "social": false
  },
  "https://www.aa.com.tr/en/middle-east/israeli-attacks-force-gaza-city-s-only-eye-hospital-children-s-facility-out-of-service/3694853": {
+  "status": "new",
+  "social": false
+ },
+ "https://www.aa.com.tr/en/middle-east/israeli-strikes-kill-43-palestinians-mostly-displaced-persons-children-across-war-battered-gaza/3680421": {
   "status": "new",
   "social": false
  },
@@ -978,6 +1018,10 @@
   "social": false
  },
  "https://www.cambridge.org/core/books/birth-of-the-palestinian-refugee-problem-revisited/4A0958EED322D2FAC1D245128A1D44CB": {
+  "status": "new",
+  "social": false
+ },
+ "https://www.caritas.org/gaza/emergency/raids-against-the-holy-family-school-at-al-remal-in-gaza": {
   "status": "new",
   "social": false
  },
@@ -1333,6 +1377,10 @@
   "status": "new",
   "social": true
  },
+ "https://www.instagram.com/p/DOTELwsAua3/?img_index=3": {
+  "status": "new",
+  "social": true
+ },
  "https://www.instagram.com/p/DOlb9jIjSFY": {
   "status": "new",
   "social": true
@@ -1345,11 +1393,19 @@
   "status": "new",
   "social": true
  },
+ "https://www.instagram.com/reels/C5syQPmC0Va": {
+  "status": "new",
+  "social": true
+ },
  "https://www.instagram.com/reels/DLZwVr8qT31": {
   "status": "new",
   "social": true
  },
  "https://www.instagram.com/reels/DPRASOOkppd": {
+  "status": "new",
+  "social": true
+ },
+ "https://www.instagram.com/reels/DbBfGoSMRa4": {
   "status": "new",
   "social": true
  },
@@ -1401,6 +1457,10 @@
   "status": "new",
   "social": false
  },
+ "https://www.middleeasteye.net/live-blog/live-blog-update/israel-kills-two-strike-gaza-hospital-one-killed-targeting-electric-bike": {
+  "status": "new",
+  "social": false
+ },
  "https://www.middleeasteye.net/live-update/israeli-strike-al-buraq-school-kills-20-says-health-ministry": {
   "status": "new",
   "social": false
@@ -1418,6 +1478,10 @@
   "social": false
  },
  "https://www.middleeasteye.net/news/war-gaza-israel-killing-academics-educide-campaigners-say": {
+  "status": "new",
+  "social": false
+ },
+ "https://www.middleeasteye.net/sites/default/files/000_C2MJ6MP.jpg": {
   "status": "new",
   "social": false
  },
@@ -2573,6 +2637,14 @@
   "status": "new",
   "social": false
  },
+ "https://www.vaticannews.va/content/dam/vaticannews/agenzie/images/afp/2024/07/07/18/1720370881360.jpg/_jcr_content/renditions/cq5dam.thumbnail.cropped.750.422.jpeg": {
+  "status": "new",
+  "social": false
+ },
+ "https://www.vaticannews.va/en/church/news/2024-07/patriarchate-jerusalem-decries-raid-on-catholic-school-in-gaza.html": {
+  "status": "new",
+  "social": false
+ },
  "https://www.visionscarto.net/Libraries-Al-Quds-Open-University": {
   "status": "new",
   "social": false
@@ -2641,6 +2713,10 @@
   "status": "new",
   "social": false
  },
+ "https://www.youtube.com/watch?v=0EgM2KbzvUI": {
+  "status": "new",
+  "social": false
+ },
  "https://www.youtube.com/watch?v=BEwbCRtSem8": {
   "status": "new",
   "social": false
@@ -2693,6 +2769,10 @@
   "status": "new",
   "social": false
  },
+ "https://www.youtube.com/watch?v=l9fIl1r0oRE": {
+  "status": "new",
+  "social": false
+ },
  "https://www.youtube.com/watch?v=ou8_UMrX4yk": {
   "status": "new",
   "social": false
@@ -2706,6 +2786,10 @@
   "social": false
  },
  "https://www.youtube.com/watch?v=sGTpzP2Ozeo": {
+  "status": "new",
+  "social": false
+ },
+ "https://www.youtube.com/watch?v=sHnYI6iqNl0": {
   "status": "new",
   "social": false
  },
