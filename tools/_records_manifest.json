@@ -219,7 +219,7 @@
       "section": "hospitals",
       "id": "FAC-007",
       "slug": "indonesian-hospital",
-      "incidents": 22,
+      "incidents": 23,
       "indexable": true
     },
     {
@@ -229,7 +229,7 @@
       "section": "hospitals",
       "id": "FAC-007",
       "slug": "indonesisches-krankenhaus",
-      "incidents": 22,
+      "incidents": 23,
       "indexable": true
     },
     {
@@ -239,7 +239,7 @@
       "section": "hospitals",
       "id": "FAC-007",
       "slug": "مستشفى-إندونيسي",
-      "incidents": 22,
+      "incidents": 23,
       "indexable": true
     },
     {
@@ -1119,7 +1119,7 @@
       "section": "hospitals",
       "id": "FAC-037",
       "slug": "international-medical-corps-field-hospital",
-      "incidents": 1,
+      "incidents": 2,
       "indexable": true
     },
     {
@@ -1129,7 +1129,7 @@
       "section": "hospitals",
       "id": "FAC-037",
       "slug": "feldlazarett-des-international-medical-corps",
-      "incidents": 1,
+      "incidents": 2,
       "indexable": true
     },
     {
@@ -1139,7 +1139,7 @@
       "section": "hospitals",
       "id": "FAC-037",
       "slug": "مستشفى-ميداني-تابع-للهيئة-الطبية-الدولية",
-      "incidents": 1,
+      "incidents": 2,
       "indexable": true
     },
     {

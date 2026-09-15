@@ -2134,7 +2134,7 @@
    "secondary": 0
   },
   "hrw.org": {
-   "count": 11,
+   "count": 12,
    "sample": "https://www.hrw.org",
    "archived": 0,
    "pending": 0,
@@ -2221,6 +2221,14 @@
      "manual": false
     },
     {
+     "u": "https://www.hrw.org/news/2023/11/14/gaza-unlawful-israeli-hospital-strikes-worsen-health-crisis",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
      "u": "https://www.hrw.org/news/2023/11/26/gaza-findings-october-17-al-ahli-hospital-explosion",
      "role": "secondary",
      "status": "new",
@@ -2230,7 +2238,7 @@
     }
    ],
    "primary": 10,
-   "secondary": 1
+   "secondary": 2
   },
   "i24news.tv": {
    "count": 1,
@@ -5245,12 +5253,20 @@
    "secondary": 1
   },
   "unocha.org": {
-   "count": 24,
+   "count": 25,
    "sample": "https://www.unocha.org/publications/report/occupied-palestinian-territory/humanitarian-situation-update-302-gaza-strip-enarhe",
    "archived": 0,
    "pending": 0,
    "deferred": 0,
    "urls": [
+    {
+     "u": "https://www.unocha.org/publications/report/occupied-palestinian-territory/escalation-gaza-strip-and-israel-flash-update-1-1800-7-october-2023",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
     {
      "u": "https://www.unocha.org/publications/report/occupied-palestinian-territory/hostilities-gaza-strip-and-israel-flash-update-168",
      "role": "primary",
@@ -5444,7 +5460,7 @@
      "manual": false
     }
    ],
-   "primary": 19,
+   "primary": 20,
    "secondary": 5
   },
   "unpacked.media": {
