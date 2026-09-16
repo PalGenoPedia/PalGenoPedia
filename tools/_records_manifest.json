@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-15",
+  "generated": "2026-09-16",
   "count": 405,
   "pages": [
     {
@@ -279,7 +279,7 @@
       "section": "hospitals",
       "id": "FAC-009",
       "slug": "al-ahli-arab-hospital",
-      "incidents": 11,
+      "incidents": 12,
       "indexable": true
     },
     {
@@ -289,7 +289,7 @@
       "section": "hospitals",
       "id": "FAC-009",
       "slug": "al-ahli-arabisches-krankenhaus",
-      "incidents": 11,
+      "incidents": 12,
       "indexable": true
     },
     {
@@ -299,7 +299,7 @@
       "section": "hospitals",
       "id": "FAC-009",
       "slug": "مستشفى-الأهلي-العربي",
-      "incidents": 11,
+      "incidents": 12,
       "indexable": true
     },
     {
@@ -1453,12 +1453,12 @@
       "indexable": false
     },
     {
-      "url": "https://palgenopedia.org/war-crimes/hospitals/de/al-qarara-gesundheitszentrum-in-maskat/",
-      "path": "/war-crimes/hospitals/de/al-qarara-gesundheitszentrum-in-maskat/",
+      "url": "https://palgenopedia.org/war-crimes/hospitals/de/gesundheitszentrum-maskat-al-qarara/",
+      "path": "/war-crimes/hospitals/de/gesundheitszentrum-maskat-al-qarara/",
       "lang": "de",
       "section": "hospitals",
       "id": "FAC-048",
-      "slug": "al-qarara-gesundheitszentrum-in-maskat",
+      "slug": "gesundheitszentrum-maskat-al-qarara",
       "incidents": 0,
       "indexable": false
     },
