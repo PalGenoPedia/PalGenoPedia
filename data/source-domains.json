@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-17",
+ "generated": "2026-09-18",
  "domains": {
   "972mag.com": {
    "count": 3,
@@ -1945,12 +1945,20 @@
    "secondary": 1
   },
   "gazahcsector.palestine-studies.org": {
-   "count": 3,
+   "count": 4,
    "sample": "https://gazahcsector.palestine-studies.org/en/node/77",
    "archived": 0,
    "pending": 0,
    "deferred": 0,
    "urls": [
+    {
+     "u": "https://gazahcsector.palestine-studies.org/en/node/20",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
     {
      "u": "https://gazahcsector.palestine-studies.org/en/node/76",
      "role": "primary",
@@ -1976,7 +1984,7 @@
      "manual": false
     }
    ],
-   "primary": 1,
+   "primary": 2,
    "secondary": 2
   },
   "genocide.live": {
@@ -2007,8 +2015,8 @@
    "secondary": 1
   },
   "gigaza.org": {
-   "count": 1,
-   "sample": "https://gigaza.org/en/war-damage/sheikh-zakaria-mosque-gaza",
+   "count": 2,
+   "sample": "https://gigaza.org/en/war-damage/al-quds-hospital-palestinian-red-crescent-society",
    "archived": 0,
    "pending": 0,
    "deferred": 0,
@@ -2020,10 +2028,18 @@
      "snap": "",
      "method": "",
      "manual": false
+    },
+    {
+     "u": "https://gigaza.org/en/war-damage/al-quds-hospital-palestinian-red-crescent-society",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
     }
    ],
    "primary": 1,
-   "secondary": 0
+   "secondary": 1
   },
   "gov.il": {
    "count": 1,
@@ -4647,12 +4663,28 @@
    "secondary": 0
   },
   "reliefweb.int": {
-   "count": 4,
+   "count": 6,
    "sample": "https://reliefweb.int/report/occupied-palestinian-territory/palestine-red-crescent-society-calls-international-community-provide-protection-its-headquarters-and-medical-and-ems-teams-khan-yunis-enar?_gl=1*gdoink*_ga*NTAxNTI1MzAwLjE3NzM3Njg1NDA.*_ga_E60ZNX2F68*czE3NzUwNjU5MzckbzckZzEkdDE3NzUwNjkyNDUkajYwJGwwJGgw",
    "archived": 0,
    "pending": 0,
    "deferred": 0,
    "urls": [
+    {
+     "u": "https://reliefweb.int/report/occupied-palestinian-territory/prcs-statement-al-quds-hospital-evacuation-order-enar",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://reliefweb.int/attachments/d08cf43b-7d4c-4004-bb74-a30fbed01a51/EN-Al%20Quds%20Hospital%20Evacuation%20Order.pdf",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
     {
      "u": "https://reliefweb.int/report/occupied-palestinian-territory/humanitarian-response-report-no-32024-february-17-21-2024-2400-enar",
      "role": "secondary",
@@ -4686,8 +4718,8 @@
      "manual": false
     }
    ],
-   "primary": 0,
-   "secondary": 4
+   "primary": 1,
+   "secondary": 5
   },
   "remix.aljazeera.com": {
    "count": 1,

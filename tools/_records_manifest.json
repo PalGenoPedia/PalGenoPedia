@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-17",
+  "generated": "2026-09-18",
   "count": 405,
   "pages": [
     {
@@ -279,7 +279,7 @@
       "section": "hospitals",
       "id": "FAC-009",
       "slug": "al-ahli-arab-hospital",
-      "incidents": 12,
+      "incidents": 11,
       "indexable": true
     },
     {
@@ -289,7 +289,7 @@
       "section": "hospitals",
       "id": "FAC-009",
       "slug": "al-ahli-arabisches-krankenhaus",
-      "incidents": 12,
+      "incidents": 11,
       "indexable": true
     },
     {
@@ -299,7 +299,7 @@
       "section": "hospitals",
       "id": "FAC-009",
       "slug": "مستشفى-الأهلي-العربي",
-      "incidents": 12,
+      "incidents": 11,
       "indexable": true
     },
     {
@@ -699,7 +699,7 @@
       "section": "hospitals",
       "id": "FAC-023",
       "slug": "al-helou-international-hospital",
-      "incidents": 2,
+      "incidents": 3,
       "indexable": true
     },
     {
@@ -709,7 +709,7 @@
       "section": "hospitals",
       "id": "FAC-023",
       "slug": "internationales-krankenhaus-al-helou",
-      "incidents": 2,
+      "incidents": 3,
       "indexable": true
     },
     {
@@ -719,7 +719,7 @@
       "section": "hospitals",
       "id": "FAC-023",
       "slug": "مستشفى-الحلو-الدولي",
-      "incidents": 2,
+      "incidents": 3,
       "indexable": true
     },
     {
@@ -1029,8 +1029,8 @@
       "section": "hospitals",
       "id": "FAC-034",
       "slug": "al-quds-field-hospital",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 2,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/hospitals/de/al-quds-feldlazarett/",
@@ -1039,8 +1039,8 @@
       "section": "hospitals",
       "id": "FAC-034",
       "slug": "al-quds-feldlazarett",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 2,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/hospitals/ar/%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89-%D8%A7%D9%84%D9%82%D8%AF%D8%B3-%D8%A7%D9%84%D9%85%D9%8A%D8%AF%D8%A7%D9%86%D9%8A/",
@@ -1049,8 +1049,8 @@
       "section": "hospitals",
       "id": "FAC-034",
       "slug": "مستشفى-القدس-الميداني",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 2,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/hospitals/kuwait-specialty-hospital/",
@@ -1453,12 +1453,12 @@
       "indexable": false
     },
     {
-      "url": "https://palgenopedia.org/war-crimes/hospitals/de/gesundheitszentrum-maskat-al-qarara/",
-      "path": "/war-crimes/hospitals/de/gesundheitszentrum-maskat-al-qarara/",
+      "url": "https://palgenopedia.org/war-crimes/hospitals/de/al-qarara-gesundheitszentrum-in-maskat/",
+      "path": "/war-crimes/hospitals/de/al-qarara-gesundheitszentrum-in-maskat/",
       "lang": "de",
       "section": "hospitals",
       "id": "FAC-048",
-      "slug": "gesundheitszentrum-maskat-al-qarara",
+      "slug": "al-qarara-gesundheitszentrum-in-maskat",
       "incidents": 0,
       "indexable": false
     },
