@@ -1242,6 +1242,25 @@
    "video": 0,
    "image": 1
   },
+  "web-cdnprod.aa.com.tr": {
+   "count": 1,
+   "sample": "https://web-cdnprod.aa.com.tr/uploads/Contents/2023/11/10/thumbs_b_c_bd49d4df7004f53fab81dd69c4557760.jpg?v=184322",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "urls": [
+    {
+     "u": "https://web-cdnprod.aa.com.tr/uploads/Contents/2023/11/10/thumbs_b_c_bd49d4df7004f53fab81dd69c4557760.jpg?v=184322",
+     "role": "image",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
+   "video": 0,
+   "image": 1
+  },
   "web.facebook.com": {
    "count": 3,
    "sample": "https://web.facebook.com/watch/?v=1566031537325544",

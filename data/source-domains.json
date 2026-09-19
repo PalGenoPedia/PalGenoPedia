@@ -37,7 +37,7 @@
    "secondary": 3
   },
   "aa.com.tr": {
-   "count": 14,
+   "count": 15,
    "sample": "https://www.aa.com.tr/en/middle-east/palestine-27-years-since-ibrahimi-mosque-massacre/2156877",
    "archived": 0,
    "pending": 0,
@@ -148,6 +148,14 @@
      "manual": false
     },
     {
+     "u": "https://www.aa.com.tr/en/middle-east/israeli-snipers-target-displaced-palestinians-at-hospital-in-gaza/3050112",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
      "u": "https://www.aa.com.tr/en/middle-east/scores-of-palestinians-dead-wounded-from-israeli-bombing-of-gaza-school-sheltering-displaced-people/3056793",
      "role": "secondary",
      "status": "new",
@@ -157,7 +165,7 @@
     }
    ],
    "primary": 7,
-   "secondary": 7
+   "secondary": 8
   },
   "abcnews.com": {
    "count": 1,
@@ -3133,6 +3141,25 @@
    "primary": 0,
    "secondary": 1
   },
+  "news.cgtn.com": {
+   "count": 1,
+   "sample": "https://news.cgtn.com/news/2023-11-10/Palestinian-Red-Crescent-says-Israeli-snipers-shooting-at-Gaza-s-Al-Quds-hospital-1oCNN0WDLFK/p.html",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "urls": [
+    {
+     "u": "https://news.cgtn.com/news/2023-11-10/Palestinian-Red-Crescent-says-Israeli-snipers-shooting-at-Gaza-s-Al-Quds-hospital-1oCNN0WDLFK/p.html",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
+   "primary": 0,
+   "secondary": 1
+  },
   "news.un.org": {
    "count": 3,
    "sample": "https://news.un.org/en/story/2025/04/1162191",
@@ -4678,7 +4705,7 @@
      "manual": false
     },
     {
-     "u": "https://reliefweb.int/attachments/d08cf43b-7d4c-4004-bb74-a30fbed01a51/EN-Al%20Quds%20Hospital%20Evacuation%20Order.pdf",
+     "u": "https://reliefweb.int/attachments/d08cf43b-7d4c-4004-bb74-a30fbed01a51/EN-Al%20Quds%20Hospital%20Evacuation%20Order.pdfhttps://x.com/PalestineRCS/status/1713242487467258178?ref_src=twsrc%5Etfw",
      "role": "secondary",
      "status": "new",
      "snap": "",
@@ -4741,7 +4768,7 @@
    "secondary": 0
   },
   "reuters.com": {
-   "count": 2,
+   "count": 3,
    "sample": "https://www.reuters.com/world/middle-east/israeli-missiles-strike-gaza-hospital-patients-evacuated-2025-04-13",
    "archived": 0,
    "pending": 0,
@@ -4762,10 +4789,18 @@
      "snap": "",
      "method": "",
      "manual": false
+    },
+    {
+     "u": "https://www.reuters.com/world/middle-east/palestinian-red-crescent-says-one-killed-many-wounded-by-israeli-gunfire-gaza-2023-11-10",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
     }
    ],
    "primary": 0,
-   "secondary": 2
+   "secondary": 3
   },
   "reutersconnect.com": {
    "count": 1,
@@ -4965,7 +5000,7 @@
    "secondary": 0
   },
   "theguardian.com": {
-   "count": 7,
+   "count": 8,
    "sample": "https://www.theguardian.com/world/article/2024/jul/10/a-game-of-football-a-boom-then-scattered-bodies-video-shows-moment-of-israel-strike-on-gaza-school",
    "archived": 0,
    "pending": 0,
@@ -4981,6 +5016,14 @@
     },
     {
      "u": "https://www.theguardian.com/world/2023/dec/31/israeli-airstrikes-kill-dozens-in-gaza-netanyahu-hamas",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.theguardian.com/world/2023/nov/10/israel-hamas-war-what-we-know-on-day-35",
      "role": "primary",
      "status": "new",
      "snap": "",
@@ -5028,7 +5071,7 @@
      "manual": false
     }
    ],
-   "primary": 2,
+   "primary": 3,
    "secondary": 5
   },
   "thenationalnews.com": {
@@ -6215,12 +6258,28 @@
    "secondary": 1
   },
   "x.com": {
-   "count": 50,
+   "count": 52,
    "sample": "https://x.com/ytirawi/status/1789942261209325757?s=46&fbclid=IwZXh0bgNhZW0CMTAAAR3j1RdjkSsbE9GV1GA9V5aEyAkGwqGc-FMhED5EGzZOcazau1nfvQL8kZw_aem_ZmFrZWR1bW15MTZieXRlcw",
    "archived": 0,
    "pending": 0,
    "deferred": 0,
    "urls": [
+    {
+     "u": "https://x.com/AJEnglish/status/1724381684722737157",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://x.com/PalestineRCS/status/1723004933278937158",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
     {
      "u": "https://x.com/PalestineRCS/status/1731034803468693535",
      "role": "primary",
@@ -6622,7 +6681,7 @@
      "manual": false
     }
    ],
-   "primary": 4,
+   "primary": 6,
    "secondary": 46
   },
   "youtube.com": {

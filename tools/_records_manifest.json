@@ -339,7 +339,7 @@
       "section": "hospitals",
       "id": "FAC-011",
       "slug": "dr-abdul-aziz-rantisi-children-s-specialty-hospital",
-      "incidents": 6,
+      "incidents": 5,
       "indexable": true
     },
     {
@@ -349,7 +349,7 @@
       "section": "hospitals",
       "id": "FAC-011",
       "slug": "dr-abdul-aziz-rantisi-kinder-spezialkrankenhaus",
-      "incidents": 6,
+      "incidents": 5,
       "indexable": true
     },
     {
@@ -359,7 +359,7 @@
       "section": "hospitals",
       "id": "FAC-011",
       "slug": "مستشفى-الدكتور-عبد-العزيز-الرنتيسي-التخصصي-للأطفال",
-      "incidents": 6,
+      "incidents": 5,
       "indexable": true
     },
     {
@@ -1029,7 +1029,7 @@
       "section": "hospitals",
       "id": "FAC-034",
       "slug": "al-quds-field-hospital",
-      "incidents": 2,
+      "incidents": 4,
       "indexable": true
     },
     {
@@ -1039,7 +1039,7 @@
       "section": "hospitals",
       "id": "FAC-034",
       "slug": "al-quds-feldlazarett",
-      "incidents": 2,
+      "incidents": 4,
       "indexable": true
     },
     {
@@ -1049,7 +1049,7 @@
       "section": "hospitals",
       "id": "FAC-034",
       "slug": "مستشفى-القدس-الميداني",
-      "incidents": 2,
+      "incidents": 4,
       "indexable": true
     },
     {
