@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-19",
+ "generated": "2026-09-20",
  "domains": {
   "972mag.com": {
    "count": 3,
@@ -37,7 +37,7 @@
    "secondary": 3
   },
   "aa.com.tr": {
-   "count": 15,
+   "count": 14,
    "sample": "https://www.aa.com.tr/en/middle-east/palestine-27-years-since-ibrahimi-mosque-massacre/2156877",
    "archived": 0,
    "pending": 0,
@@ -148,14 +148,6 @@
      "manual": false
     },
     {
-     "u": "https://www.aa.com.tr/en/middle-east/israeli-snipers-target-displaced-palestinians-at-hospital-in-gaza/3050112",
-     "role": "secondary",
-     "status": "new",
-     "snap": "",
-     "method": "",
-     "manual": false
-    },
-    {
      "u": "https://www.aa.com.tr/en/middle-east/scores-of-palestinians-dead-wounded-from-israeli-bombing-of-gaza-school-sheltering-displaced-people/3056793",
      "role": "secondary",
      "status": "new",
@@ -165,7 +157,7 @@
     }
    ],
    "primary": 7,
-   "secondary": 8
+   "secondary": 7
   },
   "abcnews.com": {
    "count": 1,
@@ -1953,12 +1945,20 @@
    "secondary": 1
   },
   "gazahcsector.palestine-studies.org": {
-   "count": 4,
+   "count": 5,
    "sample": "https://gazahcsector.palestine-studies.org/en/node/77",
    "archived": 0,
    "pending": 0,
    "deferred": 0,
    "urls": [
+    {
+     "u": "https://gazahcsector.palestine-studies.org/en/node/14",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
     {
      "u": "https://gazahcsector.palestine-studies.org/en/node/20",
      "role": "primary",
@@ -1992,7 +1992,7 @@
      "manual": false
     }
    ],
-   "primary": 2,
+   "primary": 3,
    "secondary": 2
   },
   "genocide.live": {
@@ -2030,7 +2030,7 @@
    "deferred": 0,
    "urls": [
     {
-     "u": "https://gigaza.org/en/war-damage/sheikh-zakaria-mosque-gaza",
+     "u": "https://gigaza.org/en/war-damage/al-quds-hospital-palestinian-red-crescent-society",
      "role": "primary",
      "status": "new",
      "snap": "",
@@ -2038,16 +2038,16 @@
      "manual": false
     },
     {
-     "u": "https://gigaza.org/en/war-damage/al-quds-hospital-palestinian-red-crescent-society",
-     "role": "secondary",
+     "u": "https://gigaza.org/en/war-damage/sheikh-zakaria-mosque-gaza",
+     "role": "primary",
      "status": "new",
      "snap": "",
      "method": "",
      "manual": false
     }
    ],
-   "primary": 1,
-   "secondary": 1
+   "primary": 2,
+   "secondary": 0
   },
   "gov.il": {
    "count": 1,
@@ -2213,6 +2213,14 @@
      "manual": false
     },
     {
+     "u": "https://www.hrw.org/news/2023/11/14/gaza-unlawful-israeli-hospital-strikes-worsen-health-crisis",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
      "u": "https://www.hrw.org/report/2002/05/02/jenin/idf-military-operations",
      "role": "primary",
      "status": "new",
@@ -2245,14 +2253,6 @@
      "manual": false
     },
     {
-     "u": "https://www.hrw.org/news/2023/11/14/gaza-unlawful-israeli-hospital-strikes-worsen-health-crisis",
-     "role": "secondary",
-     "status": "new",
-     "snap": "",
-     "method": "",
-     "manual": false
-    },
-    {
      "u": "https://www.hrw.org/news/2023/11/26/gaza-findings-october-17-al-ahli-hospital-explosion",
      "role": "secondary",
      "status": "new",
@@ -2261,8 +2261,8 @@
      "manual": false
     }
    ],
-   "primary": 10,
-   "secondary": 2
+   "primary": 11,
+   "secondary": 1
   },
   "i24news.tv": {
    "count": 1,
@@ -3141,25 +3141,6 @@
    "primary": 0,
    "secondary": 1
   },
-  "news.cgtn.com": {
-   "count": 1,
-   "sample": "https://news.cgtn.com/news/2023-11-10/Palestinian-Red-Crescent-says-Israeli-snipers-shooting-at-Gaza-s-Al-Quds-hospital-1oCNN0WDLFK/p.html",
-   "archived": 0,
-   "pending": 0,
-   "deferred": 0,
-   "urls": [
-    {
-     "u": "https://news.cgtn.com/news/2023-11-10/Palestinian-Red-Crescent-says-Israeli-snipers-shooting-at-Gaza-s-Al-Quds-hospital-1oCNN0WDLFK/p.html",
-     "role": "secondary",
-     "status": "new",
-     "snap": "",
-     "method": "",
-     "manual": false
-    }
-   ],
-   "primary": 0,
-   "secondary": 1
-  },
   "news.un.org": {
    "count": 3,
    "sample": "https://news.un.org/en/story/2025/04/1162191",
@@ -3261,7 +3242,7 @@
    "secondary": 1
   },
   "ochaopt.org": {
-   "count": 121,
+   "count": 122,
    "sample": "https://www.ochaopt.org/content/eight-years-after-2008-2009-cast-lead-hostilities-gaza-lack-accountability-persists",
    "archived": 0,
    "pending": 1,
@@ -3908,6 +3889,14 @@
      "manual": false
     },
     {
+     "u": "https://www.ochaopt.org/content/humanitarian-situation-update-190-gaza-strip",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
      "u": "https://www.ochaopt.org/content/humanitarian-situation-update-203-gaza-strip",
      "role": "primary",
      "status": "new",
@@ -4236,7 +4225,7 @@
      "manual": false
     }
    ],
-   "primary": 113,
+   "primary": 114,
    "secondary": 8
   },
   "ohchr.org": {
@@ -4803,8 +4792,8 @@
    "secondary": 3
   },
   "reutersconnect.com": {
-   "count": 1,
-   "sample": "https://www.reutersconnect.com/item/israeli-forces-target-al-awda-hospital-in-gaza/dGFnOnJldXRlcnMuY29tLDIwMjU6bmV3c21sX01UMUFOQURMMDAwUUowUzZK",
+   "count": 2,
+   "sample": "https://www.reutersconnect.com/item/palestinian-families-shelter-in-the-ruins-of-150-year-old-school-in-gaza/dGFnOnJldXRlcnMuY29tLDIwMjU6bmV3c21sX01UMUFOQURMMDAwWkk4V1Az?lastViewed=dGFnOnJldXRlcnMuY29tLDIwMjU6bmV3c21sX01UMUFOQURMMDAwWkk4V1BZ&position=2",
    "archived": 0,
    "pending": 0,
    "deferred": 0,
@@ -4816,9 +4805,17 @@
      "snap": "",
      "method": "",
      "manual": false
+    },
+    {
+     "u": "https://www.reutersconnect.com/item/palestinian-families-shelter-in-the-ruins-of-150-year-old-school-in-gaza/dGFnOnJldXRlcnMuY29tLDIwMjU6bmV3c21sX01UMUFOQURMMDAwWkk4V1Az?lastViewed=dGFnOnJldXRlcnMuY29tLDIwMjU6bmV3c21sX01UMUFOQURMMDAwWkk4V1BZ&position=2",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
     }
    ],
-   "primary": 1,
+   "primary": 2,
    "secondary": 0
   },
   "scholarsatrisk.org": {
@@ -6258,7 +6255,7 @@
    "secondary": 1
   },
   "x.com": {
-   "count": 52,
+   "count": 53,
    "sample": "https://x.com/ytirawi/status/1789942261209325757?s=46&fbclid=IwZXh0bgNhZW0CMTAAAR3j1RdjkSsbE9GV1GA9V5aEyAkGwqGc-FMhED5EGzZOcazau1nfvQL8kZw_aem_ZmFrZWR1bW15MTZieXRlcw",
    "archived": 0,
    "pending": 0,
@@ -6370,6 +6367,14 @@
     },
     {
      "u": "https://x.com/MiddleEastEye/status/1728473137300320383?s=20",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://x.com/PalestineRCS/status/1715415685096931626?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1715415685096931626%7Ctwgr%5E33e83b9e23e95621e640ddbb91836b0eb1911a9e%7Ctwcon%5Es1_&ref_url=https%3A%2F%2Fwww.alquds.co.uk%2FD8A7D984D987D984D8A7D984-D8A7D984D8A3D8ADD985D8B1-D8A7D984D981D984D8B3D8B7D98AD986D98A-D8AAD984D982D98AD986D8A7-D8AAD987D8AFD98AD8AF%2F",
      "role": "secondary",
      "status": "new",
      "snap": "",
@@ -6682,7 +6687,7 @@
     }
    ],
    "primary": 6,
-   "secondary": 46
+   "secondary": 47
   },
   "youtube.com": {
    "count": 4,
