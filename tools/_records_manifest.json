@@ -3564,8 +3564,8 @@
       "section": "religious-sites",
       "id": "FAC-012",
       "slug": "ibn-marwan-mosque",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 1,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/religious-sites/de/ibn-marwan-moschee/",
@@ -3574,7 +3574,7 @@
       "section": "religious-sites",
       "id": "FAC-012",
       "slug": "ibn-marwan-moschee",
-      "incidents": 0,
+      "incidents": 1,
       "indexable": true
     },
     {
@@ -3584,8 +3584,8 @@
       "section": "religious-sites",
       "id": "FAC-012",
       "slug": "مسجد-ابن-مروان",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 1,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/religious-sites/aybaki-mosque/",
@@ -3594,8 +3594,8 @@
       "section": "religious-sites",
       "id": "FAC-013",
       "slug": "aybaki-mosque",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 1,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/religious-sites/de/aybaki-moschee/",
@@ -3604,8 +3604,8 @@
       "section": "religious-sites",
       "id": "FAC-013",
       "slug": "aybaki-moschee",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 1,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/religious-sites/ar/%D9%85%D8%B3%D8%AC%D8%AF-%D8%A3%D9%8A%D8%A8%D8%A7%D9%83%D9%8A/",
@@ -3614,8 +3614,8 @@
       "section": "religious-sites",
       "id": "FAC-013",
       "slug": "مسجد-أيباكي",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 1,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/religious-sites/ibn-othman-mosque/",
@@ -3714,8 +3714,8 @@
       "section": "religious-sites",
       "id": "FAC-017",
       "slug": "al-shamah-mosque",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 1,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/religious-sites/de/al-shamah-moschee/",
@@ -3724,7 +3724,7 @@
       "section": "religious-sites",
       "id": "FAC-017",
       "slug": "al-shamah-moschee",
-      "incidents": 0,
+      "incidents": 1,
       "indexable": true
     },
     {
@@ -3734,8 +3734,8 @@
       "section": "religious-sites",
       "id": "FAC-017",
       "slug": "مسجد-الشامة",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 1,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/religious-sites/st-hilarion-monastery/",

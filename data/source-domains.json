@@ -1575,7 +1575,7 @@
    "secondary": 1
   },
   "english.wafa.ps": {
-   "count": 11,
+   "count": 12,
    "sample": "https://english.wafa.ps/Pages/Details/128189",
    "archived": 6,
    "pending": 2,
@@ -1594,6 +1594,14 @@
      "role": "primary",
      "status": "archived",
      "snap": "https://web.archive.org/web/20260828224655/https://english.wafa.ps/Pages/Details/133561",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://english.wafa.ps/Pages/Details/143876",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
      "method": "",
      "manual": false
     },
@@ -1670,7 +1678,7 @@
      "manual": false
     }
    ],
-   "primary": 3,
+   "primary": 4,
    "secondary": 8
   },
   "episcopalnewsservice.org": {
@@ -2069,14 +2077,30 @@
    "secondary": 1
   },
   "gigaza.org": {
-   "count": 2,
+   "count": 4,
    "sample": "https://gigaza.org/en/war-damage/al-quds-hospital-palestinian-red-crescent-society",
    "archived": 0,
    "pending": 0,
    "deferred": 0,
    "urls": [
     {
+     "u": "https://gigaza.org/en/agreements-reports/graveyards-under-fire",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
      "u": "https://gigaza.org/en/war-damage/al-quds-hospital-palestinian-red-crescent-society",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://gigaza.org/en/war-damage/al-shama-mosque-gaza/",
      "role": "primary",
      "status": "new",
      "snap": "",
@@ -2092,7 +2116,7 @@
      "manual": false
     }
    ],
-   "primary": 2,
+   "primary": 4,
    "secondary": 0
   },
   "gov.il": {

@@ -203,6 +203,25 @@
    "video": 0,
    "image": 1
   },
+  "cdnx.premiumread.com": {
+   "count": 1,
+   "sample": "https://cdnx.premiumread.com/?url=https://gulf-times.com/gulftimes/uploads/images/2025/07/08/334439.jpeg&w=800&q=100&f=webp&v=1",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "urls": [
+    {
+     "u": "https://cdnx.premiumread.com/?url=https://gulf-times.com/gulftimes/uploads/images/2025/07/08/334439.jpeg&w=800&q=100&f=webp&v=1",
+     "role": "image",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
+   "video": 0,
+   "image": 1
+  },
   "doctorswithoutborders.org": {
    "count": 1,
    "sample": "https://www.doctorswithoutborders.org/sites/default/files/styles/large_image_large_mobile_480x320/public/20250520_NasserHospital_06.jpeg?itok=ckF-k4v2",
@@ -518,6 +537,33 @@
    "video": 0,
    "image": 1
   },
+  "gigaza.b-cdn.net": {
+   "count": 2,
+   "sample": "https://gigaza.b-cdn.net/gigaza/2025/04/%D9%85%D8%B3%D8%AC%D8%AF-%D8%A7%D9%84%D8%B4%D9%85%D8%B9%D8%A9-%D8%BA%D8%B2%D8%A9.mp4",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "urls": [
+    {
+     "u": "https://gigaza.b-cdn.net/gigaza/2025/04/%D9%85%D8%B3%D8%AC%D8%AF-%D8%A7%D9%84%D8%B4%D9%85%D8%B9%D8%A9-%D8%BA%D8%B2%D8%A9.mp4",
+     "role": "video",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://gigaza.b-cdn.net/gigaza/2025/06/%D9%85%D8%B3%D8%AC%D8%AF-%D8%A7%D9%84%D8%B4%D9%85%D8%B9%D8%A9.webp",
+     "role": "image",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
+   "video": 1,
+   "image": 1
+  },
   "hrw.org": {
    "count": 1,
    "sample": "https://www.hrw.org/sites/default/files/media_2025/08/202508mena_palestine_Al-Zeitoun%20C%20school.jpg",
@@ -684,7 +730,7 @@
    "image": 1
   },
   "instagram.com": {
-   "count": 14,
+   "count": 13,
    "sample": "https://www.instagram.com/reels/DPRASOOkppd",
    "archived": 0,
    "pending": 0,
@@ -747,14 +793,6 @@
      "manual": false
     },
     {
-     "u": "https://www.instagram.com/reels/DPW866_EvlM",
-     "role": "video",
-     "status": "new",
-     "snap": "",
-     "method": "",
-     "manual": false
-    },
-    {
      "u": "https://www.instagram.com/reels/DbBfGoSMRa4",
      "role": "video",
      "status": "new",
@@ -803,7 +841,7 @@
      "manual": false
     }
    ],
-   "video": 9,
+   "video": 8,
    "image": 5
   },
   "maktoobmedia.com": {

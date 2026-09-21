@@ -2392,8 +2392,56 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://palgenopedia.org/war-crimes/religious-sites/de/ibn-marwan-moschee/</loc>
+    <loc>https://palgenopedia.org/war-crimes/religious-sites/ibn-marwan-mosque/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/%D9%85%D8%B3%D8%AC%D8%AF-%D8%A7%D8%A8%D9%86-%D9%85%D8%B1%D9%88%D8%A7%D9%86/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/ibn-marwan-moschee/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/ibn-marwan-mosque/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/ibn-marwan-mosque/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://palgenopedia.org/war-crimes/religious-sites/de/ibn-marwan-moschee/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/%D9%85%D8%B3%D8%AC%D8%AF-%D8%A7%D8%A8%D9%86-%D9%85%D8%B1%D9%88%D8%A7%D9%86/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/ibn-marwan-moschee/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/ibn-marwan-mosque/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/ibn-marwan-mosque/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://palgenopedia.org/war-crimes/religious-sites/ar/%D9%85%D8%B3%D8%AC%D8%AF-%D8%A7%D8%A8%D9%86-%D9%85%D8%B1%D9%88%D8%A7%D9%86/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/%D9%85%D8%B3%D8%AC%D8%AF-%D8%A7%D8%A8%D9%86-%D9%85%D8%B1%D9%88%D8%A7%D9%86/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/ibn-marwan-moschee/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/ibn-marwan-mosque/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/ibn-marwan-mosque/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://palgenopedia.org/war-crimes/religious-sites/aybaki-mosque/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/%D9%85%D8%B3%D8%AC%D8%AF-%D8%A3%D9%8A%D8%A8%D8%A7%D9%83%D9%8A/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/aybaki-moschee/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/aybaki-mosque/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/aybaki-mosque/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://palgenopedia.org/war-crimes/religious-sites/de/aybaki-moschee/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/%D9%85%D8%B3%D8%AC%D8%AF-%D8%A3%D9%8A%D8%A8%D8%A7%D9%83%D9%8A/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/aybaki-moschee/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/aybaki-mosque/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/aybaki-mosque/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://palgenopedia.org/war-crimes/religious-sites/ar/%D9%85%D8%B3%D8%AC%D8%AF-%D8%A3%D9%8A%D8%A8%D8%A7%D9%83%D9%8A/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/%D9%85%D8%B3%D8%AC%D8%AF-%D8%A3%D9%8A%D8%A8%D8%A7%D9%83%D9%8A/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/aybaki-moschee/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/aybaki-mosque/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/aybaki-mosque/"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -2447,8 +2495,29 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://palgenopedia.org/war-crimes/religious-sites/de/al-shamah-moschee/</loc>
+    <loc>https://palgenopedia.org/war-crimes/religious-sites/al-shamah-mosque/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/%D9%85%D8%B3%D8%AC%D8%AF-%D8%A7%D9%84%D8%B4%D8%A7%D9%85%D8%A9/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/al-shamah-moschee/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/al-shamah-mosque/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/al-shamah-mosque/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://palgenopedia.org/war-crimes/religious-sites/de/al-shamah-moschee/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/%D9%85%D8%B3%D8%AC%D8%AF-%D8%A7%D9%84%D8%B4%D8%A7%D9%85%D8%A9/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/al-shamah-moschee/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/al-shamah-mosque/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/al-shamah-mosque/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://palgenopedia.org/war-crimes/religious-sites/ar/%D9%85%D8%B3%D8%AC%D8%AF-%D8%A7%D9%84%D8%B4%D8%A7%D9%85%D8%A9/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/religious-sites/ar/%D9%85%D8%B3%D8%AC%D8%AF-%D8%A7%D9%84%D8%B4%D8%A7%D9%85%D8%A9/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/religious-sites/de/al-shamah-moschee/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/religious-sites/al-shamah-mosque/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/religious-sites/al-shamah-mosque/"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
