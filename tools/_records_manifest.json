@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-20",
+  "generated": "2026-09-21",
   "count": 405,
   "pages": [
     {
@@ -339,7 +339,7 @@
       "section": "hospitals",
       "id": "FAC-011",
       "slug": "dr-abdul-aziz-rantisi-children-s-specialty-hospital",
-      "incidents": 5,
+      "incidents": 6,
       "indexable": true
     },
     {
@@ -349,7 +349,7 @@
       "section": "hospitals",
       "id": "FAC-011",
       "slug": "dr-abdul-aziz-rantisi-kinder-spezialkrankenhaus",
-      "incidents": 5,
+      "incidents": 6,
       "indexable": true
     },
     {
@@ -359,7 +359,7 @@
       "section": "hospitals",
       "id": "FAC-011",
       "slug": "مستشفى-الدكتور-عبد-العزيز-الرنتيسي-التخصصي-للأطفال",
-      "incidents": 5,
+      "incidents": 6,
       "indexable": true
     },
     {

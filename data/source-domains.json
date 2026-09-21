@@ -37,7 +37,7 @@
    "secondary": 3
   },
   "aa.com.tr": {
-   "count": 14,
+   "count": 15,
    "sample": "https://www.aa.com.tr/en/middle-east/palestine-27-years-since-ibrahimi-mosque-massacre/2156877",
    "archived": 0,
    "pending": 0,
@@ -94,6 +94,14 @@
     {
      "u": "https://www.aa.com.tr/en/middle-east/palestine-27-years-since-ibrahimi-mosque-massacre/2156877",
      "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.aa.com.tr/ar/%D8%A5%D8%B3%D8%B1%D8%A7%D8%A6%D9%8A%D9%84/%D9%82%D8%B5%D9%81-%D8%A5%D8%B3%D8%B1%D8%A7%D8%A6%D9%8A%D9%84%D9%8A-%D9%8A%D8%B3%D8%AA%D9%87%D8%AF%D9%81-%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89-%D8%A7%D9%84%D8%B1%D9%86%D8%AA%D9%8A%D8%B3%D9%8A-%D9%84%D9%84%D8%A3%D8%B7%D9%81%D8%A7%D9%84-%D9%81%D9%8A-%D8%BA%D8%B2%D8%A9/3049177",
+     "role": "secondary",
      "status": "new",
      "snap": "",
      "method": "",
@@ -157,7 +165,7 @@
     }
    ],
    "primary": 7,
-   "secondary": 7
+   "secondary": 8
   },
   "abcnews.com": {
    "count": 1,
@@ -379,6 +387,25 @@
    ],
    "primary": 2,
    "secondary": 10
+  },
+  "ajnet.me": {
+   "count": 1,
+   "sample": "https://www.ajnet.me/news/2025/5/30/%D8%AA%D8%AC%D9%85%D8%B9-%D8%A7%D9%84%D8%B9%D8%B4%D8%A7%D8%A6%D8%B1-%D8%A8%D8%BA%D8%B2%D8%A9-%D9%8A%D8%AF%D9%8A%D9%86-%D8%A7%D8%B9%D8%AA%D8%AF%D8%A7%D8%A1-%D9%81%D8%A6%D8%A9?traffic_source=rss",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.ajnet.me/news/2025/5/30/%D8%AA%D8%AC%D9%85%D8%B9-%D8%A7%D9%84%D8%B9%D8%B4%D8%A7%D8%A6%D8%B1-%D8%A8%D8%BA%D8%B2%D8%A9-%D9%8A%D8%AF%D9%8A%D9%86-%D8%A7%D8%B9%D8%AA%D8%AF%D8%A7%D8%A1-%D9%81%D8%A6%D8%A9?traffic_source=rss",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
+   "primary": 1,
+   "secondary": 0
   },
   "alarabiya.net": {
    "count": 1,
@@ -1863,6 +1890,25 @@
    "primary": 4,
    "secondary": 17
   },
+  "felesteen.news": {
+   "count": 1,
+   "sample": "https://felesteen.news/post/165217/%D8%A7%D9%84%D9%85%D9%86%D8%B8%D9%85%D8%A7%D8%AA-%D8%A7%D9%84%D8%A3%D9%87%D9%84%D9%8A%D8%A9-%D8%AA%D8%B3%D8%AA%D9%86%D9%83%D8%B1-%D8%AC%D8%B1%D9%8A%D9%85%D8%A9-%D8%A7%D9%84%D8%A7%D8%B9%D8%AA%D8%AF%D8%A7%D8%A1-%D8%B9%D9%84%D9%89-%D8%A7%D9%84%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89-%D8%A7%D9%84%D9%85%D9%8A%D8%AF%D8%A7%D9%86%D9%8A-%D9%81%D9%8A-%D8%A7",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "urls": [
+    {
+     "u": "https://felesteen.news/post/165217/%D8%A7%D9%84%D9%85%D9%86%D8%B8%D9%85%D8%A7%D8%AA-%D8%A7%D9%84%D8%A3%D9%87%D9%84%D9%8A%D8%A9-%D8%AA%D8%B3%D8%AA%D9%86%D9%83%D8%B1-%D8%AC%D8%B1%D9%8A%D9%85%D8%A9-%D8%A7%D9%84%D8%A7%D8%B9%D8%AA%D8%AF%D8%A7%D8%A1-%D8%B9%D9%84%D9%89-%D8%A7%D9%84%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89-%D8%A7%D9%84%D9%85%D9%8A%D8%AF%D8%A7%D9%86%D9%8A-%D9%81%D9%8A-%D8%A7",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
+   "primary": 0,
+   "secondary": 1
+  },
   "forensic-architecture.org": {
    "count": 1,
    "sample": "https://forensic-architecture.org/investigation/israeli-disinformation-al-ahli-hospital",
@@ -3104,12 +3150,20 @@
    "secondary": 0
   },
   "nbcnews.com": {
-   "count": 1,
+   "count": 2,
    "sample": "https://www.nbcnews.com/specials/gaza-universities-destroyed-israel-military-war/index.html",
    "archived": 0,
    "pending": 0,
    "deferred": 0,
    "urls": [
+    {
+     "u": "https://www.nbcnews.com/news/world/several-children-cancer-serious-blood-disorders-evacuated-gaza-rcna124722",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
     {
      "u": "https://www.nbcnews.com/specials/gaza-universities-destroyed-israel-military-war/index.html",
      "role": "secondary",
@@ -3119,7 +3173,7 @@
      "manual": false
     }
    ],
-   "primary": 0,
+   "primary": 1,
    "secondary": 1
   },
   "newarab.com": {
