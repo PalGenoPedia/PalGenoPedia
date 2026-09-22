@@ -609,8 +609,8 @@
       "section": "hospitals",
       "id": "FAC-020",
       "slug": "al-sahaba-medical-complex",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 2,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/hospitals/de/al-sahaba-medizinkomplex/",
@@ -619,8 +619,8 @@
       "section": "hospitals",
       "id": "FAC-020",
       "slug": "al-sahaba-medizinkomplex",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 2,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/hospitals/ar/%D9%85%D8%AC%D9%85%D8%B9-%D8%A7%D9%84%D8%B5%D8%AD%D8%A7%D8%A8%D8%A9-%D8%A7%D9%84%D8%B7%D8%A8%D9%8A/",
@@ -629,8 +629,8 @@
       "section": "hospitals",
       "id": "FAC-020",
       "slug": "مجمع-الصحابة-الطبي",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 2,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/hospitals/khidma-aamma-hospital/",
@@ -699,7 +699,7 @@
       "section": "hospitals",
       "id": "FAC-023",
       "slug": "al-helou-international-hospital",
-      "incidents": 5,
+      "incidents": 8,
       "indexable": true
     },
     {
@@ -709,7 +709,7 @@
       "section": "hospitals",
       "id": "FAC-023",
       "slug": "internationales-krankenhaus-al-helou",
-      "incidents": 5,
+      "incidents": 8,
       "indexable": true
     },
     {
@@ -719,7 +719,7 @@
       "section": "hospitals",
       "id": "FAC-023",
       "slug": "مستشفى-الحلو-الدولي",
-      "incidents": 5,
+      "incidents": 8,
       "indexable": true
     },
     {

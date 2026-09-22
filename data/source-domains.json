@@ -37,7 +37,7 @@
    "secondary": 3
   },
   "aa.com.tr": {
-   "count": 15,
+   "count": 17,
    "sample": "https://www.aa.com.tr/en/middle-east/palestine-27-years-since-ibrahimi-mosque-massacre/2156877",
    "archived": 0,
    "pending": 0,
@@ -100,7 +100,23 @@
      "manual": false
     },
     {
+     "u": "https://www.aa.com.tr/ar/%D8%A5%D8%B3%D8%B1%D8%A7%D8%A6%D9%8A%D9%84/%D8%A5%D8%B3%D8%B1%D8%A7%D8%A6%D9%8A%D9%84-%D8%AA%D9%82%D8%B5%D9%81-%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89-%D8%A7%D9%84%D8%AD%D9%84%D9%88-%D9%81%D9%8A-%D8%BA%D8%B2%D8%A9-%D9%88%D8%AA%D9%85%D9%86%D8%B9-%D8%A7%D9%84%D9%88%D8%B5%D9%88%D9%84-%D8%A5%D9%84%D9%8A%D9%87/3701799",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
      "u": "https://www.aa.com.tr/ar/%D8%A5%D8%B3%D8%B1%D8%A7%D8%A6%D9%8A%D9%84/%D9%82%D8%B5%D9%81-%D8%A5%D8%B3%D8%B1%D8%A7%D8%A6%D9%8A%D9%84%D9%8A-%D9%8A%D8%B3%D8%AA%D9%87%D8%AF%D9%81-%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89-%D8%A7%D9%84%D8%B1%D9%86%D8%AA%D9%8A%D8%B3%D9%8A-%D9%84%D9%84%D8%A3%D8%B7%D9%81%D8%A7%D9%84-%D9%81%D9%8A-%D8%BA%D8%B2%D8%A9/3049177",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.aa.com.tr/ar/%D8%A5%D8%B3%D8%B1%D8%A7%D8%A6%D9%8A%D9%84/%D9%88%D9%81%D8%A7%D8%A9-%D8%B1%D8%B6%D9%8A%D8%B9-%D9%88%D8%A5%D8%AC%D9%84%D8%A7%D8%A1-3-%D8%AE%D8%AF%D8%AC-%D9%85%D9%86-%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89-%D8%A8%D9%85%D8%AF%D9%8A%D9%86%D8%A9-%D8%BA%D8%B2%D8%A9-%D8%A5%D9%84%D9%89-%D8%AC%D9%86%D9%88%D8%A8-%D8%A7%D9%84%D9%82%D8%B7%D8%A7%D8%B9/3706519",
      "role": "secondary",
      "status": "new",
      "snap": "",
@@ -165,7 +181,7 @@
     }
    ],
    "primary": 7,
-   "secondary": 8
+   "secondary": 10
   },
   "abcnews.com": {
    "count": 1,
@@ -446,7 +462,7 @@
    "secondary": 1
   },
   "aljazeera.com": {
-   "count": 26,
+   "count": 28,
    "sample": "https://www.aljazeera.com/features/2022/1/27/tantura-a-film-about-a-massacre-israel-didnt-want-you-to-see",
    "archived": 0,
    "pending": 0,
@@ -573,6 +589,14 @@
      "manual": false
     },
     {
+     "u": "https://www.aljazeera.com/news/2025/9/28/horrific-israel-bombs-hospitals-residential-towers-amid-gaza-onslaught",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
      "u": "https://www.aljazeera.com/news/2026/8/1/israeli-strikes-kill-four-across-gaza-destroy-medical-supply-warehouse",
      "role": "primary",
      "status": "new",
@@ -645,6 +669,14 @@
      "manual": false
     },
     {
+     "u": "https://www.aljazeera.com/news/2025/8/31/israel-is-reducing-gaza-city-to-fields-of-rubble-kills-78-across-enclave",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
      "u": "https://www.aljazeera.com/news/liveblog/2023/11/10/israel-hamas-war-live-fears-grow-for-palestinians-at-gaza-hospitals",
      "role": "secondary",
      "status": "new",
@@ -661,8 +693,8 @@
      "manual": false
     }
    ],
-   "primary": 17,
-   "secondary": 9
+   "primary": 18,
+   "secondary": 10
   },
   "aljazeera.net": {
    "count": 5,
@@ -770,6 +802,25 @@
    "urls": [
     {
      "u": "https://www.anglicannews.org/news/2023/10/anglican-run-al-ahli-arab-hospital-in-gaza-damaged-by-israeli-rocket-fire-as-conflict-continues.aspx",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
+   "primary": 1,
+   "secondary": 0
+  },
+  "aohr.org.uk": {
+   "count": 1,
+   "sample": "https://aohr.org.uk/israeli-occupation-targets-al-helou-hospital-in-gaza-isolates-patients-and-medical-staff",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "urls": [
+    {
+     "u": "https://aohr.org.uk/israeli-occupation-targets-al-helou-hospital-in-gaza-isolates-patients-and-medical-staff",
      "role": "primary",
      "status": "new",
      "snap": "",
@@ -1720,7 +1771,7 @@
    "secondary": 0
   },
   "facebook.com": {
-   "count": 21,
+   "count": 22,
    "sample": "https://www.facebook.com/voiceofthecape/posts/trigger-warning-a-journalist-in-the-jabalia-refugee-camp-in-the-gaza-strip-abdul/739174581571429",
    "archived": 0,
    "pending": 0,
@@ -1753,6 +1804,14 @@
     {
      "u": "https://www.facebook.com/watch/?mibextid=wwXIfr&v=1413109099886187&rdid=ytko1E4P1B3ytfsz",
      "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.facebook.com/AlMamlakaTV/videos/%D8%A5%D8%B3%D8%B1%D8%A7%D8%A6%D9%8A%D9%84-%D8%AA%D9%82%D8%B5%D9%81-%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89-%D8%A7%D9%84%D8%AD%D9%84%D9%88-%D9%84%D9%84%D8%A3%D8%B7%D9%81%D8%A7%D9%84-%D9%81%D9%8A-%D9%85%D8%AF%D9%8A%D9%86%D8%A9-%D8%BA%D8%B2%D8%A9/4143784155878840",
+     "role": "secondary",
      "status": "new",
      "snap": "",
      "method": "",
@@ -1896,7 +1955,7 @@
     }
    ],
    "primary": 4,
-   "secondary": 17
+   "secondary": 18
   },
   "felesteen.news": {
    "count": 1,
@@ -1999,7 +2058,7 @@
    "secondary": 1
   },
   "gazahcsector.palestine-studies.org": {
-   "count": 5,
+   "count": 6,
    "sample": "https://gazahcsector.palestine-studies.org/en/node/77",
    "archived": 0,
    "pending": 0,
@@ -2015,6 +2074,14 @@
     },
     {
      "u": "https://gazahcsector.palestine-studies.org/en/node/20",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://gazahcsector.palestine-studies.org/en/node/7",
      "role": "primary",
      "status": "new",
      "snap": "",
@@ -2046,7 +2113,7 @@
      "manual": false
     }
    ],
-   "primary": 3,
+   "primary": 4,
    "secondary": 2
   },
   "genocide.live": {
@@ -2078,7 +2145,7 @@
   },
   "gigaza.org": {
    "count": 4,
-   "sample": "https://gigaza.org/en/war-damage/al-quds-hospital-palestinian-red-crescent-society",
+   "sample": "https://gigaza.org/en/war-damage/sheikh-zakaria-mosque-gaza",
    "archived": 0,
    "pending": 0,
    "deferred": 0,
@@ -3320,7 +3387,7 @@
    "secondary": 1
   },
   "ochaopt.org": {
-   "count": 122,
+   "count": 123,
    "sample": "https://www.ochaopt.org/content/eight-years-after-2008-2009-cast-lead-hostilities-gaza-lack-accountability-persists",
    "archived": 0,
    "pending": 1,
@@ -4199,6 +4266,14 @@
      "manual": false
     },
     {
+     "u": "https://www.ochaopt.org/content/humanitarian-situation-update-319-gaza-strip",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
      "u": "https://www.ochaopt.org/content/humanitarian-situation-update-321-gaza-strip",
      "role": "primary",
      "status": "new",
@@ -4303,7 +4378,7 @@
      "manual": false
     }
    ],
-   "primary": 114,
+   "primary": 115,
    "secondary": 8
   },
   "ohchr.org": {
@@ -4894,6 +4969,25 @@
     }
    ],
    "primary": 2,
+   "secondary": 0
+  },
+  "saba.ye": {
+   "count": 1,
+   "sample": "https://saba.ye/en/news3562872.htm",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "urls": [
+    {
+     "u": "https://saba.ye/en/news3562872.htm",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
+   "primary": 1,
    "secondary": 0
   },
   "scholarsatrisk.org": {
@@ -6333,7 +6427,7 @@
    "secondary": 1
   },
   "x.com": {
-   "count": 53,
+   "count": 54,
    "sample": "https://x.com/ytirawi/status/1789942261209325757?s=46&fbclid=IwZXh0bgNhZW0CMTAAAR3j1RdjkSsbE9GV1GA9V5aEyAkGwqGc-FMhED5EGzZOcazau1nfvQL8kZw_aem_ZmFrZWR1bW15MTZieXRlcw",
    "archived": 0,
    "pending": 0,
@@ -6756,6 +6850,14 @@
      "manual": false
     },
     {
+     "u": "https://x.com/paldf/status/1735946743601098930",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
      "u": "https://x.com/ytirawi/status/1789942261209325757?s=46&fbclid=IwZXh0bgNhZW0CMTAAAR3j1RdjkSsbE9GV1GA9V5aEyAkGwqGc-FMhED5EGzZOcazau1nfvQL8kZw_aem_ZmFrZWR1bW15MTZieXRlcw",
      "role": "secondary",
      "status": "new",
@@ -6765,7 +6867,7 @@
     }
    ],
    "primary": 6,
-   "secondary": 47
+   "secondary": 48
   },
   "youtube.com": {
    "count": 4,

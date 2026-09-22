@@ -730,8 +730,8 @@
    "image": 1
   },
   "instagram.com": {
-   "count": 13,
-   "sample": "https://www.instagram.com/reels/DPRASOOkppd",
+   "count": 14,
+   "sample": "https://www.instagram.com/reels/C5syQPmC0Va",
    "archived": 0,
    "pending": 0,
    "deferred": 0,
@@ -746,6 +746,14 @@
     },
     {
      "u": "https://www.instagram.com/p/C3Mz8Kzt8_0/?utm_source=ig_embed&utm_campaign=invalid&ig_rid=96861198-1074-4c6d-b635-2701f597e045",
+     "role": "video",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.instagram.com/p/DPJ-eIvgUiO",
      "role": "video",
      "status": "new",
      "snap": "",
@@ -841,7 +849,7 @@
      "manual": false
     }
    ],
-   "video": 8,
+   "video": 9,
    "image": 5
   },
   "maktoobmedia.com": {
