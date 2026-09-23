@@ -730,22 +730,14 @@
    "image": 1
   },
   "instagram.com": {
-   "count": 14,
-   "sample": "https://www.instagram.com/reels/DPRASOOkppd",
+   "count": 13,
+   "sample": "https://www.instagram.com/reels/C5syQPmC0Va",
    "archived": 0,
    "pending": 0,
    "deferred": 0,
    "urls": [
     {
-     "u": "https://www.instagram.com/p/C2Zp3Gjt9gc/?utm_source=ig_embed&utm_campaign=embed_video_watch_again",
-     "role": "video",
-     "status": "new",
-     "snap": "",
-     "method": "",
-     "manual": false
-    },
-    {
-     "u": "https://www.instagram.com/p/C3Mz8Kzt8_0/?utm_source=ig_embed&utm_campaign=invalid&ig_rid=96861198-1074-4c6d-b635-2701f597e045",
+     "u": "https://www.instagram.com/p/C2Zp3Gjt9gc/?utm_source=ig_embed&utm_campaign=invalid&ig_rid=96861198-1074-4c6d-b635-2701f597e045%20%2C%20https%3A%2F%2Fweb.facebook.com%2Freel%2F300288569355036%20%2C",
      "role": "video",
      "status": "new",
      "snap": "",
@@ -849,7 +841,7 @@
      "manual": false
     }
    ],
-   "video": 9,
+   "video": 8,
    "image": 5
   },
   "maktoobmedia.com": {
@@ -1148,28 +1140,12 @@
    "image": 1
   },
   "t.me": {
-   "count": 3,
-   "sample": "https://t.me/QudsN/368852",
+   "count": 1,
+   "sample": "https://t.me/pl24online/239730",
    "archived": 0,
    "pending": 0,
    "deferred": 0,
    "urls": [
-    {
-     "u": "https://t.me/QudsN/368852",
-     "role": "video",
-     "status": "new",
-     "snap": "",
-     "method": "",
-     "manual": false
-    },
-    {
-     "u": "https://t.me/QudsN/369068",
-     "role": "video",
-     "status": "new",
-     "snap": "",
-     "method": "",
-     "manual": false
-    },
     {
      "u": "https://t.me/pl24online/239730",
      "role": "video",
@@ -1179,7 +1155,7 @@
      "manual": false
     }
    ],
-   "video": 3,
+   "video": 1,
    "image": 0
   },
   "theguardian.com": {
@@ -1332,20 +1308,12 @@
    "image": 1
   },
   "web.facebook.com": {
-   "count": 3,
+   "count": 2,
    "sample": "https://web.facebook.com/watch/?v=1566031537325544",
    "archived": 0,
    "pending": 0,
    "deferred": 0,
    "urls": [
-    {
-     "u": "https://web.facebook.com/reel/300288569355036",
-     "role": "video",
-     "status": "new",
-     "snap": "",
-     "method": "",
-     "manual": false
-    },
     {
      "u": "https://web.facebook.com/watch/?mibextid=wwXIfr&v=694104496360241&rdid=9lbhotKwTSimO6cr&_rdc=1&_rdr",
      "role": "video",
@@ -1363,7 +1331,7 @@
      "manual": false
     }
    ],
-   "video": 3,
+   "video": 2,
    "image": 0
   },
   "x.com": {

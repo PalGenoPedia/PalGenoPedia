@@ -69,7 +69,7 @@
       "section": "hospitals",
       "id": "FAC-002",
       "slug": "nasser-medical-complex",
-      "incidents": 19,
+      "incidents": 23,
       "indexable": true
     },
     {
@@ -79,7 +79,7 @@
       "section": "hospitals",
       "id": "FAC-002",
       "slug": "nasser-medizinkomplex",
-      "incidents": 19,
+      "incidents": 23,
       "indexable": true
     },
     {
@@ -89,7 +89,7 @@
       "section": "hospitals",
       "id": "FAC-002",
       "slug": "مجمع-ناصر-الطبي",
-      "incidents": 19,
+      "incidents": 23,
       "indexable": true
     },
     {
@@ -99,7 +99,7 @@
       "section": "hospitals",
       "id": "FAC-003",
       "slug": "al-awda-hospital",
-      "incidents": 22,
+      "incidents": 26,
       "indexable": true
     },
     {
@@ -109,7 +109,7 @@
       "section": "hospitals",
       "id": "FAC-003",
       "slug": "al-awda-krankenhaus",
-      "incidents": 22,
+      "incidents": 26,
       "indexable": true
     },
     {
@@ -119,7 +119,7 @@
       "section": "hospitals",
       "id": "FAC-003",
       "slug": "مستشفى-العودة",
-      "incidents": 22,
+      "incidents": 26,
       "indexable": true
     },
     {

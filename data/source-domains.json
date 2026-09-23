@@ -37,7 +37,7 @@
    "secondary": 3
   },
   "aa.com.tr": {
-   "count": 17,
+   "count": 18,
    "sample": "https://www.aa.com.tr/en/middle-east/palestine-27-years-since-ibrahimi-mosque-massacre/2156877",
    "archived": 0,
    "pending": 0,
@@ -53,6 +53,14 @@
     },
     {
      "u": "https://www.aa.com.tr/en/middle-east/dozens-killed-wounded-as-israel-bombs-school-housing-displaced-people-in-northern-gaza/3043048",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.aa.com.tr/en/middle-east/intense-israeli-bombardment-turns-gaza-hospitals-into-graveyards/3050647",
      "role": "primary",
      "status": "new",
      "snap": "",
@@ -180,7 +188,7 @@
      "manual": false
     }
    ],
-   "primary": 7,
+   "primary": 8,
    "secondary": 10
   },
   "abcnews.com": {
@@ -298,7 +306,7 @@
    "secondary": 1
   },
   "aje.io": {
-   "count": 12,
+   "count": 13,
    "sample": "https://aje.io/53epb7?update=2577183",
    "archived": 0,
    "pending": 5,
@@ -316,6 +324,14 @@
      "u": "https://aje.io/i37ezs?update=2665759",
      "role": "primary",
      "status": "failed",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://aje.io/u6olfz?update=2473657",
+     "role": "primary",
+     "status": "new",
      "snap": "",
      "method": "",
      "manual": false
@@ -401,7 +417,7 @@
      "manual": false
     }
    ],
-   "primary": 2,
+   "primary": 3,
    "secondary": 10
   },
   "ajnet.me": {
@@ -462,7 +478,7 @@
    "secondary": 1
   },
   "aljazeera.com": {
-   "count": 28,
+   "count": 29,
    "sample": "https://www.aljazeera.com/features/2022/1/27/tantura-a-film-about-a-massacre-israel-didnt-want-you-to-see",
    "archived": 0,
    "pending": 0,
@@ -486,6 +502,14 @@
     },
     {
      "u": "https://www.aljazeera.com/features/2023/12/26/classroom-massacre-survivors-say-israel-executed-innocents-in-gaza-school",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.aljazeera.com/gallery/2023/11/7/israel-continues-to-attack-hospitals-in-gaza-city-killing-at-least-eight",
      "role": "primary",
      "status": "new",
      "snap": "",
@@ -693,7 +717,7 @@
      "manual": false
     }
    ],
-   "primary": 18,
+   "primary": 19,
    "secondary": 10
   },
   "aljazeera.net": {
@@ -1343,7 +1367,7 @@
    "secondary": 0
   },
   "doctorswithoutborders.org": {
-   "count": 3,
+   "count": 6,
    "sample": "https://www.doctorswithoutborders.org",
    "archived": 0,
    "pending": 0,
@@ -1352,6 +1376,30 @@
     {
      "u": "https://www.doctorswithoutborders.org",
      "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.doctorswithoutborders.org/latest/gaza-msf-provides-medical-care-and-donates-supplies-amid-intense-conflict",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.doctorswithoutborders.org/latest/seven-months-relentless-attacks-health-care-palestine",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.doctorswithoutborders.org/latest/gaza-msf-doctors-killed-strike-al-awda-hospital",
+     "role": "secondary",
      "status": "new",
      "snap": "",
      "method": "",
@@ -1374,8 +1422,8 @@
      "manual": false
     }
    ],
-   "primary": 1,
-   "secondary": 2
+   "primary": 3,
+   "secondary": 3
   },
   "edition.cnn.com": {
    "count": 1,
@@ -2145,7 +2193,7 @@
   },
   "gigaza.org": {
    "count": 4,
-   "sample": "https://gigaza.org/en/war-damage/al-quds-hospital-palestinian-red-crescent-society",
+   "sample": "https://gigaza.org/en/war-damage/sheikh-zakaria-mosque-gaza",
    "archived": 0,
    "pending": 0,
    "deferred": 0,
@@ -2971,7 +3019,7 @@
    "secondary": 1
   },
   "middleeasteye.net": {
-   "count": 7,
+   "count": 8,
    "sample": "https://www.middleeasteye.net/news/palestine-west-bank-deadliest-year-second-intifada",
    "archived": 0,
    "pending": 0,
@@ -2987,6 +3035,14 @@
     },
     {
      "u": "https://www.middleeasteye.net/live-blog/live-blog-update/israel-kills-two-strike-gaza-hospital-one-killed-targeting-electric-bike",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.middleeasteye.net/live-update/hospital-north-gaza-refuses-leave-patients-and-evacuate",
      "role": "primary",
      "status": "new",
      "snap": "",
@@ -3034,7 +3090,7 @@
      "manual": false
     }
    ],
-   "primary": 4,
+   "primary": 5,
    "secondary": 3
   },
   "middleeastmonitor.com": {
@@ -6427,7 +6483,7 @@
    "secondary": 1
   },
   "x.com": {
-   "count": 54,
+   "count": 56,
    "sample": "https://x.com/ytirawi/status/1789942261209325757?s=46&fbclid=IwZXh0bgNhZW0CMTAAAR3j1RdjkSsbE9GV1GA9V5aEyAkGwqGc-FMhED5EGzZOcazau1nfvQL8kZw_aem_ZmFrZWR1bW15MTZieXRlcw",
    "archived": 0,
    "pending": 0,
@@ -6435,6 +6491,14 @@
    "urls": [
     {
      "u": "https://x.com/AJEnglish/status/1724381684722737157",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://x.com/MedicalAidPal/status/1715811469504188611",
      "role": "primary",
      "status": "new",
      "snap": "",
@@ -6475,6 +6539,14 @@
     },
     {
      "u": "https://x.com/PalestineRCS/status/1758443176707178754",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://x.com/WHOoPt/status/1733572487399563650",
      "role": "primary",
      "status": "new",
      "snap": "",
@@ -6866,7 +6938,7 @@
      "manual": false
     }
    ],
-   "primary": 6,
+   "primary": 8,
    "secondary": 48
   },
   "youtube.com": {
