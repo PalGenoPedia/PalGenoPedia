@@ -1,0 +1,46 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "@id": "https://palgenopedia.org/data/events.json#curr_012",
+  "headline": "Fuel Shortage threatens 130 premature babies` lives",
+  "url": "https://palgenopedia.org/historical-events/massacres/fuel-shortage-threatens-130-premature-babies-lives/",
+  "datePublished": "2023-10-21",
+  "dateModified": "2026-09-23",
+  "inLanguage": "en",
+  "about": {
+    "@type": "Event",
+    "name": "Fuel Shortage threatens 130 premature babies` lives",
+    "startDate": "2023-10-21",
+    "location": {
+      "@type": "Place",
+      "name": "Nasser Medical Complex/ Khanyounis",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 34.29192551,
+        "longitude": 31.34693106
+      }
+    }
+  },
+  "articleBody": "Doctors in Gaza have issued an urgent warning that the lives of 130 premature babies are in imminent danger if fuel does not reach hospitals soon. There are six neonatal intensive care units at hospitals in Gaza, including Shifa and Nasser hospitals.",
+  "keywords": "Other, current",
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "Verification status",
+      "propertyID": "verification_status",
+      "value": "verified"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Author",
+      "propertyID": "author",
+      "value": "basma04elghu@gmail.com"
+    }
+  ],
+  "provider": {
+    "@type": "Organization",
+    "name": "PalGenoPedia",
+    "url": "https://palgenopedia.org"
+  },
+  "isBasedOn": "https://palgenopedia.org/data/events.json"
+}

@@ -122,6 +122,11 @@
         },
         {
           "@type": "CreativeWork",
+          "@id": "https://palgenopedia.org/data/events.json#curr_011",
+          "name": "An ambulance were targeted in front of Nasser hospital"
+        },
+        {
+          "@type": "CreativeWork",
           "@id": "https://palgenopedia.org/data/events.json#curr_004",
           "name": "UNRWA School Strikes"
         },
@@ -129,6 +134,11 @@
           "@type": "CreativeWork",
           "@id": "https://palgenopedia.org/data/events.json#curr_001",
           "name": "Al-Ahli Baptist Hospital Strike"
+        },
+        {
+          "@type": "CreativeWork",
+          "@id": "https://palgenopedia.org/data/events.json#curr_012",
+          "name": "Fuel Shortage threatens 130 premature babies` lives"
         },
         {
           "@type": "CreativeWork",
@@ -5927,6 +5937,66 @@
     {
       "@context": "https://schema.org",
       "@type": "Article",
+      "@id": "https://palgenopedia.org/data/events.json#curr_011",
+      "headline": "An ambulance were targeted in front of Nasser hospital",
+      "url": "https://palgenopedia.org/historical-events/massacres/an-ambulance-were-targeted-in-front-of-nasser-hospital/",
+      "datePublished": "2023-10-07",
+      "dateModified": "2026-09-23",
+      "inLanguage": "en",
+      "about": {
+        "@type": "Event",
+        "name": "An ambulance were targeted in front of Nasser hospital",
+        "startDate": "2023-10-07",
+        "location": {
+          "@type": "Place",
+          "name": "Nasser Medical Complex/ Khanyounis",
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 34.29192551,
+            "longitude": 34.29192551
+          }
+        }
+      },
+      "articleBody": "Israeli forces struck Indonesian hospital and an ambulance in front of Nasser hospital, killing a nurse and an ambulance driver and injuring several others.",
+      "keywords": "Bombing / shelling, current",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Deaths",
+          "propertyID": "casualties/deaths",
+          "value": "2 martyrs",
+          "minValue": 2,
+          "maxValue": 2
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Injured",
+          "propertyID": "casualties/injured",
+          "value": "Several Injuries"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Verification status",
+          "propertyID": "verification_status",
+          "value": "verified"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Author",
+          "propertyID": "author",
+          "value": "basma04elghu@gmail.com"
+        }
+      ],
+      "provider": {
+        "@type": "Organization",
+        "name": "PalGenoPedia",
+        "url": "https://palgenopedia.org"
+      },
+      "isBasedOn": "https://palgenopedia.org/data/events.json"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
       "@id": "https://palgenopedia.org/data/events.json#curr_004",
       "headline": "UNRWA School Strikes",
       "url": "https://palgenopedia.org/historical-events/massacres/unrwa-school-strikes/",
@@ -6129,6 +6199,52 @@
           "name": "Author",
           "propertyID": "author",
           "value": "aliattia02"
+        }
+      ],
+      "provider": {
+        "@type": "Organization",
+        "name": "PalGenoPedia",
+        "url": "https://palgenopedia.org"
+      },
+      "isBasedOn": "https://palgenopedia.org/data/events.json"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "@id": "https://palgenopedia.org/data/events.json#curr_012",
+      "headline": "Fuel Shortage threatens 130 premature babies` lives",
+      "url": "https://palgenopedia.org/historical-events/massacres/fuel-shortage-threatens-130-premature-babies-lives/",
+      "datePublished": "2023-10-21",
+      "dateModified": "2026-09-23",
+      "inLanguage": "en",
+      "about": {
+        "@type": "Event",
+        "name": "Fuel Shortage threatens 130 premature babies` lives",
+        "startDate": "2023-10-21",
+        "location": {
+          "@type": "Place",
+          "name": "Nasser Medical Complex/ Khanyounis",
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 34.29192551,
+            "longitude": 31.34693106
+          }
+        }
+      },
+      "articleBody": "Doctors in Gaza have issued an urgent warning that the lives of 130 premature babies are in imminent danger if fuel does not reach hospitals soon. There are six neonatal intensive care units at hospitals in Gaza, including Shifa and Nasser hospitals.",
+      "keywords": "Other, current",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Verification status",
+          "propertyID": "verification_status",
+          "value": "verified"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Author",
+          "propertyID": "author",
+          "value": "basma04elghu@gmail.com"
         }
       ],
       "provider": {

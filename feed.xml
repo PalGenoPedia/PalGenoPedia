@@ -5,7 +5,7 @@
   <updated>2026-09-23T00:00:00Z</updated>
   <link rel="self" href="https://palgenopedia.org/feed.xml"/>
   <link rel="alternate" href="https://palgenopedia.org/historical-events/massacres/"/>
-  <subtitle>Documented war crimes, massacres, and humanitarian violations concerning Palestine, 1948–present. Generated from the canonical /data/events.json (27 events).</subtitle>
+  <subtitle>Documented war crimes, massacres, and humanitarian violations concerning Palestine, 1948–present. Generated from the canonical /data/events.json (29 events).</subtitle>
   <author><name>PalGenoPedia</name></author>
   <!-- Regenerate from data/events.json to publish future additions. Newest events first. -->
   <entry>
@@ -137,6 +137,19 @@ Summary: Systematic destruction of entire neighborhoods in Gaza City. Thousands 
 Sources: UN OCHA; Satellite imagery analysis; Human Rights Watch; UN Satellite Centre</summary>
   </entry>
   <entry>
+    <title>Fuel Shortage threatens 130 premature babies` lives</title>
+    <link rel="alternate" href="https://palgenopedia.org/historical-events/massacres/fuel-shortage-threatens-130-premature-babies-lives/"/>
+    <id>https://palgenopedia.org/data/events.json#curr_012</id>
+    <published>2023-10-21T00:00:00Z</published>
+    <updated>2026-09-23T00:00:00Z</updated>
+    <category term="Other"/>
+    <category term="verification:verified"/>
+    <summary>Fuel Shortage threatens 130 premature babies` lives — Other (verified).
+Date: 2023-10-21
+Location: Nasser Medical Complex/ Khanyounis
+Summary: Doctors in Gaza have issued an urgent warning that the lives of 130 premature babies are in imminent danger if fuel does not reach hospitals soon. There are six neonatal intensive care units at hospitals in Gaza, including Shifa and Nasser hospitals.</summary>
+  </entry>
+  <entry>
     <title>Al-Ahli Baptist Hospital Strike</title>
     <link rel="alternate" href="https://palgenopedia.org/historical-events/massacres/al-ahli-baptist-hospital-strike/"/>
     <id>https://palgenopedia.org/data/events.json#curr_001</id>
@@ -167,6 +180,20 @@ Casualties: deaths: 450; injured: 1200; forced displacement: 0
 Alleged perpetrators: IDF
 Summary: Series of attacks on UNRWA schools serving as shelters for displaced Palestinians. Multiple schools hit despite UN coordination with Israeli forces.
 Sources: UNRWA Official Statements; UN Secretary-General Reports; Human Rights Watch</summary>
+  </entry>
+  <entry>
+    <title>An ambulance were targeted in front of Nasser hospital</title>
+    <link rel="alternate" href="https://palgenopedia.org/historical-events/massacres/an-ambulance-were-targeted-in-front-of-nasser-hospital/"/>
+    <id>https://palgenopedia.org/data/events.json#curr_011</id>
+    <published>2023-10-07T00:00:00Z</published>
+    <updated>2026-09-23T00:00:00Z</updated>
+    <category term="Bombing / shelling"/>
+    <category term="verification:verified"/>
+    <summary>An ambulance were targeted in front of Nasser hospital — Bombing / shelling (verified).
+Date: 2023-10-07
+Location: Nasser Medical Complex/ Khanyounis
+Casualties: deaths: 2 martyrs; injured: Several Injuries
+Summary: Israeli forces struck Indonesian hospital and an ambulance in front of Nasser hospital, killing a nurse and an ambulance driver and injuring several others.</summary>
   </entry>
   <entry>
     <title>West Bank Raids 2022–2023</title>

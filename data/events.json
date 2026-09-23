@@ -13,9 +13,9 @@
   ],
   "generated_from": "Pages/Historical_Massacres/{events,details}.csv (Google Sheet sync)",
   "counts": {
-    "total_events": 27,
+    "total_events": 29,
     "historical": 17,
-    "current": 10
+    "current": 12
   },
   "events": [
     {
@@ -3781,6 +3781,50 @@
       "author": "aliattia02"
     },
     {
+      "id": "curr_011",
+      "title": "An ambulance were targeted in front of Nasser hospital",
+      "period": "current",
+      "date_start": "2023-10-07",
+      "date_end": "2023-10-07",
+      "date_context": null,
+      "event_type": "Bombing / shelling",
+      "classification": null,
+      "location": {
+        "name_historical": "Nasser Medical Complex/ Khanyounis",
+        "name_current": "Nasser Medical Complex/ Khanyounis",
+        "lat": 34.29192551,
+        "lng": 34.29192551
+      },
+      "casualties": {
+        "deaths": {
+          "raw": "2 martyrs",
+          "min": 2,
+          "max": 2,
+          "estimate": 2
+        },
+        "injured": {
+          "raw": "Several Injuries",
+          "min": null,
+          "max": null,
+          "estimate": null
+        },
+        "forced_displacement": {
+          "raw": "",
+          "min": null,
+          "max": null,
+          "estimate": null
+        }
+      },
+      "perpetrators": [],
+      "summary": "Israeli forces struck Indonesian hospital and an ambulance in front of Nasser hospital, killing a nurse and an ambulance driver and injuring several others.",
+      "war_crimes": [],
+      "verification_status": "verified",
+      "sources": [],
+      "source_file": "events.csv",
+      "last_updated": "2026-09-23",
+      "author": "basma04elghu@gmail.com"
+    },
+    {
       "id": "curr_004",
       "title": "UNRWA School Strikes",
       "period": "current",
@@ -3925,6 +3969,50 @@
       "source_file": "events.csv",
       "last_updated": null,
       "author": "aliattia02"
+    },
+    {
+      "id": "curr_012",
+      "title": "Fuel Shortage threatens 130 premature babies` lives",
+      "period": "current",
+      "date_start": "2023-10-21",
+      "date_end": "2023-10-21",
+      "date_context": null,
+      "event_type": "Other",
+      "classification": null,
+      "location": {
+        "name_historical": "Nasser Medical Complex/ Khanyounis",
+        "name_current": "Nasser Medical Complex/ Khanyounis",
+        "lat": 34.29192551,
+        "lng": 31.34693106
+      },
+      "casualties": {
+        "deaths": {
+          "raw": "",
+          "min": null,
+          "max": null,
+          "estimate": null
+        },
+        "injured": {
+          "raw": "",
+          "min": null,
+          "max": null,
+          "estimate": null
+        },
+        "forced_displacement": {
+          "raw": "",
+          "min": null,
+          "max": null,
+          "estimate": null
+        }
+      },
+      "perpetrators": [],
+      "summary": "Doctors in Gaza have issued an urgent warning that the lives of 130 premature babies are in imminent danger if fuel does not reach hospitals soon. There are six neonatal intensive care units at hospitals in Gaza, including Shifa and Nasser hospitals.",
+      "war_crimes": [],
+      "verification_status": "verified",
+      "sources": [],
+      "source_file": "events.csv",
+      "last_updated": "2026-09-23",
+      "author": "basma04elghu@gmail.com"
     },
     {
       "id": "curr_009",

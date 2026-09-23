@@ -1,6 +1,6 @@
 {
   "generated": "2026-09-23",
-  "count": 84,
+  "count": 90,
   "pages": [
     {
       "url": "https://palgenopedia.org/historical-events/massacres/deir-yassin/",
@@ -810,6 +810,66 @@
       "id": "curr_010",
       "slug": "starvation-genocide-northern-gaza-blockade",
       "details": 9,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/an-ambulance-were-targeted-in-front-of-nasser-hospital/",
+      "path": "/historical-events/massacres/an-ambulance-were-targeted-in-front-of-nasser-hospital/",
+      "lang": "en",
+      "section": "massacres",
+      "id": "curr_011",
+      "slug": "an-ambulance-were-targeted-in-front-of-nasser-hospital",
+      "details": 0,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/de/an-ambulance-were-targeted-in-front-of-nasser-hospital/",
+      "path": "/historical-events/massacres/de/an-ambulance-were-targeted-in-front-of-nasser-hospital/",
+      "lang": "de",
+      "section": "massacres",
+      "id": "curr_011",
+      "slug": "an-ambulance-were-targeted-in-front-of-nasser-hospital",
+      "details": 0,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/ar/an-ambulance-were-targeted-in-front-of-nasser-hospital/",
+      "path": "/historical-events/massacres/ar/an-ambulance-were-targeted-in-front-of-nasser-hospital/",
+      "lang": "ar",
+      "section": "massacres",
+      "id": "curr_011",
+      "slug": "an-ambulance-were-targeted-in-front-of-nasser-hospital",
+      "details": 0,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/fuel-shortage-threatens-130-premature-babies-lives/",
+      "path": "/historical-events/massacres/fuel-shortage-threatens-130-premature-babies-lives/",
+      "lang": "en",
+      "section": "massacres",
+      "id": "curr_012",
+      "slug": "fuel-shortage-threatens-130-premature-babies-lives",
+      "details": 0,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/de/fuel-shortage-threatens-130-premature-babies-lives/",
+      "path": "/historical-events/massacres/de/fuel-shortage-threatens-130-premature-babies-lives/",
+      "lang": "de",
+      "section": "massacres",
+      "id": "curr_012",
+      "slug": "fuel-shortage-threatens-130-premature-babies-lives",
+      "details": 0,
+      "indexable": true
+    },
+    {
+      "url": "https://palgenopedia.org/historical-events/massacres/ar/fuel-shortage-threatens-130-premature-babies-lives/",
+      "path": "/historical-events/massacres/ar/fuel-shortage-threatens-130-premature-babies-lives/",
+      "lang": "ar",
+      "section": "massacres",
+      "id": "curr_012",
+      "slug": "fuel-shortage-threatens-130-premature-babies-lives",
+      "details": 0,
       "indexable": true
     },
     {
