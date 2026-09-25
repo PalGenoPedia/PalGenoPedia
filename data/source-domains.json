@@ -37,7 +37,7 @@
    "secondary": 3
   },
   "aa.com.tr": {
-   "count": 18,
+   "count": 19,
    "sample": "https://www.aa.com.tr/en/middle-east/palestine-27-years-since-ibrahimi-mosque-massacre/2156877",
    "archived": 0,
    "pending": 0,
@@ -164,6 +164,14 @@
      "manual": false
     },
     {
+     "u": "https://www.aa.com.tr/en/middle-east/gazas-al-rantisi-hospital-goes-out-of-service-leaving-38-children-with-kidney-failure-in-danger/3049210",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
      "u": "https://www.aa.com.tr/en/middle-east/israeli-army-admits-to-targeting-buraq-school-in-gaza/3050977",
      "role": "secondary",
      "status": "new",
@@ -189,7 +197,7 @@
     }
    ],
    "primary": 8,
-   "secondary": 10
+   "secondary": 11
   },
   "abcnews.com": {
    "count": 1,
@@ -856,12 +864,20 @@
    "secondary": 0
   },
   "apnews.com": {
-   "count": 1,
+   "count": 2,
    "sample": "https://apnews.com/article/israel-palestinians-hamas-war-hospital-rocket-gaza-8bc239d2efe0cff3998b2154d9220a83",
    "archived": 1,
    "pending": 0,
    "deferred": 0,
    "urls": [
+    {
+     "u": "https://apnews.com/article/israel-hamas-war-gaza-hospitals-be55b16dd18e55be1b8ad395163ca19b",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
     {
      "u": "https://apnews.com/article/israel-palestinians-hamas-war-hospital-rocket-gaza-8bc239d2efe0cff3998b2154d9220a83",
      "role": "secondary",
@@ -872,7 +888,7 @@
     }
    ],
    "primary": 0,
-   "secondary": 1
+   "secondary": 2
   },
   "arabi21.com": {
    "count": 1,
@@ -3019,7 +3035,7 @@
    "secondary": 1
   },
   "middleeasteye.net": {
-   "count": 8,
+   "count": 9,
    "sample": "https://www.middleeasteye.net/news/palestine-west-bank-deadliest-year-second-intifada",
    "archived": 0,
    "pending": 0,
@@ -3066,6 +3082,14 @@
      "manual": false
     },
     {
+     "u": "https://www.middleeasteye.net/live-update/israeli-air-strike-kills-palestinians-childrens-hospital-gaza",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
      "u": "https://www.middleeasteye.net/live-update/israeli-strike-al-buraq-school-kills-20-says-health-ministry",
      "role": "secondary",
      "status": "new",
@@ -3091,7 +3115,7 @@
     }
    ],
    "primary": 5,
-   "secondary": 3
+   "secondary": 4
   },
   "middleeastmonitor.com": {
    "count": 3,
@@ -3462,7 +3486,7 @@
    "secondary": 1
   },
   "ochaopt.org": {
-   "count": 123,
+   "count": 125,
    "sample": "https://www.ochaopt.org/content/eight-years-after-2008-2009-cast-lead-hostilities-gaza-lack-accountability-persists",
    "archived": 0,
    "pending": 1,
@@ -3766,6 +3790,14 @@
     },
     {
      "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-30",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-31",
      "role": "primary",
      "status": "new",
      "snap": "",
@@ -4451,10 +4483,18 @@
      "snap": "",
      "method": "",
      "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-32",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
     }
    ],
-   "primary": 115,
-   "secondary": 8
+   "primary": 116,
+   "secondary": 9
   },
   "ohchr.org": {
    "count": 10,

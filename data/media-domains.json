@@ -48,7 +48,7 @@
    "image": 1
   },
   "aljazeera.com": {
-   "count": 11,
+   "count": 12,
    "sample": "https://www.aljazeera.com/wp-content/uploads/2024/05/AA-20240525-34677288-34677276-ISRAELI_ARMY_ATTACKED_A_SCHOOL_WHERE_PALESTINIANS_TOOK_REFUGE_ON_GAZA-1716643168.jpg?resize=570%2C380&quality=80",
    "archived": 0,
    "pending": 0,
@@ -103,6 +103,14 @@
      "manual": false
     },
     {
+     "u": "https://www.aljazeera.com/wp-content/uploads/2023/11/2N8A4779-copy-1699302096.jpg?fit=1170%2C780&quality=80",
+     "role": "image",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
      "u": "https://www.aljazeera.com/wp-content/uploads/2023/11/AP23322521081052-1700331546.jpg?resize=770%2C513&quality=80",
      "role": "image",
      "status": "new",
@@ -144,7 +152,7 @@
     }
    ],
    "video": 5,
-   "image": 6
+   "image": 7
   },
   "anglicannews.org": {
    "count": 1,
