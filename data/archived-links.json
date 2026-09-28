@@ -97,6 +97,10 @@
   "error": "<urlopen error timed out>",
   "checked": "2026-08-29"
  },
+ "https://aje.io/u6olfz?update=2473657": {
+  "status": "new",
+  "social": false
+ },
  "https://anglicanalliance.org/palm-sunday-air-strikes-against-al-ahli-hospital-in-gaza-city": {
   "status": "archived",
   "social": false,
@@ -105,6 +109,14 @@
   "wayback": "https://web.archive.org/web/20260207012830/https://anglicanalliance.org/palm-sunday-air-strikes-against-al-ahli-hospital-in-gaza-city"
  },
  "https://anglicanoverseasaid.org.au/2025/04/14/palm-sunday-bombing-of-al-ahli-arab-hospital-in-gaza": {
+  "status": "new",
+  "social": false
+ },
+ "https://aohr.org.uk/israeli-occupation-targets-al-helou-hospital-in-gaza-isolates-patients-and-medical-staff": {
+  "status": "new",
+  "social": false
+ },
+ "https://apnews.com/article/israel-hamas-war-gaza-hospitals-be55b16dd18e55be1b8ad395163ca19b": {
   "status": "new",
   "social": false
  },
@@ -137,6 +149,10 @@
   "status": "requested",
   "social": false,
   "requested": "2026-08-29"
+ },
+ "https://cdnx.premiumread.com/?url=https://gulf-times.com/gulftimes/uploads/images/2025/07/08/334439.jpeg&w=800&q=100&f=webp&v=1": {
+  "status": "new",
+  "social": false
  },
  "https://cnewa.org/gaza-christian-hospital-hit-by-missile": {
   "status": "failed",
@@ -328,6 +344,10 @@
   "checked": "2026-08-29",
   "wayback": "https://web.archive.org/web/20260828225057/https://english.wafa.ps/Pages/Details/142688"
  },
+ "https://english.wafa.ps/Pages/Details/143876": {
+  "status": "new",
+  "social": false
+ },
  "https://english.wafa.ps/Pages/Details/157256": {
   "status": "new",
   "social": false
@@ -346,6 +366,10 @@
   "social": false
  },
  "https://episcopalnewsservice.org/2025/08/18/al-ahli-hospital-in-gaza-city-suffers-damage-from-fire-set-by-outlaws-attack-by-idf-drone": {
+  "status": "new",
+  "social": false
+ },
+ "https://felesteen.news/post/165217/%D8%A7%D9%84%D9%85%D9%86%D8%B8%D9%85%D8%A7%D8%AA-%D8%A7%D9%84%D8%A3%D9%87%D9%84%D9%8A%D8%A9-%D8%AA%D8%B3%D8%AA%D9%86%D9%83%D8%B1-%D8%AC%D8%B1%D9%8A%D9%85%D8%A9-%D8%A7%D9%84%D8%A7%D8%B9%D8%AA%D8%AF%D8%A7%D8%A1-%D8%B9%D9%84%D9%89-%D8%A7%D9%84%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89-%D8%A7%D9%84%D9%85%D9%8A%D8%AF%D8%A7%D9%86%D9%8A-%D9%81%D9%8A-%D8%A7": {
   "status": "new",
   "social": false
  },
@@ -393,6 +417,10 @@
   "status": "new",
   "social": false
  },
+ "https://gazahcsector.palestine-studies.org/en/node/7": {
+  "status": "new",
+  "social": false
+ },
  "https://gazahcsector.palestine-studies.org/en/node/76": {
   "status": "new",
   "social": false
@@ -413,7 +441,23 @@
   "status": "new",
   "social": false
  },
+ "https://gigaza.b-cdn.net/gigaza/2025/04/%D9%85%D8%B3%D8%AC%D8%AF-%D8%A7%D9%84%D8%B4%D9%85%D8%B9%D8%A9-%D8%BA%D8%B2%D8%A9.mp4": {
+  "status": "new",
+  "social": false
+ },
+ "https://gigaza.b-cdn.net/gigaza/2025/06/%D9%85%D8%B3%D8%AC%D8%AF-%D8%A7%D9%84%D8%B4%D9%85%D8%B9%D8%A9.webp": {
+  "status": "new",
+  "social": false
+ },
+ "https://gigaza.org/en/agreements-reports/graveyards-under-fire": {
+  "status": "new",
+  "social": false
+ },
  "https://gigaza.org/en/war-damage/al-quds-hospital-palestinian-red-crescent-society": {
+  "status": "new",
+  "social": false
+ },
+ "https://gigaza.org/en/war-damage/al-shama-mosque-gaza/": {
   "status": "new",
   "social": false
  },
@@ -525,6 +569,10 @@
   "status": "new",
   "social": false
  },
+ "https://news.sky.com/story/israel-bulldozed-mass-graves-at-gaza-hospital-sky-news-analysis-shows-13121638": {
+  "status": "new",
+  "social": false
+ },
  "https://news.sky.com/story/israeli-air-strike-hits-gaza-hospital-13347901": {
   "status": "new",
   "social": false
@@ -625,6 +673,14 @@
   "status": "new",
   "social": false
  },
+ "https://saba.ye/en/news3562872.htm": {
+  "status": "new",
+  "social": false
+ },
+ "https://safa.ps/post/386751/%D8%A7%D9%84%D9%85%D9%86%D8%B8%D9%85%D8%A7%D8%AA-%D8%A7%D9%84%D8%A3%D9%87%D9%84%D9%8A%D8%A9-%D8%AA%D8%B3%D8%AA%D9%86%D9%83%D8%B1-%D8%AC%D8%B1%D9%8A%D9%85%D8%A9-%D8%A7%D9%84%D8%A7%D8%B9%D8%AA%D8%AF%D8%A7%D8%A1-%D8%B9%D9%84%D9%89-%D8%A7%D9%84%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89-%D8%A7%D9%84%D9%85%D9%8A%D8%AF%D8%A7%D9%86%D9%8A-%D9%81%D9%8A-%D8%A7%D9%84%D8%B2%D9%88%D8%A7%D9%8A%D8%AF%D8%A9": {
+  "status": "new",
+  "social": false
+ },
  "https://t.me/MOHMediaGaza/4818": {
   "status": "new",
   "social": false
@@ -642,14 +698,6 @@
   "social": false
  },
  "https://t.me/MOHMediaGaza/5054": {
-  "status": "new",
-  "social": false
- },
- "https://t.me/QudsN/368852": {
-  "status": "new",
-  "social": false
- },
- "https://t.me/QudsN/369068": {
   "status": "new",
   "social": false
  },
@@ -701,10 +749,6 @@
   "status": "new",
   "social": true
  },
- "https://web.facebook.com/reel/300288569355036": {
-  "status": "new",
-  "social": true
- },
  "https://web.facebook.com/watch/?mibextid=wwXIfr&v=694104496360241&rdid=9lbhotKwTSimO6cr&_rdc=1&_rdr": {
   "status": "new",
   "social": true
@@ -729,6 +773,18 @@
   "status": "new",
   "social": false
  },
+ "https://www.aa.com.tr/ar/%D8%A5%D8%B3%D8%B1%D8%A7%D8%A6%D9%8A%D9%84/%D8%A5%D8%B3%D8%B1%D8%A7%D8%A6%D9%8A%D9%84-%D8%AA%D9%82%D8%B5%D9%81-%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89-%D8%A7%D9%84%D8%AD%D9%84%D9%88-%D9%81%D9%8A-%D8%BA%D8%B2%D8%A9-%D9%88%D8%AA%D9%85%D9%86%D8%B9-%D8%A7%D9%84%D9%88%D8%B5%D9%88%D9%84-%D8%A5%D9%84%D9%8A%D9%87/3701799": {
+  "status": "new",
+  "social": false
+ },
+ "https://www.aa.com.tr/ar/%D8%A5%D8%B3%D8%B1%D8%A7%D8%A6%D9%8A%D9%84/%D9%82%D8%B5%D9%81-%D8%A5%D8%B3%D8%B1%D8%A7%D8%A6%D9%8A%D9%84%D9%8A-%D9%8A%D8%B3%D8%AA%D9%87%D8%AF%D9%81-%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89-%D8%A7%D9%84%D8%B1%D9%86%D8%AA%D9%8A%D8%B3%D9%8A-%D9%84%D9%84%D8%A3%D8%B7%D9%81%D8%A7%D9%84-%D9%81%D9%8A-%D8%BA%D8%B2%D8%A9/3049177": {
+  "status": "new",
+  "social": false
+ },
+ "https://www.aa.com.tr/ar/%D8%A5%D8%B3%D8%B1%D8%A7%D8%A6%D9%8A%D9%84/%D9%88%D9%81%D8%A7%D8%A9-%D8%B1%D8%B6%D9%8A%D8%B9-%D9%88%D8%A5%D8%AC%D9%84%D8%A7%D8%A1-3-%D8%AE%D8%AF%D8%AC-%D9%85%D9%86-%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89-%D8%A8%D9%85%D8%AF%D9%8A%D9%86%D8%A9-%D8%BA%D8%B2%D8%A9-%D8%A5%D9%84%D9%89-%D8%AC%D9%86%D9%88%D8%A8-%D8%A7%D9%84%D9%82%D8%B7%D8%A7%D8%B9/3706519": {
+  "status": "new",
+  "social": false
+ },
  "https://www.aa.com.tr/ar/إسرائيل/صحة-غزة-الجيش-الإسرائيلي-يعاود-اقتحام-مشفى-ناصر-ويقتل-23-وسط-القطاع-/3145343": {
   "status": "new",
   "social": false
@@ -750,6 +806,14 @@
   "social": false
  },
  "https://www.aa.com.tr/en/middle-east/dozens-killed-wounded-as-israel-bombs-school-housing-displaced-people-in-northern-gaza/3043048": {
+  "status": "new",
+  "social": false
+ },
+ "https://www.aa.com.tr/en/middle-east/gazas-al-rantisi-hospital-goes-out-of-service-leaving-38-children-with-kidney-failure-in-danger/3049210": {
+  "status": "new",
+  "social": false
+ },
+ "https://www.aa.com.tr/en/middle-east/intense-israeli-bombardment-turns-gaza-hospitals-into-graveyards/3050647": {
   "status": "new",
   "social": false
  },
@@ -797,6 +861,10 @@
   "status": "new",
   "social": false
  },
+ "https://www.ajnet.me/news/2025/5/30/%D8%AA%D8%AC%D9%85%D8%B9-%D8%A7%D9%84%D8%B9%D8%B4%D8%A7%D8%A6%D8%B1-%D8%A8%D8%BA%D8%B2%D8%A9-%D9%8A%D8%AF%D9%8A%D9%86-%D8%A7%D8%B9%D8%AA%D8%AF%D8%A7%D8%A1-%D9%81%D8%A6%D8%A9?traffic_source=rss": {
+  "status": "new",
+  "social": false
+ },
  "https://www.alarabiya.net/arab-and-world/2024/04/23/الأمم-المتحدة-تحقق-في-العثور-على-أكثر-من-300-جثة-في-مقبرتين-جماعيتين-بغزة": {
   "status": "new",
   "social": false
@@ -818,6 +886,10 @@
   "social": false
  },
  "https://www.aljazeera.com/gallery/2023/10/17/photos-an-israeli-air-raid-on-al-ahli-arab-hospital-kills-an-estimated-500": {
+  "status": "new",
+  "social": false
+ },
+ "https://www.aljazeera.com/gallery/2023/11/7/israel-continues-to-attack-hospitals-in-gaza-city-killing-at-least-eight": {
   "status": "new",
   "social": false
  },
@@ -897,6 +969,14 @@
   "status": "new",
   "social": false
  },
+ "https://www.aljazeera.com/news/2025/8/31/israel-is-reducing-gaza-city-to-fields-of-rubble-kills-78-across-enclave": {
+  "status": "new",
+  "social": false
+ },
+ "https://www.aljazeera.com/news/2025/9/28/horrific-israel-bombs-hospitals-residential-towers-amid-gaza-onslaught": {
+  "status": "new",
+  "social": false
+ },
  "https://www.aljazeera.com/news/2026/8/1/israeli-strikes-kill-four-across-gaza-destroy-medical-supply-warehouse": {
   "status": "new",
   "social": false
@@ -910,6 +990,10 @@
   "social": false
  },
  "https://www.aljazeera.com/video/newsfeed/2023/12/20/israeli-strike-hits-during-live-report-near-hospital-in-rafah": {
+  "status": "new",
+  "social": false
+ },
+ "https://www.aljazeera.com/wp-content/uploads/2023/11/2N8A4779-copy-1699302096.jpg?fit=1170%2C780&quality=80": {
   "status": "new",
   "social": false
  },
@@ -1085,11 +1169,23 @@
   "status": "new",
   "social": false
  },
+ "https://www.doctorswithoutborders.org/latest/gaza-msf-doctors-killed-strike-al-awda-hospital": {
+  "status": "new",
+  "social": false
+ },
+ "https://www.doctorswithoutborders.org/latest/gaza-msf-provides-medical-care-and-donates-supplies-amid-intense-conflict": {
+  "status": "new",
+  "social": false
+ },
  "https://www.doctorswithoutborders.org/latest/nasser-hospital-collapses-cutting-access-health-care-southern-gaza": {
   "status": "new",
   "social": false
  },
  "https://www.doctorswithoutborders.org/latest/palestinians-gaza-are-being-deliberately-asphyxiated-israeli-forces": {
+  "status": "new",
+  "social": false
+ },
+ "https://www.doctorswithoutborders.org/latest/seven-months-relentless-attacks-health-care-palestine": {
   "status": "new",
   "social": false
  },
@@ -1110,6 +1206,10 @@
   "social": true
  },
  "https://www.facebook.com/AVHJerusalem/posts/yesterday-at-700-pm-al-ahli-arab-hospital-in-gaza-which-is-our-partner-in-the-di/699695938874919/?_rdc=2&_rdr": {
+  "status": "new",
+  "social": true
+ },
+ "https://www.facebook.com/AlMamlakaTV/videos/%D8%A5%D8%B3%D8%B1%D8%A7%D8%A6%D9%8A%D9%84-%D8%AA%D9%82%D8%B5%D9%81-%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89-%D8%A7%D9%84%D8%AD%D9%84%D9%88-%D9%84%D9%84%D8%A3%D8%B7%D9%81%D8%A7%D9%84-%D9%81%D9%8A-%D9%85%D8%AF%D9%8A%D9%86%D8%A9-%D8%BA%D8%B2%D8%A9/4143784155878840": {
   "status": "new",
   "social": true
  },
@@ -1393,11 +1493,7 @@
   "status": "new",
   "social": true
  },
- "https://www.instagram.com/p/C2Zp3Gjt9gc/?utm_source=ig_embed&utm_campaign=embed_video_watch_again": {
-  "status": "new",
-  "social": true
- },
- "https://www.instagram.com/p/C3Mz8Kzt8_0/?utm_source=ig_embed&utm_campaign=invalid&ig_rid=96861198-1074-4c6d-b635-2701f597e045": {
+ "https://www.instagram.com/p/C2Zp3Gjt9gc/?utm_source=ig_embed&utm_campaign=invalid&ig_rid=96861198-1074-4c6d-b635-2701f597e045%20%2C%20https%3A%2F%2Fweb.facebook.com%2Freel%2F300288569355036%20%2C": {
   "status": "new",
   "social": true
  },
@@ -1410,6 +1506,10 @@
   "social": true
  },
  "https://www.instagram.com/p/DOlb9jIjSFY": {
+  "status": "new",
+  "social": true
+ },
+ "https://www.instagram.com/p/DPJ-eIvgUiO": {
   "status": "new",
   "social": true
  },
@@ -1430,10 +1530,6 @@
   "social": true
  },
  "https://www.instagram.com/reels/DPRASOOkppd": {
-  "status": "new",
-  "social": true
- },
- "https://www.instagram.com/reels/DPW866_EvlM": {
   "status": "new",
   "social": true
  },
@@ -1490,6 +1586,14 @@
   "social": false
  },
  "https://www.middleeasteye.net/live-blog/live-blog-update/israel-kills-two-strike-gaza-hospital-one-killed-targeting-electric-bike": {
+  "status": "new",
+  "social": false
+ },
+ "https://www.middleeasteye.net/live-update/hospital-north-gaza-refuses-leave-patients-and-evacuate": {
+  "status": "new",
+  "social": false
+ },
+ "https://www.middleeasteye.net/live-update/israeli-air-strike-kills-palestinians-childrens-hospital-gaza": {
   "status": "new",
   "social": false
  },
@@ -1566,6 +1670,10 @@
   "social": false
  },
  "https://www.nationalarchives.gov.uk": {
+  "status": "new",
+  "social": false
+ },
+ "https://www.nbcnews.com/news/world/several-children-cancer-serious-blood-disorders-evacuated-gaza-rcna124722": {
   "status": "new",
   "social": false
  },
@@ -1766,6 +1874,14 @@
   "social": false
  },
  "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-30": {
+  "status": "new",
+  "social": false
+ },
+ "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-31": {
+  "status": "new",
+  "social": false
+ },
+ "https://www.ochaopt.org/content/hostilities-gaza-strip-and-israel-flash-update-32": {
   "status": "new",
   "social": false
  },
@@ -2050,6 +2166,10 @@
   "social": false
  },
  "https://www.ochaopt.org/content/humanitarian-situation-update-317-gaza-strip": {
+  "status": "new",
+  "social": false
+ },
+ "https://www.ochaopt.org/content/humanitarian-situation-update-319-gaza-strip": {
   "status": "new",
   "social": false
  },
@@ -2921,7 +3041,15 @@
   "status": "new",
   "social": true
  },
+ "https://x.com/MedicalAidPal/status/1715811469504188611": {
+  "status": "new",
+  "social": true
+ },
  "https://x.com/MiddleEastEye/status/1728473137300320383?s=20": {
+  "status": "new",
+  "social": true
+ },
+ "https://x.com/MuhammadSmiry/status/1722748917937320105/photo/1": {
   "status": "new",
   "social": true
  },
@@ -3138,6 +3266,14 @@
   "social": true
  },
  "https://x.com/UNRWA/status/1845413880039616588/photo/1": {
+  "status": "new",
+  "social": true
+ },
+ "https://x.com/WHOoPt/status/1733572487399563650": {
+  "status": "new",
+  "social": true
+ },
+ "https://x.com/paldf/status/1735946743601098930": {
   "status": "new",
   "social": true
  },
