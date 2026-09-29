@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ethnic Cleansing of Palestinian Villages, 1948 | PalGenoPedia</title>
-    <meta name="description" content="Comprehensive documentation of 418 Palestinian villages ethnically cleansed from 1948 to present day">
+    <meta name="description" content="Comprehensive documentation of 654 Palestinian villages, towns and communities depopulated or destroyed from 1948 to the present day">
     
     <!-- Leaflet CSS for Map -->
     <link rel="stylesheet" href="/Styles/vendor/leaflet-1.9.4.min.css" />
@@ -472,7 +472,7 @@
     <meta property="og:site_name" content="PalGenoPedia">
     <meta property="og:locale" content="en_US">
     <meta property="og:title" content="Ethnic Cleansing of Palestinian Villages, 1948 | PalGenoPedia">
-    <meta property="og:description" content="Comprehensive documentation of 418 Palestinian villages ethnically cleansed from 1948 to present day">
+    <meta property="og:description" content="Comprehensive documentation of 654 Palestinian villages, towns and communities depopulated or destroyed from 1948 to the present day">
     <meta property="og:url" content="https://palgenopedia.org/historical-events/ethnic-cleansing/">
     <meta property="og:image" content="https://palgenopedia.org/images/og-card.png">
     <meta property="og:image:width" content="1200">
@@ -480,7 +480,7 @@
     <meta property="og:image:alt" content="PalGenoPedia - documented war crimes, massacres and humanitarian violations concerning Palestine, 1948 to present">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Ethnic Cleansing of Palestinian Villages, 1948 | PalGenoPedia">
-    <meta name="twitter:description" content="Comprehensive documentation of 418 Palestinian villages ethnically cleansed from 1948 to present day">
+    <meta name="twitter:description" content="Comprehensive documentation of 654 Palestinian villages, towns and communities depopulated or destroyed from 1948 to the present day">
     <meta name="twitter:image" content="https://palgenopedia.org/images/og-card.png">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="alternate" type="application/atom+xml" title="PalGenoPedia - documented events" href="../../feed.xml">
@@ -492,7 +492,7 @@
   "@id": "https://palgenopedia.org/historical-events/ethnic-cleansing/#page",
   "url": "https://palgenopedia.org/historical-events/ethnic-cleansing/",
   "name": "Ethnic Cleansing of Palestinian Villages, 1948 | PalGenoPedia",
-  "description": "Comprehensive documentation of 418 Palestinian villages ethnically cleansed from 1948 to present day",
+  "description": "Comprehensive documentation of 654 Palestinian villages, towns and communities depopulated or destroyed from 1948 to the present day",
   "inLanguage": "en",
   "isPartOf": {
     "@id": "https://palgenopedia.org/#website"
@@ -541,7 +541,7 @@
         <div class="page-header">
             <div class="container">
                 <h1>🏘️ Ethnic Cleansing Documentation</h1>
-                <p>Comprehensive record of 418 Palestinian villages systematically depopulated from 1948 to present day</p>
+                <p>Comprehensive record of 654 Palestinian villages, towns and communities depopulated or destroyed from 1948 to the present day</p>
             </div>
         </div>
 
@@ -550,22 +550,22 @@
             <div class="stats-dashboard">
                 <div class="stat-card">
                     <div class="stat-icon">🏘️</div>
-                    <div class="stat-value" id="totalVillages">418</div>
-                    <div class="stat-label">Villages Destroyed</div>
+                    <div class="stat-value" id="totalVillages">654</div>
+                    <div class="stat-label">Localities Depopulated</div>
                 </div>
                 <div class="stat-card">
                     <div class="stat-icon">👥</div>
-                    <div class="stat-value" id="totalDisplaced">950,000</div>
+                    <div class="stat-value" id="totalDisplaced">1,222,005</div>
                     <div class="stat-label">People Displaced</div>
                 </div>
                 <div class="stat-card">
                     <div class="stat-icon">📅</div>
-                    <div class="stat-value">1948-2025</div>
+                    <div class="stat-value">1948-2026</div>
                     <div class="stat-label">Time Period</div>
                 </div>
                 <div class="stat-card">
                     <div class="stat-icon">📚</div>
-                    <div class="stat-value" id="lastUpdated">2025-01-15</div>
+                    <div class="stat-value" id="lastUpdated">2026-09-29</div>
                     <div class="stat-label">Last Updated</div>
                 </div>
             </div>
@@ -577,37 +577,43 @@
                     <div class="period-card active" data-period="all" onclick="filterByPeriod('all')">
                         <div class="period-icon">📚</div>
                         <div class="period-label">All Periods</div>
-                        <div class="period-count" id="count-all">418</div>
+                        <div class="period-count" id="count-all">654</div>
                         <div class="period-population">1948 - Present</div>
                     </div>
                     <div class="period-card" data-period="1948-1949" onclick="filterByPeriod('1948-1949')">
                         <div class="period-icon">📜</div>
                         <div class="period-label">Nakba Period</div>
-                        <div class="period-count" id="count-1948-1949">392</div>
+                        <div class="period-count" id="count-1948-1949">484</div>
                         <div class="period-population">1948 - 1949</div>
+                    </div>
+                    <div class="period-card" data-period="undated" onclick="filterByPeriod('undated')">
+                        <div class="period-icon">❔</div>
+                        <div class="period-label">Date Not Recorded</div>
+                        <div class="period-count" id="count-undated">115</div>
+                        <div class="period-population">c. 1948 (mostly Naqab)</div>
                     </div>
                     <div class="period-card" data-period="1950-1966" onclick="filterByPeriod('1950-1966')">
                         <div class="period-icon">📋</div>
                         <div class="period-label">Post-Nakba</div>
-                        <div class="period-count" id="count-1950-1966">1</div>
+                        <div class="period-count" id="count-1950-1966">4</div>
                         <div class="period-population">1950 - 1966</div>
                     </div>
                     <div class="period-card" data-period="1967" onclick="filterByPeriod('1967')">
                         <div class="period-icon">⚔️</div>
                         <div class="period-label">Six-Day War</div>
-                        <div class="period-count" id="count-1967">9</div>
+                        <div class="period-count" id="count-1967">18</div>
                         <div class="period-population">June 1967</div>
                     </div>
                     <div class="period-card" data-period="1967-2023" onclick="filterByPeriod('1967-2023')">
                         <div class="period-icon">🏛️</div>
                         <div class="period-label">Occupation Era</div>
-                        <div class="period-count" id="count-1967-2023">6</div>
+                        <div class="period-count" id="count-1967-2023">9</div>
                         <div class="period-population">1967 - 2023</div>
                     </div>
                     <div class="period-card" data-period="2023-present" onclick="filterByPeriod('2023-present')">
                         <div class="period-icon">🚨</div>
                         <div class="period-label">Current Period</div>
-                        <div class="period-count" id="count-2023-present">10</div>
+                        <div class="period-count" id="count-2023-present">24</div>
                         <div class="period-population">2023 - Present</div>
                     </div>
                 </div>
@@ -631,6 +637,10 @@
                             <option value="fear_of_attack">😰 Fear of Attack</option>
                             <option value="whispering_campaign">💭 Whispering Campaign</option>
                             <option value="administrative_demolition">🏗️ Administrative Demolition</option>
+                            <option value="military_demolitions">🚜 Military Demolitions</option>
+                            <option value="settler_violence">🔥 Settler Violence</option>
+                            <option value="eviction">📜 Eviction</option>
+                            <option value="unknown">❓ Method Unknown</option>
                         </select>
                     </div>
                     <div class="filter-group">
@@ -697,6 +707,30 @@
 
             <!-- Results Count -->
             <div id="resultsCount" style="margin-top: 1rem; text-align: center; color: var(--text-secondary);"></div>
+
+            <!-- Sources & Credits -->
+            <section class="filters-section" style="margin-top: 2rem;">
+                <h3>📚 Sources &amp; Credits</h3>
+                <p style="color: var(--text-secondary); line-height: 1.6;">
+                    Locations, 1945 populations, depopulation dates and village maps for 1948 localities come from
+                    <a href="https://palopenmaps.org/" target="_blank" rel="noopener">Palestine Open Maps</a>, which links each place to
+                    <a href="https://www.zochrot.org/" target="_blank" rel="noopener">Zochrot</a>,
+                    <a href="https://www.palestineremembered.com/" target="_blank" rel="noopener">Palestine Remembered</a>,
+                    Salman Abu Sitta's <em>Atlas of Palestine 1948</em> and
+                    <a href="https://www.palquest.org/" target="_blank" rel="noopener">PalQuest</a>.
+                    Displacement methods follow Benny Morris and Walid Khalidi where known. Post-1948 entries cite
+                    <a href="https://www.ochaopt.org/data/demolition" target="_blank" rel="noopener">UN OCHA</a>,
+                    <a href="https://www.ohchr.org/en/documents/thematic-reports/thematic-report-destruction-palestinian-refugee-camps-northern-west-bank" target="_blank" rel="noopener">UN OHCHR</a>,
+                    <a href="https://www.btselem.org/" target="_blank" rel="noopener">B'Tselem</a>,
+                    <a href="https://www.hrw.org/" target="_blank" rel="noopener">Human Rights Watch</a>,
+                    <a href="https://www.adalah.org/" target="_blank" rel="noopener">Adalah</a> and others. Every record lists its own sources.
+                </p>
+                <p style="color: var(--text-secondary); line-height: 1.6;">
+                    Village map images: 1940s Survey of Palestine 1:20,000 map excerpts, via Palestine Open Maps.
+                    Population figures for 1948 localities are 1945 Village Statistics; for recent entries they are the displaced or at-risk
+                    figure reported by the cited source.
+                </p>
+            </section>
         </div>
     </main>
 
