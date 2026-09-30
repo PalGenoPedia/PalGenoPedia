@@ -1128,6 +1128,25 @@
    "video": 0,
    "image": 2
   },
+  "saba.ye": {
+   "count": 1,
+   "sample": "https://www.saba.ye/storage/larage/3453211b290007e02bc1ce94f493a89f.jpg",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.saba.ye/storage/larage/3453211b290007e02bc1ce94f493a89f.jpg",
+     "role": "image",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
+   "video": 0,
+   "image": 1
+  },
   "safa.ps": {
    "count": 1,
    "sample": "https://safa.ps/post/386751/%D8%A7%D9%84%D9%85%D9%86%D8%B8%D9%85%D8%A7%D8%AA-%D8%A7%D9%84%D8%A3%D9%87%D9%84%D9%8A%D8%A9-%D8%AA%D8%B3%D8%AA%D9%86%D9%83%D8%B1-%D8%AC%D8%B1%D9%8A%D9%85%D8%A9-%D8%A7%D9%84%D8%A7%D8%B9%D8%AA%D8%AF%D8%A7%D8%A1-%D8%B9%D9%84%D9%89-%D8%A7%D9%84%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89-%D8%A7%D9%84%D9%85%D9%8A%D8%AF%D8%A7%D9%86%D9%8A-%D9%81%D9%8A-%D8%A7%D9%84%D8%B2%D9%88%D8%A7%D9%8A%D8%AF%D8%A9",
@@ -1315,6 +1334,25 @@
    "video": 0,
    "image": 1
   },
+  "web-cdnprod.aa.com.tr": {
+   "count": 1,
+   "sample": "https://web-cdnprod.aa.com.tr/uploads/Contents/2023/10/29/thumbs_b_c_d5190ab20eb05c5cd3cbddb2c56895b0.jpg?v=234835",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "urls": [
+    {
+     "u": "https://web-cdnprod.aa.com.tr/uploads/Contents/2023/10/29/thumbs_b_c_d5190ab20eb05c5cd3cbddb2c56895b0.jpg?v=234835",
+     "role": "image",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
+   "video": 0,
+   "image": 1
+  },
   "web.facebook.com": {
    "count": 2,
    "sample": "https://web.facebook.com/watch/?v=1566031537325544",
@@ -1343,7 +1381,7 @@
    "image": 0
   },
   "x.com": {
-   "count": 33,
+   "count": 35,
    "sample": "https://x.com/ytirawi/status/1793628894245118205?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1793628894245118205%7Ctwgr%5E3c3c4e3a656c76e64242489d538a2c47a65ab99b%7Ctwcon%5Es1_&ref_url=https%3A%2F%2Fthreadreaderapp.com%2Fthread%2F1793700811870290179.html",
    "archived": 0,
    "pending": 0,
@@ -1375,6 +1413,14 @@
     },
     {
      "u": "https://x.com/Israel_katz/status/1967210017008013424?s=20",
+     "role": "video",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://x.com/LapagequiBUZZ/status/1720096276057030695/video/1",
      "role": "video",
      "status": "new",
      "snap": "",
@@ -1487,6 +1533,14 @@
     },
     {
      "u": "https://x.com/PalinfoAr/status/1757164164097733030",
+     "role": "video",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://x.com/anadoluagency/status/1719115919983546566/video/1",
      "role": "video",
      "status": "new",
      "snap": "",
@@ -1614,7 +1668,7 @@
      "manual": false
     }
    ],
-   "video": 21,
+   "video": 23,
    "image": 12
   },
   "youtu.be": {
@@ -1637,7 +1691,7 @@
    "image": 0
   },
   "youtube.com": {
-   "count": 26,
+   "count": 27,
    "sample": "https://www.youtube.com/watch?v=E4rltTvrt_c",
    "archived": 0,
    "pending": 0,
@@ -1701,6 +1755,14 @@
     },
     {
      "u": "https://www.youtube.com/watch?v=E4rltTvrt_c",
+     "role": "video",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.youtube.com/watch?v=EsYqcaUdDHE",
      "role": "video",
      "status": "new",
      "snap": "",
@@ -1852,7 +1914,7 @@
      "manual": false
     }
    ],
-   "video": 25,
+   "video": 26,
    "image": 1
   }
  }

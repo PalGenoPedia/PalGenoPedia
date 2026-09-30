@@ -37,7 +37,7 @@
    "secondary": 3
   },
   "aa.com.tr": {
-   "count": 19,
+   "count": 20,
    "sample": "https://www.aa.com.tr/en/middle-east/palestine-27-years-since-ibrahimi-mosque-massacre/2156877",
    "archived": 0,
    "pending": 0,
@@ -188,6 +188,14 @@
      "manual": false
     },
     {
+     "u": "https://www.aa.com.tr/en/middle-east/palestinian-red-crescent-society-vows-to-keep-al-quds-hospital-in-gaza-running/3037392",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
      "u": "https://www.aa.com.tr/en/middle-east/scores-of-palestinians-dead-wounded-from-israeli-bombing-of-gaza-school-sheltering-displaced-people/3056793",
      "role": "secondary",
      "status": "new",
@@ -197,7 +205,7 @@
     }
    ],
    "primary": 8,
-   "secondary": 11
+   "secondary": 12
   },
   "abcnews.com": {
    "count": 1,
@@ -486,7 +494,7 @@
    "secondary": 1
   },
   "aljazeera.com": {
-   "count": 29,
+   "count": 35,
    "sample": "https://www.aljazeera.com/features/2022/1/27/tantura-a-film-about-a-massacre-israel-didnt-want-you-to-see",
    "archived": 0,
    "pending": 0,
@@ -581,6 +589,14 @@
      "manual": false
     },
     {
+     "u": "https://www.aljazeera.com/news/2023/11/6/israeli-forces-target-solar-panels-at-gazas-al-shifa-hospital",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
      "u": "https://www.aljazeera.com/news/2023/2/22/israeli-forces-kill-palestinians-in-nablus-raid",
      "role": "primary",
      "status": "new",
@@ -621,6 +637,14 @@
      "manual": false
     },
     {
+     "u": "https://www.aljazeera.com/news/2025/8/10/al-jazeera-journalist-anas-al-sharif-killed-in-israeli-attack-in-gaza-city",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
      "u": "https://www.aljazeera.com/news/2025/9/28/horrific-israel-bombs-hospitals-residential-towers-amid-gaza-onslaught",
      "role": "primary",
      "status": "new",
@@ -630,6 +654,14 @@
     },
     {
      "u": "https://www.aljazeera.com/news/2026/8/1/israeli-strikes-kill-four-across-gaza-destroy-medical-supply-warehouse",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.aljazeera.com/news/liveblog/2023/12/1/israel-hamas-war-live-relief-and-joy-as-more-palestinian-prisoners-freed?update=2528387",
      "role": "primary",
      "status": "new",
      "snap": "",
@@ -693,6 +725,14 @@
      "manual": false
     },
     {
+     "u": "https://www.aljazeera.com/news/2024/5/3/doctor-from-gazas-al-shifa-hospital-dies-in-israeli-prison",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
      "u": "https://www.aljazeera.com/news/2025/4/13/timeline-israels-attacks-on-hospitals-throughout-its-war-on-gaza",
      "role": "secondary",
      "status": "new",
@@ -702,6 +742,14 @@
     },
     {
      "u": "https://www.aljazeera.com/news/2025/8/31/israel-is-reducing-gaza-city-to-fields-of-rubble-kills-78-across-enclave",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.aljazeera.com/news/2025/9/17/israel-strikes-kill-palestinians-near-gazas-last-functioning-hospitals",
      "role": "secondary",
      "status": "new",
      "snap": "",
@@ -723,10 +771,18 @@
      "snap": "",
      "method": "",
      "manual": false
+    },
+    {
+     "u": "https://www.aljazeera.com/opinions/2025/9/13/israel-wants-us-to-evacuate-al-shifa-hospital-again-to-kill-hope",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
     }
    ],
-   "primary": 19,
-   "secondary": 10
+   "primary": 22,
+   "secondary": 13
   },
   "aljazeera.net": {
    "count": 5,
@@ -1288,7 +1344,7 @@
    "secondary": 0
   },
   "cnn.com": {
-   "count": 1,
+   "count": 2,
    "sample": "https://www.cnn.com/2024/01/30/middleeast/idf-khan-younis-hospital-intl",
    "archived": 0,
    "pending": 0,
@@ -1301,13 +1357,21 @@
      "snap": "",
      "method": "",
      "manual": false
+    },
+    {
+     "u": "https://www.cnn.com/2024/05/03/middleeast/gaza-surgeon-adnan-al-bursh-israeli-prison-intl-hnk",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
     }
    ],
    "primary": 0,
-   "secondary": 1
+   "secondary": 2
   },
   "cpj.org": {
-   "count": 1,
+   "count": 2,
    "sample": "https://cpj.org",
    "archived": 1,
    "pending": 0,
@@ -1320,10 +1384,37 @@
      "snap": "https://web.archive.org/web/20260825080336/https://cpj.org",
      "method": "",
      "manual": false
+    },
+    {
+     "u": "https://cpj.org/data/people/anas-al-sharif",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
     }
    ],
    "primary": 1,
-   "secondary": 0
+   "secondary": 1
+  },
+  "dawn.com": {
+   "count": 1,
+   "sample": "https://www.dawn.com/news/1787007/israeli-forces-target-solar-panels-at-gazas-al-shifa-hospital-palestinian-media",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.dawn.com/news/1787007/israeli-forces-target-solar-panels-at-gazas-al-shifa-hospital-palestinian-media",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
+   "primary": 0,
+   "secondary": 1
   },
   "dci-palestine.org": {
    "count": 1,
@@ -1345,7 +1436,7 @@
    "secondary": 0
   },
   "democracynow.org": {
-   "count": 1,
+   "count": 2,
    "sample": "https://www.democracynow.org/2021/7/30/investigation_israel_war_crimes_palestine",
    "archived": 0,
    "pending": 0,
@@ -1358,10 +1449,18 @@
      "snap": "",
      "method": "",
      "manual": false
+    },
+    {
+     "u": "https://www.democracynow.org/2024/9/19/headlines/third_doctor_from_gaza_dies_in_israeli_custody_after_he_was_abducted_in_hospital_raid",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
     }
    ],
    "primary": 1,
-   "secondary": 0
+   "secondary": 1
   },
   "docs.un.org": {
    "count": 1,
@@ -1381,6 +1480,25 @@
    ],
    "primary": 1,
    "secondary": 0
+  },
+  "doctorswithoutborders.ca": {
+   "count": 1,
+   "sample": "https://www.doctorswithoutborders.ca/gaza-msf-clinic-in-gaza-city-came-under-fire",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.doctorswithoutborders.ca/gaza-msf-clinic-in-gaza-city-came-under-fire",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
+   "primary": 0,
+   "secondary": 1
   },
   "doctorswithoutborders.org": {
    "count": 6,
@@ -1526,7 +1644,7 @@
    "secondary": 1
   },
   "en.wikipedia.org": {
-   "count": 12,
+   "count": 13,
    "sample": "https://en.wikipedia.org/wiki/1948_Palestinian_expulsion_from_Lydda_and_Ramle",
    "archived": 5,
    "pending": 3,
@@ -1597,6 +1715,14 @@
      "manual": false
     },
     {
+     "u": "https://en.wikipedia.org/wiki/Assassination_of_Anas_Al-Sharif",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
      "u": "https://en.wikipedia.org/wiki/Attacks_on_health_facilities_during_the_Gaza_war",
      "role": "secondary",
      "status": "archived",
@@ -1630,7 +1756,7 @@
     }
    ],
    "primary": 7,
-   "secondary": 5
+   "secondary": 6
   },
   "english.alarabiya.net": {
    "count": 1,
@@ -1835,7 +1961,7 @@
    "secondary": 0
   },
   "facebook.com": {
-   "count": 22,
+   "count": 23,
    "sample": "https://www.facebook.com/voiceofthecape/posts/trigger-warning-a-journalist-in-the-jabalia-refugee-camp-in-the-gaza-strip-abdul/739174581571429",
    "archived": 0,
    "pending": 0,
@@ -1883,6 +2009,14 @@
     },
     {
      "u": "https://www.facebook.com/Kuwait.hos/posts/pfbid02UT99WXiQEfkXFR9pR8fG6dgnuxoGqqCvJJvBspML6FQHmKn1fX2BY93Tnh2FACTJl",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.facebook.com/PalestineRCS/posts/-%D8%AA%D8%B9%D8%B1%D8%B6-%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89-%D8%A7%D9%84%D9%82%D8%AF%D8%B3-%D9%81%D9%8A-%D8%AD",
      "role": "secondary",
      "status": "new",
      "snap": "",
@@ -2019,7 +2153,7 @@
     }
    ],
    "primary": 4,
-   "secondary": 18
+   "secondary": 19
   },
   "felesteen.news": {
    "count": 1,
@@ -2060,7 +2194,7 @@
    "secondary": 0
   },
   "france24.com": {
-   "count": 1,
+   "count": 2,
    "sample": "https://www.france24.com/en/middle-east/20231018-what-we-know-about-the-deadly-blast-at-gaza-city-s-al-ahli-hospital",
    "archived": 0,
    "pending": 0,
@@ -2073,10 +2207,18 @@
      "snap": "",
      "method": "",
      "manual": false
+    },
+    {
+     "u": "https://www.france24.com/en/middle-east/20250925-al-shifa-hospital-gaza-city-medical-staff-bombing",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
     }
    ],
    "primary": 0,
-   "secondary": 1
+   "secondary": 2
   },
   "gazaeducationsector.palestine-studies.org": {
    "count": 4,
@@ -2122,7 +2264,7 @@
    "secondary": 1
   },
   "gazahcsector.palestine-studies.org": {
-   "count": 6,
+   "count": 7,
    "sample": "https://gazahcsector.palestine-studies.org/en/node/77",
    "archived": 0,
    "pending": 0,
@@ -2161,6 +2303,14 @@
      "manual": false
     },
     {
+     "u": "https://gazahcsector.palestine-studies.org/en/node/94",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
      "u": "https://gazahcsector.palestine-studies.org/en/node/5",
      "role": "secondary",
      "status": "new",
@@ -2177,7 +2327,7 @@
      "manual": false
     }
    ],
-   "primary": 4,
+   "primary": 5,
    "secondary": 2
   },
   "genocide.live": {
@@ -2695,6 +2845,25 @@
    "primary": 0,
    "secondary": 1
   },
+  "info.wafa.ps": {
+   "count": 1,
+   "sample": "https://info.wafa.ps/pages/details/34226",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "urls": [
+    {
+     "u": "https://info.wafa.ps/pages/details/34226",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
+   "primary": 1,
+   "secondary": 0
+  },
   "insecurityinsight.org": {
    "count": 1,
    "sample": "https://insecurityinsight.org/wp-content/uploads/2024/04/27.-09-22-April-2024-Attacks-on-Health-Care-in-Israel-and-the-oPt.pdf",
@@ -2885,6 +3054,25 @@
    "primary": 0,
    "secondary": 1
   },
+  "malaymail.com": {
+   "count": 1,
+   "sample": "https://www.malaymail.com/news/world/2023/11/07/gaza-health-ministry-says-israel-strike-on-hospital-building-kills-one-israel-denies/100658",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.malaymail.com/news/world/2023/11/07/gaza-health-ministry-says-israel-strike-on-hospital-building-kills-one-israel-denies/100658",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
+   "primary": 1,
+   "secondary": 0
+  },
   "map.org.uk": {
    "count": 1,
    "sample": "https://www.map.org.uk",
@@ -3035,7 +3223,7 @@
    "secondary": 1
   },
   "middleeasteye.net": {
-   "count": 9,
+   "count": 12,
    "sample": "https://www.middleeasteye.net/news/palestine-west-bank-deadliest-year-second-intifada",
    "archived": 0,
    "pending": 0,
@@ -3090,7 +3278,31 @@
      "manual": false
     },
     {
+     "u": "https://www.middleeasteye.net/live-update/israeli-military-strikes-solar-panels-roof-al-shifa-hospital",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
      "u": "https://www.middleeasteye.net/live-update/israeli-strike-al-buraq-school-kills-20-says-health-ministry",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.middleeasteye.net/news/gaza-doctor-dies-israeli-custody-after-being-abducted-al-shifa-hospital-officials-say",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.middleeasteye.net/news/israel-palestine-war-bombs-area-quds-hospital-thousands-sheltering",
      "role": "secondary",
      "status": "new",
      "snap": "",
@@ -3115,7 +3327,7 @@
     }
    ],
    "primary": 5,
-   "secondary": 4
+   "secondary": 7
   },
   "middleeastmonitor.com": {
    "count": 3,
@@ -3237,12 +3449,20 @@
    "secondary": 1
   },
   "msf.org": {
-   "count": 1,
-   "sample": "https://www.msf.org/strikes-raids-and-incursions-year-relentless-attacks-healthcare-palestine",
+   "count": 2,
+   "sample": "https://www.msf.org/msf-convoy-attacked-gaza-all-elements-point-israeli-army-responsibility",
    "archived": 0,
    "pending": 0,
    "deferred": 0,
    "urls": [
+    {
+     "u": "https://www.msf.org/msf-convoy-attacked-gaza-all-elements-point-israeli-army-responsibility",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
     {
      "u": "https://www.msf.org/strikes-raids-and-incursions-year-relentless-attacks-healthcare-palestine",
      "role": "secondary",
@@ -3252,7 +3472,7 @@
      "manual": false
     }
    ],
-   "primary": 0,
+   "primary": 1,
    "secondary": 1
   },
   "muslimaid.org": {
@@ -3386,12 +3606,20 @@
    "secondary": 0
   },
   "news.un.org": {
-   "count": 3,
+   "count": 4,
    "sample": "https://news.un.org/en/story/2025/04/1162191",
    "archived": 0,
    "pending": 0,
    "deferred": 0,
    "urls": [
+    {
+     "u": "https://news.un.org/en/story/2023/11/1143347",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
     {
      "u": "https://news.un.org/en/story/2024/01/1145317",
      "role": "secondary",
@@ -3418,7 +3646,7 @@
     }
    ],
    "primary": 0,
-   "secondary": 3
+   "secondary": 4
   },
   "news24.com": {
    "count": 1,
@@ -3440,7 +3668,7 @@
    "secondary": 1
   },
   "npr.org": {
-   "count": 1,
+   "count": 2,
    "sample": "https://www.npr.org/2023/10/19/1207173798/fake-accounts-old-videos-and-rumors-fuel-chaos-around-gaza-hospital-explosion",
    "archived": 0,
    "pending": 0,
@@ -3453,10 +3681,18 @@
      "snap": "",
      "method": "",
      "manual": false
+    },
+    {
+     "u": "https://www.npr.org/2025/08/11/nx-s1-5498400/gaza-israel-journalists-killed",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
     }
    ],
    "primary": 0,
-   "secondary": 1
+   "secondary": 2
   },
   "nytimes.com": {
    "count": 2,
@@ -4497,7 +4733,7 @@
    "secondary": 9
   },
   "ohchr.org": {
-   "count": 10,
+   "count": 13,
    "sample": "https://www.ohchr.org/en/hr-bodies/hrc/special-sessions/session9/fact-finding-mission",
    "archived": 0,
    "pending": 0,
@@ -4552,6 +4788,22 @@
      "manual": false
     },
     {
+     "u": "https://www.ohchr.org/en/press-releases/2024/05/un-expert-horrified-death-gazan-orthopedic-surgeon-israeli-detention",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ohchr.org/en/press-releases/2024/09/un-expert-shocked-death-another-palestinian-doctor-israeli-detention",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
      "u": "https://www.ohchr.org/en/press-releases/2024/12/pattern-israeli-attacks-gaza-hospitals-raises-grave-concerns-report",
      "role": "primary",
      "status": "new",
@@ -4576,6 +4828,14 @@
      "manual": false
     },
     {
+     "u": "https://www.ohchr.org/en/press-releases/2023/10/israel-must-rescind-evacuation-order-northern-gaza-and-comply-international",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
      "u": "https://www.ohchr.org/sites/default/files/documents/countries/opt/20241231-attacks-hospitals-gaza-en.pdf",
      "role": "secondary",
      "status": "new",
@@ -4584,8 +4844,8 @@
      "manual": false
     }
    ],
-   "primary": 7,
-   "secondary": 3
+   "primary": 9,
+   "secondary": 4
   },
   "palestine-studies.org": {
    "count": 4,
@@ -4650,7 +4910,7 @@
    "secondary": 1
   },
   "palestinercs.org": {
-   "count": 6,
+   "count": 7,
    "sample": "http://www.palestinercs.org",
    "archived": 0,
    "pending": 0,
@@ -4674,6 +4934,14 @@
     },
     {
      "u": "https://www.palestinercs.org/public/files/image/2023/News/latestresponse23012023/en%20242%202023.pdf",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.palestinercs.org/public/files/image/2024/Reports/Violations%20Against%20PRCS%20Medical%20Missions_Gaza.pdf",
      "role": "primary",
      "status": "new",
      "snap": "",
@@ -4705,7 +4973,7 @@
      "manual": false
     }
    ],
-   "primary": 3,
+   "primary": 4,
    "secondary": 3
   },
   "palquest.org": {
@@ -4742,6 +5010,25 @@
    ],
    "primary": 3,
    "secondary": 0
+  },
+  "paltodaytv.com": {
+   "count": 1,
+   "sample": "https://paltodaytv.com/post/155913/%D8%A7%D9%84%D8%A7%D8%AD%D8%AA%D9%84%D8%A7%D9%84-%D9%8A%D9%87%D8%AF%D8%AF-%D8%A8%D8%A7%D8%B3%D8%AA%D9%87%D8%AF%D8%A7%D9%81-%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89-%D8%A7%D9%84%D9%82%D8%AF%D8%B3-%D8%A8%D8%BA%D8%B2%D8%A9",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "urls": [
+    {
+     "u": "https://paltodaytv.com/post/155913/%D8%A7%D9%84%D8%A7%D8%AD%D8%AA%D9%84%D8%A7%D9%84-%D9%8A%D9%87%D8%AF%D8%AF-%D8%A8%D8%A7%D8%B3%D8%AA%D9%87%D8%AF%D8%A7%D9%81-%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89-%D8%A7%D9%84%D9%82%D8%AF%D8%B3-%D8%A8%D8%BA%D8%B2%D8%A9",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
+   "primary": 0,
+   "secondary": 1
   },
   "pbs.org": {
    "count": 1,
@@ -4927,6 +5214,25 @@
    "primary": 0,
    "secondary": 2
   },
+  "pressreader.com": {
+   "count": 1,
+   "sample": "https://www.pressreader.com/uae/the-national-news/20240510/281513641243922",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.pressreader.com/uae/the-national-news/20240510/281513641243922",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
+   "primary": 1,
+   "secondary": 0
+  },
   "qou.edu": {
    "count": 1,
    "sample": "https://www.qou.edu/en/viewCmsContentDtlEn.do?contentId=82184",
@@ -4947,12 +5253,28 @@
    "secondary": 0
   },
   "reliefweb.int": {
-   "count": 6,
+   "count": 8,
    "sample": "https://reliefweb.int/report/occupied-palestinian-territory/palestine-red-crescent-society-calls-international-community-provide-protection-its-headquarters-and-medical-and-ems-teams-khan-yunis-enar?_gl=1*gdoink*_ga*NTAxNTI1MzAwLjE3NzM3Njg1NDA.*_ga_E60ZNX2F68*czE3NzUwNjU5MzckbzckZzEkdDE3NzUwNjkyNDUkajYwJGwwJGgw",
    "archived": 0,
    "pending": 0,
    "deferred": 0,
    "urls": [
+    {
+     "u": "https://reliefweb.int/report/occupied-palestinian-territory/imminent-threat-received-immediate-evacuation-prgs-ai-quds-hospital",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://reliefweb.int/report/occupied-palestinian-territory/israel-and-occupied-territories-icrc-decries-shooting-its-humanitarian-convoy-gaza",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
     {
      "u": "https://reliefweb.int/report/occupied-palestinian-territory/prcs-statement-al-quds-hospital-evacuation-order-enar",
      "role": "primary",
@@ -5002,7 +5324,7 @@
      "manual": false
     }
    ],
-   "primary": 1,
+   "primary": 3,
    "secondary": 5
   },
   "remix.aljazeera.com": {
@@ -5087,7 +5409,7 @@
    "secondary": 0
   },
   "saba.ye": {
-   "count": 1,
+   "count": 2,
    "sample": "https://saba.ye/en/news3562872.htm",
    "archived": 0,
    "pending": 0,
@@ -5100,9 +5422,17 @@
      "snap": "",
      "method": "",
      "manual": false
+    },
+    {
+     "u": "https://www.saba.ye/en/news3274629.htm",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
     }
    ],
-   "primary": 1,
+   "primary": 2,
    "secondary": 0
   },
   "scholarsatrisk.org": {
@@ -5160,12 +5490,20 @@
    "secondary": 1
   },
   "t.me": {
-   "count": 6,
+   "count": 7,
    "sample": "https://t.me/QudsN/406731",
    "archived": 0,
    "pending": 0,
    "deferred": 0,
    "urls": [
+    {
+     "u": "https://t.me/MOHMediaGaza/7033",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
     {
      "u": "https://t.me/MOHMediaGaza/4818",
      "role": "secondary",
@@ -5215,7 +5553,7 @@
      "manual": false
     }
    ],
-   "primary": 0,
+   "primary": 1,
    "secondary": 6
   },
   "terrorism-info.org.il": {
@@ -5397,7 +5735,7 @@
    "secondary": 1
   },
   "timesofisrael.com": {
-   "count": 3,
+   "count": 4,
    "sample": "https://www.timesofisrael.com/idf-opens-probe-after-social-media-posts-show-troops-burning-quran-other-books-in-gaza",
    "archived": 0,
    "pending": 0,
@@ -5405,6 +5743,14 @@
    "urls": [
     {
      "u": "https://www.timesofisrael.com/idf-opens-probe-after-social-media-posts-show-troops-burning-quran-other-books-in-gaza",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.timesofisrael.com/israel-tells-gaza-city-hospitals-to-ready-for-mass-evacuations-as-war-plans-advance",
      "role": "primary",
      "status": "new",
      "snap": "",
@@ -5428,7 +5774,7 @@
      "manual": false
     }
    ],
-   "primary": 1,
+   "primary": 2,
    "secondary": 2
   },
   "trtarabi.com": {
@@ -6292,6 +6638,25 @@
    "primary": 51,
    "secondary": 4
   },
+  "upi.com": {
+   "count": 1,
+   "sample": "https://www.upi.com/Top_News/World-News/2023/10/29/idf-bombs-al-quds-hospital-refute-claims-hamas/8771698601119",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.upi.com/Top_News/World-News/2023/10/29/idf-bombs-al-quds-hospital-refute-claims-hamas/8771698601119",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
+   "primary": 1,
+   "secondary": 0
+  },
   "uspg.org.uk": {
    "count": 1,
    "sample": "https://uspg.org.uk/news/palm-sunday-gaza-statement",
@@ -6355,6 +6720,25 @@
     }
    ],
    "primary": 1,
+   "secondary": 1
+  },
+  "voanews.com": {
+   "count": 1,
+   "sample": "https://www.voanews.com/a/red-cross-convoy-hit-by-fire-in-gaza/7345713.html",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "urls": [
+    {
+     "u": "https://www.voanews.com/a/red-cross-convoy-hit-by-fire-in-gaza/7345713.html",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
+   "primary": 0,
    "secondary": 1
   },
   "voices.uchicago.edu": {
@@ -6461,7 +6845,7 @@
    "secondary": 2
   },
   "who.int": {
-   "count": 3,
+   "count": 4,
    "sample": "https://www.who.int",
    "archived": 0,
    "pending": 0,
@@ -6469,6 +6853,14 @@
    "urls": [
     {
      "u": "https://www.who.int",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.who.int/news/item/14-10-2023-evacuation-orders-by-israel-to-hospitals-in-northern-gaza-are-a-death-sentence-for-the-sick-and-injured",
      "role": "primary",
      "status": "new",
      "snap": "",
@@ -6492,7 +6884,7 @@
      "manual": false
     }
    ],
-   "primary": 1,
+   "primary": 2,
    "secondary": 2
   },
   "wsj.com": {
@@ -6542,7 +6934,7 @@
    "secondary": 1
   },
   "x.com": {
-   "count": 56,
+   "count": 57,
    "sample": "https://x.com/ytirawi/status/1789942261209325757?s=46&fbclid=IwZXh0bgNhZW0CMTAAAR3j1RdjkSsbE9GV1GA9V5aEyAkGwqGc-FMhED5EGzZOcazau1nfvQL8kZw_aem_ZmFrZWR1bW15MTZieXRlcw",
    "archived": 0,
    "pending": 0,
@@ -6550,6 +6942,14 @@
    "urls": [
     {
      "u": "https://x.com/AJEnglish/status/1724381684722737157",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://x.com/LapagequiBUZZ/status/1720096276057030695",
      "role": "primary",
      "status": "new",
      "snap": "",
@@ -6997,7 +7397,7 @@
      "manual": false
     }
    ],
-   "primary": 8,
+   "primary": 9,
    "secondary": 48
   },
   "youtube.com": {
