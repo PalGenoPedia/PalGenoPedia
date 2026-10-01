@@ -1,6 +1,6 @@
 {
   "generated": "2026-10-01",
-  "count": 405,
+  "count": 408,
   "pages": [
     {
       "url": "https://palgenopedia.org/war-crimes/hospitals/al-shifa-medical-complex/",
@@ -99,7 +99,7 @@
       "section": "hospitals",
       "id": "FAC-003",
       "slug": "al-awda-hospital",
-      "incidents": 27,
+      "incidents": 28,
       "indexable": true
     },
     {
@@ -109,7 +109,7 @@
       "section": "hospitals",
       "id": "FAC-003",
       "slug": "al-awda-krankenhaus",
-      "incidents": 27,
+      "incidents": 28,
       "indexable": true
     },
     {
@@ -119,7 +119,7 @@
       "section": "hospitals",
       "id": "FAC-003",
       "slug": "مستشفى-العودة",
-      "incidents": 27,
+      "incidents": 28,
       "indexable": true
     },
     {
@@ -1499,6 +1499,36 @@
       "section": "hospitals",
       "id": "FAC-049",
       "slug": "عيادة-المواصي",
+      "incidents": 0,
+      "indexable": false
+    },
+    {
+      "url": "https://palgenopedia.org/war-crimes/hospitals/ophthalmic-hospital-gaza-eye-hospital-hospital/",
+      "path": "/war-crimes/hospitals/ophthalmic-hospital-gaza-eye-hospital-hospital/",
+      "lang": "en",
+      "section": "hospitals",
+      "id": "FAC-051",
+      "slug": "ophthalmic-hospital-gaza-eye-hospital-hospital",
+      "incidents": 0,
+      "indexable": false
+    },
+    {
+      "url": "https://palgenopedia.org/war-crimes/hospitals/de/augenklinik-gaza-augenklinik/",
+      "path": "/war-crimes/hospitals/de/augenklinik-gaza-augenklinik/",
+      "lang": "de",
+      "section": "hospitals",
+      "id": "FAC-051",
+      "slug": "augenklinik-gaza-augenklinik",
+      "incidents": 0,
+      "indexable": false
+    },
+    {
+      "url": "https://palgenopedia.org/war-crimes/hospitals/ar/%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89-%D8%A7%D9%84%D8%B9%D9%8A%D9%88%D9%86-%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89-%D8%BA%D8%B2%D8%A9-%D9%84%D9%84%D8%B9%D9%8A%D9%88%D9%86/",
+      "path": "/war-crimes/hospitals/ar/مستشفى-العيون-مستشفى-غزة-للعيون/",
+      "lang": "ar",
+      "section": "hospitals",
+      "id": "FAC-051",
+      "slug": "مستشفى-العيون-مستشفى-غزة-للعيون",
       "incidents": 0,
       "indexable": false
     },

@@ -1560,8 +1560,8 @@
    "secondary": 3
   },
   "edition.cnn.com": {
-   "count": 1,
-   "sample": "https://edition.cnn.com/interactive/2024/01/middleeast/gaza-hospitals-destruction-investigation-intl-cmd",
+   "count": 2,
+   "sample": "https://edition.cnn.com/middleeast/live-news/israel-hamas-war-gaza-news-12-11-23",
    "archived": 1,
    "pending": 0,
    "deferred": 0,
@@ -1573,10 +1573,18 @@
      "snap": "https://web.archive.org/web/20260826233625/https://edition.cnn.com/interactive/2024/01/middleeast/gaza-hospitals-destruction-investigation-intl-cmd",
      "method": "",
      "manual": false
+    },
+    {
+     "u": "https://edition.cnn.com/middleeast/live-news/israel-hamas-war-gaza-news-12-11-23",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
     }
    ],
    "primary": 1,
-   "secondary": 0
+   "secondary": 1
   },
   "electronicintifada.net": {
    "count": 2,
