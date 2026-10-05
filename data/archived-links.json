@@ -167,6 +167,10 @@
   "checked": "2026-08-29",
   "wayback": "https://web.archive.org/web/20260825080336/https://cpj.org"
  },
+ "https://cpj.org/data/people/anas-al-sharif": {
+  "status": "new",
+  "social": false
+ },
  "https://docs.un.org/en/A/HRC/59/26": {
   "status": "archived",
   "social": false,
@@ -180,6 +184,10 @@
   "ts": "20260826233625",
   "checked": "2026-08-29",
   "wayback": "https://web.archive.org/web/20260826233625/https://edition.cnn.com/interactive/2024/01/middleeast/gaza-hospitals-destruction-investigation-intl-cmd"
+ },
+ "https://edition.cnn.com/middleeast/live-news/israel-hamas-war-gaza-news-12-11-23": {
+  "status": "new",
+  "social": false
  },
  "https://electronicintifada.net/content/endless-trauma-israel-bombs-another-school/49356": {
   "status": "new",
@@ -208,6 +216,10 @@
   "status": "requested",
   "social": false,
   "requested": "2026-08-29"
+ },
+ "https://en.wikipedia.org/wiki/Assassination_of_Anas_Al-Sharif": {
+  "status": "new",
+  "social": false
  },
  "https://en.wikipedia.org/wiki/Attacks_on_health_facilities_during_the_Gaza_war": {
   "status": "archived",
@@ -429,6 +441,10 @@
   "status": "new",
   "social": false
  },
+ "https://gazahcsector.palestine-studies.org/en/node/94": {
+  "status": "new",
+  "social": false
+ },
  "https://genocide.live/14500": {
   "status": "new",
   "social": false
@@ -517,6 +533,10 @@
   "status": "new",
   "social": false
  },
+ "https://info.wafa.ps/pages/details/34226": {
+  "status": "new",
+  "social": false
+ },
  "https://insecurityinsight.org/wp-content/uploads/2024/04/27.-09-22-April-2024-Attacks-on-Health-Care-in-Israel-and-the-oPt.pdf": {
   "status": "new",
   "social": false
@@ -581,6 +601,10 @@
   "status": "new",
   "social": false
  },
+ "https://news.un.org/en/story/2023/11/1143347": {
+  "status": "new",
+  "social": false
+ },
  "https://news.un.org/en/story/2024/01/1145317": {
   "status": "new",
   "social": false
@@ -594,6 +618,10 @@
   "social": false
  },
  "https://ochaopt.org": {
+  "status": "new",
+  "social": false
+ },
+ "https://paltodaytv.com/post/155913/%D8%A7%D9%84%D8%A7%D8%AD%D8%AA%D9%84%D8%A7%D9%84-%D9%8A%D9%87%D8%AF%D8%AF-%D8%A8%D8%A7%D8%B3%D8%AA%D9%87%D8%AF%D8%A7%D9%81-%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89-%D8%A7%D9%84%D9%82%D8%AF%D8%B3-%D8%A8%D8%BA%D8%B2%D8%A9": {
   "status": "new",
   "social": false
  },
@@ -657,6 +685,14 @@
   "status": "new",
   "social": false
  },
+ "https://reliefweb.int/report/occupied-palestinian-territory/imminent-threat-received-immediate-evacuation-prgs-ai-quds-hospital": {
+  "status": "new",
+  "social": false
+ },
+ "https://reliefweb.int/report/occupied-palestinian-territory/israel-and-occupied-territories-icrc-decries-shooting-its-humanitarian-convoy-gaza": {
+  "status": "new",
+  "social": false
+ },
  "https://reliefweb.int/report/occupied-palestinian-territory/msf-doctors-killed-strike-al-awda-hospital-northern-gaza-enar": {
   "status": "new",
   "social": false
@@ -701,6 +737,10 @@
   "status": "new",
   "social": false
  },
+ "https://t.me/MOHMediaGaza/7033": {
+  "status": "new",
+  "social": false
+ },
  "https://t.me/QudsN/406731": {
   "status": "new",
   "social": false
@@ -742,6 +782,10 @@
   "social": false
  },
  "https://warwingsdaily.com/wars/the-first-intifada-1987-1993": {
+  "status": "new",
+  "social": false
+ },
+ "https://web-cdnprod.aa.com.tr/uploads/Contents/2023/10/29/thumbs_b_c_d5190ab20eb05c5cd3cbddb2c56895b0.jpg?v=234835": {
   "status": "new",
   "social": false
  },
@@ -845,6 +889,10 @@
   "status": "new",
   "social": false
  },
+ "https://www.aa.com.tr/en/middle-east/palestinian-red-crescent-society-vows-to-keep-al-quds-hospital-in-gaza-running/3037392": {
+  "status": "new",
+  "social": false
+ },
  "https://www.aa.com.tr/en/middle-east/scores-of-palestinians-dead-wounded-from-israeli-bombing-of-gaza-school-sheltering-displaced-people/3056793": {
   "status": "new",
   "social": false
@@ -937,6 +985,10 @@
   "status": "new",
   "social": false
  },
+ "https://www.aljazeera.com/news/2023/11/6/israeli-forces-target-solar-panels-at-gazas-al-shifa-hospital": {
+  "status": "new",
+  "social": false
+ },
  "https://www.aljazeera.com/news/2023/2/22/israeli-forces-kill-palestinians-in-nablus-raid": {
   "status": "new",
   "social": false
@@ -950,6 +1002,10 @@
   "social": false
  },
  "https://www.aljazeera.com/news/2024/5/28/rafah-residents-face-further-danger-as-israel-hits-citys-two-hospitals": {
+  "status": "new",
+  "social": false
+ },
+ "https://www.aljazeera.com/news/2024/5/3/doctor-from-gazas-al-shifa-hospital-dies-in-israeli-prison": {
   "status": "new",
   "social": false
  },
@@ -969,7 +1025,15 @@
   "status": "new",
   "social": false
  },
+ "https://www.aljazeera.com/news/2025/8/10/al-jazeera-journalist-anas-al-sharif-killed-in-israeli-attack-in-gaza-city": {
+  "status": "new",
+  "social": false
+ },
  "https://www.aljazeera.com/news/2025/8/31/israel-is-reducing-gaza-city-to-fields-of-rubble-kills-78-across-enclave": {
+  "status": "new",
+  "social": false
+ },
+ "https://www.aljazeera.com/news/2025/9/17/israel-strikes-kill-palestinians-near-gazas-last-functioning-hospitals": {
   "status": "new",
   "social": false
  },
@@ -985,7 +1049,15 @@
   "status": "new",
   "social": false
  },
+ "https://www.aljazeera.com/news/liveblog/2023/12/1/israel-hamas-war-live-relief-and-joy-as-more-palestinian-prisoners-freed?update=2528387": {
+  "status": "new",
+  "social": false
+ },
  "https://www.aljazeera.com/news/longform/2024/4/18/satellite-images-reveal-israeli-destruction-of-hospitals-in-gaza": {
+  "status": "new",
+  "social": false
+ },
+ "https://www.aljazeera.com/opinions/2025/9/13/israel-wants-us-to-evacuate-al-shifa-hospital-again-to-kill-hope": {
   "status": "new",
   "social": false
  },
@@ -1157,11 +1229,27 @@
   "status": "new",
   "social": false
  },
+ "https://www.cnn.com/2024/05/03/middleeast/gaza-surgeon-adnan-al-bursh-israeli-prison-intl-hnk": {
+  "status": "new",
+  "social": false
+ },
+ "https://www.dawn.com/news/1787007/israeli-forces-target-solar-panels-at-gazas-al-shifa-hospital-palestinian-media": {
+  "status": "new",
+  "social": false
+ },
  "https://www.dci-palestine.org": {
   "status": "new",
   "social": false
  },
  "https://www.democracynow.org/2021/7/30/investigation_israel_war_crimes_palestine": {
+  "status": "new",
+  "social": false
+ },
+ "https://www.democracynow.org/2024/9/19/headlines/third_doctor_from_gaza_dies_in_israeli_custody_after_he_was_abducted_in_hospital_raid": {
+  "status": "new",
+  "social": false
+ },
+ "https://www.doctorswithoutborders.ca/gaza-msf-clinic-in-gaza-city-came-under-fire": {
   "status": "new",
   "social": false
  },
@@ -1218,6 +1306,10 @@
   "social": true
  },
  "https://www.facebook.com/MOHGaza1994/videos/%D9%88%D8%B2%D8%A7%D8%B1%D8%A9-%D8%A7%D9%84%D8%B5%D8%AD%D8%A9-%D8%A7%D9%84%D9%81%D9%84%D8%B3%D8%B7%D9%8A%D9%86%D9%8A%D8%A9-%D8%BA%D8%B2%D8%A9%D8%AC%D8%A7%D9%86%D8%A8-%D9%85%D9%86-%D8%AC%D9%88%D9%84%D8%A9-%D8%AA%D9%81%D9%82%D8%AF%D9%8A%D8%A9-%D9%84%D9%88%D9%83%D9%8A%D9%84-%D8%A7%D9%84%D9%88%D8%B2%D8%A7%D8%B1%D8%A9-%D8%AF%D9%8A%D9%88%D8%B3%D9%81-%D8%A3%D8%A8%D9%88-%D8%A7%D9%84%D8%B1%D9%8A%D8%B4-%D9%88%D8%A7%D9%84%D9%88/2393418047659817/%D8%A7%D9%84%D9%81%D9%84%D8%B3%D8%B7%D9%8A%D9%86%D9%8A%D8%A9-%D8%BA%D8%B2%D8%A9%D8%AC%D8%A7%D9%86%D8%A8-%D9%85%D9%86-%D8%AC%D9%88%D9%84%D8%A9-%D8%AA%D9%81%D9%82%D8%AF%D9%8A%D8%A9-%D9%84%D9%88%D9%83%D9%8A%D9%84-%D8%A7%D9%84%D9%88%D8%B2%D8%A7%D8%B1%D8%A9-%D8%AF%D9%8A%D9%88%D8%B3%D9%81-%D8%A3%D8%A8%D9%88-%D8%A7%D9%84%D8%B1%D9%8A%D8%B4-%D9%88%D8%A7%D9%84%D9%88/2393418047659817": {
+  "status": "new",
+  "social": true
+ },
+ "https://www.facebook.com/PalestineRCS/posts/-%D8%AA%D8%B9%D8%B1%D8%B6-%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89-%D8%A7%D9%84%D9%82%D8%AF%D8%B3-%D9%81%D9%8A-%D8%AD": {
   "status": "new",
   "social": true
  },
@@ -1350,6 +1442,10 @@
   "social": true
  },
  "https://www.france24.com/en/middle-east/20231018-what-we-know-about-the-deadly-blast-at-gaza-city-s-al-ahli-hospital": {
+  "status": "new",
+  "social": false
+ },
+ "https://www.france24.com/en/middle-east/20250925-al-shifa-hospital-gaza-city-medical-staff-bombing": {
   "status": "new",
   "social": false
  },
@@ -1557,6 +1653,10 @@
   "status": "new",
   "social": false
  },
+ "https://www.malaymail.com/news/world/2023/11/07/gaza-health-ministry-says-israel-strike-on-hospital-building-kills-one-israel-denies/100658": {
+  "status": "new",
+  "social": false
+ },
  "https://www.map.org.uk": {
   "status": "new",
   "social": false
@@ -1597,7 +1697,19 @@
   "status": "new",
   "social": false
  },
+ "https://www.middleeasteye.net/live-update/israeli-military-strikes-solar-panels-roof-al-shifa-hospital": {
+  "status": "new",
+  "social": false
+ },
  "https://www.middleeasteye.net/live-update/israeli-strike-al-buraq-school-kills-20-says-health-ministry": {
+  "status": "new",
+  "social": false
+ },
+ "https://www.middleeasteye.net/news/gaza-doctor-dies-israeli-custody-after-being-abducted-al-shifa-hospital-officials-say": {
+  "status": "new",
+  "social": false
+ },
+ "https://www.middleeasteye.net/news/israel-palestine-war-bombs-area-quds-hospital-thousands-sheltering": {
   "status": "new",
   "social": false
  },
@@ -1653,6 +1765,10 @@
   "status": "new",
   "social": false
  },
+ "https://www.msf.org/msf-convoy-attacked-gaza-all-elements-point-israeli-army-responsibility": {
+  "status": "new",
+  "social": false
+ },
  "https://www.msf.org/strikes-raids-and-incursions-year-relentless-attacks-healthcare-palestine": {
   "status": "new",
   "social": false
@@ -1690,6 +1806,10 @@
   "social": false
  },
  "https://www.npr.org/2023/10/19/1207173798/fake-accounts-old-videos-and-rumors-fuel-chaos-around-gaza-hospital-explosion": {
+  "status": "new",
+  "social": false
+ },
+ "https://www.npr.org/2025/08/11/nx-s1-5498400/gaza-israel-journalists-killed": {
   "status": "new",
   "social": false
  },
@@ -2225,6 +2345,18 @@
   "status": "new",
   "social": false
  },
+ "https://www.ohchr.org/en/press-releases/2023/10/israel-must-rescind-evacuation-order-northern-gaza-and-comply-international": {
+  "status": "new",
+  "social": false
+ },
+ "https://www.ohchr.org/en/press-releases/2024/05/un-expert-horrified-death-gazan-orthopedic-surgeon-israeli-detention": {
+  "status": "new",
+  "social": false
+ },
+ "https://www.ohchr.org/en/press-releases/2024/09/un-expert-shocked-death-another-palestinian-doctor-israeli-detention": {
+  "status": "new",
+  "social": false
+ },
  "https://www.ohchr.org/en/press-releases/2024/12/pattern-israeli-attacks-gaza-hospitals-raises-grave-concerns-report": {
   "status": "new",
   "social": false
@@ -2273,6 +2405,10 @@
   "status": "new",
   "social": false
  },
+ "https://www.palestinercs.org/public/files/image/2024/Reports/Violations%20Against%20PRCS%20Medical%20Missions_Gaza.pdf": {
+  "status": "new",
+  "social": false
+ },
  "https://www.palestinercs.org/public/files/image/2024/statements/en%20Al%20Amal%20Hospital%20statement%2004012024.pdf": {
   "status": "new",
   "social": false
@@ -2305,6 +2441,10 @@
   "status": "new",
   "social": false
  },
+ "https://www.pressreader.com/uae/the-national-news/20240510/281513641243922": {
+  "status": "new",
+  "social": false
+ },
  "https://www.qou.edu/en/viewCmsContentDtlEn.do?contentId=82184": {
   "status": "new",
   "social": false
@@ -2334,6 +2474,14 @@
   "social": false
  },
  "https://www.reutersconnect.com/item/smoke-rises-from-the-islamic-university-building-in-gaza-city/dGFnOnJldXRlcnMuY29tLDIwMjU6bmV3c21sX1JDMlJSR0FNMEY3Tw": {
+  "status": "new",
+  "social": false
+ },
+ "https://www.saba.ye/en/news3274629.htm": {
+  "status": "new",
+  "social": false
+ },
+ "https://www.saba.ye/storage/larage/3453211b290007e02bc1ce94f493a89f.jpg": {
   "status": "new",
   "social": false
  },
@@ -2406,6 +2554,10 @@
   "social": false
  },
  "https://www.timesofisrael.com/idf-opens-probe-after-social-media-posts-show-troops-burning-quran-other-books-in-gaza": {
+  "status": "new",
+  "social": false
+ },
+ "https://www.timesofisrael.com/israel-tells-gaza-city-hospitals-to-ready-for-mass-evacuations-as-war-plans-advance": {
   "status": "new",
   "social": false
  },
@@ -2813,6 +2965,10 @@
   "status": "new",
   "social": false
  },
+ "https://www.upi.com/Top_News/World-News/2023/10/29/idf-bombs-al-quds-hospital-refute-claims-hamas/8771698601119": {
+  "status": "new",
+  "social": false
+ },
  "https://www.vaticannews.va/content/dam/vaticannews/agenzie/images/afp/2024/07/07/18/1720370881360.jpg/_jcr_content/renditions/cq5dam.thumbnail.cropped.750.422.jpeg": {
   "status": "new",
   "social": false
@@ -2829,6 +2985,10 @@
   "status": "new",
   "social": false
  },
+ "https://www.voanews.com/a/red-cross-convoy-hit-by-fire-in-gaza/7345713.html": {
+  "status": "new",
+  "social": false
+ },
  "https://www.wafa.ps/Pages/Details/90325": {
   "status": "new",
   "social": false
@@ -2842,6 +3002,10 @@
   "social": false
  },
  "https://www.who.int/news/item/06-04-2024-six-months-of-war-leave-al-shifa-hospital-in-ruins--who-mission-report": {
+  "status": "new",
+  "social": false
+ },
+ "https://www.who.int/news/item/14-10-2023-evacuation-orders-by-israel-to-hospitals-in-northern-gaza-are-a-death-sentence-for-the-sick-and-injured": {
   "status": "new",
   "social": false
  },
@@ -2898,6 +3062,10 @@
   "social": false
  },
  "https://www.youtube.com/watch?v=E4rltTvrt_c": {
+  "status": "new",
+  "social": false
+ },
+ "https://www.youtube.com/watch?v=EsYqcaUdDHE": {
   "status": "new",
   "social": false
  },
@@ -3030,6 +3198,14 @@
   "social": true
  },
  "https://x.com/Israel_katz/status/1967210017008013424?s=20": {
+  "status": "new",
+  "social": true
+ },
+ "https://x.com/LapagequiBUZZ/status/1720096276057030695": {
+  "status": "new",
+  "social": true
+ },
+ "https://x.com/LapagequiBUZZ/status/1720096276057030695/video/1": {
   "status": "new",
   "social": true
  },
@@ -3270,6 +3446,10 @@
   "social": true
  },
  "https://x.com/WHOoPt/status/1733572487399563650": {
+  "status": "new",
+  "social": true
+ },
+ "https://x.com/anadoluagency/status/1719115919983546566/video/1": {
   "status": "new",
   "social": true
  },
