@@ -1177,6 +1177,33 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://palgenopedia.org/war-crimes/hospitals/ophthalmic-hospital-gaza-eye-hospital-hospital/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89-%D8%A7%D9%84%D8%B9%D9%8A%D9%88%D9%86-%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89-%D8%BA%D8%B2%D8%A9-%D9%84%D9%84%D8%B9%D9%8A%D9%88%D9%86/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/augenklinik-gaza-augenklinik/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/ophthalmic-hospital-gaza-eye-hospital-hospital/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/ophthalmic-hospital-gaza-eye-hospital-hospital/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://palgenopedia.org/war-crimes/hospitals/de/augenklinik-gaza-augenklinik/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89-%D8%A7%D9%84%D8%B9%D9%8A%D9%88%D9%86-%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89-%D8%BA%D8%B2%D8%A9-%D9%84%D9%84%D8%B9%D9%8A%D9%88%D9%86/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/augenklinik-gaza-augenklinik/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/ophthalmic-hospital-gaza-eye-hospital-hospital/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/ophthalmic-hospital-gaza-eye-hospital-hospital/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://palgenopedia.org/war-crimes/hospitals/ar/%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89-%D8%A7%D9%84%D8%B9%D9%8A%D9%88%D9%86-%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89-%D8%BA%D8%B2%D8%A9-%D9%84%D9%84%D8%B9%D9%8A%D9%88%D9%86/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89-%D8%A7%D9%84%D8%B9%D9%8A%D9%88%D9%86-%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89-%D8%BA%D8%B2%D8%A9-%D9%84%D9%84%D8%B9%D9%8A%D9%88%D9%86/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/augenklinik-gaza-augenklinik/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palgenopedia.org/war-crimes/hospitals/ophthalmic-hospital-gaza-eye-hospital-hospital/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palgenopedia.org/war-crimes/hospitals/ophthalmic-hospital-gaza-eye-hospital-hospital/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://palgenopedia.org/war-crimes/hospitals/incidents/</loc>
     <xhtml:link rel="alternate" hreflang="ar" href="https://palgenopedia.org/war-crimes/hospitals/ar/incidents/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://palgenopedia.org/war-crimes/hospitals/de/incidents/"/>

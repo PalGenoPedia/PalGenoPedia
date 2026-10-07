@@ -1509,8 +1509,8 @@
       "section": "hospitals",
       "id": "FAC-051",
       "slug": "ophthalmic-hospital-gaza-eye-hospital-hospital",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 1,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/hospitals/de/augenklinik-gaza-augenklinik/",
@@ -1519,8 +1519,8 @@
       "section": "hospitals",
       "id": "FAC-051",
       "slug": "augenklinik-gaza-augenklinik",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 1,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/hospitals/ar/%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89-%D8%A7%D9%84%D8%B9%D9%8A%D9%88%D9%86-%D9%85%D8%B3%D8%AA%D8%B4%D9%81%D9%89-%D8%BA%D8%B2%D8%A9-%D9%84%D9%84%D8%B9%D9%8A%D9%88%D9%86/",
@@ -1529,8 +1529,8 @@
       "section": "hospitals",
       "id": "FAC-051",
       "slug": "مستشفى-العيون-مستشفى-غزة-للعيون",
-      "incidents": 0,
-      "indexable": false
+      "incidents": 1,
+      "indexable": true
     },
     {
       "url": "https://palgenopedia.org/war-crimes/hospitals/overview/",
