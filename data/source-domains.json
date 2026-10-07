@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-06",
+ "generated": "2026-10-07",
  "domains": {
   "972mag.com": {
    "count": 3,
@@ -1969,7 +1969,7 @@
    "secondary": 0
   },
   "facebook.com": {
-   "count": 23,
+   "count": 22,
    "sample": "https://www.facebook.com/voiceofthecape/posts/trigger-warning-a-journalist-in-the-jabalia-refugee-camp-in-the-gaza-strip-abdul/739174581571429",
    "archived": 0,
    "pending": 0,
@@ -1993,14 +1993,6 @@
     },
     {
      "u": "https://www.facebook.com/reel/957102225874566",
-     "role": "primary",
-     "status": "new",
-     "snap": "",
-     "method": "",
-     "manual": false
-    },
-    {
-     "u": "https://www.facebook.com/watch/?mibextid=wwXIfr&v=1413109099886187&rdid=ytko1E4P1B3ytfsz",
      "role": "primary",
      "status": "new",
      "snap": "",
@@ -2160,7 +2152,7 @@
      "manual": false
     }
    ],
-   "primary": 4,
+   "primary": 3,
    "secondary": 19
   },
   "felesteen.news": {
@@ -2272,7 +2264,7 @@
    "secondary": 1
   },
   "gazahcsector.palestine-studies.org": {
-   "count": 7,
+   "count": 8,
    "sample": "https://gazahcsector.palestine-studies.org/en/node/77",
    "archived": 0,
    "pending": 0,
@@ -2296,6 +2288,14 @@
     },
     {
      "u": "https://gazahcsector.palestine-studies.org/en/node/7",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://gazahcsector.palestine-studies.org/en/node/74",
      "role": "primary",
      "status": "new",
      "snap": "",
@@ -2335,7 +2335,7 @@
      "manual": false
     }
    ],
-   "primary": 5,
+   "primary": 6,
    "secondary": 2
   },
   "genocide.live": {
@@ -3730,7 +3730,7 @@
    "secondary": 1
   },
   "ochaopt.org": {
-   "count": 125,
+   "count": 126,
    "sample": "https://www.ochaopt.org/content/eight-years-after-2008-2009-cast-lead-hostilities-gaza-lack-accountability-persists",
    "archived": 0,
    "pending": 1,
@@ -4497,6 +4497,14 @@
      "manual": false
     },
     {
+     "u": "https://www.ochaopt.org/content/humanitarian-situation-update-253-gaza-strip",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
      "u": "https://www.ochaopt.org/content/humanitarian-situation-update-275-gaza-strip",
      "role": "primary",
      "status": "new",
@@ -4737,7 +4745,7 @@
      "manual": false
     }
    ],
-   "primary": 116,
+   "primary": 117,
    "secondary": 9
   },
   "ohchr.org": {
@@ -5261,7 +5269,7 @@
    "secondary": 0
   },
   "reliefweb.int": {
-   "count": 8,
+   "count": 9,
    "sample": "https://reliefweb.int/report/occupied-palestinian-territory/palestine-red-crescent-society-calls-international-community-provide-protection-its-headquarters-and-medical-and-ems-teams-khan-yunis-enar?_gl=1*gdoink*_ga*NTAxNTI1MzAwLjE3NzM3Njg1NDA.*_ga_E60ZNX2F68*czE3NzUwNjU5MzckbzckZzEkdDE3NzUwNjkyNDUkajYwJGwwJGgw",
    "archived": 0,
    "pending": 0,
@@ -5277,6 +5285,14 @@
     },
     {
      "u": "https://reliefweb.int/report/occupied-palestinian-territory/israel-and-occupied-territories-icrc-decries-shooting-its-humanitarian-convoy-gaza",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://reliefweb.int/report/occupied-palestinian-territory/kamal-adwan-hospital-out-service-three-other-hospitals-attacked-urgent-international-action-needed-protect-healthcare-workers-and-facilities-enar",
      "role": "primary",
      "status": "new",
      "snap": "",
@@ -5332,7 +5348,7 @@
      "manual": false
     }
    ],
-   "primary": 3,
+   "primary": 4,
    "secondary": 5
   },
   "remix.aljazeera.com": {

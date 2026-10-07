@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-06",
+ "generated": "2026-10-07",
  "domains": {
   "aa.com.tr": {
    "count": 1,
@@ -891,7 +891,7 @@
    "image": 1
   },
   "media.un.org": {
-   "count": 1,
+   "count": 2,
    "sample": "https://media.un.org/unifeed/en/asset/d336/d3360571",
    "archived": 0,
    "pending": 0,
@@ -904,9 +904,17 @@
      "snap": "",
      "method": "",
      "manual": false
+    },
+    {
+     "u": "https://media.un.org/unifeed/en/asset/d340/d3402691",
+     "role": "video",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
     }
    ],
-   "video": 1,
+   "video": 2,
    "image": 0
   },
   "middleeasteye.net": {

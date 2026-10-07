@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-06",
+  "generated": "2026-10-07",
   "count": 408,
   "pages": [
     {
@@ -99,7 +99,7 @@
       "section": "hospitals",
       "id": "FAC-003",
       "slug": "al-awda-hospital",
-      "incidents": 28,
+      "incidents": 32,
       "indexable": true
     },
     {
@@ -109,7 +109,7 @@
       "section": "hospitals",
       "id": "FAC-003",
       "slug": "al-awda-krankenhaus",
-      "incidents": 28,
+      "incidents": 32,
       "indexable": true
     },
     {
@@ -119,7 +119,7 @@
       "section": "hospitals",
       "id": "FAC-003",
       "slug": "مستشفى-العودة",
-      "incidents": 28,
+      "incidents": 32,
       "indexable": true
     },
     {
@@ -309,7 +309,7 @@
       "section": "hospitals",
       "id": "FAC-010",
       "slug": "gaza-european-hospital",
-      "incidents": 7,
+      "incidents": 8,
       "indexable": true
     },
     {
@@ -319,7 +319,7 @@
       "section": "hospitals",
       "id": "FAC-010",
       "slug": "europaeisches-krankenhaus-gaza",
-      "incidents": 7,
+      "incidents": 8,
       "indexable": true
     },
     {
@@ -329,7 +329,7 @@
       "section": "hospitals",
       "id": "FAC-010",
       "slug": "مستشفى-غزة-الأوروبي",
-      "incidents": 7,
+      "incidents": 8,
       "indexable": true
     },
     {
@@ -1453,12 +1453,12 @@
       "indexable": false
     },
     {
-      "url": "https://palgenopedia.org/war-crimes/hospitals/de/gesundheitszentrum-maskat-al-qarara/",
-      "path": "/war-crimes/hospitals/de/gesundheitszentrum-maskat-al-qarara/",
+      "url": "https://palgenopedia.org/war-crimes/hospitals/de/al-qarara-gesundheitszentrum-in-maskat/",
+      "path": "/war-crimes/hospitals/de/al-qarara-gesundheitszentrum-in-maskat/",
       "lang": "de",
       "section": "hospitals",
       "id": "FAC-048",
-      "slug": "gesundheitszentrum-maskat-al-qarara",
+      "slug": "al-qarara-gesundheitszentrum-in-maskat",
       "incidents": 0,
       "indexable": false
     },
