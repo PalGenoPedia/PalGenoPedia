@@ -2264,7 +2264,7 @@
    "secondary": 1
   },
   "gazahcsector.palestine-studies.org": {
-   "count": 8,
+   "count": 9,
    "sample": "https://gazahcsector.palestine-studies.org/en/node/77",
    "archived": 0,
    "pending": 0,
@@ -2319,6 +2319,14 @@
      "manual": false
     },
     {
+     "u": "https://gazahcsector.palestine-studies.org/sites/default/files/pdf/public_records/%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D9%87%D8%A7%D9%83%D8%A7%D8%AA%20%D8%B6%D8%AF%20%D8%A7%D9%84%D9%85%D8%A4%D8%B3%D8%B3%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B7%D8%A8%D9%8A%D8%A9.pdf",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
      "u": "https://gazahcsector.palestine-studies.org/en/node/5",
      "role": "secondary",
      "status": "new",
@@ -2335,7 +2343,7 @@
      "manual": false
     }
    ],
-   "primary": 6,
+   "primary": 7,
    "secondary": 2
   },
   "genocide.live": {
