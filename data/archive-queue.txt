@@ -73,9 +73,11 @@ https://gazahcsector.palestine-studies.org/en/node/14
 https://gazahcsector.palestine-studies.org/en/node/20
 https://gazahcsector.palestine-studies.org/en/node/5
 https://gazahcsector.palestine-studies.org/en/node/7
+https://gazahcsector.palestine-studies.org/en/node/74
 https://gazahcsector.palestine-studies.org/en/node/76
 https://gazahcsector.palestine-studies.org/en/node/77
 https://gazahcsector.palestine-studies.org/en/node/94
+https://gazahcsector.palestine-studies.org/sites/default/files/pdf/public_records/%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D9%87%D8%A7%D9%83%D8%A7%D8%AA%20%D8%B6%D8%AF%20%D8%A7%D9%84%D9%85%D8%A4%D8%B3%D8%B3%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B7%D8%A8%D9%8A%D8%A9.pdf
 https://genocide.live/14500
 https://genocide.live/uploads/debunk-idf-claims-about-terror-tunnel-in-sheikh-hamad-hospital-1
 https://gigaza.org/en/agreements-reports/graveyards-under-fire
@@ -118,6 +120,7 @@ https://reliefweb.int/report/occupied-palestinian-territory/humanitarian-respons
 https://reliefweb.int/report/occupied-palestinian-territory/ifrc-three-palestine-red-crescent-members-killed-unacceptable
 https://reliefweb.int/report/occupied-palestinian-territory/imminent-threat-received-immediate-evacuation-prgs-ai-quds-hospital
 https://reliefweb.int/report/occupied-palestinian-territory/israel-and-occupied-territories-icrc-decries-shooting-its-humanitarian-convoy-gaza
+https://reliefweb.int/report/occupied-palestinian-territory/kamal-adwan-hospital-out-service-three-other-hospitals-attacked-urgent-international-action-needed-protect-healthcare-workers-and-facilities-enar
 https://reliefweb.int/report/occupied-palestinian-territory/msf-doctors-killed-strike-al-awda-hospital-northern-gaza-enar
 https://reliefweb.int/report/occupied-palestinian-territory/palestine-red-crescent-society-calls-international-community-provide-protection-its-headquarters-and-medical-and-ems-teams-khan-yunis-enar?_gl=1*gdoink*_ga*NTAxNTI1MzAwLjE3NzM3Njg1NDA.*_ga_E60ZNX2F68*czE3NzUwNjU5MzckbzckZzEkdDE3NzUwNjkyNDUkajYwJGwwJGgw
 https://reliefweb.int/report/occupied-palestinian-territory/prcs-statement-al-quds-hospital-evacuation-order-enar
@@ -269,7 +272,6 @@ https://www.facebook.com/reel/318143097856794
 https://www.facebook.com/reel/957102225874566
 https://www.facebook.com/trtworld/videos/israels-narrative-of-al-ahli-arab-hospital-attack-a-closer-look/716457469813692
 https://www.facebook.com/voiceofthecape/posts/trigger-warning-a-journalist-in-the-jabalia-refugee-camp-in-the-gaza-strip-abdul/739174581571429
-https://www.facebook.com/watch/?mibextid=wwXIfr&v=1413109099886187&rdid=ytko1E4P1B3ytfsz
 https://www.facebook.com/watch/?mibextid=wwXIfr&v=694104496360241&rdid=9lbhotKwTSimO6cr
 https://www.facebook.com/watch/?v=1366316280923065
 https://www.france24.com/en/middle-east/20231018-what-we-know-about-the-deadly-blast-at-gaza-city-s-al-ahli-hospital
@@ -449,6 +451,7 @@ https://www.ochaopt.org/content/humanitarian-situation-update-245-gaza-strip
 https://www.ochaopt.org/content/humanitarian-situation-update-247-gaza-strip
 https://www.ochaopt.org/content/humanitarian-situation-update-249-gaza-strip
 https://www.ochaopt.org/content/humanitarian-situation-update-251-gaza-strip
+https://www.ochaopt.org/content/humanitarian-situation-update-253-gaza-strip
 https://www.ochaopt.org/content/humanitarian-situation-update-275-gaza-strip
 https://www.ochaopt.org/content/humanitarian-situation-update-278-gaza-strip
 https://www.ochaopt.org/content/humanitarian-situation-update-280-gaza-strip

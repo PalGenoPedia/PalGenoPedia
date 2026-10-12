@@ -433,6 +433,10 @@
   "status": "new",
   "social": false
  },
+ "https://gazahcsector.palestine-studies.org/en/node/74": {
+  "status": "new",
+  "social": false
+ },
  "https://gazahcsector.palestine-studies.org/en/node/76": {
   "status": "new",
   "social": false
@@ -442,6 +446,10 @@
   "social": false
  },
  "https://gazahcsector.palestine-studies.org/en/node/94": {
+  "status": "new",
+  "social": false
+ },
+ "https://gazahcsector.palestine-studies.org/sites/default/files/pdf/public_records/%D8%A7%D9%84%D8%A7%D9%86%D8%AA%D9%87%D8%A7%D9%83%D8%A7%D8%AA%20%D8%B6%D8%AF%20%D8%A7%D9%84%D9%85%D8%A4%D8%B3%D8%B3%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B7%D8%A8%D9%8A%D8%A9.pdf": {
   "status": "new",
   "social": false
  },
@@ -569,6 +577,10 @@
   "status": "new",
   "social": false
  },
+ "https://media.un.org/unifeed/en/asset/d340/d3402691": {
+  "status": "new",
+  "social": false
+ },
  "https://merip.org/2015/10/operation-protective-edge": {
   "status": "new",
   "social": false
@@ -690,6 +702,10 @@
   "social": false
  },
  "https://reliefweb.int/report/occupied-palestinian-territory/israel-and-occupied-territories-icrc-decries-shooting-its-humanitarian-convoy-gaza": {
+  "status": "new",
+  "social": false
+ },
+ "https://reliefweb.int/report/occupied-palestinian-territory/kamal-adwan-hospital-out-service-three-other-hospitals-attacked-urgent-international-action-needed-protect-healthcare-workers-and-facilities-enar": {
   "status": "new",
   "social": false
  },
@@ -1418,10 +1434,6 @@
   "social": true
  },
  "https://www.facebook.com/voiceofthecape/posts/trigger-warning-a-journalist-in-the-jabalia-refugee-camp-in-the-gaza-strip-abdul/739174581571429": {
-  "status": "new",
-  "social": true
- },
- "https://www.facebook.com/watch/?mibextid=wwXIfr&v=1413109099886187&rdid=ytko1E4P1B3ytfsz": {
   "status": "new",
   "social": true
  },
@@ -2226,6 +2238,10 @@
   "social": false
  },
  "https://www.ochaopt.org/content/humanitarian-situation-update-251-gaza-strip": {
+  "status": "new",
+  "social": false
+ },
+ "https://www.ochaopt.org/content/humanitarian-situation-update-253-gaza-strip": {
   "status": "new",
   "social": false
  },
