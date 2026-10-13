@@ -1699,12 +1699,20 @@
    "image": 0
   },
   "youtube.com": {
-   "count": 27,
+   "count": 28,
    "sample": "https://www.youtube.com/watch?v=E4rltTvrt_c",
    "archived": 0,
    "pending": 0,
    "deferred": 0,
    "urls": [
+    {
+     "u": "https://www.youtube.com/shorts/0__P7qQEIc8",
+     "role": "video",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
     {
      "u": "https://www.youtube.com/shorts/XjOuKWpzqFQ",
      "role": "video",
@@ -1922,7 +1930,7 @@
      "manual": false
     }
    ],
-   "video": 26,
+   "video": 27,
    "image": 1
   }
  }
