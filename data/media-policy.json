@@ -1,7 +1,12 @@
 {
  "version": 1,
- "updated": "",
- "updated_by": "",
+ "updated": "2026-10-19",
+ "updated_by": "palgenopedia@gmail.com",
  "_comment": "Per-domain archiving rules for media URLs, maintained by editors at contribute.palgenopedia.org. Written by the portal's Apps Script via the GitHub Contents API; read by tools/archive_links.py --policy-only. A domain with no rule here is skipped. Do not hand-edit: the portal overwrites this file wholesale.",
- "domains": {}
+ "domains": {
+  "x.com": {
+   "priority": "high",
+   "method": "manual"
+  }
+ }
 }
