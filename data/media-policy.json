@@ -6,7 +6,7 @@
  "domains": {
   "x.com": {
    "priority": "high",
-   "method": "manual"
+   "method": "wayback"
   }
  }
 }
