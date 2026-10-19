@@ -6989,7 +6989,7 @@
    "sample": "https://x.com/ytirawi/status/1789942261209325757?s=46&fbclid=IwZXh0bgNhZW0CMTAAAR3j1RdjkSsbE9GV1GA9V5aEyAkGwqGc-FMhED5EGzZOcazau1nfvQL8kZw_aem_ZmFrZWR1bW15MTZieXRlcw",
    "archived": 0,
    "pending": 0,
-   "deferred": 0,
+   "deferred": 8,
    "urls": [
     {
      "u": "https://x.com/AJEnglish/status/1724381684722737157",
@@ -7026,25 +7026,25 @@
     {
      "u": "https://x.com/PalestineRCS/status/1731034803468693535",
      "role": "primary",
-     "status": "new",
+     "status": "deferred",
      "snap": "",
-     "method": "",
+     "method": "manual",
      "manual": false
     },
     {
      "u": "https://x.com/PalestineRCS/status/1731771874009297338",
      "role": "primary",
-     "status": "new",
+     "status": "deferred",
      "snap": "",
-     "method": "",
+     "method": "manual",
      "manual": false
     },
     {
      "u": "https://x.com/PalestineRCS/status/1737422394602471892",
      "role": "primary",
-     "status": "new",
+     "status": "deferred",
      "snap": "",
-     "method": "",
+     "method": "manual",
      "manual": false
     },
     {
@@ -7106,9 +7106,9 @@
     {
      "u": "https://x.com/Israel_katz/status/1967210017008013424?s=20",
      "role": "secondary",
-     "status": "new",
+     "status": "deferred",
      "snap": "",
-     "method": "",
+     "method": "manual",
      "manual": false
     },
     {
@@ -7122,9 +7122,9 @@
     {
      "u": "https://x.com/MiddleEastEye/status/1728473137300320383?s=20",
      "role": "secondary",
-     "status": "new",
+     "status": "deferred",
      "snap": "",
-     "method": "",
+     "method": "manual",
      "manual": false
     },
     {
@@ -7162,9 +7162,9 @@
     {
      "u": "https://x.com/PalestineRCS/status/1738908991281918312",
      "role": "secondary",
-     "status": "new",
+     "status": "deferred",
      "snap": "",
-     "method": "",
+     "method": "manual",
      "manual": false
     },
     {
@@ -7194,9 +7194,9 @@
     {
      "u": "https://x.com/PalestineRCS/status/1742261949562232883",
      "role": "secondary",
-     "status": "new",
+     "status": "deferred",
      "snap": "",
-     "method": "",
+     "method": "manual",
      "manual": false
     },
     {
@@ -7442,9 +7442,9 @@
     {
      "u": "https://x.com/ytirawi/status/1789942261209325757?s=46&fbclid=IwZXh0bgNhZW0CMTAAAR3j1RdjkSsbE9GV1GA9V5aEyAkGwqGc-FMhED5EGzZOcazau1nfvQL8kZw_aem_ZmFrZWR1bW15MTZieXRlcw",
      "role": "secondary",
-     "status": "new",
+     "status": "deferred",
      "snap": "",
-     "method": "",
+     "method": "manual",
      "manual": false
     }
    ],
