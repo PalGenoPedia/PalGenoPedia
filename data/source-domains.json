@@ -5673,7 +5673,7 @@
    "secondary": 0
   },
   "theguardian.com": {
-   "count": 8,
+   "count": 9,
    "sample": "https://www.theguardian.com/world/article/2024/jul/10/a-game-of-football-a-boom-then-scattered-bodies-video-shows-moment-of-israel-strike-on-gaza-school",
    "archived": 0,
    "pending": 0,
@@ -5736,6 +5736,14 @@
      "manual": false
     },
     {
+     "u": "https://www.theguardian.com/world/live/2023/nov/23/israel-hamas-war-live-updates-gaza-ceasefire-hostage-release-friday-israeli-us-officials?page=with:block-655f215c8f08918b63c91f65&filterKeyEvents=false",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
      "u": "https://www.theguardian.com/world/video/2023/oct/18/gaza-footage-shows-ahli-arab-hospital-blast-video",
      "role": "secondary",
      "status": "new",
@@ -5745,7 +5753,7 @@
     }
    ],
    "primary": 3,
-   "secondary": 5
+   "secondary": 6
   },
   "thenationalnews.com": {
    "count": 1,
@@ -6774,12 +6782,20 @@
    "secondary": 1
   },
   "voanews.com": {
-   "count": 1,
-   "sample": "https://www.voanews.com/a/red-cross-convoy-hit-by-fire-in-gaza/7345713.html",
+   "count": 2,
+   "sample": "https://www.voanews.com/a/premature-babies-evacuated-from-gaza-s-shifa-hospital/7362268.html",
    "archived": 0,
    "pending": 0,
    "deferred": 0,
    "urls": [
+    {
+     "u": "https://www.voanews.com/a/premature-babies-evacuated-from-gaza-s-shifa-hospital/7362268.html",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
     {
      "u": "https://www.voanews.com/a/red-cross-convoy-hit-by-fire-in-gaza/7345713.html",
      "role": "secondary",
@@ -6790,7 +6806,7 @@
     }
    ],
    "primary": 0,
-   "secondary": 1
+   "secondary": 2
   },
   "voices.uchicago.edu": {
    "count": 1,
