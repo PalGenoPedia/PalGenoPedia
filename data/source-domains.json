@@ -494,7 +494,7 @@
    "secondary": 1
   },
   "aljazeera.com": {
-   "count": 35,
+   "count": 36,
    "sample": "https://www.aljazeera.com/features/2022/1/27/tantura-a-film-about-a-massacre-israel-didnt-want-you-to-see",
    "archived": 0,
    "pending": 0,
@@ -606,6 +606,14 @@
     },
     {
      "u": "https://www.aljazeera.com/news/2024/1/24/how-israel-has-destroyed-gazas-schools-and-universities",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.aljazeera.com/news/2024/10/25/patients-staff-trapped-in-gazas-kamal-adwan-hospital-amid-israeli-siege",
      "role": "primary",
      "status": "new",
      "snap": "",
@@ -781,7 +789,7 @@
      "manual": false
     }
    ],
-   "primary": 22,
+   "primary": 23,
    "secondary": 13
   },
   "aljazeera.net": {
