@@ -661,6 +661,25 @@
    "video": 0,
    "image": 1
   },
+  "ichef.bbci.co.uk": {
+   "count": 1,
+   "sample": "https://ichef.bbci.co.uk/ace/standard/976/cpsprodpb/fdba/live/e7ee5b50-920e-11ef-8e6d-e3e64e16c628.jpg.webp",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "urls": [
+    {
+     "u": "https://ichef.bbci.co.uk/ace/standard/976/cpsprodpb/fdba/live/e7ee5b50-920e-11ef-8e6d-e3e64e16c628.jpg.webp",
+     "role": "image",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
+   "video": 0,
+   "image": 1
+  },
   "idf.il": {
    "count": 1,
    "sample": "https://www.idf.il/en/mini-sites/idf-press-releases-israel-at-war/october-23-pr/why-did-the-idf-strike-the-islamic-university-in-gaza",
@@ -1680,7 +1699,7 @@
    "image": 12
   },
   "youtu.be": {
-   "count": 1,
+   "count": 2,
    "sample": "https://youtu.be/WsL80OgCeRs",
    "archived": 0,
    "pending": 0,
@@ -1693,9 +1712,17 @@
      "snap": "",
      "method": "",
      "manual": false
+    },
+    {
+     "u": "https://youtu.be/ZLMFvT6pDsA",
+     "role": "video",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
     }
    ],
-   "video": 1,
+   "video": 2,
    "image": 0
   },
   "youtube.com": {

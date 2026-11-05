@@ -1828,6 +1828,25 @@
    "primary": 0,
    "secondary": 1
   },
+  "english.news.cn": {
+   "count": 1,
+   "sample": "https://english.news.cn/20241024/347e7ff69cc047b0ac0f3082011b8365/c.html",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "urls": [
+    {
+     "u": "https://english.news.cn/20241024/347e7ff69cc047b0ac0f3082011b8365/c.html",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
+   "primary": 0,
+   "secondary": 1
+  },
   "english.palinfo.com": {
    "count": 1,
    "sample": "https://english.palinfo.com/news/2025/09/07/347281",
@@ -5705,7 +5724,7 @@
    "secondary": 0
   },
   "theguardian.com": {
-   "count": 9,
+   "count": 10,
    "sample": "https://www.theguardian.com/world/2023/dec/01/hospital-damage-in-gaza-during-israeli-offensive-a-visual-investigation",
    "archived": 0,
    "pending": 0,
@@ -5729,6 +5748,14 @@
     },
     {
      "u": "https://www.theguardian.com/world/2023/nov/10/israel-hamas-war-what-we-know-on-day-35",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.theguardian.com/world/2024/oct/24/killed-israeli-strike-nuseirat-camp-central-gaza-strip",
      "role": "primary",
      "status": "new",
      "snap": "",
@@ -5784,7 +5811,7 @@
      "manual": false
     }
    ],
-   "primary": 3,
+   "primary": 4,
    "secondary": 6
   },
   "thenationalnews.com": {
