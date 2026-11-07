@@ -1213,20 +1213,12 @@
    "image": 0
   },
   "theguardian.com": {
-   "count": 2,
+   "count": 1,
    "sample": "https://www.theguardian.com/world/2023/dec/01/hospital-damage-in-gaza-during-israeli-offensive-a-visual-investigation",
    "archived": 0,
    "pending": 0,
    "deferred": 0,
    "urls": [
-    {
-     "u": "https://www.theguardian.com/world/video/2025/may/14/cctv-footage-captures-moment-israeli-airstrike-hits-gaza-hospital-video",
-     "role": "video",
-     "status": "new",
-     "snap": "",
-     "method": "",
-     "manual": false
-    },
     {
      "u": "https://www.theguardian.com/world/2023/dec/01/hospital-damage-in-gaza-during-israeli-offensive-a-visual-investigation",
      "role": "image",
@@ -1236,7 +1228,7 @@
      "manual": false
     }
    ],
-   "video": 1,
+   "video": 0,
    "image": 1
   },
   "thenationalnews.com": {

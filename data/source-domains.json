@@ -321,6 +321,25 @@
    "primary": 0,
    "secondary": 1
   },
+  "airwars.org": {
+   "count": 1,
+   "sample": "https://airwars.org/?p=136713",
+   "archived": 0,
+   "pending": 0,
+   "deferred": 0,
+   "urls": [
+    {
+     "u": "https://airwars.org/?p=136713",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    }
+   ],
+   "primary": 1,
+   "secondary": 0
+  },
   "aje.io": {
    "count": 13,
    "sample": "https://aje.io/53epb7?update=2577183",
@@ -793,12 +812,20 @@
    "secondary": 13
   },
   "aljazeera.net": {
-   "count": 6,
+   "count": 7,
    "sample": "https://www.aljazeera.net/politics/2025/5/26/%D8%AE%D9%84%D8%A7%D9%84-%D8%A3%D8%B3%D8%A8%D9%88%D8%B9%D9%8A%D9%86-%D8%A7%D9%84%D8%A7%D8%AD%D8%AA%D9%84%D8%A7%D9%84-%D9%8A%D8%B1%D8%AA%D9%83%D8%A8-36-%D8%A7%D8%B9%D8%AA%D8%AF%D8%A7%D8%A1",
    "archived": 0,
    "pending": 0,
    "deferred": 0,
    "urls": [
+    {
+     "u": "https://www.aljazeera.net/health/2025/10/7/%D8%B9%D8%A7%D9%85%D8%A7%D9%86-%D9%85%D9%86-%D8%A7%D9%84%D8%A5%D8%A8%D8%A7%D8%AF%D8%A9-%D8%A7%D9%84%D8%A5%D8%B3%D8%B1%D8%A7%D8%A6%D9%8A%D9%84%D9%8A%D8%A9",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
     {
      "u": "https://www.aljazeera.net/news/2024/1/22/مغردون-سيناريو-الشفاء-يتكرر-في-مجمع",
      "role": "secondary",
@@ -849,7 +876,7 @@
     }
    ],
    "primary": 0,
-   "secondary": 6
+   "secondary": 7
   },
   "amnesty.org": {
    "count": 2,
@@ -3789,7 +3816,7 @@
    "secondary": 1
   },
   "ochaopt.org": {
-   "count": 126,
+   "count": 127,
    "sample": "https://www.ochaopt.org/content/eight-years-after-2008-2009-cast-lead-hostilities-gaza-lack-accountability-persists",
    "archived": 0,
    "pending": 1,
@@ -3805,6 +3832,14 @@
     },
     {
      "u": "https://www.ochaopt.org",
+     "role": "primary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
+    },
+    {
+     "u": "https://www.ochaopt.org/ar/content/hostilities-gaza-strip-and-israel-flash-update-98",
      "role": "primary",
      "status": "new",
      "snap": "",
@@ -4804,7 +4839,7 @@
      "manual": false
     }
    ],
-   "primary": 117,
+   "primary": 118,
    "secondary": 9
   },
   "ohchr.org": {
@@ -5724,7 +5759,7 @@
    "secondary": 0
   },
   "theguardian.com": {
-   "count": 10,
+   "count": 11,
    "sample": "https://www.theguardian.com/world/2023/dec/01/hospital-damage-in-gaza-during-israeli-offensive-a-visual-investigation",
    "archived": 0,
    "pending": 0,
@@ -5809,10 +5844,18 @@
      "snap": "",
      "method": "",
      "manual": false
+    },
+    {
+     "u": "https://www.theguardian.com/world/video/2025/may/14/cctv-footage-captures-moment-israeli-airstrike-hits-gaza-hospital-video",
+     "role": "secondary",
+     "status": "new",
+     "snap": "",
+     "method": "",
+     "manual": false
     }
    ],
    "primary": 4,
-   "secondary": 6
+   "secondary": 7
   },
   "thenationalnews.com": {
    "count": 1,
