@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-10",
+ "generated": "2026-11-11",
  "domains": {
   "aa.com.tr": {
    "count": 1,
@@ -49,7 +49,7 @@
   },
   "aljazeera.com": {
    "count": 12,
-   "sample": "https://www.aljazeera.com/wp-content/uploads/2024/04/AFP__20240408__34NT7MH__v1__HighRes__PalestinianIsraelConflict-1712614597.jpg?resize=770%2C513&quality=80",
+   "sample": "https://www.aljazeera.com/wp-content/uploads/2024/05/AA-20240525-34677288-34677276-ISRAELI_ARMY_ATTACKED_A_SCHOOL_WHERE_PALESTINIANS_TOOK_REFUGE_ON_GAZA-1716643168.jpg?resize=570%2C380&quality=80",
    "archived": 0,
    "pending": 0,
    "deferred": 0,
@@ -308,7 +308,7 @@
   },
   "facebook.com": {
    "count": 18,
-   "sample": "https://www.facebook.com/AVHJerusalem/posts/yesterday-at-700-pm-al-ahli-arab-hospital-in-gaza-which-is-our-partner-in-the-di/699695938874919/?_rdc=2&_rdr",
+   "sample": "https://www.facebook.com/trtworld/videos/horrific-footage-shows-the-aftermath-of-an-israeli-air-strike-on-fahmi-al-jarjaw/734328589265567",
    "archived": 0,
    "pending": 0,
    "deferred": 0,
@@ -593,7 +593,7 @@
   },
   "i.guim.co.uk": {
    "count": 5,
-   "sample": "https://i.guim.co.uk/img/media/00764394cb9b7bd106c5101ef5da1d81eae8db55/0_0_1800_1080/master/1800.jpg?width=1900&dpr=1&s=none&crop=none",
+   "sample": "https://i.guim.co.uk/img/media/2199567ae0910bbaa5efee299ab5d28227a13ad5/0_255_6720_4032/master/6720.jpg?width=620&dpr=1&s=none&crop=none",
    "archived": 0,
    "pending": 0,
    "deferred": 0,
@@ -758,7 +758,7 @@
   },
   "instagram.com": {
    "count": 13,
-   "sample": "https://www.instagram.com/p/C2Zp3Gjt9gc/?utm_source=ig_embed&utm_campaign=invalid&ig_rid=96861198-1074-4c6d-b635-2701f597e045%20%2C%20https%3A%2F%2Fweb.facebook.com%2Freel%2F300288569355036%20%2C",
+   "sample": "https://www.instagram.com/reels/DPRASOOkppd",
    "archived": 0,
    "pending": 0,
    "deferred": 0,
@@ -938,7 +938,7 @@
   },
   "middleeasteye.net": {
    "count": 3,
-   "sample": "https://www.middleeasteye.net/sites/default/files/000_C2MJ6MP.jpg",
+   "sample": "https://www.middleeasteye.net/sites/default/files/styles/full_width/public/2023-11/dead%20bodies.jpg.webp?itok=WO4Ucmvq",
    "archived": 0,
    "pending": 0,
    "deferred": 0,
@@ -1011,7 +1011,7 @@
   },
   "news.sky.com": {
    "count": 2,
-   "sample": "https://news.sky.com/story/israeli-air-strike-hits-gaza-hospital-13347901",
+   "sample": "https://news.sky.com/video/the-aftermath-of-the-missile-strike-on-school-in-gaza-13185969",
    "archived": 0,
    "pending": 0,
    "deferred": 0,
@@ -1076,7 +1076,7 @@
   },
   "pchrgaza.org": {
    "count": 3,
-   "sample": "https://pchrgaza.org/wp-content/uploads/2025/05/8xBvv.jpg",
+   "sample": "https://pchrgaza.org/wp-content/uploads/2025/05/120525_JABALIA_OASH_0122-scaled.jpg",
    "archived": 0,
    "pending": 0,
    "deferred": 0,
@@ -1130,7 +1130,7 @@
   },
   "reutersconnect.com": {
    "count": 2,
-   "sample": "https://www.reutersconnect.com/item/smoke-rises-from-the-islamic-university-building-in-gaza-city/dGFnOnJldXRlcnMuY29tLDIwMjU6bmV3c21sX1JDMlJSR0FNMEY3Tw",
+   "sample": "https://www.reutersconnect.com/_next/image?url=https%3A%2F%2Fcdn1.agency.thomsonreuters.com%2Fwatermark%2Ftag%3Areuters.com%2C2025%3Anewsml_MT1ANADL000ZI8WP3%3A1025606262%2Ftag%3Areuters.com%2C2025%3Abinary_MT1ANADL000ZI8WP3-VIEWIMAGE%2F800x800%3Fpartner%3Dtrue%26Expires%3D2105213605%26Signature%3DawZV1Ojf8wDqVD1mU4UHMnsdKwb6Nc8Yisvx882YQdPajPBrphnx28M2chBaKSMWavNC1eXcRe7SCRkBb7WG281oYuanmp5YihKzFHl2qVkrFq3yyHRcbBlj27CQoEDNlsDgAnjSRPKePL09pCpmlBbqiaQPvL1wTAI5IWkjCO49z42TWORYE0NiLJG8FhDPkfNxBwvrikkrjLq2GYW5A9QeqroEbxfDlEw64jwDuc3ZaDI6d6djDvPlsGR--CIrEd9f9lrYwhtiLSJnUxGpwf5J1phE4~g0meLAygk-bkgF5yixCVagu9eK8zAiO3TjNyknk5elywFYbejBtwjL4Q__%26Key-Pair-Id%3DAPKAJ7VIBMO3UCTTZSWQ&w=1920&q=75",
    "archived": 0,
    "pending": 0,
    "deferred": 0,
@@ -1692,7 +1692,7 @@
   },
   "youtu.be": {
    "count": 2,
-   "sample": "https://youtu.be/WsL80OgCeRs",
+   "sample": "https://youtu.be/ZLMFvT6pDsA",
    "archived": 0,
    "pending": 0,
    "deferred": 0,
@@ -1719,7 +1719,7 @@
   },
   "youtube.com": {
    "count": 29,
-   "sample": "https://www.youtube.com/watch?v=cySrQNecEQg",
+   "sample": "https://www.youtube.com/watch?v=E4rltTvrt_c",
    "archived": 0,
    "pending": 0,
    "deferred": 0,
